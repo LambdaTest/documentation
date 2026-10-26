@@ -2,7 +2,7 @@
 id: appium-python
 title: Appium with Python
 sidebar_label: Python
-description: Complete guide to running your first Python Appium automated test script on TestMu AI Real Device Cloud Platform. Test on 5000+ Real Devices.
+description: Complete guide to running your first Python Appium automated test script on TestMu AI Real Device Cloud Platform. Test on 50,000+ Real Devices.
 keywords:
   - python appium
   - python appium tutorial
@@ -67,7 +67,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       "@id": "https://www.testmuai.com/support/docs/appium-python/"
     },
     "headline": "Appium with Python",
-    "description": "Complete guide to running your first Python Appium automated test script on TestMu AI Real Device Cloud Platform. Test on 5000+ Real Devices.",
+    "description": "Complete guide to running your first Python Appium automated test script on TestMu AI Real Device Cloud Platform. Test on 50,000+ Real Devices.",
     "url": "https://www.testmuai.com/support/docs/appium-python/",
     "image": {
       "@type": "ImageObject",
@@ -172,7 +172,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       "@context": "https://schema.org",
       "@type": "HowTo",
       "name": "Try our Sample Repository",
-      "description": "Complete guide to running your first Python Appium automated test script on TestMu AI Real Device Cloud Platform. Test on 5000+ Real Devices.",
+      "description": "Complete guide to running your first Python Appium automated test script on TestMu AI Real Device Cloud Platform. Test on 50,000+ Real Devices.",
       "step": [
         {
           "@type": "HowToStep",

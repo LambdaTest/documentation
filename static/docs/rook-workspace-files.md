@@ -19,6 +19,7 @@ Rook uses plain files rather than a hidden workspace database. That makes agents
         └── agents/
             └── <agent-id>/
                 ├── agent.yaml            derived agent definition
+                ├── coverage-gaps.yaml    attack patterns with no scenario
                 ├── state.json            machine-local server IDs
                 ├── features/
                 │   ├── F-001.yaml
@@ -37,6 +38,7 @@ Rook uses plain files rather than a hidden workspace database. That makes agents
                         ├── agent.yaml
                         ├── features.yaml
                         ├── profile.yaml
+                        ├── scenario-inventory.yaml
                         ├── scenarios/
                         └── report.yaml
 ```
@@ -77,13 +79,15 @@ Project YAML, agent definitions, features, scenarios, profiles containing refere
 Before committing:
 
 1. Review hook scripts for accidental literal secrets.
-2. Confirm profile YAML contains only references such as `${API_KEY}`.
+2. Confirm profile YAML names variables under `env` (for example `API_KEY`) and holds no literal secret, including in `hook_env`.
 3. Inspect run evidence for target data that should not leave the test environment.
 4. Keep machine-only `.gitignore` entries intact.
 
 ## Global State Lives Elsewhere
 
 Credentials, actual environment values, history, logs, and installed versions are stored under `~/.testmuai/rook/` by default. Set `ROOK_HOME` to isolate that state for CI or another account.
+
+Each session keeps a transcript at `~/.testmuai/rook/sessions///transcript.jsonl`, readable only by your user. It records every prompt Rook sent, every tool call and result, and every answer. Since 0.1.12 it also records each message sent to the agent under test with its reply, and how each job, sync, run phase, and scenario ended; lines use format version 2, and strings of 4 KiB or more are stored in a `blobs/` folder beside the transcript. Rook masks the credentials it holds or recognizes before writing each line, but masking is best effort and transcripts from earlier versions are not masked, so treat it like a log that can contain target data and environment values.
 
 ## Synchronization
 

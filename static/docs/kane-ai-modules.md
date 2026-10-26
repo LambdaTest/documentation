@@ -57,7 +57,7 @@ Type a **slash (/)** to invoke the command menu and select **Add Module**.
 
 Browse the list of available modules and select the one you need.
 
-Modules that contain KaneAI instructions, such as variable steps, If-Else blocks, or While Loops, can be imported only into KaneAI test cases, not into manual test cases in Test Manager. This applies to the Classic experience. See [Importing Modules into Test Cases](/support/docs/modules-in-manual-testcases/).
+Modules that contain If-Else blocks or While Loops can be imported only into KaneAI test cases, not into manual test cases in Test Manager. This applies to the Classic experience. Modules that use variables, parameters, or secrets can be imported into both. See [Importing Modules into Test Cases](/support/docs/modules-in-manual-testcases/).
 
 ### Step 3: Execute
 
@@ -120,13 +120,13 @@ The editing, reordering, and deletion restrictions described in this section and
 
 Some steps carry a **Read-Only** label on the module's step listing. Editing, deleting, and reordering are all disabled for:
 
-- Steps that create or use a **variable** or **parameter**
+- Steps that create or store a **variable**
 - **If-Else** blocks
 - **While Loop** blocks
 
 Hovering the edit icon on one of these steps shows *Editing Kane instructions is not allowed*.
 
-These steps are part of a larger flow. A variable step feeds values to later steps, and a control flow block carries branches and nested steps that must change together. To modify them, open the test case the module was authored from, make the change there, and save. The module receives a new version automatically. All other steps can be edited, deleted, and reordered as usual.
+These steps are part of a larger flow. A variable step feeds values to later steps, and a control flow block carries branches and nested steps that must change together. To modify them, open the test case the module was authored from, make the change there, and save. The module receives a new version automatically. All other steps can be edited, deleted, and reordered as usual, including steps that only use a variable, parameter, or secret. See [Edit Module Steps That Use References](/support/docs/test-manager-variables-parameters-secrets/#edit-module-steps-that-use-references).
 
 Modules authored in a KaneAI session also show an **Author Module to Update Test Cases** banner on the Linked Test Cases tab, noting that linked test cases are updated by authoring and validating the module in a KaneAI session.
 
@@ -192,7 +192,7 @@ Each module should represent a **single, cohesive workflow** (e.g., login, check
 
 ### Use Variables and Parameters
 
-Instead of hard-coding values like usernames, URLs, or test data into module steps, use **variables** and **parameters**. This lets you reuse the same module across different test scenarios by passing in different data at execution time.
+Instead of hard-coding values like usernames, URLs, or test data into module steps, use **variables** and **parameters**. This lets you reuse the same module across different test scenarios by passing in different data at execution time. You can also insert and create these references while editing a module on the Modules page. See [Variables, Parameters, and Secrets in Manual Test Cases and Modules](/support/docs/test-manager-variables-parameters-secrets/).
 
 ### Write Clear Descriptions
 

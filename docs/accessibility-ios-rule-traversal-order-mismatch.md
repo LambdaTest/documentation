@@ -1,8 +1,8 @@
 ---
 id: accessibility-ios-rule-traversal-order-mismatch
-title: Traversal Order Does Not Match Visual Layout
+title: Traversal Order Does Not Match Visual Layout (iOS)
 sidebar_label: Traversal Order Mismatch
-description: Rule-level Accessibility guidance for Traversal Order Does Not Match Visual Layout on iOS.
+description: "Detect iOS screens where VoiceOver's reading order jumps backward against the visual layout, so navigation matches what sighted users see."
 slug: accessibility-ios-rule-traversal-order-mismatch/
 ---
 import { BRAND_URL } from '@site/src/component/BrandName';
@@ -43,7 +43,7 @@ import { BRAND_URL } from '@site/src/component/BrandName';
       "@id": "https://www.testmuai.com/support/docs/accessibility-ios-rule-traversal-order-mismatch/"
     },
     "headline": "Traversal Order Does Not Match Visual Layout",
-    "description": "Rule-level Accessibility guidance for Traversal Order Does Not Match Visual Layout on iOS.",
+    "description": "Detect iOS screens where VoiceOver's reading order jumps backward against the visual layout, so navigation matches what sighted users see.",
     "url": "https://www.testmuai.com/support/docs/accessibility-ios-rule-traversal-order-mismatch/",
     "image": {
       "@type": "ImageObject",

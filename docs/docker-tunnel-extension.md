@@ -3,7 +3,7 @@ id: docker-tunnel-extension
 title: TestMu AI Docker Tunnel Extension For Local Testing
 hide_title: true
 sidebar_label: Docker Tunnel Extension
-description: TestMu AI Docker Tunnel Extension lets you test locally hosted web apps across 5000+ real devices and 10,000+ browser/device combinations, no CLI needed.
+description: TestMu AI Docker Tunnel Extension lets you test locally hosted web apps across 50,000+ real devices and 10,000+ browser/device combinations, no CLI needed.
 keywords:
   - testmu ai tunnel extension for docker
   - testmu ai docker tunnel
@@ -55,7 +55,7 @@ import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
       "@id": "https://www.testmuai.com/support/docs/docker-tunnel-extension/"
     },
     "headline": "TestMu AI Docker Tunnel Extension For Local Testing",
-    "description": "TestMu AI Docker Tunnel Extension lets you test locally hosted web apps across 5000+ real devices and 10,000+ browser/device combinations, no CLI needed.",
+    "description": "TestMu AI Docker Tunnel Extension lets you test locally hosted web apps across 50,000+ real devices and 10,000+ browser/device combinations, no CLI needed.",
     "url": "https://www.testmuai.com/support/docs/docker-tunnel-extension/",
     "image": {
       "@type": "ImageObject",

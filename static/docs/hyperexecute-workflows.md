@@ -33,7 +33,7 @@ Every workflow sits in one of three states, shown in the **Status** column.
 | State | What it means | Set by |
 |-------|---------------|--------|
 | **Active** | The workflow triggers jobs on its schedule. | You |
-| **Paused** | The workflow is retained but triggers no new jobs. The row also shows the date it was paused. | You |
+| **Paused** | The workflow is retained but triggers no new jobs. The row also shows the date it was paused. | You, or auto-paused by [Workflow Governance](/support/docs/hyperexecute-workflow-governance/#auto-disable-on-consecutive-failures) when a workflow hits the consecutive-failure threshold |
 | **Expired** | The workflow's **Workflow ends on** date has passed, so it no longer triggers jobs. | Automatically |
 
 **Expired** is derived from the end date, so it cannot be set manually. To bring an expired workflow back, edit it and extend the **Workflow ends on** date.

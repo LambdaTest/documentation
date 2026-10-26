@@ -99,7 +99,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-10-05T16:23:33+05:30"
+    "dateModified": "2026-10-14T12:28:06+05:30"
   }) }}
 />
 
@@ -127,7 +127,7 @@ Phone testing runs in two modes, both scored with the same 30+ metrics.
 
 **Custom metrics.** Define plain-language checks for your own business rules, such as whether the agent asked for a PIN before changing an address. Each check is graded on every call of the scenarios you attach it to. See [Custom Metrics](#custom-metrics).
 
-**Voice platform integrations.** If your agent runs on ElevenLabs, Retell, or Vapi, connect it in the **Integrations** tab to import its prompt and tool catalog and to see which tools it actually called on each test call. See the integration setup for [ElevenLabs](/support/docs/test-elevenlabs-agents/#elevenlabs-integration), [Retell](/support/docs/test-retell-agents/#retell-integration), or [Vapi](/support/docs/test-vapi-agents/#vapi-integration).
+**Voice platform integrations.** If your agent runs on ElevenLabs, Retell, or Vapi, connect it in the **Integrations** tab to import its prompt and tool catalog and to see which tools it actually called on each test call. See the integration setup for [ElevenLabs](/support/docs/test-elevenlabs-agents/#elevenlabs-integration), [Retell](/support/docs/test-retell-agents/#retell-integration), or [Vapi](/support/docs/test-vapi-agents/#vapi-integration). For Salesforce Agentforce voice agents, see the [Agentforce integration](/support/docs/test-agentforce-agents/#agentforce-integration).
 
 **Performance testing.** Hold a target number of concurrent calls to your agent for a set period and measure load delivery, reliability, and response latency under load. See [Performance Testing](#performance-testing).
 
@@ -252,7 +252,7 @@ Follow these guidelines when you write a grading prompt.
 - **One rule per metric.** "Asked for a PIN" and "confirmed the new address" are two metrics, so a failure shows which rule broke.
 - **Say what counts as no.** A Yes / No prompt with one sentence of edge-case guidance, such as "if the caller refused, the agent should still have asked at least once", grades more consistently than a bare question.
 - **Give ratings score bands.** Spelling out what 0 to 25, 26 to 50, 51 to 75, and 76 to 100 mean anchors the score and makes runs comparable.
-- **Keep grading prompts about the transcript.** Checks about hold music, voice tone, or backend actions cannot be judged from what was said. Use the audio metrics and tool call validation for those. Tool call validation is available through the [ElevenLabs](/support/docs/test-elevenlabs-agents/#elevenlabs-integration), [Retell](/support/docs/test-retell-agents/#retell-integration), and [Vapi](/support/docs/test-vapi-agents/#vapi-integration) integrations.
+- **Keep grading prompts about the transcript.** Checks about hold music, voice tone, or backend actions cannot be judged from what was said. Use the audio metrics and tool call validation for those. Tool call validation is available through the [ElevenLabs](/support/docs/test-elevenlabs-agents/#elevenlabs-integration), [Retell](/support/docs/test-retell-agents/#retell-integration), [Vapi](/support/docs/test-vapi-agents/#vapi-integration), and [Salesforce Agentforce](/support/docs/test-agentforce-agents/#agentforce-integration) integrations.
 
 ### Turn On Pass or Fail Gating
 
@@ -568,5 +568,5 @@ Calls placed during a performance test are charged as follows.
 
 - See how to [test an inbound phone agent](/support/docs/inbound-phone-agent/) step by step.
 - See how to [test an outbound phone agent](/support/docs/outbound-phone-agent/) step by step.
-- See how to connect [ElevenLabs](/support/docs/test-elevenlabs-agents/#elevenlabs-integration), [Retell](/support/docs/test-retell-agents/#retell-integration), or [Vapi](/support/docs/test-vapi-agents/#vapi-integration) agents for tool call validation.
+- See how to connect [ElevenLabs](/support/docs/test-elevenlabs-agents/#elevenlabs-integration), [Retell](/support/docs/test-retell-agents/#retell-integration), [Vapi](/support/docs/test-vapi-agents/#vapi-integration), or [Salesforce Agentforce](/support/docs/test-agentforce-agents/#agentforce-integration) agents for tool call validation.
 - See how the platform [runs an evaluation end to end](/support/docs/architecture-and-how-evaluation-works/).

@@ -93,7 +93,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-09T19:16:50+05:30"
+    "dateModified": "2026-10-13T00:00:00+05:30"
   }) }}
 />
 
@@ -245,3 +245,33 @@ Most native apps include their own file controls, such as an upload or attach bu
 The file upload and download functionality in Kane AI enhances test automation by providing easy access to necessary files. By following these steps, testers can efficiently manage files during their test sessions.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/upload-download-files/image7.png').default} alt="Image" className="doc_img"/>
+
+## Save a session download as a reusable File
+
+If the website downloads a file during Web Agent authoring, you can save that downloaded item as a global File. Open the session's **Download** panel, choose the downloaded file, and save it to **Files** with a unique alias. The saved File then appears in **KaneAI** > **Variables** > **Files** and can be used by other test cases. A session download is not added to the global Files list until you save it there.
+
+## Create and use global Files
+
+You can also create a global File from a local file before authoring a test:
+
+1. Open **KaneAI** > **Variables** > **Files** and click **New File**.
+2. Choose a local file, enter an alias, and click **Create File**.
+3. In a Web Agent instruction, reference it as `{{file.alias}}`, such as `Upload {{file.profile_image}} to the form`.
+
+<img loading="lazy" src={require('../assets/images/kane-ai/features/data-driven-testing/new-file-dialog.png').default} alt="New File dialog with a selected PNG and an alias field" className="doc_img"/>
+
+<img loading="lazy" src={require('../assets/images/kane-ai/features/data-driven-testing/global-files-list.png').default} alt="Global Files list showing alias, file name, type, usage, and update date" className="doc_img"/>
+
+An alias can contain 1–64 lowercase letters, digits, and underscores. The names `register` and `resolve` are reserved. The global alias syntax is separate from the session `FILE_` variable syntax in the upload flow above. A global File becomes linked to a test case after a step that uses it is saved.
+
+While authoring, you can type **/Upload file** to choose an existing File or upload a new one from your computer. Select the File in the picker, add it to the test, and run the upload step.
+
+<img loading="lazy" src={require('../assets/images/kane-ai/features/data-driven-testing/select-file-dialog.png').default} alt="Web Agent Upload file dialog with an existing File selected" className="doc_img"/>
+
+<img loading="lazy" src={require('../assets/images/kane-ai/features/data-driven-testing/file-upload-step.png').default} alt="Web Agent step using a file alias and showing the completed upload action" className="doc_img"/>
+
+Open **Variables & secrets** > **Files** in the session to see available Files and download a local copy. The global Files list also lets you download or replace a File. Replacing its content can change the file type, so review tests that use the alias afterward.
+
+<img loading="lazy" src={require('../assets/images/kane-ai/features/data-driven-testing/session-files.png').default} alt="Web Agent Files panel with a reusable PNG File and Download action" className="doc_img"/>
+
+A test run can save its CSV or XLSX output as a reusable File. See [Test Run Output](/support/docs/kaneai-test-run-output/) for that workflow.

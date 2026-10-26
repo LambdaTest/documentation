@@ -3,11 +3,15 @@ id: hyperexecute-rerun-failed-tests
 title: Rerun Failed Tests on HyperExecute
 hide_title: false
 sidebar_label: Rerun Failed Tests
-description: Speed up debugging by rerunning only failed tests or entire jobs on HyperExecute using the rerun job feature.
+description: Rerun only the failed scenarios of a HyperExecute job, or all of them, from the job page. Covers scope, commit choice, concurrency, how failed scenarios are picked and when Rerun is unavailable.
 keywords:
   - TestMu AI Hyperexecute
   - TestMu AI Hyperexecute help
   - TestMu AI Hyperexecute documentation
+  - HyperExecute rerun job
+  - HyperExecute rerun failed scenarios
+  - HyperExecute rerun same commit
+  - HyperExecute rerun latest commit
 url: https://www.testmuai.com/support/docs/hyperexecute-rerun-failed-tests/
 site_name: TestMu AI
 slug: hyperexecute-rerun-failed-tests/
@@ -52,7 +56,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       "@id": "https://www.testmuai.com/support/docs/hyperexecute-rerun-failed-tests/"
     },
     "headline": "Rerun Failed Tests on HyperExecute",
-    "description": "Speed up debugging by rerunning only failed tests or entire jobs on HyperExecute using the rerun job feature.",
+    "description": "Rerun only the failed scenarios of a HyperExecute job, or all of them, from the job page. Covers scope, commit choice, concurrency, how failed scenarios are picked and when Rerun is unavailable.",
     "url": "https://www.testmuai.com/support/docs/hyperexecute-rerun-failed-tests/",
     "image": {
       "@type": "ImageObject",
@@ -93,61 +97,120 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-09T19:10:37+05:30"
+    "dateModified": "2026-10-16T00:00:00+05:30"
   }) }}
 />
-:::info BETA
-The feature is currently in **BETA**.
-:::
 
-Debugging test failures often involves **identifying the root cause, fixing the issue, and rerunning tests to validate the fix**. However, in large test suites with hundreds or thousands of tests, rerunning the entire job consumes significant time and resources.
+When a job finishes with failures, you do not have to run the whole suite again to check a fix. From the job page you can start a **rerun**: a new job that repeats either every scenario or only the scenarios that did not pass, using the same YAML the original job ran with.
 
-To address this, HyperExecute supports Rerun Job functionality, a feature that allows you to rerun only the failed scenarios or all the scenarios directly from the dashboard, drastically reducing your feedback loop and helping you validate the fixes faster.
+A 900-scenario suite with 20 failures can be re-verified by running those 20, on the commit the failures happened on or on the latest one.
 
 ## Prerequisites
-To rerun a job, the following requirements must be fulfilled. 
 
-- Your test suite should be available on **Git** (Github, Azure Repos and Bitbucket are supported) and linked to a [Project](/support/docs/hyperexecute-projects). This is required because each time a job is rerun, HyperExecute needs access to your test suite.
-- Make sure you are using **YAML version 0.1** with auto-split mode and discovery mode as local only. 
-
-> Support for YAML version 0.2 and other modes will be added soon.
+- Your test suite is on **Git** (GitHub, Azure Repos and Bitbucket are supported). A rerun checks the code out again, so it needs somewhere to check it out from.
+- A Git token the checkout can use: the [project's PAT](/support/docs/hyperexecute-projects/), or a `git_token` saved at user or organization level if the project has none.
+- The job uses **YAML version 0.1**.
+- You can open the job's project and run jobs in it.
 
 :::note
-You can use the rerun feature for jobs started from your **local machine as long as Git info is available** (i.e., you’re running tests from a cloned Git repo).
- - Make sure the project details are set in your job’s YAML, and the project is linked to the same Git repo you’re running from.
- - If your local repo has uncommitted changes (a “dirty” working tree), rerun will not work. Commit or stash your changes before running the job.
+Jobs started from your local machine can be rerun as long as Git details were recorded. If the working tree had uncommitted changes when the job ran, the commit is not reproducible and the job cannot be rerun — commit or stash before you run it.
 :::
 
-## Why Use Rerun Feature?
-Consider a scenario where you’ve executed 1000 tests in a single HyperExecute job, and 50 tests failed due to a bug, either in your test code, infrastructure, or application under test. Previously, you were bound to run the complete job again which would have taken a lot more time (as you would have run the passed tests too) to check if the previously failed tests are passing or not. With **Rerun Job Feature**, your whole process is streamlined as given below:
+## What you can choose
 
-**View failed scenarios -> Identify the fix via AI RCA -> Apply your fix and deploy -> Rerun only failed scenarios of the job**
+| Option | Choices |
+| :---- | :---- |
+| **Scope** | **Failed scenarios** — only what did not pass. **All scenarios** — everything the job ran. |
+| **Commit** | **Same commit** — the exact commit the job ran, to reproduce a failure. **Latest commit** — the newest commit on that branch, once the fix is merged. |
+| **Concurrency** | Defaults to the original job's. Raise or lower it for the rerun; the rest of the YAML is unchanged. |
 
-### Benefits
-- **Faster feedback loop:** Rerun only what matters (failed scenarios), so you confirm fixes quickly instead of re-running the full suite.
- - **Reproducible results:** Reruns always use the same YAML as the original job, even when you choose the latest commit, ensuring consistent environment settings.
- - **Better flaky test diagnosis:** By rerunning only the failed scenarios on the same configuration, it’s much easier to distinguish genuine regressions from flaky tests.
-## Rerun Configuration Options
-HyperExecute provides you flexibility to select different parameters while rerunning the job.
-- **Failed or All Scenarios:** You can rerun only the failed scenarios or all scenarios of that job.
-- **Using Same or Latest Commit:** You can reuse the same commit as the original job or the latest commit from your repository. This lets you rerun after fixing your test suite or application under test.
-- **Adjusting Concurrency:** The **YAML remains the same** for the rerun and the original job to maintain the same environment, but you can change the concurrency on which the rerun job will run.
+The dialog shows how many scenarios each scope will run, so you can see the size of the rerun before you start it.
 
-> If there are multiple test cases under a failed scenario, all those test cases will be rerun if the scenario is marked as failed.
+## How to rerun a job
 
-## How to Rerun a Job
-**Step 1 :** Go to the **Jobs** section in the HyperExecute dashboard. <br />
-**Step 2 :** Open the job you want to rerun and click the **Rerun** button in the top bar. <br />
+**Step 1:** Open the job from the **Jobs** page and click **Re-Run** in the top bar.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/features/rerun/1.png').default} alt="Image"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/features/rerun/1.png').default} alt="HyperExecute job details page for a failed job, with the Re-Run button in the top bar" className="doc_img"/>
 <br /><br />
 
-**Step 3 :** In the Rerun dialog:
-- Select the **commit** you want to use (same commit as the original job or the latest commit from the repo).
-- Optionally adjust the **concurrency** for the rerun.
-Then click **Rerun** to start the new job.
+**Step 2:** In the dialog, pick the **scope**, pick the **commit**, adjust **concurrency** if you want to, then click **Rerun**. The new job opens and you can follow it like any other.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/features/rerun/2.png').default} alt="Image"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/features/rerun/2.png').default} alt="Rerun Job dialog showing Scope of Rerun with Failed and Non Executed Scenarios and All Scenarios counts, the commit dropdown and the concurrency slider" className="doc_img"/>
 
+## How failed scenarios are picked
 
-> If you do not satisfy the mentioned conditions but still want to use the rerun job feature, please reach out to us at [support@testmuai.com](mailto:support@testmuai.com). We will be constantly evolving this feature and are looking forward to your feedback to make it better.
+A scenario is included when it did not finish successfully. Three cases are worth spelling out:
+
+- **Retries.** A scenario that failed and then passed on a retry counts as passed and is not rerun. If the retry never finished, it is rerun.
+- **Fail fast.** The scenario that tripped the limit counts as a failure, and scenarios that never started are included as well, because they have no result yet.
+- **Dependent scenarios.** Where scenarios run as a dependent group, the whole group runs together; one member cannot be rerun on its own.
+
+If a failed scenario contains several test cases, all of them are rerun.
+
+## What the rerun keeps
+
+- **The same YAML** as the original job, even on the latest commit, so the environment does not change underneath you.
+- **The project** the original job ran in.
+- **The labels** of the original job, with `Rerun-#<original job number>` added as the first label, so reruns are easy to spot in the Jobs list.
+- **Your policies**, applied fresh to the new job rather than carried over from the original run.
+
+<img loading="lazy" src={require('../assets/images/hyperexecute/features/rerun/3.png').default} alt="Job details page of a rerun, with the Rerun-#805329 label first in the list of labels carried over from the original job" className="doc_img"/>
+
+## When Rerun is unavailable
+
+The **Re-Run** button appears only on jobs that can be rerun. Where a job cannot be, the button is not shown at all: each reason below is a property of the job itself, so nothing you could change in the dialog would make it rerunnable.
+
+| Reason | What to do |
+| :---- | :---- |
+| The job is still running. | Wait for it to finish. |
+| Nothing failed, or the job ran no scenarios. | There is nothing to rerun. |
+| The job is older than the retention window, or its stored configuration is gone. | Start a fresh job from your CLI or pipeline. |
+| The job's project has been deleted. | A rerun belongs to the original project, so run the suite in a current one. |
+| A `globalPre` or `globalPost` step ran with `mode: local`. | That step runs on the machine that started the job, which a rerun has no access to. Run it again from the CLI. |
+| The job ran mobile (Appium) tests. | Not supported yet. |
+
+A job that *can* be rerun may still come with something to note — one of the two scopes unavailable, or a named tunnel that has to be running before you start. The dialog shows that as a message when you open it.
+
+:::tip Deep dive
+For the complete reference — every rule the Rerun engine can emit, with the exact text each one produces — see [Rerun Rules in HyperExecute](/support/docs/hyperexecute-rerun-rules/).
+:::
+
+## Frequently asked questions {#faq}
+
+### Does a rerun change the original job?
+
+No. The original job and its results are untouched, and the two can be compared side by side.
+
+### Can I rerun a rerun?
+
+Yes. A rerun is an ordinary job, and its label points at its own parent, so the chain stays traceable.
+
+### Is a rerun billed like any other job?
+
+Yes, it uses concurrency and minutes as any job of that size would. A failed-scenarios rerun is usually much smaller than the original, which is the point.
+
+### Can I start a rerun from the CLI or an API?
+
+Not yet. Reruns are started from the dashboard.
+
+> If you do not meet the conditions above but want to use the rerun feature, write to us at [support@testmuai.com](mailto:support@testmuai.com). We are evolving this feature and welcome your feedback.
+
+<nav aria-label="breadcrumbs">
+  <ul className="breadcrumbs">
+    <li className="breadcrumbs__item">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
+        Home
+      </a>
+    </li>
+    <li className="breadcrumbs__item">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
+        Support
+      </a>
+    </li>
+    <li className="breadcrumbs__item breadcrumbs__item--active">
+      <span className="breadcrumbs__link">
+        Rerun Failed Tests
+      </span>
+    </li>
+  </ul>
+</nav>

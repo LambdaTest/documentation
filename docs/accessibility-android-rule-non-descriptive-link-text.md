@@ -1,8 +1,8 @@
 ---
 id: accessibility-android-rule-non-descriptive-link-text
-title: Non-Descriptive Link Text
+title: Non-Descriptive Link Text (Android)
 sidebar_label: Non-Descriptive Link Text
-description: Rule-level Accessibility guidance for Non-Descriptive Link Text on Android.
+description: "Flag Android links whose whole label is generic text like 'Click here' or 'Read more' that fails to describe the destination for TalkBack users."
 slug: accessibility-android-rule-non-descriptive-link-text/
 ---
 import { BRAND_URL } from '@site/src/component/BrandName';
@@ -43,7 +43,7 @@ import { BRAND_URL } from '@site/src/component/BrandName';
       "@id": "https://www.testmuai.com/support/docs/accessibility-android-rule-non-descriptive-link-text/"
     },
     "headline": "Non-Descriptive Link Text",
-    "description": "Rule-level Accessibility guidance for Non-Descriptive Link Text on Android.",
+    "description": "Flag Android links whose whole label is generic text like 'Click here' or 'Read more' that fails to describe the destination for TalkBack users.",
     "url": "https://www.testmuai.com/support/docs/accessibility-android-rule-non-descriptive-link-text/",
     "image": {
       "@type": "ImageObject",

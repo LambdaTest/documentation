@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Layout from '@theme/Layout';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
@@ -75,10 +75,22 @@ function Card({ href, title, desc }) {
   );
 }
 
+// Turn a product-line title into a stable URL anchor, e.g. "Kane CLI" -> "kane-cli".
+function slugify(title) {
+  return String(title)
+    .toLowerCase()
+    .replace(/&/g, ' ')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}
+
 // A product line: heading + one-line blurb + horizontal rule + a row of cards.
-function Section({ icon, title, tag, blurb, children }) {
+// Each section gets an `id` (derived from its title, or an explicit override) so
+// any product line can be deep-linked, e.g. /support/docs/#smartui.
+function Section({ icon, title, tag, blurb, children, id }) {
+  const anchor = id || slugify(title);
   return (
-    <section className="prodSection">
+    <section className="prodSection" id={anchor}>
       <h2 className="prodSection_h2">
         {icon ? <Icon light={icon.light} dark={icon.dark} alt="" /> : null}
         {title}
@@ -91,23 +103,84 @@ function Section({ icon, title, tag, blurb, children }) {
   );
 }
 
+// Product lines in the order they appear below, used to build the ToC.
+// Keep this list in sync with the <Section> titles in the catalog.
+const SECTION_NAV = [
+  'Web Automation', 'App Automation', 'HyperExecute', 'Performance Testing', 'Insights',
+  'Browser Cloud', 'SmartUI', 'KaneAI', 'Kane CLI', 'Web Scanner', 'Agent Testing',
+  'Agent Assurance', 'Test Manager', 'Accessibility Testing', 'Real Time', 'Real Device',
+  'Integrations', 'Localhost Testing', 'Settings and Security', 'Other Docs',
+];
+
+// Sticky "On this page" table of contents for the home catalog: one link per
+// product line, with the section currently in view highlighted (scroll-spy).
+function HomeToc() {
+  const [active, setActive] = useState('');
+
+  useEffect(() => {
+    const ids = SECTION_NAV.map(slugify);
+    const els = ids
+      .map((id) => document.getElementById(id))
+      .filter(Boolean);
+    if (!els.length) return undefined;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((e) => e.isIntersecting)
+          .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+        if (visible[0]) setActive(visible[0].target.id);
+      },
+      // Offset the top for the sticky navbar; only count a section once it
+      // reaches roughly the upper third of the viewport.
+      { rootMargin: '-120px 0px -70% 0px', threshold: 0 }
+    );
+
+    els.forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <aside className="prodToc" aria-label="On this page">
+      <nav className="prodToc_inner">
+        <div className="prodToc_title">On this page</div>
+        <ul className="prodToc_list">
+          {SECTION_NAV.map((title) => {
+            const id = slugify(title);
+            return (
+              <li key={id}>
+                <a
+                  href={`#${id}`}
+                  className={active === id ? 'prodToc_active' : undefined}
+                >
+                  {title}
+                </a>
+              </li>
+            );
+          })}
+        </ul>
+      </nav>
+    </aside>
+  );
+}
+
 export default function Home() {
   const homeLight = useBaseUrl('img/support/home_light.png');
   const homeDark  = useBaseUrl('img/support/home_dark.png');
 
   return (
     <Layout
-      title="TestMu AI Documentation"
-      description="Explore guides, API docs, and examples for TestMu AI (Formerly LambdaTest) - the AI-native quality engineering platform.
-"
+      description="Explore TestMu AI docs: guides, API references, SDKs, agent skills, and MCP server setup for AI-native web, mobile, and agent testing."
     >
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ORG_SCHEMA) }} />
-      <div style={{ overflow: 'hidden' }}>
+      {/* overflow:clip (not hidden) contains the hero's horizontal overflow WITHOUT
+          creating a scroll container — hidden would break the sticky ToC below. */}
+      <div style={{ overflow: 'clip' }}>
       {/* Hero */}
       <div className="Doc_intro_cta">
         <div className="container" style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', width: '100%', position: 'relative', zIndex: 9 }}>
           <div className="Doc_intro_cta_text">
-            <h1>TestMu AI (Formerly LambdaTest) Documentation</h1>
+            <h1>TestMu AI Documentation</h1>
             <p>Explore guides, API references, and tutorials in one place.</p>
           </div>
           <div className="Doc_intro_cta_image">
@@ -120,11 +193,13 @@ export default function Home() {
       <div className="primary_main">
       <div className="container">
 
-        {/* Product catalog — one section per product line, square cards laid out horizontally */}
+        {/* Product catalog — one section per product line, square cards laid out horizontally.
+            A sticky ToC (HomeToc) sits alongside the sections for quick product-line jumps. */}
         <div className="prodCatalog">
+          <div className="prodCatalog_body">
 
           <Section icon={{ light: 'automation-light-icon.svg', dark: 'automation-dark-icon.svg' }} title="Web Automation" blurb="Run automated browser tests at scale with Selenium, Cypress, Playwright, and more.">
-            <Card href="/support/docs/getting-started-with-testmu-automation/" title="Selenium Testing" desc="Run Selenium tests on cloud grid" />
+            <Card href="/support/docs/testmu-running-your-first-selenium-test/" title="Selenium Testing" desc="Run Selenium tests on cloud grid" />
             <Card href="/support/docs/getting-started-with-cypress-testing/" title="Cypress Testing" desc="Run Cypress tests across browsers" />
             <Card href="/support/docs/playwright-testing/" title="Playwright Testing" desc="Scale Playwright tests in parallel" />
             <Card href="/support/docs/puppeteer-testing/" title="Puppeteer Testing" desc="Automate Chrome with Puppeteer online" />
@@ -137,6 +212,7 @@ export default function Home() {
             <Card href="/support/docs/getting-started-with-appium-testing/" title="Appium Testing" desc="Automate native apps with Appium" />
             <Card href="/support/docs/getting-started-with-espresso-testing/" title="Espresso Testing" desc="Android UI testing with Espresso" />
             <Card href="/support/docs/getting-started-with-xcuitest/" title="XCUI Testing" desc="iOS UI testing with XCUITest" />
+            <Card href="/support/docs/mobilewright-overview/" title="Mobilewright Testing" desc="Playwright-style tests on real devices" />
             <Card href="/support/docs/getting-started-with-flutter-dart-android-automation/" title="Flutter Testing" desc="Automate Flutter apps on devices" />
             <Card href="/support/docs/app-automation-on-emulators-simulators/" title="Virtual Devices" desc="Test on emulators and simulators" />
           </Section>
@@ -213,6 +289,7 @@ export default function Home() {
             <Card href="/support/docs/web-scanner-accessibility-scan/" title="Accessibility Scans" desc="Scan pages for accessibility issues" />
             <Card href="/support/docs/web-scanner-adding-urls/" title="Adding URLs" desc="Add URLs to your scans" />
             <Card href="/support/docs/web-scanner-scheduling-options/" title="Scheduling Options" desc="Schedule scans to run automatically" />
+            <Card href="/support/docs/web-scanner-edit-clone-scans/" title="Edit and Clone Scans" desc="Change or copy an existing scan" />
           </Section>
 
           <Section icon={{ light: 'agentTesting-light-icon.svg', dark: 'agentTesting-dark-icon.svg' }} title="Agent Testing" blurb="Validate AI chat, voice, phone, image, and video agents end-to-end.">
@@ -303,11 +380,15 @@ export default function Home() {
             <Card href="/support/docs/concurrency-widget/" title="Concurrency Widget" desc="Track parallel test concurrency usage" />
           </Section>
 
+          </div>{/* /prodCatalog_body */}
+
+          <HomeToc />
+
         </div>
 
       </div>{/* /container */}
       </div>{/* /primary_main */}
-      </div>{/* /overflow:hidden */}
+      </div>{/* /overflow:clip */}
     </Layout>
   );
 }

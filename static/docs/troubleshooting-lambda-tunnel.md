@@ -31,6 +31,8 @@ For example you might find above error with URL: `https://localhost/demo.html`
 
 however, URL: `https://localhost.lambdatest.com/demo.html` or `10.0.0.15/demo.html` would definitely work fine for you.
 
+If your locally hosted application is not accessible over HTTPS, restart the tunnel with the `--mitm` flag and access the application over HTTP instead (for example, `http://localhost:8081`).
+
 ## 2. Invalid Host Header
 
 While testing an application hosted on your local machine, you may receive an "Invalid Host Header" error message when testing on TestMu AI using a local connection. This error is most commonly caused by a misconfiguration of the application server that causes it to reject non-local connections or reject requests directed at hostnames other than localhost(or any custom one set)
