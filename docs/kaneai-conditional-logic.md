@@ -44,6 +44,121 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kaneai-conditional-logic/"
+    },
+    "headline": "How to Use Conditional Logic With KaneAI",
+    "description": "Use If, Else-If, and Else conditions in KaneAI to build branching test flows, with modules, JavaScript, API, and DB steps inside each branch.",
+    "url": "https://www.testmuai.com/support/docs/kaneai-conditional-logic/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "KaneAI",
+    "keywords": [
+      "kaneai conditional logic",
+      "kaneai if else",
+      "kaneai else if",
+      "kaneai branching",
+      "kaneai conditional modules",
+      "kaneai conditions"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-09-09T20:21:05+05:30"
+  }) }}
+/>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Step‑by‑step Guide",
+      "description": "Learn how to use If, Else‑If, and Else conditions in KaneAI to build branching test flows with support for modules, JavaScript, API, and DB steps inside each branch.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Add the Conditional Block",
+          "text": "1. In your authoring session, press / to open the slash command menu.",
+          "url": "https://www.testmuai.com/support/docs/kaneai-conditional-logic/#step-1-add-the-conditional-block"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Define the Condition",
+          "text": "Click the If header to open the condition editor. You can define conditions in two ways. Toggle between them using the switcher icon (&&).",
+          "url": "https://www.testmuai.com/support/docs/kaneai-conditional-logic/#step-2-define-the-condition"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Add Branch Steps",
+          "text": "Each branch (If, Else‑If, Else) supports multiple steps. You can add:",
+          "url": "https://www.testmuai.com/support/docs/kaneai-conditional-logic/#step-3-add-branch-steps"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Add Else‑If Branches",
+          "text": "To handle additional conditions beyond the initial If:",
+          "url": "https://www.testmuai.com/support/docs/kaneai-conditional-logic/#step-4-add-elseif-branches"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: Add Else Steps",
+          "text": "The Else block runs when none of the preceding conditions match. Click + Add step inside the Else block and add your fallback steps.",
+          "url": "https://www.testmuai.com/support/docs/kaneai-conditional-logic/#step-5-add-else-steps"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Step 6: Close the Block",
+          "text": "Click End If at the bottom of the conditional block to finalize it. You can then continue adding steps after the block as usual.",
+          "url": "https://www.testmuai.com/support/docs/kaneai-conditional-logic/#step-6-close-the-block"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 # How to Use Conditional Logic With KaneAI
 ***
 

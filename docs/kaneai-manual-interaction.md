@@ -53,6 +53,77 @@ canonical: https://www.testmuai.com/support/docs/kaneai-manual-interaction/
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kaneai-manual-interaction/"
+    },
+    "headline": "How to Use Manual Interaction in KaneAI",
+    "description": "Learn how KaneAI Manual Interaction records real-time UI actions as test steps for web and mobile app test authoring.",
+    "url": "https://www.testmuai.com/support/docs/kaneai-manual-interaction/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "KaneAI",
+    "keywords": [
+      "testmu ai automation",
+      "testmu ai kaneai",
+      "kaneai manual interaction",
+      "record and playback testing",
+      "record user interactions",
+      "codeless test recording",
+      "manual to automated conversion",
+      "observe user interactions",
+      "record test steps",
+      "AI test recording",
+      "no-code test automation",
+      "capture user actions",
+      "hybrid test authoring",
+      "kaneai test steps",
+      "rename instructions",
+      "test step management",
+      "slash commands"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-09-09T20:21:05+05:30"
+  }) }}
+/>
+
 # How to Use Manual Interaction in KaneAI
 ***
 
@@ -67,9 +138,14 @@ It works for both Web and Mobile app testing. You can pause recording at any tim
 
 Manual Interaction is available for:
 
-- Web browser test authoring on desktop
-- Mobile app test authoring on Android
-- Mobile app test authoring on iOS
+| Platform | Capture support |
+|---|---|
+| Web browser on desktop | Supported |
+| Mobile app on Android | Supported |
+| Mobile app on iOS | Supported in portrait; not supported in landscape |
+| Mobile browser | Not supported |
+
+On platforms where capture is not supported, build the test using natural language instructions and slash commands. See [Platforms Without Capture](#platforms-without-capture).
 
 ## How Manual Interaction Works
 ***
@@ -78,7 +154,11 @@ Manual Interaction is **always active while your session is in the Authoring Ste
 
 Captured steps append to the end of the step list, exactly like instructions you type, because the cursor is pinned to the bottom in the Authoring Steps state.
 
-You can freely mix the two ways of authoring in a single session: type an instruction when typing is easier, interact with the application when interacting is easier, and use slash commands for structured inputs. This needs no mode switching — the cursor controls where each new step lands regardless of how you created it.
+You can freely mix the two ways of authoring in a single session: type an instruction when typing is easier, interact with the application when interacting is easier, and use slash commands for structured inputs. This needs no mode switching — the cursor controls where each new step lands regardless of how you created it. This is Hybrid Authoring.
+
+Slash commands are unaffected by capture and continue to work as documented: `/api`, `/js`, `/db`, `/network`, `/totp`, `/upload`, `/download`, `/variable`, `/secret`, `/parameter`.
+
+A *Manual interaction turned off* marker can still appear in the step list when the agent reclaims the click stream on its own. There is no corresponding *turned on* marker, since capture is the default in Authoring Steps.
 
 When you want to interact with the application *without* those actions becoming steps, use [Pause Recording](#pause-recording). For the full session model — the states, the cursor, and the run actions — see [Authoring Session](/support/docs/kaneai-authoring-session/).
 
@@ -122,7 +202,7 @@ The following instruction types are not supported in Manual Interaction:
 - **Assertions:** Checks and validations are not recorded. Add any "verify," "confirm," or "assert" step as a written instruction.
 - **If–else logic:** Conditional flows and branching are not captured. Write them in natural language if your test needs conditional behavior.
 - **Modules and reusable blocks:** Manual Interaction cannot insert or reference modules. Add them separately after the manual steps are done.
-- **Variables, parameters, and secrets:** These structured inputs are not detected during manual steps. Define or call them through natural language instructions.
+- **Variables, parameters, and secrets:** These structured inputs are not detected during manual steps. Define or call them through natural language instructions or slash commands.
 - **Datasets or dynamic data:** Dataset-driven values and dynamic data require a written instruction, since they cannot be recorded through interactions.
 
 ### Visual Indicators in Test Steps
@@ -172,6 +252,13 @@ Double click, right click, and press-and-hold (long press) **are now supported**
 
 - **System level popups:** Popups controlled by the operating system, such as permission dialogs, cannot be captured.
 
+### Platforms Without Capture
+***
+
+- **Mobile browser:** Capture is not supported. Author these tests with natural language instructions and slash commands.
+
+- **iOS in landscape:** Capture is not supported. Rotate to portrait to record interactions.
+
 **Important Note on Text Input Behavior**
 
 Manual Interaction records all characters you attempt to type as part of the instruction, even if the application does not accept them.
@@ -191,7 +278,7 @@ This is useful when you already know the exact flow and want KaneAI to capture i
 
 **Steps:**
 
-1. Open KaneAI and start a new test in Authoring mode.
+1. Open KaneAI and start a new test. The session begins in Authoring Steps, so capture is already active.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/manual-interaction/kaneai-and-start-a-new-test-in-authoring-mode.webp').default} alt="Record Full Workflow" className="doc_img img_center"/>
 
@@ -223,7 +310,7 @@ Ideal for infinite scroll lists or carousels that load items on demand.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/manual-interaction/scroll-infinite-kane-ai.webp').default} alt="Lazy-Loaded Elements" className="doc_img img_center"/>
 
-3. Click or interact with the loaded element.
+3. Click or interact with the loaded element. The interaction is captured as a step.
 
 4. Pause the session after the interaction is captured, so you can add assertions without recording.
 
@@ -233,7 +320,7 @@ Ideal for infinite scroll lists or carousels that load items on demand.
 ### Combine With NL
 ***
 
-This approach gives you the best of both worlds.
+This approach gives you the best of both worlds, in a single session with no mode switching.
 
 **Steps:**
 
@@ -241,19 +328,14 @@ This approach gives you the best of both worlds.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/manual-interaction/start-writing-your-test-using-natural-language-instructions.webp').default} alt="Combine With NL" className="doc_img img_center"/>
 
-2. When you reach a step that is easier to perform manually, enable Manual Interaction.
+2. When you reach a step that is easier to perform than to describe, simply perform it on the application. It is captured as a step at the cursor.
 
-3. Perform the required actions directly on the app.
-
-4. Disable Manual Interaction once done.
-<img loading="lazy" src={require('../assets/images/kane-ai/features/manual-interaction/disable-manual-interaction.webp').default} alt="Combine With NL" className="doc_img img_center"/>
-
-
-5. Continue the test with natural language instructions.
+3. Go back to typing whenever it is more convenient. Both kinds of step sit in the same list, in the order the cursor placed them.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/manual-interaction/natural-language-instructions.webp').default} alt="Combine With NL" className="doc_img img_center"/>
 
-6. Add assertions at appropriate steps to validate outcomes.
+4. Add assertions at appropriate steps to validate outcomes. Assertions always need to be typed.
+
 ### Click and Drag
 ***
 
@@ -261,19 +343,17 @@ This use case applies when you need to move or adjust an element using a click a
 
 **Steps:**
 
-1. Start the test in Authoring mode.
+1. Start an authoring session.
 
-2. Enable Manual Interaction.
-
-3. Click on the element and drag it to the required position.
+2. Click on the element and drag it to the required position.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/manual-interaction/element-and-drag-it-to-the-required-position.webp').default} alt="Click and Drag" className="doc_img img_center"/>
 
-4. Release the mouse once the desired state is reached.
+3. Release the mouse once the desired state is reached.
 
-5. KaneAI records the click and drag action as a test step.
+4. KaneAI records the click and drag action as a test step.
 
-6. Add an assertion in natural language to verify the final state. 
+5. Add an assertion in natural language to verify the final state. 
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/manual-interaction/assertion-in-natural-language-to-verify-the-final-state.webp').default} alt="Click and Drag" className="doc_img img_center"/>
 
@@ -282,11 +362,11 @@ This use case applies when you need to move or adjust an element using a click a
 
 This use case applies when you need to change a value using a slider, such as volume controls, range selectors, brightness settings, or price filters.
 
-Sliders are often easier to handle using Manual Interaction rather than describing exact movements in natural language.
+Sliders are often easier to handle by interacting directly rather than describing exact movements in natural language.
 
 **Steps:**
 
-1. Start the test in Authoring mode.
+1. Start an authoring session.
 
 2. Click on the slider handle.
 
@@ -315,17 +395,17 @@ This use case applies when you need to navigate your app to a specific starting 
 
 **Steps:**
 
-1. Start the test in Authoring mode and enable Manual Interaction.
+1. Start an authoring session.
 
-2. Click Pause Recording in the Manual Interaction toolbar and confirm in the dialog.
+2. Click **Pause** and confirm in the dialog. The session moves to Paused.
 
-<img loading="lazy" src={require('../assets/images/kane-ai/features/manual-interaction/pause-recording-draft-state.png').default} alt="Manual Interaction session in the draft state with the paused indicator" className="doc_img img_center"/>
+<img loading="lazy" src={require('../assets/images/kane-ai/features/manual-interaction/pause-recording-draft-state.png').default} alt="Authoring session in the Paused state" className="doc_img img_center"/>
 
 3. Perform the setup actions you want to skip from recording, such as logging in or navigating to the target screen.
 
-4. Click Start recording once the application is in the desired starting state.
+4. Click **Resume** once the application is in the desired starting state. Your device is not restarted, so the state you just set up is preserved.
 
-5. Continue interacting with the app or switch to natural language instructions. From this point onward, your actions are recorded as test steps.
+5. Continue interacting with the app or typing instructions. From this point onward, your actions are recorded as test steps.
 
 6. Add assertions in natural language as needed to validate behavior.
 
@@ -337,7 +417,8 @@ This use case applies when you need to navigate your app to a specific starting 
 Follow these practices for reliable tests:
  
 - Use Manual Interaction to reach complex UI states quickly.
-- Switch back to natural language for validations and assertions.
+- Use typed instructions for validations and assertions, because they cannot be captured by interacting.
+- Remember that captured steps append to the end of the step list. To move one elsewhere, pause afterwards and restructure.
 - Review recorded steps to ensure they reflect the intended behavior.
 - Avoid unsupported interactions to prevent incomplete steps.
 - Use Pause Recording when you need to log in, navigate, or set up app state without those actions being captured as test steps.
@@ -350,17 +431,24 @@ Solutions to common Manual Interaction issues:
 ### Manual Actions Not Recorded
 ***
 
-Make sure Manual Interaction is turned on before you start interacting with the application. If it is disabled, your actions will not be captured as test steps.
+Check the session state. Capture is active only in **Authoring Steps**. It stops in Paused and in Running. If the session is Paused, click **Resume**.
+
+If the session is already in Authoring Steps, check that your platform supports capture. Mobile browser sessions and iOS in landscape do not capture interactions.
+
+### Application Does Not Respond to Clicks
+***
+
+The session is probably **Running**. While the agent executes steps, the application view is covered and interaction is disabled. Wait for the run to finish.
 
 ### Assertions Not Recorded
 ***
 
-This is expected behavior. Assertions are not recorded through Manual Interaction and must be added using natural language instructions after turning it off.
+This is expected behavior. Assertions cannot be captured by interacting and must be added using natural language instructions.
 
 ### Interactions Missing or Incomplete
 ***
 
-Check whether the interaction you are trying to perform is currently supported. Actions like drag and drop, hover, or certain mobile gestures are not available yet and will not be recorded.
+Check whether the interaction you are trying to perform is currently supported. Actions like drag and drop on canvas elements, hover, or certain mobile gestures are not available yet and will not be recorded.
 
 ### Typed Text Not Showing
 ***
@@ -372,15 +460,10 @@ If the input field restricts certain characters, those characters may still appe
 
 System level popups are not supported through Manual Interaction. These flows need to be handled using alternative approaches or natural language instructions where possible.
 
-### App State Looks Wrong
-***
-
-After turning off Manual Interaction, give the application a moment to stabilize before adding new steps or assertions. This helps avoid inconsistencies in recorded steps.
-
 ### Actions Stopped Recording Mid-session
 ***
 
-Check whether recording is paused. When Pause Recording is active, the session is in a draft state. Your interactions affect the application but are not captured as test steps. Click Start recording in the Manual Interaction toolbar to resume.
+Check whether recording is paused. When Pause Recording is active the session is in the Paused state, so your interactions affect the application but are not captured as test steps. Click **Resume** to start capturing again.
 
 
 
@@ -439,6 +522,9 @@ Renaming changes a step's display name without changing how it works.
 
 Continue with these guides:
 
+- [Authoring Session](/support/docs/kaneai-authoring-session/)
+- [KaneAI Click Interactions](/support/docs/kane-ai-click-interactions/)
+- [KaneAI Drag and Drop](/support/docs/kane-ai-click-interactions/#drag-and-drop)
 - [KaneAI Assertions and Validation](/support/docs/kaneai-kb-assertions-and-validation/)
 - [KaneAI Conditional Logic](/support/docs/kaneai-conditional-logic/)
 - [KaneAI Modules](/support/docs/kane-ai-modules/)
@@ -447,6 +533,17 @@ Continue with these guides:
 ## Video Tutorial
 ***
 
-Watch a short walkthrough:
+Watch a short walkthrough of Manual Interaction.
+
+### Manual Interaction Walkthrough
+***
+
+Learn how KaneAI simplifies test automation by allowing manual interaction to create prompts in natural language, analyzing test steps, generating code in various languages, and providing detailed test descriptions.
+
+:::note
+This walkthrough was recorded before the Manual Interaction toggle was removed. The capture behaviour it demonstrates is unchanged, but the controls shown for turning Manual Interaction on and off no longer exist. Capture is now always active in Authoring Steps.
+:::
 
 <iframe src="https://app.trupeer.ai/embed?slug=vrSqRvouk" width="640" height="360" frameborder="0" allowfullscreen="true" className="KaneIframe"></iframe>
+
+> Have any feedback or request? Reach out to us via [support@testmuai.com](mailto:support@testmuai.com) and we would be happy to hear from you.

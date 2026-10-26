@@ -45,6 +45,93 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kaneai-chrome-options/"
+    },
+    "headline": "How to Set Chrome Options With KaneAI",
+    "description": "Pass Chrome command-line options to your KaneAI web test to change browser behavior during a session.",
+    "url": "https://www.testmuai.com/support/docs/kaneai-chrome-options/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "KaneAI",
+    "keywords": [
+      "modules versioning",
+      "enhancements",
+      "modules",
+      "dynamic url",
+      "chrome options",
+      "chrome arguments"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-09-09T19:16:50+05:30"
+  }) }}
+/>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Steps to use Chrome Options in KaneAI Web Agent",
+      "description": "Using Chrome options in KaneAI Web Agent is simple and involves defining specific configurations before launching a test. Follow the steps below to add and manage Chrome options for your tests.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Configure Chrome Options",
+          "text": "Follow these steps to add Chrome options to a web test session.",
+          "url": "https://www.testmuai.com/support/docs/kaneai-chrome-options/#configure-chrome-options"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 3: Start the Web Agent",
+          "text": "Start the Web Agent to launch the session.",
+          "url": "https://www.testmuai.com/support/docs/kaneai-chrome-options/#step-3-start-the-web-agent"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 # How to Set Chrome Options With KaneAI
 ***
 

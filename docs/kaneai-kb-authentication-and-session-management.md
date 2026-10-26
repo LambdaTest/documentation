@@ -22,6 +22,8 @@ site_name: TestMu AI
 slug: kaneai-kb-authentication-and-session-management/
 ---
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -46,6 +48,158 @@ slug: kaneai-kb-authentication-and-session-management/
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kaneai-kb-authentication-and-session-management/"
+    },
+    "headline": "How to Test Authentication With KaneAI",
+    "description": "Test login flows, TOTP/MFA, SSO, session persistence, and secure authentication patterns in KaneAI",
+    "url": "https://www.testmuai.com/support/docs/kaneai-kb-authentication-and-session-management/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "KaneAI",
+    "keywords": [
+      "testmu ai automation",
+      "testmu ai kaneai",
+      "kaneai authentication",
+      "kaneai TOTP",
+      "kaneai MFA",
+      "kaneai login testing",
+      "kaneai session",
+      "authenticator",
+      "totp",
+      "2FA",
+      "authentication"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Standard Username/Password Login",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "go to https://app.example.com/login\ntype \"admin@example.com\" in the email input field\ntype \"SecurePassword123!\" in the password field\nclick on the \"Sign In\" button\nwait for 5 seconds\nassert the current URL contains \"/dashboard\"\nassert \"Welcome, Admin\" is visible"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Login with \"Remember Me\"",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "type \"admin@example.com\" in the email field\ntype \"SecurePassword123!\" in the password field\ncheck the \"Remember me\" checkbox\nclick on the \"Sign In\" button\nwait for 5 seconds\nassert the current URL contains \"/dashboard\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "If most of your tests start with a login, create a Module to avoid repeating the login steps in every test",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "-- In any new test: --\n-- Use / command → Add Module → \"Login Flow\" --\n-- The module executes all login steps automatically --\nassert \"Welcome\" is visible\n-- Continue with your test-specific steps --"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Create environment-specific variables to test login across different environments",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "type {{env.login_email}} in the email field\ntype {{env.login_password}} in the password field\nclick \"Sign In\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step-by-Step: Testing a TOTP Login Flow",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "-- Login with username/password first --\ntype \"admin@example.com\" in the email field\ntype {{secret.admin_password}} in the password field\nclick \"Sign In\"\n\n-- MFA screen appears --\nwait for 3 seconds\nenter {{totp}} in the verification code field\nclick \"Verify\"\n\n-- Authenticated --\nwait for 5 seconds\nassert the current URL contains \"/dashboard\"\nassert \"Welcome, Admin\" is visible"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "TOTP smart variables work identically on mobile tests",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "type {{env.login_email}} in the email field\ntype {{secret.login_password}} in the password field\nclick \"Login\"\nwait for 3 seconds\nenter {{totp}} in the OTP field\nclick \"Verify\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Invalid Credentials",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "type \"admin@example.com\" in the email field\ntype \"wrong_password\" in the password field\nclick \"Sign In\"\nwait for 2 seconds\nassert \"Invalid email or password\" error message is visible\nassert the current URL still contains \"/login\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Empty Field Validation",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "click \"Sign In\" without entering any credentials\nassert \"Email is required\" error is visible\nassert \"Password is required\" error is visible"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Account Lockout After Failed Attempts",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "-- Attempt 1 --\ntype \"admin@example.com\" in the email field\ntype \"wrong1\" in the password field\nclick \"Sign In\"\nwait for 2 seconds\n\n-- Attempt 2 --\ntype \"wrong2\" in the password field\nclick \"Sign In\"\nwait for 2 seconds\n\n-- Attempt 3 --\ntype \"wrong3\" in the password field\nclick \"Sign In\"\nwait for 2 seconds\n\nassert \"Account locked\" message is visible"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Session Persistence After Page Refresh",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "-- Login first --\ntype \"admin@example.com\" in the email field\ntype \"password123\" in the password field\nclick \"Sign In\"\nwait for 5 seconds\nassert \"Dashboard\" is visible\n\n-- Refresh the page --\nrefresh the page\nwait for 3 seconds\n\n-- Should still be logged in --\nassert \"Dashboard\" is visible\nassert \"Welcome, Admin\" is visible"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Logout Flow",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "click on the user avatar in the top right corner\nclick on \"Sign Out\"\nwait for 3 seconds\nassert the current URL contains \"/login\"\n\n-- Verify session is cleared --\ngo to https://app.example.com/dashboard\nwait for 3 seconds\nassert the current URL contains \"/login\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For applications with session timeouts, combine explicit waits with assertions",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "-- Login --\n-- ... login steps ... --\nassert \"Dashboard\" is visible\n\n-- Wait for session timeout (if timeout is 60 seconds in test env) --\nwait for 65 seconds\n\n-- Try to navigate --\nclick on \"Reports\" in the sidebar\nwait for 3 seconds\nassert \"Session expired\" is visible"
+      }
+    ],
+    "dateModified": "2026-09-09T19:16:50+05:30"
+  }) }}
+/>
+
 # How to Test Authentication With KaneAI
 ***
 
@@ -66,6 +220,8 @@ These patterns cover the most common username and password login scenarios.
 ### Standard Username/Password Login
 ***
 
+<VerifiedTag value="Verified" />
+
 ```
 go to https://app.example.com/login
 type "admin@example.com" in the email input field
@@ -78,6 +234,8 @@ assert "Welcome, Admin" is visible
 
 ### Login With "Remember Me"
 ***
+
+<VerifiedTag value="Verified" />
 
 ```
 type "admin@example.com" in the email field
@@ -98,6 +256,8 @@ If most of your tests start with a login, create a [KaneAI Modules](/support/doc
 3. Select the login steps
 4. Click **Create Module** → Name it "Login Flow"
 5. In future tests, use `/` → Select your "Login Flow" module
+
+<VerifiedTag value="Verified" />
 
 ```
 -- In any new test: --
@@ -120,6 +280,8 @@ Store credentials in variables or secrets instead of hardcoding them in test ste
 ***
 
 Create environment-specific variables to test login across different environments:
+
+<VerifiedTag value="Verified" />
 
 ```
 type {{env.login_email}} in the email field
@@ -198,6 +360,57 @@ Create a global TOTP variable, then reference it in your test steps.
 2. Reference the variable in your instruction, for example, "Enter `{{totp.sso_totp}}` in verify field".
 3. KaneAI generates and inserts the current six-digit code automatically.
 
+### Example: Testing a TOTP Login Flow
+***
+
+The following steps log in with a username and password, then complete the MFA screen with the TOTP code:
+
+<VerifiedTag value="Verified" />
+
+```
+-- Login with username/password first --
+type "admin@example.com" in the email field
+type {{secret.admin_password}} in the password field
+click "Sign In"
+
+-- MFA screen appears --
+wait for 3 seconds
+enter {{totp.sso_totp}} in the verification code field
+click "Verify"
+
+-- Authenticated --
+wait for 5 seconds
+assert the current URL contains "/dashboard"
+assert "Welcome, Admin" is visible
+```
+
+:::note
+The `{{totp.variable_name}}` variable generates a time-based six-digit code from the registered secret key. KaneAI calculates the code at the moment the step executes, so each step run gets a valid code. Because TOTP codes refresh every 30 seconds, make sure the step that enters the code and the step that submits it run in quick succession, and avoid long waits between them.
+:::
+
+### TOTP on Mobile
+***
+
+TOTP variables work identically in mobile tests:
+
+<VerifiedTag value="Verified" />
+
+```
+type {{env.login_email}} in the email field
+type {{secret.login_password}} in the password field
+click "Login"
+wait for 3 seconds
+enter {{totp.sso_totp}} in the OTP field
+click "Verify"
+```
+
+### Where to Get the TOTP Secret Key
+***
+
+- Most authenticator setups show a "Can't scan QR?" link that reveals the Base32 secret key. This is the key you would otherwise scan as a QR code in an authenticator app.
+- For enterprise SSO, ask your IT team for the TOTP secret associated with the test account.
+- To avoid pasting the key into the variable, store it as a secret and reference it, for example `{{secret.totp_key}}`.
+
 ### Migrating Existing Local TOTP Variables
 ***
 
@@ -252,6 +465,8 @@ These patterns test how your application responds to invalid or incomplete login
 ### Invalid Credentials
 ***
 
+<VerifiedTag value="Verified" />
+
 ```
 type "admin@example.com" in the email field
 type "wrong_password" in the password field
@@ -264,6 +479,8 @@ assert the current URL still contains "/login"
 ### Empty Field Validation
 ***
 
+<VerifiedTag value="Verified" />
+
 ```
 click "Sign In" without entering any credentials
 assert "Email is required" error is visible
@@ -272,6 +489,8 @@ assert "Password is required" error is visible
 
 ### Account Lockout After Failed Attempts
 ***
+
+<VerifiedTag value="Verified" />
 
 ```
 -- Attempt 1 --
@@ -301,6 +520,8 @@ These patterns verify how your application maintains and clears user sessions.
 ### Session Persistence After Page Refresh
 ***
 
+<VerifiedTag value="Verified" />
+
 ```
 -- Login first --
 type "admin@example.com" in the email field
@@ -321,6 +542,8 @@ assert "Welcome, Admin" is visible
 ### Logout Flow
 ***
 
+<VerifiedTag value="Verified" />
+
 ```
 click on the user avatar in the top right corner
 click on "Sign Out"
@@ -337,6 +560,8 @@ assert the current URL contains "/login"
 ***
 
 For applications with session timeouts, combine explicit waits with assertions:
+
+<VerifiedTag value="Verified" />
 
 ```
 -- Login --

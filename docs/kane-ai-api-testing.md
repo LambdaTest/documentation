@@ -41,6 +41,62 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kane-ai-api-testing/"
+    },
+    "headline": "How to Test APIs With KaneAI",
+    "description": "Add and validate backend API calls inside a KaneAI test and reference the responses in later UI steps.",
+    "url": "https://www.testmuai.com/support/docs/kane-ai-api-testing/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "KaneAI",
+    "keywords": [
+      "testmu ai automation",
+      "testmu ai kaneai"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-10-24T18:00:00+05:30"
+  }) }}
+/>
+
 # How to Test APIs With KaneAI
 ***
 
@@ -127,6 +183,60 @@ Once all APIs are added, click to execute them together. KaneAI reports the meth
 
 **Result:** Every call runs and returns its response details, so you can review performance and data in one place.
 
+
+## Inspect API Requests in the Console
+***
+
+The Console shows the exact request KaneAI sent and how the call went. It sits in the response section of the API modal, alongside Body, Cookies, and Headers, and is available after you validate an API or reopen an API step from the test steps. Use it to debug an API step that returns an unexpected response, or one that returns no response at all, because the Console still shows what was sent.
+
+<img loading="lazy" src={require('../assets/images/kane-ai/features/api-console/console-overview.png').default} alt="Console tab in the KaneAI API modal showing the request sent, response received, timing, and network sections" className="doc_img"/>
+
+### Pretty and Raw Views
+***
+
+The Console opens in the **Pretty** view, which groups the details into the collapsible sections described below. Switch to **Raw** to see the request and response as plain HTTP text, with the request line, headers, and body exactly as they went over the wire.
+
+### Request Sent
+***
+
+This section shows the request after KaneAI has resolved every variable:
+
+- **Method and URL**: The HTTP method and the fully resolved URL the request went to.
+- **Values used**: Each `{{variable}}` in the request, the value it resolved to, and where that value came from, such as a variable, parameter, secret, or environment. A variable that had no value is flagged as empty, which helps you spot a missing environment or an unset variable.
+- **Headers**: Every header sent with the request and its source: typed by you in the Headers tab, generated from the Authorization tab, or added by KaneAI. KaneAI adds standard headers such as `Host`, `User-Agent`, `Accept`, `Accept-Encoding`, `Connection`, and `Content-Length`.
+- **Body**: The request body that was sent, if the request had one.
+
+### Response Received
+***
+
+This section shows the response the API returned: the status code, the response headers, and the response body along with its format and size.
+
+### Timing
+***
+
+The Console breaks the total request time into phases: preparing the request, DNS lookup, connecting, establishing the secure (TLS) connection, waiting for the first byte, and downloading the response. The total matches the time shown on the API step.
+
+- If the request failed, the Console shows the phase where it stopped, so you can tell a DNS failure from a connection or TLS failure.
+- If KaneAI reused an existing connection, the connection phases are marked as skipped.
+
+### Network
+***
+
+The Console shows how the request traveled:
+
+- The IP address and region the request was sent from.
+- The server address the request reached.
+- The route, such as a direct connection, a tunnel, or a proxy.
+- Whether a new connection was opened or an existing one was reused.
+- TLS and certificate details for HTTPS requests.
+
+If the API only accepts requests from known IP addresses, share the sent-from address with the team that manages the API so they can add it to their allowlist.
+
+### Copy cURL and Download HAR
+***
+
+- **Copy cURL**: Copy the resolved request as a cURL command to rerun it in a terminal or share it with your team outside KaneAI.
+- **Download HAR**: Download the API call as a HAR (HTTP Archive) file. Open it in your browser's developer tools or any HAR viewer, or attach it to a bug report.
 
 ## API Response Variables
 ***

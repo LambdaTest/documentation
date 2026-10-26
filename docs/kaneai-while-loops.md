@@ -45,6 +45,108 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kaneai-while-loops/"
+    },
+    "headline": "How to Use While Loops With KaneAI",
+    "description": "Use While Loops in KaneAI to repeat steps on dynamic conditions, iterate collections with JavaScript, and reference the built-in loop_counter variable.",
+    "url": "https://www.testmuai.com/support/docs/kaneai-while-loops/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "KaneAI",
+    "keywords": [
+      "kaneai while loop",
+      "kaneai loops",
+      "kaneai iteration",
+      "kaneai loop counter",
+      "kaneai repeat steps",
+      "kaneai polling",
+      "kaneai control flow"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-09-09T20:21:05+05:30"
+  }) }}
+/>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Step‑by‑step Guide",
+      "description": "Learn how to use While Loops in KaneAI to repeat test steps based on dynamic conditions, iterate over collections with JavaScript, and use the built-in {{loop_counter}} variable in natural-language steps and element selectors.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Insert the Loop Block",
+          "text": "A While Loop can only be added through the / slash command menu.",
+          "url": "https://www.testmuai.com/support/docs/kaneai-while-loops/#step-1-insert-the-loop-block"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Define the Loop Condition",
+          "text": "The condition editor opens in natural language mode by default, matching KaneAI's NL‑first authoring philosophy. You can switch to operand & operator mode at any time.",
+          "url": "https://www.testmuai.com/support/docs/kaneai-while-loops/#step-2-define-the-loop-condition"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Add Body Steps",
+          "text": "The loop body becomes available only after the condition is confirmed. Inside the body you get the standard KaneAI step input, the same one used in the main authoring flow, where you can type a natural‑language step or press / to open the slash command menu.",
+          "url": "https://www.testmuai.com/support/docs/kaneai-while-loops/#step-3-add-body-steps"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Finalize the Loop",
+          "text": "When your loop body is ready, click End While at the bottom of the block to finalize it.",
+          "url": "https://www.testmuai.com/support/docs/kaneai-while-loops/#step-4-finalize-the-loop"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 # How to Use While Loops With KaneAI
 ***
 
@@ -230,7 +332,7 @@ KaneAI substitutes the counter into the underlying element selector before it is
 ## Dataset Parameters and Variables
 ***
 
-All existing KaneAI [KaneAI Using Variables](/support/docs/kane-ai-using-variables/) and [datasets](/support/docs/kane-ai-using-parameters/#datasets) are fully usable inside loop conditions and loop body steps. No special configuration is required.
+All existing KaneAI [variables](/support/docs/kane-ai-using-variables/) and [dataset parameters](/support/docs/kane-ai-using-datasets/) are fully usable inside loop conditions and loop body steps. No special configuration is required.
 
 - **Variables** use the `{{variable_name}}` syntax, for example, `{{active_count}}`, `{{job_status}}`, or a value extracted from a previous step.
 - **Dataset parameters** use the `${parameter_name}` syntax, for example, `${max_retries}`.

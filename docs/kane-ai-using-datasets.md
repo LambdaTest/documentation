@@ -46,6 +46,64 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kane-ai-using-datasets/"
+    },
+    "headline": "How to Use Datasets With KaneAI",
+    "description": "Learn how to use datasets in the KaneAI test cases",
+    "url": "https://www.testmuai.com/support/docs/kane-ai-using-datasets/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "KaneAI",
+    "keywords": [
+      "testmu ai automation",
+      "testmu ai kaneai",
+      "kaneai scroll elements",
+      "kaneai sidebar scroll"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-10-13T00:00:00+05:30"
+  }) }}
+/>
+
 # How to Use Datasets With KaneAI
 ***
 
@@ -54,14 +112,18 @@ If parameters are the placeholders in your steps, datasets are what supply their
 ## Access Datasets in a Project
 ***
 
-Go to the Parameters section within your project to review existing datasets.
+Go to **Datasets** within your Test Manager project to review existing datasets.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/datasets/1.png').default} alt="Access datasets in a project" className="doc_img img_center"/>
 
 Every test case that uses parameters generates a default dataset during authoring, capturing initial values such as a form submission.
-> Default datasets are immutable and cannot be modified.
+The Default Dataset is editable: you can change the values in row 1, add more rows, and edit their values. You cannot delete row 1 or add, rename, or delete its parameter columns, because those columns follow the parameters used in the test case. Make a copy if you need to change the columns independently.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/datasets/2.png').default} alt="Default dataset generated during authoring" className="doc_img img_center"/>
+
+<img loading="lazy" src={require('../assets/images/kane-ai/features/data-driven-testing/dataset-editor.png').default} alt="Default Dataset editor showing parameter columns, four rows, and the row 1 execution note; example cell values are obscured" className="doc_img"/>
+
+Row 1 supplies values during authoring and Playground execution. When no Dataset is selected for a test run, the test uses row 1 of its Default Dataset. Empty cells run empty; they do not fall back to the parameter's Seed Value.
 
 ## Create and Edit Datasets
 ***
@@ -69,14 +131,14 @@ Every test case that uses parameters generates a default dataset during authorin
 Create a new dataset or edit a copy of the default one.
 
 - To create a dataset, go to the Datasets section, click **Create Dataset**, and define the parameters and values.
-- To edit values, open the version history of a default dataset, create a copy, and edit the copy.
+- To edit values, edit them directly in the Default Dataset, or create a copy when you need to change its parameter columns. You can access version history as described below.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/datasets/3.png').default} alt="Create and edit a dataset" className="doc_img img_center"/>
 
 ## Add Data to a Dataset
 ***
 
-Open the editable dataset. Click **Add a Row After**, then enter your values (for example, 5 or Mike).
+Open the editable dataset. Click **Add a Row After** or **Add row**, depending on the editor view. Enter your values (for example, 5 or Mike), then save. Row 1 can be edited but cannot be deleted.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/datasets/4.png').default} alt="Add a row of data to a dataset" className="doc_img img_center"/>
 
@@ -109,6 +171,10 @@ Every dataset change is tracked, so you can restore an earlier state.
 ***
 
 Combine datasets with their parameters, then execute the test cases against those datasets to cover diverse input scenarios.
+
+Choose a Dataset for each run configuration that needs data-driven input. The run creates a test instance for every row in the selected Dataset. If no Dataset is selected, it uses row 1 of the Default Dataset.
+
+For Seed Values and per-test-case parameter values, see [KaneAI Using Parameters](/support/docs/kane-ai-using-parameters/). To export the values and results used by each instance, see [Test Run Output](/support/docs/kaneai-test-run-output/).
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/datasets/8.png').default} alt="Execute test cases against datasets" className="doc_img img_center"/>
 

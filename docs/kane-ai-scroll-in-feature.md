@@ -48,6 +48,70 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kane-ai-scroll-in-feature/"
+    },
+    "headline": "How to Scroll Within Elements With KaneAI",
+    "description": "Scroll within containers, down a page, or until an element is visible in KaneAI using natural-language scroll commands.",
+    "url": "https://www.testmuai.com/support/docs/kane-ai-scroll-in-feature/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "KaneAI",
+    "keywords": [
+      "testmu ai automation",
+      "testmu ai kaneai",
+      "kaneai scroll elements",
+      "kaneai sidebar scroll",
+      "kaneai mobile app",
+      "scroll until element",
+      "natural language commands",
+      "mobile scrolling",
+      "horizontal scrolling",
+      "nested container scrolling"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-09-09T19:16:50+05:30"
+  }) }}
+/>
+
 # How to Scroll Within Elements With KaneAI
 ***
 
@@ -87,6 +151,12 @@ Enter a direction command in the test editor, naming the element when you scroll
 
 For example, use `Scroll right in the sidebar` to move right in a horizontal sidebar, or `Scroll down` to move down a long page.
 
+Common uses include:
+
+- **Scroll a sidebar:** If a web page has a left or right sidebar, command KaneAI to scroll within the sidebar to access hidden elements.
+- **Navigate lists:** Move through long lists or dropdown menus.
+- **Access off-screen content:** When elements are outside the viewport, scroll to bring them into view.
+
 **Result:** KaneAI scrolls the named element in the requested direction.
 
 ### Step 3: Verify the Content Is in View
@@ -99,7 +169,12 @@ Confirm the target content is visible after the scroll action before your next s
 ## Scroll Until Element
 ***
 
-The commands above scroll within an element in a direction. When you do not know how far the target sits, describe the element you want to reach instead and KaneAI scrolls until it becomes visible. This locates elements that sit below the fold or deep in long, scrollable pages without manual scroll logic or coordinates.
+The commands above scroll within an element in a direction. When you do not know how far the target sits, describe the element you want to reach instead and KaneAI scrolls until it becomes visible. This locates elements that sit below the fold or deep in long, scrollable pages without manual scroll logic or coordinates, which can otherwise be fragile, difficult to maintain, and time-consuming to write.
+
+This feature helps by:
+
+- **Automatically locating elements** by scrolling until the target becomes visible.
+- **Reducing complexity** by removing the need for technical selectors or manual scroll logic.
 
 ### Step 1: Identify the Target
 ***
@@ -109,14 +184,14 @@ Reference the element by what is visibly present on screen:
 - Visible text (for example, `Login button`)
 - Element type (for example, `input field`)
 
-Natural language commands do **not** support technical selectors such as IDs, XPaths, or CSS attributes.
+Natural language commands do **not** support technical selectors such as IDs, XPaths, or CSS attributes. Always describe what is visibly present on the screen.
 
 **Result:** You have a visual description KaneAI can match.
 
 ### Step 2: Formulate the Command
 ***
 
-Enter an action-oriented command that names both the element to find and the action to perform once it is found:
+Enter your command into the test editor using action-oriented language. Clearly specify what the agent should find and what action to perform once it is found:
 
 - `Scroll until search bar is visible and click on it.`
 - `Scroll down until element with text 'Shipping Policy' is visible.`
@@ -142,12 +217,14 @@ This table pairs common scroll scenarios with example natural language commands:
 ## Limitations
 ***
 
-Keep these limitations in mind:
+Keep these constraints of the current version in mind:
 
 ### Mobile App Authoring
 ***
 
-Mobile app authoring supports **horizontal scrolling** and **scrolling inside nested containers** (element scrolling). You can scroll left or right inside carousels, and scroll within specific container elements such as dropdowns, lists, and subsections instead of only the main viewport.
+:::tip Now Supported
+Mobile app authoring now supports **horizontal scrolling** and **scrolling inside nested containers** (element scrolling). You can scroll left or right, for example inside carousels, and scroll within specific container elements such as dropdowns, lists, and subsections instead of only the main viewport.
+:::
 
 - **Scroll limit:** A maximum of **20 scroll attempts** are performed. If the element is not found, the action fails.
 - **Directional extremes:** Commands such as `Scroll to top` or `Scroll to bottom` are not supported.
@@ -162,7 +239,7 @@ Mobile app authoring supports **horizontal scrolling** and **scrolling inside ne
 ## Troubleshooting
 ***
 
-This table lists common scroll errors, their causes, and fixes:
+If you encounter execution issues, refer to this table of common scroll errors, their causes, and fixes:
 
 | Error message / behavior | Potential cause | Solution |
 |------------------------|-----------------|----------|

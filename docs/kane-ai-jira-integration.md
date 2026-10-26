@@ -25,6 +25,7 @@ canonical: https://www.testmuai.com/support/docs/kane-ai-jira-integration/
 
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -50,6 +51,115 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kane-ai-jira-integration/"
+    },
+    "headline": "How to Integrate Jira With KaneAI",
+    "description": "Integrate Jira with KaneAI to generate test cases from your Jira tickets via the Atlassian Marketplace app.",
+    "url": "https://www.testmuai.com/support/docs/kane-ai-jira-integration/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "KaneAI",
+    "keywords": [
+      "testmu ai automation",
+      "testmu ai kaneai",
+      "kaneai jira integration",
+      "generate tests from jira tickets",
+      "jira to automated tests",
+      "convert jira requirements to tests",
+      "AI test generation from jira",
+      "test case generation from user stories",
+      "jira test automation",
+      "automated testing from requirements",
+      "manual to automated jira"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To trigger KaneAI, add the comment to your Jira ticket calling TestMu AI application, for example",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "@TestMu AI Cloud create test case based on the details of this Jira"
+      }
+    ],
+    "dateModified": "2026-09-09T19:16:50+05:30"
+  }) }}
+/>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Step-by-Step Guide",
+      "description": "Learn how to integrate your jira tickets with KaneAI and test planner using Atalssian Marketplace",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 2: Define Test Cases",
+          "text": "Create a Jira ticket, or open an existing one, where you want to outline test cases. In the comments section, describe each test case's steps, conditions, expected outcomes, and any other detail that helps KaneAI generate accurate tests.",
+          "url": "https://www.testmuai.com/support/docs/kane-ai-jira-integration/#step-2-define-test-cases"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 3: Generate Test Cases",
+          "text": "To trigger KaneAI, add a comment to your Jira ticket that calls the application, for example:",
+          "url": "https://www.testmuai.com/support/docs/kane-ai-jira-integration/#step-3-generate-test-cases"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 4: Review and Refine",
+          "text": "Open the link in the Jira comment to Generate Test Cases With AI. KaneAI begins generating test cases from your Jira ticket content in real time, and you watch scenarios and test cases stream in as they are created.",
+          "url": "https://www.testmuai.com/support/docs/kane-ai-jira-integration/#step-4-review-and-refine"
+        }
+      ]
+    }
+  ]) }}
+/>
 
 # How to Integrate Jira With KaneAI
 ***
@@ -93,6 +203,8 @@ Create a Jira ticket, or open an existing one, where you want to outline test ca
 ***
 
 To trigger KaneAI, add a comment to your Jira ticket that calls the <BrandName /> application, for example:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 @TestMu AI Cloud create test case based on the details of this Jira

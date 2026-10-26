@@ -19,6 +19,128 @@ slug: kane-ai-deeplink-support/
 canonical: https://www.testmuai.com/support/docs/kane-ai-deeplink-support/
 ---
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.testmuai.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Support",
+        "item": "https://www.testmuai.com/support/docs/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "How to Use Deeplinks With KaneAI",
+        "item": "https://www.testmuai.com/support/docs/kane-ai-deeplink-support/"
+      }
+    ]
+  }) }}
+/>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kane-ai-deeplink-support/"
+    },
+    "headline": "How to Use Deeplinks With KaneAI",
+    "description": "Add a deeplink step in KaneAI to jump straight to a specific screen in your Android or iOS app during a mobile test.",
+    "url": "https://www.testmuai.com/support/docs/kane-ai-deeplink-support/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "KaneAI",
+    "keywords": [
+      "testmu ai automation",
+      "testmu ai kaneai",
+      "kaneai deeplink",
+      "mobile app testing",
+      "deeplink navigation",
+      "android deeplink",
+      "ios deeplink"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-09-09T19:16:50+05:30"
+  }) }}
+/>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Adding Deeplinks in KaneAI",
+      "description": "Learn how to use deeplinks in KaneAI to directly navigate to specific screens in your Android and iOS mobile applications during test authoring.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Open the Deeplink Feature",
+          "text": "In your mobile app test authoring session, type a slash (/) in the input box and select the Deeplink option from the menu.",
+          "url": "https://www.testmuai.com/support/docs/kane-ai-deeplink-support/#step-1-open-the-deeplink-feature"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Configure the Deeplink Parameters",
+          "text": "In the deeplink modal, provide the following.",
+          "url": "https://www.testmuai.com/support/docs/kane-ai-deeplink-support/#step-2-configure-the-deeplink-parameters"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Add the Deeplink to Your Test",
+          "text": "Click Add in steps to include the deeplink instruction in your test case. During a test run, KaneAI invokes the deeplink within your target app.",
+          "url": "https://www.testmuai.com/support/docs/kane-ai-deeplink-support/#step-3-add-the-deeplink-to-your-test"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 
 # How to Use Deeplinks With KaneAI
 ***

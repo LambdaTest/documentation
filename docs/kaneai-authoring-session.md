@@ -49,6 +49,72 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kaneai-authoring-session/"
+    },
+    "headline": "Authoring Session States, Cursor, and Running Steps in KaneAI",
+    "description": "Understand the KaneAI authoring session model - the Setting up, Authoring Steps, Paused, and Running states, the Error flag, the cursor, the four run actions, step statuses, and save states.",
+    "url": "https://www.testmuai.com/support/docs/kaneai-authoring-session/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "KaneAI",
+    "keywords": [
+      "kaneai authoring session",
+      "kaneai session states",
+      "kaneai authoring steps",
+      "kaneai paused session",
+      "kaneai cursor",
+      "kaneai run till here",
+      "kaneai run from here",
+      "kaneai run this step",
+      "kaneai error flag",
+      "kaneai step statuses",
+      "kaneai save states",
+      "kaneai reset session"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-09-30T12:00:00+05:30"
+  }) }}
+/>
+
 ## Overview
 
 An authoring session is the live workspace where you build a test in KaneAI. A device or browser runs your application on one side, and a step list records what the test does on the other side. You add steps by typing instructions in natural language, by running slash commands, or by interacting with the application directly.
@@ -68,6 +134,8 @@ This model is the same across Desktop Web, Mobile Web, and Mobile App authoring,
 ### Setting up
 
 The device or browser is being brought up and your application is being installed or loaded. This happens when you start a session and again after you use [Reset Session](#resume-and-reset-session). It is transient — nothing is interactive while it lasts, and the session moves on automatically once the environment is ready.
+
+If you selected a variable environment before starting the session, the session is locked to it from this point. Every `{{environment.X}}` variable resolves from that environment until the session ends. See [Select an Environment for an Authoring Session](/support/docs/kane-ai-using-variables/#select-an-environment-for-an-authoring-session).
 
 ### Authoring Steps
 
@@ -488,4 +556,5 @@ Reset Session reinstalls the application, so it comes up fresh. Steps that had a
 - [Code Generation](/support/docs/kane-ai-automation-code-generation/)
 - [Rename Steps](/support/docs/kaneai-manual-interaction/#rename-test-steps)
 - [Advanced Settings](/support/docs/kaneai-advanced-settings/)
+- [Variables and Environments](/support/docs/kane-ai-using-variables/)
 - [Error Handling](/support/docs/error-handling-kaneai/)

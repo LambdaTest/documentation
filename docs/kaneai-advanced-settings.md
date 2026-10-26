@@ -47,6 +47,110 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kaneai-advanced-settings/"
+    },
+    "headline": "How to Configure Advanced Settings With KaneAI",
+    "description": "Edit advanced settings for a KaneAI test from the test summary page across desktop web, mobile app, and mobile web.",
+    "url": "https://www.testmuai.com/support/docs/kaneai-advanced-settings/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "KaneAI",
+    "keywords": [
+      "kaneai advanced settings",
+      "edit advanced settings",
+      "test case settings",
+      "network configuration",
+      "chrome options",
+      "custom headers",
+      "timezone",
+      "version history",
+      "kaneai test summary"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-09-30T12:00:00+05:30"
+  }) }}
+/>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How to Edit Advanced Settings",
+      "description": "Learn how to edit advanced settings for your KaneAI test cases from the test summary page across desktop web, mobile app, and mobile web platforms.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Open Test Summary",
+          "text": "Open your test case in KaneAI and go to the Test Summary tab.",
+          "url": "https://www.testmuai.com/support/docs/kaneai-advanced-settings/#step-1-open-test-summary"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Open the Edit Dialog",
+          "text": "Click Edit Test Steps to open the Advanced Settings panel.",
+          "url": "https://www.testmuai.com/support/docs/kaneai-advanced-settings/#step-2-open-the-edit-dialog"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Modify the Settings",
+          "text": "Update the settings as needed. For example:",
+          "url": "https://www.testmuai.com/support/docs/kaneai-advanced-settings/#step-3-modify-the-settings"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Save Your Changes",
+          "text": "Choose one of the two save actions at the bottom of the dialog (see Save actions).",
+          "url": "https://www.testmuai.com/support/docs/kaneai-advanced-settings/#step-4-save-your-changes"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 # How to Configure Advanced Settings With KaneAI
 ***
 
@@ -67,6 +171,7 @@ The available settings depend on the platform of your test case. Refer to the re
 | **Timezone** | Dropdown | Set the timezone where your tests will run |
 | **Chrome Options** | Toggle + multi-input | Add up to 10 Chrome browser command-line flags |
 | **Custom Headers** | Toggle + multi-input | Add up to 10 custom HTTP headers to inject in your test case |
+| **Environment** | Dropdown | Select the variable environment the test is authored against. See [Select an Environment for an Authoring Session](/support/docs/kane-ai-using-variables/#select-an-environment-for-an-authoring-session) |
 
 ### Android App
 ***
@@ -174,6 +279,7 @@ Update the settings as needed. For example:
 - Update the **Timezone** to a different zone.
 - Toggle **Chrome Options** on or off and add command-line switches.
 - Enable **Custom Headers** and add HTTP headers for your test.
+- Change the **Environment** the test is authored against.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/edit-advanced-settings/advanced-settings-in-session.png').default} alt="Edited Advanced Settings" className="doc_img"/>
 
@@ -201,7 +307,7 @@ Choose one of the following actions to save your settings changes.
 ## Version History
 ***
 
-Each time you apply updated settings, KaneAI creates a new version of the test case, viewable from the **Version History** tab. The comparison view shows a diff of what changed, such as updated network configuration or timezone values, so you can track exactly what was modified in each version.
+Each time you apply updated settings, KaneAI creates a new version of the test case, viewable from the **Version History** tab. The comparison view shows a diff of what changed, such as updated network configuration or timezone values, so you can track exactly what was modified in each version. A change of environment is shown by the environment's name.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/edit-advanced-settings/advanced-settings-version-history.png').default} alt="Advanced Settings Version History" className="doc_img"/>
 
@@ -210,7 +316,7 @@ Each time you apply updated settings, KaneAI creates a new version of the test c
 
 Keep these limitations in mind:
 
-- **Advanced Settings only:** From the Test Summary page you can edit only Advanced Settings (network configuration, timezone, Chrome options, custom headers, and mobile session settings). To change test steps, OS, browser, or device configuration, open the playground.
+- **Advanced Settings only:** From the Test Summary page you can edit only Advanced Settings (network configuration, timezone, Chrome options, custom headers, environment, and mobile session settings). To change test steps, OS, browser, or device configuration, open the playground.
 - **New version on every apply:** Applying updated settings always creates a new version with regenerated code. You cannot update settings in place.
 - **Pre-rollout versions:** Comparing a version created after this feature rolled out with one created before it shows no Advanced Settings changes, because the older version never tracked them. Opening a pre-rollout version shows only the latest settings, because the original settings were not recorded.
 

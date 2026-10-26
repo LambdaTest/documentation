@@ -44,6 +44,66 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/test-runs-configurations/"
+    },
+    "headline": "How to Create Test Run Configurations With KaneAI",
+    "description": "Learn how to create, manage, and apply reusable environment configurations for your test runs in TestMu AI Test Manager.",
+    "url": "https://www.testmuai.com/support/docs/test-runs-configurations/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "KaneAI",
+    "keywords": [
+      "testmu ai automation",
+      "kaneai",
+      "test manager",
+      "configurations",
+      "test runs",
+      "environment setup"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-10-14T12:00:00+05:30"
+  }) }}
+/>
+
 # How to Create Test Run Configurations With KaneAI
 ***
 
@@ -74,7 +134,7 @@ The central dashboard displays all your configurations with the following featur
 | Feature | Description |
 |---------|-------------|
 | **Search Bar** | Find configurations by name |
-| **Filters** | Filter by OS, Browser, or Resolution |
+| **Filters** | Filter by OS, Browser, or Resolution. Switch a filter to **Not Equals** to hide the configurations with the selected values, for example to hide every Windows configuration |
 | **Configuration Details** | View name, last updated date, OS, browser, version, and resolution |
 | **Usage Count** | See how many test runs use each configuration |
 | **Actions Menu** | Access Edit and Delete options via the ⋮ menu |

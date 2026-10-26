@@ -465,6 +465,7 @@ module.exports = {
         items: [
           { type: "doc", id: "kane-ai-automation-code-generation", label: "Code Generation" },
           { type: "doc", id: "kaneai-hyperexecute-test-run-execution", label: "Test Runs" },
+          { type: "doc", id: "kaneai-test-run-output", label: "Test Run Output" },
           { type: "doc", id: "kaneai-test-run-instance-view", label: "Test Run Instance View" },
           { type: "doc", id: "kaneai-scheduled-test-runs", label: "Scheduled Test Runs" },
           { type: "doc", id: "kaneai-sequential-test-runs", label: "Sequential Test Runs" },
@@ -493,12 +494,16 @@ module.exports = {
         collapsed: true,
         label: "Reference",
         items: [
+          { type: "doc", id: "kaneai-kb-knowledge-base-index", label: "Knowledge Base" },
           { type: "doc", id: "kane-ai-command-guide", label: "Commands" },
           { type: "doc", id: "error-handling-kaneai", label: "Errors" },
           { type: "doc", id: "kaneai-auto-heal", label: "Auto-Heal" },
           { type: "doc", id: "kane-ai-mobile-app-capabilities", label: "Mobile Authoring Capabilities" },
         ],
       },
+
+      // 7. FAQs
+      { type: "doc", id: "kaneai-faqs", label: "FAQs", className: "menu-bold" },
     ],
   ],
 
@@ -577,7 +582,6 @@ module.exports = {
       },
       "troubleshooting-ios-apps",
       "entitlements",
-      { type: "doc", label: "FAQs", id: "kaneai-faqs" },
     ],
   ],
 

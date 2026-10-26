@@ -43,6 +43,107 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kaneai-mobile-app-accessibility/"
+    },
+    "headline": "How to Run Accessibility Scans With KaneAI",
+    "description": "Add an accessibility scan to a KaneAI mobile test to automatically check a native app screen and produce a report.",
+    "url": "https://www.testmuai.com/support/docs/kaneai-mobile-app-accessibility/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "KaneAI",
+    "keywords": [
+      "testmu ai automation",
+      "testmu ai kaneai",
+      "kaneai mobile app",
+      "accessibility testing",
+      "mobile accessibility",
+      "accessibility scan"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-09-09T19:16:50+05:30"
+  }) }}
+/>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How to Run Accessibility Scans With KaneAI",
+      "description": "Add an accessibility scan to a KaneAI mobile test to automatically check a native app screen and produce a report.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Add the Scan Instruction",
+          "text": "During test authoring, add the accessibility scan instruction to the screen you want to check.",
+          "url": "https://www.testmuai.com/support/docs/kaneai-mobile-app-accessibility/#step-1-add-the-scan-instruction"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Confirm the Instruction Is Recorded",
+          "text": "Once added, the scan instruction is recorded in the test execution flow.",
+          "url": "https://www.testmuai.com/support/docs/kaneai-mobile-app-accessibility/#step-2-confirm-the-instruction-is-recorded"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Save the Test Case",
+          "text": "When you save the test, KaneAI creates the test case with an accessibility tag.",
+          "url": "https://www.testmuai.com/support/docs/kaneai-mobile-app-accessibility/#step-3-save-the-test-case"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Execute and Review the Report",
+          "text": "During automated execution, KaneAI runs the scan and reports issues.",
+          "url": "https://www.testmuai.com/support/docs/kaneai-mobile-app-accessibility/#step-4-execute-and-review-the-report"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 # How to Run Accessibility Scans With KaneAI
 ***
 

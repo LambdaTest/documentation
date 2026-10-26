@@ -22,6 +22,7 @@ canonical: https://www.testmuai.com/support/docs/kane-ai-javascript-execution/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -46,6 +47,127 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kane-ai-javascript-execution/"
+    },
+    "headline": "How to Execute JavaScript With KaneAI",
+    "description": "Run custom JavaScript as a step in a KaneAI test for cases natural language can't cover, and reuse ready-made snippets.",
+    "url": "https://www.testmuai.com/support/docs/kane-ai-javascript-execution/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "KaneAI",
+    "keywords": [
+      "testmu ai automation",
+      "testmu ai kaneai",
+      "kaneai guided walkthrough",
+      "kane ai prompts",
+      "kane ai commands",
+      "kaneai javascript",
+      "kaneai js snippet",
+      "kaneai workaround",
+      "kaneai limitations"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "A sample JavaScript code",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "function simulateTyping(element, text) {\n    element.value = '';  // Clear any existing value\n\n    for (let i = 0; i < text.length; i++) {\n        let char = text[i];\n        let keyDownEvent = new KeyboardEvent('keydown', {key: char});\n        element.dispatchEvent(keyDownEvent);\n        element.value += char;\n\n        let inputEvent = new Event('input', {bubbles: true});\n        element.dispatchEvent(inputEvent);\n        let keyUpEvent = new KeyboardEvent('keyup', {key: char});\n        element.dispatchEvent(keyUpEvent);\n    }\n\n    let changeEvent = new Event('change', {bubbles: true});\n    element.dispatchEvent(changeEvent);\n}\n\n// Example usage\nlet inputElement1 = document.querySelector('[aria-label=\"First Name\"]');\nlet inputElement2 = document.querySelector('[aria-label=\"Last Name\"]');\nlet inputElement3= document.querySelector('[aria-label=\"Email\"]');\nsimulateTyping(inputElement1, 'Aman');\nsimulateTyping(inputElement2, 'Chopra');\nsimulateTyping(inputElement3, 'amanc@lambdatest.com');\n\nreturn {\"First name\": \"Aman\", \"Last name\": \"Chopra\", \"email\": \"amanc@lambdatest.com\"};"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For example, in the code snippet provided",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "return {\"First name\": \"Aman\", \"Last name\": \"Chopra\", \"email\": \"amanc@lambdatest.com\"};"
+      }
+    ],
+    "dateModified": "2026-09-09T19:16:50+05:30"
+  }) }}
+/>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How to Execute Custom JavaScript Tests",
+      "description": "Learn how to execute your tests on Kane AI using custom javascript snippets",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Open Write a Step",
+          "text": "In KaneAI's test editor, go to the Write a Step field where you write test scenarios in plain English.",
+          "url": "https://www.testmuai.com/support/docs/kane-ai-javascript-execution/#step-1-open-write-a-step"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Switch to JavaScript Mode",
+          "text": "To switch to JavaScript execution mode, type the forward slash / or click the + icon. When the JavaScript option appears, click it to change the input mode to custom JavaScript.",
+          "url": "https://www.testmuai.com/support/docs/kane-ai-javascript-execution/#step-2-switch-to-javascript-mode"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Write Your JavaScript",
+          "text": "Write or paste your custom JavaScript snippet directly into the text field. For example:",
+          "url": "https://www.testmuai.com/support/docs/kane-ai-javascript-execution/#step-3-write-your-javascript"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Execute the Step",
+          "text": "When your code is ready, press Enter. KaneAI runs the snippet in the current test session.",
+          "url": "https://www.testmuai.com/support/docs/kane-ai-javascript-execution/#step-4-execute-the-step"
+        }
+      ]
+    }
+  ]) }}
+/>
 
 # How to Execute JavaScript With KaneAI
 ***
@@ -86,6 +208,8 @@ To switch to JavaScript execution mode, type the forward slash `/` or click the 
 ***
 
 Write or paste your custom JavaScript snippet directly into the text field. For example:
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 function simulateTyping(element, text) {
@@ -134,6 +258,8 @@ If your snippet returns a value, KaneAI saves it as a variable you can use later
 
 For example, in the snippet above:
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 return {"First name": "Aman", "Last name": "Chopra", "email": "amanc@lambdatest.com"};
 ```
@@ -173,7 +299,9 @@ The snippet runs in the context of the page with full access to the DOM, `docume
 
 **Problem:** Many date pickers use read-only inputs that reject typed values. Natural language typing doesn't trigger the custom event handlers these components rely on.
 
-#### Set Read-Only Date Picker
+#### Set Date on a Read-Only Date Picker
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 const dateInput = document.querySelector('input[name="startDate"]');
@@ -187,9 +315,11 @@ dateInput.dispatchEvent(new Event('change', { bubbles: true }));
 return 'Date set to 2026-03-15';
 ```
 
-#### Set React DatePicker Date
+#### Set Date on React DatePicker
 
 React components use synthetic events. Use the native input setter:
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 const dateInput = document.querySelector('input[name="date"]');
@@ -202,6 +332,8 @@ return 'React date picker value set';
 ```
 
 #### Set Date Range Picker
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 const startDate = document.querySelector('input[name="start"]');
@@ -228,7 +360,9 @@ return 'Date range set: Feb 1 - Feb 28, 2026';
 
 **Problem:** Operations like converting text to lowercase, extracting substrings, or formatting data are not reliably handled via natural language.
 
-#### Convert Text to Lowercase
+#### Convert Text to Lowercase and Validate
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 const title = document.querySelector('h1.page-title').textContent;
@@ -242,6 +376,8 @@ if (lowercase === 'welcome to dashboard') {
 
 #### Extract and Validate a Substring
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 const orderText = document.querySelector('.order-id').textContent;
 // Text is "Order #12345", extract just the number
@@ -254,6 +390,8 @@ if (orderId.length === 5 && !isNaN(orderId)) {
 ```
 
 #### Trim Whitespace and Compare
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 const actual = document.querySelector('.username').textContent.trim();
@@ -274,6 +412,8 @@ if (actual === expected) {
 
 #### Assert Specific Table Cell Value
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 const rows = document.querySelectorAll('table.users-table tbody tr');
 const thirdRowFifthCol = rows[2].querySelectorAll('td')[4].textContent.trim();
@@ -286,6 +426,8 @@ if (thirdRowFifthCol === 'Active') {
 
 #### Count Table Rows
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 const rowCount = document.querySelectorAll('table tbody tr').length;
 if (rowCount === 10) {
@@ -296,6 +438,8 @@ if (rowCount === 10) {
 ```
 
 #### Validate Table is Sorted
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 const cells = Array.from(document.querySelectorAll('table tbody tr td:first-child'));
@@ -318,6 +462,8 @@ if (isSorted) {
 
 #### Copy Text to Clipboard
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 const text = document.querySelector('.referral-code').textContent;
 await navigator.clipboard.writeText(text);
@@ -325,6 +471,8 @@ return 'Copied to clipboard: ' + text;
 ```
 
 #### Read Clipboard Content
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 const clipText = await navigator.clipboard.readText();
@@ -340,6 +488,8 @@ return 'Clipboard contains: ' + clipText;
 
 #### Read a Local Storage Value
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 const token = localStorage.getItem('authToken');
 if (token) {
@@ -349,14 +499,18 @@ if (token) {
 }
 ```
 
-#### Set a Local Storage Value
+#### Set a Local Storage Value (Test Setup)
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 localStorage.setItem('feature_flag_newUI', 'true');
 return 'Feature flag set';
 ```
 
-#### Clear Session Storage
+#### Clear Session Storage (Logout Simulation)
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 sessionStorage.clear();
@@ -364,7 +518,7 @@ return 'Session storage cleared';
 ```
 ---
 
-### Quick Reference: JS Snippets
+### Quick Reference: When to Use JS Snippets
 ***
 
 | Scenario | Natural Language? | JS Snippet Needed? |

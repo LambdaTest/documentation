@@ -43,6 +43,65 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/getting-started-with-kane-ai/"
+    },
+    "headline": "Getting Started With KaneAI",
+    "description": "World's first GenAI-Native testing assistant that simplifies end-to-end automation testing for web, mobile, and cloud apps, using natural language.",
+    "url": "https://www.testmuai.com/support/docs/getting-started-with-kane-ai/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "ai testing tool",
+      "ai qa agent",
+      "genai qa agent",
+      "testmu ai automation",
+      "testmu ai kaneai"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-09-09T19:16:50+05:30"
+  }) }}
+/>
+
 # Getting Started With KaneAI
 ***
 
@@ -65,24 +124,31 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 Traditional test automation is often **complex, time-consuming, and difficult to scale**. Teams need coding expertise, manage multiple frameworks, maintain growing test suites, and spend significant effort integrating tests into CI/CD workflows.
 
-KaneAI simplifies this by turning natural language and existing requirements into executable, maintainable tests.
+KaneAI transforms the way teams approach test automation by bridging the gap between natural language requirements and executable test code. Built for modern development workflows, KaneAI empowers teams to plan, author, and evolve comprehensive test suites without the traditional barriers of complex scripting or framework expertise.
 
 **Current Testing Challenges**:
 
-* **Technical barriers:** Test creation and maintenance require scripting expertise.
-* **Framework complexity:** Teams manage multiple languages, frameworks, and integrations.
-* **Scaling issues:** Growing test suites become harder to maintain and organize.
-* **Security:** Credentials and sensitive test data need secure handling.
-* **CI/CD friction:** Integrating and maintaining automated tests across pipelines takes effort.
+Traditional test automation often creates bottlenecks in development cycles. Teams face several persistent challenges:
+
+* **Technical barriers:** Writing and maintaining test scripts requires specialized programming knowledge, limiting who can contribute to test creation.
+* **Framework complexity:** Managing multiple testing frameworks, languages, and integrations creates overhead and maintenance burden.
+* **Scaling issues:** As applications grow, test suites become increasingly difficult to organize, update, and execute consistently.
+* **Security:** Handling authentication credentials and sensitive test data safely across different environments.
+* **CI/CD friction:** Connecting testing workflows with CI/CD pipelines often requires significant configuration and ongoing maintenance.
 
 **How KaneAI Helps**:
 
-* **AI-powered test authoring:** Create tests using natural language or inputs such as **Jira tickets, PDFs, images, videos, audio, spreadsheets, and text**.
-* **Unified test management:** Manage test cases, executions, coverage, and results from one platform.
-* **Multi-language and framework support:** Export tests in the **language and framework** your team uses.
-* **API testing:** Create API tests with intelligent validations and assertions.
-* **Secure secret management:** Safely manage credentials and sensitive test data.
-* **CI/CD integration:** Integrate automated testing into existing development and deployment pipelines.
+KaneAI addresses these challenges through an intelligent, unified platform that democratizes end-to-end test automation while maintaining enterprise-grade capabilities.
+
+* **AI-powered test authoring:** Generate structured test cases by transforming inputs such as **text, Jira tickets, PDFs, images, audio, videos, and spreadsheets**, or manually author tests using conversational language for precise control. Whether you need rapid test generation from existing documentation or prefer hands-on test crafting, KaneAI's input processing streamlines both approaches.
+* **Unified test management:** Consolidate your entire testing ecosystem within a single platform. KaneAI provides centralized control over test cases, execution plans, and results analysis, eliminating the fragmentation common in traditional testing tools. Teams benefit from:
+  * Complete visibility into test coverage and execution status
+  * Streamlined collaboration between development, QA, and business teams
+  * Simplified reporting and metrics tracking across all test activities
+* **Multi-language and framework support:** KaneAI supports all prominent frameworks and languages, offering the flexibility to export test code in the **language and framework** that you and your team prefer.
+* **API testing:** Create robust API test suites with intelligent validation and seamless integration capabilities. KaneAI understands API contracts and automatically generates meaningful assertions, reducing the manual effort typically required for thorough API testing coverage.
+* **Secure secret management:** Securely handle authentication credentials and sensitive test data across environments, so secrets never need to be hard-coded into your tests.
+* **CI/CD integration:** Connect seamlessly with your existing continuous integration and deployment pipelines. KaneAI's integration capabilities ensure automated test execution becomes a natural part of your development workflow, supporting consistent quality gates across multiple environments and deployment stages.
 
 
 ## Get Started
@@ -447,3 +513,70 @@ KaneAI validates end-to-end flows across web, mobile, and APIs in any domain:
 | Corporate Legal | Contract lifecycle, clause extraction, compliance workflows |
 | Digital Workplace | Collaboration tools, access controls, identity flows across devices |
 | Application Suites | User journeys, integration failures, performance across releases |
+
+Each domain below shows how KaneAI applies to it in more detail.
+
+### Application Suites
+
+KaneAI accelerates testing and validation across complex application suites by auto-generating test cases, simulating user journeys, detecting integration failures, and continuously validating performance and reliability across modules and releases.
+
+### Corporate Legal Management
+
+KaneAI automates validation of legal workflows by testing contract lifecycle systems, clause extraction accuracy, compliance workflows, and document management reliability to help reduce legal risk and operational errors.
+
+### Customer Service, Support & CRM/CX
+
+KaneAI improves quality of CRM and CX platforms by autonomously testing customer journeys, chatbot accuracy, ticket workflows, integrations, and performance under high-volume scenarios to ensure seamless omnichannel experiences.
+
+### Digital Commerce
+
+KaneAI validates end-to-end eCommerce flows including browsing, search, cart, payments, offers, and order tracking by generating AI-driven test scenarios that detect checkout failures, latency issues, and conversion blockers.
+
+### Finance
+
+KaneAI strengthens financial systems by testing transaction integrity, reconciliation workflows, regulatory compliance, security vulnerabilities, and system resilience through AI-generated tests and real-world transaction simulations.
+
+### Human Resources / Recruiting
+
+KaneAI ensures HR and recruiting platforms perform reliably by testing applicant workflows, onboarding journeys, payroll accuracy, integrations with background checks, and system scalability during high hiring demand.
+
+### IT Operations / Service Desk
+
+KaneAI enhances ITSM and service desk platforms by validating incident, change, and asset workflows, chatbot accuracy, monitoring integrations, and system performance to improve uptime and operational efficiency.
+
+### Marketing
+
+KaneAI validates marketing automation platforms by testing campaign workflows, personalization engines, data integrations, email/SMS delivery, segmentation accuracy, and analytics reliability to maximize campaign performance.
+
+### Sales & Lead Management
+
+KaneAI ensures sales platforms function flawlessly by testing lead capture, routing, scoring, CRM synchronization, forecasting accuracy, and pipeline health across channels and integrations.
+
+### Security & Fraud Detection
+
+KaneAI proactively tests security and fraud systems by simulating attack vectors, anomaly scenarios, false-positive/false-negative conditions, and performance under threat load to strengthen detection accuracy and resilience.
+
+### Sourcing & Procurement
+
+KaneAI validates procurement workflows by testing vendor onboarding, purchase approval flows, contract compliance, invoice matching, and ERP integrations to reduce errors and cycle times.
+
+### Supply Chain
+
+KaneAI tests supply chain platforms by simulating demand spikes, inventory fluctuations, logistics delays, supplier failures, and integration accuracy to ensure system resilience and real-time visibility.
+
+### Workplace & Digital Workplace
+
+KaneAI strengthens digital workplace platforms by testing collaboration tools, access controls, identity flows, remote work scenarios, and performance across devices to ensure secure and seamless employee experiences.
+
+## Related KaneAI Guides
+***
+
+Ready to go further with KaneAI? These guides cover common authoring and workflow tasks:
+
+- [Create Pull Requests from KaneAI Test Cases](/support/docs/kaneai-create-pr/): turn KaneAI test cases into pull requests in your repository.
+- [Scroll Until Element for Mobile Authoring](/support/docs/kane-ai-scroll-in-feature/#scroll-until-element): scroll until a target element is visible when authoring mobile tests.
+- [Error handling in KaneAI](/support/docs/error-handling-kaneai/): handle failures and recover gracefully within a KaneAI test.
+- [Kane CLI modes](/support/docs/kane-cli-modes/): the execution modes available in the Kane CLI.
+- [Finding and interacting with elements](/support/docs/kaneai-kb-finding-and-interacting-with-elements/): describe elements so KaneAI can locate them reliably.
+- [Mobile app testing patterns](/support/docs/kaneai-kb-mobile-app-testing-patterns/): common patterns for authoring mobile app tests with KaneAI.
+- [KaneAI FAQs](/support/docs/kaneai-faqs/): answers to common questions about running tests, bot protection and CAPTCHAs, and billing and plans.

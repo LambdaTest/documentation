@@ -25,6 +25,7 @@ canonical: https://www.testmuai.com/support/docs/kane-ai-click-interactions/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -49,6 +50,96 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kane-ai-click-interactions/"
+    },
+    "headline": "How to Author Clicks and Drag With KaneAI",
+    "description": "Author clicks, long-press, right-click, and drag-and-drop in KaneAI using natural language or manual recording, across desktop web and mobile.",
+    "url": "https://www.testmuai.com/support/docs/kane-ai-click-interactions/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "KaneAI",
+    "keywords": [
+      "testmu ai automation",
+      "testmu ai kaneai",
+      "kaneai click interactions",
+      "kaneai long press",
+      "kaneai press and hold",
+      "kaneai double click",
+      "kaneai right click",
+      "kaneai multi click",
+      "context menu testing",
+      "kaneai drag and drop",
+      "kaneai click and drag",
+      "kaneai slider testing"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Author with Natural Language",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "long press the menu icon\npress and hold the build number for 10 seconds\ntap and hold the profile avatar\nhold down the record button for 5 seconds\nlong press the Submit button for 30 seconds"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Author with Natural Language",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "double click on the submit button\nclick the increment button 5 times\ntap twice on the like button\ntap thrice on the notification bell"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Author with Natural Language",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "right click on the file item\nright-click the table row\ncontext click on the selected text\nsecondary click on the canvas element"
+      }
+    ],
+    "dateModified": "2026-09-09T20:20:47+05:30"
+  }) }}
+/>
 
 # How to Author Clicks and Drag With KaneAI
 ***
@@ -95,6 +186,8 @@ Author a long press with natural language or capture it through Manual Interacti
 
 ### Author With Natural Language
 ***
+
+<VerifiedTag value="Verified" />
 
 ```
 long press the menu icon
@@ -163,6 +256,8 @@ Author a multi-click with natural language or capture it through Manual Interact
 ### Author With Natural Language
 ***
 
+<VerifiedTag value="Verified" />
+
 ```
 double click on the submit button
 click the increment button 5 times
@@ -211,6 +306,8 @@ Right click is supported on **Desktop Web only**. On mobile, use long press inst
 
 ### Author With Natural Language
 ***
+
+<VerifiedTag value="Verified" />
 
 ```
 right click on the file item
@@ -361,7 +458,7 @@ Keep these limitations in mind:
 ## Drag and Drop
 ***
 
-Drag extends the same press-then-move model as long press: KaneAI picks the element up, then moves it to a target. Use it for Kanban boards and any other drag-driven UI flow. As with the click variants above, you author a drag step either with natural language (e.g. `drag "Card A" to "Column B"`) or by performing the gesture yourself in Manual Interaction.
+Drag extends the same press-then-move model as long press: KaneAI picks the element up, then moves it to a target. Drag works across Desktop Web, Android apps, iOS apps, and Mobile Web. Use it for Kanban boards and any other drag-driven UI flow. As with the click variants above, you author a drag step either with natural language (e.g. `drag "Card A" to "Column B"`) or by performing the gesture yourself in Manual Interaction.
 
 ### Drag-and-Drop vs Click-and-Drag
 ***
@@ -425,6 +522,8 @@ Type the instruction into the KaneAI authoring panel.
 | Drop-on phrasing | `drop "Cart" on "Checkout button"` |
 
 **More examples:**
+
+<VerifiedTag value="Verified" />
 
 ```
 drag "Task Card" to "Done column"
@@ -502,11 +601,15 @@ Manual recording is recommended for any scenario where the **drop location isn't
 
 #### E-commerce Product Sorting
 
+<VerifiedTag value="Verified" />
+
 ```
 drag product "iPhone 15" from available items to comparison table
 ```
 
 #### Project Management Board
+
+<VerifiedTag value="Verified" />
 
 ```
 move task card from "To Do" column to "In Progress" column

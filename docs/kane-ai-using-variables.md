@@ -19,6 +19,7 @@ canonical: https://www.testmuai.com/support/docs/kane-ai-using-variables/
 
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -44,6 +45,103 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kane-ai-using-variables/"
+    },
+    "headline": "How to Use Variables and Secrets With KaneAI",
+    "description": "Create and reference variables, secrets, and smart variables in KaneAI to reuse dynamic data across your test cases.",
+    "url": "https://www.testmuai.com/support/docs/kane-ai-using-variables/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "KaneAI",
+    "keywords": [
+      "testmu ai automation",
+      "testmu ai kaneai",
+      "kaneai secrets",
+      "kaneai parameters",
+      "kaneai smart variables"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For instance, you can write",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "Set username as John"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "String variables example:",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "Enter {{username}} in user input field"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "String variables example:",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "assert {{username}} contains 'John'"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "JSON variables example:",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "assert {{api_variable.response.email}} is 'john.doe@example.com'"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Leveraging API",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "curl --location 'https://test-manager-api.lambdatest.com/api/atm/v1/hyperexecute' \\\n--header 'Content-Type: application/json' \\\n--header 'Authorization: Basic <Base64Auth>' \\\n--data '{\n    \"test_run_id\": \"<YOUR_TEST_RUN_ID>\",\n    \"concurrency\": 1,\n    \"environment_id\": <Environment_ID> #Optional"
+      }
+    ],
+    "dateModified": "2026-09-30T12:00:00+05:30"
+  }) }}
+/>
+
 # How to Use Variables and Secrets With KaneAI
 ***
 
@@ -53,6 +151,22 @@ Variables let you:
 - Avoid repeating the same value across test cases.
 - Capture a value from the application under test, store it, and assert on it.
 - Reuse and adapt test steps for values that change often, such as URLs, credentials, or environment settings.
+
+## Variables, Parameters, and Other Test Data
+***
+
+Beyond variables, KaneAI provides secrets, smart variables, parameters, Datasets, and Files for test data. Parameters supply named inputs to a test case; Datasets provide the values for one or more executions. Files provide reusable uploaded content through `{{file.alias}}` references.
+
+:::tip
+All variables and parameters in KaneAI can be accessed from the [variables page](https://www.testmuai.com/login/?redirectTo=https://kaneai.lambdatest.com/variables).
+:::
+
+- **[Variables](#types-of-variables)**: Placeholders that store dynamic values, enabling reuse and reducing redundancy in test cases.
+- **[Secrets](#secrets)**: Securely stored sensitive data (for example, passwords) that tests use without exposing it in the code.
+- **[Smart Variables](#smart-variables)**: Context-aware variables that automatically pull data in real time during test execution.
+- **[Parameters](/support/docs/kane-ai-using-parameters/)**: Values passed into test cases at runtime to customize test execution for different configurations or environments.
+- **[Datasets](/support/docs/kane-ai-using-datasets/)**: Collections of test data used in a test, allowing data-driven testing by running the same test with different inputs.
+- **[Files](/support/docs/kaneai-upload-and-download-files/)**: Reusable uploaded files that a test step references by alias.
 
 ## Types of Variables
 ***
@@ -81,7 +195,7 @@ Global variables are accessible across test cases within the entire organisation
 ### Environment Variables
 ***
 
-Environment variables hold values set for a specific environment, such as staging or production. Use them for URLs or credentials that differ per environment, so one test case runs across multiple environments. The Environments section below covers this.
+Environment variables hold values set for a specific environment, such as staging or production. Use them for URLs or credentials that differ per environment, so one test case runs across multiple environments. You can also [select the environment for an authoring session](#select-an-environment-for-an-authoring-session) before it starts. The Environments section below covers this.
 
 ## Create and Edit Variables
 ***
@@ -99,6 +213,8 @@ Define a variable directly with the `/` command in the step input, then select *
 ***
 
 Create a variable in plain English inside a step. For example:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 Set username as John
@@ -140,7 +256,7 @@ While reviewing a Manual Interaction step, replace any hard-coded value in the s
 - This is only supported for `Click` and `Type` Commands
 :::
 
-For a deeper look at parameters, see [KaneAI Using Parameters](/support/docs/kane-ai-using-parameters/).
+For details on secrets and parameters, see [Secrets](#secrets) and [KaneAI Using Parameters](/support/docs/kane-ai-using-parameters/).
 
 ## Use Variables During Authoring
 ***
@@ -156,10 +272,14 @@ Type the `{{` prefix in the KaneAI session input box to list all existing variab
 
 #### String variables example:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 Enter {{username}} in user input field
 ```
 This will input the value of the username variable in the user input field.
+
+<VerifiedTag value="Verified" />
 
 ```bash
 assert {{username}} contains 'John'
@@ -168,6 +288,8 @@ This will assert if the username variable contains the value "John".
 
 #### JSON variables example:
 JSON variables come from an API response used via the slash command or from a database query output. Reach a specific object inside the JSON hierarchy by typing the `{{` prefix in the KaneAI session input box. For example, assert that the email field inside the API response variable matches "john.doe@example.com".
+
+<VerifiedTag value="Verified" />
 
 ```bash
 assert {{api_variable.response.email}} is 'john.doe@example.com'
@@ -225,6 +347,67 @@ Environments in KaneAI are the configurations a test runs under, such as develop
 
 <img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/variables/persist-value.png').default} alt="How Environments Work" className="doc_img img_center"/>
 
+### Select an Environment for an Authoring Session
+***
+
+You can choose the environment (for example, Dev, Stage, or Production) before an authoring session starts. The whole session is then locked to that environment, so every `{{environment.X}}` variable resolves from the environment you picked. A test you author against Stage uses Stage values throughout, and does not switch to Production values on a rerun.
+
+:::note
+**Available on request.** Please reach out to Support to enable it. This feature is partially rolled out and will soon be generally available for all users.
+:::
+
+#### How to Select an Environment
+
+1. Create a new test or open an existing test in the playground.
+2. In the session configuration panel, open the **Environment** dropdown and choose the environment you want to author against. Choosing an environment is optional.
+3. Start the session.
+
+Once the session starts with an environment, the environment is locked and cannot be changed until the session ends. To author against a different environment, end the session and start a new one with the other environment selected.
+
+#### What Changes in a Session With a Selected Environment
+
+| Behavior | With an environment selected | Without an environment |
+|---|---|---|
+| Variables offered in the `{{` picker | Only the selected environment's variables, plus global variables | Global variables only. No environment variables are offered |
+| Choosing an environment mid-session | Not allowed | Allowed once. The environment you choose is then locked for the rest of the session |
+| A step uses a variable missing from the environment | The step fails with an error naming the variable and the environment | Choose an environment before using environment variables |
+
+For example, if `web_url` is not defined in the Production environment, a step that uses `{{environment.web_url}}` fails with:
+
+```text
+The variable "web_url" is not defined in environment "production".
+```
+
+To fix it, add the variable to that environment from the [variables page](https://www.testmuai.com/login/?redirectTo=https://kaneai.lambdatest.com/variables), or end the session and select an environment that defines it.
+
+:::tip
+KaneAI does not check your test's variables against the environment when you select it. A missing variable is reported only when the step that uses it runs.
+:::
+
+#### Import a Module That Uses Environment Variables
+
+If you import a module that uses environment variables into a session without an environment, you're prompted to choose one. This counts as your one environment choice for the session. If the chosen environment is missing any of the module's environment variables, a warning names them and lets you create them in that environment.
+
+#### Choose an Environment Before Automating With KaneAI
+
+You can also choose the environment before KaneAI starts authoring from:
+
+- **Create and Automate** when [generating test cases with AI](/support/docs/generate-test-cases-with-ai/).
+- **Bulk Automate**, when automating several manual test cases at once.
+- **Automate with KaneAI** on a [manual test case](/support/docs/manual-test-case-creation/).
+
+To use environment variables in manual test cases and modules, see Variables, Parameters, and Secrets in Manual Test Cases and Modules.
+
+#### Your Last Choice Is Remembered
+
+When you save or close a session, KaneAI stores the environment you used on the test case, including an environment you chose during the session. The next time you open the test for authoring, that environment is pre-selected.
+
+The environment is also saved with the test case's [advanced settings](/support/docs/kaneai-advanced-settings/). Changes to it are shown in the test case's version history.
+
+:::note
+Sessions started from [Kane CLI](/support/docs/kane-cli-introduction/) do not support environment selection yet. They use the environment of the first step that references an `{{environment.X}}` variable.
+:::
+
 ### Use Environments in Test Runs
 ***
 
@@ -243,6 +426,8 @@ Pass the environment name programmatically when you start a test run via the API
 * To find the optional `environment_id`, click your desired environment. In the resulting URL, use the value of the `envId` parameter as the `environment_id`. 
 * For example, if the URL contains `envId=4133`, use **4133** as the environment_id.
 :::
+
+<VerifiedTag value="Verified" />
 
 ```bash
 curl --location 'https://test-manager-api.lambdatest.com/api/atm/v1/hyperexecute' \
@@ -301,6 +486,8 @@ Once created, reference a secret in your test steps using **double-curly braces 
 > To use a previously created variable in any subsequent step or test case, reference the variable using the same `{{` syntax. This will list down all existing variables for this test.
 
 Format:
+<VerifiedTag value="Verified" />
+
 ```bash
 use the value of {{secrets.user.email}} in the email text field
 ```
@@ -367,6 +554,8 @@ Enter authoring or editing mode for a KaneAI test case.
 #### Step 2: Reference a Smart Variable
 
 In the **Write a Step** field, type `{{` to trigger the variable overlay, which lists all available variables including smart variables labeled "Smart". Type to search and filter, then select the one you want. For example, to use the current date:
+
+<VerifiedTag value="Verified" />
 
 ```
 Enter the value of {{smart.current_date}} in the date field

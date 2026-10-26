@@ -41,6 +41,110 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kane-ai-using-parameters/"
+    },
+    "headline": "How to Use Parameters With KaneAI",
+    "description": "Parameterize KaneAI test cases to run one test across many data inputs without duplicating the test.",
+    "url": "https://www.testmuai.com/support/docs/kane-ai-using-parameters/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "KaneAI",
+    "keywords": [
+      "testmu ai automation",
+      "testmu ai kaneai"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-10-13T00:00:00+05:30"
+  }) }}
+/>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Using parameters for test runs",
+      "description": "Learn how to use parameters in the KaneAI test cases",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 4: Open the Test Project",
+          "text": "Open the Test Project dashboard and go to the Test Run section.",
+          "url": "https://www.testmuai.com/support/docs/kane-ai-using-parameters/#step-4-open-the-test-project"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 5: Create a Test Run",
+          "text": "Set up the run and select which test cases it covers.",
+          "url": "https://www.testmuai.com/support/docs/kane-ai-using-parameters/#step-5-create-a-test-run"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 6: Add Test Cases and Configuration",
+          "text": "Add the test cases and specify how they run.",
+          "url": "https://www.testmuai.com/support/docs/kane-ai-using-parameters/#step-6-add-test-cases-and-configuration"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 8: Save for Execution",
+          "text": "Save the test run with the selected parameters and datasets. KaneAI creates test instances ready for execution.",
+          "url": "https://www.testmuai.com/support/docs/kane-ai-using-parameters/#step-8-save-for-execution"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 9: Execute With Parameters",
+          "text": "Run the test cases across the different datasets and inputs. Manage and monitor execution from the TestMu AI Test Manager.",
+          "url": "https://www.testmuai.com/support/docs/kane-ai-using-parameters/#step-9-execute-with-parameters"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 # How to Use Parameters With KaneAI
 ***
 
@@ -54,6 +158,15 @@ Parameters make one test reusable across different data and environments, throug
 - **Dynamic data input:** define and input test data at execution time.
 - **Multiple configurations:** run one test against different data sets.
 - **Centralized management:** manage parameters in one place to reduce redundancy.
+
+### Seed Value and Test Case Values
+***
+
+The **Seed Value** is defined with a global parameter in **KaneAI** > **Variables** > **Parameters**. It prepopulates a new parameter column when that parameter is first used in a test case. The test case stores its own value in row 1 of its Default Dataset, so you can use the same parameter with different values in different test cases without changing the global Seed Value.
+
+<img loading="lazy" src={require('../assets/images/kane-ai/features/data-driven-testing/parameters-list.png').default} alt="KaneAI Parameters list with parameter names and Seed Value column" className="doc_img"/>
+
+If a Dataset cell is empty, KaneAI uses the empty value; it does not fall back to the Seed Value.
 
 ## Create and Use a Parameter
 ***
@@ -90,6 +203,15 @@ Reference a parameter using **dollar-curly braces syntax** (e.g.,`${phone_number
 <img loading="lazy" src={require('../assets/images/kane-ai/features/parameters/4.png').default} alt="Reference a Parameter" className="doc_img"/>
 
 **Result:** The step uses the parameter value instead of a hardcoded one.
+
+### Set or Change the Value While Authoring
+***
+
+When you insert a parameter into a test step, you can enter the value to use for that test case. You can also pause the authoring session, click the parameter in the step, and update it in the **Parameter Value** dialog. Enter **New value for this test case** and click **Save**. This replaces row 1 for that parameter in the test case's Default Dataset; it does not change the global Seed Value or another test case's value.
+
+<img loading="lazy" src={require('../assets/images/kane-ai/features/data-driven-testing/parameter-value-dialog.png').default} alt="Parameter Value dialog for editing the value used by one test case" className="doc_img"/>
+
+To run the same test case with further values, add rows to a Dataset and select it for the run. See [KaneAI Using Datasets](/support/docs/kane-ai-using-datasets/).
 
 ## Parameterize a Manual Interaction Step
 ***

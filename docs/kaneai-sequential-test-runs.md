@@ -44,6 +44,100 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kaneai-sequential-test-runs/"
+    },
+    "headline": "How to Run Sequential Tests With KaneAI",
+    "description": "Run dependent KaneAI test cases in a defined order with sequential test runs, across single and multi-platform setups.",
+    "url": "https://www.testmuai.com/support/docs/kaneai-sequential-test-runs/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "KaneAI",
+    "keywords": [
+      "sequential test runs",
+      "kaneai test execution",
+      "dependent test cases",
+      "test run order",
+      "multi-platform testing",
+      "test manager"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-09-09T19:16:50+05:30"
+  }) }}
+/>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Create a Sequential Test Run",
+      "description": "Learn how to set up and execute sequential test runs in KaneAI to run dependent test cases in a defined order across single and multi-platform configurations.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Enable Sequential Execution",
+          "text": "Create a test run and add your test cases following the KaneAI HyperExecute Test Run Execution guide. After adding the test cases, enable the Execute instances sequentially toggle.",
+          "url": "https://www.testmuai.com/support/docs/kaneai-sequential-test-runs/#step-1-enable-sequential-execution"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Configure Single Platform",
+          "text": "For a single-platform sequential run (e.g., desktop web only), you can select multiple configurations at a global level. For example, you can run the same sequence on both Linux with Chrome 137 and Linux with Firefox. A separate sequential run is created for each configuration.",
+          "url": "https://www.testmuai.com/support/docs/kaneai-sequential-test-runs/#step-2-configure-single-platform"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Preview and Save",
+          "text": "Click Show execution preview to review the test sequence before executing. The preview displays the exact order in which test cases will run for each configuration. Once verified, click Save test run and proceed to execution.",
+          "url": "https://www.testmuai.com/support/docs/kaneai-sequential-test-runs/#step-3-preview-and-save"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 # How to Run Sequential Tests With KaneAI
 ***
 
