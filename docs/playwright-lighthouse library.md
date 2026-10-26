@@ -256,4 +256,7 @@ To view your test runs that uses Playwright Lighthouse Library, go to the <Brand
 
 
 
+- [Get started with Playwright testing on TestMu AI](/support/docs/playwright-testing/) covers the base setup for cloud runs.
+- [Set up Playwright test execution on TestMu AI](/support/docs/playwright-test-execution-setup/) walks through configuring a cloud run.
+- [Configure Playwright capabilities](/support/docs/playwright-test-execution-setup/) lists every capability you can set for a test.
 

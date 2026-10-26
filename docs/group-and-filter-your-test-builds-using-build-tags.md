@@ -155,7 +155,7 @@ On the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https:/
 
 <img loading="lazy" src={require('../assets/images/uploads/builds-filter-build-tags.webp').default} alt="Build Tags filter on the Builds list showing build tag values to filter builds by" width="1601" height="890" className="doc_img"/>
 
-To filter by tags set on individual tests instead, use the **Test Tags** filter. See [Group Tests Using Custom Tags](/support/docs/group-tests-using-custom-tags/) and [Organize Tests & Builds](/support/docs/filter-your-selenium-tests/).
+To filter by tags set on individual tests instead, use the **Test Tags** filter. See [Group Tests Using Custom Tags](/support/docs/filter-your-selenium-tests/#group-tests-using-custom-tags) and [Organize Tests & Builds](/support/docs/filter-your-selenium-tests/).
 
 * * *
 

@@ -303,7 +303,9 @@ It provides structured guidance for:
 
 Install a Playwright Agent Skill using the command below:
 
-<VerifiedTag value="Verified" />
+- [Run Your Playwright Tests With JavaScript on TestMu AI](/support/docs/javascript-with-playwright/)
+- [Configure Playwright Capabilities for the TestMu AI Grid](/support/docs/playwright-test-execution-setup/)
+- [Get Started With Playwright Testing on TestMu AI](/support/docs/playwright-testing/)
 
 ```
 # Clone the repo and copy the skill you need

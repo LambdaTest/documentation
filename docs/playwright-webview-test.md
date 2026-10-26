@@ -263,6 +263,16 @@ Replace the `TEST_FILE_NAME` in the below command with your desired test file to
 node playwrightwebview.js
 ```
 
-Visit the [<BrandName /> Web Automation](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build) page to check the status of your test execution.
-<img loading="lazy" src={require('../assets/images/playwright-testing/webview-test.png').default} alt="Image"  className="doc_img"/>
+Open the [TestMu AI Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build) to check the status of your test execution.
+
+<img loading="lazy" src={require('../assets/images/playwright-testing/playwright-webview-test-results.webp').default} alt="Playwright WebView test session status on the TestMu AI Automation Dashboard" className="doc_img"/>
+
+## Related Playwright Guides
+***
+
+Continue with these related guides to extend your Playwright coverage on TestMu AI.
+
+- [How to run Playwright tests on real Android devices](/support/docs/playwright-android/) covers browser testing across Node.js, Java, C#, and Python.
+- [How to configure Playwright capabilities](/support/docs/playwright-test-execution-setup/) documents every supported capability key.
+- [How to set up Playwright test execution](/support/docs/playwright-test-execution-setup/) walks through connecting Playwright to TestMu AI.
 

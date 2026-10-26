@@ -506,14 +506,32 @@ When you run a test on a specific device, the exact device you selected may not 
 
 To test embedded WebViews on a real Android device, add the mandatory `isPwMobileWebviewTest` capability to your options ([sample script](https://github.com/LambdaTest/playwright-sample/blob/main/playwrightwebview.js)):
 
-```javascript title="playwrightwebview.js"
-const capabilities = {
-"LT:Options": {
-"platformName": "android",
-"isRealMobile": true, //if true, test will run on real devices
-// highlight-next-line
-"isPwMobileWebviewTest": true, //mandatory capability to enable WebView testing
-},
+Continue with these related guides to extend your Playwright coverage on TestMu AI.
+
+- [How to test WebView apps with Playwright](/support/docs/playwright-webview-test/) covers the `isPwMobileWebviewTest` capability for hybrid apps.
+- [How to run Playwright tests on real iOS devices](/support/docs/playwright-ios-device/) mirrors this setup for iOS.
+- [How to configure Playwright capabilities](/support/docs/playwright-test-execution-setup/) documents every supported capability key.
+
+## Handle Pop-ups During Test Execution
+
+Some websites show a pop-up, such as a notification prompt, after the page loads. The pop-up blocks clicks on the elements behind it. Add a notification handler that clicks the pop-up's dismiss button when it appears and continues when it does not. This lets the same test pass whether or not the pop-up is shown.
+
+```bash
+const { errors } = require("playwright");
+
+async function dismissNotificationPrompt(page) {
+  const noThanks = page.getByText("No thanks");
+  try {
+    await noThanks.waitFor({ state: "visible", timeout: 4000 });
+    await noThanks.click();
+  } catch (e) {
+    if (!(e instanceof errors.TimeoutError)) throw e; // prompt did not appear
+  }
+}
+
+// Call after page load
+await page.goto("https://your-website.com");
+await dismissNotificationPrompt(page);
 ```
 
 Run the test as usual (for example, `node playwrightwebview.js`) and check the [Automation dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build) for results.

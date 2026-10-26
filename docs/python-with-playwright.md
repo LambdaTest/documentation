@@ -301,8 +301,8 @@ Install a Playwright Agent Skill using the command below:
 git clone https://github.com/LambdaTest/agent-skills.git
 cp -r agent-skills/playwright-skill .claude/skills/
 
-# Or for Cursor / Copilot
-cp -r agent-skills/playwright-skill .cursor/skills/
-```
+- [Configure Playwright Capabilities for the TestMu AI Grid](/support/docs/playwright-test-execution-setup/)
+- [Get Started With Playwright Testing on TestMu AI](/support/docs/playwright-testing/)
+- [Set Up Playwright Test Execution on TestMu AI](/support/docs/playwright-test-execution-setup/)
 
 **Note**: If you prefer installing all available framework skills instead of only playwright-skill, clone the repository directly into your tool's skills directory (for example, .claude/skills/, .cursor/skills/, .gemini/skills/, or .agent/skills/).

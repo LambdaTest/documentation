@@ -2,7 +2,7 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-When you set the capability [`useSpecificBundleVersion: true`](/support/docs/capabilities-for-playwright/#:~:text=setHTTPCredentials%22%2C%20%22setStorageState%22%2C%20%22setGeolocation%22%5D%7D%7D-,useSpecificBundleVersion,-Boolean), then TestMu AI will select the browser (Chromium, Firefox, Webkit) version as per your local machine's PLaywright version.
+Each Playwright release ships with its own bundled builds of Chromium, Firefox, and WebKit. When you set the [`useSpecificBundleVersion: true`](/support/docs/playwright-test-execution-setup/) capability, TestMu AI selects the Chromium, Firefox, or WebKit version that matches your local machine's Playwright version. This keeps the browsers on the grid aligned with the browsers you test against locally, so your results stay consistent.
 
 ```yaml
 const capabilities = { "LT:Options": {"useSpecificBundleVersion": true,}}

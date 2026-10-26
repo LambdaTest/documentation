@@ -116,7 +116,16 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 When you set the capability [`useSpecificBundleVersion: true`](/support/docs/capabilities-for-playwright/#:~:text=setHTTPCredentials%22%2C%20%22setStorageState%22%2C%20%22setGeolocation%22%5D%7D%7D-,useSpecificBundleVersion,-Boolean), then <BrandName /> will select the browser (Chromium, Firefox, Webkit) version as per your local machine's PLaywright version. 
 
-```yaml
+Each Playwright release ships with its own bundled builds of Chromium, Firefox, and WebKit. When you set the [`useSpecificBundleVersion: true`](/support/docs/playwright-test-execution-setup/) capability, <BrandName /> selects the Chromium, Firefox, or WebKit version that matches your local machine's Playwright version. This keeps the browsers on the grid aligned with the browsers you test against locally, so your results stay consistent.
+
+## Enable Bundled Browser Support
+***
+
+Add the `useSpecificBundleVersion` capability to your `LT:Options` object to have <BrandName /> match the bundled browser version to your local Playwright version.
+
+<VerifiedTag value="Verified" />
+
+```js
 const capabilities = { "LT:Options": {"useSpecificBundleVersion": true,}}
 ```
 

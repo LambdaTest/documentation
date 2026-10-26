@@ -36,7 +36,7 @@ Replace `` with the actual ID from the URL and set additional optional parameter
 - **max_retries**: Define the number of maximum retries you want (Max value 5). Default retries 1. You can find more details [here](/support/docs/deep-dive-into-hyperexecute-yaml/#maxretries).
 - **timezone**: Define the timezone you want to choose for test run in UTC+01:00 format.
 - **app_profiling**: Add true if you want to track app profiling metrics in your test. You can find more details [here](/support/docs/appium-app-performance-analytics/).
-- **performance**: Add true if you want generate Lighthouse report for your web tests. Supported on limited OS browser combinations. Additionally, Setting this as true could potentially slow down the execution time. You can find more details [here](/support/docs/view-lighthouse-performance-metrics/).
+- **performance**: Add true if you want generate Lighthouse report for your web tests. Supported on limited OS browser combinations. Additionally, Setting this as true could potentially slow down the execution time. You can find more details [here](/support/docs/generate-multiple-lighthouse-reports/#view-lighthouse-performance-metrics).
 - **android_app_id**: Specify an Android app ID to override the existing app in the configuration of the Test instances.
 - **ios_app_id**: Specify an iOS app ID to override the existing app in the configuration of the Test instances.
 - **accessibility**: Set as true if you want to run accessibility test on all your tests in the test run. Setting this as true could potentially slow down the execution time.

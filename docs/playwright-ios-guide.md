@@ -781,3 +781,8 @@ The below screenshot of <BrandName /> Automation Dashboard shows the Playwright 
 
 
 
+Continue with the guides below to expand your Playwright mobile and cloud test coverage on TestMu AI.
+
+- [Run Playwright tests on real Android devices](/support/docs/playwright-android/) covers the Android equivalent of this iOS setup.
+- [Set up Playwright test execution on TestMu AI](/support/docs/playwright-test-execution-setup/) walks through the base configuration for cloud runs.
+- [Configure Playwright capabilities](/support/docs/playwright-test-execution-setup/) lists every capability you can set in `LT:Options`.

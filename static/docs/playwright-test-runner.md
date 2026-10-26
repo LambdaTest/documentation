@@ -169,4 +169,12 @@ expect(title).toEqual(expect.stringContaining('LambdaTest'))
 })
 ```
 
-## Using the Playwright Agent Skill with TestMu AI
+To generate Playwright tests with AI coding assistants, see [how to run Playwright tests with agent skills](/support/docs/playwright-agent-skills/).
+
+## Related Playwright Guides
+
+Continue with the guides below to extend your Playwright setup on TestMu AI.
+
+- [Get started with Playwright testing on TestMu AI](/support/docs/playwright-testing/) covers the base setup for cloud runs.
+- [Migrate existing Playwright tests to TestMu AI](/support/docs/migrate-existing-playwright-tests/) details the full migration path.
+- [Configure Playwright capabilities](/support/docs/playwright-test-execution-setup/) lists every capability you can set for a run.

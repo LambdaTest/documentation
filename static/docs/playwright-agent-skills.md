@@ -126,3 +126,11 @@ The Playwright Agent Skill supports 5 languages. The following framework docs al
 | Codex CLI | CLI | `.codex/skills/` |
 | OpenCode | CLI | `.opencode/skills/` |
 | Claude.ai | Web | Settings > Features > Skills |
+
+## Related Playwright Guides
+
+Continue with the guides below to run, scale, and configure Playwright tests on TestMu AI.
+
+- [Run your first Playwright test on the cloud grid](/support/docs/playwright-testing/) walks through connecting Playwright to TestMu AI from scratch.
+- [Run Playwright tests with the TestMu AI SDK](/support/docs/playwright-testing/#run-tests-with-the-sdk) runs your existing suite with no code changes.
+- [Configure Playwright capabilities](/support/docs/playwright-test-execution-setup/) sets browser, OS, and cloud options for your runs.
