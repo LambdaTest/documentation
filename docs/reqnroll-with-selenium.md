@@ -2,7 +2,7 @@
 id: reqnroll-with-selenium-appium
 title: Selenium With Reqnroll
 sidebar_label: Reqnroll
-description: Run Reqnroll Selenium and Appium tests on TestMu AI cloud grid with 5000+ real devices and 10,000+ browser/device combinations.
+description: Run Reqnroll Selenium and Appium tests on TestMu AI cloud grid with 50,000+ real devices and 10,000+ browser/device combinations.
 keywords:
   - run Reqnroll Selenium tests cloud
   - Reqnroll Appium mobile testing
@@ -59,7 +59,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       "@id": "https://www.testmuai.com/support/docs/reqnroll-automation-with-selenium-appium-on-testmu/"
     },
     "headline": "Selenium With Reqnroll",
-    "description": "Run Reqnroll Selenium and Appium tests on TestMu AI cloud grid with 5000+ real devices and 10,000+ browser/device combinations.",
+    "description": "Run Reqnroll Selenium and Appium tests on TestMu AI cloud grid with 50,000+ real devices and 10,000+ browser/device combinations.",
     "url": "https://www.testmuai.com/support/docs/reqnroll-automation-with-selenium-appium-on-testmu/",
     "image": {
       "@type": "ImageObject",
@@ -148,7 +148,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       "@context": "https://schema.org",
       "@type": "HowTo",
       "name": "Selenium With Reqnroll",
-      "description": "Run Reqnroll Selenium and Appium tests on TestMu AI cloud grid with 5000+ real devices and 10,000+ browser/device combinations.",
+      "description": "Run Reqnroll Selenium and Appium tests on TestMu AI cloud grid with 50,000+ real devices and 10,000+ browser/device combinations.",
       "step": [
         {
           "@type": "HowToStep",

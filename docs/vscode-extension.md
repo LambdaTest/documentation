@@ -3,7 +3,7 @@ id: vscode-extension
 title: TestMu AI VS Code Extension For Cross Browser Testing
 hide_title: true
 sidebar_label: VS Code Extension
-description: Perform real-time cross browser testing of public and locally hosted web apps across 5000+ real devices and 10,000+ browser/device combinations from VS Code.
+description: Perform real-time cross browser testing of public and locally hosted web apps across 50,000+ real devices and 10,000+ browser/device combinations from VS Code.
 keywords:
   - testmu ai extension for vs code
   - how to add testmu ai extension in vs code
@@ -55,7 +55,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       "@id": "https://www.testmuai.com/support/docs/vs-code-extension/"
     },
     "headline": "TestMu AI VS Code Extension For Cross Browser Testing",
-    "description": "Perform real-time cross browser testing of public and locally hosted web apps across 5000+ real devices and 10,000+ browser/device combinations from VS Code.",
+    "description": "Perform real-time cross browser testing of public and locally hosted web apps across 50,000+ real devices and 10,000+ browser/device combinations from VS Code.",
     "url": "https://www.testmuai.com/support/docs/vs-code-extension/",
     "image": {
       "@type": "ImageObject",
@@ -103,7 +103,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 # <BrandName /> VS Code Extension
 ---
 
-<BrandName /> VS Code Extension enables you to perform real-time cross browser testing of your public and locally hosted websites and web applications right from VS Code. Using this extension, you can trigger real-time cross-browser testing from within VS Code Editor to test your web apps across 5000+ real devices and 10,000+ browser/device combinations.
+<BrandName /> VS Code Extension enables you to perform real-time cross browser testing of your public and locally hosted websites and web applications right from VS Code. Using this extension, you can trigger real-time cross-browser testing from within VS Code Editor to test your web apps across 50,000+ real devices and 10,000+ browser/device combinations.
 
 In this guide, learn how to configure <BrandName /> VS Code Extension for real-time cross browser testing.
 

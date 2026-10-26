@@ -2,7 +2,7 @@
 id: appium-csharp-nunit
 title:  Appium with NUnit
 sidebar_label: NUnit
-description: Now you can run your Appium automation scripts using NUnit on TestMu AI Real Device Cloud Platform of 3000+ real mobile devices.
+description: Now you can run your Appium automation scripts using NUnit on TestMu AI Real Device Cloud Platform of 50,000+ real mobile devices.
 keywords:
   - appium
   - csharp
@@ -65,7 +65,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       "@id": "https://www.testmuai.com/support/docs/appium-csharp-nunit/"
     },
     "headline": "Appium with NUnit",
-    "description": "Now you can run your Appium automation scripts using NUnit on TestMu AI Real Device Cloud Platform of 3000+ real mobile devices.",
+    "description": "Now you can run your Appium automation scripts using NUnit on TestMu AI Real Device Cloud Platform of 50,000+ real mobile devices.",
     "url": "https://www.testmuai.com/support/docs/appium-csharp-nunit/",
     "image": {
       "@type": "ImageObject",
@@ -163,7 +163,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       "@context": "https://schema.org",
       "@type": "HowTo",
       "name": "Try our Sample Repository",
-      "description": "Now you can run your Appium automation scripts using NUnit on TestMu AI Real Device Cloud Platform of 3000+ real mobile devices.",
+      "description": "Now you can run your Appium automation scripts using NUnit on TestMu AI Real Device Cloud Platform of 50,000+ real mobile devices.",
       "step": [
         {
           "@type": "HowToStep",

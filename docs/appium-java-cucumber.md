@@ -2,7 +2,7 @@
 id: appium-java-cucumber
 title: Appium With Cucumber for Java 
 sidebar_label: Cucumber
-description: Test your Appium automation scripts using Java Cucumber on TestMu AI Real Device Cloud Platform of 3000+ real mobile devices.
+description: Test your Appium automation scripts using Java Cucumber on TestMu AI Real Device Cloud Platform of 50,000+ real mobile devices.
 keywords:
   - appium
   - java
@@ -65,7 +65,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       "@id": "https://www.testmuai.com/support/docs/appium-java-cucumber/"
     },
     "headline": "Appium With Cucumber for Java",
-    "description": "Test your Appium automation scripts using Java Cucumber on TestMu AI Real Device Cloud Platform of 3000+ real mobile devices.",
+    "description": "Test your Appium automation scripts using Java Cucumber on TestMu AI Real Device Cloud Platform of 50,000+ real mobile devices.",
     "url": "https://www.testmuai.com/support/docs/appium-java-cucumber/",
     "image": {
       "@type": "ImageObject",
@@ -170,7 +170,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       "@context": "https://schema.org",
       "@type": "HowTo",
       "name": "Try our Sample Repository",
-      "description": "Test your Appium automation scripts using Java Cucumber on TestMu AI Real Device Cloud Platform of 3000+ real mobile devices.",
+      "description": "Test your Appium automation scripts using Java Cucumber on TestMu AI Real Device Cloud Platform of 50,000+ real mobile devices.",
       "step": [
         {
           "@type": "HowToStep",

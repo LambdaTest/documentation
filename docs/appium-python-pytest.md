@@ -2,7 +2,7 @@
 id: appium-python-pytest
 title: Appium with Pytest
 sidebar_label: Pytest
-description: Complete guide to running your first Pytest Appium automated test script on TestMu AI Real Device Cloud Platform. Test on 5000+ Real Devices.
+description: Complete guide to running your first Pytest Appium automated test script on TestMu AI Real Device Cloud Platform. Test on 50,000+ Real Devices.
 keywords:
   - python appium
   - pytest
@@ -67,7 +67,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       "@id": "https://www.testmuai.com/support/docs/appium-python-pytest/"
     },
     "headline": "Appium with Pytest",
-    "description": "Complete guide to running your first Pytest Appium automated test script on TestMu AI Real Device Cloud Platform. Test on 5000+ Real Devices.",
+    "description": "Complete guide to running your first Pytest Appium automated test script on TestMu AI Real Device Cloud Platform. Test on 50,000+ Real Devices.",
     "url": "https://www.testmuai.com/support/docs/appium-python-pytest/",
     "image": {
       "@type": "ImageObject",
@@ -179,7 +179,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       "@context": "https://schema.org",
       "@type": "HowTo",
       "name": "Try our Sample Repository",
-      "description": "Complete guide to running your first Pytest Appium automated test script on TestMu AI Real Device Cloud Platform. Test on 5000+ Real Devices.",
+      "description": "Complete guide to running your first Pytest Appium automated test script on TestMu AI Real Device Cloud Platform. Test on 50,000+ Real Devices.",
       "step": [
         {
           "@type": "HowToStep",

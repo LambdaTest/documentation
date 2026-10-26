@@ -2,7 +2,7 @@
 id: appium-nodejs-webdriverio
 title: Appium With WebDriverIO
 sidebar_label: WebDriverIO
-description: Now you can run your Appium automation scripts using with WebDriverIO on TestMu AI Real Device Cloud Platform  of 3000+ real mobile devices.
+description: Now you can run your Appium automation scripts using with WebDriverIO on TestMu AI Real Device Cloud Platform  of 50,000+ real mobile devices.
 keywords:
   - appium
   - java
@@ -65,7 +65,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       "@id": "https://www.testmuai.com/support/docs/appium-nodejs-webdriverio/"
     },
     "headline": "Appium With WebDriverIO",
-    "description": "Now you can run your Appium automation scripts using with WebDriverIO on TestMu AI Real Device Cloud Platform  of 3000+ real mobile devices.",
+    "description": "Now you can run your Appium automation scripts using with WebDriverIO on TestMu AI Real Device Cloud Platform  of 50,000+ real mobile devices.",
     "url": "https://www.testmuai.com/support/docs/appium-nodejs-webdriverio/",
     "image": {
       "@type": "ImageObject",
@@ -170,7 +170,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       "@context": "https://schema.org",
       "@type": "HowTo",
       "name": "Try our Sample Repository",
-      "description": "Now you can run your Appium automation scripts using with WebDriverIO on TestMu AI Real Device Cloud Platform  of 3000+ real mobile devices.",
+      "description": "Now you can run your Appium automation scripts using with WebDriverIO on TestMu AI Real Device Cloud Platform  of 50,000+ real mobile devices.",
       "step": [
         {
           "@type": "HowToStep",

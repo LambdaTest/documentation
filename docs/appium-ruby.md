@@ -2,7 +2,7 @@
 id: appium-ruby
 title:  Appium with Ruby
 sidebar_label: Ruby
-description: Complete guide to running your first Ruby Appium automated test script on TestMu AI Real Device Cloud Platform. Test on 5000+ Real Devices.
+description: Complete guide to running your first Ruby Appium automated test script on TestMu AI Real Device Cloud Platform. Test on 50,000+ Real Devices.
 keywords:
   - ruby appium
   - ruby appium tutorial
@@ -66,7 +66,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       "@id": "https://www.testmuai.com/support/docs/appium-ruby/"
     },
     "headline": "Appium with Ruby",
-    "description": "Complete guide to running your first Ruby Appium automated test script on TestMu AI Real Device Cloud Platform. Test on 5000+ Real Devices.",
+    "description": "Complete guide to running your first Ruby Appium automated test script on TestMu AI Real Device Cloud Platform. Test on 50,000+ Real Devices.",
     "url": "https://www.testmuai.com/support/docs/appium-ruby/",
     "image": {
       "@type": "ImageObject",
@@ -220,7 +220,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       "@context": "https://schema.org",
       "@type": "HowTo",
       "name": "Try our Sample Repository",
-      "description": "Complete guide to running your first Ruby Appium automated test script on TestMu AI Real Device Cloud Platform. Test on 5000+ Real Devices.",
+      "description": "Complete guide to running your first Ruby Appium automated test script on TestMu AI Real Device Cloud Platform. Test on 50,000+ Real Devices.",
       "step": [
         {
           "@type": "HowToStep",

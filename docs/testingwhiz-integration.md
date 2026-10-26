@@ -114,7 +114,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 [TestingWhiz](https://www.testing-whiz.com/) is a codeless automation testing tool that can be used for Software testing, Web testing, Mobile testing, Database testing, Cloud testing, Web Services testing, and API testing.
 
-<BrandName /> now integrates with TestingWhiz to help perform cross-browser testing of your website or web app, over 5000+ real devices and 10,000+ browser/device combinations. This document will help you learn how to integrate your TestingWhiz account with your <BrandName /> account.
+<BrandName /> now integrates with TestingWhiz to help perform cross-browser testing of your website or web app, over 50,000+ real devices and 10,000+ browser/device combinations. This document will help you learn how to integrate your TestingWhiz account with your <BrandName /> account.
 
 ## How To Integrate <BrandName /> With TestingWhiz?
 

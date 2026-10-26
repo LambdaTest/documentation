@@ -2,7 +2,7 @@
 id: appium-ruby-cucumber
 title: Appium with Cucumber for Ruby
 sidebar_label: Cucumber
-description: Complete guide to running your first Cucumber Appium automated test script on TestMu AI Real Device Cloud Platform. Test on 5000+ Real Devices.
+description: Complete guide to running your first Cucumber Appium automated test script on TestMu AI Real Device Cloud Platform. Test on 50,000+ Real Devices.
 keywords:
   - cucumber appium
   - cucumber appium tutorial
@@ -66,7 +66,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       "@id": "https://www.testmuai.com/support/docs/appium-ruby-cucumber/"
     },
     "headline": "Appium with Cucumber for Ruby",
-    "description": "Complete guide to running your first Cucumber Appium automated test script on TestMu AI Real Device Cloud Platform. Test on 5000+ Real Devices.",
+    "description": "Complete guide to running your first Cucumber Appium automated test script on TestMu AI Real Device Cloud Platform. Test on 50,000+ Real Devices.",
     "url": "https://www.testmuai.com/support/docs/appium-ruby-cucumber/",
     "image": {
       "@type": "ImageObject",
@@ -178,7 +178,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       "@context": "https://schema.org",
       "@type": "HowTo",
       "name": "Try our Sample Repository",
-      "description": "Complete guide to running your first Cucumber Appium automated test script on TestMu AI Real Device Cloud Platform. Test on 5000+ Real Devices.",
+      "description": "Complete guide to running your first Cucumber Appium automated test script on TestMu AI Real Device Cloud Platform. Test on 50,000+ Real Devices.",
       "step": [
         {
           "@type": "HowToStep",

@@ -2,7 +2,7 @@
 id: appium-python-gauge
 title: Appium with Gauge
 sidebar_label: Gauge
-description: Complete guide to running your first Gauge Appium automated test script on TestMu AI Real Device Cloud Platform. Test on 5000+ Real Devices.
+description: Complete guide to running your first Gauge Appium automated test script on TestMu AI Real Device Cloud Platform. Test on 50,000+ Real Devices.
 keywords:
   - python gauge
   - appium
@@ -69,7 +69,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       "@id": "https://www.testmuai.com/support/docs/appium-python-gauge/"
     },
     "headline": "Appium with Gauge",
-    "description": "Complete guide to running your first Gauge Appium automated test script on TestMu AI Real Device Cloud Platform. Test on 5000+ Real Devices.",
+    "description": "Complete guide to running your first Gauge Appium automated test script on TestMu AI Real Device Cloud Platform. Test on 50,000+ Real Devices.",
     "url": "https://www.testmuai.com/support/docs/appium-python-gauge/",
     "image": {
       "@type": "ImageObject",
@@ -160,7 +160,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       "@context": "https://schema.org",
       "@type": "HowTo",
       "name": "Try our Sample Repository",
-      "description": "Complete guide to running your first Gauge Appium automated test script on TestMu AI Real Device Cloud Platform. Test on 5000+ Real Devices.",
+      "description": "Complete guide to running your first Gauge Appium automated test script on TestMu AI Real Device Cloud Platform. Test on 50,000+ Real Devices.",
       "step": [
         {
           "@type": "HowToStep",

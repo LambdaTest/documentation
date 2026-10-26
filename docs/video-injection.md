@@ -160,7 +160,7 @@ import RealDeviceTag from '../src/component/realDevice';
   ]) }}
 />
 <RealDeviceTag value="Real Device" /> 
-Video Injection feature enables you to test video-based functionalities such as **live streaming, real-time video capture,** and **video processing** in your app across 5000+ real devices on the <BrandName /> Real Device Cloud platform.
+Video Injection feature enables you to test video-based functionalities such as **live streaming, real-time video capture,** and **video processing** in your app across 50,000+ real devices on the <BrandName /> Real Device Cloud platform.
 
 This tool is ideal for testing features such as:
 
