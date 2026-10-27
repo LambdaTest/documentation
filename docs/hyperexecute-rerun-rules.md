@@ -103,7 +103,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 />
 
 :::info Reference page
-This is the deep-dive reference for how HyperExecute decides whether a job can be rerun, how much of it can be rerun, and what warnings the Rerun dialog shows. For the step-by-step walkthrough on using the Rerun button, see [Rerun Failed Tests on HyperExecute](/support/docs/hyperexecute-rerun-failed-tests/).
+This is the deep-dive reference for how HyperExecute decides whether a job can be rerun, how much of it can be rerun, and what warnings the Rerun dialog shows. For the step-by-step walkthrough on using the Rerun button, see [Rerun Failed Jobs on HyperExecute](/support/docs/hyperexecute-rerun-failed-tests/).
 :::
 
 Rerun has three independent outcomes, not one. The **Re-Run** button may be hidden, the **Failed & Non Executed Scenarios** option may be disabled so only **All Scenarios** can be chosen, or the dialog may show a warning you need to act on. The same checks apply whether the dialog is just previewing or you have clicked **Rerun**, so the dialog never offers a scope that is then rejected on submit. This page documents every rule the Rerun dialog can emit.
@@ -156,7 +156,7 @@ Each row below is a property of the job itself. Any one of them is enough on its
 - **Mobile** means Appium, Espresso and XCUITest flows (test type `ios/xcui`, `android/espresso`, `appium`, `android/appium` or `ios/appium`, case-insensitive).
 - **KaneAI** covers any trigger whose source identifies as KaneAI, including scheduled KaneAI runs.
 - **Retention** is 60 days from when the job was created (or from its expiry stamp when one is set).
-- **Ran without a project** is about the job's project, not the project's Git repo. A project that has no Git repo linked is **not** refused here - a user- or organization-level `git_token` can still fetch the code - that is a separate check in the Git pre-flight.
+- **Ran without a project** is about the job's project, not the project's Git repo. A project that has no Git repo linked is **not** refused here - a user-, project- or organization-level `git_token` can still fetch the code - that is a separate check in the Git pre-flight.
 - **Hybrid reruns off** is an org-level setting your admin can toggle. It is not a per-job property.
 - **On-prem** deployments skip the tunnel check altogether (both the refusal and the advice), because the on-prem environment handles its own networking.
 
@@ -263,7 +263,7 @@ If you hit this, run the job again from the CLI, or switch the job to a named tu
 
 ## Things that are not limits
 
-- **A project without a linked repo.** Not refused - the credential falls back to a user- or organization-level `git_token`.
+- **A project without a linked repo.** Not refused - the credential falls back to a user-, project- or organization-level `git_token`.
 - **Reruns of reruns.** An ordinary job; the lineage label points at its own parent, so chains stay traceable.
 - **Policies.** Applied fresh to the new job rather than carried over.
 - **The 500-combination advisory.** Nothing enforces it; it is a cost warning in the dialog, not a limit.
@@ -271,7 +271,7 @@ If you hit this, run the job again from the CLI, or switch the job to a named tu
 
 ## Related
 
-- [Rerun Failed Tests on HyperExecute](/support/docs/hyperexecute-rerun-failed-tests/) - the step-by-step user walkthrough.
+- [Rerun Failed Jobs on HyperExecute](/support/docs/hyperexecute-rerun-failed-tests/) - the step-by-step user walkthrough.
 - [Workflows in HyperExecute](/support/docs/hyperexecute-workflows/) - scheduling jobs on a cadence.
 - [Global Policies in HyperExecute](/support/docs/hyperexecute-global-policies/) - org-level rules applied to each job.
 
