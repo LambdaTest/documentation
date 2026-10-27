@@ -2708,6 +2708,11 @@ module.exports = {
         label: "Flutter Supported Capabilities",
         id: "flutter-supported-capabilities",
       },
+      {
+        type: "doc",
+        label: "Network Proxy Support",
+        id: "network-proxy-support-in-flutter-apps",
+      },
     ],
   ],
 
