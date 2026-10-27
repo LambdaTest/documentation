@@ -103,7 +103,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 />
 
 :::info Reference page
-This is the deep-dive reference for how HyperExecute decides whether a job can be rerun, how much of it can be rerun, and what warnings the Rerun dialog shows. For the step-by-step walkthrough on using the Rerun button, see [Rerun Failed Jobs on HyperExecute](/support/docs/hyperexecute-rerun-failed-tests/).
+This is the deep-dive reference for how HyperExecute decides whether a job can be rerun, how much of it can be rerun, and what warnings the Rerun dialog shows. For the step-by-step walkthrough on using the Rerun button, see [Rerun Failed Jobs on HyperExecute](/support/docs/hyperexecute-rerun-failed-jobs/).
 :::
 
 Rerun has three independent outcomes, not one. The **Re-Run** button may be hidden, the **Failed & Non Executed Scenarios** option may be disabled so only **All Scenarios** can be chosen, or the dialog may show a warning you need to act on. The same checks apply whether the dialog is just previewing or you have clicked **Rerun**, so the dialog never offers a scope that is then rejected on submit. This page documents every rule the Rerun dialog can emit.
@@ -271,7 +271,7 @@ If you hit this, run the job again from the CLI, or switch the job to a named tu
 
 ## Related
 
-- [Rerun Failed Jobs on HyperExecute](/support/docs/hyperexecute-rerun-failed-tests/) - the step-by-step user walkthrough.
+- [Rerun Failed Jobs on HyperExecute](/support/docs/hyperexecute-rerun-failed-jobs/) - the step-by-step user walkthrough.
 - [Workflows in HyperExecute](/support/docs/hyperexecute-workflows/) - scheduling jobs on a cadence.
 - [Global Policies in HyperExecute](/support/docs/hyperexecute-global-policies/) - org-level rules applied to each job.
 
