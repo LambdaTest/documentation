@@ -222,7 +222,6 @@ module.exports = {
             type: "doc",
             label: "Global Policies",
             id: "hyperexecute-global-policies",
-            customProps: { beta: true },
           },
           "hyperexecute-rerun-failed-jobs"
         ],
