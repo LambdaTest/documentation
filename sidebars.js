@@ -224,7 +224,7 @@ module.exports = {
             id: "hyperexecute-global-policies",
             customProps: { beta: true },
           },
-          "hyperexecute-rerun-failed-tests"
+          "hyperexecute-rerun-failed-jobs"
         ],
       },
       {
@@ -244,7 +244,7 @@ module.exports = {
           "hyperexecute-prioritize-tests",
           "hyperexecute-failfast",
           "hyperexecute-test-muting",
-          "hyperexecute-rerun-failed-tests",
+          "hyperexecute-rerun-failed-jobs",
           "hyperexecute-background-services",
           "hyperexecute-auto-healing",
           "hyperexecute-projects",
