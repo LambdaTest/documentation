@@ -224,7 +224,18 @@ module.exports = {
             id: "hyperexecute-global-policies",
             customProps: { beta: true },
           },
-          "hyperexecute-rerun-failed-tests"
+          {
+            type: "doc",
+            label: "Workflow Governance",
+            id: "hyperexecute-workflow-governance",
+            customProps: { beta: true },
+          },
+          "hyperexecute-rerun-failed-jobs",
+          {
+            type: "doc",
+            label: "Rerun Rules",
+            id: "hyperexecute-rerun-rules",
+          },
         ],
       },
       {
@@ -244,7 +255,8 @@ module.exports = {
           "hyperexecute-prioritize-tests",
           "hyperexecute-failfast",
           "hyperexecute-test-muting",
-          "hyperexecute-rerun-failed-tests",
+          "hyperexecute-rerun-failed-jobs",
+          "hyperexecute-rerun-rules",
           "hyperexecute-background-services",
           "hyperexecute-auto-healing",
           "hyperexecute-projects",
