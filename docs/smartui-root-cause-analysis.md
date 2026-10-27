@@ -254,6 +254,10 @@ Baselines captured before you turned on `smartUI.captureDom` have no element dat
 
 Native apps have no HTML or CSS, so the panel shows a smaller set of details than it does for web pages.
 
+In the example below, an iOS build removed the `Fourth line (new)` label. The panel shows the element's path in the baseline, `No Such Element Found` for the comparison, its type and text, `visible` and `inViewport` changing from `true` to `false`, and its bounding box shrinking to `0 × 0`.
+
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/RCA/RCAnativeApp.png').default} alt="Smart RCA panel for an iOS app showing a removed text element" width="1180" height="430" className='doc_img'/>
+
 | Category | What you see |
 |---|---|
 | **Element path** | The element's locator in the baseline and in the comparison. When an element has a `resource-id` (Android) or `name` (iOS), the path uses it. Otherwise it is a positional path from the screen root. |
