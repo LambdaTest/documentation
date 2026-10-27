@@ -199,7 +199,7 @@ HyperExecute provides you with the tools that you need to run your tests at the 
   </div>
   </a>
 
-  <a href="/support/docs/hyperexecute-rerun-failed-tests/">
+  <a href="/support/docs/hyperexecute-rerun-failed-jobs/">
   <div className="support_inners">
     <h2>Rerun Failed Jobs</h2>
     <p>Rerun a failed job, with all scenarios or only the failed ones, to quickly validate fixes without triggering the entire pipeline again.</p>
