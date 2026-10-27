@@ -3,14 +3,14 @@ id: hyperexecute-rerun-failed-tests
 title: Rerun Failed Jobs on HyperExecute
 hide_title: false
 sidebar_label: Rerun Failed Jobs
-description: Rerun a HyperExecute job from the job page, either as the full job or only its failed scenarios. Covers the Git token it needs, commit choice, concurrency, how failed scenarios are picked and when Rerun is unavailable.
+description: Rerun a HyperExecute job from the job page, with all scenarios or only the failed ones. Covers the Git token it needs, commit choice, concurrency, how failed scenarios are picked and when Rerun is unavailable.
 keywords:
   - TestMu AI Hyperexecute
   - TestMu AI Hyperexecute help
   - TestMu AI Hyperexecute documentation
   - HyperExecute rerun job
   - HyperExecute rerun failed jobs
-  - HyperExecute rerun full job
+  - HyperExecute rerun all scenarios
   - HyperExecute rerun failed scenarios
   - HyperExecute rerun same commit
   - HyperExecute rerun latest commit
@@ -58,7 +58,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       "@id": "https://www.testmuai.com/support/docs/hyperexecute-rerun-failed-tests/"
     },
     "headline": "Rerun Failed Jobs on HyperExecute",
-    "description": "Rerun a HyperExecute job from the job page, either as the full job or only its failed scenarios. Covers the Git token it needs, commit choice, concurrency, how failed scenarios are picked and when Rerun is unavailable.",
+    "description": "Rerun a HyperExecute job from the job page, with all scenarios or only the failed ones. Covers the Git token it needs, commit choice, concurrency, how failed scenarios are picked and when Rerun is unavailable.",
     "url": "https://www.testmuai.com/support/docs/hyperexecute-rerun-failed-tests/",
     "image": {
       "@type": "ImageObject",
@@ -109,7 +109,7 @@ When a job finishes with failures, you do not have to trigger the whole pipeline
 
 | Rerun type | What it runs | When to use it |
 | :---- | :---- | :---- |
-| **Full job** | Every scenario the original job ran. | Re-validate the entire suite, for example after a fix that touches shared code or the environment. |
+| **All scenarios** | Every scenario the original job ran. | Re-validate the entire suite, for example after a fix that touches shared code or the environment. |
 | **Failed scenarios** | Only the scenarios that did not pass, plus any that never ran. | Re-verify just the failures. A 900-scenario job with 20 failures reruns those 20. |
 
 Either type can run on the commit the original job ran or on the latest commit of that branch.
@@ -129,7 +129,7 @@ Jobs started from your local machine can be rerun as long as Git details were re
 
 | Option | Choices |
 | :---- | :---- |
-| **Rerun type** | **Failed scenarios** — only what did not pass. **Full job** — everything the job ran (shown as **All Scenarios** in the dialog). |
+| **Rerun type** | **Failed scenarios** — only what did not pass. **All scenarios** — everything the job ran. |
 | **Commit** | **Same commit** — the exact commit the job ran, to reproduce a failure. **Latest commit** — the newest commit on that branch, once the fix is merged. |
 | **Concurrency** | Defaults to the original job's. Raise or lower it for the rerun; the rest of the YAML is unchanged. |
 
