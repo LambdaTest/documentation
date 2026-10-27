@@ -1,19 +1,16 @@
 ---
 id: playwright-android-guide
-title: How To Run Playwright Tests On TestMu AI Android Devices
-sidebar_label: Getting Started
-description: Here you can learn how to run Playwright tests on the TestMu AI android devices.
+title: How to Run Playwright Android Tests on TestMu AI
+hide_title: true
+toc_max_heading_level: 2
+sidebar_label: "Android Testing"
+description: Run Playwright tests on real Android devices with TestMu AI across Node.js, Java, C#, and Python using a CDP endpoint and LT:Options.
 keywords:
-  - playwright testing
+  - playwright android testing testmu ai
   - playwright mobile testing
-  - playwright testing tool
-  - playwright testing on testmu ai
-  - playwright testing testmu ai
-  - playwright android
-  - playwright java android
-  - playwright csharp android
-  - playwright python android
-  - playwright multi language mobile
+  - run playwright tests on android devices
+  - playwright android capabilities
+  - playwright chrome android automation
 
 url: https://www.testmuai.com/support/docs/playwright-android/
 site_name: TestMu AI
@@ -23,6 +20,7 @@ canonical: https://www.testmuai.com/support/docs/playwright-android/
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -59,8 +57,8 @@ import TabItem from '@theme/TabItem';
       "@type": "WebPage",
       "@id": "https://www.testmuai.com/support/docs/playwright-android/"
     },
-    "headline": "How To Run Playwright Tests On TestMu AI Android Devices",
-    "description": "Here you can learn how to run Playwright tests on the TestMu AI android devices.",
+    "headline": "How to Run Playwright Android Tests on TestMu AI",
+    "description": "Run Playwright tests on real Android devices with TestMu AI across Node.js, Java, C#, and Python using a CDP endpoint and LT:Options.",
     "url": "https://www.testmuai.com/support/docs/playwright-android/",
     "image": {
       "@type": "ImageObject",
@@ -71,9 +69,9 @@ import TabItem from '@theme/TabItem';
     "inLanguage": "en",
     "articleSection": "Web Automation",
     "keywords": [
-      "playwright testing",
+      "playwright android testing testmu ai",
       "playwright mobile testing",
-      "playwright testing tool"
+      "run playwright tests on android devices"
     ],
     "proficiencyLevel": "Beginner",
     "author": {
@@ -105,96 +103,48 @@ import TabItem from '@theme/TabItem';
     "hasPart": [
       {
         "@type": "SoftwareSourceCode",
-        "name": "Prerequisites",
+        "name": "Set credentials on Windows",
         "codeSampleType": "code snippet",
         "programmingLanguage": "Shell",
         "text": "set LT_USERNAME=\"YOUR_LAMBDATEST_USERNAME\"\nset LT_ACCESS_KEY=\"YOUR_LAMBDATEST_ACCESS_KEY\""
       },
       {
         "@type": "SoftwareSourceCode",
-        "name": "Prerequisites",
+        "name": "Set credentials on macOS/Linux",
         "codeSampleType": "code snippet",
         "programmingLanguage": "Shell",
         "text": "export LT_USERNAME=\"YOUR_LAMBDATEST_USERNAME\"\nexport LT_ACCESS_KEY=\"YOUR_LAMBDATEST_ACCESS_KEY\""
       },
       {
         "@type": "SoftwareSourceCode",
-        "name": "Install the Playwright package",
+        "name": "Install the Playwright package (Node.js)",
         "codeSampleType": "code snippet",
         "programmingLanguage": "Shell",
         "text": "npm install playwright"
       },
       {
         "@type": "SoftwareSourceCode",
-        "name": "Install the Playwright package",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Shell",
-        "text": "pip install playwright"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Add the Playwright dependency to your pom.xml",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "XML",
-        "text": "<dependency>\n    <groupId>com.microsoft.playwright<\/groupId>\n    <artifactId>playwright<\/artifactId>\n    <version>1.61.0<\/version>\n<\/dependency>"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Add the Playwright NuGet package",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Shell",
-        "text": "dotnet add package Microsoft.Playwright"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Code sample 7",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "\n**Using `_android.connect()`**\n\n```javascript title=\"playwright-android-test.js\"\nconst { _android } = require(\"playwright\");\n\n(async () => {\n  const capabilities = {\n    \"LT:Options\": {\n      platformName: \"android\",\n      deviceName: \".*\",\n      platformVersion: \".*\",\n      isRealMobile: true,\n      build: \"Playwright Android Build\",\n      name: \"Playwright Android Test\",\n      user: process.env.LT_USERNAME,\n      accessKey: process.env.LT_ACCESS_KEY,\n      network: true,\n      video: true,\n      console: true,\n      playwrightClientVersion: \"1.61.0\",\n    },\n  };\n\n  const cdpUrl = `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(\n    JSON.stringify(capabilities)\n  )}`;\n\n  const device = await _android.connect(cdpUrl);\n  console.log(`Model: ${device.model()}, Serial: ${device.serial()}`);\n  await device.shell(\"am force-stop com.android.chrome\");\n\n  const context = await device.launchBrowser();\n  context.setDefaultTimeout(120000);\n  const page = await context.newPage();\n\n  await page.goto(\"https://duckduckgo.com\");\n  await page.locator('[name=\"q\"]').fill(\"LambdaTest\");\n  await page.locator('[name=\"q\"]').press(\"Enter\");\n  await page.waitForTimeout(3000);\n\n  const title = await page.title();\n  console.log(\"Page title:\", title);\n\n  try {\n    if (title.includes(\"LambdaTest\")) {\n      await page.evaluate(\n        (_) => {},\n        `lambdatest_action: ${JSON.stringify({\n          action: \"setTestStatus\",\n          arguments: { status: \"passed\", remark: \"Title verified\" },\n        })}`\n      );\n    }\n  } catch (e) {\n    await page.evaluate(\n      (_) => {},\n      `lambdatest_action: ${JSON.stringify({\n        action: \"setTestStatus\",\n        arguments: { status: \"failed\", remark: e.message },\n      })}`\n    );\n  }\n\n  await page.close();\n  await device.close();\n})();"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "To set a custom timeout, add",
+        "name": "Run Your First Test (Node.js chromium.connect)",
         "codeSampleType": "code snippet",
         "programmingLanguage": "JavaScript",
-        "text": "context.setDefaultTimeout(120000);  // Set your desired timeout value."
+        "text": "const { chromium } = require(\"playwright\");\n\n(async () => {\n  const capabilities = {\n    \"LT:Options\": {\n      platformName: \"android\",\n      deviceName: \".*\",\n      platformVersion: \".*\",\n      isRealMobile: true,\n      build: \"Playwright Android Build\",\n      name: \"Playwright Android Test\",\n      user: process.env.LT_USERNAME,\n      accessKey: process.env.LT_ACCESS_KEY,\n      network: true,\n      video: true,\n      console: true,\n      playwrightClientVersion: \"1.61.0\",\n    },\n  };\n\n  const cdpUrl = `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(\n    JSON.stringify(capabilities)\n  )}`;\n\n  const browser = await chromium.connect(cdpUrl);\n  const context = browser.contexts()[0] || (await browser.newContext());\n  const page = context.pages()[0] || (await context.newPage());\n\n  await page.goto(\"https://duckduckgo.com\", { timeout: 30000 });\n  await page.locator('[name=\"q\"]').fill(\"LambdaTest\");\n  await page.locator('[name=\"q\"]').press(\"Enter\");\n  await page.waitForTimeout(3000);\n\n  const title = await page.title();\n  console.log(\"Page title:\", title);\n\n  await page.close();\n  await browser.close();\n})();"
       },
       {
         "@type": "SoftwareSourceCode",
-        "name": "Run the test",
+        "name": "Run the Node.js test",
         "codeSampleType": "code snippet",
         "programmingLanguage": "Shell",
         "text": "node playwright-android-test.js"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "if __name__ == \"__main__\"",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "\nRun the test:\n\n```bash\npython playwright_android_test.py"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Code sample 11",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "\nRun the test:\n\n```bash\nmvn compile exec:java -Dexec.mainClass=\"com.lambdatest.PlaywrightAndroidTest\""
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Code sample 12",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "\nRun the test:\n\n```bash\ndotnet run"
       }
     ],
-    "dateModified": "2026-09-10T15:46:57+05:30"
+    "dateModified": "2026-09-27T00:00:00+05:30"
   }) }}
 />
 
-# Getting Started With Playwright Testing on Android Real Devices
-* * *
-Playwright Android automation is supported on <BrandName /> across **Node.js, Java, C#, and Python**. Run Playwright tests on Chrome for Android across 100+ real Android devices. This guide covers getting started with Playwright testing on Android devices on the <BrandName /> platform.
+# How to Run Playwright Android Tests on TestMu AI
+***
+
+When you need to validate your web app on Chrome for Android, you can run Playwright tests on real Android devices with TestMu AI. You get access to 100+ real Android devices across **Node.js, Java, C#, and Python**, so you catch device-specific issues instead of emulator approximations. You connect Playwright to the TestMu AI cloud over a CDP endpoint, pass your capabilities, and run your existing test scripts against a live device.
 
 :::tip Supported Versions
 - Playwright versions **v1.53.0** to **v1.61.0** are supported for Android Real Device testing (excluding **v1.54.0**).
@@ -203,13 +153,13 @@ Playwright Android automation is supported on <BrandName /> across **Node.js, Ja
 :::
 
 ## Prerequisites
----
+***
 
-Set your <BrandName /> username and access key in the environment variables. You can get your <BrandName /> username and access key from your <BrandName /> Profile > Account Settings > Password & Security.
-
-<img loading="lazy" src={require('../assets/images/auth_lt.png').default} alt="Access Key on TestMu AI Automation Dashboard" width="1444" height="703" className="doc_img"/>
+Before you run a test, set your TestMu AI username and access key as environment variables. You can find both under your TestMu AI **Profile > Account Settings > Password & Security**.
 
 **Windows**
+
+<VerifiedTag value="Verified" />
 
 ```bash
 set LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
@@ -218,10 +168,14 @@ set LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 
 **macOS/Linux**
 
+<VerifiedTag value="Verified" />
+
 ```bash
 export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
 export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 ```
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
 
@@ -272,7 +226,11 @@ dotnet add package Microsoft.Playwright
 </Tabs>
 
 ## Run Your First Test
----
+***
+
+Pick your language below, then use the sample script to connect to TestMu AI and run a search test on a real Android device.
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
 
@@ -367,12 +325,11 @@ const { _android } = require("playwright");
     },
   };
 
-  const device = await _android.connect(
-    `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(
-      JSON.stringify(capabilities)
-    )}`
-  );
+  const cdpUrl = `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(
+    JSON.stringify(capabilities)
+  )}`;
 
+  const device = await _android.connect(cdpUrl);
   console.log(`Model: ${device.model()}, Serial: ${device.serial()}`);
   await device.shell("am force-stop com.android.chrome");
 
@@ -409,13 +366,14 @@ const { _android } = require("playwright");
   }
 
   await page.close();
-  await context.close();
   await device.close();
 })();
 ```
 
 :::tip
 The timeout value specified in the Playwright configuration may default to 30 seconds on real devices. To set a custom timeout, add:
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 context.setDefaultTimeout(120000);  // Set your desired timeout value.
@@ -459,7 +417,7 @@ def main():
     )
 
     with sync_playwright() as p:
-        browser = p.chromium.connect_over_cdp(cdp_url)
+        browser = p.chromium.connect(cdp_url)
         context = browser.contexts[0] if browser.contexts else browser.new_context()
         page = context.pages[0] if context.pages else context.new_page()
 
@@ -484,7 +442,6 @@ def main():
             )
 
         page.close()
-        context.close()
         browser.close()
 
 if __name__ == "__main__":
@@ -508,6 +465,7 @@ import com.microsoft.playwright.*;
 import com.google.gson.Gson;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class PlaywrightAndroidTest {
@@ -529,13 +487,12 @@ public class PlaywrightAndroidTest {
         Map<String, Object> capabilities = new LinkedHashMap<>();
         capabilities.put("LT:Options", ltOptions);
 
-        Map<String, Object> capabilities = Map.of("LT:Options", ltOptions);
         String capsJson = new Gson().toJson(capabilities);
         String cdpUrl = "wss://cdp.lambdatest.com/playwright?capabilities="
             + URLEncoder.encode(capsJson, StandardCharsets.UTF_8);
 
         try (Playwright playwright = Playwright.create()) {
-            Browser browser = playwright.chromium().connectOverCDP(cdpUrl);
+            Browser browser = playwright.chromium().connect(cdpUrl);
             BrowserContext context = browser.contexts().size() > 0
                 ? browser.contexts().get(0) : browser.newContext();
             Page page = context.pages().size() > 0
@@ -561,7 +518,6 @@ public class PlaywrightAndroidTest {
             }
 
             page.close();
-            context.close();
             browser.close();
         }
     }
@@ -581,7 +537,6 @@ mvn compile exec:java -Dexec.mainClass="com.lambdatest.PlaywrightAndroidTest"
 ```csharp title="PlaywrightAndroidTest.cs"
 using Microsoft.Playwright;
 using System.Text.Json;
-using System.Web;
 
 var capabilities = new Dictionary<string, object>
 {
@@ -603,10 +558,10 @@ var capabilities = new Dictionary<string, object>
 };
 
 var capsJson = JsonSerializer.Serialize(capabilities);
-var cdpUrl = $"wss://cdp.lambdatest.com/playwright?capabilities={HttpUtility.UrlEncode(capsJson)}";
+var cdpUrl = $"wss://cdp.lambdatest.com/playwright?capabilities={Uri.EscapeDataString(capsJson)}";
 
 using var playwright = await Playwright.CreateAsync();
-var browser = await playwright.Chromium.ConnectOverCDPAsync(cdpUrl);
+var browser = await playwright.Chromium.ConnectAsync(cdpUrl);
 var context = browser.Contexts.Count > 0
     ? browser.Contexts[0] : await browser.NewContextAsync();
 var page = context.Pages.Count > 0
@@ -635,7 +590,6 @@ catch (Exception e)
 }
 
 await page.CloseAsync();
-await context.CloseAsync();
 await browser.CloseAsync();
 ```
 
@@ -653,22 +607,22 @@ dotnet run
 For Java, C#, and Python on Android, the CDP connection returns an existing browser context and page. Always check for existing contexts/pages before creating new ones, as shown in the examples above.
 :::
 
-## View your Playwright test results
+## View Your Playwright Test Results
 ***
 
-The <BrandName /> Automation Dashboard is where you can see the results of your Playwright tests after running them on the <BrandName /> platform. 
+The TestMu AI Automation Dashboard shows the results of your Playwright tests after each run on the TestMu AI platform. Open it to review builds, sessions, logs, and video.
 
-The below screenshot of <BrandName /> Automation Dashboard shows the Playwright build on the left and the build sessions associated with the selected build on the right.
+The screenshot below shows the Playwright build on the left and the build sessions associated with the selected build on the right.
 
 <img loading="lazy" src={require('../assets/images/playwright-android-build-view.png').default} alt="Playwright Android build and session details on TestMu AI Automation Dashboard" width="1444" height="703"  className="doc_img"/>
 
 ## Capabilities Reference
 ***
 
-Configure these capabilities to control your Playwright Android tests.
+Configure these capabilities in your `LT:Options` object to control how your Playwright Android tests run.
 
 :::tip
-Use the [Playwright Android Capability Generator](https://www.testmuai.com/playwright-android-capability-generator/) to generate capabilities for your tests.
+Use the [Playwright Android Capability Generator](https://www.lambdatest.com/playwright-android-capability-generator/) to generate capabilities for your tests.
 :::
 
 | Key             | Expected Values                | Description                                                                                                                                                                                        | Capability                                                                           |
@@ -688,13 +642,10 @@ Use the [Playwright Android Capability Generator](https://www.testmuai.com/playw
 | tunnelName      | true/false                     | Specify tunnel name                                                                                                                                                                                | `const capability = { "LT:Options": {"tunnelName": "<tunnel_name>",}}`               |
 | geoLocation     | AR (Argentina)                 | Specify country code                                                                                                                                                                               | `const capability = { "LT:Options": {"geoLocation": "AR",}}`                         |
 
-### Using REGEX for device name
-When you run a test on a specific device, the exact device you selected may not be available. A regular expression (REGEX) widens the device search so you get any matching device. For example, to run on any Pixel device rather than one specific model, use a REGEX for `deviceName`. See [REGEX for App/Browser Automation](/support/docs/regular-expression-appium/) for details.
-
-## WebView Testing
+### Using a REGEX for the Device Name
 ***
 
-To test embedded WebViews on a real Android device, add the mandatory `isPwMobileWebviewTest` capability to your options ([sample script](https://github.com/LambdaTest/playwright-sample/blob/main/playwrightwebview.js)):
+When you run a test on a specific device, the exact model you selected may not be available. A regular expression (REGEX) widens the device search so you get any matching device. For example, to run on any Pixel device rather than one specific model, use a REGEX for `deviceName`. See [how to match devices with a REGEX](/support/docs/regular-expression-appium/) for details.
 
 
 ## Related Playwright Guides
@@ -705,33 +656,4 @@ Continue with these related guides to extend your Playwright coverage on TestMu 
 - [How to test WebView apps with Playwright](/support/docs/playwright-webview-test/) covers the `isPwMobileWebviewTest` capability for hybrid apps.
 - [How to run Playwright tests on real iOS devices](/support/docs/playwright-ios-device/) mirrors this setup for iOS.
 - [How to configure Playwright capabilities](/support/docs/playwright-test-execution-setup/) documents every supported capability key.
-
-## Handle Pop-ups During Test Execution
-
-Some websites show a pop-up, such as a notification prompt, after the page loads. The pop-up blocks clicks on the elements behind it. Add a notification handler that clicks the pop-up's dismiss button when it appears and continues when it does not. This lets the same test pass whether or not the pop-up is shown.
-
-<Tabs className="docs__val">
-
-<TabItem value="nodejs" label="Node.js" default>
-
-```bash
-const { errors } = require("playwright");
-
-async function dismissNotificationPrompt(page) {
-  const noThanks = page.getByText("No thanks");
-  try {
-    await noThanks.waitFor({ state: "visible", timeout: 4000 });
-    await noThanks.click();
-  } catch (e) {
-    if (!(e instanceof errors.TimeoutError)) throw e; // prompt did not appear
-  }
-}
-
-// Call after page load
-await page.goto("https://your-website.com");
-await dismissNotificationPrompt(page);
-```
-
-Run the test as usual (for example, `node playwrightwebview.js`) and check the [Automation dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build) for results.
-
 
