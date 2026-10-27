@@ -218,3 +218,12 @@ If the API only accepts requests from known IP addresses, share the sent-from ad
 - **Download HAR**: Download the API call as a HAR (HTTP Archive) file. Open it in your browser's developer tools or any HAR viewer, or attach it to a bug report.
 
 This structure provides logical groupings for different aspects of API testing with KaneAI, making it easier to follow each type of action required for comprehensive API testing.
+
+## Import Collections and Validate Responses
+
+For file-based import and response validation, use these guides:
+
+- [Bulk API Import](/support/docs/kaneai-bulk-api-import/): Import Postman collections or OpenAPI specifications, map variables from optional environment files, and add header assertions to the imported APIs.
+- [API Response Assertions](/support/docs/kaneai-api-response-assertions/): Check response values with JSONPath or validate a response against a JSON Schema.
+
+To validate network requests made by the application during UI interactions, see [Network Logs Assertions](/support/docs/kane-ai-network-assertions/).
