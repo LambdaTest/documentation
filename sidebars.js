@@ -656,6 +656,8 @@ module.exports = {
               "kane-ai-click-interactions",
               "kane-ai-jira-integration",
               "kane-ai-api-testing",
+              "kaneai-bulk-api-import",
+              "kaneai-api-response-assertions",
               {
                 type: "category",
                 collapsed: true,
