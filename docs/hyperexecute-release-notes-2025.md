@@ -259,7 +259,7 @@ With this update, you can now configure Azure Repos in the same intuitive manner
 ### Rerun Failed Tests on HyperExecute
 Quickly validate fixes without rerunning your entire test suite. With the new Rerun Failed Tests feature, you can relaunch only the failed scenarios or the full suite directly from the dashboard, drastically reducing execution time and improving feedback cycles. Reruns use the same YAML configuration for consistent, reproducible results, with options to pick the same or latest commit and adjust concurrency.
 
-> **Learn more:** Refer to the detailed [Rerun Failed Tests documentation.](/support/docs/hyperexecute-rerun-failed-tests/)
+> **Learn more:** Refer to the detailed [Rerun Failed Tests documentation.](/support/docs/hyperexecute-rerun-failed-jobs/)
 
 ### Snooper Compatibility Update
 Snooper is not compatible with Alpine-based Docker images because Alpine uses musl libc instead of glibc, which Snooper requires. To avoid runtime errors or unexpected failures, ensure your images are built on a non-Alpine base that includes glibc. This helps maintain consistent behavior when updating or troubleshooting Docker environments.
