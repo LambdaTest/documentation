@@ -36,7 +36,7 @@ test('public installation examples use the current Homebrew tap and include nati
     assert.doesNotMatch(bash, /brew tap LambdaTest\/rook https:\/\/github\.com\/LambdaTest\/rook\.git/);
     assert.match(doc, /npm\.cmd install -g @testmuai\/rook\b/);
   }
-  assert.match(install, /npm\.cmd install -g @testmuai\/rook@0\.1\.14/);
+  assert.match(install, /npm\.cmd install -g @testmuai\/rook@0\.1\.16/);
   assert.match(install, /\{#windows\}/);
   assert.match(install, /\{#windows-wsl\}/);
   assert.match(install, /Get-Command rook\.cmd/);
