@@ -91,6 +91,10 @@ module.exports = {
     },
   ],
   themeConfig: {
+    // Default share image (og:image and twitter:image) for every page whose
+    // front matter sets no `image:`. Same file the TechArticle schema names;
+    // the deploy copies assets/ into build/, so it serves at /support/assets/.
+    image: '/assets/images/og-images/testmuai-documentation-og.webp',
     colorMode: {
       defaultMode: 'dark',            // fallback when the OS expresses no preference
       respectPrefersColorScheme: true, // new visitors follow their system theme
