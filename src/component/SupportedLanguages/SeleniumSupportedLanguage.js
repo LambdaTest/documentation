@@ -13,7 +13,7 @@ export default function SeleniumSupportedLanguage() {
           <a href="/support/docs/java-with-selenium-running-java-automation-scripts-on-testmu-selenium-grid/">Java</a>
         </li>
         <li>
-          <a href="/support/docs/selenide-tests-with-lambdatest-online-selenium-grid-for-automated-cross-browser-testing/">Selenide</a>
+          <a href="/support/docs/java-with-selenium-running-java-automation-scripts-on-testmu-selenium-grid/?framework=selenide">Selenide</a>
         </li>
         <li>
           <a href="/support/docs/java-with-selenium-running-java-automation-scripts-on-testmu-selenium-grid/?framework=gauge">Gauge</a>
@@ -171,7 +171,7 @@ export default function SeleniumSupportedLanguage() {
           <a href="/support/docs/javascript-with-selenium-running-javascript-automation-scripts-on-testmu-selenium-grid/?framework=karma">Karma Test Runner</a>
         </li>
         <li>
-          <a href="/support/docs/npm-plugin-for-testcafe-integration-with-lambdatest/">TestCafe</a>
+          <a href="/support/docs/javascript-with-selenium-running-javascript-automation-scripts-on-testmu-selenium-grid/?framework=testcafe">TestCafe</a>
         </li>
          <li>
           <a href="/support/docs/javascript-with-selenium-running-javascript-automation-scripts-on-testmu-selenium-grid/?framework=nemojs">NemoJS</a>
