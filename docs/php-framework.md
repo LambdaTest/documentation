@@ -203,25 +203,27 @@ Complete the following steps before you begin automation testing with Selenium.
 
    * **MacOS:** Previous versions of **MacOS** have **PHP** installed by default. For the latest **MacOS** versions starting with **Monterey**, download and install **PHP** manually: 
 
-   <VerifiedTag value="Verified" />
+On macOS Monterey and later, PHP is not preinstalled. Install [Homebrew](https://brew.sh/), then install PHP:
 
-   ```bash
-   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-   brew install php
-   ```
-   * **Windows:** Download **PHP** from [PHP for Windows](http://windows.php.net/download/). Also, refer to the [PHP Windows installation guide](http://php.net/manual/en/install.windows.php) to ensure PHP is accessible through Command Prompt (cmd).
+<VerifiedTag value="Verified" />
 
-2. Download **composer** in the project directory ([Linux/MacOS](https://getcomposer.org/download/), [Windows](https://getcomposer.org/doc/00-intro.md#installation-windows)).
+```bash
+brew install php
+```
 
-   **Note:** To use the **composer** command directly, it either should have been downloaded in the project directory or should be accessible globally which can be done by the command below:
+On Windows, download PHP from [windows.php.net](https://windows.php.net/download/) and add it to your system `PATH`. See the [PHP Windows installation guide](https://www.php.net/manual/en/install.windows.php).
 
-   <VerifiedTag value="Verified" />
+To run `composer` from any directory after downloading it, move `composer.phar` onto your `PATH`:
 
-   ```bash
-   mv composer.phar /usr/local/bin/composer
-   ```
+<VerifiedTag value="Verified" />
 
-## Step 1: Clone the Sample Project
+```bash
+mv composer.phar /usr/local/bin/composer
+```
+
+For Windows, follow the [Composer Windows installation guide](https://getcomposer.org/doc/00-intro.md#installation-windows).
+
+## Set Your Credentials
 ---
 Clone the repository and install dependencies.
 
@@ -342,9 +344,221 @@ cp -r agent-skills/selenium-skill .claude/skills/
 cp -r agent-skills/selenium-skill .cursor/skills/
 ```
 
-:::tip
-Install all available framework skills at once by cloning the repository directly into your tool's skills directory (e.g., `.claude/skills/`, `.cursor/skills/`).
-:::
+2. Set your browser and OS in the Behat config:
+
+<VerifiedTag value="Verified" />
+
+```yaml title="behat.yml"
+default:
+  context:
+    parameters:
+      lambdatest:
+        server: "hub.lambdatest.com"
+        user: "YOUR_LAMBDATEST_USERNAME"
+        key: "YOUR_LAMBDATEST_ACCESS_KEY"
+        capabilities:
+          build: "behat-selenium-sample"
+          name: "single-behat-test"
+        environments:
+          - browserName: chrome
+            version: 71.0
+            platform: Win10
+```
+
+The `user` and `key` values are read from the `LT_USERNAME` and `LT_ACCESS_KEY` environment variables you set in the [Set Your Credentials](#set-your-credentials) section.
+
+3. Install the dependencies:
+
+<VerifiedTag value="Verified" />
+
+```bash
+composer install
+```
+
+4. Run a single test, or in parallel:
+
+<VerifiedTag value="Verified" />
+
+```bash
+composer single
+composer parallel
+```
+
+The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
+
+</TabItem>
+
+<TabItem value="laravel" label="Laravel">
+
+Laravel Dusk provides a fluent browser-automation API. Credentials and the grid live in the project's `.env` and `tests/DuskTestCase.php`.
+
+1. Clone the [sample GitHub project](https://github.com/LambdaTest/php-laravel-dusk-todo):
+
+<VerifiedTag value="Verified" />
+
+```bash
+git clone https://github.com/LambdaTest/php-laravel-dusk-todo
+cd php-laravel-dusk-todo
+```
+
+2. Set your browser and OS in the `$capabilities` array:
+
+<VerifiedTag value="Verified" />
+
+```php
+$capabilities = array(
+    "build" => "LaravelDusk Build",
+    "name" => "LaravelDusk Build",
+    "platform" => "Windows 10",
+    "browserName" => "Chrome",
+    "version" => "latest"
+);
+```
+
+3. Install the dependencies:
+
+<VerifiedTag value="Verified" />
+
+```bash
+composer install
+```
+
+4. Run the test:
+
+<VerifiedTag value="Verified" />
+
+```bash
+php artisan dusk
+```
+
+The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
+
+</TabItem>
+
+<TabItem value="codeception" label="Codeception">
+
+Codeception configures the grid in its acceptance suite's WebDriver module, with credentials in the host URL.
+
+1. Clone the [sample GitHub project](https://github.com/LambdaTest/codeception-selenium-sample):
+
+<VerifiedTag value="Verified" />
+
+```bash
+git clone https://github.com/LambdaTest/codeception-selenium-sample
+cd codeception-selenium-sample
+```
+
+2. Set your browser and OS in the acceptance suite config:
+
+<VerifiedTag value="Verified" />
+
+```yaml title="acceptance.suite.yml"
+class_name: AcceptanceTester
+modules:
+  enabled:
+    - WebDriver:
+        url: 'https://lambdatest.github.io/sample-todo-app/'
+        host: '{username}:{token}@hub.lambdatest.com'
+        port: 80
+        browser: chrome
+        capabilities:
+          name: 'Codeception Example'
+          build: '1.0'
+          browserName: 'Chrome'
+          platform: 'Windows 10'
+          version: '71.0'
+          tunnel: false # set to true to route traffic through your local machine
+```
+
+In the `host` value, `{username}` and `{token}` are your `LT_USERNAME` and `LT_ACCESS_KEY` environment variables set in the [Set Your Credentials](#set-your-credentials) section.
+
+3. Install the dependencies:
+
+<VerifiedTag value="Verified" />
+
+```bash
+composer install
+```
+
+4. Run the test:
+
+<VerifiedTag value="Verified" />
+
+```bash
+./vendor/bin/codecept run --steps
+```
+
+The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
+
+</TabItem>
+
+<TabItem value="phpunit" label="PHPUnit">
+
+PHPUnit keeps capabilities inline in `LambdaTestSetup.php`, with Composer scripts for single and parallel runs.
+
+1. Clone the [sample GitHub project](https://github.com/LambdaTest/Php-PhpUnit-Selenium):
+
+<VerifiedTag value="Verified" />
+
+```bash
+git clone https://github.com/LambdaTest/Php-PhpUnit-Selenium
+cd Php-PhpUnit-Selenium
+```
+
+2. Set your browser and OS in the `$capabilities` array (`LambdaTestSetup.php`):
+
+<VerifiedTag value="Verified" />
+
+```php
+$capabilities = array(
+    "build" => "Sample PHPUnit Build",
+    "name" => "Sample PHPUnit Test",
+    "platform" => "Windows 10",
+    "browserName" => "Chrome",
+    "version" => "latest"
+);
+```
+
+3. Install the dependencies:
+
+<VerifiedTag value="Verified" />
+
+```bash
+composer install
+```
+
+4. Run a single test, in parallel, or both:
+
+<VerifiedTag value="Verified" />
+
+```bash
+composer single
+composer parallel
+composer test
+```
+
+The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
+
+</TabItem>
+
+</Tabs>
+
+## View Your Results
+---
+
+Your test results, including video, network logs, and command-by-command execution, appear on the [TestMu AI Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build).
+
+**Next steps:** If this is your first run, walk through [running your first Selenium test](/support/docs/testmu-running-your-first-selenium-test/) end to end. From there, explore the full set of [Selenium automation capabilities](/support/docs/selenium-automation-capabilities/) you can pass to the grid, learn how to [debug your Selenium tests](/support/docs/debugging-options/), and organize and [filter your Selenium tests](/support/docs/filter-your-selenium-tests/) as your suite grows.
+
+## Next Steps
+---
+
+Continue with these related guides:
+
+- [Running Your First Selenium Test](/support/docs/testmu-running-your-first-selenium-test/)
+- [Selenium Automation Capabilities](/support/docs/selenium-automation-capabilities/)
+- [Debugging Options](/support/docs/debugging-options/)
+- [Filter Your Selenium Tests](/support/docs/filter-your-selenium-tests/)
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

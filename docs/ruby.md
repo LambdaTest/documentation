@@ -187,22 +187,21 @@ Complete the following steps before you start Ruby automation testing with Selen
    * For **Windows**, download from the [Ruby Installer for Windows](https://rubyinstaller.org/downloads/).
    * For **Linux** or **Ubuntu**, run a simple apt command like below:
 
-   <VerifiedTag value="Verified" />
+To install Ruby from the terminal:
 
-   ```bash
-   sudo apt-get install ruby-full
-   ```
-   * For **macOS**, run a [Homebrew](https://brew.sh/) command like this:
+<VerifiedTag value="Verified" />
 
-   <VerifiedTag value="Verified" />
+```bash
+# macOS (Homebrew)
+brew install ruby
 
-   ```bash
-   brew install ruby
-   ```
-2. Install the [parallel_tests](https://github.com/grosser/parallel_tests) gem to run tests in parallel.
-3. Get the TestMu AI binary file for running tests on your locally hosted web pages.
+# Ubuntu / Debian
+sudo apt-get install ruby-full
+```
 
-## Step 1: Clone the Sample Project
+On Windows, use the [RubyInstaller](https://rubyinstaller.org/downloads/).
+
+## Set Your Credentials
 ---
 Clone the repository and install dependencies.
 

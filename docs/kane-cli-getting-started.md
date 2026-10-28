@@ -14,7 +14,39 @@ slug: kane-cli-getting-started/
 canonical: https://www.testmuai.com/docs/kane-cli-quickstart
 ---
 
-import { Redirect } from '@docusaurus/router';
+import { useEffect } from 'react';
+import { BRAND_URL } from '@site/src/component/BrandName';
+
+export function KaneCliQuickstartRedirect() {
+  useEffect(() => {
+    window.location.replace('https://www.testmuai.com/docs/kane-cli-quickstart');
+  }, []);
+  return null;
+}
+
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Getting Started with Kane CLI",
+          "item": `${BRAND_URL}/support/docs/kane-cli-quickstart/`
+        }]
+      })
+    }}
+></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -73,4 +105,4 @@ import { Redirect } from '@docusaurus/router';
   }) }}
 />
 
-<Redirect to="/docs/kane-cli-quickstart" />
+<KaneCliQuickstartRedirect />

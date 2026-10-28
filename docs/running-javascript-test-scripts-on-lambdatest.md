@@ -362,7 +362,526 @@ Generate capabilities for your test requirements with the [Capabilities Generato
 
 ## Step 4: Run the Test
 ---
-Execute the test using one of the following commands.
+
+Each tab lists the framework-specific pieces. Clone the matching repo (it contains the full, ready-to-run project), set your browser and OS in its config, then run.
+
+<Tabs className="docs__val" groupId="js-framework" queryString="framework">
+
+<TabItem value="mocha" label="Mocha" default>
+
+Mocha reads its capabilities from a `conf/single.conf.js` file.
+
+1. Clone the [sample GitHub project](https://github.com/LambdaTest/mocha-selenium-sample):
+
+<VerifiedTag value="Verified" />
+
+```bash
+git clone https://github.com/LambdaTest/mocha-selenium-sample
+cd mocha-selenium-sample
+```
+
+2. Set your browser and OS in `conf/single.conf.js`:
+
+<VerifiedTag value="Verified" />
+
+```js title="conf/single.conf.js"
+exports.capabilities = {
+  'build': 'Mocha-Selenium-Sample',
+  'name': 'Your Test Name',
+  'platformName':'Windows 10',
+  'browserName': 'chrome',
+  'browserVersion': 'latest',
+  'visual': false,
+  'network':false,
+  'console':false,
+  'tunnel': false
+};
+```
+
+3. Install the project dependencies:
+
+<VerifiedTag value="Verified" />
+
+```bash
+npm install
+```
+
+4. Run the test:
+
+<VerifiedTag value="Verified" />
+
+```bash
+npm run single
+```
+
+The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
+
+</TabItem>
+
+<TabItem value="nightwatch" label="Nightwatch">
+
+Nightwatch reads its grid setup from `nightwatch.conf.js` in the cloned project.
+
+1. Clone the [sample GitHub project](https://github.com/LambdaTest/nightwatch-selenium-sample):
+
+<VerifiedTag value="Verified" />
+
+```bash
+git clone https://github.com/LambdaTest/nightwatch-selenium-sample
+cd nightwatch-selenium-sample
+```
+
+2. Set your browser and OS in `nightwatch.conf.js`.
+3. Install the project dependencies:
+
+<VerifiedTag value="Verified" />
+
+```bash
+npm install
+```
+
+4. Run the test:
+
+<VerifiedTag value="Verified" />
+
+```bash
+npm run single
+```
+
+The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
+
+</TabItem>
+
+<TabItem value="webdriverio" label="WebdriverIO">
+
+WebdriverIO reads user, key, and capabilities from `conf/single.conf.js`.
+
+1. Clone the [sample GitHub project](https://github.com/LambdaTest/webdriverio-selenium):
+
+<VerifiedTag value="Verified" />
+
+```bash
+git clone https://github.com/LambdaTest/webdriverio-selenium
+cd webdriverio-selenium
+```
+
+2. Set your browser and OS in `conf/single.conf.js`:
+
+<VerifiedTag value="Verified" />
+
+```js title="conf/single.conf.js"
+exports.config = {
+  user: process.env.LT_USERNAME || "<your username>",
+  key: process.env.LT_ACCESS_KEY || "<your accessKey>",
+  specs: ['./tests/specs/single_test.js'],
+  capabilities: [{
+    browserName: 'chrome',
+    browserVersion: 'latest',
+    platformName: 'Windows 10',
+    name: "Test webdriverio",
+    build: "build 1",
+  }],
+  path: '/wd/hub',
+  hostname: 'hub.lambdatest.com',
+  port: 80,
+  framework: 'mocha',
+  mochaOpts: { ui: 'bdd' }
+}
+```
+
+3. Install the project dependencies:
+
+<VerifiedTag value="Verified" />
+
+```bash
+npm install
+```
+
+4. Run the test:
+
+<VerifiedTag value="Verified" />
+
+```bash
+npm run single
+```
+
+The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
+
+</TabItem>
+
+<TabItem value="jest" label="Jest">
+
+Jest defines capabilities inline in the test file, so there is no separate config to edit.
+
+1. Clone the [sample GitHub project](https://github.com/LambdaTest/jest-selenium-webdriver-sample):
+
+<VerifiedTag value="Verified" />
+
+```bash
+git clone https://github.com/LambdaTest/jest-selenium-webdriver-sample
+cd jest-selenium-webdriver-sample
+```
+
+2. Set your browser and OS in the capabilities object:
+
+<VerifiedTag value="Verified" />
+
+```js
+const capabilities = {
+  build: 'jest-LambdaTest-Single',
+  browserName: 'chrome',
+  browserVersion: 'latest',
+  platformName: 'Windows 10',
+};
+```
+
+3. Install the project dependencies:
+
+<VerifiedTag value="Verified" />
+
+```bash
+npm install
+```
+
+4. Run the test:
+
+<VerifiedTag value="Verified" />
+
+```bash
+npm test single.test.js
+```
+
+The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
+
+</TabItem>
+
+<TabItem value="cucumberjs" label="CucumberJS">
+
+CucumberJS runs BDD feature files, with grid capabilities set in `conf/single.conf.js`.
+
+1. Clone the [sample GitHub project](https://github.com/LambdaTest/NodeJs-Cucumber-Selenium):
+
+<VerifiedTag value="Verified" />
+
+```bash
+git clone https://github.com/LambdaTest/NodeJs-Cucumber-Selenium
+cd NodeJs-Cucumber-Selenium
+```
+
+2. Set your browser and OS in `conf/single.conf.js`:
+
+<VerifiedTag value="Verified" />
+
+```js title="conf/single.conf.js"
+capabilities: [{
+  browserName: 'chrome',
+  platformName: 'Windows 10',
+  browserVersion: 'latest',
+  name: "cucumber-js-single-test",
+  build: "cucumber-js-LambdaTest-single"
+}]
+```
+
+3. Install the project dependencies:
+
+<VerifiedTag value="Verified" />
+
+```bash
+npm install
+```
+
+4. Run the test:
+
+<VerifiedTag value="Verified" />
+
+```bash
+npm run single
+```
+
+The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
+
+</TabItem>
+
+<TabItem value="jasmine" label="Jasmine">
+
+Jasmine runs through Karma, which defines cloud browsers in `customLaunchers` inside `karma.conf.js`.
+
+1. Clone the [sample GitHub project](https://github.com/LambdaTest/karma-jasmine-sample):
+
+<VerifiedTag value="Verified" />
+
+```bash
+git clone https://github.com/LambdaTest/karma-jasmine-sample
+cd karma-jasmine-sample
+```
+
+2. Set your browser and OS in `karma.conf.js`:
+
+<VerifiedTag value="Verified" />
+
+```js title="karma.conf.js"
+customLaunchers: {
+  chrome: {
+    base: 'WebDriver',
+    config: webdriverConfig,
+    browserName: 'chrome',
+    platform: 'windows 10',
+    version: '71.0',
+    name: 'Karma With Heartbeat',
+    user: process.env.LT_USERNAME,
+    accessKey: process.env.LT_ACCESS_KEY,
+    pseudoActivityInterval: 15000
+  }
+}
+```
+
+3. Install the project dependencies:
+
+<VerifiedTag value="Verified" />
+
+```bash
+npm install
+```
+
+4. Run the test:
+
+<VerifiedTag value="Verified" />
+
+```bash
+karma start karma.conf.js
+```
+
+The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
+
+</TabItem>
+
+<TabItem value="karma" label="Karma">
+
+Karma with Angular CLI defines cloud browsers in `customLaunchers` inside `karma.conf.js`.
+
+1. Clone the [sample GitHub project](https://github.com/LambdaTest/angular-karma-sample):
+
+<VerifiedTag value="Verified" />
+
+```bash
+git clone https://github.com/LambdaTest/angular-karma-sample
+cd angular-karma-sample
+```
+
+2. Set your browser and OS in `karma.conf.js`:
+
+<VerifiedTag value="Verified" />
+
+```js title="karma.conf.js"
+customLaunchers: {
+  chrome: {
+    base: 'WebDriver',
+    config: webdriverConfig,
+    browserName: 'chrome',
+    platform: 'windows 10',
+    version: '71.0',
+    name: 'Karma With Heartbeat',
+    user: process.env.LT_USERNAME,
+    accessKey: process.env.LT_ACCESS_KEY,
+    pseudoActivityInterval: 5000
+  }
+}
+```
+
+3. Install the project dependencies:
+
+<VerifiedTag value="Verified" />
+
+```bash
+npm install
+```
+
+4. Run the test:
+
+<VerifiedTag value="Verified" />
+
+```bash
+karma start karma.conf.js
+```
+
+The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
+
+</TabItem>
+
+<TabItem value="testcafe" label="TestCafe">
+
+TestCafe connects through an npm plugin rather than a sample repo, so there is nothing to clone.
+
+1. Add `"testcafe": "<testcafe_version>"` to the dependencies in your `package.json`, then install the plugin in your TestCafe project:
+
+<VerifiedTag value="Verified" />
+
+```bash
+npm install testcafe-browser-provider-lambdatest
+```
+
+2. Run your test against the grid, naming the browser and OS in the command:
+
+<VerifiedTag value="Verified" />
+
+```bash
+testcafe "lambdatest:Chrome@74.0:Windows 8" 'path/to/test/file.js'
+```
+
+To run the test on several browsers in parallel, pass a comma-separated list of browsers:
+
+<VerifiedTag value="Verified" />
+
+```bash
+testcafe "lambdatest:Chrome@74.0:Windows 8","lambdatest:Chrome@75.0:Windows 10" "path/to/test/file.js"
+```
+
+You can also run the test from code with the TestCafe runner API:
+
+<VerifiedTag value="Verified" />
+
+```js
+testCafe
+    .createRunner()
+    .src('path/to/test/file.js')
+    .browsers('lambdatest:Chrome@74.0:Windows 8')
+    .run();
+```
+
+To list all available browser aliases:
+
+<VerifiedTag value="Verified" />
+
+```bash
+testcafe -b lambdatest
+```
+
+Configure the run with these environment variables:
+
+| VARIABLE            | DESCRIPTION                                                                                                                                                                                                                                                                          |
+|---------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| LT_TEST_NAME        | Specify a name for your test on TestMu AI Selenium Grid.                                                                                                                                                                                                                          |
+| LT_BUILD            | Specify a name for your build on TestMu AI Selenium Grid.                                                                                                                                                                                                                         |
+| LT_CAPABILITY_PATH  | Specify the path of a JSON file that declares additional Desired Capabilities. <br/> `     "Chrome@63.0:Windows 8.1" : {`             <br/>`"network" : true,`         <br/>`"visual" : true,`         <br/>`"timezone" : "UTC+11:00"`     <br/>`}`  <br/>Here, ``Chrome@63.0:Windows 8.1`` represents browser alias. | 
+| LT_RESOLUTION       | Perform cross browser testing on a specific screen resolution in the &#36;&lbrace;width&rbrace;x&#36;&lbrace;height&rbrace; format.                                                                                                                                                                                   |
+| LT_LOGFILE          | View detailed logs of your automation script execution. Provide a specific path to this file. If you don't provide a path, the logs save in your present working directory by the filename: tunnel.log.                                                            |
+| LT_VERBOSE          | Set flag for verbose to either true or false.                                                                                                                                                                                                                                         |
+| LT_PROXY_HOST       | A required variable if you perform cross browser testing through proxy. Declare the hostname/IP of proxy.                                                                                                                                |
+| LT_PROXY_PORT       | Port of the proxy. Default value for proxy port is 3128.                                                                                                                                                                                                                       |
+| LT_PROXY_USER       | Username for connecting to proxy. Required for using 'proxypass'.                                                                                                                                                                                                             |
+| LT_PROXY_PASS       | Password for the USERNAME option.                                                                                                                                                                                                                                                    |
+| LT_TUNNEL_NAME      | Human readable tunnel identifier (Name of the tunnel).                                                                                                                                                                                                                               |
+| LT_DIR              | Path of the local folder you want to test.                                                                                                                                                                                                                                           |
+| LT_SELENIUM_VERSION | Browser specific capability.                                                                                                                                                                                                                                                          |
+| LT_CONSOLE          | Set flag as true or false.                                                                                                                                                                                                                                                           |
+| LT_NETWORK          | Set flag as true or false.                                                                                                                                                                                                                                                           |
+| LT_VIDEO            | Set flag as true or false.                                                                                                                                                                                                                                                           |
+| LT_SCREENSHOT       | Set flag as true or false.                                                                                                                                                                                                                                                           |
+| LT_TIMEZONE         | Configure tests to run on a custom time zone.                                                                                                                                                                                                                                        |
+| LT_TUNNEL_NUMBER       |  Number of tunnels to spawn at a time.                                                                                                                                                                                                                                                           |
+| LOAD_BALANCED_MODE       | Load Balanced Mode in TestCafe.                                                                                                                                                                                                                                                         |
+
+:::tip
+Generate capabilities for your test requirements with the [Capabilities Generator](https://www.testmuai.com/capabilities-generator/).
+:::
+
+</TabItem>
+
+<TabItem value="nemojs" label="NemoJS">
+
+NemoJS reads its capabilities from `nemo.config.js`.
+
+1. Clone the [sample GitHub project](https://github.com/LambdaTest/Nemo-Lambdatest-sample):
+
+<VerifiedTag value="Verified" />
+
+```bash
+git clone https://github.com/LambdaTest/Nemo-Lambdatest-sample
+cd Nemo-Lambdatest-sample
+```
+
+2. Set your browser and OS in `nemo.config.js`:
+
+<VerifiedTag value="Verified" />
+
+```js title="nemo.config.js"
+"withCapabilities": [{
+  "build": "LT Nemo Sample Tests",
+  "name": "LT Nemo sample test",
+  "platformName": "Windows 10",
+  "browserName": "Chrome",
+  "browserVersion": "latest",
+  "user": "env:LT_USERNAME",
+  "accessKey": "env:LT_ACCESS_KEY"
+}]
+```
+
+3. Install the project dependencies:
+
+<VerifiedTag value="Verified" />
+
+```bash
+npm install
+```
+
+4. Run the test:
+
+<VerifiedTag value="Verified" />
+
+```bash
+npx nemo -P chrome
+```
+
+The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
+
+</TabItem>
+
+<TabItem value="codeceptjs" label="CodeceptJS">
+
+CodeceptJS uses a WebDriver helper in `codecept.conf.js`, with an optional service to sync test names and statuses to the dashboard.
+
+1. Clone the [sample GitHub project](https://github.com/LambdaTest/lambdatest-codeceptjs-sample):
+
+<VerifiedTag value="Verified" />
+
+```bash
+git clone https://github.com/LambdaTest/lambdatest-codeceptjs-sample
+cd lambdatest-codeceptjs-sample
+```
+
+2. Set your browser and OS in `codecept.conf.js`:
+
+<VerifiedTag value="Verified" />
+
+```js title="codecept.conf.js"
+helpers: {
+  WebDriver: {
+    url: 'http://google.com/ncr',
+    browser: 'chrome',
+    host: 'hub.lambdatest.com',
+    port: 80,
+    user: process.env.LT_USERNAME,
+    key: process.env.LT_ACCESS_KEY,
+    desiredCapabilities: {
+      name: '[CodeceptJS] Automation Sample',
+      build: '[CodeceptJS] Automation Sample',
+      platformName: 'Windows 11',
+      browserName: 'Chrome',
+      browserVersion: 'dev'
+    }
+  }
+}
+```
+
+3. Install the project dependencies:
+
+<VerifiedTag value="Verified" />
+
+```bash
+npm install
+```
+
+4. Run the test:
 
 <VerifiedTag value="Verified" />
 

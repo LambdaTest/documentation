@@ -194,7 +194,24 @@ Complete these steps before running your first Python Selenium test.
 2. Verify that **pip** is installed in your system. Install **pip** from [pip documentation](https://pip.pypa.io/en/stable/installation/).
 3. Download the latest **Selenium Client** and its **WebDriver bindings** from the [official website](https://www.selenium.dev/downloads/).
 
-## Step 1: Clone the Sample Project
+1. [Create a TestMu AI account](https://www.testmuai.com/register/) if you don't have one.
+2. Get your **Username** and **Access Key** from the [TestMu AI Dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard).
+3. Install [Python](https://www.python.org/downloads/) and pip.
+4. Install the Selenium client and WebDriver bindings, and (recommended) `virtualenv` to isolate dependencies.
+
+To create and activate a virtual environment on macOS or Linux:
+
+<VerifiedTag value="Verified" />
+
+```bash
+pip install virtualenv
+virtualenv venv
+source venv/bin/activate
+```
+
+On Windows, activate it with `venv\Scripts\activate` instead.
+
+## Set Your Credentials
 ---
 Clone the repository and install dependencies.
 
@@ -313,6 +330,283 @@ cp -r agent-skills/selenium-skill .cursor/skills/
 :::tip
 Install all available framework skills at once by cloning the repository directly into your tool's skills directory (e.g., `.claude/skills/`, `.cursor/skills/`).
 :::
+
+## Run a Test in Your Framework
+---
+
+Each tab lists the framework-specific pieces. Clone the matching repo (it contains the full, ready-to-run project), then run.
+
+<Tabs className="docs__val" groupId="python-framework" queryString="framework">
+
+<TabItem value="unittest" label="unittest" default>
+
+The standard-library `unittest` framework connects a remote WebDriver to the grid, with capabilities inline in the test.
+
+1. Clone the [sample GitHub project](https://github.com/LambdaTest/Python-UnitTest-Selenium):
+
+<VerifiedTag value="Verified" />
+
+```bash
+git clone https://github.com/LambdaTest/Python-UnitTest-Selenium
+cd Python-UnitTest-Selenium
+```
+
+2. Set your browser and OS in the capabilities dictionary:
+
+<VerifiedTag value="Verified" />
+
+```python
+capabilities = {
+    "build": "UnitTest-Selenium-Sample",
+    "name": "UnitTest-Selenium-Test",
+    "platformName": "Windows 11",
+    "browserName": "Chrome",
+    "browserVersion": "latest",
+}
+```
+
+3. Install the dependencies:
+
+<VerifiedTag value="Verified" />
+
+```bash
+pip install -r requirements.txt
+```
+
+4. Run the test:
+
+<VerifiedTag value="Verified" />
+
+```bash
+python lambdatest_test.py
+```
+
+The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
+
+</TabItem>
+
+<TabItem value="pytest" label="pytest">
+
+pytest keeps capabilities in `conftest.py` and runs in parallel via `pytest-xdist`.
+
+1. Clone the [sample GitHub project](https://github.com/LambdaTest/pytest-selenium-sample):
+
+<VerifiedTag value="Verified" />
+
+```bash
+git clone https://github.com/LambdaTest/pytest-selenium-sample
+cd pytest-selenium-sample
+```
+
+2. Set your browser and OS in `conftest.py`:
+
+<VerifiedTag value="Verified" />
+
+```python title="conftest.py"
+capabilities = {
+    "build": "Sample PY Build",
+    "platformName": "Windows 11",
+    "browserName": "Chrome",
+    "browserVersion": "latest",
+}
+```
+
+3. Install the dependencies:
+
+<VerifiedTag value="Verified" />
+
+```bash
+pip install -r requirements.txt
+```
+
+4. Run the test. The actual pytest run is the `pytest` command (which also enables parallel execution); the plain `python` invocation runs the script directly:
+
+<VerifiedTag value="Verified" />
+
+```bash
+python tests/lt_sample_todo.py
+pytest -s -n=2 tests/lt_sample_todo.py
+```
+
+The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
+
+</TabItem>
+
+<TabItem value="robot" label="Robot">
+
+Robot Framework uses Selenium2Library, with capabilities and the grid URL declared as variables in a `.robot` file, run through a Makefile.
+
+1. Clone the [sample GitHub project](https://github.com/LambdaTest/Robot-Selenium-Sample):
+
+<VerifiedTag value="Verified" />
+
+```bash
+git clone https://github.com/LambdaTest/Robot-Selenium-Sample
+cd Robot-Selenium-Sample
+```
+
+2. Review the browser and grid settings in `Resources/Common.robot`. The browser comes from the `ROBOT_BROWSER` and `browserName` values that the Makefile passes in, and the credentials are read from your `LT_USERNAME` and `LT_ACCESS_KEY` environment variables:
+
+<VerifiedTag value="Verified" />
+
+```robotframework title="Resources/Common.robot"
+*** Settings ***
+Library  SeleniumLibrary
+Library  LambdaTestStatus.py
+
+*** Variables ***
+${BROWSER}          ${ROBOT_BROWSER}
+&{lt_options}       browserName=${browserName}      name=RobotFramework Lambda Test    buildName=Robot Build
+${REMOTE_URL}       http://%{LT_USERNAME}:%{LT_ACCESS_KEY}@hub.lambdatest.com/wd/hub
+${TIMEOUT}          30000
+${IMPLICIT_WAIT}    9seconds
+
+*** Keywords ***
+Open test browser
+    [Timeout]   ${TIMEOUT}
+    ${options}=    Evaluate    sys.modules['selenium.webdriver'].${BROWSER}Options()    sys, selenium.webdriver
+    Call Method    ${options}    set_capability    LT:Options    ${lt_options}
+    Open Browser    https://www.testmuai.com/selenium-playground/todo-app/
+    ...    browser=${BROWSER}
+    ...    remote_url=${REMOTE_URL}
+    ...    options=${options}
+    Set Selenium Implicit Wait    ${IMPLICIT_WAIT}
+
+Close test browser
+    Run keyword if    '${REMOTE_URL}' != ''
+    ...    Report Lambdatest Status
+    ...    ${TEST_NAME}
+    ...    ${TEST_STATUS}
+    Close All Browsers
+```
+
+3. Install the dependencies:
+
+<VerifiedTag value="Verified" />
+
+```bash
+pip install -r requirements.txt
+```
+
+4. Run a single test, or all in parallel:
+
+<VerifiedTag value="Verified" />
+
+```bash
+make test_Windows_10_chrome_latest
+make run_all_in_parallel
+```
+
+The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
+
+</TabItem>
+
+<TabItem value="behave" label="Behave">
+
+Behave is BDD for Python: feature files plus step definitions, with capabilities in a JSON config.
+
+1. Clone the [sample GitHub project](https://github.com/LambdaTest/Python-Behave-Selenium):
+
+<VerifiedTag value="Verified" />
+
+```bash
+git clone https://github.com/LambdaTest/Python-Behave-Selenium
+cd Python-Behave-Selenium
+```
+
+2. Set your browser and OS in `config/config.json`:
+
+<VerifiedTag value="Verified" />
+
+```json title="config/config.json"
+[
+  {
+    "platformName": "Windows 10",
+    "browserName": "chrome",
+    "browserVersion": "latest",
+    "build": "Behave Selenium Sample",
+    "name": "Behave Sample Test"
+  }
+]
+```
+
+3. Install the dependencies:
+
+<VerifiedTag value="Verified" />
+
+```bash
+pip install -r requirements.txt
+```
+
+4. Run the test:
+
+<VerifiedTag value="Verified" />
+
+```bash
+behave features/test.feature
+```
+
+The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
+
+</TabItem>
+
+<TabItem value="lettuce" label="Lettuce">
+
+:::warning Deprecated
+Lettuce is unmaintained (since 2016, Python 2 only). For new projects, use the actively maintained **Behave** or **pytest** frameworks instead (see the Behave and pytest tabs).
+:::
+
+Lettuce is a BDD framework for Python: feature files plus step definitions, with capabilities in a JSON config.
+
+1. Clone the [sample GitHub project](https://github.com/LambdaTest/sample-lettuce):
+
+<VerifiedTag value="Verified" />
+
+```bash
+git clone https://github.com/LambdaTest/sample-lettuce
+cd sample-lettuce
+```
+
+2. Set your browser and OS in `config.json`.
+
+3. Install the dependencies:
+
+<VerifiedTag value="Verified" />
+
+```bash
+pip install -r requirements.txt
+```
+
+4. Run the test:
+
+<VerifiedTag value="Verified" />
+
+```bash
+python tests/lt_sample_todo.py
+```
+
+The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
+
+</TabItem>
+
+</Tabs>
+
+## View Your Results
+---
+
+Your test results, including video, network logs, and command-by-command execution, appear on the [TestMu AI Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build).
+
+**Next steps:** If this is your first run, walk through [running your first Selenium test](/support/docs/testmu-running-your-first-selenium-test/) end to end. From there, explore the full set of [Selenium automation capabilities](/support/docs/selenium-automation-capabilities/) you can pass to the grid, learn how to [debug your Selenium tests](/support/docs/debugging-options/), and organize and [filter your Selenium tests](/support/docs/filter-your-selenium-tests/) as your suite grows.
+
+## Next Steps
+---
+
+Continue with these related guides:
+
+- [Running Your First Selenium Test](/support/docs/testmu-running-your-first-selenium-test/)
+- [Selenium Automation Capabilities](/support/docs/selenium-automation-capabilities/)
+- [Debugging Options](/support/docs/debugging-options/)
+- [Filter Your Selenium Tests](/support/docs/filter-your-selenium-tests/)
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

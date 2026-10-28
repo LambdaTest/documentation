@@ -1804,7 +1804,6 @@ module.exports = {
             ],
           },
           "wordpress-plugin",
-          "npm-plugin-for-testcafe-integration-with-lambdatest",
           "fastlane-plugin",
           "azure-pipeline",
           "teamcity-plugin",
