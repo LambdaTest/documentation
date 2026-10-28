@@ -230,7 +230,7 @@ export default function Home() {
             <Card href="/support/docs/hyperexecute-performance-testing/" title="Getting Started" desc="Start load and performance testing" />
             <Card href="/support/docs/hyperexecute-run-jmeter-tests/" title="JMeter Testing" desc="Run JMeter tests at scale" />
             <Card href="/support/docs/hyperexecute-gattling-testing/" title="Gatling Testing" desc="Run Gatling load tests on cloud" />
-            <Card href="/support/docs/hyperexecute-k6-testing/" title="k6 Testing" desc="Run k6 load tests at scale" />
+            <Card href="/support/docs/hyperexecute-k6-ui-testing/" title="k6 Testing" desc="Run k6 load tests at scale" />
           </Section>
 
           <Section icon={{ light: 'analytics-light-icon.svg', dark: 'analytics-dark-icon.svg' }} title="Insights" blurb="Track quality trends with dashboards, analytics, and AI-powered insights.">
