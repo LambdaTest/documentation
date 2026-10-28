@@ -325,7 +325,6 @@ In addition to CLI-based execution, HyperExecute lets you upload a k6 script, se
 - Your organization must have access to HyperExecute performance testing. If not, please [contact sales](https://www.testmuai.com/contact-us/).
 - Your script must export a `default` function. HyperExecute runs that function for every virtual user.
 - The **Total Users**, **Duration** and **Ramp-up Time** you set in the dashboard replace the load profile in your script (`vus`, `duration`, `stages` and `scenarios` in `options`). Everything else in the script, such as thresholds, checks and tags, still applies.
-- Scripts that use the `k6/browser` module are not supported in the UI flow yet. Run browser scripts with the [CLI flow](#step-1-configure-your-test-suite) above.
 
 ### Step 1: Setup your k6 Project
 
