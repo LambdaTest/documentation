@@ -87,7 +87,7 @@ Before committing:
 
 Credentials, actual environment values, history, logs, and installed versions are stored under `~/.testmuai/rook/` by default. Set `ROOK_HOME` to isolate that state for CI or another account.
 
-Each session keeps a transcript at `~/.testmuai/rook/sessions///transcript.jsonl`, readable only by your user. It records every prompt Rook sent, every tool result, and every answer, so treat it like a log that can contain target data and environment values.
+Each session keeps a transcript at `~/.testmuai/rook/sessions///transcript.jsonl`, readable only by your user. It records every prompt Rook sent, every tool call and result, and every answer. Since 0.1.12 it also records each message sent to the agent under test with its reply, and how each job, sync, run phase, and scenario ended; lines use format version 2, and strings of 4 KiB or more are stored in a `blobs/` folder beside the transcript. Rook masks the credentials it holds or recognizes before writing each line, but masking is best effort and transcripts from earlier versions are not masked, so treat it like a log that can contain target data and environment values.
 
 ## Synchronization
 

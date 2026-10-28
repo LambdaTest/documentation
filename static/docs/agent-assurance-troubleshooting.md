@@ -2,7 +2,7 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-Start with read-only diagnostics before retrying a run. These CLI checks were reviewed against **public Rook 0.1.11** on October 13, 2026. In PowerShell, use `rook.cmd` if the npm PowerShell shim is blocked.
+Start with read-only diagnostics before retrying a run. These CLI checks were reviewed against **public Rook 0.1.13** on October 23, 2026. In PowerShell, use `rook.cmd` if the npm PowerShell shim is blocked.
 
 ```bash
 rook --version
@@ -10,7 +10,7 @@ rook doctor
 rook auth status
 ```
 
-In the TUI, run `/doctor`. It reports the Rook and Node.js versions, workspace, environment, controller/API reachability, authentication, active project, and interaction mode. It does **not** invoke your agent or prove that its profile works. Use `rook status --json` to inspect the selected agent's local state separately.
+In the TUI, run `/doctor`. It reports the Rook and Node.js versions, OS, workspace, environment, controller/API reachability, authentication, active project, and interaction mode. Since 0.1.12 it also shows the terminal, shell, privilege, color level, and size, and `rook doctor --json` prints the same report as one JSON object. It does **not** invoke your agent or prove that its profile works. Use `rook status --json` to inspect the selected agent's local state separately.
 
 If you use a coding assistant with the [Rook skill](/support/docs/rook-coding-agents/), send this prompt instead of manually running the diagnostic sequence:
 
@@ -61,7 +61,7 @@ Homebrew and shell installations carry a matching Node.js runtime. The npm insta
 node --version
 ```
 
-Upgrade the Node.js version used by npm and rerun `npm install -g @testmuai/rook`, or use Homebrew or the shell installer.
+Upgrade the Node.js version used by npm and rerun `npm install -g @testmuai/rook@latest`, or use Homebrew or the shell installer.
 
 ### Download resets after the release lookup
 
@@ -104,6 +104,17 @@ An unrecognized ROOK_ENV value stops the command with an error instead of fallin
 ```
 
 The current CLI has no /budget command. Read the account balance and operation cost output. Completed evidence remains on disk when work stops; narrow the suite before retrying.
+
+### A plan is required or must be upgraded {#plan-refusals}
+
+Since 0.1.13, Rook checks your organization's Agent Assurance plan before any model call or credit spend.
+
+| Code | Meaning | Next step |
+|---|---|---|
+| plan_required | The organization has no active Agent Assurance plan: none, an ended free trial, or an expired subscription. This applies whatever the credit balance. Nothing ran and nothing was charged. | Open the link in the message, or ask your organization admin. Since 0.1.14, an organization that has never had a plan is sent to the onboarding page to start its free trial; an ended trial or expired subscription is sent to the billing plans page. |
+| upgrade_plan | The plan has no Rook cloud, such as Starter. Syncing to Rook cloud, cloud project status, and recording runs on Rook cloud are refused. | Keep working locally: a normal run continues on this machine as --test does, and rook ui --local shows the results. To share results, open the upgrade link in the message. |
+
+The CLI shows that page as the next step and the web app opens it; billing links open the plans page on Agent Assurance. After a trial or plan ends, the organization can still open the projects, agents, scenarios, and runs it made. Rook uses only https links on LambdaTest or TestMu AI hosts. Do not retry the refused command until the plan changes.
 
 ## Discovery Problems
 
@@ -221,6 +232,10 @@ A run selects at most two scenarios per attack pattern unless you name them with
 
 rook sync refuses the whole upload when a scenario names a feature its agent does not have, and lists each scenario with its agent and the missing feature. Delete or fix the listed scenario file, or re-run generate, then sync again. Nothing was uploaded.
 
+### Sync reports agents not returned
+
+Since 0.1.12, rook sync exits 1 when Rook's service does not answer for every agent it sent, even if others were recorded. The summary adds N not returned or N malformed and suggests running sync again. Rook warns for each such agent and does not save its local sync state. Run rook sync again before a run that depends on it.
+
 ### The session could not be registered
 
 A command that calls the model controller or opens an upstream job refuses before anything runs when its session could not be registered with the Rook API. Nothing ran and nothing was charged. Check rook doctor, the network, and your sign-in, then retry.
@@ -259,7 +274,7 @@ Rook records file existence, byte size, kind, and supported image dimensions. It
 
 ### Old run changed after scenario edits
 
-Current runs snapshot scenario definitions. If an older pre-alpha run lacks a snapshot, Rook does not fall back to the live store because that would present mutable data as historical evidence.
+Current runs snapshot scenario definitions. If a run from an older release lacks a snapshot, Rook does not fall back to the live store because that would present mutable data as historical evidence.
 
 ### Where is the root-cause analysis? {#rca-troubleshooting}
 
@@ -334,7 +349,7 @@ rook doctor --session <session-id>
 rook export logs --out ./rook-diagnostics.zip --session <session-id>
 ```
 
-If you do not have a session ID, start with rook export logs --out ./rook-diagnostics.zip. Export creates a local bundle; it does not upload it. Avoid --all-sessions unless support needs the broader scope. A bundled session includes its full transcript: every prompt, tool result, and answer. Tool output can quote environment values. Review the archive for credentials, prompts, target data, paths, and transcripts before sharing. See [diagnostic export options](/support/docs/agent-assurance-command-reference/#export).
+If you do not have a session ID, start with rook export logs --out ./rook-diagnostics.zip. Export creates a local bundle; it does not upload it. Avoid --all-sessions unless support needs the broader scope. A bundled session includes its full transcript and its blobs/ folder: every prompt, tool call, result, and answer. Since 0.1.12, Rook masks the credentials it holds or recognizes before writing each transcript line, but masking is best effort and transcripts from earlier versions are not masked. Review the archive for credentials, prompts, target data, paths, and transcripts before sharing. See [diagnostic export options](/support/docs/agent-assurance-command-reference/#export).
 
 ## Running Rook in tmux
 
@@ -403,4 +418,4 @@ No. It proves only what the selected scenarios and available evidence establishe
 
 ### Where is my data stored?
 
-Project evidence is under `/.testmuai/rook/`. Global credentials, settings, variables, and sessions (including each session's `transcript.jsonl`) are under `~/.testmuai/rook/`, or the directory selected by `ROOK_HOME`.
+Project evidence is under `/.testmuai/rook/`. Global credentials, settings, variables, and sessions (including each session's `transcript.jsonl` and `blobs/` folder) are under `~/.testmuai/rook/`, or the directory selected by `ROOK_HOME`.

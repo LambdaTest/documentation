@@ -3,7 +3,7 @@ id: accelq-integration
 title: ACCELQ Integration
 hide_title: true
 sidebar_label: ACCELQ
-description: Automate web and mobile apps across 5000+ real devices and 10,000+ browser/device combinations with TestMu AI and ACCELQ for end-to-end testing.
+description: Automate web and mobile apps across 50,000+ real devices and 10,000+ browser/device combinations with TestMu AI and ACCELQ for end-to-end testing.
 keywords:
   - testmu ai integration with accelq
   - testmu ai and accelq integration 
@@ -53,7 +53,7 @@ import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
       "@id": "https://www.testmuai.com/support/docs/accelq-integration/"
     },
     "headline": "ACCELQ Integration",
-    "description": "Automate web and mobile apps across 5000+ real devices and 10,000+ browser/device combinations with TestMu AI and ACCELQ for end-to-end testing.",
+    "description": "Automate web and mobile apps across 50,000+ real devices and 10,000+ browser/device combinations with TestMu AI and ACCELQ for end-to-end testing.",
     "url": "https://www.testmuai.com/support/docs/accelq-integration/",
     "image": {
       "@type": "ImageObject",
@@ -103,7 +103,9 @@ import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 
 ACCELQ is an AI Native Codeless automation testing and management platform. It enables you automate web, mobile, API, database, and packaged applications.
 
-By integrating <BrandName /> with ACCELQ, you can perform web and mobile app automation on an online device farm of 5000+ real devices and 10,000+ browser/device combinations, and accelerate your end-to-end digital testing efforts.
+By integrating <BrandName /> with ACCELQ, you can perform web and mobile app automation on an online device farm of 50,000+ real devices and 10,000+ browser/device combinations, and accelerate your end-to-end digital testing efforts.
+
+Comparing ACCELQ and <BrandName />? [See the comparison](https://www.testmuai.com/accelq-alternative/).
 
 If you plan to move off ACCELQ, the [ACCELQ to KaneAI migration guide](/support/docs/accelq-to-kaneai-migration-guide/) shows how to keep these tests running while you re-create them in KaneAI.
 

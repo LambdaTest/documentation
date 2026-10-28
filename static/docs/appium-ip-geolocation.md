@@ -2,9 +2,11 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+Setting IP Geolocation on TestMu AI lets you test websites and mobile apps as if traffic originates from countries and regions worldwide. Pass the geoLocation capability with a two-letter code to simulate a device's location in automated and manual tests.
+
 TestMu AI's IP Geolocation feature empowers users to test their websites and mobile applications from various geographical locations worldwide. This feature enables users to simulate traffic originating from different countries and regions, allowing for comprehensive testing of platform functionalities across diverse global markets.
 
-By the end of this document, you'll learn how to use this feature in both manual and automation tests. Additionally, this document will provide a list of all supported IP geolocations on TestMu AI.
+You'll learn to use this feature in both manual and automation tests, plus the full list of supported IP geolocations on TestMu AI.
 
 IP geolocation is provided by third-party geo vendors, and the availability of geolocation country code/IP may vary based on IP database updates, coverage, and other vendor-specific factors. For geolocation IP verification, you can use a trusted third-party service such as [MaxMind](https://www.maxmind.com/en/locate-my-ip-address).
 
@@ -207,3 +209,5 @@ Below is the list of supported countries along with their respective country cod
 | Washington (Herndon), Virginia    | US/WAV   |
 | Wilmington, DE                    | U4       |
 | Wilmington, Delaware (US)         | US/WILM  |
+
+IP geolocation is provided by third-party geo vendors, and the availability of geolocation country code/IP may vary based on IP database updates, coverage, and other vendor-specific factors. For geolocation IP verification, you can use a trusted third-party service such as [MaxMind](https://www.maxmind.com/en/locate-my-ip-address).

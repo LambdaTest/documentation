@@ -161,7 +161,7 @@ Authentication revocation, controller failure, and exhausted budget also halt wo
 
 Use scenarios that exercise both the user journey and externally visible effects.
 
-The lists below include file-input journeys that teams commonly need. Native attachment delivery is not implemented in the current pre-alpha release, so run file-input cases in one of these ways:
+The lists below include file-input journeys that teams commonly need. Native attachment delivery is not implemented in the current release, so run file-input cases in one of these ways:
 
 - Use a reviewed adapter that incorporates the file into the agent invocation.
 - Place a reachable test-file URL in the goal.

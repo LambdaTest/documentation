@@ -2,7 +2,7 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-Camera Image Injection feature allows you to test **image capturing, QR code scanning**, and **barcode scanning** functionalities in your app across **5000+ real devices** on the TestMu AI Real Device Cloud platform.
+Camera image injection on TestMu AI feeds custom images into an app's camera during automated tests, letting you validate QR scanning, barcode reading, and document capture across real Android and iOS devices without physical hardware or any manual scanning setup.
 
 This tool is ideal for testing features such as:
 
@@ -16,7 +16,7 @@ TestMu AI utilizes **Sensor Instrumentation** to integrate with various mobile s
 
 ### Key Features
 
-- Compatible with 3000+ real mobile devices
+- Compatible with 50,000+ real mobile devices
 - Supports image capturing, QR code scanning, and barcode scanning
 - Seamless integration with your existing app testing workflow
 

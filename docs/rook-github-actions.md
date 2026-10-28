@@ -79,7 +79,7 @@ Configure these values:
 
 The `staging` profile names **your test target**, not the Rook service. `ROOK_ENV=prod` selects the public Rook service. The script uses the LT environment credential pair and isolated `ROOK_HOME`; it does not copy a developer's browser session.
 
-Execution calls the real target and can spend Rook credits. Review the suite, tool grants, fixture isolation, and spending before enabling a job. Use a fresh checkout/output directory and avoid concurrent jobs against shared mutable fixtures.
+Execution calls the real target and can spend Rook credits. Review the suite, tool grants, fixture isolation, and spending before enabling a job. The script syncs before it runs, so your organization needs an Agent Assurance plan that includes Rook cloud. Since 0.1.13, on a plan without it, such as Starter, <code>rook sync</code> is refused with <code>upgrade_plan</code> and the job fails before running anything; the script does not fall back to a local <code>--test</code> run. See [plan refusals](/support/docs/agent-assurance-troubleshooting/#plan-refusals). Use a fresh checkout/output directory and avoid concurrent jobs against shared mutable fixtures.
 
 ## What Makes the Job Pass
 
@@ -135,7 +135,7 @@ jobs:
           set -euo pipefail
           curl -fsSL https://raw.githubusercontent.com/LambdaTest/rook/main/install.sh \
             -o "$RUNNER_TEMP/install-rook.sh"
-          bash "$RUNNER_TEMP/install-rook.sh" --version 0.1.11 --dir "$RUNNER_TEMP/rook-bin"
+          bash "$RUNNER_TEMP/install-rook.sh" --version 0.1.14 --dir "$RUNNER_TEMP/rook-bin"
           echo "$RUNNER_TEMP/rook-bin" >> "$GITHUB_PATH"
           command -v jq
       - name: Run the reviewed suite
@@ -157,7 +157,7 @@ jobs:
 
 Change the `main` branch condition if your reviewed default branch has another name. The manual trigger avoids exposing credentials to untrusted pull-request code. Do not replace it with `pull_request_target` plus a checkout of an untrusted PR. Serialize jobs that share test fixtures.
 
-The workflow pins Rook CLI to the public 0.1.11 release and installs it only in the job's temporary directory. Action major versions are shown for readability; review and pin action commit SHAs for your organization's production policy. The hosted Ubuntu runner provides jq. A self-hosted runner needs the same tools and the minimum runtime requirements of the selected actions.
+The workflow pins Rook CLI to the public 0.1.14 release and installs it only in the job's temporary directory. Action major versions are shown for readability; review and pin action commit SHAs for your organization's production policy. The hosted Ubuntu runner provides jq. A self-hosted runner needs the same tools and the minimum runtime requirements of the selected actions.
 
 ## Run and Check the Workflow
 

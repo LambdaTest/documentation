@@ -1,6 +1,7 @@
 ---
 id: camera-image-injection
 title: Camera Image Injection
+hide_title: true
 sidebar_label: Camera Image Injection
 description: Simulate camera input to test camera-based features like QR scanning and document capture without needing physical devices.
 keywords:
@@ -18,6 +19,7 @@ url: https://www.testmuai.com/support/docs/camera-image-injection/
 site_name: TestMu AI
 slug: camera-image-injection/
 canonical: https://www.testmuai.com/support/docs/camera-image-injection/
+toc_max_heading_level: 2
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -25,9 +27,9 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import RealDeviceTag from '../src/component/realDevice';
-import VirtualDeviceTag from '../src/component/virtualDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import RealDeviceTag from '@site/src/component/realDevice';
+import VirtualDeviceTag from '@site/src/component/virtualDevice';
 import VerifiedTag from '@site/src/component/verifiedTag';
 
 
@@ -162,8 +164,12 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     }
   ]) }}
 />
+
 <RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
-Camera Image Injection feature allows you to test **image capturing, QR code scanning**, and **barcode scanning** functionalities in your app across **5000+ real devices** on the <BrandName /> Real Device Cloud platform.
+
+# Camera Image Injection
+
+Camera image injection on TestMu AI feeds custom images into an app's camera during automated tests, letting you validate QR scanning, barcode reading, and document capture across real Android and iOS devices without physical hardware or any manual scanning setup.
 
 This tool is ideal for testing features such as:
 
@@ -177,7 +183,7 @@ This tool is ideal for testing features such as:
 
 ### Key Features
 
-- Compatible with 3000+ real mobile devices
+- Compatible with 50,000+ real mobile devices
 - Supports image capturing, QR code scanning, and barcode scanning
 - Seamless integration with your existing app testing workflow
 
@@ -257,7 +263,6 @@ You can use the appium capability to turn the image injection on in your applica
 <Tabs className="docs__val">
 
 <TabItem value="python" label="Python" default>
-
   <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
@@ -272,7 +277,6 @@ You can use the appium capability to turn the image injection on in your applica
 
 
 <TabItem value="JavaScript" label="JavaScript" default>
-
   <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
@@ -291,7 +295,6 @@ Refer to the code snippets given below to upload the image with the action `Imag
 <Tabs className="docs__val">
 
 <TabItem value="python" label="Python" default>
-
   <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
@@ -303,7 +306,6 @@ Refer to the code snippets given below to upload the image with the action `Imag
 
 
 <TabItem value="JavaScript" label="JavaScript" default>
-
   <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
@@ -341,7 +343,7 @@ You need to first add a logic to inject the uploaded image in the script. Therea
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-      Camera Image Injection
+        Camera Image Injection
       </span>
     </li>
   </ul>

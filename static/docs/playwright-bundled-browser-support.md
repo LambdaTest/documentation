@@ -2,7 +2,7 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-Each Playwright release ships with its own bundled builds of Chromium, Firefox, and WebKit. When you set the [`useSpecificBundleVersion: true`](/support/docs/capabilities-for-playwright/) capability, TestMu AI selects the Chromium, Firefox, or WebKit version that matches your local machine's Playwright version. This keeps the browsers on the grid aligned with the browsers you test against locally, so your results stay consistent.
+Each Playwright release ships with its own bundled builds of Chromium, Firefox, and WebKit. When you set the [`useSpecificBundleVersion: true`](/support/docs/playwright-test-execution-setup/) capability, TestMu AI selects the Chromium, Firefox, or WebKit version that matches your local machine's Playwright version. This keeps the browsers on the grid aligned with the browsers you test against locally, so your results stay consistent.
 
 ## Enable Bundled Browser Support
 

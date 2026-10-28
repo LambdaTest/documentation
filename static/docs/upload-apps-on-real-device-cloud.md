@@ -40,3 +40,5 @@ Hover over the app, click on the settings icon for the app settings to open.
 - Use the **App Version Code** to differentiate between different builds.
 
 You can edit the information at any time and save the changes. If an app is no longer needed, you have the option to delete it permanently from your account.
+
+Only the app owner (the user who uploaded the app to TestMu AI) can change an app’s visibility. The app name can be changed by either the owner or an admin of the organization.

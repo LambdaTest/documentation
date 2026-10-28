@@ -41,7 +41,7 @@ With Node.js 22+ and npm:
 npx @testmuai/rook-skill@latest
 ```
 
-This installs for Claude Code, Codex, and Gemini CLI under your home directory. To avoid installing all three, follow the selected client's page and use its `--agent` flag. `@latest` installs the current skill package. Its version is independent of the CLI's; on October 13, 2026 both are at 0.1.11.
+This installs for Claude Code, Codex, and Gemini CLI under your home directory. To avoid installing all three, follow the selected client's page and use its `--agent` flag. `@latest` installs the current skill package. Its version is independent of the CLI's and can trail it. Compare `rook --version` with the [CLI releases](https://github.com/LambdaTest/rook/releases) and the skill's [npm page](https://www.npmjs.com/package/@testmuai/rook-skill).
 
 On Windows, complete [Rook's native setup](/support/docs/rook-installation/#windows) first and use `npx.cmd` for the installer in PowerShell. Each coding client has its own platform requirements. The manual-copy recipes and CI examples in these docs use Bash; run them in a supported Bash environment such as WSL, keeping the client and skill in that same environment.
 

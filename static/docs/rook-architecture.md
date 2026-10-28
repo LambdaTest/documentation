@@ -159,8 +159,8 @@ Rook uses different outbound paths for model work and persistence:
 - **Run records:** completed run results are written locally first and recorded through the Rook API as the run progresses or during later reconciliation.
 - **Profiles and hook scripts:** `rook sync` uploads profiles and their hook scripts as written. Values stored with `rook env set`, the local credential store, and controller model keys are not part of the sync, so keep literal secrets out of profiles and scripts.
 - **Profile authoring:** `rook profile add` and `rook profile fix` show the model what you paste and what the hook prints. A token in either goes with it.
-- **Telemetry:** operational events (no prompts, no code, no command arguments) are sent by default. `ROOK_TELEMETRY=off` keeps them on the machine; see [Telemetry](/support/docs/rook-environment-and-secrets/#telemetry).
-- **Session transcripts:** each session writes `transcript.jsonl` under `~/.testmuai/rook/sessions/`. It stays on the machine unless you bundle it with `rook export logs --session` and share the bundle.
+- **Telemetry:** operational events (no prompts, no code, no command arguments) are sent by default. Since 0.1.12, session registration also sends a small terminal report (terminal name, size, color level, and privilege; no raw environment values). `ROOK_TELEMETRY=off` keeps both on the machine; see [Telemetry](/support/docs/rook-environment-and-secrets/#telemetry).
+- **Session transcripts:** each session writes `transcript.jsonl` under `~/.testmuai/rook/sessions/`, with strings of 4 KiB or more in a `blobs/` folder beside it. Since 0.1.12, Rook masks the credentials it holds or recognizes before writing each line, best effort. It stays on the machine unless you bundle it with `rook export logs --session` and share the bundle.
 - **Local results UI:** `rook ui --local` serves the on-disk evidence without requiring an account or network connection.
 
 Review source material and result evidence for sensitive target data before model-backed operations, synchronization, or artifact upload in CI.

@@ -4,7 +4,7 @@ toc_max_heading_level: 2
 title: Run Agent Assurance in CI/CD
 hide_title: false
 sidebar_label: CI/CD and Automation
-description: Run Rook 0.1.11 in CI with environment credentials, pinned public installation, explicit permissions, completion checks, and preserved evidence.
+description: Run Rook 0.1.14 in CI with environment credentials, pinned public installation, explicit permissions, completion checks, and preserved evidence.
 keywords:
   - rook ci cd
   - ai agent testing github actions
@@ -42,7 +42,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       "@id": "https://www.testmuai.com/support/docs/agent-assurance-ci-cd/"
     },
     "headline": "Run Agent Assurance in CI/CD",
-    "description": "Run Rook 0.1.11 in CI with environment credentials, pinned public installation, explicit permissions, completion checks, and preserved evidence.",
+    "description": "Run Rook 0.1.14 in CI with environment credentials, pinned public installation, explicit permissions, completion checks, and preserved evidence.",
     "url": "https://www.testmuai.com/support/docs/agent-assurance-ci-cd/",
     "image": {
       "@type": "ImageObject",
@@ -84,7 +84,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-10-13"
+    "dateModified": "2026-10-23"
   }) }}
 />
 
@@ -92,7 +92,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
 
 Use CI only after the same agent, profile, and scenarios work locally. Commit reviewed definitions and hook scripts; keep model-driven discovery and generation separate from the release gate.
 
-This recipe targets **Rook 0.1.11**. It runs an explicit suite, preserves evidence, and checks completion and verdict counts instead of interpreting a successful CLI process as a successful agent test.
+This recipe targets **Rook 0.1.14**. It runs an explicit suite, preserves evidence, and checks completion and verdict counts instead of interpreting a successful CLI process as a successful agent test.
 
 ## Set Up CI/CD Through Prompts {#prompt-led-setup}
 
@@ -180,6 +180,7 @@ The [public skill's general CI recipe](https://github.com/LambdaTest/rook/blob/m
 4. Commit the project definition, scenarios, profiles, and scripts without secrets.
 5. Provide isolated fixtures and a reachable staging target on the runner.
 6. Sync the reviewed tree before a normal timeline run.
+7. Confirm that your organization's Agent Assurance plan includes Rook cloud. Since 0.1.13, sync and recording runs on Rook cloud are refused with <code>upgrade_plan</code> on a plan without it, such as Starter; see [plan refusals](/support/docs/agent-assurance-troubleshooting/#plan-refusals).
 
 Do not run untrusted pull-request hook scripts with repository secrets. Use a reviewed branch and a protected CI environment. Restrict access to self-hosted runners.
 
@@ -187,18 +188,18 @@ Do not run untrusted pull-request hook scripts with repository secrets. Use a re
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/LambdaTest/rook/main/install.sh \
-  | bash -s -- --version 0.1.11 --dir "$RUNNER_TEMP/rook-bin"
+  | bash -s -- --version 0.1.14 --dir "$RUNNER_TEMP/rook-bin"
 export PATH="$RUNNER_TEMP/rook-bin:$PATH"
 rook --version
 ```
 
 <code>RUNNER_TEMP</code> is a GitHub Actions runner variable. On another CI platform, substitute its job-specific temporary directory. The installer uses public releases and verifies their SHA-256 checksums; no source-repository token is required.
 
-See [release notes](https://github.com/LambdaTest/rook/releases/tag/v0.1.11) before changing the pin.
+See [release notes](https://github.com/LambdaTest/rook/releases/tag/v0.1.14) before changing the pin.
 
 ## Authenticate Without a Browser
 
-Provide <code>LT_USERNAME</code> and <code>LT_ACCESS_KEY</code> from your CI secret manager. Rook 0.1.11 accepts this pair for unattended authentication; a copied personal OAuth credential directory is not required.
+Provide <code>LT_USERNAME</code> and <code>LT_ACCESS_KEY</code> from your CI secret manager. Rook 0.1.14 accepts this pair for unattended authentication; a copied personal OAuth credential directory is not required.
 
 ```bash
 export ROOK_ENV=prod
@@ -225,7 +226,7 @@ rook sync
 
 Replace the IDs with your reviewed project and local agent. Do not use the retired <code>--entity</code> flag.
 
-A normal run needs a synchronized version. An intentional <code>--test</code> run stays off the shared timeline and should not be substituted silently when sync fails.
+A normal run needs a synchronized version. An intentional <code>--test</code> run stays off the shared timeline and should not be substituted silently when sync fails. <code>rook sync</code> exits 1 when the plan has no Rook cloud (since 0.1.13) and when Rook's service does not answer for every agent it sent (since 0.1.12); either stops the job before the run.
 
 ## Authorize Only the Reviewed Work
 
