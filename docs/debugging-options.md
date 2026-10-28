@@ -141,7 +141,6 @@ Use Selenium 4 and OpenTelemetry to trace requests and event logs for each sessi
 
 Selenium 4 and OpenTelemetry support lets you view the tracing of requests and event logs for each request, which helps you troubleshoot sessions from the Selenium internals perspective. It collects all the events inside the Selenium services to triage the issue with Selenium servers.
 
-For more details, visit [Debugging in Selenium using Telemetry Logs](/support/docs/selenium-telemetry-logs/)
 
 
 ## Enhanced Analytics

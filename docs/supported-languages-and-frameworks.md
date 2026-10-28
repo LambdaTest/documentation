@@ -146,7 +146,7 @@ Although, our [Selenium Grid](https://www.testmuai.com/selenium-automation/) sup
           <a className="lt_primary" href="/support/docs/php-with-selenium-running-php-automation-scripts-on-testmu-selenium-grid/">PHP</a>
         </li>
         <li>
-          <a href="/support/docs/laravel-dusk-with-selenium-running-laravel-dusk-automation-scripts-on-testmu-selenium-grid/">Laravel</a>
+          <a href="/support/docs/php-with-selenium-running-php-automation-scripts-on-testmu-selenium-grid/">Laravel</a>
         </li>
         <li>
           <a href="/support/docs/php-with-selenium-running-php-automation-scripts-on-testmu-selenium-grid/?framework=codeception">Codeception</a>
@@ -229,7 +229,7 @@ Although, our [Selenium Grid](https://www.testmuai.com/selenium-automation/) sup
           <a href="/support/docs/javascript-with-selenium-running-javascript-automation-scripts-on-testmu-selenium-grid/?framework=webdriverio">WebDriverIO 5.6.2</a>
         </li>
         <li>
-          <a href="/support/docs/nightwatch-with-selenium-running-nightwatch-automation-scripts-on-testmu-selenium-grid/">NightwatchJS</a>
+          <a href="/support/docs/javascript-with-selenium-running-javascript-automation-scripts-on-testmu-selenium-grid/">NightwatchJS</a>
         </li>
         <li>
           <a href="/support/docs/javascript-with-selenium-running-javascript-automation-scripts-on-testmu-selenium-grid/?framework=webdriverio">WebDriverIO</a>

@@ -363,7 +363,7 @@ The **Date** filter lets you pick a preset range or a custom start and end date:
 
 <img loading="lazy" src={require('../assets/images/uploads/builds-filter-date.webp').default} alt="Date filter with preset ranges and a custom calendar range picker" width="1602" height="720" className="doc_img"/>
 
-To group and filter by the tags you set in code, see [Group Tests Using Custom Tags](/docs/group-tests-using-custom-tags/) and [Group and Filter Builds Using Build Tags](/support/docs/group-and-filter-your-test-builds-using-build-tags/).
+To group and filter by the tags you set in code, see [Group Tests Using Custom Tags](/docs/group-tests-using-custom-tags/).
 
 ### Sort Builds
 
