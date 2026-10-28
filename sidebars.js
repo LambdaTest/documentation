@@ -2615,7 +2615,6 @@ module.exports = {
         id: "test-manager",
       },
       "create-projects",
-      "manual-to-automated-test-conversion",
       {
         type: "category",
         collapsed: true,
@@ -2639,25 +2638,12 @@ module.exports = {
           "test-manager-variables-parameters-secrets",
           "test-case-versioning",
           "create-modules",
-          "modules-in-manual-testcases",
           "copy-and-move-support-for-test-cases",
           "test-case-deduplication",
           "test-case-archive",
           "update-fields",
           "export-test-cases",
-          {
-            type: "category",
-            collapsed: true,
-            label: "Linking Automated Test Cases",
-            link: {
-              type: "doc",
-              id: "automated-test-cases-with-ai",
-            },
-            items: [
-              "automated-test-cases-linked-using-dashboard",
-              "automated-test-cases-linked-using-capability",
-            ],
-          },
+          { type: "doc", id: "automated-test-cases-with-ai", label: "Linking Automated Test Cases" },
         ],
       },
       {
@@ -2676,24 +2662,11 @@ module.exports = {
           "manual-test-case-creation",
           "test-case-versioning",
           "create-modules",
-          "modules-in-manual-testcases",
           "copy-and-move-support-for-test-cases",
           "test-case-deduplication",
           "update-fields",
           "export-test-cases",
-          {
-            type: "category",
-            collapsed: true,
-            label: "Linking Automated Test Cases",
-            link: {
-              type: "doc",
-              id: "automated-test-cases-with-ai",
-            },
-            items: [
-              "automated-test-cases-linked-using-dashboard",
-              "automated-test-cases-linked-using-capability",
-            ],
-          },
+          { type: "doc", id: "automated-test-cases-with-ai", label: "Linking Automated Test Cases" },
         ],
       },
       {
@@ -2892,7 +2865,6 @@ module.exports = {
         collapsed: true,
         label: "Get Started",
         items: [
-          "getting-started-with-lambdatest-automation",
           "lambdatest-running-your-first-selenium-test",
           "selenium-agent-skills",
           "migrate-selenium-test-suite",
@@ -2915,12 +2887,6 @@ module.exports = {
             items: [
               "java-framework",
               "selenium-java-sdk",
-              "testng-framework",
-              "junit-frameworks",
-              "cucumber-script-testng-selenium",
-              "selenide-frameworks",
-              "gauge-frameworks",
-              "geb-frameworks",
               "running-serenity-test-on-selenium-grid",
             ],
           },
@@ -2931,17 +2897,11 @@ module.exports = {
             items: [
               "running-javascript-test-scripts-on-lambdatest",
               "running-protractor-test-scripts-on-lambdatest",
-              "automation-testing-with-mocha-and-selenium",
-              "run-nightwatch-tests-on-lambdatest-selenium-grid",
               "run-wd-atomation-test-on-lambdatest-selenium-grid",
-              "automation-testing-using-webdriverIO-5-6-2",
               "run-webdriverio-automation-scripts-on-lambdatest",
               "automation-testing-with-selenium-and-jest",
               "run-automation-tests-using-angularjs-with-karma",
-              "cucumberjs-testing-using-lambdatest-selenium-grid",
-              "automation-testing-using-jasmine-with-karma",
               "karma-integration-with-lambdatest",
-              "npm-plugin-for-testcafe-integration-with-lambdatest",
               "selenium-tests-with-nemojs",
               "codeceptjs-with-selenium",
             ],
@@ -2952,10 +2912,8 @@ module.exports = {
             label: "C#",
             items: [
               "csharp-with-selenium",
-              "nunit-with-selenium",
               "selenium-xunit",
               "mstest-with-selenium",
-              "specflow-with-selenium",
             ],
           },
           {
@@ -2964,9 +2922,6 @@ module.exports = {
             label: "Python",
             items: [
               "python-with-selenium-running-python-automation-scripts-on-testmu-selenium-grid",
-              "unit-testing-in-python",
-              "pytest-with-selenium-running-pytest-automation-script-on-testmu-selenium-grid",
-              "robot-with-selenium-running-robot-automation-scripts-on-testmu-selenium-grid",
               "behave-with-selenium-running-behave-automation-scripts-on-testmu-selenium-grid",
               "automation-testing-selenium-with-lettuce",
             ],
@@ -2978,9 +2933,6 @@ module.exports = {
             items: [
               "php-framework",
               "behat-php-framework",
-              "laravel-php-framework",
-              "codeception-php-framework",
-              "phpunit-php-framework",
             ],
           },
           {
@@ -2990,8 +2942,6 @@ module.exports = {
             items: [
               "ruby",
               "ruby-capybara",
-              "ruby-rspec",
-              "ruby-testunit",
             ],
           },
           "executing-tesbo-automation-script-over-online-selenium-grid",
@@ -3011,7 +2961,6 @@ module.exports = {
               "selenium-default-capabilities",
               "selenium-three-capabilities",
               "selenium-four-capabilities",
-              "lambdatest-selenium-advance-capabilities",
             ],
           },
           "perform-selenium-automation-on-headless-browsers",
@@ -3046,7 +2995,6 @@ module.exports = {
         label: "Handle Files and Sensitive Data",
         items: [
           "upload-files-using-lambdatest",
-          "download-files-using-lambdatest-selenium-grid",
           "selenium-mask-your-data",
           "network-data-masking",
           "setup-pre-run-executable",
@@ -3069,13 +3017,10 @@ module.exports = {
         items: [
           "filter-your-selenium-tests",
           "group-tests-using-custom-tags",
-          "group-and-filter-your-test-builds-using-build-tags",
-          "change-individual-test-details",
           "rerun-automation-tests",
           "mute-test-scenarios",
           "sharing-test-results",
           "mark-as-bug-in-automation-testing",
-          "live-interaction",
           "build-split",
         ],
       },
@@ -3085,10 +3030,8 @@ module.exports = {
         label: "Debug Your Test Suites",
         items: [
           "debugging-options",
-          "telemetry-logs",
           "extended-debugging-options",
           "har-log-viewer",
-          "view-lighthouse-performance-metrics",
           "lighthouse-reports-hooks",
         ],
       },
@@ -3344,7 +3287,6 @@ module.exports = {
         items: [
           "playwright-playwrighttest",
           "playwright-cucumberjs",
-          "playwright-cicd",
           "playwright-lighthouse-library",
         ],
       },
