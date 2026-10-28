@@ -158,6 +158,26 @@ Before you start, you need a TestMu AI account with your credentials, plus PHP, 
 3. Install the latest [PHP](https://www.php.net/downloads) and [Composer](https://getcomposer.org/).
 4. Install the Selenium WebDriver for PHP (pulled in by the sample projects via Composer).
 
+On macOS Monterey and later, PHP is not preinstalled. Install [Homebrew](https://brew.sh/), then install PHP:
+
+<VerifiedTag value="Verified" />
+
+```bash
+brew install php
+```
+
+On Windows, download PHP from [windows.php.net](https://windows.php.net/download/) and add it to your system `PATH`. See the [PHP Windows installation guide](https://www.php.net/manual/en/install.windows.php).
+
+To run `composer` from any directory after downloading it, move `composer.phar` onto your `PATH`:
+
+<VerifiedTag value="Verified" />
+
+```bash
+mv composer.phar /usr/local/bin/composer
+```
+
+For Windows, follow the [Composer Windows installation guide](https://getcomposer.org/doc/00-intro.md#installation-windows).
+
 ## Set Your Credentials
 ---
 
@@ -343,6 +363,7 @@ cd codeception-selenium-sample
 <VerifiedTag value="Verified" />
 
 ```yaml title="acceptance.suite.yml"
+class_name: AcceptanceTester
 modules:
   enabled:
     - WebDriver:
@@ -356,6 +377,7 @@ modules:
           browserName: 'Chrome'
           platform: 'Windows 10'
           version: '71.0'
+          tunnel: false # set to true to route traffic through your local machine
 ```
 
 In the `host` value, `{username}` and `{token}` are your `LT_USERNAME` and `LT_ACCESS_KEY` environment variables set in the [Set Your Credentials](#set-your-credentials) section.
