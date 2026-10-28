@@ -187,7 +187,7 @@ import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 
 # Migrating From Sauce Labs To <BrandName />
 * * *
-<BrandName /> and Sauce Labs both offer the cloud-based Selenium Grid. Hence, you can easily migrate your existing Selenium test automation scripts (or suites) from Sauce Labs to <BrandName />.
+<BrandName /> and Sauce Labs both offer the cloud-based Selenium Grid. Hence, you can easily migrate your existing Selenium test automation scripts (or suites) from Sauce Labs to <BrandName />. To compare the two platforms on features and pricing before you move, see our [saucelabs alternative](https://www.testmuai.com/saucelabs-alternative/) page.
 
 
 <b>[Note: This guide covers the migration of tests running on the cloud grid that uses Selenium 4 and Selenium 3]</b>
