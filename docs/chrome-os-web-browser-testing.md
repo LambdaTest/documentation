@@ -1,9 +1,9 @@
 ---
 id: chrome-os-web-browser-testing
-title: ChromeOS Web Browser Testing
+title: ChromeOS (Chromebook) Web Browser Testing
 hide_title: false
 sidebar_label: ChromeOS Web Browser Testing
-description: LChromeOS web browser testing with features like bug marking, IP geolocation, device controls, session recording, network throttling, and more for seamless testing.
+description: Chromebook (ChromeOS) web browser testing with features like bug marking, IP geolocation, device controls, session recording, network throttling, and more for seamless testing.
 keywords:
     - ChromeOS
     - ChromeOS webapp
@@ -38,7 +38,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "ChromeOS Web Browser Testing",
+          "name": "ChromeOS (Chromebook) Web Browser Testing",
           "item": `${BRAND_URL}/support/docs/chrome-os-web-browser-testing/`
         }]
       })
@@ -56,8 +56,8 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       "@type": "WebPage",
       "@id": "https://www.testmuai.com/support/docs/chrome-os-web-browser-testing/"
     },
-    "headline": "ChromeOS Web Browser Testing",
-    "description": "LChromeOS web browser testing with features like bug marking, IP geolocation, device controls, session recording, network throttling, and more for seamless testing.",
+    "headline": "ChromeOS (Chromebook) Web Browser Testing",
+    "description": "Chromebook (ChromeOS) web browser testing with features like bug marking, IP geolocation, device controls, session recording, network throttling, and more for seamless testing.",
     "url": "https://www.testmuai.com/support/docs/chrome-os-web-browser-testing/",
     "image": {
       "@type": "ImageObject",
@@ -101,7 +101,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     "dateModified": "2026-07-14T19:15:31+05:30"
   }) }}
 />
-This document outlines how to leverage features like mark as bug, changing IP geolocation, in-depth device logs and network logs, etc for your Real Time Web Browser testing.
+This document outlines how to leverage features like mark as bug, changing IP geolocation, in-depth device logs and network logs, etc. for your Real Time web browser testing on Chromebook (ChromeOS).
 
 
 ## Steps to start your ChromeOS Web Browser Testing
