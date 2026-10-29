@@ -136,20 +136,15 @@ A Project holds one test suite: its Git connection, workflows, secrets and jobs.
 2. In **Type of Project**, select **Custom Project**. The other types (**Tosca**, **Tosca with Dex**, **TTA for SAP**, **JMeter** and **Gatling**) have their own setup guides, linked from [HyperExecute Projects](/support/docs/hyperexecute-projects/#setting-up-specialized-projects).
 3. Fill in the form:
 
-   | Field | What to enter |
-   |-------|---------------|
-   | **App Git URL** (required) | The URL of the Git repository that holds your tests. |
-   | **Application ID(App-ID)** | The ID your organization uses for the application under test, if it uses one. |
-   | **Repository name (App-Component)** | The repository name. |
-   | **AppID/App Component - (Project Name)** (required) | The Project name. Your jobs appear under this name. |
-   | **Branch Name** | The default branch. Defaults to `main`. |
-   | **YAML Path** | Where the YAML lives in the repository. Defaults to `.lambdatest/hyperexecute.yaml`. |
-   | **PAT Token** | A Git access token with read access, unless your admin has set up a GitHub App. |
-   | **Teams** | The teams that should see this Project. |
+   - The URL of the Git repository that holds your tests, and a Project name. Both are required. Your jobs appear under the Project name.
+   - **Branch Name**: the default branch. It defaults to `main`.
+   - **YAML Path**: where the YAML lives in the repository. It defaults to `.lambdatest/hyperexecute.yaml`.
+   - **PAT Token**: a Git access token with read access, unless your admin has set up a GitHub App.
+   - **Teams**: the teams that should see this Project.
+
+   Your deployment may show more fields that your organization has added. Ask your admin what to enter in them.
 
 4. Click **Save**.
-
-<img loading="lazy" src={require('../assets/images/hyperexecute/on-prem/new-project-custom-form.webp').default} alt="On-premise Project Setup form for a Custom Project with Git URL, App-ID, repository, project name, branch, YAML path, PAT token and teams fields" className="doc_img"/>
 
 Open the new Project. It has a **Workflows** tab, a **Jobs** tab, a **Help** menu and a **Secrets** button.
 
@@ -332,9 +327,7 @@ Open a job from the **Jobs** page or the Project's **Jobs** tab. The job page sh
 - **Logs per scenario:** on-prem runs write a separate log file for each scenario, which makes long suites easier to read.
 - **Rerun failed tests:** rerun only what failed instead of the whole job. See [Rerun failed tests](/support/docs/hyperexecute-rerun-failed-jobs/).
 - **Notifications:** if your deployment sends email, send reports by [email](/support/docs/hyperexecute-email-reports/), including different recipients for passed, failed and aborted jobs.
-- **Org view:** admins can click **View Summary** on the Projects page to open the [Organisation Summary](/support/docs/hyperexecute-organisation-summary-dashboard/). It shows **Total App-IDs (Git Orgs)** and **Total Projects**, job and test counts, job status, and failure reasons (Test-level, Config, Infra, Access & Licensing, Unclassified), filtered by App-ID, project and date, with **Download PDF**.
-
-<img loading="lazy" src={require('../assets/images/hyperexecute/on-prem/org-summary.webp').default} alt="Organisation Summary dialog with App-ID and project totals, job activity tiles, a job status donut and failure reasons" className="doc_img"/>
+- **Org view:** admins can click **View Summary** on the Projects page to open the [Organisation Summary](/support/docs/hyperexecute-organisation-summary-dashboard/). It shows organization totals, job and test counts, job status, and failure reasons (Test-level, Config, Infra, Access & Licensing, Unclassified), filtered by project and date, with **Download PDF**.
 
 ## Environments and queues
 

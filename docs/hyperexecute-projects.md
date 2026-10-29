@@ -194,22 +194,15 @@ Once the project is created, the project header displays key details including t
 
 ### Create a Project on an on-premise deployment
 
-On an on-premise deployment, the **Project Setup** form for a **Custom Project** has a single step and different field names:
+On an on-premise deployment, the **Project Setup** form for a **Custom Project** has a single step:
 
-| Field | What to enter |
-|-------|---------------|
-| **App Git URL** (required) | The URL of the Git repository that holds your tests. |
-| **Application ID(App-ID)** | The ID your organization uses for the application under test, if it uses one. |
-| **Repository name (App-Component)** | The repository name. |
-| **AppID/App Component - (Project Name)** (required) | The Project name. Jobs appear under this name. |
-| **Branch Name** | The default branch. Defaults to `main`. |
-| **YAML Path** | Where the YAML lives in the repository. Defaults to `.lambdatest/hyperexecute.yaml`. |
-| **PAT Token** | A Git token with read access, unless your admin has set up a [GitHub App](/support/docs/hyperexecute-github-app-integration/). |
-| **Teams** | The teams that should see this Project. |
+- The URL of the Git repository that holds your tests, and a Project name. Both are required. Jobs appear under the Project name.
+- **Branch Name**: the default branch. It defaults to `main`.
+- **YAML Path**: where the YAML lives in the repository. It defaults to `.lambdatest/hyperexecute.yaml`.
+- **PAT Token**: a Git token with read access, unless your admin has set up a [GitHub App](/support/docs/hyperexecute-github-app-integration/).
+- **Teams**: the teams that should see this Project.
 
-Click **Save** to create the Project.
-
-<img loading="lazy" src={require('../assets/images/hyperexecute/on-prem/new-project-custom-form.webp').default} alt="On-premise Project Setup form for a Custom Project" className="doc_img"/>
+Your deployment may show more fields that your organization has added. Ask your admin what to enter in them. Click **Save** to create the Project.
 
 ## Schedule your Workflows
 Within each HyperExecute Project, you can set up one or more workflows. These workflows allow for scheduled execution of your tests, providing you with the flexibility to automate your testing process according to your development and release cycles. 
