@@ -869,7 +869,7 @@ Jobs that do not name an environment run in your organization's default environm
 ## Mandatory Parameters
 
 ### `version`
-The version of HyperExecute YAML being used to run the tests. Currently there are two supported versions are [0.1](/support/docs/deep-dive-into-hyperexecute-yaml/#hyperexecute-yaml-parameters) and [0.2](/support/docs/hyperexecute-yaml-version0.2/). 
+The version of HyperExecute YAML being used to run the tests. Currently there are two supported versions are [0.1](/support/docs/hyperexecute-yaml-parameters/) and [0.2](/support/docs/hyperexecute-yaml-version0.2/). 
 
 <VerifiedTag value="Verified" />
 
@@ -952,7 +952,7 @@ concurrency: 10
 ```
 :::tip Pro Tip
 - After analyzing your test cases and usage patterns, the platform will automatically recommend the optimal concurrency settings tailored to your needs. These recommendations are displayed in the banner on the left-hand side. [Learn more here.](/support/docs/hyperexecute-how-to-find-correct-concurrency/)
-- You can see the overall concurrency trends using our [analytics widgets.](/support/docs/analytics-modules-resource-utilization/#concurrency-trends)
+- You can see the overall concurrency trends using our [analytics widgets.](/support/docs/analytics-modules-resource-utilization/#concurrency-trends-org-level)
 :::
 
 ***

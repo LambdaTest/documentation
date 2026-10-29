@@ -200,7 +200,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         "name": "Sample Secret File",
         "codeSampleType": "code snippet",
         "programmingLanguage": "text",
-        "text": "\n:::info\nThe secrets file contains highly sensitive information and must be strictly excluded from public exposure. Here's how to ensure its security:\n\n**Store Outside the Repository (Recommended)**\n\n- Store the secrets file in a location outside your project repository altogether. This method is more secure as it automatically gets excluded from your code scripts zip file.\n\n**Exclude from Version Control**\n\n- Adding the relative path of the file (in which you have stored your secret data) to your [`.gitignore` or `.hyperexecuteignore`](/support/docs/hyperexecute-gitignore/) file. This prevents accidental inclusion of the file in your code repository.\n:::\n\n***\n\n### `-k, --key`\nThe access key of your <BrandName /> account. To find out how to retrieve your access key, visit [this page](/support/docs/hyperexecute-guided-walkthrough/#hyperexecute-dashboard).\n\n<div className=\"lambdatest__codeblock\">\n  <CodeBlock className=\"language-bash\">\n    {`--key ${ YOUR_LAMBDATEST_ACCESS_KEY()}`}\n  <\/CodeBlock>\n<\/div>\n\n***\n\n### `--labels`\nThis flag allows you to pass the labels of your Job. \n```bash\n--labels \"testing\""
+        "text": "\n:::info\nThe secrets file contains highly sensitive information and must be strictly excluded from public exposure. Here's how to ensure its security:\n\n**Store Outside the Repository (Recommended)**\n\n- Store the secrets file in a location outside your project repository altogether. This method is more secure as it automatically gets excluded from your code scripts zip file.\n\n**Exclude from Version Control**\n\n- Adding the relative path of the file (in which you have stored your secret data) to your [`.gitignore` or `.hyperexecuteignore`](/support/docs/hyperexecute-gitignore/) file. This prevents accidental inclusion of the file in your code repository.\n:::\n\n***\n\n### `-k, --key`\nThe access key of your <BrandName /> account. To find out how to retrieve your access key, visit [this page](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/).\n\n<div className=\"lambdatest__codeblock\">\n  <CodeBlock className=\"language-bash\">\n    {`--key ${ YOUR_LAMBDATEST_ACCESS_KEY()}`}\n  <\/CodeBlock>\n<\/div>\n\n***\n\n### `--labels`\nThis flag allows you to pass the labels of your Job. \n```bash\n--labels \"testing\""
       },
       {
         "@type": "SoftwareSourceCode",
@@ -621,7 +621,7 @@ The secrets file contains highly sensitive information and must be strictly excl
 ***
 
 ### `-k, --key`
-The access key of your <BrandName /> account. To find out how to retrieve your access key, visit [this page](/support/docs/hyperexecute-guided-walkthrough/#hyperexecute-dashboard).
+The access key of your <BrandName /> account. To find out how to retrieve your access key, visit [this page](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/).
 
 <VerifiedTag value="Verified" />
 
