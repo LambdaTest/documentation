@@ -391,16 +391,27 @@ If none of these match, collect the job ID, the CLI version (`./hyperexecute --v
 | YAML in the repository | Jobs and Workflows | Test team |
 | Secrets created in HyperExecute | Jobs that need credentials | Test team or Org Admin |
 
-## Related documentation
+## Feature reference
 
-- [HyperExecute Private Cloud](/support/docs/hyperexecute-private-cloud-setup/)
-- [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/)
-- [Deep Dive into HyperExecute YAML](/support/docs/deep-dive-into-hyperexecute-yaml/)
-- [HyperExecute Projects](/support/docs/hyperexecute-projects/)
-- [Workflows in HyperExecute](/support/docs/hyperexecute-workflows/)
-- [Global Policies](/support/docs/hyperexecute-global-policies/)
-- [Debug your CLI errors](/support/docs/hyperexecute-cli-error/)
-- [HyperExecute Release Notes](/support/docs/hyperexecute-release-notes/)
+Every feature below works on-prem unless the page or this guide says otherwise. Use this list to jump to the detail.
+
+| Area | Pages |
+|------|-------|
+| Getting started | [Getting started](/support/docs/getting-started-with-hyperexecute/), [Username and access key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/), [Dashboard walkthrough](/support/docs/hyperexecute-guided-walkthrough/), [Supported languages and frameworks](/support/docs/hyperexecute-supported-languages-and-frameworks/) |
+| Projects and secrets | [Projects](/support/docs/hyperexecute-projects/), [Project-level secrets](/support/docs/hyperexecute-how-to-manage-project-level-secrets/), [User-level secrets](/support/docs/hyperexecute-how-to-save-and-manage-secrets/) |
+| CLI | [HyperExecute CLI and flags](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/), [Environment variables for the CLI](/support/docs/hyperexecute-environment-variable-setup/), [Ignore files in the upload](/support/docs/hyperexecute-gitignore/), [CLI FAQs](/support/docs/hyperexecute-cli-faqs/) |
+| YAML | [Generate your YAML](/support/docs/hyperexecute-generate-sample-yaml/), [YAML parameters](/support/docs/hyperexecute-yaml-parameters/), [Deep Dive into YAML](/support/docs/deep-dive-into-hyperexecute-yaml/), [YAML version 0.2](/support/docs/hyperexecute-yaml-version0.2/), [Inherit YAML configurations](/support/docs/hyperexecute-inherit-config/), [OS and browser](/support/docs/hyperexecute-how-to-configure-os-and-browser/), [Capability overrides](/support/docs/hyperexecute-yaml-capability-overrides/), [YAML FAQs](/support/docs/hyperexecute-yaml-faqs/) |
+| Splitting and speed | [AutoSplit](/support/docs/hyperexecute-auto-split-strategy/), [Matrix](/support/docs/hyperexecute-matrix-multiplexing-strategy/), [Hybrid](/support/docs/hyperexecute-hybrid-strategy/), [Find the right concurrency](/support/docs/hyperexecute-how-to-find-correct-concurrency/), [Smart caching](/support/docs/hyperexecute-how-smart-caching-boosts-tests-speed/), [Fail Fast](/support/docs/hyperexecute-failfast/), [Prioritize tests](/support/docs/hyperexecute-prioritize-tests/), [Group-based discovery in TestNG](/support/docs/hyperexecute-how-to-perform-group-based-test-discovery-in-testng/) |
+| Frameworks | [TestNG](/support/docs/testng-on-hyperexecute-grid/), [Cucumber](/support/docs/cucumber-on-hyperexecute-grid/), [JUnit](/support/docs/junit-on-hyperexecute-grid/), [WebdriverIO](/support/docs/webdriverio-on-hyperexecute-grid/), [Playwright](/support/docs/playwright-integration-with-hyperexecute/) |
+| Workflows | [Workflows](/support/docs/hyperexecute-workflows/), [Test Chains](/support/docs/hyperexecute-test-chains/) |
+| CI/CD | [Integration with CI/CD tools](/support/docs/hyperexecute-integration-with-ci-cd-tools/), [Jenkins](/support/docs/jenkins-with-hyperexecute/), [Azure DevOps](/support/docs/azure-with-hyperexecute/), [Job status callback](/support/docs/hyperexecute-job-callback/) |
+| Results | [Job Reports](/support/docs/hyperexecute-reports/), [Job Artifacts](/support/docs/hyperexecute-artifacts/), [Artifact URLs](/support/docs/hyperexecute-artifacts-url/), [Process artifacts in Global Post](/support/docs/hyperexecute-global-post-artifacts/), [Email reports](/support/docs/hyperexecute-email-reports/), [Filter jobs by label](/support/docs/hyperexecute-jobs-label-filter/), [Test muting](/support/docs/hyperexecute-test-muting/) |
+| Reruns | [Rerun failed jobs](/support/docs/hyperexecute-rerun-failed-jobs/), [Rerun rules](/support/docs/hyperexecute-rerun-rules/) |
+| Troubleshooting | [Debug a failed job](/support/docs/hyperexecute-how-to-debug-job/), [CLI errors](/support/docs/hyperexecute-cli-error/), [Pre steps errors](/support/docs/hyperexecute-pre-steps-error/), [Scenario steps errors](/support/docs/hyperexecute-scenario-steps-error/), [Version conflicts](/support/docs/hyperexecute-how-to-resolve-version-conflict/), [Snooper](/support/docs/hyperexecute-snooper/) |
+| Network | [Tunnel configuration](/support/docs/hyperexecute-how-to-configure-tunnel/), [Background services](/support/docs/hyperexecute-background-services/), [sourcePayload](/support/docs/hyperexecute-how-to-configure-sourcePayload/) |
+| Administration | [Global Policies](/support/docs/hyperexecute-global-policies/), [Org product preferences](/support/docs/hyperexecute-org-product-preferences/), [GitHub App integration](/support/docs/hyperexecute-github-app-integration/), [Organisation Summary](/support/docs/hyperexecute-organisation-summary-dashboard/) |
+| Deployment | [HyperExecute Private Cloud](/support/docs/hyperexecute-private-cloud-setup/), [Private Cloud benefits](/support/docs/hyperexecute-private-cloud-benefits/), [Release notes](/support/docs/hyperexecute-release-notes/) |
+
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
