@@ -133,6 +133,8 @@ Zephyr Scale is a test management platform that helps you plan, manage, and meas
 
 <BrandName /> offers integration with Zephyr Scale that lets you perform automated browser testing on a cloud-based grid of 50,000+ real devices and 10,000+ browser/device combinations. By integrating Zephyr Scale with <BrandName />, you can view test execution results directly from <BrandName /> platform to your Zephyr Scale instance.
 
+Considering a move off Zephyr? See [Zephyr alternatives](https://www.testmuai.com/zephyr-alternative/).
+
 ## Prerequisites
 ---
 
