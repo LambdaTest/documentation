@@ -846,7 +846,7 @@ pre:
 ```
 
 :::tip
-For in detailed information on how to configure it properly, visit [Cypress Detailed Command Logs](/support/docs/cypress-detailed-command-logs/#for-cypress-v10-and-later-versions) documentation.
+For in detailed information on how to configure it properly, visit [Cypress Detailed Command Logs](/support/docs/cypress-detailed-command-logs/#configure-detailed-command-logs-for-cypress-v10-and-above) documentation.
 :::
 
 

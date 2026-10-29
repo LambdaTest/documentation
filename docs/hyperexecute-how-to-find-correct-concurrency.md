@@ -131,7 +131,7 @@ The platform automatically analyzes your usage and test cases and will guide you
 <source src= {require('../assets/videos/hyperexecute/knowledge-base/correct-concurrency/concurrency.mp4').default} type="video/mp4" />
 </video>
 
-You can also see the overall concurrency trends using our analytics widgets. [Learn more](/support/docs/analytics-modules-resource-utilization/#concurrency-trends)
+You can also see the overall concurrency trends using our analytics widgets. [Learn more](/support/docs/analytics-modules-resource-utilization/#concurrency-trends-org-level)
  
 
 ## Shared Cloud Daily Usage Limit

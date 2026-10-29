@@ -221,7 +221,7 @@ Till now you have learnt how to set up your generators on GenRocket. Now, in ord
 
 >**Note:** The HyperExecute YAML configuration file is already present in the sample project that you have downloaded.
 
-Following two commands have been already added in the "[pre](/support/docs/deep-dive-into-hyperexecute-yaml/#14-predirectives-or-pre)" section of this HyperExecute Yaml.
+Following two commands have been already added in the "[pre](/support/docs/deep-dive-into-hyperexecute-yaml/#predirectives)" section of this HyperExecute Yaml.
 
 * In HyperExecute, every time the tests are run, a new environment is created, and gets destroyed as soon as the tests are completed. 
 
@@ -241,7 +241,7 @@ mkdir /home/ltuser/.genrocket
 cp ******Profile.grp /home/ltuser/.genrocket
 ```
 
-* Once done, the [pre section](/support/docs/deep-dive-into-hyperexecute-yaml/#14-predirectives-or-pre) inside the HyperExecute YAML will look like as shown below (already present inside the sample project).
+* Once done, the [pre section](/support/docs/deep-dive-into-hyperexecute-yaml/#predirectives) inside the HyperExecute YAML will look like as shown below (already present inside the sample project).
 
 <img loading="lazy" src={require('../assets/images/genrocket-integration/gen-eight.webp').default} alt="Integrating <BrandName /> With genrocket" width="1366" height="625" className="doc_img"/>
 

@@ -180,7 +180,7 @@ To obtain your API token:
 3. Generate a new API Bearer token, or copy an existing one.
 
 #### Jira Integration in <BrandName /> (Optional)
-To migrate linked Jira requirements, the corresponding Jira instance must be integrated with <BrandName />. Without this, Jira links will not be carried over. See [<BrandName /> Jira Integration](/support/docs/jira-integration/#how-to-establish-integration-with-jira-from-your-lambdatest-account) for setup steps.
+To migrate linked Jira requirements, the corresponding Jira instance must be integrated with <BrandName />. Without this, Jira links will not be carried over. See [<BrandName /> Jira Integration](/support/docs/jira-integration/#how-to-establish-integration-with-jira-from-your--account) for setup steps.
 
 #### Permissions
 - Your qTest account must have read access to the projects being migrated.

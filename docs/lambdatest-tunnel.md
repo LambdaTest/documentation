@@ -140,7 +140,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 | [Tunnel with HyperExecute](/support/docs/hyperexecute-how-to-configure-tunnel/) | Steps to set up <BrandName /> Tunnel in HyperExecute for advanced test executions.|
 | [Tunnel with SmartUI SDK](/support/docs/smartui-sdk-tunnel/) | Best practices and configurations for integrating <BrandName /> Tunnel with SmartUI SDK. |
 | [Maven Tunnel Setup](/support/docs/maven-tunnel-for-locally-hosted-web-applications/) | Instructions to integrate <BrandName /> Tunnel with Maven projects for Selenium testing. |
-| [Tunnel with Azure Pipelines](/support/docs/integrate-testmu-extension-with-azure-pipelines/#localhost-testing-using-lambdatest-extension) | Learn how to configure <BrandName /> Tunnel within Azure Pipelines for CI/CD workflows.|
+| [Tunnel with Azure Pipelines](/support/docs/integrate-testmu-extension-with-azure-pipelines/#localhost-testing-using--extension) | Learn how to configure <BrandName /> Tunnel within Azure Pipelines for CI/CD workflows.|
 
 ## Docker Integration
 | Title | Description|
