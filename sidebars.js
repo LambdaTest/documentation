@@ -417,6 +417,7 @@ module.exports = {
             items: [
               "hyperexecute-run-jmeter-tests",
               "hyperexecute-gattling-testing",
+              "hyperexecute-k6-ui-testing",
             ],
           },
           {
