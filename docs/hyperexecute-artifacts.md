@@ -119,6 +119,10 @@ Artifacts are files generated during test execution, including reports and logs.
 
 Following the completion of a Job, these artifacts are automatically stored in the **artifacts folder**, distinguishing previous files into **old-artifacts** on subsequent runs while retaining the recent files in artifacts.
 
+:::info On-premise deployments
+On-prem, open artifacts from your organization's own HyperExecute dashboard, not the public dashboard link in the steps below. Keep `--onprem-host` in any CLI command that downloads artifacts. See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/).
+:::
+
 ## Steps to Generate and Download Artifacts
 Follow the below mentioned steps to generate the Artifacts for your desired framework:
 

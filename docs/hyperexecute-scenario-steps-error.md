@@ -142,6 +142,14 @@ import VerifiedTag from '@site/src/component/verifiedTag';
 
 This document will help you debug your failed job if you are facing any errors in the Scenario stage.
 
+:::info On-premise deployments
+- **Credentials and hub URL.** Use the username and access key from your organization's own dashboard, and the hub URL of your deployment. Credentials and endpoints from the public dashboard do not work on-prem.
+- **Tunnel.** Machines inside your network can usually reach internal applications without a tunnel. Tunnel settings are ignored for jobs started by a Workflow or the Trigger API.
+- **Browser versions.** If you ask for an exact browser version or `latest-N`, you get it when it is installed. If it is not installed, the test runs on the latest installed version. Check this first when a test passes locally and fails on HyperExecute.
+
+See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/).
+:::
+
 ## Invalid Credentials
 
 If you're encountering an error message as shown below, it means you have entered an invalid  **Username** and **Access Key** in your test file capabilities.

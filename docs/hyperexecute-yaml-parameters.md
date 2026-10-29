@@ -100,6 +100,10 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 The **HyperExecute YAML** file serves as the foundational component for test execution within the HyperExecute Platform. The subsequent list enumerates the diverse configuration options supported by [HyperExecute YAML](/support/docs/hyperexecute-yaml-parameters/#sample-hyperexecute-yaml), providing you with the flexibility to tailor test execution according to the specific requirements of your project.
 
+:::info On-premise deployments
+The YAML format is the same on-premise. On-premise deployments run Linux and Windows only, so `mac` values for `runson`, `macParallelism` and `macTestRunnerCommand` do not apply. Your admin may restrict which `env` variables are allowed, and tunnel settings are ignored for jobs started from a Workflow or the Trigger API. See the [on-premise notes in the deep dive](/support/docs/deep-dive-into-hyperexecute-yaml/) and the [on-premise user guide](/support/docs/hyperexecute-on-premise-user-guide/).
+:::
+
 ## Mandatory Parameters
 
 | Key | Type | Description|

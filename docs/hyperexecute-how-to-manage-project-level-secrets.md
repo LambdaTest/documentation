@@ -183,6 +183,10 @@ env:
 # highlight-end
 ```
 
+:::info On-premise deployments
+On-prem, open the Project from your organization's own HyperExecute dashboard. RBAC and Project checks run inside your deployment, so only users with access to the Project can run jobs that use its secrets. See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/).
+:::
+
 ## User-Level Secrets vs. Project-Level Secrets
 
 | Features | User Level Secrets | Project Level Secrets |

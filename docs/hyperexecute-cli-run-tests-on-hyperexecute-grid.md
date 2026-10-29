@@ -325,6 +325,10 @@ You can download the `HyperExecute CLI` for your OS from the links given below :
 | Windows | https://downloads.lambdatest.com/hyperexecute/windows/hyperexecute.exe |
 | macOS | https://downloads.lambdatest.com/hyperexecute/darwin/hyperexecute |
 
+:::info On-premise and restricted networks
+On an on-premise deployment, download the CLI from your own dashboard: open **Help** > **Hyperexecute CLI** and pick **MacOS**, **Windows** or **Linux**. If your network blocks downloads, ask your admin for an internal copy of the binary. Verify any copy you receive with the steps below before you use it.
+:::
+
 ## Verifying the Authenticity of the CLI
 To ensure the binary you’ve downloaded is genuine and has not been tampered with, you can verify its digital signature or code signing certificate. <BrandName /> signs all official HyperExecute CLI releases for security and integrity assurance.
 
@@ -399,7 +403,7 @@ The various flags that are supported are listed below.
 | [-k, --key](#-k---key) | string | <BrandName /> Access Key. |
 | [--labels](#--labels) | string | Incorporates the labels in your job. |
 | [--no-track](#--no-track) | NA | Stops updating the progress of the uplodaed jobs. |
---onprem-host
+| [--onprem-host](#--onprem-host) | string | Host name of your on-premise HyperExecute deployment. Sends the job there instead of the public cloud. |
 | [--preserve-payload](#--preserve-payload) | string | Preserves the job payload after its successful completion. |
 | [--runson](#--runson) | string | (comma-separated values of) OS on which the tests should run. |
 | [-s --scan](#-s---scan) | NA | Runs the network logs |
@@ -649,6 +653,17 @@ You can track the progress of your uploaded jobs with HyperExecute. However, thi
 ```
 ***
 
+### `--onprem-host`
+Use this flag when your organization runs HyperExecute on-premise. It sends the job to your own deployment instead of the public cloud. Pass the host name only, with no `https://` and no path.
+
+```bash
+--onprem-host hyperexecute.example.com
+```
+
+On your on-prem dashboard, **Help** > **Hyperexecute CLI** shows the full command with your host filled in. See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/).
+
+***
+
 ### `--preserve-payload`
 This flag allows you to preserve the job payload after the job is completed successfully. 
 
@@ -844,6 +859,18 @@ If you're running on a minimal alpine image, please make sure to install essenti
   ./hyperexecute --user <lt_user> --key <lt_access_key> --config yaml/win/behave_hyperexecute_autosplit_sample.yaml
   ```
 :::
+
+### Trigger a job on an on-premise deployment
+
+Add `--onprem-host` with the host name of your deployment:
+
+```bash
+./hyperexecute --user <YOUR_USERNAME> --key <YOUR_ACCESS_KEY> --config RELATIVE_PATH_OF_YOUR_YAML_FILE --onprem-host <YOUR_ONPREM_HOST>
+```
+
+You do not need to type it. On your on-prem dashboard, open **Help** > **Hyperexecute CLI**. The panel has the CLI downloads and a **Test execution command** with your username, access key and host already filled in.
+
+<img loading="lazy" src={require('../assets/images/hyperexecute/on-prem/cli-command-panel.webp').default} alt="On-premise Hyperexecute CLI panel with download buttons and a ready-to-copy command that includes --onprem-host" className="doc_img"/>
 
 ## Running HyperExecute CLI in Quiet Mode
 

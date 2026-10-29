@@ -120,6 +120,10 @@ Projects serve as a centralized platform for organizing and managing test execut
 Organisation admins on the enterprise plan can click **View Summary** at the top of the project list to open the [Organisation Summary Dashboard](/support/docs/hyperexecute-organisation-summary-dashboard/). It shows KPI tiles, a job status donut and a failure-reason breakdown across every project in your organisation, with a PDF export.
 :::
 
+:::info On-premise deployments
+On-prem, open **Projects** from your organization's own HyperExecute dashboard, not the public one. Repository access usually goes through a GitHub App that your admin has registered for your Git server. See [GitHub App integration](/support/docs/hyperexecute-github-app-integration/) and the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/).
+:::
+
 ## Link Jobs to Projects Using YAML
 When you run jobs on HyperExecute, connecting them to projects helps you track performance trends, compare results over time, and get valuable insights from your test history. You can link jobs to projects in two ways using your YAML configuration file.
 
@@ -187,6 +191,25 @@ Once the project is created, the project header displays key details including t
     <iframe loading="lazy" className="sl-demo" src="https://app.storylane.io/demo/nghrqs7qgczc?embed=inline"  name="sl-embed" allow="fullscreen" allowfullscreen></iframe>
   </div>
 </div>
+
+### Create a Project on an on-premise deployment
+
+On an on-premise deployment, the **Project Setup** form for a **Custom Project** has a single step and different field names:
+
+| Field | What to enter |
+|-------|---------------|
+| **App Git URL** (required) | The URL of the Git repository that holds your tests. |
+| **Application ID(App-ID)** | The ID your organization uses for the application under test, if it uses one. |
+| **Repository name (App-Component)** | The repository name. |
+| **AppID/App Component - (Project Name)** (required) | The Project name. Jobs appear under this name. |
+| **Branch Name** | The default branch. Defaults to `main`. |
+| **YAML Path** | Where the YAML lives in the repository. Defaults to `.lambdatest/hyperexecute.yaml`. |
+| **PAT Token** | A Git token with read access, unless your admin has set up a [GitHub App](/support/docs/hyperexecute-github-app-integration/). |
+| **Teams** | The teams that should see this Project. |
+
+Click **Save** to create the Project.
+
+<img loading="lazy" src={require('../assets/images/hyperexecute/on-prem/new-project-custom-form.webp').default} alt="On-premise Project Setup form for a Custom Project" className="doc_img"/>
 
 ## Schedule your Workflows
 Within each HyperExecute Project, you can set up one or more workflows. These workflows allow for scheduled execution of your tests, providing you with the flexibility to automate your testing process according to your development and release cycles. 

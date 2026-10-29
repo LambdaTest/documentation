@@ -221,6 +221,15 @@ This version introduces several new features and improvements over Version 0.1. 
 - The new [`framework`](/support/docs/hyperexecute-yaml-version0.2/#framework) flag has been introduced to configure the test framework.
 :::
 
+:::info On-premise deployments
+Version 0.2 works the same way on-premise, with these points to check:
+
+- Use `runson: linux` or `runson: win`. On-premise deployments do not run macOS.
+- Your admin maps Linux frameworks to queues for each environment. If a runner does not start, ask which queue serves your framework.
+- Jobs that do not name an environment run in your organization's default environment.
+
+:::
+
 ## Why to use HyperExecute YAML Version 0.2?
 
 - The new framework feature supports caching by default. You do not have to specify any directories to cache for faster performance. If you adds the [`cacheKey`](/support/docs/deep-dive-into-hyperexecute-yaml/#cachekey) and [`cacheDirectories`](/support/docs/deep-dive-into-hyperexecute-yaml/#cachedirectories) keys in your yaml, the default caching gets disabled and preference is given to user specified cache.

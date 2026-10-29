@@ -725,6 +725,11 @@ module.exports = {
         items: [
           {
             type: "doc",
+            label: "On-Premise User Guide",
+            id: "hyperexecute-on-premise-user-guide",
+          },
+          {
+            type: "doc",
             label: "HyperExecute Private Cloud Benefits",
             id: "hyperexecute-private-cloud-benefits",
           },

@@ -148,6 +148,10 @@ Testing your webapp or applications often involves using sensitive data like pas
 
 HyperExecute provides a secure **Secret Management Vault** to keep your sensitive information safe. This doc covers **user-level secrets** that are tied to your individual account.
 
+:::info On-premise deployments
+On-prem, manage secrets from your organization's own HyperExecute dashboard. The `${{.secrets.<KEY_NAME>}}` syntax is the same. See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/).
+:::
+
 ## Secret Scopes
 
 HyperExecute supports secrets at multiple levels:

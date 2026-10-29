@@ -100,6 +100,16 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 />
 Workflows give you the speed, reliability, and platform‑native orchestration of HyperExecute on a schedule. Think of Workflows as a lightweight, cloud-native alternative and companion to CI/CD, with all the functionalities of HyperExecute such as reporting, RCA etc.
 
+:::info On-premise deployments
+On-prem, set up workflows from your organization's own HyperExecute dashboard. A few things behave differently:
+
+- Tunnel settings in the YAML are ignored for jobs started by a workflow, so you do not need a tunnel for these runs.
+- When you link workflows, select both the target project (**Select Project**) and the target workflow (**Select Workflow**) before you click **Finish**.
+- Jobs that do not name an environment run in your organization's default environment.
+
+See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/) for the full on-prem setup.
+:::
+
 ## Why Workflows
 - **Schedule-first orchestration:** Run regular suites by just connecting your Git repo, without wiring a CI pipeline.
 - **Native to HyperExecute:** Leverage JIT infrastructure, smart test discovery/splitting, and rich artifacts in one place.
@@ -151,7 +161,11 @@ You can choose from three trigger options:
 
 - **Once**: The workflow runs automatically as soon as it is created. No manual execution needed.
 - **Later**: Schedule the workflow to run at a specific date and time.
-- **Every**: Set up recurring execution by selecting specific days of the week (Mon–Sun) and a time. For example, you can schedule a workflow to run every Monday, Wednesday, and Friday at 9:00 AM.
+- **Every**: Set up recurring execution. Set **Run Every** to a number and a unit:
+  - **Minutes**, **Hours** or **Days**, then a **During time frame** start and end time. For example, every 2 hours between 8:00 am and 6:00 pm.
+  - **Days of week**, then a **Start at** time and the days under **When to Run**. For example, every Monday, Wednesday and Friday at 9:00 am.
+
+<img loading="lazy" src={require('../assets/images/hyperexecute/on-prem/workflow-step2-every-interval.webp').default} alt="Schedule step with Every selected, Run Every set to 15 minutes, a time frame and the Workflow ends on date" className="doc_img"/>
 
 :::note
 The schedule is set in your **local timezone** and stored internally in UTC. This ensures workflows trigger at the correct time regardless of where team members are located.
@@ -245,6 +259,10 @@ Variables let you customize job runs without the need of creating multiple workf
 - Up to **100 variables per workflow**.
 - Up to **25 values per variable**.
 - Value length limit: **500 characters** (excluding commas/spaces).
+
+:::info On-premise deployments
+Your admin may restrict which environment variables jobs can use. If a variable is not allowed, the CLI warns you. If you change only Workflow Variables while editing a workflow, check that the new values show after you save.
+:::
 
 ## FAQ
 - **Which repos are supported for Projects?** Currently **GitHub** and **Bitbucket**.

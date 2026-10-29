@@ -854,6 +854,18 @@ import VerifiedTag from '@site/src/component/verifiedTag';
 
 This document contains detailed explanations for all YAML flags, providing an in-depth understanding of each configuration parameter.
 
+:::info On-premise deployments
+The YAML format is the same on SaaS and on-premise. A few keys behave differently on-premise, and their sections include a note:
+
+- [`runson`](#runson): Linux and Windows only. macOS values are not available.
+- [`env`](#env): your admin can restrict which environment variables are allowed. The CLI warns you and names any variable that is not allowed.
+- [`tunnel`](#tunnel): usually not needed, and ignored for jobs started from a Workflow or the Trigger API.
+- [`sourcePayload`](#sourcepayload) and Git access go through your organization's own or a dedicated GitHub App.
+- Analytics: Intelligent Test Analytics is not available. Use job reports instead.
+
+Jobs that do not name an environment run in your organization's default environment. Org-wide [Global Policies](/support/docs/hyperexecute-global-policies/) can add steps to your job or reject it. For the full list of differences, see the [on-premise user guide](/support/docs/hyperexecute-on-premise-user-guide/).
+:::
+
 ## Mandatory Parameters
 
 ### `version`
@@ -888,6 +900,10 @@ matrix:
 ```
 
 ***
+
+:::info On-premise deployments
+On-premise deployments run Linux and Windows only. Use `linux`, `win` or `win11`, and leave macOS values out of `runson` and `matrix.os`. Your admin maps Linux frameworks to queues for each environment. See [Environments and queues](/support/docs/hyperexecute-on-premise-user-guide/#environments-and-queues).
+:::
 
 ### `pre`
 All actions you need to perform before each test execution, such as installing dependencies. You’ll ideally want to use this parameter to "pre" run simple commands like `npm install`, `yarn install`, `mvn install` etc
@@ -1176,6 +1192,10 @@ matrix:
 ``` 
 In the above example linux combinations will run on a parallelism on 2, `windows` combinations will run on a parallelism on 1, and `mac` combinations will run on a parallelism defined of 3.
 
+:::info On-premise deployments
+On-premise deployments run Linux and Windows only, so `macParallelism` and `macTestRunnerCommand` do not apply.
+:::
+
 ### `testRunnerCommand`
 The `testRunnerCommand` used to run a single test entity in isolation. This entity could be a file, module, feature, or scenario. It is defined in the YAML file and tells the system how to run the test entity.
 
@@ -1263,6 +1283,10 @@ env:
   USERNAME: abc
   PLATFORM: windows
 ```
+
+:::info On-premise deployments
+Your admin can limit which environment variables are allowed. If you set one that is not allowed, the CLI shows a warning that names it. Ask your admin to allow the variable, or remove it.
+:::
 
 #### Special Character Encoding
 
@@ -1785,6 +1809,10 @@ sourcePayload:
 ```
 
 ***
+
+:::info On-premise deployments
+On-premise, Git access goes through your organization's own GitHub App or a dedicated one, set up by your admin. Ask your admin which repositories it can reach before you use `sourcePayload`.
+:::
 
 ### `hostsOverride`
 This field allows you to add domain mappings which are required to be added in the local DNS entry represented by the /etc/hosts file. This is required if you want to map a custom domain name to an ip (local or otherwise) so that any requests on this domain name resolves to the provided ip on HyperExecute machines where your tests are running. For instance, suppose for a domain "example.com", global DNS is having the entry which resolves the network call to the public IP address. With hostsOverride flag you can explicitly route the network call to a local IP address, instead of allowing the call to go through a public IP address.
@@ -2718,6 +2746,10 @@ tunnel: true
 ```
 
 ***
+
+:::info On-premise deployments
+On-premise, test machines already run inside your network, so most teams do not need a tunnel. Tunnel settings are ignored for jobs started from a Workflow or the Trigger API.
+:::
 
 ### `tunnelOpts`
 The options to use when running the [tunnel](/support/docs/deep-dive-into-hyperexecute-yaml/#tunnel).

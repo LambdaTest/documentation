@@ -201,3 +201,7 @@ plugin = {
     "json:target/abc/its/pqr/abc/cucumber-reports/CucumberTestReport.json"
 }
 ```
+
+:::info On-premise deployments
+On-prem, open reports from your organization's own HyperExecute dashboard, not the public dashboard link on this page. When you download reports with the CLI, keep `--onprem-host` in the command so the CLI talks to your deployment. See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/).
+:::

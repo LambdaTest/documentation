@@ -103,6 +103,10 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 ***
 
+:::info On-premise deployments
+On-prem deployments run tests on Linux and Windows only. macOS is not available as a test OS.
+:::
+
 ## 1. **Can HyperExecute CLI download test artifacts generated during execution?**
 
   Yes, HyperExecute can download the artifacts generated during the test execution. In addition, HyperExecute has APIs to download artifacts for a particular job.

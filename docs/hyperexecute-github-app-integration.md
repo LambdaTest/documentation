@@ -147,6 +147,10 @@ This integration supports three onboarding paths:
 - **Your Existing GitHub App** (On-Prem / Private Cloud)
 - **Private GitHub App Dedicated to Your Organization** (On-Prem / Air-Gapped)
 
+:::info On-premise deployments
+On-prem, use Approach 2 or Approach 3. The Marketplace app (Approach 1) is for the public cloud. Use your organization's own dashboard for the setup page, and run the setup once for each GitHub organization. If your repositories are on GitHub Enterprise Server, also read [Multi-Tenant GitHub Support](#multi-tenant-github-support). For the wider on-prem setup, see the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/).
+:::
+
 ## How It Works
 1. Install a GitHub App using one of the three supported approaches. <br />
 2. Complete the post-installation registration within the <BrandName /> platform. <br />

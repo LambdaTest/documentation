@@ -191,6 +191,17 @@ import VerifiedTag from '@site/src/component/verifiedTag';
 
 ***
 
+:::info On-premise deployments
+The YAML format is the same on-prem. Differences that affect the answers below:
+
+- On-prem runs on Linux and Windows only. Do not set `runson` to a macOS value.
+- Tunnel settings in the YAML are ignored for jobs started by a Workflow or the Trigger API.
+- Your admin may restrict which environment variables a job can use. The CLI warns you and names any variable that is not allowed.
+- Git access for workflows goes through a GitHub App that your organization registers.
+
+See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/).
+:::
+
 ## 1. I want to run all my feature files and scenarios listed in a folder. How can I do that without listing all of them explicitly in the YAML file?
 
 HyperExecute offers you the option to use our AutoSplit mode. You can learn more about the AutoSplit mode by going through [this page](/support/docs/hyperexecute-auto-split-strategy/). A sample YAML file that supports AutoSplit looks like this:
@@ -271,6 +282,10 @@ preDirectives:
 > **Note**: The variables ‘LT_PROXY_HOST’ and ‘LT_PROXY_PORT’ are exposed with the tunnel proxy value by default on HyperExecute machines when the tunnel flag is set to _true_ in the HyperExecute YAML. 
 
 ***
+
+:::info On-premise deployments
+On-prem, tunnel settings are ignored for jobs started by a Workflow or the Trigger API, so the machines in your deployment must reach the artifactory directly.
+:::
 
 ## 4. How can I install and set a private node registry on the HyperExecute Machine?
 

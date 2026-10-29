@@ -203,6 +203,15 @@ Creating, editing, and deleting policies is **admin-only**. Developers can see w
 
 Policies are **API-first**, so you can create and maintain them from your automation (Harness, Jenkins, a Git-managed script) exactly like the rest of your pipeline. You can also manage them from the <BrandName /> dashboard under [Org Product Preferences](/support/docs/hyperexecute-org-product-preferences/).
 
+:::info On-premise deployments
+Global Policies work the same way on-prem, with two differences:
+
+- **Project Scope is required.** You must choose the projects a policy covers before you can save it. See [Step 2: Project Scope](#step-2-project-scope).
+- **The default OS falls back to Linux.** For command policies (`globalPost`, `post`, `afterEachScenario`), the Linux block is used when no block matches the job's OS. On-prem runs Linux and Windows only, so a Mac block is never used.
+
+On-prem, open **Org Product Preferences** from your organization's own dashboard. See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/).
+:::
+
 ## What a policy is
 
 A rule defined as a JSON object with a small, fixed set of fields (same fields on UI and API):
@@ -296,6 +305,10 @@ The **Project Scope** tab decides where the rule applies. It has two controls th
 2. The **Exclude Specific Projects** toggle lets you leave a few projects out of that base set.
 
 Between them, you can set up any pattern: from "every project, no exceptions" to "just these projects, minus one."
+
+:::info On-premise deployments
+Project Scope is required on-prem. Set the **Scope** before you save the policy, or the policy is not created.
+:::
 
 #### Including: All Projects or a specific list
 
@@ -401,6 +414,10 @@ curl -u "<YOUR_USERNAME>:<YOUR_ACCESS_KEY>" \
 ```
 
 Run that list call first to confirm your credentials work. A `200` with a list (possibly empty) means you are set.
+
+:::info On-premise deployments
+On-prem, call the API on your own deployment host instead of `api.hyperexecute.cloud`, and use credentials from your organization's own dashboard.
+:::
 
 ### Endpoints
 

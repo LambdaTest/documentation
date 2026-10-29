@@ -104,6 +104,10 @@ import VerifiedTag from '@site/src/component/verifiedTag';
 />
 This page outlines how you can run your first End-to-End (E2E) testing execution job on HyperExecute.
 
+:::info On-premise deployments
+On-prem, use [2. Using Local System](#2-using-local-system). Open the sample from your organization's own HyperExecute dashboard, use the access key from that dashboard, and add `--onprem-host` to the CLI command. See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/).
+:::
+
 ## Before you start
 
 We recommend running your first test execution job using a sample project on HyperExecute. This can be done in three different ways, as mentioned below:
