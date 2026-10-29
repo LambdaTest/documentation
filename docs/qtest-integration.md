@@ -111,6 +111,8 @@ import VerifiedTag from '@site/src/component/verifiedTag';
 ***
 qTest is a comprehensive test management tool designed for Project Management, Bug Tracking, and Test Management. It embraces a centralized test management approach, facilitating seamless communication and accelerating task development across QA teams and stakeholders. With qTest Launch, you can run your automated tests on a variety of devices and real devices provided by <BrandName />.
 
+Considering a move off qTest? See the [<BrandName /> qTest alternative](https://www.testmuai.com/qtest-alternative/).
+
 ## Prerequisites
 
 1. qTest Host 
