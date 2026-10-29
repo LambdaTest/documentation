@@ -1,9 +1,9 @@
 ---
 id: chrome-os-testing
-title: ChromeOS Testing
+title: ChromeOS (Chromebook) Testing
 hide_title: false
 sidebar_label: ChromeOS Testing
-description: TestMu AI provides a powerful solution for testing apps designed for Chromebooks by offering live interactive testing capabilities, and device emulation for responsive design testing.s
+description: TestMu AI provides a powerful solution for testing apps designed for Chromebooks by offering live interactive testing capabilities, and device emulation for responsive design testing.
 keywords:
     - ChromeOS
     - ChromeOS App
@@ -40,7 +40,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "ChromeOS App Testing",
+          "name": "ChromeOS (Chromebook) Testing",
           "item": `${BRAND_URL}/support/docs/chrome-os-testing/`
         }]
       })
@@ -58,8 +58,8 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       "@type": "WebPage",
       "@id": "https://www.testmuai.com/support/docs/chrome-os-testing/"
     },
-    "headline": "ChromeOS Testing",
-    "description": "TestMu AI provides a powerful solution for testing apps designed for Chromebooks by offering live interactive testing capabilities, and device emulation for responsive design testing.s",
+    "headline": "ChromeOS (Chromebook) Testing",
+    "description": "TestMu AI provides a powerful solution for testing apps designed for Chromebooks by offering live interactive testing capabilities, and device emulation for responsive design testing.",
     "url": "https://www.testmuai.com/support/docs/chrome-os-testing/",
     "image": {
       "@type": "ImageObject",
@@ -106,13 +106,13 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 ChromeOS is a lightweight, Linux-kernel-based operating system designed for Chromebooks. It prioritizes speed, security, and manageability, with a focus on cloud-based applications and services. This makes it ideal for resource-constrained environments and cloud-centric workflows like ed-tech business.
 
 <div className="support_main">
-  <a href="/support/docs/hyperexecute-running-your-first-job/">
+  <a href="/support/docs/chrome-os-web-browser-testing/">
     <div className="support_inners">
       <h2>ChromeOS Web Browser Testing</h2>
       <p>Guidebook about the features offered for testing your webapps in ChromeOS</p>
     </div>
   </a>
-   <a href="/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/">
+   <a href="/support/docs/chrome-os-app-testing/">
     <div className="support_inners"> 
       <h2>ChromeOS App Testing</h2>
       <p>Guidebook about the features offered for testing your apps in ChromeOS</p>
