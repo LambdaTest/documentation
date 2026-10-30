@@ -16,6 +16,7 @@ keywords:
  - Test Execution Burndown
  - Defects by Severity
  - Tester Assignment
+ - Continuously Failing Test Cases
  - All time date range
 
 url: https://www.testmuai.com/support/docs/analytics-modules-test-manager-widgets/
@@ -105,7 +106,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-10-15T12:00:00+05:30"
+    "dateModified": "2026-10-30T12:00:00+05:30"
   }) }}
 />
 <BrandName /> Test Manager Dashboard widgets provide comprehensive insights into your test automation or manual efforts. These widgets help you optimize your testing efforts by providing detailed insights into your test execution, test case insights, and more.
@@ -433,5 +434,23 @@ The Tester Assignment widget displays a horizontal stacked bar chart with one ba
 ### Value Proposition
 
 This widget lets you compare workload and execution progress across testers at a glance, making it easy to spot uneven assignment, identify testers who are behind, and rebalance effort to keep a release on track.
+
+## Continuously Failing Test Cases
+
+The Continuously Failing Test Cases widget lists the test cases whose latest runs all failed, so you can find the tests that keep breaking and fix them first.
+
+### How it works?
+
+* A test case is listed when its latest **N** executed runs all failed and its latest run falls in the dashboard date range. Earlier runs outside the range still count towards the N.
+* **N** is the **Always Failing** setting in **Organization Settings → Org Product Preferences → Insights → Smart Tags** (5 runs by default). See [Smart tags for test cases](/support/docs/analytics-build-insights-test-cases/#smart-tags-for-test-cases).
+* Only **Passed** and **Failed** runs are counted. Runs in any other status, such as **Not Started**, are skipped and do not break a streak.
+* Each row shows the **Test case name**, with its test case ID and project below it, and **Last run at**, the time of its latest run in your time zone. The most recently run test cases are listed first.
+* Click a row to open the runs that made the test case continuously failing. Switch from **Counted runs** to **All runs** to see every run of the test case in the dashboard date range (extended back to include all counted runs), with the counted runs tagged **Counted**.
+* Click the test case name to open the test case in Test Manager.
+* Apply filters from the three-dot menu to scope the widget to specific projects or test runs. Use **View all** to see the full list and **Export** it as CSV or PDF.
+
+### Value Proposition
+
+This widget shows the tests that fail every time they run, so you can separate broken tests from occasional failures, fix the most persistent problems first, and keep them from hiding new regressions.
 
 
