@@ -6,7 +6,7 @@ Rook is publicly available from the [LambdaTest/rook repository](https://github.
 
 Installation commands run in your normal terminal. After installation, launch `rook` (or `rook.cmd` in PowerShell) **without a subcommand** to open the interactive terminal UI (TUI). Stay in that session for sign-in, project selection, exploration, generation, and testing; you do not need CI/headless mode for the walkthrough.
 
-The latest public release checked on October 28, 2026 is [v0.1.16](https://github.com/LambdaTest/rook/releases/tag/v0.1.16). The public npm package and Homebrew formula also publish 0.1.16. Historical walkthroughs and CI examples can name an older, tested version; do not change a pipeline pin without checking its commands and result handling.
+The latest public release checked on October 30, 2026 is [v0.1.17](https://github.com/LambdaTest/rook/releases/tag/v0.1.17). The public npm package and Homebrew formula also publish 0.1.17. Historical walkthroughs and CI examples can name an older, tested version; do not change a pipeline pin without checking its commands and result handling.
 
 | Your environment | Start here |
 |---|---|
@@ -70,7 +70,7 @@ Pass installer options after `bash -s --`:
 ```bash
 # Pin a specific public release.
 curl -fsSL https://raw.githubusercontent.com/LambdaTest/rook/main/install.sh \
-| bash -s -- --version 0.1.16
+| bash -s -- --version 0.1.17
 
 # Link the executable into another writable directory.
 curl -fsSL https://raw.githubusercontent.com/LambdaTest/rook/main/install.sh \
@@ -107,7 +107,7 @@ The npm package installs the `rook` executable and publishes platform runtime pa
 The 0.1.3 release fixes the npm update path. If an older install cannot update normally, use the public registry explicitly:
 
 ```bash
-npm install -g @testmuai/rook@0.1.16 \
+npm install -g @testmuai/rook@0.1.17 \
 --registry=https://registry.npmjs.org \
 --@testmuai:registry=https://registry.npmjs.org
 ```
@@ -126,12 +126,12 @@ Use Rook 0.1.13 or newer on Windows. It launches commands, hooks, and shims thro
 node --version
 node -p "process.platform + ' ' + process.arch"
 npm.cmd --version
-npm.cmd install -g @testmuai/rook@0.1.16
+npm.cmd install -g @testmuai/rook@0.1.17
 Get-Command rook.cmd
 rook.cmd --version
 ```
 
-The platform check should print `win32 x64`, and the pinned install should report `0.1.16`. Use `rook.cmd` in PowerShell throughout this guide. Calling the `.cmd` shim also avoids the “running scripts is disabled” error that can affect npm's `.ps1` shim; you do not need to weaken PowerShell's execution policy.
+The platform check should print `win32 x64`, and the pinned install should report `0.1.17`. Use `rook.cmd` in PowerShell throughout this guide. Calling the `.cmd` shim also avoids the “running scripts is disabled” error that can affect npm's `.ps1` shim; you do not need to weaken PowerShell's execution policy.
 
 ### Sign in and open your workspace
 
