@@ -5355,6 +5355,11 @@ module.exports = {
         ],
       },
       {
+        type: "doc",
+        label: "Exploration",
+        id: "kane-cli-exploration",
+      },
+      {
         type: "category",
         collapsed: true,
         label: "Evidence",
