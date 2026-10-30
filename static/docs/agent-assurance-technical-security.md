@@ -26,36 +26,6 @@ rook tests AI agents you own — it grades what an agent actually did against ev
 
 Two zones. Your environment runs the rook CLI — which drives your agent and writes the plain per-project files under `.testmuai/rook/` — and an optional local rook UI ( `rook ui --local` , no hosted login). A global `~/.testmuai/rook/` keeps your sign-in, the values you store with `rook env set`, logs, and each session's transcript (`transcript.jsonl`: prompts, tool results and answers). For the features to work, the CLI talks to TestMu AI over HTTPS (TLS 1.2+); the components and paths are shown below.
 
-```text
-YOUR ENVIRONMENT · machine / CI
-┌──────────────────────────────────────────────────────────────┐
-│ YOUR AGENT & CONTEXT · workspace                             │
-│   local rook UI  (rook ui --local · no hosted login)         │
-│        ↓                                                     │
-│   rook CLI  (drives your agent · writes .testmuai/rook/)     │
-│                                                              │
-│ NEVER CROSSES THE BOUNDARY                                   │
-│   · rook env set values & local credential store             │
-│   · session transcripts (unless you export them)             │
-│   · workspace files (only excerpts a task needs)             │
-└──────────────────────────────────────────────────────────────┘
-│  POST /controller/∗   ·   GET/POST /api/∗   ·   sign-in
-↓  HTTPS (TLS 1.2+)
-CLOUDFLARE
-↓
-TESTMU AI
-┌──────────────────────────────────────────────────────────────┐
-│ Model controller  (runs model calls · no key of yours)       │
-│     → LLM providers  (OpenAI · Gemini)                       │
-│ Rook backend      (project · agent · run records)            │
-│     → Database + Storage  (records & artifacts)              │
-│ Auth              (sign-in & identity)                       │
-│                                                              │
-│ Rook Cloud UI  (rook.lambdatest.com)                         │
-│     ↔ Rook backend · Auth                                    │
-└──────────────────────────────────────────────────────────────┘
-```
-
 *The rook CLI is the only component that crosses the boundary — over HTTPS (TLS 1.2+), via Cloudflare — to TestMu AI. The Model controller calls the LLM providers; the Rook backend uses a database and object storage. The model stream uses Server-Sent Events. Run evidence uploads from the CLI straight to object storage through a short-lived presigned URL that the Rook backend issues per file.*
 
 ### NETWORK HOSTS

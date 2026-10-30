@@ -1,8 +1,8 @@
-# ChromeOS Web Browser Testing
+# ChromeOS (Chromebook) Web Browser Testing
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-This document outlines how to leverage features like mark as bug, changing IP geolocation, in-depth device logs and network logs, etc for your Real Time Web Browser testing.
+This document outlines how to leverage features like mark as bug, changing IP geolocation, in-depth device logs and network logs, etc. for your Real Time web browser testing on Chromebook (ChromeOS).
 
 ## Steps to start your ChromeOS Web Browser Testing
 

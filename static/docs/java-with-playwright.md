@@ -110,6 +110,40 @@ Go to the [TestMu AI Web Automation Dashboard](https://www.testmuai.com/login/?r
 
 The [playwright-skill](https://github.com/LambdaTest/agent-skills/tree/main/playwright-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
 
+The playwright-skill package includes:
+
+```
+playwright-skill/
+├── SKILL.md
+└── reference/
+├── playbook.md
+└── advanced-patterns.md
+```
+
+It provides structured guidance for:
+
+* Project structure and setup
+* Dependency configuration
+* Local execution
+* TestMu AI cloud execution
+* Debugging patterns
+* CI/CD integration
+
+### Installing Playwright Agent Skill
+
+Install a Playwright Agent Skill using the command below:
+
 - [Run Your Playwright Tests With JavaScript on TestMu AI](/support/docs/javascript-with-playwright/)
 - [Configure Playwright Capabilities for the TestMu AI Grid](/support/docs/playwright-test-execution-setup/)
 - [Get Started With Playwright Testing on TestMu AI](/support/docs/playwright-testing/)
+
+```
+# Clone the repo and copy the skill you need
+git clone https://github.com/LambdaTest/agent-skills.git
+cp -r agent-skills/playwright-skill .claude/skills/
+
+# Or for Cursor / Copilot
+cp -r agent-skills/playwright-skill .cursor/skills/
+```
+
+**Note**: If you prefer installing all available framework skills instead of only playwright-skill, clone the repository directly into your tool's skills directory (for example, .claude/skills/, .cursor/skills/, .gemini/skills/, or .agent/skills/).

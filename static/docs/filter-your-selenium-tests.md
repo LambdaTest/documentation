@@ -197,7 +197,7 @@ Each filter opens a picker where you select one or more values. For example, the
 
 The **Date** filter lets you pick a preset range or a custom start and end date:
 
-To group and filter by the tags you set in code, see [Group Tests Using Custom Tags](/docs/group-tests-using-custom-tags/) and [Group and Filter Builds Using Build Tags](/support/docs/group-and-filter-your-test-builds-using-build-tags/).
+To group and filter by the tags you set in code, see [Group Tests Using Custom Tags](/docs/group-tests-using-custom-tags/).
 
 ### Sort Builds
 

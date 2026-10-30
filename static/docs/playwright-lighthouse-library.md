@@ -103,12 +103,7 @@ node RELATIVE_PATH_OF_YOUR_TEST_FILE
 ```
 
 ### View Your Test Results
-
-To review runs that use the Playwright Lighthouse Library, open the TestMu AI [Web Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/).
-
-## Related Playwright Guides
-
-Continue with the guides below to build out your Playwright test coverage on TestMu AI.
+To view your test runs that uses Playwright Lighthouse Library, go to the TestMu AI [Web Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/).
 
 - [Get started with Playwright testing on TestMu AI](/support/docs/playwright-testing/) covers the base setup for cloud runs.
 - [Set up Playwright test execution on TestMu AI](/support/docs/playwright-test-execution-setup/) walks through configuring a cloud run.
