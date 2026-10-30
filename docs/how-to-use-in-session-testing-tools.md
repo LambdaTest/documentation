@@ -156,6 +156,12 @@ However, if your preferred location is not showing, you can specify the exact lo
 
 <img loading="lazy" src={require('../assets/images/real-device-browser-testing/gps-location-browser-testing.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 
+<div className="ytframe"> 
+<div className="youtube" data-embed="Sy8dyJb3T6M" data-loading-attribute="eager">
+  <div className="play-button"></div>
+</div>
+</div>
+
 
 ### Network Throttling
 
