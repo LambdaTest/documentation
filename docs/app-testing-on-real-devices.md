@@ -99,6 +99,8 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 Real device app testing is the process of testing a mobile application to ensure that their functionality and usability is not comprised when installed across multiple Android and iOS devices. With <BrandName />, you can test mobile applications manually to ensure they perform seamlessly across 3000 + real mobile devices.
 
+For the basics, see our guide on [how to test on real devices](https://www.testmuai.com/blog/real-device-testing/).
+
 <div className="ytframe"> 
 <div className="youtube" data-embed="k-DgcPraWns" data-loading-attribute="eager">
   <div className="play-button"></div>
