@@ -49,12 +49,7 @@ look broken, and places it couldn't get past, each with its evidence. While it e
 from what it mapped, into your Test Manager project: the same kind of tests [assurance](/support/docs/kane-cli-assurance/)
 designs from a document.
 
-```
-your app ──► explorer (on HyperExecute) ──► map: screens · flows · findings
-                                        └─► design jobs ──► use-cases · scenarios · tests in your Test Manager project
-                                                                         │
-                                            kane-cli context pull ◄──────┘  then run them like any designed test
-```
+<img loading="lazy" src="/support/assets/images/kane-cli/sketchnotes/exploration-overview.svg" alt="How kane-cli explore works: kane-cli explore run sends the explorer, on HyperExecute, through your app's URL (or localhost through an LT tunnel); it builds the map of screens, flows and findings, which kane-cli explore view opens, and design jobs save use-cases, scenarios and tests to your Test Manager project, which kane-cli context pull brings into your folder as _test.md files to run with kane-cli testrun run" className="doc_img img_center" width="1000" height="563" />
 
 Use exploration when you have an app but no written requirements, or to find what your documents missed. Use
 [assurance](/support/docs/kane-cli-assurance/) when you have a PRD or a spec. Both put their tests in the same project, so you
