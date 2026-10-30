@@ -721,7 +721,7 @@ The shell form is rook run with the same options.
 | --name &lt;name&gt; | Give the run a readable label. |
 | --phases &lt;names&gt; | Run only a contiguous selection of prepare, open, execute, close, collect, and judge. |
 | --skip &lt;names&gt; | Run everything except the named phases. Cannot be combined with --phases. |
-| --concurrency &lt;n&gt; | Run 1 to 8 scenarios at once. An explicit value overrides the planner. |
+| --concurrency &lt;n&gt; | Run 1 to 8 scenarios at once. An explicit value overrides the planner. Since 0.1.17, your plan's scenarios-at-a-time limit caps it. |
 | --test | Run the current tree without placing the result on the shared project timeline. |
 | --run &lt;id&gt; | Continue that same run in place with the phases selected by --phases. |
 | --resume &lt;id&gt; | Carry compatible completed work forward from an earlier run. |
@@ -1077,7 +1077,7 @@ In the TUI, choosing **update now** at the startup notice or typing /update clos
 
 If you previously chose “never ask again” in the TUI update notice, run /update auto to re-enable automatic notices.
 
-The latest public release checked on October 28, 2026 is [0.1.16](https://github.com/LambdaTest/rook/releases/tag/v0.1.16). Use the installed command's help for version-specific options. If an npm 0.1.1 or 0.1.2 install cannot update, follow the [public-registry repair command](/support/docs/rook-installation/#repair-an-npm-011-or-012-installation). Windows users can follow [PowerShell setup and upgrades](/support/docs/rook-installation/#windows).
+The latest public release checked on October 30, 2026 is [0.1.17](https://github.com/LambdaTest/rook/releases/tag/v0.1.17). Use the installed command's help for version-specific options. If an npm 0.1.1 or 0.1.2 install cannot update, follow the [public-registry repair command](/support/docs/rook-installation/#repair-an-npm-011-or-012-installation). Windows users can follow [PowerShell setup and upgrades](/support/docs/rook-installation/#windows).
 
 ## Export Diagnostic Logs {#export}
 
