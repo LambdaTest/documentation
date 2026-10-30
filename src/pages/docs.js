@@ -339,7 +339,7 @@ export default function Home() {
             <Card href="/support/docs/developer-tools/" title="Key Features" desc="Explore real-time testing features" />
           </Section>
 
-          <Section icon={{ light: 'realDevice-light.svg', dark: 'realDevice-dark.svg' }} title="Real Device" blurb="Test apps and websites on 10,000+ real Android and iOS devices.">
+          <Section icon={{ light: 'realDevice-light.svg', dark: 'realDevice-dark.svg' }} title="Real Device" blurb="Test apps and websites on 50,000+ real Android and iOS devices.">
             <Card href="/support/docs/app-testing-on-real-devices/" title="Real Device App Testing" desc="Test apps on real devices" />
             <Card href="/support/docs/browser-testing-on-real-devices/" title="Real Device Browser Testing" desc="Test browsers on real devices" />
             <Card href="/support/docs/public-cloud-vs-private-cloud/" title="Private Cloud" desc="Dedicated real devices for teams" />
