@@ -117,6 +117,12 @@
                 ]
               },
               {
+                "group": "Exploration",
+                "pages": [
+                  "docs/kane-cli-exploration"
+                ]
+              },
+              {
                 "group": "Evidence",
                 "pages": [
                   "docs/kane-cli-evidence",
