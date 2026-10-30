@@ -1,6 +1,6 @@
 ---
 id: getting-started-with-appium-testing
-title: How to Run Your First Appium Test on TestMu AI
+title: "Run Appium Tests on TestMu AI: Getting Started"
 hide_title: true
 toc_max_heading_level: 2
 sidebar_label: "Run First Test"
@@ -42,7 +42,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "How to Run Your First Appium Test on TestMu AI",
+          "name": "Run Appium Tests on TestMu AI: Getting Started",
           "item": `${BRAND_URL}/support/docs/getting-started-with-appium-testing/`
         }]
       })
@@ -60,7 +60,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       "@type": "WebPage",
       "@id": "https://www.testmuai.com/support/docs/getting-started-with-appium-testing/"
     },
-    "headline": "How to Run Your First Appium Test on TestMu AI",
+    "headline": "Run Appium Tests on TestMu AI: Getting Started",
     "description": "Getting Started with Appium Testing on TestMu AI Upload, Script, Execute, View - Run your automation scripts seamlessly on 50,000+ real browsers and operating systems.",
     "url": "https://www.testmuai.com/support/docs/getting-started-with-appium-testing/",
     "image": {
@@ -102,7 +102,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
   }) }}
 />
 
-# How to Run Your First Appium Test on TestMu AI
+# Getting Started: Run Appium Tests on TestMu AI
 ---
 
 Running your first Appium test on TestMu AI executes native and hybrid mobile app End-to-End (E2E) testing on real Android and iOS devices. Clone a sample project, set credentials, upload your app, configure desired capabilities, and view detailed results on the dashboard.
@@ -450,7 +450,7 @@ Continue with these related guides:
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-        How to Run Your First Appium Test on TestMu AI
+        Run Appium Tests on TestMu AI: Getting Started
       </span>
     </li>
   </ul>
