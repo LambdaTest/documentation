@@ -1,15 +1,11 @@
 ﻿---
 
 id: getting-started-with-appium-testing
-
-title: Getting Started with Appium Testing
-
-hide_title: false
-
-sidebar_label: Appium Testing
-
-description: Getting Started with Appium Testing on TestMu AI Upload, Script, Execute, View - Run your automation scripts seamlessly on 3000+ real browsers and operating systems.
-
+title: "Run Appium Tests on TestMu AI: Getting Started"
+hide_title: true
+toc_max_heading_level: 2
+sidebar_label: "Run First Test"
+description: "Run your first Appium test on real Android and iOS devices on TestMu AI: clone a sample project, upload your app, set capabilities, and view results."
 keywords:
 
   - appium
@@ -83,9 +79,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
           "@type": "ListItem",
 
           "position": 3,
-
-          "name": "Getting Started With Appium Testing on TestMu AI",
-
+          "name": "Run Appium Tests on TestMu AI: Getting Started",
           "item": `${BRAND_URL}/support/docs/getting-started-with-appium-testing/`
 
         }]
@@ -107,8 +101,8 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       "@type": "WebPage",
       "@id": "https://www.testmuai.com/support/docs/getting-started-with-appium-testing/"
     },
-    "headline": "Getting Started with Appium Testing",
-    "description": "Getting Started with Appium Testing on TestMu AI Upload, Script, Execute, View - Run your automation scripts seamlessly on 3000+ real browsers and operating systems.",
+    "headline": "Run Appium Tests on TestMu AI: Getting Started",
+    "description": "Getting Started with Appium Testing on TestMu AI Upload, Script, Execute, View - Run your automation scripts seamlessly on 50,000+ real browsers and operating systems.",
     "url": "https://www.testmuai.com/support/docs/getting-started-with-appium-testing/",
     "image": {
       "@type": "ImageObject",
@@ -149,6 +143,10 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+# Getting Started: Run Appium Tests on TestMu AI
+---
+
+Running your first Appium test on TestMu AI executes native and hybrid mobile app End-to-End (E2E) testing on real Android and iOS devices. Clone a sample project, set credentials, upload your app, configure desired capabilities, and view detailed results on the dashboard.
 
 
 Appium is an open-source framework that lets you perform End-to-End (E2E) testing of mobile applications. It works across different platforms like Android and iOS, enabling you to write tests once and run them on various devices.  
@@ -413,9 +411,7 @@ We support all languages and frameworks that are compatible with Selenium, so in
     <li className="breadcrumbs__item breadcrumbs__item--active">
 
       <span className="breadcrumbs__link">
-
-      Appium Testing 
-
+        Run Appium Tests on TestMu AI: Getting Started
       </span>
 
     </li>
