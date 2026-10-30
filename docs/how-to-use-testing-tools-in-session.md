@@ -184,6 +184,12 @@ You can simulate these network environments using either pre-defined profiles or
 
 <img loading="lazy" src={require('../assets/images/real-device-app-testing/network-throttling-real-device.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 
+<div className="ytframe"> 
+<div className="youtube" data-embed="7ForBAP-KSw" data-loading-attribute="eager">
+  <div className="play-button"></div>
+</div>
+</div>
+
 Check out our detailed support documentation to know more about the [Network Throttling](/support/docs/app-auto-network-throttling/) feature.
 
 
