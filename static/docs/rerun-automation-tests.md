@@ -54,7 +54,7 @@ If the original test ran without this capability, **Reproduce** appears greyed o
 
 In this case, add the capability and run the test again. The new run is then eligible for Reproduce.
 
-`network.full.har` applies to web tests. Enabling it also populates the **Network** tab with a waterfall chart. See [HAR Log Viewer With Waterfall](/support/docs/har-log-viewer-with-waterfall/) for how to read it.
+`network.full.har` applies to web tests. Enabling it also populates the **Network** tab with a waterfall chart. See [HAR Log Viewer With Waterfall](/support/docs/debugging-options/#har-log-viewer) for how to read it.
 
 ## Choosing Between Replay and Reproduce
 
@@ -74,5 +74,5 @@ The **Re-runs** field in the test summary shows how many times a test has been r
 ## Next Steps
 
 - [Explore the Automation Dashboard](/support/docs/inside-testmu-platform/)
-- [HAR Log Viewer With Waterfall](/support/docs/har-log-viewer-with-waterfall/)
+- [HAR Log Viewer With Waterfall](/support/docs/debugging-options/#har-log-viewer)
 - [Debugging Options](/support/docs/debugging-options/)

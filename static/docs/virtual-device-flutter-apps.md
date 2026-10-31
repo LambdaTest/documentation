@@ -2,7 +2,7 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-Testing Flutter apps on TestMu AI runs Appium's Flutter driver across 5000+ real Android and iOS devices, letting you automate cross-platform apps from a single codebase. Compile your app in debug or profile mode, upload it, and execute automated tests.
+Testing Flutter apps on TestMu AI runs Appium's Flutter driver across 50,000+ real Android and iOS devices, letting you automate cross-platform apps from a single codebase. Compile your app in debug or profile mode, upload it, and execute automated tests.
 
 ## Prerequisites
 

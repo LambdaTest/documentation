@@ -4,10 +4,6 @@
 
 App automation on TestMu AI runs mobile app tests across cloud-based emulators and simulators, eliminating physical devices while validating functionality across many configurations. It supports the Appium framework, letting you clone a sample project, upload your app, and set capabilities.
 
-**Note**
-
-Currently, App Automation is available for Emulators and Simulators in the Beta phase, with support for the Appium framework. To use this feature, [Contact Sales](https://www.testmuai.com/contact-us/).
-
 ## Prerequisites
 
 Bеforе you gеt startеd with App Automation on LambdaTеst, makе surе you havе thе following prеrеquisitеs in placе:

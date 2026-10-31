@@ -444,5 +444,5 @@ Continue with the guides below to migrate, configure, and customize your Playwri
 
 - [Migrate your existing Playwright suite to the cloud](/support/docs/migrate-existing-playwright-tests/) moves tests you already run locally onto the TestMu AI grid.
 - [Set up Playwright test execution on TestMu AI](/support/docs/playwright-test-execution-setup/) configures your project to run Playwright tests on the cloud.
-- [Configure Playwright capabilities](/support/docs/capabilities-for-playwright/) customizes browser, OS, and session options for your runs.
+- [Configure Playwright capabilities](/support/docs/playwright-test-execution-setup/) customizes browser, OS, and session options for your runs.
 - [Automate WebView components with Playwright](/support/docs/playwright-webview-test/) tests WebView apps on the TestMu AI grid.

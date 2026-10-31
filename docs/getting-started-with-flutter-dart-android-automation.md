@@ -2,7 +2,7 @@
 id: getting-started-with-flutter-dart-android-automation
 title: Flutter Dart Testing On TestMu AI - Android
 sidebar_label: Flutter Dart Android
-description: This guide shows you how to run your first Flutter Dart test on 5000+ real Android devices using TestMu AI's Real Device Cloud.
+description: This guide shows you how to run your first Flutter Dart test on real Android devices using TestMu AI's Real Device Cloud of 50,000+ devices.
 keywords:
 - flutter
 - testmu ai
@@ -61,7 +61,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       "@id": "https://www.testmuai.com/support/docs/getting-started-with-flutter-dart-android-automation/"
     },
     "headline": "Flutter Dart Testing On TestMu AI - Android",
-    "description": "This guide shows you how to run your first Flutter Dart test on 5000+ real Android devices using TestMu AI's Real Device Cloud.",
+    "description": "This guide shows you how to run your first Flutter Dart test on real Android devices using TestMu AI's Real Device Cloud of 50,000+ devices.",
     "url": "https://www.testmuai.com/support/docs/getting-started-with-flutter-dart-android-automation/",
     "image": {
       "@type": "ImageObject",
@@ -179,7 +179,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       "@context": "https://schema.org",
       "@type": "HowTo",
       "name": "Run Your First Test",
-      "description": "This guide shows you how to run your first Flutter Dart test on 5000+ real Android devices using TestMu AI's Real Device Cloud.",
+      "description": "This guide shows you how to run your first Flutter Dart test on real Android devices using TestMu AI's Real Device Cloud of 50,000+ devices.",
       "step": [
         {
           "@type": "HowToStep",
