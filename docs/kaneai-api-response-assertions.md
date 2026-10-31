@@ -2,6 +2,7 @@
 id: kaneai-api-response-assertions
 title: API Response Assertions in KaneAI
 hide_title: false
+toc_max_heading_level: 2
 sidebar_label: API Response Assertions
 description: Validate API response values with JSONPath and check response structure with JSON Schema in KaneAI.
 keywords:

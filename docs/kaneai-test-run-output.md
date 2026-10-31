@@ -2,6 +2,7 @@
 id: kaneai-test-run-output
 title: Export KaneAI Test Run Data
 hide_title: false
+toc_max_heading_level: 2
 sidebar_label: Test Run Output
 description: Generate a CSV or XLSX file with the values and status used by each KaneAI test instance.
 keywords:

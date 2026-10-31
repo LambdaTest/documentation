@@ -2,6 +2,7 @@
 id: kaneai-scheduled-test-runs
 title: Scheduled Test Runs
 hide_title: false
+toc_max_heading_level: 2
 sidebar_label:  Scheduled Test Runs
 description: This documentation will help you to understand how to create a scheduled test runs via KaneAI
 keywords:

@@ -2,6 +2,7 @@
 id: kaneai-bulk-api-import
 title: Bulk API Import in KaneAI
 hide_title: false
+toc_max_heading_level: 2
 sidebar_label: Bulk API Import
 description: Import API requests from Postman collections or OpenAPI specifications into KaneAI, map variables, configure authentication, and add optional response-header assertions.
 keywords:

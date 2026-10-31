@@ -2,6 +2,7 @@
 id: kaneai-authoring-session
 title: Authoring Session States, Cursor, and Running Steps in KaneAI
 hide_title: false
+toc_max_heading_level: 2
 sidebar_label: Authoring Session
 description: Understand the KaneAI authoring session model - the Setting up, Authoring Steps, Paused, and Running states, the Error flag, the cursor, the four run actions, step statuses, and save states.
 keywords:

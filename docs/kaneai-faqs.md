@@ -2,6 +2,7 @@
 id: kaneai-faqs
 title: KaneAI FAQs
 hide_title: true
+toc_max_heading_level: 2
 sidebar_label: FAQs
 description: Frequently asked questions about KaneAI, including supported execution, results, and running tests on sites protected by CAPTCHA or Cloudflare Turnstile.
 keywords:

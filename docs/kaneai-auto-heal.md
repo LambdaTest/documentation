@@ -2,6 +2,7 @@
 id: kaneai-auto-heal
 title: Auto-Heal for Automation Scripts in KaneAI with HyperExecute
 hide_title: false
+toc_max_heading_level: 2
 sidebar_label: Auto-Heal
 description: This documentation will help you to understand how auto-healing works on KaneAI
 keywords:
