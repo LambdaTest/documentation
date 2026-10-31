@@ -3,7 +3,7 @@ id: virtual-device-flutter-apps
 title: How to test flutter apps using Appium framework on Virtual Devices
 hide_title: false
 sidebar_label: Flutter Apps
-description: Learn how to test flutter apps for Appium testing across 5000+ real Android and iOS devices for virtual devices
+description: Learn how to test flutter apps for Appium testing across 50,000+ real Android and iOS devices for virtual devices
 keywords:
 - how to test flutter apps
 - how to test flutter apps on android
@@ -55,7 +55,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       "@id": "https://www.testmuai.com/support/docs/virtual-device-flutter-apps/"
     },
     "headline": "How to test flutter apps using Appium framework on Virtual Devices",
-    "description": "Learn how to test flutter apps for Appium testing across 5000+ real Android and iOS devices for virtual devices",
+    "description": "Learn how to test flutter apps for Appium testing across 50,000+ real Android and iOS devices for virtual devices",
     "url": "https://www.testmuai.com/support/docs/virtual-device-flutter-apps/",
     "image": {
       "@type": "ImageObject",
@@ -133,7 +133,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
 />
 Google's Flutter is an open-source tool for developing native mobile apps. It enables developers to create cross-platform apps for both Android and iOS using a single codebase and programming language.
 
-You can now run End-to-End (E2E) testing for Flutter apps on the <BrandName /> Appium testing platform across 5000+ real Android and iOS devices. <BrandName /> supports Appium's Flutter driver that lets you test Flutter apps using the Appium framework. To test Flutter apps, you will need to upload apps on <BrandName /> cloud servers and then run your automated tests. 
+You can now run End-to-End (E2E) testing for Flutter apps on the <BrandName /> Appium testing platform across 50,000+ real Android and iOS devices. <BrandName /> supports Appium's Flutter driver that lets you test Flutter apps using the Appium framework. To test Flutter apps, you will need to upload apps on <BrandName /> cloud servers and then run your automated tests. 
 
 ## Prerequisites
 

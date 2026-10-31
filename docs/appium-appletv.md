@@ -192,8 +192,8 @@ Before you can start performing App automation testing with Appium, you would ne
 
 | Device                      | OS Version             |
 |-----------------------------|------------------------|
-|        Apple TV             | 18                     |
-|        Apple TV 4K          | 18                     |
+|        Apple TV             | 26                     |
+|        Apple TV 4K          | 26                     |
 
 ## Run your first test
 

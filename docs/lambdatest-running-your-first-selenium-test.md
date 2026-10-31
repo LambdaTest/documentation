@@ -265,6 +265,14 @@ $env:LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </TabItem>
 </Tabs>
 
+Your tests connect to the TestMu AI grid at the following hub URL:
+
+<VerifiedTag value="Verified" />
+
+```
+https://{username}:{accessKey}@hub.lambdatest.com/wd/hub
+```
+
 ## Step 4: Configure Your Test Capabilities
 ---
 

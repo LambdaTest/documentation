@@ -158,7 +158,8 @@ You can edit the information at any time and save the changes. If an app is no l
 
 :::note
 
-Only the app owner (the user who uploaded the app to <BrandName />) can change an app’s visibility. The app name can be changed by either the owner or an admin of the organization.
+- Only the app owner (the user who uploaded the app to <BrandName />) can change an app’s visibility. The app name can be changed by either the owner or an admin of the organization.
+- Organization admins have permission to delete applications uploaded by any member of the organization.
 :::
 
 <nav aria-label="breadcrumbs">
