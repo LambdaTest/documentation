@@ -56,7 +56,7 @@ Add your credentials as System variables through the Windows Environment Variabl
 
 Reference your environment variables in test scripts for each programming language.
 
-Now that we have set up our TestMu AI Authentication Credentials as System Environment Variables, we need to incorporate them in our [Selenium automation](https://www.testmuai.com/selenium-automation/) scripts for invoking your automation test suites on TestMu AI Selenium Grid. This section shows you how to reference environment variables for different programming languages.
+Now that we have set up our TestMu AI Authentication Credentials as System Environment Variables, we need to incorporate them in our [Selenium automation](https://www.testmuai.com/selenium/) scripts for invoking your automation test suites on TestMu AI Selenium Grid. This section shows you how to reference environment variables for different programming languages.
 
 ### Java
 

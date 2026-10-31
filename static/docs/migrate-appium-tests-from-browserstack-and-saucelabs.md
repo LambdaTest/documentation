@@ -1,4 +1,4 @@
-# Migrate Appium Tests
+# How to Migrate Appium Tests from BrowserStack and Sauce Labs to TestMu AI
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
@@ -58,17 +58,9 @@
   }) }}
 />
 
-## From Local Grid, BrowserStack Or SauceLabs To TestMu AI
+# Migrate Appium Tests From Local Grid, BrowserStack and Sauce Labs
 
-TestMu AI offers an online Appium automation grid to perform App automation. The online Appium Grid is available on local grid, BrowserStack, Sauce Labs and TestMu AI. Therefore, you can effortlessly migrate your current Appium automation scripts (or suites) from local grid, Sauce Labs or BrowserStack to TestMu AI.
-
-In this documentation, we look at how to leverage TestMu AI cloud for App automation and migrate your End-to-End (E2E) testing scripts (or test suites) from your local grid, Sauce Labs or BrowserStack. You can use TestMu AI's desired capabilities in your tests, authenticate your test session, and execute tests on the cloud.
-
-## Introduction
-
-Migrating your current local grid, BroweseStack or Sauce Labs tests to TestMu AI requires a few tweaks in your code. In this guide, we'll look at how to leverage TestMu AI's desired capabilities in your tests, authenticate your test session, and execute tests on our cloud browsers.
-
-## Migration From BrowserStack And SauceLabs
+Migrating your current local grid, BroweseStack or Sauce Labs tests to TestMu AI requires a few tweaks in your code. In this guide, we'll look at how to leverage TestMu AI's desired capabilities in your tests, authenticate your test session, and execute your End-to-End (E2E) tests on our cloud browsers.
 
 ## Changes In The Test Script
 
@@ -252,7 +244,7 @@ assert(len(search_results) > 0)
 driver.quit()
 ```
 
-#### **SauceLabs**
+#### **Sauce Labs**
 
 ```python
 #samplewikipedia.py

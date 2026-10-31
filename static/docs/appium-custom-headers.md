@@ -1,10 +1,8 @@
-#  CustomHeaders support for automation
+#  How to Use CustomHeaders Capability
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-Custom headers provide you the ability to keep crucial information about the request or response, such as the method, URL, and body content. You can modify the parameters of the HTTP requests delivered by your tests by manipulating with these headers, thereby around firewall restrictions.
-
-In this documentation, we will look at TestMu AI CustomHeaders, a `capability` that allows you to add custom headers to your tests and bypass firewall restrictions while performing automated browser testing.
+The customHeaders capability on TestMu AI adds custom HTTP headers to your automation requests, letting tests bypass firewall restrictions and control request or response metadata like the method, URL, and body. Configure it through the DesiredCapabilities class during automated testing.
 
 Custom header injection is not provided for Real Device Manual Sessions, as custom headers must be configured before the session is launched.
 
@@ -110,3 +108,5 @@ X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions.
 ```java
 X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions.
 ```
+
+Custom header injection is not provided for Real Device Manual Sessions, as custom headers must be configured before the session is launched.

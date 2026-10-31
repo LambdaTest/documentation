@@ -6,6 +6,8 @@
 
 TestMu AI's integration with PractiTest will further help to log bugs to your projects on PractiTest. You can easily find and report any cross browser compatibility issues to your team instantly.
 
+Considering a move off PractiTest? See [PractiTest alternatives](https://www.testmuai.com/practitest-alternative/).
+
 ## Integrate PractiTest from your TestMu AI Account
 
 **Step 1:** Login to your TestMu AI account. You should have Admin or User level access to see and install integrations.

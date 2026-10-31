@@ -1,8 +1,8 @@
 const React = require('react');
 
-export default function VirtualDeviceTag({ value, color, bgColor }) {
+export default function VirtualDeviceTag({ value, color, bgColor, solid }) {
     return (
-        <span className='virtualDeviceColor'>
+        <span className={solid ? 'virtualDeviceColor virtualDeviceSolid' : 'virtualDeviceColor'}>
             {value}
         </span>
     )
