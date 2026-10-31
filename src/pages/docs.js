@@ -226,10 +226,11 @@ export default function Home() {
             <Card href="/support/docs/hyperexecute-private-cloud-setup/" title="Private Cloud" desc="Deploy HyperExecute in private cloud" />
           </Section>
 
-          <Section icon={{ light: 'performance-light-icon.svg', dark: 'performance-dark-icon.svg' }} title="Performance Testing" blurb="Run JMeter and Gatling load tests on scalable cloud infrastructure." tag="NEW">
+          <Section icon={{ light: 'performance-light-icon.svg', dark: 'performance-dark-icon.svg' }} title="Performance Testing" blurb="Run JMeter, Gatling and k6 load tests on scalable cloud infrastructure." tag="NEW">
             <Card href="/support/docs/hyperexecute-performance-testing/" title="Getting Started" desc="Start load and performance testing" />
             <Card href="/support/docs/hyperexecute-run-jmeter-tests/" title="JMeter Testing" desc="Run JMeter tests at scale" />
             <Card href="/support/docs/hyperexecute-gattling-testing/" title="Gatling Testing" desc="Run Gatling load tests on cloud" />
+            <Card href="/support/docs/hyperexecute-k6-ui-testing/" title="k6 Testing" desc="Run k6 load tests at scale" />
           </Section>
 
           <Section icon={{ light: 'analytics-light-icon.svg', dark: 'analytics-dark-icon.svg' }} title="Insights" blurb="Track quality trends with dashboards, analytics, and AI-powered insights.">
@@ -272,14 +273,14 @@ export default function Home() {
           </Section>
 
           <Section icon={{ light: 'kanecli-light-icon.svg', dark: 'kanecli-dark-icon.svg' }} title="Kane CLI" blurb="An AI agent that proves your app works with evidence-backed verdicts." tag="NEW">
-            <Card href="/support/docs/kane-cli-introduction/" title="Getting Started" desc="Introduction to the Kane CLI" />
-            <Card href="/support/docs/kane-cli-installation/" title="Installation" desc="Install the Kane CLI locally" />
-            <Card href="/support/docs/kane-cli-quickstart/" title="Quick Start" desc="Run your first CLI test" />
-            <Card href="/support/docs/kane-cli-writing-objectives/" title="Writing Objectives" desc="Write clear test objectives" />
-            <Card href="/support/docs/kane-cli-generate/" title="Generate Test Cases" desc="Generate test cases automatically" />
-            <Card href="/support/docs/kane-cli-checkpoints/" title="Checkpoints" desc="Add visual and data checkpoints" />
-            <Card href="/support/docs/kane-cli-agent-mode/" title="Agent Mode" desc="Run tests in agent mode" />
-            <Card href="/support/docs/kane-cli-cli-reference/" title="CLI Reference" desc="Full command-line reference guide" />
+            <Card href="/docs/kane-cli-introduction" title="Getting Started" desc="Introduction to the Kane CLI" />
+            <Card href="/docs/kane-cli-installation" title="Installation" desc="Install the Kane CLI locally" />
+            <Card href="/docs/kane-cli-quickstart" title="Quick Start" desc="Run your first CLI test" />
+            <Card href="/docs/kane-cli-writing-objectives" title="Writing Objectives" desc="Write clear test objectives" />
+            <Card href="/docs/kane-cli-generate" title="Generate Test Cases" desc="Generate test cases automatically" />
+            <Card href="/docs/kane-cli-checkpoints" title="Checkpoints" desc="Add visual and data checkpoints" />
+            <Card href="/docs/kane-cli-agent-mode" title="Agent Mode" desc="Run tests in agent mode" />
+            <Card href="/docs/kane-cli-cli-reference" title="CLI Reference" desc="Full command-line reference guide" />
           </Section>
 
           <Section icon={{ light: 'webscanner-light-icon.svg', dark: 'webscanner-dark-icon.svg' }} title="Web Scanner" blurb="Automatically scan websites for visual and accessibility issues.">
@@ -338,7 +339,7 @@ export default function Home() {
             <Card href="/support/docs/developer-tools/" title="Key Features" desc="Explore real-time testing features" />
           </Section>
 
-          <Section icon={{ light: 'realDevice-light.svg', dark: 'realDevice-dark.svg' }} title="Real Device" blurb="Test apps and websites on 10,000+ real Android and iOS devices.">
+          <Section icon={{ light: 'realDevice-light.svg', dark: 'realDevice-dark.svg' }} title="Real Device" blurb="Test apps and websites on 50,000+ real Android and iOS devices.">
             <Card href="/support/docs/app-testing-on-real-devices/" title="Real Device App Testing" desc="Test apps on real devices" />
             <Card href="/support/docs/browser-testing-on-real-devices/" title="Real Device Browser Testing" desc="Test browsers on real devices" />
             <Card href="/support/docs/public-cloud-vs-private-cloud/" title="Private Cloud" desc="Dedicated real devices for teams" />

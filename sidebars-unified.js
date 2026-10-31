@@ -97,7 +97,6 @@ const CDPTestingSidebar = [backToDocs, { type: 'doc', id: 'run-tests-with-chrome
 const BiDiTestingSidebar = [backToDocs, { type: 'doc', id: 'run-tests-with-webdriver-bidi', label: 'BiDi Testing' }];
 
 // App Automation
-const AppiumTestingSidebar = dedicated(s.AppiumTestingSidebar);
 const EspressoTestingSidebar = dedicated(s.EspressoTestingSidebar);
 const FlutterTestingSidebar = dedicated(s.FlutterTestingSidebar);
 const MobilewrightTestingSidebar = dedicated(s.MobilewrightTestingSidebar);
@@ -165,6 +164,18 @@ const SettingsAndSecuritySidebar = [
 // link (above), so these docs live ONLY here — Docusaurus displays this dedicated
 // sidebar whenever a reader is inside XCUI Testing.
 const XCUITestingSidebar = [backToDocs, ...items(s.XCUITestingSidebar)];
+// Appium Testing is a link in docsSidebar (above), so its docs live ONLY in this
+// dedicated sidebar — Docusaurus displays it (with the back-to-docs link)
+// whenever a reader is inside an Appium Testing page.
+const AppiumTestingSidebar = [
+  backToDocs,
+  // Bold the top-level category labels (styled via .appium-sidebar-category in custom.css).
+  ...items(s.AppiumTestingSidebar).map((item) =>
+    item && item.type === 'category'
+      ? { ...item, className: 'appium-sidebar-category' }
+      : item
+  ),
+];
 
 module.exports = {
   docsSidebar,

@@ -390,7 +390,7 @@ Nothing in the project is changed. The command reads the authenticated account a
 - If authentication is missing or expired, run /login and /auth status.
 - If the controller cannot be reached, run /doctor.
 - In automation, use rook plan --json and inspect the response as well as the exit status. A null credit balance means unknown, not zero or unlimited. The account balance is not an enforced task-wide spending cap.
-- Since 0.1.13, Rook checks your organization's Agent Assurance plan before any model call or credit spend. With no plan, an ended free trial, or an expired subscription, work is refused with plan_required whatever the credit balance. On a plan without Rook cloud, such as Starter, syncing, cloud project status, and recording runs on Rook cloud are refused with upgrade_plan. Each refusal names the billing page that lifts it; see [plan refusals](/support/docs/agent-assurance-troubleshooting/#plan-refusals).
+- Since 0.1.13, Rook checks your organization's Agent Assurance plan before any model call or credit spend. With no plan, an ended free trial, or an expired subscription, work is refused with plan_required whatever the credit balance. On a plan without Rook cloud, such as Starter, syncing, cloud project status, and recording runs on Rook cloud are refused with upgrade_plan. Each refusal names the page that lifts it: the billing plans page, or, since 0.1.14, the onboarding page that starts the free trial for an organization that has never had a plan; see [plan refusals](/support/docs/agent-assurance-troubleshooting/#plan-refusals).
 
 ## Projects and Discovery {#projects-and-discovery}
 
@@ -721,7 +721,7 @@ The shell form is rook run with the same options.
 | --name &lt;name&gt; | Give the run a readable label. |
 | --phases &lt;names&gt; | Run only a contiguous selection of prepare, open, execute, close, collect, and judge. |
 | --skip &lt;names&gt; | Run everything except the named phases. Cannot be combined with --phases. |
-| --concurrency &lt;n&gt; | Run 1 to 8 scenarios at once. An explicit value overrides the planner. |
+| --concurrency &lt;n&gt; | Run 1 to 8 scenarios at once. An explicit value overrides the planner. Since 0.1.17, your plan's scenarios-at-a-time limit caps it. |
 | --test | Run the current tree without placing the result on the shared project timeline. |
 | --run &lt;id&gt; | Continue that same run in place with the phases selected by --phases. |
 | --resume &lt;id&gt; | Carry compatible completed work forward from an earlier run. |
@@ -989,7 +989,7 @@ rook mcp disable  [--json]
 rook mcp approve  [--origin project|discovered] [--json]
 ~~~
 
-For stdio servers, pass the command after the server name, using -- to separate its arguments from Rook's options. The registry accepts declarations for stdio, http, sse, and ws; remote declarations require --url. Currently, only stdio connections execute. The other transports remain listed as unsupported-transport; accepting a declaration is not a successful connection.
+For stdio servers, pass the command after the server name, using -- to separate its arguments from Rook's options. The registry accepts declarations for stdio, http, sse, and ws; remote declarations require --url. Since 0.1.14, only stdio and http connections execute; an http server connects over Streamable HTTP after the same approval as a stdio server. sse and ws remain listed as unsupported-transport; accepting a declaration is not a successful connection.
 
 #### Real-world verification example {#mcp-real-world-verification-example}
 
@@ -1077,7 +1077,7 @@ In the TUI, choosing **update now** at the startup notice or typing /update clos
 
 If you previously chose “never ask again” in the TUI update notice, run /update auto to re-enable automatic notices.
 
-The latest public release checked on October 23, 2026 is [0.1.13](https://github.com/LambdaTest/rook/releases/tag/v0.1.13). Use the installed command's help for version-specific options. If an npm 0.1.1 or 0.1.2 install cannot update, follow the [public-registry repair command](/support/docs/rook-installation/#repair-an-npm-011-or-012-installation). Windows users can follow [PowerShell setup and upgrades](/support/docs/rook-installation/#windows).
+The latest public release checked on October 30, 2026 is [0.1.17](https://github.com/LambdaTest/rook/releases/tag/v0.1.17). Use the installed command's help for version-specific options. If an npm 0.1.1 or 0.1.2 install cannot update, follow the [public-registry repair command](/support/docs/rook-installation/#repair-an-npm-011-or-012-installation). Windows users can follow [PowerShell setup and upgrades](/support/docs/rook-installation/#windows).
 
 ## Export Diagnostic Logs {#export}
 

@@ -1,6 +1,7 @@
 ---
 id: device-passcode-appautomation
 title: Device Passcode in App Automation on Real Devices
+hide_title: true
 sidebar_label: Device Passcode
 description: Run automated tests on iOS apps that require a device passcode during execution on real devices.
 keywords:
@@ -17,6 +18,7 @@ url: https://www.testmuai.com/support/docs/device-passcode-appautomation/
 site_name: TestMu AI
 slug: device-passcode-appautomation/
 canonical: https://www.testmuai.com/support/docs/device-passcode-appautomation/
+toc_max_heading_level: 2
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -24,8 +26,8 @@ import { YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY } from "@site/src/
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import RealDeviceTag from '../src/component/realDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import RealDeviceTag from '@site/src/component/realDevice';
 import VerifiedTag from '@site/src/component/verifiedTag';
 
 
@@ -46,7 +48,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Device Passcode in App Automation",
+          "name": "Device Passcode in App Automation on Real Devices",
           "item": `${BRAND_URL}/support/docs/device-passcode-appautomation/`
         }]
       })
@@ -126,7 +128,13 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     "dateModified": "2026-09-09T19:10:37+05:30"
   }) }}
 />
-<RealDeviceTag value="Real Device" /> 
+
+<RealDeviceTag value="Real Device" />
+
+# Device Passcode in App Automation on Real Devices
+
+
+Device Passcode in App Automation on TestMu AI runs tests on passcode-protected real iOS devices. Apps enforcing a passcode, such as banking, enterprise, or MDM apps, unlock during execution so your Appium scripts complete secure login and sensitive workflows automatically.
 
 For certain use cases, you may need to perform tests on devices that are **passcode-protected**. Apps handling sensitive data (for example, **banking apps**, **enterprise apps**, or apps distributed through **MDM**) often enforce device passcodes for enhanced security.  
 
@@ -170,11 +178,11 @@ Use the `enablePasscode` capability to configure passcode-protected devices duri
 |-------------------|---------|---------|-------------|
 | **enablePasscode** | Boolean | `false` | Enable passcode devices for running tests. Use `true` to start the session with a system passcode configured. |
 
-<VerifiedTag value="Verified" />
-
 <Tabs>
   <TabItem value="ios" label="iOS">
 
+
+<VerifiedTag value="Verified" />
 
 ```python
 {
@@ -192,6 +200,8 @@ Use the `enablePasscode` capability to configure passcode-protected devices duri
 
 
 
+<VerifiedTag value="Verified" />
+
 ```python
 {
     "platformName": "android",
@@ -208,6 +218,6 @@ Use the `enablePasscode` capability to configure passcode-protected devices duri
 
 :::note
 - Passcode entry screens are **not visible** in the stream for security reasons. You may see a blank screen briefly during automation.  
-- Enabling passcode for iOS Devices may increase the setup time of your test by **25–30 seconds** compared to regular sessions.  
+- Enabling passcode for iOS Devices may increase the setup time of your test by **25-30 seconds** compared to regular sessions.  
 :::
 

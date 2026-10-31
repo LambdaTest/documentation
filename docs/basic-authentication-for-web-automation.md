@@ -2,7 +2,7 @@
 id: basic-authentication-for-web-automation
 title: Basic Authentication for Safari Web Automation
 sidebar_label: Basic Authentication for Safari Web Automation
-description: Now you can Basic Authentication during your Safari web automation sessions on iOS real devices with TestMu AI Real Device Cloud Platform with 50,000+ real mobile devices.
+description: Handle HTTP Basic Authentication in Safari web automation sessions on iOS real devices using a lambda hook on TestMu AI Real Device Cloud.
 keywords:
   - basic authentication
   - safari web automation
@@ -14,6 +14,7 @@ url: https://www.testmuai.com/support/docs/basic-authentication-for-web-automati
 site_name: TestMu AI
 slug: basic-authentication-for-web-automation/
 canonical: https://www.testmuai.com/support/docs/basic-authentication-for-web-automation/
+toc_max_heading_level: 2
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -42,7 +43,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Biometric Authentication",
+          "name": "Basic Authentication for Safari Web Automation",
           "item": `${BRAND_URL}/support/docs/basic-authentication-for-web-automation/`
         }]
       })
@@ -115,6 +116,8 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     "dateModified": "2026-09-09T19:10:37+05:30"
   }) }}
 />
+
+Basic Authentication on TestMu AI lets you pass HTTP username and password credentials during Safari web automation sessions on real iOS devices, using a lambda hook that answers Base64-encoded Authorization prompts automatically so your scripts reach protected pages without sign-in.
 
 ## Introduction
 ---
@@ -215,7 +218,7 @@ Please note, this hook is designed to be used exclusively with Safari on iOS Rea
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-      Basic Authentication for Safari Web Automation
+        Basic Authentication for Safari Web Automation
       </span>
     </li>
   </ul>

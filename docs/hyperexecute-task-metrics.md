@@ -104,6 +104,8 @@ The effectiveness of your product directly influences your user experience and h
 
 Test Metrics feature helps you to track whether your product is making inefficient use of resources or not, such as the CPU, and memory utilization by your product at an early stage of the development process. By doing so, you can ensure that your product functions optimally and provides a seamless user experience, increasing its chances of successful adoption by users.
 
+To see utilization across jobs and machines, use the [HyperExecute resource utilization widgets](/support/docs/hyperexecute-resource-widgets/).
+
 This document outlines how to monitor CPU and Memory consumption of virtual machines (VMs) at various levels:
 
 ## Task Level View

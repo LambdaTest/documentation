@@ -157,6 +157,18 @@ Have these in place before you run any of the frameworks below.
 3. Install [Python](https://www.python.org/downloads/) and pip.
 4. Install the Selenium client and WebDriver bindings, and (recommended) `virtualenv` to isolate dependencies.
 
+To create and activate a virtual environment on macOS or Linux:
+
+<VerifiedTag value="Verified" />
+
+```bash
+pip install virtualenv
+virtualenv venv
+source venv/bin/activate
+```
+
+On Windows, activate it with `venv\Scripts\activate` instead.
+
 ## Set Your Credentials
 ---
 
@@ -327,23 +339,39 @@ git clone https://github.com/LambdaTest/Robot-Selenium-Sample
 cd Robot-Selenium-Sample
 ```
 
-2. Set your browser and OS in the variables block of `common.robot`:
+2. Review the browser and grid settings in `Resources/Common.robot`. The browser comes from the `ROBOT_BROWSER` and `browserName` values that the Makefile passes in, and the credentials are read from your `LT_USERNAME` and `LT_ACCESS_KEY` environment variables:
 
 <VerifiedTag value="Verified" />
 
-```robotframework title="common.robot"
+```robotframework title="Resources/Common.robot"
 *** Settings ***
-Library  Selenium2Library
+Library  SeleniumLibrary
+Library  LambdaTestStatus.py
 
 *** Variables ***
-@{_tmp}
-    ...  browserName: %{browserName},
-    ...  platformName: %{platform},
-    ...  browserVersion: %{version},
-    ...  name: RobotFramework Lambda Test
-${BROWSER}          %{ROBOT_BROWSER}
-${CAPABILITIES}     ${EMPTY.join(${_tmp})}
-${REMOTE_URL}       https://${KEY}@hub.lambdatest.com/wd/hub
+${BROWSER}          ${ROBOT_BROWSER}
+&{lt_options}       browserName=${browserName}      name=RobotFramework Lambda Test    buildName=Robot Build
+${REMOTE_URL}       http://%{LT_USERNAME}:%{LT_ACCESS_KEY}@hub.lambdatest.com/wd/hub
+${TIMEOUT}          30000
+${IMPLICIT_WAIT}    9seconds
+
+*** Keywords ***
+Open test browser
+    [Timeout]   ${TIMEOUT}
+    ${options}=    Evaluate    sys.modules['selenium.webdriver'].${BROWSER}Options()    sys, selenium.webdriver
+    Call Method    ${options}    set_capability    LT:Options    ${lt_options}
+    Open Browser    https://www.testmuai.com/selenium-playground/todo-app/
+    ...    browser=${BROWSER}
+    ...    remote_url=${REMOTE_URL}
+    ...    options=${options}
+    Set Selenium Implicit Wait    ${IMPLICIT_WAIT}
+
+Close test browser
+    Run keyword if    '${REMOTE_URL}' != ''
+    ...    Report Lambdatest Status
+    ...    ${TEST_NAME}
+    ...    ${TEST_STATUS}
+    Close All Browsers
 ```
 
 3. Install the dependencies:

@@ -42,6 +42,18 @@ Run your Ruby Selenium tests on the TestMu AI cloud grid across 10,000+ browser/
 3. Install [Ruby](https://www.ruby-lang.org/en/downloads/) and the `gem` package manager.
 4. Install the `selenium-webdriver` gem (and `parallel_tests` for parallel runs), pulled in by the sample projects via Bundler.
 
+To install Ruby from the terminal:
+
+```bash
+# macOS (Homebrew)
+brew install ruby
+
+# Ubuntu / Debian
+sudo apt-get install ruby-full
+```
+
+On Windows, use the [RubyInstaller](https://rubyinstaller.org/downloads/).
+
 ## Set Your Credentials
 
 Your Username and Access Key are read from environment variables, set once per operating system.

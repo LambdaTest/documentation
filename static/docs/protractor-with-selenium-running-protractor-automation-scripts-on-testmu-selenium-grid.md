@@ -5,7 +5,7 @@
 Run Protractor tests on the TestMu AI cloud grid. This guide covers setup, running a sample test, configuring capabilities, and testing locally hosted pages.
 
 **Deprecated Framework**
-Protractor reached end-of-life in August 2023. Consider migrating to [Playwright](/support/docs/playwright-testing/) or [WebDriverIO](/support/docs/webdriverio-with-selenium-running-webdriverio-automation-scripts-on-testmu-selenium-grid/). This guide is maintained for existing users.
+Protractor reached end-of-life in August 2023. Consider migrating to [Playwright](/support/docs/playwright-testing/) or [WebDriverIO](/support/docs/javascript-with-selenium-running-javascript-automation-scripts-on-testmu-selenium-grid/?framework=webdriverio). This guide is maintained for existing users.
 
 **Sample repo**
 All the code used in this guide is available in the sample repository.
