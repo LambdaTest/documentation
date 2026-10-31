@@ -278,7 +278,11 @@ When your test runs, KaneAI adds your snippet directly into the generated test c
 ## JS Snippet Workarounds by Scenario
 ***
 
-Now that you can run a JavaScript step, the rest of this page is a library of ready-to-use snippets for the scenarios where natural language falls short. Each section below names where natural language is unreliable and gives the exact snippet to use instead.
+Now that you can run a JavaScript step, the rest of this page is a library of ready-to-use snippets for the scenarios where natural language falls short.
+
+KaneAI's natural language engine handles the vast majority of web testing scenarios. However, some interactions require direct DOM manipulation or precise programmatic control that natural language can't reliably express. For these cases, KaneAI provides **JS Snippets**: the ability to execute JavaScript code directly on the page.
+
+This section is organized by common QA scenario, showing you **when** natural language falls short and **exactly what JS snippet** to use as a workaround.
 
 ### Add a JS Snippet as a Step
 ***

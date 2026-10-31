@@ -302,25 +302,76 @@ Here is a video to further explain the JSON variables usage:
 ### Assert on a JSON API Response
 ***
 
-When a step makes an API call, KaneAI stores the entire response as a JSON variable, so you can assert on the status code or any field in the response body. The following walkthrough shows the end-to-end flow.
+This section outlines the process of using JSON variables in KaneAI to assert specific objects within an API response. It provides a step-by-step procedure for executing API calls, examining responses, and performing assertions on both status and body of the response.
 
-**1. Make the API call.** Choose the HTTP method (GET, POST, and so on), add any required headers and a request body, then send the request to your endpoint.
+#### Prerequisites
+
+- Access to KaneAI platform
+- Basic understanding of API testing
+- Familiarity with JSON structures
+
+#### Step 1: Understanding JSON Variable Assertions
+
+In KaneAI, you can use JSON variables to perform detailed assertions on API responses. This allows you to validate specific objects and elements within the response structure.
+
+#### Step 2: Initiating an API Call
+
+- Navigate to your desired API endpoint (e.g., a pet store website)
+- Configure the necessary API call parameters
+- Execute the API request
+
+##### Example Workflow:
+
+- Select the appropriate HTTP method (GET, POST, etc.)
+- Add required headers
+- Input any necessary request body
+- Send the request
 
 <img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/variables/json-variable/image2.jpg').default} alt="Configure and send an API request in KaneAI" className="doc_img img_center"/>
 
-**2. Access the response variables.** KaneAI automatically generates variables for the response status code, body, headers, and related metadata.
+#### Step 3: Accessing Response Variables
+
+After executing the API call, KaneAI automatically generates variables containing:
+
+- Response status code
+- Response body
+- Response headers
+- Other relevant metadata
 
 <img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/variables/json-variable/image3.jpg').default} alt="Response variables generated from the API call" className="doc_img img_center"/>
 
-**3. Assert the response status.** Type `{{` to open the variable list, select the status variable, and set the expected code. For example, expect `200`; if the actual status is `500`, the assertion fails.
+#### Step 4: Asserting Response Status
+
+To assert the response status:
+
+- Use double curly braces `{{` to access the variable list
+- Navigate using arrow keys to select the status variable
+- Define your expected status code
 
 <img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/variables/json-variable/image4.jpg').default} alt="Select the status variable using the double-curly-brace syntax" className="doc_img img_center"/>
 
+##### Example:
+
+- Expected status: 200
+- If actual status is 500, the assertion will fail
+
 <img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/variables/json-variable/image5.jpg').default} alt="Assert the expected response status code" className="doc_img img_center"/>
 
-**4. Assert on the response body.** Open the variable menu again with `{{`, browse to the specific JSON element you want to validate, and create the assertion, for example confirming that a `dogs` element exists or that a nested property matches an expected value.
+#### Step 5: Asserting Response Body
+
+Navigate through the response body using the same double curly brace method:
+
+- Open the variable selection menu with `{{`
+- Browse to the specific JSON element you want to validate
+- Create an assertion for that element
 
 <img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/variables/json-variable/image6.jpg').default} alt="Browse to a JSON element in the response body" className="doc_img img_center"/>
+
+##### Example Validation:
+
+- Check if 'dogs' element exists in the response
+- Verify specific property values
+- Validate nested JSON structures
 
 <img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/variables/json-variable/image7.jpg').default} alt="Validate a nested value in the JSON response body" className="doc_img img_center"/>
 
@@ -445,19 +496,19 @@ This runs the test case in the environment associated with the specified environ
 ## Secrets
 ***
 
-For sensitive values you would not want stored as plain variables, use secrets instead. Secret variables store sensitive data such as passwords and API tokens in HashiCorp Vault, so values never appear in logs or generated code.
+For sensitive values you would not want stored as plain variables, use secrets instead. KaneAI now supports the use of secret variables to enhance security and streamline functionality. This feature leverages HashiCorp Vault for secure management of sensitive information, ensuring robust protection for your data while maintaining ease of use. This section outlines the process for creating, managing, and utilizing secret variables within KaneAI.
 
 :::note
-- In the Web/App Agent, you see all secrets created at your user level or your organisation level.
-- A user role can create only user-level secrets. An admin can create user-level or org-level secrets.
-- You can delete your own secrets. Only an admin can delete org-level secrets.
-- Secrets are accessible in test steps, modules, and test cases.
+- In Web/App Agent, users will see list of all secrets created at user or org level for that user.
+- A user role can create only user level secrets, while an admin can create either user-level or org-level secrets.
+- A user can delete their own secrets, but only an admin can delete org-level secrets.
+- Secret variables will be accessible in test steps, modules, and test cases.
 :::
 
 ### Create Secrets
 ***
 
-Create secrets from either of these two places.
+You can create Secrets variables via:
 - Test Manager
 - Web/App Agent
 
@@ -481,7 +532,7 @@ Create secrets from either of these two places.
 ### Use Your Secrets
 ***
 
-Once created, reference a secret in your test steps using **double-curly braces syntax (e.g.,`{{email}}`)**.
+Once created, you can now reference any secret variables in your test steps using **double-curly braces syntax (e.g.,`{{email}}`)**.
 
 > To use a previously created variable in any subsequent step or test case, reference the variable using the same `{{` syntax. This will list down all existing variables for this test.
 
@@ -519,7 +570,7 @@ use the value of {{secrets.user.email}} in the email text field
 ### Data Masking and Anonymization
 ***
 
-TestMu AI protects sensitive data in tests through synthetic substitution and capture-time masking. Four mechanisms apply.
+TestMu AI protects sensitive data in tests through synthetic substitution and capture-time masking.
 
 - **AI Autofill (synthetic substitution)** - generates realistic substitute values against your real dataset structure, so production values are replaced rather than encoded. No mapping between original and substituted values is retained, removing the re-identification vector.
 - **Secret variables (HashiCorp Vault)** - values marked as secret are resolved at runtime from HashiCorp Vault and are never written to action logs, session logs, screenshots (known secret values are redacted from screenshot OCR before upload), video recordings, run summaries, or reports.
@@ -529,31 +580,37 @@ TestMu AI protects sensitive data in tests through synthetic substitution and ca
 ## Smart Variables
 ***
 
-Where the variables and secrets above hold values you supply, KaneAI also provides built-in smart variables for dynamic values it resolves for you. Smart variables are predefined, dynamic variables you use across test steps, modules, and test cases. They resolve to real-time values at run time, so tests adapt to the current environment and conditions without manual input.
+Where the variables and secrets above hold values you supply, KaneAI also provides built-in smart variables for dynamic values it resolves for you.
 
-They cover date and time, system information, location, connectivity, randomization, and device-specific details.
+KaneAI's Smart Variables feature enhances test automation by providing predefined, dynamic variables that can be used across test steps, modules, and test cases. These variables enable dynamic adaptation to various environments and conditions, improving test reliability, reusability, and efficiency. 
+
+They cover categories such as date & time, system information, location, connectivity, randomization, and device-specific details, allowing users to create flexible and robust test scenarios that adapt to real-time conditions without manual input.
 
 :::note
- Smart variables are predefined. You cannot create or delete them. They are accessible in test steps, modules, and test cases.
- When you type `{{` in the Web/App Agent, an overlay displays all available variables, including regular, secret, and smart variables. Smart variables are labeled "Smart" with a description.
+ Smart variables are predefined and cannot be created or deleted by users. They are accessible in test steps, modules, and test cases.
+ When typing `{{` in the Web/App Agent, an overlay displays all available variables, including regular, secret, and smart variables, with smart variables labeled as "Smart" and accompanied by descriptions.
 :::
 
-Smart variables are listed under the variables section within an authoring session.
+Smart Variables are listed under the variables section within an authoring session.
 
-<img loading="lazy" src={require('../assets/images/kane-ai/features/smart-variables/smart-variables-list.png').default} className="doc_img"/> 
+<img loading="lazy" src={require('../assets/images/kane-ai/features/smart-variables/smart-variables-list.png').default} className="doc_img"/>
 
-### Use Smart Variables
+### How to Use Smart Variables in Your Tests?
 ***
 
-Reference smart variables in test steps, modules, and test cases using the `{{smart.variable_name}}` syntax. Follow these steps.
+Smart variables can be referenced in test steps, modules, and test cases using the `{{smart.variable_name}}` syntax. Follow these steps to integrate them into your tests:
 
-#### Step 1: Open the Test for Editing
+#### Step 1: Access the Test Environment
 
-Enter authoring or editing mode for a KaneAI test case.
+Enter the Authoring or Editing mode for a KaneAI test case
 
 #### Step 2: Reference a Smart Variable
 
-In the **Write a Step** field, type `{{` to trigger the variable overlay, which lists all available variables including smart variables labeled "Smart". Type to search and filter, then select the one you want. For example, to use the current date:
+In the "Write a Step" field type `{{` to trigger the variable overlay. This will display a list of all available variables, including smart variables labeled with "Smart".
+
+For example, to use the current date in a test step:
+
+Use `{{` syntax to get the list of smart variables listed and type to search and filter them out then select the desired one.
 
 <VerifiedTag value="Verified" />
 
@@ -565,16 +622,16 @@ Enter the value of {{smart.current_date}} in the date field
 
 #### Step 3: Select a Smart Variable
 
-From the overlay, select the smart variable. KaneAI inserts it into the step in the correct syntax (for example, `{{smart.current_date}}`).
+From the overlay, select the desired smart variable. The variable will be inserted into the test step in the correct syntax (e.g., `{{smart.current_date}}`).
 
 #### Step 4: Run Your Test
 
-When the step executes, the smart variable resolves to its value for the current environment or condition (for example, `2025-04-29` for `{{smart.current_date}}`).
+Once the test step is executed the smart variable will dynamically resolve to its corresponding value based on the current environment or condition (e.g., `2025-04-29` for `{{smart.current_date}}`).
 
 ### Supported Smart Variables
 ***
 
-The table below lists every supported smart variable by category, with its syntax and description.
+Below is a comprehensive list of supported smart variables, organized by category, along with their syntax and descriptions:
 
 | Category              | Variable Name         | Syntax                        | Description                                                                 |
 |-----------------------|-----------------------|-------------------------------|-----------------------------------------------------------------------------|

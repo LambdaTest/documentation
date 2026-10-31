@@ -223,6 +223,57 @@ Editing a step that had already run and passed returns it to the **Queued** stat
 
 This ensures that recorded steps remain consistent with the actual UI interaction performed during the session.
 
+### Rename Test Steps
+***
+
+Once your actions are recorded as steps, you can rename them to make the step list easier to read. Rename test steps for API, JS, Database, Network Assertion and Visual Comparison to improve clarity and consistency without affecting functionality.
+
+#### Why Rename Steps
+***
+
+The **Rename Test Steps** feature allows users to change a test step’s name without changing how it works.
+
+**Benefits:**
+- Improves readability of test steps
+- No impact on execution or instruction logic
+- Renamed step name stays even if instruction changes later
+- Works for Web and Mobile slash command instructions
+- The step names are updated even in the execution command logs.
+
+#### How to Rename a Step
+***
+
+1. Ensure the authoring session is open and the relevant step is visible.
+2. Pause the session. Renaming is available only while the session is **Paused**, along with the other step editing actions. See [Session states](/support/docs/kaneai-authoring-session/#session-states).
+3. Click on the step name to make it editable.
+4. Enter the new name and press **Enter** or click outside to save.
+5. Click **Resume**. Your device is not restarted and no steps are re-run — the session simply returns to Authoring Steps, with the cursor back at the bottom-most step.
+
+> **Note:** Only the step name changes; the instruction logic and behavior remain the same.
+
+<img loading="lazy" src={require('../assets/images/kane-ai/features/rename-instructions/rename_instruction.jpg').default} alt="rename instructions" className="doc_img"/>
+
+#### Rename Limitations
+***
+
+- Supported instruction types:
+  - **Web:** API, DB, JS, Visual comparison, Network assertion
+  - **Mobile:** API, DB, JS, Visual comparison
+- Only the **step name** can be updated (max 255 characters)
+- Renaming inside Modules is not supported
+- Step rename history is not versioned
+- Special characters `{}` appear as `{{}}` in the generated code
+
+<img loading="lazy" src={require('../assets/images/kane-ai/features/rename-instructions/summary_page.jpg').default} alt="rename summary page" className="doc_img"/>
+
+#### Rename Troubleshooting
+***
+
+| Issue | Cause | Solution |
+|-------|-------|---------|
+| Step name not updated | Save action missed | Re-edit and save |
+| Step name resets after refresh | Network/session issue | Refresh page and retry |
+
 ## Limitations
 ***
 
@@ -466,56 +517,6 @@ System level popups are not supported through Manual Interaction. These flows ne
 Check whether recording is paused. When Pause Recording is active the session is in the Paused state, so your interactions affect the application but are not captured as test steps. Click **Resume** to start capturing again.
 
 
-
-## Rename Test Steps
-***
-
-Once your actions are recorded as steps, you can rename them to make the step list easier to read. Rename test steps for API, JS, Database, Network Assertion, and Visual Comparison to improve clarity and consistency without affecting how they run.
-
-### Why Rename Steps
-***
-
-Renaming changes a step's display name without changing how it works.
-
-- Improves readability of test steps.
-- Has no impact on execution or instruction logic.
-- Keeps the renamed step name even if the instruction changes later.
-- Works for Web and Mobile slash command instructions.
-- Updates the step name in the execution command logs.
-
-### How to Rename a Step
-***
-
-1. Ensure the authoring session is open and the relevant step is visible.
-2. Pause the session. Renaming is available only while the session is **Paused**, along with the other step editing actions. See [Session states](/support/docs/kaneai-authoring-session/#session-states).
-3. Click the step name to make it editable.
-4. Enter the new name and press **Enter** or click outside to save.
-5. Click **Resume**. Your device is not restarted and no steps are re-run — the session simply returns to Authoring Steps, with the cursor back at the bottom-most step.
-
-**Result:** The step displays its new name in the step list and in the execution command logs; the instruction logic and behavior remain unchanged.
-
-<img loading="lazy" src={require('../assets/images/kane-ai/features/rename-instructions/rename_instruction.jpg').default} alt="rename instructions" className="doc_img"/>
-
-### Rename Limitations
-***
-
-- Supported instruction types:
-  - **Web:** API, DB, JS, Visual comparison, Network assertion
-  - **Mobile:** API, DB, JS, Visual comparison
-- Only the **step name** can be updated (max 255 characters).
-- Renaming inside modules is not supported.
-- Step rename history is not versioned.
-- Special characters `{}` appear as `{{}}` in the generated code.
-
-<img loading="lazy" src={require('../assets/images/kane-ai/features/rename-instructions/summary_page.jpg').default} alt="rename summary page" className="doc_img"/>
-
-### Rename Troubleshooting
-***
-
-| Issue | Cause | Solution |
-|-------|-------|---------|
-| Step name not updated | Save action missed | Re-edit and save |
-| Step name resets after refresh | Network/session issue | Refresh page and retry |
 
 ## Next Steps
 ***

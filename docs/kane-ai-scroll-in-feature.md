@@ -169,55 +169,63 @@ Confirm the target content is visible after the scroll action before your next s
 ## Scroll Until Element
 ***
 
-The commands above scroll within an element in a direction. When you do not know how far the target sits, describe the element you want to reach instead and KaneAI scrolls until it becomes visible. This locates elements that sit below the fold or deep in long, scrollable pages without manual scroll logic or coordinates, which can otherwise be fragile, difficult to maintain, and time-consuming to write.
+The commands above scroll within an element in a direction. If you do not know how far the target sits, use **Scroll Until Element** instead.
+
+In modern mobile and web applications, important elements are often located below the fold or deep within long, scrollable pages. Writing custom scroll logic or managing scroll coordinates manually can be fragile, difficult to maintain, and time-consuming.
+
+The **Scroll Until Element** feature allows users to automate scrolling using **natural language commands**. Instead of controlling how to scroll, users simply describe the element they want to reach.
 
 This feature helps by:
 
-- **Automatically locating elements** by scrolling until the target becomes visible.
-- **Reducing complexity** by removing the need for technical selectors or manual scroll logic.
+- **Automatically locating elements** by scrolling until the target becomes visible
+- **Reducing complexity** by removing the need for technical selectors or manual scroll logic
 
 ### Step 1: Identify the Target
 ***
 
-Reference the element by what is visibly present on screen:
+Determine the element you need to reach based on its **visual representation**.
 
-- Visible text (for example, `Login button`)
-- Element type (for example, `input field`)
+In natural language mode, elements can be referenced using:
 
-Natural language commands do **not** support technical selectors such as IDs, XPaths, or CSS attributes. Always describe what is visibly present on the screen.
+- Visible text (e.g., *"Login button"*)
+- Element type (e.g., *"input field"*)
+
+> **Note:**
+> Natural language commands do **not** support technical selectors such as IDs, XPaths, or CSS attributes.
+> Always describe what is visibly present on the screen.
 
 **Result:** You have a visual description KaneAI can match.
 
 ### Step 2: Formulate the Command
 ***
 
-Enter your command into the test editor using action-oriented language. Clearly specify what the agent should find and what action to perform once it is found:
+Enter your command into the test editor using **action-oriented language**. Clearly specify what the agent should find and what action to perform once found.
 
-- `Scroll until search bar is visible and click on it.`
-- `Scroll down until element with text 'Shipping Policy' is visible.`
-- `Scroll inside a subsection until date input field and click on it.`
+**Examples:**
+
+- `"Scroll until search bar is visible and click on it."`
+- `"Scroll down until element with text 'Shipping Policy' is visible."`
+- `"Scroll inside a subsection until date input field and click on it."`
 
 **Result:** KaneAI scrolls until the target is visible, then performs the specified action.
 
 ## Command Reference
 ***
 
-This table pairs common scroll scenarios with example natural language commands:
-
-| Scenario | Example natural language command |
+| Scenario | Example Natural Language Command |
 |--------|--------------------------------|
-| Visibility check | `Scroll until search bar is visible and click on it.` |
-| Text search | `Scroll down until element with text XYZ is visible.` |
-| Button interaction | `Scroll until Submit button and click on it.` |
-| Subsection navigation | `Scroll inside a subsection until date input field and click on it.` |
-| Dropdown selection | `Scroll inside the dropdown until 'New option' and select it.` |
-| Horizontal scrolling (mobile app) | `Scroll right inside the carousel until 'Best Sellers' is visible.` |
-| Nested container (mobile app) | `Scroll inside the reviews section until 'Load more' button and click on it.` |
+| Visibility Check | `Scroll until search bar is visible and click on it.` |
+| Text Search | `Scroll down until element with text XYZ is visible.` |
+| Button Interaction | `Scroll until Submit button and click on it.` |
+| Subsection Navigation | `Scroll inside a subsection until date input field and click on it.` |
+| Dropdown Selection | `Scroll inside the dropdown until 'New option' and select it.` |
+| Horizontal Scrolling (Mobile App) | `Scroll right inside the carousel until 'Best Sellers' is visible.` |
+| Nested Container (Mobile App) | `Scroll inside the reviews section until 'Load more' button and click on it.` |
 
 ## Limitations
 ***
 
-Keep these constraints of the current version in mind:
+Please be aware of the following constraints in the current version.
 
 ### Mobile App Authoring
 ***
@@ -226,27 +234,33 @@ Keep these constraints of the current version in mind:
 Mobile app authoring now supports **horizontal scrolling** and **scrolling inside nested containers** (element scrolling). You can scroll left or right, for example inside carousels, and scroll within specific container elements such as dropdowns, lists, and subsections instead of only the main viewport.
 :::
 
-- **Scroll limit:** A maximum of **20 scroll attempts** are performed. If the element is not found, the action fails.
-- **Directional extremes:** Commands such as `Scroll to top` or `Scroll to bottom` are not supported.
+- **Scroll Limit**:  
+  Maximum of **20 scroll attempts** are performed. If the element is not found, the action fails.
+- **Directional Extremes**:  
+  ❌ Commands such as *“Scroll to top”* or *“Scroll to bottom”* are not supported.
 
 ### Mobile Browser Authoring
 ***
 
-- **Element eligibility:** Applies **only to interactable elements** (buttons, links, dropdowns, inputs). Plain text or static labels are not supported.
-- **Native popups:** Scrolling inside native browser popups or system alerts is not supported.
-- **Horizontal scrolling:** Not supported.
+- **Element Eligibility**:  
+  Applicable **only to interactable elements** (buttons, links, dropdowns, inputs).  
+  ❌ Plain text or static labels are not supported.
+- **Native Popups**:  
+  ❌ Scrolling inside native browser popups or system alerts is not supported.
+- **Horizontal Scrolling**:  
+  ❌ Not supported.
 
 ## Troubleshooting
 ***
 
-If you encounter execution issues, refer to this table of common scroll errors, their causes, and fixes:
+If you encounter execution issues, refer to the table below:
 
-| Error message / behavior | Potential cause | Solution |
+| Error Message / Behavior | Potential Cause | Solution |
 |------------------------|-----------------|----------|
 | Maximum Scroll Limit Reached | Element is beyond 20 scrolls or not present | Verify element visibility and ensure it appears within 20 scrolls |
-| Element Not Found | Non-interactable or plain text element (mobile browser) | Target a button, link, or input field instead |
-| Scroll Timeout | Element is inside a nested container that was not specified in the command | Name the container in the instruction (for example, `Scroll inside the reviews section until ...`) |
-| Command Not Recognized | Usage of IDs, XPaths, or attributes | Rewrite using visible text or element type (for example, `button`) |
+| Element Not Found | Non-interactable or plain text element (Mobile Browser) | Target a button, link, or input field instead |
+| Scroll Timeout | Element is inside a nested container that was not specified in the command | Name the container in the instruction (e.g., "Scroll inside the reviews section until ...") |
+| Command Not Recognized | Usage of IDs, XPaths, or attributes | Rewrite using visible text or element type (e.g., "button") |
 
 ## Next Steps
 ***

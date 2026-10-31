@@ -241,6 +241,8 @@ If the API only accepts requests from known IP addresses, share the sent-from ad
 ## API Response Variables
 ***
 
+For importing a collection or specification instead of authoring requests individually, see [Bulk API Import](/support/docs/kaneai-bulk-api-import/). For JSONPath checks and JSON Schema validation, see [API Response Assertions](/support/docs/kaneai-api-response-assertions/).
+
 After a successful API call, the response is automatically stored as a **JSON variable**. You can reference it in subsequent steps using `{{variable_name}}` syntax.
 
 ### Accessing Response Data
@@ -420,6 +422,15 @@ KaneAI also supports database queries. You can combine API calls, UI interaction
 ```
 
 For database testing details, see database connections.
+
+## Import Collections and Validate Responses
+
+For file-based import and response validation, use these guides:
+
+- [Bulk API Import](/support/docs/kaneai-bulk-api-import/): Import Postman collections or OpenAPI specifications, map variables from optional environment files, and add header assertions to the imported APIs.
+- [API Response Assertions](/support/docs/kaneai-api-response-assertions/): Check response values with JSONPath or validate a response against a JSON Schema.
+
+To validate network requests made by the application during UI interactions, see [Network Logs Assertions](/support/docs/kaneai-kb-api-testing-and-network-assertions/#network-logs-assertions).
 
 ## Next Steps
 ***

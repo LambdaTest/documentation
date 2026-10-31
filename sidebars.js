@@ -430,6 +430,8 @@ module.exports = {
           { type: "doc", id: "kaneai-database", label: "Database" },
           { type: "doc", id: "kane-ai-javascript-execution", label: "JavaScript Execution & Snippets" },
           { type: "doc", id: "kane-ai-api-testing", label: "API Testing" },
+          { type: "doc", id: "kaneai-bulk-api-import", label: "Bulk API Import" },
+          { type: "doc", id: "kaneai-api-response-assertions", label: "API Response Assertions" },
           { type: "doc", id: "kaneai-smartui-visual-testing", label: "Visual Testing" },
           { type: "doc", id: "kane-ai-deeplink-support", label: "Mobile Deeplinks" },
           { type: "doc", id: "kaneai-kb-mobile-app-testing-patterns", label: "Mobile Patterns" },
@@ -504,6 +506,9 @@ module.exports = {
 
       // 7. FAQs
       { type: "doc", id: "kaneai-faqs", label: "FAQs", className: "menu-bold" },
+
+      // 8. Release Notes
+      { type: "doc", id: "kaneai-release-notes", label: "Release Notes", className: "menu-bold" },
     ],
   ],
 
