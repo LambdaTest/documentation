@@ -95,7 +95,7 @@ The **Test conditions** table shows the fixed settings for the selected device. 
 
 **Runs per URL:** each URL runs once. When a URL is rated **Poor**, it is tested two more times and the median run is kept, so a single slow load does not raise a false alert. Every run starts with a cold cache.
 
-<img loading="lazy" src={require('../assets/images/web-scanner/performance-scan-type.png').default} alt="Scan Type step showing the Desktop device and its test conditions" className="doc_img" width="1200" height="658"/>
+<img loading="lazy" src={require('../assets/images/web-scanner/performance-scan-type.png').default} alt="Scan Type step showing the Desktop device and its test conditions" className="doc_img" width="1200" height="567"/>
 
 ### Step 3: Add URLs
 
@@ -109,7 +109,7 @@ See [Adding URLs](/support/docs/web-scanner-adding-urls/) for the CSV and sitema
 
 Below the list, the wizard shows an estimated scan time. PDFs, redirects and pages behind a login are not checked at this step. They are reported on the results page.
 
-<img loading="lazy" src={require('../assets/images/web-scanner/performance-add-urls.png').default} alt="Add URLs step with three URLs added" className="doc_img" width="1200" height="491"/>
+<img loading="lazy" src={require('../assets/images/web-scanner/performance-add-urls.png').default} alt="Add URLs step with four URLs added" className="doc_img" width="1200" height="536"/>
 
 #### Advanced Configurations
 
@@ -121,7 +121,7 @@ Expand **Advanced Configurations** to control how the pages are reached:
 
 Keep these settings the same across scans, so the results stay comparable. See [Advanced Features](/support/docs/web-scanner-advanced-features/) for how to set each option.
 
-<img loading="lazy" src={require('../assets/images/web-scanner/performance-advanced-config.png').default} alt="Advanced Configurations with network, login and cookie options" className="doc_img" width="1200" height="705"/>
+<img loading="lazy" src={require('../assets/images/web-scanner/performance-advanced-config.png').default} alt="Advanced Configurations with network, login and cookie options" className="doc_img" width="1200" height="599"/>
 
 ### Step 4: Schedule Scan
 
@@ -152,10 +152,10 @@ Click **⋯** on a row to open its menu:
 | **Run scan now** | Starts a scan immediately. Hidden while a scan is running or after the schedule is stopped. |
 | **Edit scan config** | Changes the scan's settings. Hidden after the schedule is stopped. See [Edit and Clone Scans](/support/docs/web-scanner-edit-clone-scans/). |
 | **Clone scan** | Creates a copy of the scan with the same URLs and settings. |
-| **Stop recurring scan** | Stops future runs of a recurring scan. |
+| **Stop recurring scan** | Stops future runs of a recurring scan. Shown for recurring scans only. |
 | **Delete scan** | Deletes the scan. |
 
-<img loading="lazy" src={require('../assets/images/web-scanner/performance-scan-list.png').default} alt="Performance tab with the row menu of a scan open" className="doc_img" width="1200" height="461"/>
+<img loading="lazy" src={require('../assets/images/web-scanner/performance-scan-list.png').default} alt="Performance tab with the row menu of a scan open" className="doc_img" width="1200" height="466"/>
 
 ### Scan History
 
@@ -167,7 +167,7 @@ Click **⋯** on a row to open its menu:
 
 ## Read the Scan Report
 
-The scan report has two tabs, **Summary** and **All URLs**. While a scan is running, the report updates as each URL finishes.
+The scan report has two tabs, **Summary** and **All URLs**. While a scan is running, **All URLs** lists each URL as **Queued** and fills in its results as it finishes. **Summary** appears once the whole scan has finished.
 
 ### How a URL Is Rated
 
@@ -190,19 +190,19 @@ For example, a URL with a good LCP and CLS but a TBT of 700 ms is **Poor**. A UR
 - **How the URLs are spread**: for LCP, TBT and CLS, how many URLs are good, need improvement (**NI**) or poor.
 - **Most common problems**: the Lighthouse findings that affect the most URLs, with a count of URLs for each.
 
-<img loading="lazy" src={require('../assets/images/web-scanner/performance-scan-summary.png').default} alt="Summary tab of a performance scan report" className="doc_img" width="1200" height="554"/>
+<img loading="lazy" src={require('../assets/images/web-scanner/performance-scan-summary.png').default} alt="Summary tab of a performance scan report" className="doc_img" width="1200" height="539"/>
 
 ### All URLs Tab
 
 The table lists every URL with its **Status**, Lighthouse **Score**, **LCP**, **TBT**, **CLS**, **FCP** (first contentful paint) and **TTFB** (time to first byte). Use the search box to find a URL, and the **Status** filter to show only **Good**, **Needs improvement**, **Poor** or **Failed** URLs. Click a URL to open its report.
 
-<img loading="lazy" src={require('../assets/images/web-scanner/performance-all-urls.png').default} alt="All URLs tab listing each URL with its score and metrics" className="doc_img" width="1200" height="286"/>
+<img loading="lazy" src={require('../assets/images/web-scanner/performance-all-urls.png').default} alt="All URLs tab listing each URL with its score and metrics" className="doc_img" width="1200" height="447"/>
 
 ### Environment Details
 
 Click **View Environment Details** under the report title to see exactly how the scan ran: the device and screen size, network, CPU slowdown, connection (direct, tunnel or proxy), the Lighthouse and Chrome versions, the runs rule, and the cache and cookie state.
 
-<img loading="lazy" src={require('../assets/images/web-scanner/performance-environment-details.png').default} alt="Environment details dialog of a performance scan" className="doc_img" width="560" height="453"/>
+<img loading="lazy" src={require('../assets/images/web-scanner/performance-environment-details.png').default} alt="Environment details dialog of a performance scan" className="doc_img" width="560" height="456"/>
 
 ---
 
@@ -224,7 +224,7 @@ The URL report shows the full URL, and the final URL if the page redirected. The
 | **Speed Index** | 3.4 s or less | Over 5.8 s |
 | **Time to Interactive (TTI)** | 3.8 s or less | Over 7.3 s |
 
-<img loading="lazy" src={require('../assets/images/web-scanner/performance-url-summary.png').default} alt="URL report Summary tab with the metric cards" className="doc_img" width="1200" height="627"/>
+<img loading="lazy" src={require('../assets/images/web-scanner/performance-url-summary.png').default} alt="URL report Summary tab with the metric cards" className="doc_img" width="1200" height="614"/>
 
 Below the metrics:
 
@@ -233,19 +233,19 @@ Below the metrics:
 
 The filmstrip and browser timings are observed in the test browser without throttling, so they are shorter than the simulated metrics above them.
 
-<img loading="lazy" src={require('../assets/images/web-scanner/performance-browser-timings.png').default} alt="Browser Timings and Speed Visualization filmstrip" className="doc_img" width="1200" height="578"/>
+<img loading="lazy" src={require('../assets/images/web-scanner/performance-browser-timings.png').default} alt="Browser Timings and Speed Visualization filmstrip" className="doc_img" width="1200" height="598"/>
 
 ### Audits Tab
 
 The **Audits** tab lists the Lighthouse findings for the URL, with the Lighthouse version at the top:
 
-- **Insights**: problems with an estimated saving, such as render-blocking requests, cache lifetimes and image delivery. Badges show the metric each fix improves and by how much, for example **LCP 300 ms faster**.
+- **Insights**: problems with an estimated saving, such as render-blocking requests, cache lifetimes and image delivery. Badges show the metric each fix improves and by how much, for example **LCP 50 ms faster**.
 - **Diagnostics**: more detail on how the page loads, such as unused CSS and JavaScript or long main-thread tasks.
 - **Passed audits**: the checks the page already passes.
 
 Expand a finding to see its description and the resources behind it.
 
-<img loading="lazy" src={require('../assets/images/web-scanner/performance-url-audits.png').default} alt="Audits tab with a Render-blocking requests finding expanded" className="doc_img" width="1200" height="656"/>
+<img loading="lazy" src={require('../assets/images/web-scanner/performance-url-audits.png').default} alt="Audits tab with the Legacy JavaScript finding expanded" className="doc_img" width="1200" height="599"/>
 
 ### Network Tab
 
@@ -257,4 +257,4 @@ The **Network** tab shows every request the page made while it loaded, with its 
 
 The footer totals the requests, the bytes transferred and the load timings. A URL that failed to load has no network log.
 
-<img loading="lazy" src={require('../assets/images/web-scanner/performance-url-network.png').default} alt="Network tab showing the page requests and waterfall" className="doc_img" width="1200" height="670"/>
+<img loading="lazy" src={require('../assets/images/web-scanner/performance-url-network.png').default} alt="Network tab showing the page requests and waterfall" className="doc_img" width="1200" height="558"/>
