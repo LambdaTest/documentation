@@ -150,6 +150,17 @@ Accessibility scans audit your pages against WCAG 2.x standards, surfacing viola
 * Smart filters for recurring violations
 * Exportable reports
 
+### 3. Performance Scan
+
+Performance scans run Google Lighthouse on every URL and report the performance score and Core Web Vitals, so you can see which pages load slowly and why.
+
+**Key Features:**
+* Lighthouse score, LCP, TBT and CLS for every URL, on a fixed desktop or mobile setup
+* A scan summary with the most common Lighthouse findings across all URLs
+* A per-URL report with metrics, a load filmstrip, audits and the network log
+
+See [Starting a Performance Scan](/support/docs/web-scanner-performance-scan/).
+
 ## Ideal Users
 
 * **Frontend QA Teams:** Perform nightly visual regression scans across builds
