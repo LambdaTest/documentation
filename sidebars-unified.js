@@ -43,7 +43,7 @@ const docsSidebar = [
   {
     type: 'category', label: 'App Automation', collapsible: true, collapsed: true,
     items: [
-      { type: 'link', label: 'Appium Testing', href: '/docs/getting-started-with-appium-testing/' },
+      { type: 'category', label: 'Appium Testing', collapsible: true, collapsed: true, items: items(s.AppiumTestingSidebar) },
       { type: 'link', label: 'Espresso Testing', href: '/docs/getting-started-with-espresso-testing/' },
       { type: 'link', label: 'XCUI Testing', href: '/docs/getting-started-with-xcuitest/' },
       { type: 'link', label: 'Mobilewright Testing', href: '/docs/mobilewright-overview/' },
@@ -97,7 +97,6 @@ const CDPTestingSidebar = [backToDocs, { type: 'doc', id: 'run-tests-with-chrome
 const BiDiTestingSidebar = [backToDocs, { type: 'doc', id: 'run-tests-with-webdriver-bidi', label: 'BiDi Testing' }];
 
 // App Automation
-const EspressoTestingSidebar = dedicated(s.EspressoTestingSidebar);
 const XCUITestingSidebar = dedicated(s.XCUITestingSidebar);
 const FlutterTestingSidebar = dedicated(s.FlutterTestingSidebar);
 const MobilewrightTestingSidebar = dedicated(s.MobilewrightTestingSidebar);
@@ -161,6 +160,10 @@ const SettingsAndSecuritySidebar = [
   },
 ];
 
+// Espresso Testing is a link in docsSidebar (above), so its docs live ONLY in
+// this dedicated sidebar — Docusaurus displays it (with the back-to-docs link)
+// whenever a reader is inside an Espresso Testing page.
+const EspressoTestingSidebar = [backToDocs, ...items(s.EspressoTestingSidebar)];
 // Appium Testing is a link in docsSidebar (above), so its docs live ONLY in this
 // dedicated sidebar — Docusaurus displays it (with the back-to-docs link)
 // whenever a reader is inside an Appium Testing page.
