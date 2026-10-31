@@ -156,6 +156,7 @@ You will see a unified dashboard with the following primary controls:
 At the top left, you can switch between:
 * Visual UI Scans
 * Accessibility Scans
+* Performance Scans
 
 Each tab displays its own scheduled scans, configurations, and build statuses.
 
@@ -187,6 +188,7 @@ Click the **Schedule Scan** button to launch the 4-step wizard. This process app
 * **Platform:** Choose between:
     * Visual UI
     * Accessibility
+    * Performance
 
 <img loading="lazy" src={require('../assets/images/web-scanner/wizard-step-1-overview.png').default} alt="Scan Creation Wizard Step 1" className="doc_img"/>
 
@@ -196,6 +198,7 @@ Depending on the selected platform, you’ll either see Visual UI configuration 
 
 * [Starting a Visual Scan](/support/docs/web-scanner-visual-scan)
 * [Starting an Accessibility Scan](/support/docs/web-scanner-accessibility-scan)
+* [Starting a Performance Scan](/support/docs/web-scanner-performance-scan)
 
 ### Step 3: Add URLs
 
