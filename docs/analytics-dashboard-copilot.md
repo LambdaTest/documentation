@@ -42,6 +42,63 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/analytics-dashboard-copilot/"
+    },
+    "headline": "Analytics Dashboard AI CoPilot",
+    "description": "AI CoPilot - an AI agent that analyzes your test data, answers questions and builds Analytics dashboard widgets from plain language",
+    "url": "https://www.testmuai.com/support/docs/analytics-dashboard-copilot/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Insights",
+    "keywords": [
+      "analytics",
+      "dashboard copilot",
+      "ai agent"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-08-15T19:53:27+05:30"
+  }) }}
+/>
 # AI CoPilot for Analytics Dashboards  <NewTag value="BETA" bgColor="#ffec02" color="#000" />
 
 AI CoPilot is an AI agent for your <BrandName /> Analytics dashboards. Ask it what your test data is telling you and it reasons over that data to answer in plain language. With the widget builder, describe the insight you want and CoPilot plans a widget, builds it, and proposes it for your approval — you stay in the loop on every change.

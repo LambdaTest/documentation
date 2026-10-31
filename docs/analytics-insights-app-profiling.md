@@ -2,7 +2,7 @@
 id: insights-app-profiling
 title: App Profiling Insights
 sidebar_label: Trends
-description: App Profiling Insights surfaces CPU, memory, FPS, battery, network and startup metrics per device and build, with p90 views, session Comparison and SLA alerts.
+description: App Profiling Insights surfaces CPU, memory, FPS, battery, thermal state, network and startup metrics per device and build, with p90 views, session Comparison and SLA alerts.
 keywords:
   - analytics
   - test insights
@@ -17,6 +17,8 @@ keywords:
   - threshold breach alerts
   - session comparison
   - baseline diff
+  - battery power
+  - thermal state
 
 url: https://www.testmuai.com/support/docs/insights-app-profiling/
 site_name: TestMu AI
@@ -51,6 +53,63 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/insights-app-profiling/"
+    },
+    "headline": "App Profiling Insights",
+    "description": "App Profiling Insights surfaces CPU, memory, FPS, battery, thermal state, network and startup metrics per device and build, with p90 views, session Comparison and SLA alerts.",
+    "url": "https://www.testmuai.com/support/docs/insights-app-profiling/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Insights",
+    "keywords": [
+      "analytics",
+      "test insights",
+      "app profiling"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-10-14T12:00:00+05:30"
+  }) }}
+/>
+
 ---
 
 import NewTag from '../src/component/newTag';
@@ -63,6 +122,8 @@ The data on this dashboard comes from the App Profiling capability on Appium tes
 
 :::note
 App Profiling Insights is available for Appium tests on iOS and Android (version 9+). Set `appProfiling: true` and `resignApp: true` in your capabilities. Battery Utilization and Battery Temperature widgets are populated for Android sessions only.
+
+The **Battery Power** and **Thermal State** widgets need sessions run with `advancedProfiling: true`. Thermal State is reported by iOS devices only. A metric that a session did not measure is left out of the charts rather than plotted as 0.
 :::
 
 <img loading="lazy" src={require('../assets/images/analytics/app-profiling-screenshot.webp').default} alt="App Profiling dashboard" width="768" height="594" className="doc_img"/>
@@ -122,7 +183,7 @@ Average answers *"what does a typical run cost?"*. p90 answers *"how bad does it
 Averages hide spikes. A build whose CPU averages 12% but reaches 45% on every tenth run will look green on Average and breach on p90 — and it is the p90 run your users notice. The reverse is also informative: if Average and p90 sit close together, the metric is stable and the average is trustworthy.
 
 :::note
-p90 is computed per session at ingestion and then averaged across the sessions in scope — it is *the mean of each session's own 90th percentile*, not the 90th percentile of the whole window. Metrics with no pre-computed p90 — cold and hot startup, and the crash and ANR counts — are dropped in p90 mode and render as `—`. Frozen and janky frame counts stay on their average, because they are companion counts to the frame-rate series rather than percentile-able metrics in their own right.
+p90 is computed per session at ingestion and then averaged across the sessions in scope — it is *the mean of each session's own 90th percentile*, not the 90th percentile of the whole window. Metrics with no pre-computed p90 — cold and hot startup, and the crash and ANR counts — are dropped in p90 mode and render as `—`. Frozen and janky frame counts stay on their average, because they are companion counts to the frame-rate series rather than percentile-able metrics in their own right. Battery Power switches to its p90 value; Thermal State always shows the worst state reached, in both modes.
 :::
 
 ### p90 and the Comparison view
@@ -147,7 +208,7 @@ Cards are hidden automatically when the underlying metric reports zero for the f
 
 ## Performance Trends
 
-A single time-series chart that overlays selected metrics on dual Y-axes. The **KPIs** selector in the widget header controls which series are visible — CPU, FPS, Memory, Temperature, Battery, Network Upload, Network Download, Disk Read and Disk Write are available; CPU and Memory are on by default. Each visible KPI gets a Min / Max / Avg row in the stats panel below the chart.
+A single time-series chart that overlays selected metrics on dual Y-axes. The **KPIs** selector in the widget header controls which series are visible — CPU, FPS, Memory, Temperature, Battery, Battery Power, Thermal State, Network Upload, Network Download, Disk Read and Disk Write are available; CPU and Memory are on by default. Each visible KPI gets a Min / Max / Avg row in the stats panel below the chart.
 
 **Disk Read** and **Disk Write** report the total data the application read from and wrote to disk during a session, giving visibility into storage-heavy workflows. Like every other metric, they honour the Average / p90 toggle.
 
@@ -177,7 +238,7 @@ A horizontal SLA reference line is drawn at the configured threshold. The stats 
 
 ## Per-metric trend widgets
 
-Each of the eight per-metric widgets renders a time series over the selected window with the SLA threshold drawn as a coloured band, and reports Min / Max / Avg for the primary metric in the stats panel below the chart.
+Each of the ten per-metric widgets renders a time series over the selected window with the SLA threshold drawn as a coloured band, and reports Min / Max / Avg for the primary metric in the stats panel below the chart.
 
 | Widget | Metrics | Notes |
 |---|---|---|
@@ -189,6 +250,27 @@ Each of the eight per-metric widgets renders a time series over the selected win
 | **Battery Temperature** | Temperature (°C) | Android only |
 | **Cold Startup Time** | Cold Startup (ms) | — |
 | **Hot Startup Time** | Hot Startup (ms) | — |
+| **Battery Power Trends** <NewTag value="New" /> | Battery Power (W) | Android and iOS, with `advancedProfiling: true` |
+| **Thermal State Trends** <NewTag value="New" /> | Thermal State (0–3) | iOS only, with `advancedProfiling: true` |
+
+### Battery Power and Thermal State <NewTag value="New" />
+
+**Battery Power** is the average power the device drew during a session, in watts. Because it is a rate rather than a count of drained mAh, sessions of different lengths, devices and platforms can be compared directly — iOS does not report battery drain in mAh, so Battery Power is the battery metric available for both platforms.
+
+<img loading="lazy" src={require('../assets/images/analytics/app-profiling-battery-power.webp').default} alt="Battery Power Trends widget with the 1 W and 2 W SLA thresholds" width="768" height="605" className="doc_img"/>
+
+**Thermal State** is the worst thermal state the device reached during a session, as reported by iOS:
+
+| Value | State | Meaning |
+|---|---|---|
+| 0 | Nominal | Normal operating temperature |
+| 1 | Fair | Slightly elevated |
+| 2 | Serious | High; the system may start reducing performance |
+| 3 | Critical | Very high; performance is significantly reduced until the device cools down |
+
+A session that stays at Nominal is a healthy reading and is plotted as 0. Android sessions report no thermal state and are not plotted on this widget.
+
+<img loading="lazy" src={require('../assets/images/analytics/app-profiling-thermal-state.webp').default} alt="Thermal State Trends widget showing states 0 to 3 against the 1 and 2 SLA thresholds" width="768" height="605" className="doc_img"/>
 
 ## Compare mode
 
@@ -219,6 +301,8 @@ Default thresholds:
 | Cold Startup | < 2000 ms | 2000–3000 ms | > 3000 ms |
 | Hot Startup | < 500 ms | 500–1000 ms | > 1000 ms |
 | Battery Temperature | < 40 °C | 40–45 °C | > 45 °C |
+| Battery Power | < 1 W | 1–2 W | ≥ 2 W |
+| Thermal State | 0 (Nominal) | 1 (Fair) | 2–3 (Serious, Critical) |
 | Label Page Load | < 2.5 s | 2.5–3.0 s | > 3.0 s |
 
 Thresholds render as:
@@ -238,7 +322,7 @@ Admins can override the defaults at the organisation level. Regular users see th
 
 When a session breaches a configured App Profiling threshold, <BrandName /> automatically notifies your team over **email** and **Slack** — so you can catch performance regressions without opening the dashboard after every run.
 
-Each alert identifies the run (Test ID, Test Name, Build Name, OS, Device and date) and lists every breached metric with its observed value against the configured threshold, along with a **View Test Details** link that opens the run's App Profiling tab. Metrics that can trigger an alert include Cold Startup, Hot Startup, CPU Utilization, Frame Rate, Memory Usage, Temperature and per-label Page Load.
+Each alert identifies the run (Test ID, Test Name, Build Name, OS, Device and date) and lists every breached metric with its observed value against the configured threshold, along with a **View Test Details** link that opens the run's App Profiling tab. Metrics that can trigger an alert include Cold Startup, Hot Startup, CPU Utilization, Frame Rate, Memory Usage, Temperature, Battery Power, Thermal State and per-label Page Load. Battery Power is checked against the session's average power, and Thermal State against the worst state the session reached, shown with its name — for example `2 (serious)`.
 
 <img loading="lazy" src={require('../assets/images/analytics/app-profiling-email-alert.webp').default} alt="App Profiling threshold breach email alert" width="768" height="958" className="doc_img"/>
 

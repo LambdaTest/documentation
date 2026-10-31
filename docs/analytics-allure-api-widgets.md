@@ -37,6 +37,61 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/analytics-allure-api-widgets/"
+    },
+    "headline": "Allure Test Insights with HyperExecute",
+    "description": "Test Insights by executing test cases using the Allure report with HyperExecute",
+    "url": "https://www.testmuai.com/support/docs/analytics-allure-api-widgets/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Insights",
+    "keywords": [
+      "analytics"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
 The `Allure Test Insights` module helps you to get an overview of the test execution results using the Allure. This widget provides insights into the test execution results, test status, and test duration.
 
 <div className="ytframe">
@@ -52,7 +107,7 @@ The `Allure Test Insights` widget is available for the `HyperExecute` product on
 
 Additionally, you need to have the Allure report generated for your test cases within the `HyperExecute` YAML file changes and add the job label for the test cases to be displayed in the widget.
 
-Read more about the [HyperExecute Reports](/support/docs/hyperexecute-job-reports/#allure-report) product to get started.
+Read more about the [HyperExecute Reports](/docs/allure-reports/) product to get started.
 :::
 
 You can check the Allure Test Insights for your test environments by following the below steps:
@@ -99,7 +154,7 @@ height="400"
 className="doc_img"
 />
 
-#### Use Cases of Allure Test Trends Widget
+### Use Cases of Allure Test Trends Widget
 - Get insights about the time series trends of the test execution count. 
 - Identify the trends of the tests run over a period of time.
 - Monitor for any anomalies in the test execution counts.
@@ -118,7 +173,7 @@ height="400"
 className="doc_img"
 />
 
-#### Use Cases of Allure Suite Health Widget
+### Use Cases of Allure Suite Health Widget
 - Get insights into the health of the test suites executed using the Allure report.
 - Identify the test suites that require attention based on the test status.
 - Monitor the test suite health trends over time.
@@ -136,7 +191,7 @@ height="400"
 className="doc_img"
 />
 
-#### Use Cases of Allure Test Status Ratio Widget
+### Use Cases of Allure Test Status Ratio Widget
 - Get insights into the test status ratio for the test cases executed using the Allure report.
 - Check for any anomalies in the test status ratio and identify the test cases that require attention.
 - Monitor the test status ratio trends over time and take corrective actions.
@@ -154,7 +209,7 @@ height="400"
 className="doc_img"
 />
 
-#### Use Cases of Allure Test Duration Widget
+### Use Cases of Allure Test Duration Widget
 - Get insights into the average test duration for the test cases executed using the Allure report.
 - Identify the test cases with high test duration and optimize the test execution process.
 - Monitor the test duration trends over time and reduce the test duration for better efficiency.

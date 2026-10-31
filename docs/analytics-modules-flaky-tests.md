@@ -37,6 +37,61 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/analytics-modules-test-intelligence-flaky-test-analytics/"
+    },
+    "headline": "Flaky Test Analytics with Test Intelligence",
+    "description": "Analyze your flaky tests with Test Intelligence and get insights on the flaky tests that are causing your test runs to fail.",
+    "url": "https://www.testmuai.com/support/docs/analytics-modules-test-intelligence-flaky-test-analytics/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Insights",
+    "keywords": [
+      "analytics"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-07-03T19:09:57+05:30"
+  }) }}
+/>
 The best way to analyze your flaky tests is to use Test Intelligence. Test Intelligence is a machine learning-based algorithm that helps you identify flaky tests and get insights on the flaky tests that are causing your test runs to fail. By observing the historical test runs, Test Intelligence can identify the flaky tests and provide you with the insights to help you fix them.
 
 <div className="ytframe">

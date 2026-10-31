@@ -44,12 +44,69 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/analytics-modules-groups/"
+    },
+    "headline": "Usage insights for Groups",
+    "description": "Explore TestMu AI's powerful Analytics Modules for comprehensive test intelligence and groups insights. Elevate your testing efficiency today.",
+    "url": "https://www.testmuai.com/support/docs/analytics-modules-groups/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Insights",
+    "keywords": [
+      "analytics",
+      "groups",
+      "insights"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-04-07T12:50:21+05:30"
+  }) }}
+/>
 
-### Introduction to Groups Insights
+
+## Introduction to Groups Insights
 
 <BrandName /> Analytics Modules provide comprehensive insights into your test groups, helping you understand the performance of your test groups and the distribution of your test cases across different groups. This helps you identify the test groups that are performing well and the ones that need improvement. You can also track the execution time of your test groups and the number of test cases executed in each group.
 
-### Usage by Groups
+## Usage by Groups
 
 <img loading="lazy" src={require('../assets/images/analytics/atx-usage-by-groups.webp').default} alt="cmd" width="800" height="400" className="doc_img"/>
 

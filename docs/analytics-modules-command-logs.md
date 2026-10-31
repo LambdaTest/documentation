@@ -41,16 +41,71 @@ import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/analytics-modules-test-intelligence-command-logs-analytics/"
+    },
+    "headline": "Command Logs Analytics with Test Intelligence",
+    "description": "A Explore TestMu AI's powerful Analytics Modules for comprehensive test intelligence and command logs analytics. Elevate your testing efficiency today.",
+    "url": "https://www.testmuai.com/support/docs/analytics-modules-test-intelligence-command-logs-analytics/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Insights",
+    "keywords": [
+      "analytics"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-08-12T15:40:32+05:30"
+  }) }}
+/>
 
-### Introduction to AI Native Command Logs Analytics
+
+## Introduction to AI Native Command Logs Analytics
 
 TestMu AI Analytics help you intelligently analyze your test execution steps on the platform. It provides you with the insights on the errors that are causing your test runs to fail. 
 
 
-### Prerequisites for using Command Logs Analytics
+## Prerequisites for using Command Logs Analytics
 The following are the steps to use Command Logs Analytics:
 1. You should have a <BrandName /> account. If you don't have one, you can sign up <a href="https://www.testmuai.com/register/" onClick={CookieTrackingSignup}>here</a>.
-2. You should have access to the `Test Intelligence` subscription plan. You can join the waitlist [here](https://www.testmuai.com/test-intelligence/).
+2. You should have access to the `Test Intelligence` subscription plan. You can join the waitlist [here](https://www.testmuai.com/test-intelligence).
 3. Go to `Analytics` from the left navigation menu and create a new Dashboard by clicking on the `Create New Dashboard` button.
 4. Select the `Create Custom Dashboard` option from the `Create New Dashboard` dropdown.
 5. Select the `Command Logs` option from the `Analytics Modules` section.
@@ -58,7 +113,7 @@ The following are the steps to use Command Logs Analytics:
 7. Input your `Dashboard Name` and click on `Create Dashboard` to create your dashboard.
 
 
-### **Command Status Summary Widget** <NewTag value="BETA" bgColor="#ffec02" color="#000" />
+## **Command Status Summary Widget** <NewTag value="BETA" bgColor="#ffec02" color="#000" />
 
    **About the Widget**
    
@@ -75,7 +130,7 @@ The following are the steps to use Command Logs Analytics:
    4. Analyzing command logs status distribution
    5. Filtering and focusing on specific response codes for further investigation
 
-### **Command Error Status Trends Widget** <NewTag value="BETA" bgColor="#ffec02" color="#000" />
+## **Command Error Status Trends Widget** <NewTag value="BETA" bgColor="#ffec02" color="#000" />
 
    **About the Widget**
 
@@ -94,7 +149,7 @@ The following are the steps to use Command Logs Analytics:
    4. Comparing system performance over different periods
    5. Analyzing the frequency of retries or error status codes over time
 
-### **Command Type Trends Widget** <NewTag value="BETA" bgColor="#ffec02" color="#000" />
+## **Command Type Trends Widget** <NewTag value="BETA" bgColor="#ffec02" color="#000" />
 
    **About the Widget** 
 
@@ -111,7 +166,7 @@ The following are the steps to use Command Logs Analytics:
    4. Tracking changes in command type usage over time
    5. Correlating command type usage with system performance
 
-### **Command Error Messages Categorization Widget** <NewTag value="BETA" bgColor="#ffec02" color="#000" />
+## **Command Error Messages Categorization Widget** <NewTag value="BETA" bgColor="#ffec02" color="#000" />
 
    **About the Widget** 
 

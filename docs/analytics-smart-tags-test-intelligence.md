@@ -38,6 +38,62 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/analytics-smart-tags-test-intelligence/"
+    },
+    "headline": "Smart Tags - Test Intelligence",
+    "description": "Analyze tests faster with Smart Tags in TestMu AI Analytics. Get insights on your test automation execution with Smart Tags.",
+    "url": "https://www.testmuai.com/support/docs/analytics-smart-tags-test-intelligence/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Insights",
+    "keywords": [
+      "analytics",
+      "smart tags"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-02-12T19:51:34+05:30"
+  }) }}
+/>
+
 Smart Tags in <BrandName /> Analytics help you analyze your test automation execution faster. With Smart Tags, you can categorize your tests based on different parameters and get insights on your test execution. This feature helps you identify patterns, trends, and anomalies in your test results, making it easier to optimize your test automation strategy.
 
 ## Pre-requisites For Smart Tags:
@@ -80,5 +136,5 @@ Performance anomalies are tests that have shown a significant change in performa
 
 ## Smart Tags for test cases and anomaly notifications
 
-Smart tags are also computed for individual test cases, and you can get an email, Slack or webhook digest whenever a build finishes with anomalies. See [Test case intelligence](/support/docs/analytics-build-insights-test-cases/#test-case-intelligence) and [Anomaly notifications](/support/docs/analytics-build-insights-test-cases/#anomaly-notifications).
+Smart tags are also computed for individual test cases, and you can get an email, Slack or webhook digest whenever a build finishes with anomalies. See [Test case intelligence](/support/docs/analytics-build-insights-test-cases/#test-case-intelligence) and [Anomaly notifications](/support/docs/analytics-build-insights-test-cases/#anomaly-notifications). To be alerted when a test-health KPI such as New Failures or Flaky goes above a count you set, see [KPI Threshold Alerts](/support/docs/analytics-kpi-threshold-alerts/).
 

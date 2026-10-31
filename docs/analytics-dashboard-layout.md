@@ -38,6 +38,61 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/analytics-overview/"
+    },
+    "headline": "TestMu AI Analytics - Customizing Your Dashboard with the New Widget Management Feature",
+    "description": "Enhance Your Analytics Dashboard Edit Layout with TestMu AI's Widget Management Feature Customizing Layout for Improved Insights",
+    "url": "https://www.testmuai.com/support/docs/analytics-overview/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Insights",
+    "keywords": [
+      "analytics"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-07-31T21:18:17+05:30"
+  }) }}
+/>
+
 ---
 
 ## Introduction
@@ -48,16 +103,16 @@ This technical support document will walk you through the steps to utilize this 
 
 ## Prerequisites
 
-To use the new widget management feature in LambdaTest insights, ensure that you have the following:
+To use the new widget management feature in TestMu AI insights, ensure that you have the following:
 
-- An active LambdaTest account
+- An active TestMu AI account
 - Existing dashboards with widgets
 
 ## Step by Step Process to Use the Feature
 
-Follow these steps to utilize the new widget management feature in LambdaTest insights:
+Follow these steps to utilize the new widget management feature in TestMu AI insights:
 
-1. Log in to your LambdaTest account.
+1. Log in to your TestMu AI account.
 2. Go to Insights section in the sidebar menu.
 3. Navigate to the dashboard you want to customize.
 4. Click the 'Edit' button located at the top-right corner of the dashboard to enter the edit mode.

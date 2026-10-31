@@ -37,11 +37,66 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/analytics-faqs/"
+    },
+    "headline": "Analytics",
+    "description": "Analytics - FAQs",
+    "url": "https://www.testmuai.com/support/docs/analytics-faqs/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Insights",
+    "keywords": [
+      "analytics"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-05-14T14:47:09+05:30"
+  }) }}
+/>
+
 # Frequently Asked Questions
 
 ---
 
-### How do I start using Analytics?
+## How do I start using Analytics?
 
 Getting started with Analytics is simple.
 
@@ -51,19 +106,19 @@ Step 2: Visit the [Analytics](https://analytics.lambdatest.com/) page on the <Br
 
 Step 3: Get started with creating a dashboard
 
-### How to edit the name of a dashboard?
+## How to edit the name of a dashboard?
 
 <img loading="lazy" src={require('../assets/images/analytics/faq-1.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
 One can simply edit the name of a dashboard by clicking on the pencil icon on the right and typing the desired name of the dashboard.
 
-### How to share a dashboard?
+## How to share a dashboard?
 
 <img loading="lazy" src={require('../assets/images/analytics/faq-2.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
 One can easily share the dashboard by clicking on the share icon on the right of the date selection dropdown inside the dashboard page.
 
-### How to delete a dashboard?
+## How to delete a dashboard?
 
 <img loading="lazy" src={require('../assets/images/analytics/faq-1.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
@@ -75,13 +130,13 @@ A dashboard can be deleted in 2 simple ways
 
 - By clicking on the red trash icon inside the dashboard
 
-### How to favourite a dashboard?
+## How to favourite a dashboard?
 
 <img loading="lazy" src={require('../assets/images/analytics/faq-1.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
 A dashboard can be favourited by clicking on the star icon on the left of the dashboard name. After favouriting the dashboard, it can be seen under the favourites section on the Analytics page.
 
-### How to edit a widget?
+## How to edit a widget?
 
 <img loading="lazy" src={require('../assets/images/analytics/faq-6.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
@@ -91,7 +146,7 @@ To edit a widget click the three dots on the right of the widget and then click 
 
 One can edit the name of the widget and even select from the variety of filters available and click on the `Update Widget` button to update the widget.
 
-### How to add a new widget to the dashboard?
+## How to add a new widget to the dashboard?
 
 <img loading="lazy" src={require('../assets/images/analytics/faq-2.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
@@ -101,7 +156,7 @@ A new widget can easily be added to a dashboard by clicking on the `Add Widget` 
 
 One can select the widgets they want to add from the variety of widgets available and click on the `Update Dashboard` button to update the dashboard with the new widgets.
 
-### What <BrandName /> products does Analytics support?
+## What <BrandName /> products does Analytics support?
 
 Analytics is currently supported by 3 <BrandName /> products
 
