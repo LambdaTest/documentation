@@ -30,9 +30,9 @@
   ]) }}
 />
 
-# Audio Injection on Real Devices
+# Audio Injection/Input on Real Devices
 
-Test audio-driven and microphone-dependent features on real Android and iOS devices through Appium / Selenium automation. Inject pre-recorded audio files directly into the device microphone, no physical mic input required.
+Audio injection on TestMu AI feeds pre-recorded audio files straight into a real device microphone during Appium or Selenium tests, letting you validate voice commands, speech recognition, and microphone-dependent features across real Android and iOS devices without physical microphone input.
 
 **Plus Plan Feature**
 This feature is available exclusively with the **Real Device Plus Automation Cloud** Plan.

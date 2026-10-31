@@ -375,7 +375,7 @@ Continue with the guides below to run and configure your Playwright tests on Tes
 
 - [Run your first Playwright test on TestMu AI](/support/docs/playwright-testing/) walks through executing a Playwright script on the cloud grid.
 - [Migrate existing Playwright tests to TestMu AI](/support/docs/migrate-existing-playwright-tests/) moves your current suite onto the cloud grid.
-- [Configure Playwright capabilities](/support/docs/capabilities-for-playwright/) covers the `autoHeal` capability and every other test option.
+- [Configure Playwright capabilities](/support/docs/playwright-test-execution-setup/) covers the `autoHeal` capability and every other test option.
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

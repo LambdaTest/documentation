@@ -16,47 +16,86 @@ module.exports = {
         type: "category",
         collapsed: true,
         label: "Getting Started",
+        link: {
+          type: "doc",
+          id: "getting-started-with-hyperexecute",
+        },
         items: [
-          "getting-started-with-hyperexecute",
-          "hyperexecute-vs-traditional-test-grids",
-          "key-features-of-hyperexecute",
+          {
+            type: "doc",
+            label: "Running Your First Job on HyperExecute",
+            id: "hyperexecute-running-your-first-job",
+          },
+
+          {
+            type: "doc",
+            label: "Guided Walkthrough",
+            id: "hyperexecute-guided-walkthrough",
+          },
+          {
+            type: "doc",
+            label: "HyperExecute vs Traditional Grids",
+            id: "hyperexecute-vs-traditional-test-grids",
+          },
         ],
       },
       {
         type: "category",
         collapsed: true,
-        label: "Set Up & Authenticate",
+        label: "HyperExecute YAML",
+        link: {
+          type: "doc",
+          id: "hyperexecute-yaml-parameters",
+        },
         items: [
-          "hyperexecute-environment-variable-setup",
-          "hyperexecute-how-to-configure-tunnel",
+          "hyperexecute-generate-sample-yaml",
+          "deep-dive-into-hyperexecute-yaml",
+          "hyperexecute-snooper",
+          "hyperexecute-inherit-config",
+          "hyperexecute-yaml-version0.2",
+          "hyperexecute-yaml-capability-overrides",
         ],
       },
       {
         type: "category",
         collapsed: true,
-        label: "Run Your First Job",
+        label: "HyperExecute CLI",
+        link: {
+          type: "doc",
+          id: "hyperexecute-cli-run-tests-on-hyperexecute-grid",
+        },
         items: [
-          "hyperexecute-running-your-first-job",
-          "hyperexecute-guided-walkthrough",
-          "hyperexecute-cli-gui",
-          "saucelabs-to-hyperexecute-migrate",
-          "hyperexecute-supported-languages-and-frameworks",
+          {
+            type: "doc",
+            label: "GitIgnore and HyperexecuteIgnore",
+            id: "hyperexecute-gitignore",
+          },
         ],
       },
       {
         type: "category",
         collapsed: true,
-        label: "Performance Testing",
+        label: "HyperExecute GUI App",
+        link: {
+          type: "doc",
+          id: "hyperexecute-cli-gui",
+        },
         items: [
-          "hyperexecute-performance-testing",
-          "hyperexecute-run-jmeter-tests",
-          "hyperexecute-gattling-testing",
+          {
+            type: "doc",
+            label: "Search Query in GUI",
+            id: "hyperexecute-gui-query",
+          },
         ],
       },
       {
         type: "category",
         collapsed: true,
-        label: "Configure Your YAML",
+        label: "Key features of HyperExecute",
+        link: {
+          type: "doc",
+          id: "key-features-of-hyperexecute",
+        },
         items: [
           {
             type: "category",
@@ -183,7 +222,6 @@ module.exports = {
             type: "doc",
             label: "Global Policies",
             id: "hyperexecute-global-policies",
-            customProps: { beta: true },
           },
           {
             type: "doc",
@@ -191,7 +229,7 @@ module.exports = {
             id: "hyperexecute-workflow-governance",
             customProps: { beta: true },
           },
-          "hyperexecute-rerun-failed-tests",
+          "hyperexecute-rerun-failed-jobs",
           {
             type: "doc",
             label: "Rerun Rules",
@@ -202,165 +240,759 @@ module.exports = {
       {
         type: "category",
         collapsed: true,
-        label: "Scale Your Test Runs",
+        label: "Languages and Frameworks",
+        link: {
+          type: "doc",
+          id: "hyperexecute-supported-languages-and-frameworks",
+        },
         items: [
-          "hyperexecute-test-splitting-and-multiplexing",
-          "hyperexecute-auto-split-strategy",
-          "hyperexecute-matrix-multiplexing-strategy",
-          "hyperexecute-hybrid-strategy",
-          "hyperexecute-how-to-find-correct-concurrency",
-          "hyperexecute-prioritize-tests",
-          "hyperexecute-failfast",
-          "hyperexecute-test-muting",
-          "hyperexecute-rerun-failed-tests",
-          "hyperexecute-rerun-rules",
-          "hyperexecute-background-services",
-          "hyperexecute-auto-healing",
-          "hyperexecute-projects",
-          "hyperexecute-organisation-summary-dashboard",
-          "hyperexecute-jobs-label-filter",
-          "hyperexecute-workflows",
-          "hyperexecute-test-chains",
-          "hyperexecute-jobs-archiving",
-          "hyperexecute-how-smart-caching-boosts-tests-speed",
-          "hyperexecute-org-product-preferences",
+          {
+            type: "category",
+            collapsed: true,
+            label: "Selenium",
+            items: [
+              {
+                type: "category",
+                collapsed: true,
+                label: "Java",
+                items: [
+                  "testng-on-hyperexecute-grid",
+                  "junit-on-hyperexecute-grid",
+                  "cucumber-on-hyperexecute-grid",
+                ],
+              },
+              {
+                type: "category",
+                collapsed: true,
+                label: "JavaScript",
+                items: [
+                  "webdriverio-on-hyperexecute-grid",
+                  "protractor-on-hyperexecute-grid",
+                  "nightwatch-on-hyperexecute-grid",
+                  "hyperexecute-bidi-testing"
+                ],
+              },
+              {
+                type: "category",
+                collapsed: true,
+                label: "C#",
+                items: [
+                  "nunit-on-hyperexecute-grid",
+                  "specflow-on-hyperexecute-grid",
+                  "reqnroll-on-hyperexecute-grid",
+                ],
+              },
+              {
+                type: "category",
+                collapsed: true,
+                label: "Python",
+                items: [
+                  "pyunit-on-hyperexecute-grid",
+                  "pytest-on-hyperexecute-grid",
+                  "robot-on-hyperexecute-grid",
+                  "mainframe-testing-with-hyperexecute",
+                  "behave-on-hyperexecute-grid",
+                ],
+              },
+              {
+                type: "category",
+                collapsed: true,
+                label: "Ruby",
+                items: [
+                  "ruby-on-hyperexecute-grid",
+                  "capybara-on-hyperexecute-grid",
+                ],
+              },
+            ],
+          },
+          {
+            type: "category",
+            collapsed: true,
+            label: "Puppeteer",
+            items: [
+              "jest-on-hyperexecute",
+              "mocha-on-hyperexecute",
+              "codecept-on-hyperexecute",
+            ],
+          },
+          {
+            type: "category",
+            collapsed: true,
+            label: "Playwright",
+            link: {
+              type: "doc",
+              id: "playwright-integration-with-hyperexecute",
+            },
+            items: [
+              {
+                type: "category",
+                collapsed: true,
+                label: "Python",
+                items: [
+                  "pytest-on-hyperexecute",
+                  "playwright-python-on-hyperexecute",
+                ],
+              },
+              {
+                type: "category",
+                collapsed: true,
+                label: "Javascript",
+                items: [
+                  "playwright-vanillajs-on-hyperexecute",
+                  "playwright-codeceptjs-on-hyperexecute",
+                  "playwright-jest-on-hyperexecute",
+                ],
+              },
+              {
+                type: "doc",
+                label: "Java",
+                id: "playwright-junit-on-hyperexecute",
+              },
+              {
+                type: "doc",
+                label: "C#",
+                id: "playwright-dotnet-on-hyperexecute",
+              },
+              {
+                type: "doc",
+                label: "Real Device",
+                id: "playwright-real-device-on-hyperexecute",
+              },
+            ],
+          },
+          {
+            type: "category",
+            collapsed: true,
+            label: "Cypress",
+            link: {
+              type: "doc",
+              id: "cypress-integration-with-hyperexecute",
+            },
+            items: ["cypressv9-on-hyperexecute", "cypressv10-on-hyperexecute"],
+          },
+          {
+            type: "category",
+            collapsed: true,
+            label: "Appium",
+            items: [
+              "hyperexecute-appium-testing",
+              "hyperexecute-webapp-appium-testing",
+              "hyperexecute-appium-virtual-device",
+              "hyperexecute-emu-simu-devices-list",
+            ],
+          },
+          {
+            type: "doc",
+            label: "Espresso",
+            id: "hyperexecute-espresso-testing",
+          },
+          {
+            type: "doc",
+            label: "Maestro",
+            id: "hyperexecute-maestro-testing",
+          },
+          {
+            type: "doc",
+            label: "Detox",
+            id: "hyperexecute-detox-testing",
+          },
+          {
+            type: "doc",
+            label: "XCUI",
+            id: "hyperexecute-xcui-testing",
+          },
+          {
+            type: "doc",
+            label: "k6",
+            id: "hyperexecute-k6-testing",
+          },
+          {
+            type: "category",
+            collapsed: true,
+            label: "Performance Testing",
+            link: {
+              type: "doc",
+              id: "hyperexecute-performance-testing",
+            },
+            items: [
+              "hyperexecute-run-jmeter-tests",
+              "hyperexecute-gattling-testing",
+              "hyperexecute-k6-ui-testing",
+            ],
+          },
+          {
+            type: "doc",
+            label: "API Testing",
+            id: "hyperexecute-api-testing",
+          },
+          {
+            type: "doc",
+            label: "Karate",
+            id: "hyperexecute-karate-testing",
+          },
         ],
       },
       {
         type: "category",
         collapsed: true,
-        label: "View Results & Reports",
+        label: "Troubleshooting Guide",
+        link: {
+          type: "doc",
+          id: "hyperexecute-how-to-debug-job",
+        },
         items: [
-          "hyperexecute-status",
-          "hyperexecute-reports",
-          "hyperexecute-artifacts",
-          "error-categorization-report",
-          "hyperexecute-task-metrics",
-          "rca",
-          "hyperexecute-widgets",
-          "hyperexecute-test-widgets",
-        ],
-      },
-      {
-        type: "category",
-        collapsed: true,
-        label: "Debug Failed Jobs",
-        items: [
-          "hyperexecute-how-to-debug-job",
           "hyperexecute-cli-error",
           "hyperexecute-pre-steps-error",
           "hyperexecute-scenario-steps-error",
-          "hyperexecute-how-to-resolve-version-conflict",
         ],
       },
       {
         type: "category",
         collapsed: true,
-        label: "Set Up Private Cloud",
+        label: "Integrate with HyperExecute",
+        link: {
+          type: "doc",
+          id: "integration-he",
+        },
         items: [
-          "hyperexecute-private-cloud-benefits",
-          "hyperexecute-private-cloud-setup-with-azure",
-          "hyperexecute-private-cloud-setup-with-aws",
-          "hyperexecute-private-cloud-on-jumphost",
-          "hyperexecute-vnet-peering-for-private-cloud",
-          "hyperexecute-github-app-integration",
+          {
+            type: "category",
+            label: "Integration with CI/CD tools",
+            collapsed: true,
+            link: {
+              type: "doc",
+              id: "hyperexecute-integration-with-ci-cd-tools",
+            },
+            items: [
+              {
+                type: "doc",
+                label: "AWS Codepipeline",
+                id: "aws-codepipeline-with-hyperexecute",
+              },
+              {
+                type: "doc",
+                label: "Azure Devops",
+                id: "azure-with-hyperexecute",
+              },
+              {
+                type: "doc",
+                label: "GitHub Actions",
+                id: "github-actions-with-hyperexecute",
+              },
+              {
+                type: "doc",
+                label: "GitLab",
+                id: "gitlab-integration-with-hyperexecute",
+              },
+              {
+                type: "doc",
+                label: "CircleCI",
+                id: "circle-ci-with-hyperexecute",
+              },
+              {
+                type: "doc",
+                label: "Bitbucket",
+                id: "jenkins-with-hyperexecute",
+              },
+              {
+                type: "doc",
+                label: "Bitbucket",
+                id: "bitbucket-pipeline-with-hyperexecute",
+              },
+              {
+                type: "doc",
+                label: "Travis CI",
+                id: "travis-ci-with-hyperexecute",
+              },
+              {
+                type: "doc",
+                label: "TeamCity",
+                id: "teamcity-with-hyperexecute",
+              },
+              {
+                type: "doc",
+                label: "GoCD",
+                id: "gocd-integration-with-hyperexecute",
+              },
+              {
+                type: "doc",
+                label: "Bamboo CI",
+                id: "bamboo-integration-with-hyperexecute",
+              },
+              {
+                type: "doc",
+                label: "Semaphore",
+                id: "semaphore-integration-with-hyperexecute",
+              },
+            ],
+          },
+          {
+            type: "category",
+            label: "Integration with Products",
+            collapsed: true,
+            link: {
+              type: "doc",
+              id: "hyperexecute-integration-with-products",
+            },
+            items: [
+              {
+                type: "doc",
+                label: "Accelq",
+                id: "hyperexecute-accelq-integration",
+              },
+              {
+                type: "doc",
+                label: "algoQA",
+                id: "hyperexecute-algoqa-integration",
+              },
+              {
+                type: "doc",
+                label: "GitHub App",
+                id: "hyperexecute-github-app-integration",
+              },
+              {
+                type: "category",
+                collapsed: true,
+                label: "Azure Test Plan",
+                link: {
+                  type: "doc",
+                  id: "hyperexecute-azure-test-plan",
+                },
+                items: [
+                  "hyperexecute-azure-setup-test-plan",
+                  "hyperexecute-azure-associate-test-case",
+                  "hyperexecute-integrate-azure-test-plan",
+                ],
+              },
+              {
+                type: "doc",
+                label: "Katalon",
+                id: "katalon-integration-with-hyperexecute",
+              },
+              {
+                type: "doc",
+                label: "Provar",
+                id: "hyperexecute-provar-integration",
+              },
+              {
+                type: "doc",
+                label: "qTest",
+                id: "hyperexecute-qtest-integration",
+              },
+              {
+                type: "doc",
+                label: "Sikuli",
+                id: "hyperexecute-sikuli-integration",
+              },
+              {
+                type: "doc",
+                label: "Slack",
+                id: "hyperexecute-slack-integration",
+              },
+              {
+                type: "doc",
+                label: "Testim",
+                id: "hyperexecute-testim-integration",
+              },
+              {
+                type: "doc",
+                label: "Testsigma",
+                id: "hyperexecute-testsigma-integration",
+              },
+              {
+                type: "category",
+                collapsed: true,
+                label: "Tosca",
+                link: {
+                  type: "doc",
+                  id: "tosca-integration-hyperexecute",
+                },
+                items: [
+                  "tosca-integration-with-hyperexecute-using-commander",
+                  "tosca-integration-with-hyperexecute-using-dex",
+                  "tosca-integration-with-hyperexecute-for-sap",
+                ],
+              },
+              {
+                type: "doc",
+                label: "WinApp Driver",
+                id: "hyperexecute-winapp-integration",
+              },
+              {
+                type: "doc",
+                label: "Zephyr",
+                id: "hyperexecute-zephyr-scale-integration",
+              },
+            ],
+          },
+          {
+            type: "category",
+            label: "Integration with TestMu AI Products",
+            collapsed: true,
+            link: {
+              type: "doc",
+              id: "integration-lt-products",
+            },
+            items: [
+              {
+                type: "doc",
+                label: "SmartUI Capture Onboarding",
+                id: "hyperexecute-smart-ui-capture-onboarding",
+              },
+              {
+                type: "category",
+                label: "HyperExecute Smart UI - Hooks",
+                collapsed: true,
+                link: {
+                  type: "doc",
+                  id: "smart-ui-testing",
+                },
+                items: [
+                  {
+                    type: "doc",
+                    label: "Hyperexecute Smart UI Testing - Selenium",
+                    id: "hyperexecute-smart-ui-testing-using-selenium",
+                  },
+                  {
+                    type: "doc",
+                    label: "Hyperexecute Smart UI Testing - Cypress",
+                    id: "hyperexecute-smart-ui-testing-using-cypress",
+                  },
+                  {
+                    type: "doc",
+                    label: "Hyperexecute Smart UI Testing - Playwright",
+                    id: "hyperexecute-smart-ui-test-using-playwright",
+                  },
+                ],
+              },
+              {
+                type: "category",
+                label: "HyperExecute Smart UI - SDK",
+                collapsed: true,
+                items: [
+                  {
+                    type: "category",
+                    label: "Selenium",
+                    collapsed: true,
+                    items: [
+                      "hyperexecute-smart-ui-sdk-selenium-javascript",
+                      "hyperexecute-smart-ui-sdk-selenium-csharp",
+                    ],
+                  },
+                  {
+                    type: "doc",
+                    label: "Hyperexecute Smart UI Testing - Cypress",
+                    id: "hyperexecute-smart-ui-sdk-using-cypress",
+                  },
+                  {
+                    type: "doc",
+                    label: "Hyperexecute Smart UI Testing - Maestro",
+                    id: "hyperexecute-smart-ui-sdk-maestro",
+                  },
+                  {
+                    type: "doc",
+                    label: "Hyperexecute Smart UI Testing - Playwright",
+                    id: "hyperexecute-smart-ui-sdk-using-playwright",
+                  },
+                  {
+                    type: "doc",
+                    label: "Hyperexecute Smart UI Testing - Puppeteer",
+                    id: "hyperexecute-smart-ui-sdk-using-puppeteer",
+                  },
+                ],
+              },
+              {
+                type: "doc",
+                label: "Hyperexecute Virtual Devices Testing",
+                id: "hyperexecute-integration-with-virtual-devices",
+              },
+              {
+                type: "doc",
+                label: "Hyperexecute Real Devices Testing",
+                id: "real-devices-integration-with-hyperexecute",
+              },
+            ],
+          },
         ],
       },
       {
         type: "category",
         collapsed: true,
-        label: "Integrate With SmartUI (Visual Testing)",
+        label: "HyperExecute Private Cloud",
+        link: {
+          type: "doc",
+          id: "hyperexecute-private-cloud-setup",
+        },
         items: [
-          "smart-ui-testing",
-          "hyperexecute-smart-ui-capture-onboarding",
-          "hyperexecute-smart-ui-testing-using-selenium",
-          "hyperexecute-smart-ui-testing-using-cypress",
-          "hyperexecute-smart-ui-test-using-playwright",
-          "hyperexecute-smart-ui-sdk-selenium-javascript",
-          "hyperexecute-smart-ui-sdk-maestro",
+          {
+            type: "doc",
+            label: "HyperExecute Private Cloud Benefits",
+            id: "hyperexecute-private-cloud-benefits",
+          },
+          {
+            type: "category",
+            collapsed: true,
+            label: "Setup with Azure",
+            link: {
+              type: "doc",
+              id: "hyperexecute-private-cloud-setup-with-azure",
+            },
+
+            items: [
+              {
+                type: "doc",
+                label: "HyperExecute Private Cloud on JumpHost",
+                id: "hyperexecute-private-cloud-on-jumphost",
+              },
+              {
+                type: "doc",
+                label: "VNet Peering and VNet Links",
+                id: "hyperexecute-vnet-peering-for-private-cloud",
+              },
+            ],
+          },
+          {
+            type: "doc",
+            label: "Setup with AWS",
+            id: "hyperexecute-private-cloud-setup-with-aws",
+          },
         ],
       },
       {
         type: "category",
+        label: "Knowledge Base",
         collapsed: true,
-        label: "Integrate with CI/CD",
+        link: {
+          type: "doc",
+          id: "hyperexecute-knowledge-base",
+        },
         items: [
-          "hyperexecute-integration-with-ci-cd-tools",
-          "github-actions-with-hyperexecute",
-          "gitlab-integration-with-hyperexecute",
-          "jenkins-with-hyperexecute",
-          "bitbucket-pipeline-with-hyperexecute",
-          "circle-ci-with-hyperexecute",
-          "azure-with-hyperexecute",
-          "aws-codepipeline-with-hyperexecute",
-          "travis-ci-with-hyperexecute",
-          "teamcity-with-hyperexecute",
-          "gocd-integration-with-hyperexecute",
-          "bamboo-integration-with-hyperexecute",
-          "semaphore-integration-with-hyperexecute",
+          {
+            type: "doc",
+            label: "HyperExecute Status",
+            id: "hyperexecute-status",
+          },
+          {
+            type: "category",
+            collapsed: true,
+            label: "How To Guide",
+            link: {
+              type: "doc",
+              id: "hyperexecute-how-to-guide",
+            },
+            items: [
+              "hyperexecute-how-to-get-my-username-and-access-key",
+              "hyperexecute-environment-variable-setup",
+              {
+                type: "category",
+                collapsed: true,
+                label: "Secrets Management",
+                items: [
+                  "hyperexecute-how-to-save-and-manage-secrets",
+                  "hyperexecute-how-to-manage-project-level-secrets",
+                ],
+              },
+              "hyperexecute-how-to-configure-tunnel",
+              "hyperexecute-how-to-configure-os-and-browser",
+              "hyperexecute-how-to-find-correct-concurrency",
+              "hyperexecute-how-to-configure-sourcePayload",
+              "hyperexecute-browser-list-api",
+              "hyperexecute-how-to-run-tests-using-local-selenium-drivers",
+              "hyperexecute-how-to-perform-dependent-test-based-discovery",
+              "hyperexecute-how-to-perform-group-based-test-discovery-in-testng",
+              "hyperexecute-how-to-resolve-version-conflict",
+              "hyperexecute-org-product-preferences",
+            ],
+          },
+          {
+            type: "category",
+            collapsed: true,
+            label: "Use Cases",
+            link: {
+              type: "doc",
+              id: "hyperexecute-use-cases",
+            },
+            items: [
+              "hyperexecute-how-smart-caching-boosts-tests-speed",
+              "hyperexecute-seamless-integration-with-tools",
+              "hyperexecute-build-mobile-apps-using-tools",
+              "hyperexecute-utilizing-custom-libraries",
+              "hyperexecute-supported-languages-and-packages",
+              "hyperexecute-test-chains",
+              "hyperexecute-testng-use-cases",
+              "hyperexecute-yaml-creation-for-playwright",
+              "hyperexecute-python-use-cases",
+              "hyperexecute-csharp-use-cases"
+            ],
+          },
+          {
+            type: "category",
+            collapsed: true,
+            label: "Widgets",
+            link: {
+              type: "doc",
+              id: "hyperexecute-widgets",
+            },
+            items: [
+              "hyperexecute-job-widgets",
+              "hyperexecute-stage-widgets",
+              "hyperexecute-task-widgets",
+              "hyperexecute-test-widgets",
+              "hyperexecute-resource-widgets",
+            ],
+          },
+          {
+            type: "category",
+            collapsed: true,
+            label: "Job Reports",
+            link: {
+              type: "doc",
+              id: "hyperexecute-job-reports",
+            },
+            items: [
+              "extent-report",
+              "native-extent-report",
+              "hyperexecute-native-testng-report",
+              "allure-reports",
+              "cucumber-report",
+              "playwright-html-report",
+              "specflow-report",
+              "custom-speclow-report",
+              "cypress-mochaawesome-report",
+              "error-categorization-report",
+              "junit-xml-report",
+              "karate-report",
+              "robot-report",
+              "hyperexecute-katalon-report"
+            ],
+          },
+
+          {
+            type: "category",
+            collapsed: true,
+            label: "Migration Guide",
+            items: ["saucelabs-to-hyperexecute-migrate"],
+          },
         ],
       },
       {
         type: "category",
+        label: "FAQs",
         collapsed: true,
-        label: "Integrate Test Tools",
+        link: {
+          type: "doc",
+          id: "hyperexecute-faqs",
+        },
         items: [
-          "hyperexecute-integration-with-products",
-          "hyperexecute-azure-test-plan",
-          "tosca-integration-with-hyperexecute-using-commander",
-          "tosca-integration-with-hyperexecute-using-dex",
-          "tosca-integration-with-hyperexecute-for-sap",
-          "hyperexecute-accelq-integration",
-          "hyperexecute-algoqa-integration",
-          "katalon-integration-with-hyperexecute",
-          "hyperexecute-provar-integration",
-          "hyperexecute-qtest-integration",
-          "hyperexecute-sikuli-integration",
-          "hyperexecute-testim-integration",
-          "hyperexecute-testsigma-integration",
-          "hyperexecute-winapp-integration",
-          "hyperexecute-zephyr-scale-integration",
-          "hyperexecute-slack-integration",
-        ],
-      },
-      {
-        type: "category",
-        collapsed: true,
-        label: "Reference",
-        items: [
-          "hyperexecute-cli-run-tests-on-hyperexecute-grid",
-          "hyperexecute-browser-list-api",
-          "hyperexecute-supported-languages-and-packages",
-          "hyperexecute-emu-simu-devices-list",
-        ],
-      },
-      {
-        type: "category",
-        collapsed: true,
-        label: "Troubleshoot & FAQs",
-        items: [
-          "he-general-faqs",
-          "hyperexecute-yaml-faqs",
-          "he-cli-faqs",
-          "he-feature-faqs",
-          "he-platform-faqs",
-          "he-pricing-faqs",
-          "he-security-faqs",
-          "he-enterprise-faqs",
+          {
+            type: "doc",
+            label: "General FAQs",
+            id: "he-general-faqs",
+          },
+          {
+            type: "doc",
+            label: "YAML FAQs",
+            id: "hyperexecute-yaml-faqs",
+          },
+          {
+            type: "doc",
+            label: "CLI FAQs",
+            id: "he-cli-faqs",
+          },
+          {
+            type: "doc",
+            label: "Features FAQs",
+            id: "he-feature-faqs",
+          },
+          {
+            type: "doc",
+            label: "Platform FAQs",
+            id: "he-platform-faqs",
+          },
+          {
+            type: "doc",
+            label: "Pricing FAQs",
+            id: "he-pricing-faqs",
+          },
+          {
+            type: "doc",
+            label: "Security FAQs",
+            id: "he-security-faqs",
+          },
+          {
+            type: "doc",
+            label: "Enterprise FAQs",
+            id: "he-enterprise-faqs",
+          },
         ],
       },
       {
         type: "category",
         collapsed: true,
         label: "Release Notes",
+        link: {
+          type: "doc",
+          id: "hyperexecute-release-notes",
+        },
         items: [
-          "hyperexecute-release-notes",
-          "hyperexecute-release-notes-2026",
-          "hyperexecute-release-notes-2025",
-          "hyperexecute-release-notes-2024",
-          "hyperexecute-release-notes-2023",
-          "hyperexecute-cli-release-notes-0-2-249",
-          "hyperexecute-mcp-server-release-notes-1-0-0",
+          // CLI releases
+          {
+            type: "category",
+            collapsed: true,
+            label: "CLI Releases",
+            items: [
+              {
+                type: "category",
+                collapsed: true,
+                label: "January, 2025",
+                items: ["hyperexecute-cli-release-notes-0-2-249"],
+              },
+            ],
+          },
+
+          // MCP Server Release Notes
+          {
+            type: "category",
+            collapsed: true,
+            label: "MCP Releases",
+            items: [
+              {
+                type: "category",
+                collapsed: true,
+                label: "May, 2025",
+                items: ["hyperexecute-mcp-server-release-notes-1-0-0"],
+              },
+            ],
+          },
+          {
+            type: "category",
+            collapsed: true,
+            label: "2026 Releases",
+            items: ["hyperexecute-release-notes-2026"],
+          },
+          // 2025 releases
+          {
+            type: "category",
+            collapsed: true,
+            label: "2025 Releases",
+            items: ["hyperexecute-release-notes-2025"],
+          },
+
+          // 2024 releases
+          {
+            type: "category",
+            collapsed: true,
+            label: "2024 Releases",
+            items: ["hyperexecute-release-notes-2024"],
+          },
+
+          // 2023 releases
+          {
+            type: "category",
+            collapsed: true,
+            label: "2023 Releases",
+            items: ["hyperexecute-release-notes-2023"],
+          },
         ],
       },
     ],
@@ -656,6 +1288,8 @@ module.exports = {
               "kane-ai-click-interactions",
               "kane-ai-jira-integration",
               "kane-ai-api-testing",
+              "kaneai-bulk-api-import",
+              "kaneai-api-response-assertions",
               {
                 type: "category",
                 collapsed: true,
@@ -1112,7 +1746,6 @@ module.exports = {
             ],
           },
           "wordpress-plugin",
-          "npm-plugin-for-testcafe-integration-with-lambdatest",
           "fastlane-plugin",
           "azure-pipeline",
           "teamcity-plugin",
@@ -2430,7 +3063,7 @@ module.exports = {
     ],
   ],
 
-  AppiumTestingSidebar: [
+   AppiumTestingSidebar: [
     {
       type: 'link',
       label: 'Back',
@@ -2440,125 +3073,44 @@ module.exports = {
       },
     },
     [
-      {
-        type: "category",
-        collapsed: true,
-        label: "Appium Testing",
-        link: {
-          type: "doc",
-          id: "getting-started-with-appium-testing",
-        },
-        items: [
-
           {
             type: "category",
-            collapsed: true,
-            label: "Languages and Frameworks",
-            link: {
-              type: "doc",
-              id: "appium-languages-and-frameworks",
-            },
+            collapsed: false,
+            label: "Get Started",
             items: [
-              {
-                type: "category",
-                collapsed: true,
-                label: "Java",
-                link: {
-                  type: "doc",
-                  id: "appium-java",
-                },
-                items: [
-                  "appium-java-junit",
-                  "appium-java-jbehave",
-                  "appium-java-cucumber",
-                  "appium-java-testng",
-                ],
-              },
-              {
-                type: "category",
-                collapsed: true,
-                label: "JavaScript",
-                link: {
-                  type: "doc",
-                  id: "appium-nodejs",
-                },
-                items: ["appium-nodejs-webdriverio", "appium-nodejs-mocha"],
-              },
-              {
-                type: "category",
-                collapsed: true,
-                label: "Python",
-                link: {
-                  type: "doc",
-                  id: "appium-python",
-                },
-                items: [
-                  "appium-python-behave",
-                  "appium-python-robot",
-                  "appium-python-gauge",
-                  "appium-python-pytest",
-                ],
-              },
-              {
-                type: "category",
-                collapsed: true,
-                label: "Ruby",
-                link: {
-                  type: "doc",
-                  id: "appium-ruby",
-                },
-                items: ["appium-ruby-cucumber", "appium-ruby-rspec"],
-              },
-              {
-                type: "category",
-                collapsed: true,
-                label: "PHP",
-                link: {
-                  type: "doc",
-                  id: "appium-php",
-                },
-                items: ["appium-php-behat"],
-              },
-              {
-                type: "category",
-                collapsed: true,
-                label: "C#",
-                link: {
-                  type: "doc",
-                  id: "appium-csharp",
-                },
-                items: ["appium-csharp-nunit"],
-              },
-              "appium-kotlin",
-              "test-flutter-apps",
+              "getting-started-with-appium-testing",
+              "appium-agent-skills",
+              "migrate-existing-appium-test-suites",
+              "desired-capabilities-in-appium",
             ],
           },
           {
             type: "category",
             collapsed: true,
-            label: "Setup",
+            label: "Languages & Frameworks",
             items: [
-              {
-                type: "category",
-                collapsed: true,
-                label: "Application",
-                items: [
-                  "application-setup-via-api",
-                  "application-setup-via-gui",
-                ],
-              },
-              "desired-capabilities-in-appium",
+              "appium-java",
+              "appium-nodejs",
+              "appium-python",
+              "appium-ruby",
+              "appium-php",
+              "appium-csharp",
+              "appium-kotlin",
+            ],
+          },
+          {
+            type: "category",
+            collapsed: true,
+            label: "Configure Your Tests",
+            items: [
+              "application-setup-via-api",
+              "appium-uploading-retrieving-files",
               "supported-appium-versions",
-              "supported-appium-plugins",
               "list-of-supported-locales",
-              //"appium-ip-geolocation",
               "supported-timezone",
               "debugging-logs",
               "app-testing-apis",
               "appium-lambdatest-hooks",
-              "appium-install-uninstall-lambdatest-hooks",
-              "appium-uploading-retrieving-files",
-              "appium-firebase-app-upload",
             ],
           },
           {
@@ -2616,16 +3168,11 @@ module.exports = {
           {
             type: "category",
             collapsed: true,
-            label: "Local Testing",
-            items: ["testing-apps-locally"],
+            label: "References",
+            items: ["appium-languages-and-frameworks", "migrate-appium-tests-from-browserstack-and-saucelabs", "migrate-appium-test-suites-from-sauce-labs", "appium-troubleshooting"],
           },
-          "migrate-appium-tests-from-browserstack-and-saucelabs",
-          "appium-troubleshooting",
-        ],
-      },
     ],
   ],
-
   EspressoTestingSidebar: [
     {
       type: 'link',
@@ -2750,6 +3297,11 @@ module.exports = {
         type: "doc",
         label: "Flutter Supported Capabilities",
         id: "flutter-supported-capabilities",
+      },
+      {
+        type: "doc",
+        label: "Network Proxy Support",
+        id: "network-proxy-support-in-flutter-apps",
       },
     ],
   ],
@@ -4688,6 +5240,11 @@ module.exports = {
             id: "kane-cli-assurance-automation",
           },
         ],
+      },
+      {
+        type: "doc",
+        label: "Exploration",
+        id: "kane-cli-exploration",
       },
       {
         type: "category",

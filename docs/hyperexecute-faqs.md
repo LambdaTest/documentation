@@ -101,14 +101,14 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
-<div style={{ display: 'flex',  justifyContent: 'space-between'}}>
+<div style={{ display: 'flex', justifyContent: 'space-between', gap: '16px' }}>
   <DocCard heading="General" link="/support/docs/hyperexecute-general-faqs/" />
   <DocCard heading="YAML" link="/support/docs/hyperexecute-yaml-faqs/" />
   <DocCard heading="CLI" link="/support/docs/hyperexecute-cli-faqs/" />
   <DocCard heading="Features" link="/support/docs/hyperexecute-feature-faqs/" />
 </div><br />
 
-<div style={{ display: 'flex',  justifyContent: 'space-between'}}>
+<div style={{ display: 'flex', justifyContent: 'space-between', gap: '16px' }}>
   <DocCard heading="Platform" link="/support/docs/hyperexecute-platform-faqs/" />
   <DocCard heading="Pricing" link="/support/docs/hyperexecute-pricing-faqs/" />
   <DocCard heading="Security" link="/support/docs/hyperexecute-security-faqs/" />

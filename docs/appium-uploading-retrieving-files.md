@@ -1,7 +1,7 @@
 ---
 id: appium-uploading-retrieving-files
 title: Uploading/Retrieving files on Real Devices 
-sidebar_label: Uploading/Retrieving files on Real Devices
+sidebar_label: Upload/Retrieve Files
 description: You can use sample data provided by TestMu AI in case you need to check uploading files, contacts etc. to your application. This document also shows how to retrieve files from TestMu AI rela devices to local and vice-versa.
 keywords:
   - upload a file
@@ -18,6 +18,7 @@ url: https://www.testmuai.com/support/docs/appium-uploading-retrieving-files/
 site_name: TestMu AI
 slug: appium-uploading-retrieving-files/
 canonical: https://www.testmuai.com/support/docs/appium-uploading-retrieving-files/
+toc_max_heading_level: 2
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -25,12 +26,8 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import RealDeviceTag from '../src/component/realDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import VerifiedTag from '@site/src/component/verifiedTag';
-
-
-<RealDeviceTag value="Real Device" /> 
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -155,7 +152,6 @@ file_base64 = driver.pull_file(dest_path)
   </div>
 </TabItem>
 
-
 <TabItem value="JavaScript" label="JavaScript" default>
 
   <VerifiedTag value="Verified" />
@@ -258,7 +254,6 @@ file_base64 = driver.pull_file(dest_path)
   </div>
 </TabItem>
 
-
 <TabItem value="JavaScript" label="JavaScript" default>
 
   <VerifiedTag value="Verified" />
@@ -334,9 +329,6 @@ byte[] fileBase64 = driver.PullFile("@com.lambdatest.proverbial:Documents/sample
 </TabItem>
 
 </Tabs>
-
-
-
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

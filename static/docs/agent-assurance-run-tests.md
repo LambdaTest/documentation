@@ -40,6 +40,8 @@ A partially observable scenario still runs when it can establish useful evidence
 
 The default concurrency is `1` unless the profile or plan selects another value. An explicit `--concurrency` accepts 1–8 and overrides that choice.
 
+Since 0.1.17, your Agent Assurance plan also caps how many scenarios run at a time. When `--concurrency` asks for more, Rook runs at the plan's limit and says so, for example "Your Agent Assurance plan runs up to 2 scenarios at a time. Running 2 at a time, not 6." A resumed run that the limit caps records the capped value in its `run.yaml`.
+
 ## Select Scenarios Precisely
 
 Run by ID:
@@ -161,7 +163,7 @@ Authentication revocation, controller failure, and exhausted budget also halt wo
 
 Use scenarios that exercise both the user journey and externally visible effects.
 
-The lists below include file-input journeys that teams commonly need. Native attachment delivery is not implemented in the current pre-alpha release, so run file-input cases in one of these ways:
+The lists below include file-input journeys that teams commonly need. Native attachment delivery is not implemented in the current release, so run file-input cases in one of these ways:
 
 - Use a reviewed adapter that incorporates the file into the agent invocation.
 - Place a reachable test-file URL in the goal.

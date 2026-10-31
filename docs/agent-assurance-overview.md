@@ -124,8 +124,8 @@ Agent Assurance uses the <code>rook</code> CLI for authoring and execution, with
 
 You install only the <code>rook</code> CLI. You do not need the source repository, a dedicated development environment, Docker, or your own model API key.
 
-:::caution Pre-alpha
-Commands and stored file formats can change. Test against a disposable or staging target and review the target and write warning before every run.
+:::caution Before your first run
+Commands and stored file formats can still change between releases. Test against a disposable or staging target and review the target and write warning before every run.
 :::
 
 Launch `rook` from your agent workspace to open the interactive terminal UI (TUI). Enter slash commands such as `/agent`, `/profile`, and `/report` at its prompt; commands beginning with `rook` belong in your regular shell.
@@ -227,7 +227,7 @@ Always read coverage together with pass rate. A high pass rate with low verifica
 
 Rook can collect text, JSON, local files, and downloadable links. This supports agents that produce PDFs, images, CSV files, Markdown, reports, or archives.
 
-Current pre-alpha limits include:
+Current limits include:
 
 - Text and URL inputs can be passed in the scenario goal. Native file, image, and pull-request attachment delivery is not yet implemented.
 - Rook can record image dimensions and file evidence, but it cannot judge image pixels. Visual correctness may be **Unable to Verify**.

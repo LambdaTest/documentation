@@ -514,7 +514,7 @@ Nothing in the project is changed. The command reads the authenticated account a
 - If authentication is missing or expired, run <code>/login</code> and <code>/auth status</code>.
 - If the controller cannot be reached, run <code>/doctor</code>.
 - In automation, use <code>rook plan --json</code> and inspect the response as well as the exit status. A null credit balance means unknown, not zero or unlimited. The account balance is not an enforced task-wide spending cap.
-- Since 0.1.13, Rook checks your organization's Agent Assurance plan before any model call or credit spend. With no plan, an ended free trial, or an expired subscription, work is refused with <code>plan_required</code> whatever the credit balance. On a plan without Rook cloud, such as Starter, syncing, cloud project status, and recording runs on Rook cloud are refused with <code>upgrade_plan</code>. Each refusal names the billing page that lifts it; see [plan refusals](/support/docs/agent-assurance-troubleshooting/#plan-refusals).
+- Since 0.1.13, Rook checks your organization's Agent Assurance plan before any model call or credit spend. With no plan, an ended free trial, or an expired subscription, work is refused with <code>plan_required</code> whatever the credit balance. On a plan without Rook cloud, such as Starter, syncing, cloud project status, and recording runs on Rook cloud are refused with <code>upgrade_plan</code>. Each refusal names the page that lifts it: the billing plans page, or, since 0.1.14, the onboarding page that starts the free trial for an organization that has never had a plan; see [plan refusals](/support/docs/agent-assurance-troubleshooting/#plan-refusals).
 
 ## Projects and Discovery {#projects-and-discovery}
 
@@ -863,7 +863,7 @@ The shell form is <code>rook run</code> with the same options.
 | <code>--name &lt;name&gt;</code> | Give the run a readable label. |
 | <code>--phases &lt;names&gt;</code> | Run only a contiguous selection of <code>prepare</code>, <code>open</code>, <code>execute</code>, <code>close</code>, <code>collect</code>, and <code>judge</code>. |
 | <code>--skip &lt;names&gt;</code> | Run everything except the named phases. Cannot be combined with <code>--phases</code>. |
-| <code>--concurrency &lt;n&gt;</code> | Run 1 to 8 scenarios at once. An explicit value overrides the planner. |
+| <code>--concurrency &lt;n&gt;</code> | Run 1 to 8 scenarios at once. An explicit value overrides the planner. Since 0.1.17, your plan's scenarios-at-a-time limit caps it. |
 | <code>--test</code> | Run the current tree without placing the result on the shared project timeline. |
 | <code>--run &lt;id&gt;</code> | Continue that same run in place with the phases selected by <code>--phases</code>. |
 | <code>--resume &lt;id&gt;</code> | Carry compatible completed work forward from an earlier run. |
@@ -1148,7 +1148,7 @@ rook mcp disable <name> [--json]
 rook mcp approve <name> [--origin project|discovered] [--json]
 ~~~
 
-For stdio servers, pass the command after the server name, using <code>--</code> to separate its arguments from Rook's options. The registry accepts declarations for <code>stdio</code>, <code>http</code>, <code>sse</code>, and <code>ws</code>; remote declarations require <code>--url</code>. Currently, only stdio connections execute. The other transports remain listed as <code>unsupported-transport</code>; accepting a declaration is not a successful connection.
+For stdio servers, pass the command after the server name, using <code>--</code> to separate its arguments from Rook's options. The registry accepts declarations for <code>stdio</code>, <code>http</code>, <code>sse</code>, and <code>ws</code>; remote declarations require <code>--url</code>. Since 0.1.14, only stdio and http connections execute; an http server connects over Streamable HTTP after the same approval as a stdio server. <code>sse</code> and <code>ws</code> remain listed as <code>unsupported-transport</code>; accepting a declaration is not a successful connection.
 
 #### Real-world verification example {#mcp-real-world-verification-example}
 
@@ -1240,7 +1240,7 @@ In the TUI, choosing **update now** at the startup notice or typing <code>/updat
 
 If you previously chose “never ask again” in the TUI update notice, run <code>/update auto</code> to re-enable automatic notices.
 
-The latest public release checked on October 23, 2026 is [0.1.13](https://github.com/LambdaTest/rook/releases/tag/v0.1.13). Use the installed command's help for version-specific options. If an npm 0.1.1 or 0.1.2 install cannot update, follow the [public-registry repair command](/support/docs/rook-installation/#repair-an-npm-011-or-012-installation). Windows users can follow [PowerShell setup and upgrades](/support/docs/rook-installation/#windows).
+The latest public release checked on October 30, 2026 is [0.1.17](https://github.com/LambdaTest/rook/releases/tag/v0.1.17). Use the installed command's help for version-specific options. If an npm 0.1.1 or 0.1.2 install cannot update, follow the [public-registry repair command](/support/docs/rook-installation/#repair-an-npm-011-or-012-installation). Windows users can follow [PowerShell setup and upgrades](/support/docs/rook-installation/#windows).
 
 ## Export Diagnostic Logs {#export}
 

@@ -324,7 +324,7 @@ Your test results, including video, network logs, and command-by-command executi
 
 Continue with these related guides:
 
-- [Configure Playwright Capabilities for the TestMu AI Grid](/support/docs/capabilities-for-playwright/)
+- [Configure Playwright Capabilities for the TestMu AI Grid](/support/docs/playwright-test-execution-setup/)
 - [Get Started With Playwright Testing on TestMu AI](/support/docs/playwright-testing/)
 - [Set Up Playwright Test Execution on TestMu AI](/support/docs/playwright-test-execution-setup/)
 

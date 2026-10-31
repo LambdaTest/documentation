@@ -2,6 +2,8 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+Basic Authentication on TestMu AI lets you pass HTTP username and password credentials during Safari web automation sessions on real iOS devices, using a lambda hook that answers Base64-encoded Authorization prompts automatically so your scripts reach protected pages without sign-in.
+
 ## Introduction
 
 Basic Authentication is a method for an HTTP user agent to provide a username and password when making a request. In basic HTTP authentication, a request contains a header field in the form of `Authorization: Basic `, where credentials is the **Base64** encoding of ID and password joined by a single colon `:`.
