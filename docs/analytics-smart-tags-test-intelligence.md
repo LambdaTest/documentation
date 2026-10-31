@@ -78,3 +78,7 @@ New failures are tests that have started failing recently. These tests may indic
 
 Performance anomalies are tests that have shown a significant change in performance. These tests may have suddenly become slower or faster than usual, indicating a potential issue in your application or test environment. By tracking performance anomalies, you can investigate the root cause of the performance change and optimize your test suite accordingly.
 
+## Smart Tags for test cases and anomaly notifications
+
+Smart tags are also computed for individual test cases, and you can get an email, Slack or webhook digest whenever a build finishes with anomalies. See [Test case intelligence](/support/docs/analytics-build-insights-test-cases/#test-case-intelligence) and [Anomaly notifications](/support/docs/analytics-build-insights-test-cases/#anomaly-notifications).
+

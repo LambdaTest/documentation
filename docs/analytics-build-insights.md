@@ -235,6 +235,10 @@ Each metric points you directly to tests that need attention (for example, focus
 
 Use the **Tests** tab when you are ready to debug at the individual test level.
 
+:::tip Test Cases
+If your tests report test cases, use the **Test Sessions / Test Cases** toggle on the Insights and Tests tabs to analyze the build test case by test case. See [Test Cases in Build Insights](/support/docs/analytics-build-insights-test-cases/).
+:::
+
 :::tip Build Comparison
 Want to compare two builds side by side? Use the **Compare** tab to identify new failures, fixed tests, and stability changes between any two builds. This is especially useful for release validation and regression detection. Learn more in the [Build Comparison](/support/docs/analytics-build-comparison/) documentation.
 :::
