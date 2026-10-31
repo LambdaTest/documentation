@@ -2020,6 +2020,7 @@ module.exports = {
     {
       type: "doc",
       id: "analytics-overview",
+      className: "menu-bold",
     },
     // 1. Dashboards (single level; groups are shown with labels, not nesting)
     {
@@ -2037,8 +2038,18 @@ module.exports = {
         "analytics-filter-by-custom-data",
         "analytics-dashboard-settings",
         "analytics-report-scheduling",
-        { type: "html", value: '<span class="sidebar-section-label">Widgets</span>', defaultStyle: true, className: "sidebar-section-label-item" },
-        { type: "doc", id: "analytics-widgets", label: "Widgets Overview" },
+      ],
+    },
+    // Widgets (its own dropdown, still a single nesting level)
+    {
+      type: "category",
+      collapsed: true,
+      label: "Widgets",
+      link: {
+        type: "doc",
+        id: "analytics-widgets",
+      },
+      items: [
         "analytics-modules-automation-test-overview",
         "analytics-modules-hyperexecute",
         "analytics-modules-manual-test-overview",
@@ -2102,9 +2113,9 @@ module.exports = {
         { type: "doc", id: "analytics-sub-organization-widgets", label: "Sub Organizations" },
       ],
     },
-    // 4. Best Practices and FAQs
-    "insights-best-practices",
-    "analytics-faqs",
+    // 4. Best Practices and FAQs (bold)
+    { type: "doc", id: "insights-best-practices", className: "menu-bold" },
+    { type: "doc", id: "analytics-faqs", className: "menu-bold" },
   ],
 
   TestIntelligence: [
