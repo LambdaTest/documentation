@@ -2050,8 +2050,18 @@ module.exports = {
         "analytics-test-time-trends",
         "analytics-allure-api-widgets",
         "analytics-modules-groups",
-        { type: "html", value: '<span class="sidebar-section-label">Custom Widgets</span>', defaultStyle: true, className: "sidebar-section-label-item" },
-        "dashboards-custom-widgets",
+      ],
+    },
+    // Custom Widgets (its own dropdown, still a single nesting level)
+    {
+      type: "category",
+      collapsed: true,
+      label: "Custom Widgets",
+      link: {
+        type: "doc",
+        id: "dashboards-custom-widgets",
+      },
+      items: [
         "analytics-heatmap-widgets",
         "analytics-bar-line-widgets",
         "analytics-table-widgets",
