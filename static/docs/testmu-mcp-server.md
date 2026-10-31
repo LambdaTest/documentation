@@ -6,14 +6,25 @@ TestMu AI MCP Server is a remote MCP server that connects MCP-compatible AI clie
 
 ## Available Tools
 
-TestMu AI MCP Server provides six tools, each covering a different area of testing:
+TestMu AI MCP Server provides 88 tools. Most of them are grouped by product, and each product has its own page:
 
-1. **[HyperExecute Tool:](/support/docs/hyperexecute-mcp-server/)** AI-native test orchestration. Auto-generates test runner commands and HyperExecute YAML, monitors jobs, and surfaces session details.
-2. **[Automation Tool:](/support/docs/automation-mcp-server/)** Triage and debug automation test failures. Pulls execution data, command/network/console logs, and helps identify root cause directly inside your IDE.
-3. **[Native App Automation Tool:](/support/docs/native-app-automation-mcp/)** Triage and debug native mobile app tests through MCP, and drive real or virtual devices live with the Appium MCP server.
-4. **[SmartUI Tool:](/support/docs/smartui-mcp-server/)** Debug visual regressions. Returns natural-language summaries of pixel, layout, DOM, and perceptual differences from any SmartUI comparison run.
-5. **[Accessibility Tool:](/support/docs/accessibility-mcp-server/)** Run accessibility checks on hosted URLs or local React apps and get detailed remediation guidance.
-6. **[Test Manager Tool:](/support/docs/test-manager-mcp-server/)** Run the complete test management lifecycle. Generate test cases with AI, build configured test runs, record results in bulk, and track milestones and coverage.
+1. **[HyperExecute Tool:](/support/docs/hyperexecute-mcp-server/)** 15 tools. Generates HyperExecute YAML, searches the HyperExecute documentation, and lists, analyzes and debugs jobs, tasks, stages and artifacts.
+2. **[Automation Tool:](/support/docs/automation-mcp-server/)** 19 tools. Finds builds and tests, pulls test details, command, network, console and Selenium logs, screenshots and videos, and updates, stops or deletes sessions and builds.
+3. **[Native App Automation:](/support/docs/native-app-automation-mcp/)** Debugs app automation tests with the Automation tools, and drives real or virtual devices live with the separate Appium MCP server.
+4. **[SmartUI Tool:](/support/docs/smartui-mcp-server/)** 7 tools. Finds SmartUI projects, builds and comparisons, returns the CI gate verdict of a build, analyzes comparisons, approves or rejects changes, merges baselines and uploads screenshots.
+5. **[Accessibility Tool:](/support/docs/accessibility-mcp-server/)** 3 tools. Scans public URLs, and local web apps through a TestMu AI tunnel, for accessibility issues, with fix guidance for each issue.
+6. **[Test Manager Tool:](/support/docs/test-manager-mcp-server/)** 22 tools. Covers the test management lifecycle: projects, folders, test cases, AI test case generation, test runs, results, milestones, coverage, and Jira and Azure DevOps links.
+
+The other 22 tools are listed here:
+
+| Area | Tools | What they do |
+|---|---|---|
+| Apps and devices | `upload_app`, `uploadAppVirtualDevice`, `listUploadedApps`, `deleteUploadedApps`, `checkAppProcessingStatus`, `listDevicesForTesting`, `listMobileBuilds`, `listMobileSessions`, `getMobileCapabilityGenerator`, `getMobileConcurrency` | Upload apps from a public URL, and list and delete apps, for real devices, emulators and simulators; check whether an app is ready for image injection, network logs and screenshot unblock; list available real devices; list app automation builds and sessions; and read mobile concurrency. The hosted server cannot read files on your machine, so uploads take a public URL. |
+| Analytics | `getAnalyticsData`, `getTestTrends`, `getAnalyticsErrors`, `getFlakyTests` | Summarize web automation results in a date range within the last 59 days: totals and pass rates, daily trends, failures by category, and flaky tests. Failure categories and flakiness exist only for about the last 7 days. |
+| Platform and account | `getSupportedPlatforms`, `getOrgConcurrency`, `listTunnels`, `stopTunnel`, `deleteUserFile`, `deletePrerunFile` | List supported OS, browser and device combinations, read web automation concurrency, list and stop tunnels, and delete uploaded user and pre-run files. |
+| [Agent Testing](/support/docs/phone-agent/) | `triggerSuiteRun`, `getSuiteOverview` | Start a phone call test run for a suite, and get the run counts, latest status, scores and schedule of a project. |
+
+Every tool declares whether it only reads data and whether it can delete or overwrite something. MCP clients that use these annotations can ask you to confirm before a tool changes your account.
 
 ## Connecting to TestMu AI MCP Server
 
@@ -220,7 +231,7 @@ You can also ask questions like:
 
 - "What does failFast in HyperExecute mean?"
 - "Triage the last failed test on TestID `XXXXX`."
-- "Run a SmartUI analysis on comparisonId `YYYYY`."
+- "Did my latest SmartUI build pass its visual gate?"
 - "Run an accessibility report on `https://example.com`."
 - "Generate test cases from this requirement into my Regression folder in Test Manager."
 

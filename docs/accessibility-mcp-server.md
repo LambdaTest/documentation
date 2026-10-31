@@ -2,7 +2,7 @@
 id: accessibility-mcp-server
 title: Accessibility MCP Tool
 sidebar_label: Accessibility
-description: Run accessibility checks on hosted URLs or local React apps and get detailed remediation guidance using the Accessibility MCP Tool.
+description: Run accessibility checks on hosted URLs or local web apps and get detailed remediation guidance using the Accessibility MCP Tool.
 slug: accessibility-mcp-server/
 url: https://www.testmuai.com/support/docs/accessibility-mcp-server/
 site_name: TestMu AI
@@ -55,7 +55,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       "@id": "https://www.testmuai.com/support/docs/accessibility-mcp-server/"
     },
     "headline": "Accessibility MCP Tool",
-    "description": "Run accessibility checks on hosted URLs or local React apps and get detailed remediation guidance using the Accessibility MCP Tool.",
+    "description": "Run accessibility checks on hosted URLs or local web apps and get detailed remediation guidance using the Accessibility MCP Tool.",
     "url": "https://www.testmuai.com/support/docs/accessibility-mcp-server/",
     "image": {
       "@type": "ImageObject",
@@ -96,13 +96,13 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-05-12T15:56:11+05:30"
+    "dateModified": "2026-10-28T18:00:00+05:30"
   }) }}
 />
 
 # Getting Started with Accessibility MCP Tool
 
-Accessibility MCP Tool is part of the [TestMu AI MCP Server](/support/docs/testmu-mcp-server/). It runs accessibility checks on publicly hosted URLs and local React applications, and returns a detailed report with remediation guidance.
+Accessibility MCP Tool is part of the [TestMu AI MCP Server](/support/docs/testmu-mcp-server/). It runs accessibility checks on publicly hosted URLs and local web applications, and returns a detailed report with remediation guidance.
 
 
 ## Key Features
@@ -114,12 +114,13 @@ Accessibility MCP Tool is part of the [TestMu AI MCP Server](/support/docs/testm
 - Provides remediation guidance for a11y issues in locally hosted applications.
 
 ## Capabilities
-
 ---
 
-1. **getAccessibilityReport** - Fetches a detailed accessibility report for a public URL. You can view the report in your browser to analyze the issues.
-2. **buildLocalAppForAnalysis** - Builds and serves your local React application via TestMu AI and identifies accessibility issues.
-3. **analyseAppViaTunnel** - Tests a local app already running via TestMu AI tunnel for accessibility failures.
+The Accessibility MCP Tool provides three tools:
+
+1. **getAccessibilityReport**: Runs an accessibility scan on one or more publicly reachable URLs and returns the issues, most severe first. Each issue carries its own fix guidance and the accessibility criteria it fails. You can filter by severity or by page. Every call with `urls` starts a new scan, which runs as a test on your account. To read more results from the same scan, your client passes the `testId` from the first response instead. The result includes a dashboard link, which needs a login, and the first scan also returns a public shareable link.
+2. **buildLocalAppForAnalysis**: Returns step-by-step commands to build and serve a local web app that uses npm, and to open a TestMu AI tunnel to it. It detects the output folder of Vite, Next.js, Create React App and Angular projects. It does not build, run or scan anything itself: you or your AI client run the commands, then scan the app with `analyzeAppViaTunnel`. The commands never include your access key.
+3. **analyzeAppViaTunnel**: Scans an app that is running locally and reachable through an active TestMu AI tunnel. It needs the local port and the name and id of the tunnel. The scan runs as a test on your account.
 
 ## How to Invoke
 
@@ -128,7 +129,7 @@ Accessibility MCP Tool is part of the [TestMu AI MCP Server](/support/docs/testm
 Once your MCP client is connected, use natural language to interact with the Accessibility tool. Example prompts:
 
 - "Run an accessibility report on `https://example.com`."
-- "Build my local React app and check it for accessibility issues."
+- "Help me serve my local app on port 3000 and check it for accessibility issues."
 - "I have a local app running on port 3000 via TestMu AI tunnel, check it for a11y failures."
 - "Show me the accessibility violations on the homepage and how to fix them."
 
