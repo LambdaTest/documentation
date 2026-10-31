@@ -2086,6 +2086,11 @@ module.exports = {
               },
               {
                 type: "doc",
+                label: "Starting a Performance Scan",
+                id: "web-scanner-performance-scan",
+              },
+              {
+                type: "doc",
                 label: "Adding URLs",
                 id: "web-scanner-adding-urls",
               },
@@ -4898,6 +4903,7 @@ module.exports = {
         items: [
           "web-scanner-visual-scan",
           "web-scanner-accessibility-scan",
+          "web-scanner-performance-scan",
           "web-scanner-adding-urls",
           "web-scanner-scheduling-options",
           "web-scanner-advanced-features",
