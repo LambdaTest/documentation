@@ -320,7 +320,7 @@ Once the CLI is downloaded and the environment variables are set, follow the fra
 
 ### JavaScript
 
-<Tabs className="docs__val" groupId="pw-js" queryString="framework">
+<Tabs className="docs__val" groupId="pw-js" queryString="framework" scrollToTab>
 
 <TabItem value="vanillajs" label="VanillaJS" default>
 
@@ -1000,7 +1000,7 @@ HyperExecute also facilitates the provision to download the [Artifacts](/support
 
 ### Python
 
-<Tabs className="docs__val" groupId="pw-python" queryString="framework">
+<Tabs className="docs__val" groupId="pw-python" queryString="framework" scrollToTab>
 
 <TabItem value="python" label="Python" default>
 

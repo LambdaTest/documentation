@@ -114,7 +114,7 @@ set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 ## Run a Puppeteer Test in Your Runner
 ---
 
-<Tabs className="docs__val" groupId="puppeteer-runner" queryString="framework">
+<Tabs className="docs__val" groupId="puppeteer-runner" queryString="framework" scrollToTab>
 
 <TabItem value="mocha" label="Mocha" default>
 

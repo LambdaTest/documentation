@@ -128,7 +128,7 @@ Pick your language, then your framework. Clone the matching sample repository (e
 
 ### Java
 
-<Tabs className="docs__val" groupId="sel-java" queryString="framework">
+<Tabs className="docs__val" groupId="sel-java" queryString="framework" scrollToTab>
 <TabItem value="testng" label="TestNG" default>
 
 ### Running TestNG Framework Tests on HyperExecute
@@ -823,7 +823,7 @@ cp -r agent-skills/cucumber-skill .cursor/skills/
 
 ### Python
 
-<Tabs className="docs__val" groupId="sel-python" queryString="framework">
+<Tabs className="docs__val" groupId="sel-python" queryString="framework" scrollToTab>
 <TabItem value="pytest" label="PyTest" default>
 
 ### Running PyTest Framework Tests on HyperExecute
@@ -1773,7 +1773,7 @@ cp -r agent-skills/robot-framework-skill .cursor/skills/
 
 ### C#
 
-<Tabs className="docs__val" groupId="sel-csharp" queryString="framework">
+<Tabs className="docs__val" groupId="sel-csharp" queryString="framework" scrollToTab>
 <TabItem value="nunit" label="NUnit" default>
 
 ### Running NUnit Framework Tests on HyperExecute
@@ -2420,7 +2420,7 @@ HyperExecute also facilitates the provision to download the [Artifacts](/support
 
 ### Ruby
 
-<Tabs className="docs__val" groupId="sel-ruby" queryString="framework">
+<Tabs className="docs__val" groupId="sel-ruby" queryString="framework" scrollToTab>
 <TabItem value="ruby" label="Ruby" default>
 
 ### Running Ruby Framework Tests on HyperExecute
@@ -2848,7 +2848,7 @@ cp -r agent-skills/capybara-skill .cursor/skills/
 
 ### JavaScript
 
-<Tabs className="docs__val" groupId="sel-js" queryString="framework">
+<Tabs className="docs__val" groupId="sel-js" queryString="framework" scrollToTab>
 <TabItem value="webdriverio" label="WebdriverIO" default>
 
 WebdriverIO is a widely-used testing framework for Java applications, designed to simplify and enhance the testing process for developers. It provides a flexible and powerful platform for running test suites, enabling effective unit testing, integration testing, and end-to-end testing of Java applications

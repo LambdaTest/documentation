@@ -256,7 +256,7 @@ set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </TabItem>
 </Tabs>
 
-<Tabs className="docs__val" groupId="cypress-version" queryString="version">
+<Tabs className="docs__val" groupId="cypress-version" queryString="version" scrollToTab>
 
 <TabItem value="v10" label="Cypress v10" default>
 
