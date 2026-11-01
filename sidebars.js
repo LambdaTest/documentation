@@ -30,6 +30,7 @@ module.exports = {
         type: "category",
         collapsed: true,
         label: "Languages & Frameworks",
+        link: { type: "doc", id: "hyperexecute-supported-languages-and-frameworks" },
         items: [
           {
             type: "category",

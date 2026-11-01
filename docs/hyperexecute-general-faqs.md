@@ -219,7 +219,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 
 ### 1. **Which testing frameworks does HyperExecute support?**
 
-  Though HyperExecute has a [very deep support](/support/docs/getting-started-with-hyperexecute/#compatible-with-all-major-frameworks) for Selenium, Cypress, Playwright, CDP, Taiko and other web browser testing frameworks, nothing stops it from running any other tests over the HyperExecute platform using YAML. Core orchestration features and real time logs are native to the platform and will be available over any kind of testing.
+  Though HyperExecute has a [very deep support](/support/docs/hyperexecute-supported-languages-and-frameworks/) for Selenium, Cypress, Playwright, CDP, Taiko and other web browser testing frameworks, nothing stops it from running any other tests over the HyperExecute platform using YAML. Core orchestration features and real time logs are native to the platform and will be available over any kind of testing.
 
 ***
 
