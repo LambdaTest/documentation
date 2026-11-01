@@ -347,7 +347,7 @@ Integrate HyperExecute with your favourite CI/CD tools, products and <BrandName 
   </a>
 </div>
 
->If your favourite integrations are not mentioned in the list above, then just give us a <span className="doc__lt" onClick={() => window.openLTChatWidget()}>shout</span> and we will have them ready shortly for you.
+>If your favourite integrations are not mentioned in the list above, then just give us a <span className="doc__lt" onClick={() => window.openLTChatWidget()}>shout</span> and we will have them ready for you.
 
 ### Related integrations
 

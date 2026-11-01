@@ -298,6 +298,8 @@ Sample Capabilities for both android and iOS are mentioned below -
 
 ## Appium WebApp Testing
 
+This section outlines how to execute your Appium tests on HyperExecute for WebApps using TestNG with YAML 0.2
+
 Appium WebApp testing runs your Appium tests against web applications loaded in the mobile browser on real devices, rather than against an installed native app. Instead of uploading an `.apk`, `.aab`, or `.ipa` and passing an `app` capability, you drive a mobile browser session with a `RemoteWebDriver` and navigate to your web URL. This means there is no application upload step, and the desired capabilities omit the `app` capability.
 
 ### Steps to Run Your Test

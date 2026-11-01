@@ -164,6 +164,8 @@ Click the **three dots menu** (⋯) on any workflow to access the following acti
 <img loading="lazy" src={require('../assets/images/hyperexecute/features/workflows/workflow-actions-menu.png').default} alt="Workflow Actions Menu" className="doc_img"/>
 
 ## Connected Workflows (Test Chains)
+In this section, we will walk through the steps to create test chains using connected workflows in HyperExecute, providing real-world examples and step-by-step instructions on how to implement them.
+
 Use Workflow Linking to form test chains. For example, run a daily smoke suite first and trigger a broader regression only if smoke passes. You can link across projects you own to coordinate multi-repo testing.
 
 - Learn the pattern with real examples: [Test Chains](/support/docs/hyperexecute-workflows/#hyperexecute-test-chains)

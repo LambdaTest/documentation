@@ -52,6 +52,10 @@ GitHub Actions is a continuous integration and continuous delivery (CI/CD) platf
 
 This document will show you how to integrate GitHub Actions Pipeline with HyperExecute to greatly shorten your test cycles.
 
+GitHub is one of the best solutions for supporting continuous integration for Git projects for clients of all sizes. Now, quickly deploy your code and extensively test it to ensure a reliable delivery for your easy release.
+
+This section will show you how to use HyperExecute Integration with GitHub Continuous Integration. We will use the WebdriverIO framework to execute our automation script.
+
 ## Prerequisites For Integrating GitHub CI With HyperExecute
 ***
 To perform your WebdriverIO tests with HyperExecute, you would need the following essentials to be already set up.

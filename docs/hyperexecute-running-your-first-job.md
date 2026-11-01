@@ -247,7 +247,7 @@ The above file would make sure that following are excluded while the zip is crea
 
 ## How to Get my Username and Access key
 
-Your LT Username and Access Key authenticate every HyperExecute job. Here is where to find them. 
+This section explains where you can find your LT Username and Access Key. 
 
 **Step 1:** Go to the right side Profile dropdown and select **Account Settings**.
 

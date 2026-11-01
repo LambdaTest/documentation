@@ -456,7 +456,7 @@ You can see in the screenshot mentioned below that the Pre Step of the Task has 
 
 ### How to Debug your Pre Steps Errors
 
-If you are facing any errors in the pre-command stage, the following solutions will help you debug your failed job.
+This section will help you debug your failed job if you are facing any errors in the pre-command stage.
 
 #### Lambda Error
 
@@ -592,7 +592,7 @@ Here you can check which part of your test case is causing an error in the video
 
 ### How to Debug your Scenario Steps Errors
 
-If you are facing any errors in the Scenario stage, the following solutions will help you debug your failed job.
+This section will help you debug your failed job if you are facing any errors in the Scenario stage.
 
 #### Invalid Credentials
 
