@@ -1,6 +1,7 @@
 ---
 id: hyperexecute-how-to-configure-sourcePayload
 title: How to configure sourcePayload
+toc_max_heading_level: 2
 hide_title: true
 sidebar_label: "Configure sourcePayload"
 description: Learn to configure sourcePayload in HyperExecute with ease, allowing secure and direct sourcing of test scripts from your Git provider for seamless testing integration.
