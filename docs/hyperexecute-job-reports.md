@@ -17,6 +17,7 @@ canonical: https://www.testmuai.com/support/docs/hyperexecute-job-reports/
 
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -437,7 +438,6 @@ In your Playwright configuration file `playwright.config.js`, add the following 
 
 ```javascript title="playwright.config.js"
 import { devices } from '@playwright/test';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 const config = {
   ...//
