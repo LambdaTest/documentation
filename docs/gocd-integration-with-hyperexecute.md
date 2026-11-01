@@ -47,6 +47,121 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/gocd-integration-with-hyperexecute/"
+    },
+    "headline": "How to integrate GoCD With HyperExecute",
+    "description": "HyperExecute integration with GoCD will help your perform Test automation for your code changes on more than 3000+ real browsers for both mobile and desktop. You can trigger your testing scripts directly from GoCD instance and they would be executed over your HyperExecute Dashboard.",
+    "url": "https://www.testmuai.com/support/docs/gocd-integration-with-hyperexecute/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "HyperExecute",
+    "keywords": [
+      "gocd",
+      "testmu ai",
+      "gocd integrations"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 1: Start the GoCD Server",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "  ./bin/go-server start"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 1: Start the GoCD Server",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "  ./bin/go-agent start"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Part 4: Job and Tasks",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "curl -O https://downloads.lambdatest.com/hyperexecute/darwin/hyperexecute\nchmod +x hyperexecute\n./hyperexecute --user <your_username> --key <your_access_key> --config <RELATIVE_PATH_OF_YOUR_YAML_FILE_name>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Sample Workflow File",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "XML",
+        "text": "<pipeline name=\"Download-and-Run-Hyperexecute\">\n  <stage name=\"Download\">\n    <job name=\"Download-Hyperexecute\">\n      <run on=\"ubuntu\" />  # Adjust for macOS if needed\n      <tasks>\n        <exec command=\"wget https://downloads.lambdatest.com/hyperexecute/darwin/hyperexecute\" />\n        <exec command=\"chmod u+x hyperexecute\" />\n      <\/tasks>\n    <\/job>\n  <\/stage>\n  <stage name=\"Run-Tests\">\n    <job name=\"Run-Hyperexecute-Tests\">\n      <run on=\"ubuntu\" />  # Adjust for macOS if needed\n      <tasks>\n        <exec command=\"./hyperexecute --user <your_username> --key <your_access_key> --config <RELATIVE_PATH_OF_YOUR_YAML_FILE_path>\" />\n      <\/tasks>\n    <\/job>\n  <\/stage>\n<\/pipeline>"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How to Integrate with HyperExecute",
+      "description": "Download the GoCD Server and Agent and unzip the folder. You can use your own project to configure and test it. For demo purposes, we are using the sample repository. Download or Clone the code sample from the TestMu AI GitHub repository to run the tests on the HyperExecute.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Start the GoCD Server",
+          "text": "Go to the gocd/bin folder and run the following commands: To start the Server To start the Agent Now type `http://localhost:8153/` go in your browser to open the GoCD GUI. Click on the New Pipeline Button.",
+          "url": "https://www.testmuai.com/support/docs/gocd-integration-with-hyperexecute/#step-1-start-the-gocd-server"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Configure the GoCD Pipeline",
+          "text": "Select the Material Type. For the demo purposes, we will be using the Git. Enter the Repository URL from which you want to set up the project. Enter your Repository branch name. Enter the Username and Password of your GitHub. (It is required in case the access to the repo needed authentication). Enter your Pipeline Name. A Stage is a group of Jobs and a Job is a work which needs to be executed. Enter your Stage Details. Enter the Job Name. Enter the below mentioned script in the space provided. Since my default agent is mac I am using darwin CLI in the cURL command. Kindly change it according to your system default agent. Mac -> darwin Linux -> linux Windows-> windows Click on Save + Run This Pipeline button.",
+          "url": "https://www.testmuai.com/support/docs/gocd-integration-with-hyperexecute/#step-2-configure-the-gocd-pipeline"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 # GoCD Integration With HyperExecute
 ***
 

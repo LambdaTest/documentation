@@ -50,6 +50,175 @@ import CookieTrackingLogin from '@site/src/component/CookieTracking';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/hyperexecute-appium-testing/"
+    },
+    "headline": "Appium Testing - Real Device On HyperExecute",
+    "description": "Maximize Appium test execution with HyperExecute \u2013 Explore TestMu AI's support documentation for seamless automation testing.",
+    "url": "https://www.testmuai.com/support/docs/hyperexecute-appium-testing/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "appium",
+      "java",
+      "testmu ai java"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "HyperExecute YAML file which contains all the necessary instructions.; HyperExecute CLI in order to initiate a test execution Job .; Your TestMu AI Username and Access key; Setup the Environmental Variable; Ensure you have Appium\u2019s Java client library installed.; Access to an Android app (.apk or .aab file) or an iOS app (.ipa file)..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 2: Configure your Test Script (Android)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "codeRepository": "https://github.com/LambdaTest/hyperexecute-real-device-appium-testng",
+        "text": "\n<\/TabItem>\n<TabItem value=\"iOS\" label=\"iOS\" default>\n\n```java reference title=\"iOSApp.java\"\nhttps://github.com/LambdaTest/hyperexecute-real-device-appium-testng/blob/main/src/main/java/iOSApp.java"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 3: Update your XML file (Android)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "codeRepository": "https://github.com/LambdaTest/hyperexecute-real-device-appium-testng",
+        "text": "<\/TabItem>\n\n<TabItem value=\"iOSXML\" label=\"iOS\" default>\n```xml reference title=\"ios-parallel.xml\"\nhttps://github.com/LambdaTest/hyperexecute-real-device-appium-testng/blob/main/src/test/java/ios-parallel.xml"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 4: Configure YAML and Execute your Script (Android)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "codeRepository": "https://github.com/LambdaTest/hyperexecute-real-device-appium-testng",
+        "text": "<\/TabItem>\n\n<TabItem value=\"iOSYAML\" label=\"iOS\" default>\n```yaml reference title=\"ios-parallel.yaml\"\nhttps://github.com/LambdaTest/hyperexecute-real-device-appium-testng/blob/main/yaml/ios/hyp-rd-ios-multiple.yaml"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run the below command in your terminal at the root folder of the project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Configure Smart UI",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n> Refer to the [Automation Capabilities Generator](https://www.testmuai.com/capabilities-generator/) to understand how to write the capability in different languages.\n\n<img loading=\"lazy\" src={require('../assets/images/hyperexecute/frameworks/appium/capability-generator.png').default} alt=\"automation-dashboard\"  width=\"1920\" height=\"868\" className=\"doc_img\"/>\n\n## More About Desired Capabilities\nSample Capabilities for both android and iOS are mentioned below -\n<Tabs className=\"docs__val\">\n<TabItem value=\"androidCaps\" label=\"Android\" default>\n\n```java\n{\n  \"deviceName\": \"Galaxy Tab S4\",\n  \"platformName\": \"android\",\n  \"platformVersion\": \"10\",\n  \"app\": \"App_url\",\n  \"visual\": True,\n  \"console\": True,\n  \"deviceOrientation\": \"PORTRAIT\",\n  \"build\": \"new-12\",\n  \"isRealMobile\": True,\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "More About Desired Capabilities (iOS)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "{\n  \"deviceName\": \"iPhone 12 Mini\",\n  \"platformName\": \"ios\",\n  \"platformVersion\": \"14\",\n  \"app\": \"App_url\",\n  \"isRealMobile\": True,\n  \"visual\": True,\n  \"console\": True,\n  \"build\": \"lt-web-4\",\n  \"network\": True,\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The appium-skill package includes",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "appium-skill/\n\u251c\u2500\u2500 SKILL.md\n\u2514\u2500\u2500 reference/\n    \u251c\u2500\u2500 playbook.md\n    \u2514\u2500\u2500 advanced-patterns.md"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install a Appium Agent Skill using the command below",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "# Clone the repo and copy the skill you need\ngit clone https://github.com/LambdaTest/agent-skills.git\ncp -r agent-skills/appium-skill .claude/skills/\n\n# Or for Cursor / Copilot\ncp -r agent-skills/appium-skill .cursor/skills/"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Steps to Run Your Test",
+      "description": "Maximize Appium test execution with HyperExecute \u2013 Explore TestMu AI's support documentation for seamless automation testing.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Upload your Application",
+          "text": "Upload your iOS application (.ipa file) or android application (.apk file) to the TestMu AI servers using our REST API. You need to provide your Username and AccessKey in the format Username:AccessKey in the cURL command for authentication. Make sure to add the path of the appFile in the cURL request. Here is an example cURL request to upload your app using our REST API: {`curl -u \"${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESSKEY()}\" --location --request POST 'https://manual-api.lambdatest.com/app/upload/realDevice' --form 'name=\"AndroidApp\"' --form 'appFile=@\"\"' `} {`curl -u \"${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESS_KEY()}\" -X POST \"https://manual-api.lambdatest.com/app/upload/realDevice\" -F \"appFile=@\"\"\" `} {`curl -u \"${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESS_KEY()}\" \\\\ --location --request POST 'https://manual-api.lambdatest.com/app/upload/realDevice' \\\\ --form 'name=\"Android_App\"' \\\\ --form 'url=\"https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk\"'`} {curl -u \"${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESSKEY()}\" --location --request POST \"https://manual-api.lambdatest.com/app/upload/realDevice\" --header \"Content-Type: application/x-www-form-urlencoded\" --data-urlencode \"url=:https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbialandroid.apk\" --data-urlencode \"name=Proverbial_App\"} Response of above cURL will be a JSON object containing the App URL of the format - `lt://APP123456789123456789`...",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-appium-testing/#step-1-upload-your-application"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Configure your Test Script",
+          "text": "Write Your Automation Script in the client language of your choice from the ones supported by Appium. An automation script for the sample applications have been provided below. Here is a sample automation script in Java for the sample app downloaded above. Ensure to update the app_url, username and accesskey in the below code.",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-appium-testing/#step-2-configure-your-test-script"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Update your XML file",
+          "text": "Create .XML file in order to run your test and define device capabilities. Please find sample code below for the same.",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-appium-testing/#step-3-update-your-xml-file"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Configure YAML and Execute your Script",
+          "text": "The ``region`` parameter specifies the region or location where the Appium tests will be executed. Our platform supports the following three regions: ap (Asia-Pacific) us (United States) eu (European Union)",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-appium-testing/#step-4-configure-yaml-and-execute-your-script"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: Execute your Test Suite",
+          "text": "NOTE : In case of MacOS, if you get a permission denied warning while executing CLI, simply run chmod u+x ./hyperexecute to allow permission. In case you get a security popup, allow it from your System Preferences \u2192 Security & Privacy \u2192 General tab. Run the below command in your terminal at the root folder of the project: OR use this command if you have not exported your username and access key in the step 2. {./hyperexecute --user ${ YOURLAMBDATESTUSERNAME()} --key ${ YOURLAMBDATESTACCESSKEY()} --config RELATIVEPATHOFYOURYAMLFILE }",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-appium-testing/#step-5-execute-your-test-suite"
+        }
+      ]
+    }
+  ]) }}
+/>
 This page outlines how to execute your Appium tests on HyperExecute using TestNG with YAML 0.2
 > HyperExecute uses [YAML 0.2](/support/docs/deep-dive-into-hyperexecute-yaml/#hyperexecute-yaml-v02-framework-flags-and-discovery-config) to perform the tests using Appium.
 
@@ -186,6 +355,8 @@ Write Your Automation Script in the client language of your choice from the ones
 
 Here is a sample automation script in Java for the sample app downloaded above. Ensure to update the `app_url`, `username` and `accesskey` in the below code.
 
+<VerifiedTag value="Verified" />
+
 <Tabs className="docs__val">
   <TabItem value="android" label="Android" default>
 
@@ -206,6 +377,8 @@ https://github.com/LambdaTest/hyperexecute-real-device-appium-testng/blob/main/s
 ### Step 3: Update your XML file
 Create `.XML` file in order to run your test and define device capabilities. Please find sample code below for the same.
 
+<VerifiedTag value="Verified" />
+
 <Tabs className="docs__val">
 <TabItem value="androidXML" label="Android" default>
 ```xml reference title="android-parallel.xml"
@@ -221,6 +394,8 @@ https://github.com/LambdaTest/hyperexecute-real-device-appium-testng/blob/main/s
 </Tabs>
 
 ### Step 4: Configure YAML and Execute your Script
+<VerifiedTag value="Verified" />
+
 <Tabs className="docs__val">
 <TabItem value="androidYAML" label="Android" default>
 ```yaml reference title="android-parallel.yaml"
@@ -277,6 +452,8 @@ To configure SmartUI with HyperExecute, you need to simply add a capability in y
 
 ## More About Desired Capabilities
 Sample Capabilities for both android and iOS are mentioned below -
+<VerifiedTag value="Verified" />
+
 <Tabs className="docs__val">
 <TabItem value="androidCaps" label="Android" default>
 
@@ -1169,6 +1346,71 @@ Every test run on the HyperExecute has a unique *jobId* associated with it. Each
 The snapshot below shows how to navigate to the respective *testID* for viewing the Selenium logs:
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/appium/hyperexecute-appium.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
+
+<nav aria-label="breadcrumbs">
+  <ul className="breadcrumbs">
+    <li className="breadcrumbs__item">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
+        Home
+      </a>
+    </li>
+    <li className="breadcrumbs__item">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
+        Support
+      </a>
+    </li>
+    <li className="breadcrumbs__item breadcrumbs__item--active">
+      <span className="breadcrumbs__link">
+      Appium Testing 
+      </span>
+    </li>
+  </ul>
+</nav>
+
+## Using the Appium Agent Skill with TestMu AI
+***
+
+The [appium-skill](https://github.com/LambdaTest/agent-skills/tree/main/appium-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
+
+The appium-skill package includes:
+
+<VerifiedTag value="Verified" />
+
+```
+appium-skill/
+├── SKILL.md
+└── reference/
+    ├── playbook.md
+    └── advanced-patterns.md
+```
+
+It provides structured guidance for:
+
+* Project structure and setup
+* Dependency configuration
+* Local execution
+* TestMu AI cloud execution
+* Debugging patterns
+* CI/CD integration
+
+
+### Installing Appium Agent Skill
+***
+
+Install a Appium Agent Skill using the command below:
+
+<VerifiedTag value="Verified" />
+
+```
+# Clone the repo and copy the skill you need
+git clone https://github.com/LambdaTest/agent-skills.git
+cp -r agent-skills/appium-skill .claude/skills/
+
+# Or for Cursor / Copilot
+cp -r agent-skills/appium-skill .cursor/skills/
+```
+
+**Note**: If you prefer installing all available framework skills instead of only appium-skill, clone the repository directly into your tool's skills directory (for example, .claude/skills/, .cursor/skills/, .gemini/skills/, or .agent/skills/).
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
