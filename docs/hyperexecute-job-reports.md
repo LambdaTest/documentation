@@ -752,4 +752,4 @@ Consider the following Decreasing Order of Priority among Users with marked stat
 
 *** 
 
-Now that you have understood the concepts of HyperExecute, you can [get started](/support/docs/hyperexecute-running-your-first-job/#quick-run) with it quickly. Learn more about other [HyperExecute features](/support/docs/getting-started-with-hyperexecute/#key-features-of-hyperexecute).
+Now that you have understood the concepts of HyperExecute, you can [get started](/support/docs/hyperexecute-running-your-first-job/#1-using-quick-run) with it quickly. Learn more about other [HyperExecute features](/support/docs/getting-started-with-hyperexecute/#key-features-of-hyperexecute).

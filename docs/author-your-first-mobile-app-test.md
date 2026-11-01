@@ -275,7 +275,7 @@ Example:
 ### Wait Instructions
 ***
 
-- Always insert explicit `wait` commands if a screen or element load takes time after an action. Refer [this doc](/support/docs/kane-ai-command-guide/#explicit-waits). 
+- Always insert explicit `wait` commands if a screen or element load takes time after an action. Refer [this doc](/support/docs/kane-ai-command-guide/#waits--timeouts). 
 
 Example:
 

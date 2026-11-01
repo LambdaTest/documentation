@@ -192,7 +192,7 @@ Below is an example of providing targeted sizes depending on the browser context
 
 **devices**
 
-An array of mobile devices to capture screenshots from. List of supported device names can be found [here](#list-of-supported-device-viewports).
+An array of mobile devices to capture screenshots from. List of supported device names can be found [here](#configuration-options).
 
 :::note
  Mobile viewports are emulated in desktop environments.Android devices will have the screenshots rendered in Chrome, while iOS devices in Safari.

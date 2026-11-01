@@ -239,7 +239,7 @@ This setup ensures that resources are focused on high-priority tests while the m
 Follow these steps to configure connected workflows in HyperExecute:
 
 #### Prerequisite
-- Setup your [Project](/support/docs/hyperexecute-projects/#setup-your-project) before setting up the Workflows.
+- Setup your [Project](/support/docs/hyperexecute-projects/#setup-custom-project) before setting up the Workflows.
 - You must have created your required [workflows](/support/docs/hyperexecute-projects/#schedule-your-workflows) that you want to trigger.
 
 #### Step 1: Setup Workflow

@@ -65,12 +65,12 @@ This document will help you understand all the modifiers/arguments used with <Br
 |              | --egress-only   | Uses proxy settings only for outbound requests.                                                                                                     | N/A     |
 | -e           | --env           | The environment on which the <BrandName /> Tunnel will run.                                                                                            | String  |
 | -h           | --help          | Help for the <BrandName /> Tunnel                                                                                                                      | N/A     |
-|              | --infoAPIPort   | Exposes [Tunnel Info API](/support/docs/advanced-tunnel-features/#tunnelinfoapis) At The Specified Port                   | Integer |
+|              | --infoAPIPort   | Exposes [Tunnel Info API](/support/docs/advanced-tunnel-features/#using-the-tunnel-infoapis) At The Specified Port                   | Integer |
 |              | --ingress-only  | Routes Only Incoming Traffic Via The Proxy Specified                                                                                                | N/A     |
 | -k           | --key           | <BrandName /> Access Key.                                                                                                                              | String  |
 | -l           | --load-balanced | Activates [Load Balancing](/support/docs/load-balancing-in-lambda-tunnel/) for <BrandName /> Tunnel                          | N/A     |
 |              | --logFile       | Location of the <BrandName /> Tunnel Log File                                                                                                          | String  |
-| -m           | --mitm          | Enable the [MITM(Man-in-the-middle)](/support/docs/advanced-tunnel-features/#mitmlocaltesting) mode for <BrandName /> Tunnel | N/A     |
+| -m           | --mitm          | Enable the [MITM(Man-in-the-middle)](/support/docs/advanced-tunnel-features/#local-testing-by-mitm-man-in-the-middle) mode for <BrandName /> Tunnel | N/A     |
 |              | --mode          | Specifies in which mode tunnel should run [ssh,tcp,ws]. (default "ssh")                                                                             | String  |
 |              | --ntlm          | To use Microsoft NTLM (Windows NT LAN Manager) authentication for communication or transport purposes.                                              | Boolean |
 |              | --pidfile       | Path Of Pidfile, Where Process ID will Be Written                                                                                                   | String  |

@@ -111,43 +111,43 @@ Each row links to the rule doc for that check. Configuration may limit which WCA
 
 | WCAG | Rule | Doc |
 |------|------|-----|
-| 1.1.1 | Non-text Content | [Rule →](/support/docs/accessibility-web-rules/#111) |
-| 1.3.1 | Info and Relationships | [Rule →](/support/docs/accessibility-web-rules/#131) |
-| 1.3.4 | Orientation | [Rule →](/support/docs/accessibility-web-rules/#134) |
-| 1.4.1 | Use of Color | [Rule →](/support/docs/accessibility-web-rules/#141) |
-| 1.4.2 | Audio Control | [Rule →](/support/docs/accessibility-web-rules/#142) |
-| 1.4.3 | Contrast (Minimum) | [Rule →](/support/docs/accessibility-web-rules/#143) |
-| 1.4.10 | Reflow | [Rule →](/support/docs/accessibility-web-rules/#1410) |
-| 1.4.11 | Non-text Contrast | [Rule →](/support/docs/accessibility-web-rules/#1411) |
-| 1.4.12 | Text Spacing | [Rule →](/support/docs/accessibility-web-rules/#1412) |
-| 2.1.1 | Keyboard | [Rule →](/support/docs/accessibility-web-rules/#211) |
-| 2.1.2 | No Keyboard Trap | [Rule →](/support/docs/accessibility-web-rules/#212) |
-| 2.1.4 | Character Key Shortcuts | [Rule →](/support/docs/accessibility-web-rules/#214) |
-| 2.2.1 | Timing Adjustable | [Rule →](/support/docs/accessibility-web-rules/#221) |
-| 2.2.2 | Pause, Stop, Hide | [Rule →](/support/docs/accessibility-web-rules/#222) |
-| 2.3.1 | Three Flashes or Below Threshold | [Rule →](/support/docs/accessibility-web-rules/#231) |
-| 2.4.1 | Bypass Blocks | [Rule →](/support/docs/accessibility-web-rules/#241) |
-| 2.4.2 | Page Titled | [Rule →](/support/docs/accessibility-web-rules/#242) |
-| 2.4.3 | Focus Order | [Rule →](/support/docs/accessibility-web-rules/#243) |
-| 2.4.4 | Link Purpose (In Context) | [Rule →](/support/docs/accessibility-web-rules/#244) |
-| 2.4.7 | Focus Visible | [Rule →](/support/docs/accessibility-web-rules/#247) |
-| 2.4.11 | Focus Not Obscured (Minimum) | [Rule →](/support/docs/accessibility-web-rules/#2411) |
-| 2.5.1 | Pointer Gestures | [Rule →](/support/docs/accessibility-web-rules/#251) |
-| 2.5.2 | Pointer Cancellation | [Rule →](/support/docs/accessibility-web-rules/#252) |
-| 2.5.3 | Label in Name | [Rule →](/support/docs/accessibility-web-rules/#253) |
-| 2.5.4 | Motion Actuation | [Rule →](/support/docs/accessibility-web-rules/#254) |
-| 2.5.7 | Dragging Movements | [Rule →](/support/docs/accessibility-web-rules/#257) |
-| 2.5.8 | Target Size (Minimum) | [Rule →](/support/docs/accessibility-web-rules/#258) |
-| 3.2.1 | On Focus | [Rule →](/support/docs/accessibility-web-rules/#321) |
-| 3.2.2 | On Input | [Rule →](/support/docs/accessibility-web-rules/#322) |
-| 3.2.6 | Consistent Help | [Rule →](/support/docs/accessibility-web-rules/#326) |
-| 3.3.1 | Error Identification | [Rule →](/support/docs/accessibility-web-rules/#331) |
-| 3.3.2 | Labels or Instructions | [Rule →](/support/docs/accessibility-web-rules/#332) |
-| 3.3.7 | Redundant Entry | [Rule →](/support/docs/accessibility-web-rules/#337) |
-| 3.3.8 | Accessible Authentication (Minimum) | [Rule →](/support/docs/accessibility-web-rules/#338) |
-| 4.1.1 | Parsing (obsolete in WCAG 2.2) | [Rule →](/support/docs/accessibility-web-rules/#411) |
-| 4.1.2 | Name, Role, Value | [Rule →](/support/docs/accessibility-web-rules/#412) |
-| 4.1.3 | Status Messages | [Rule →](/support/docs/accessibility-web-rules/#413) |
+| 1.1.1 | Non-text Content | [Rule →](/support/docs/accessibility-web-rules/#non-text-content-111) |
+| 1.3.1 | Info and Relationships | [Rule →](/support/docs/accessibility-web-rules/#info-and-relationships-131) |
+| 1.3.4 | Orientation | [Rule →](/support/docs/accessibility-web-rules/#orientation-134) |
+| 1.4.1 | Use of Color | [Rule →](/support/docs/accessibility-web-rules/#use-of-color-141) |
+| 1.4.2 | Audio Control | [Rule →](/support/docs/accessibility-web-rules/#audio-control-142) |
+| 1.4.3 | Contrast (Minimum) | [Rule →](/support/docs/accessibility-web-rules/#contrast-minimum-143) |
+| 1.4.10 | Reflow | [Rule →](/support/docs/accessibility-web-rules/#reflow-1410) |
+| 1.4.11 | Non-text Contrast | [Rule →](/support/docs/accessibility-web-rules/#non-text-contrast-1411) |
+| 1.4.12 | Text Spacing | [Rule →](/support/docs/accessibility-web-rules/#text-spacing-1412) |
+| 2.1.1 | Keyboard | [Rule →](/support/docs/accessibility-web-rules/#keyboard-211) |
+| 2.1.2 | No Keyboard Trap | [Rule →](/support/docs/accessibility-web-rules/#no-keyboard-trap-212) |
+| 2.1.4 | Character Key Shortcuts | [Rule →](/support/docs/accessibility-web-rules/#character-key-shortcuts-214) |
+| 2.2.1 | Timing Adjustable | [Rule →](/support/docs/accessibility-web-rules/#timing-adjustable-221) |
+| 2.2.2 | Pause, Stop, Hide | [Rule →](/support/docs/accessibility-web-rules/#pause-stop-hide-222) |
+| 2.3.1 | Three Flashes or Below Threshold | [Rule →](/support/docs/accessibility-web-rules/#three-flashes-or-below-threshold-231) |
+| 2.4.1 | Bypass Blocks | [Rule →](/support/docs/accessibility-web-rules/#bypass-blocks-241) |
+| 2.4.2 | Page Titled | [Rule →](/support/docs/accessibility-web-rules/#page-titled-242) |
+| 2.4.3 | Focus Order | [Rule →](/support/docs/accessibility-web-rules/#focus-order-243) |
+| 2.4.4 | Link Purpose (In Context) | [Rule →](/support/docs/accessibility-web-rules/#link-purpose-in-context-244) |
+| 2.4.7 | Focus Visible | [Rule →](/support/docs/accessibility-web-rules/#focus-visible-247) |
+| 2.4.11 | Focus Not Obscured (Minimum) | [Rule →](/support/docs/accessibility-web-rules/#focus-not-obscured-minimum-2411) |
+| 2.5.1 | Pointer Gestures | [Rule →](/support/docs/accessibility-web-rules/#pointer-gestures-251) |
+| 2.5.2 | Pointer Cancellation | [Rule →](/support/docs/accessibility-web-rules/#pointer-cancellation-252) |
+| 2.5.3 | Label in Name | [Rule →](/support/docs/accessibility-web-rules/#label-in-name-253) |
+| 2.5.4 | Motion Actuation | [Rule →](/support/docs/accessibility-web-rules/#motion-actuation-254) |
+| 2.5.7 | Dragging Movements | [Rule →](/support/docs/accessibility-web-rules/#dragging-movements-257) |
+| 2.5.8 | Target Size (Minimum) | [Rule →](/support/docs/accessibility-web-rules/#target-size-minimum-258) |
+| 3.2.1 | On Focus | [Rule →](/support/docs/accessibility-web-rules/#on-focus-321) |
+| 3.2.2 | On Input | [Rule →](/support/docs/accessibility-web-rules/#on-input-322) |
+| 3.2.6 | Consistent Help | [Rule →](/support/docs/accessibility-web-rules/#consistent-help-326) |
+| 3.3.1 | Error Identification | [Rule →](/support/docs/accessibility-web-rules/#error-identification-331) |
+| 3.3.2 | Labels or Instructions | [Rule →](/support/docs/accessibility-web-rules/#labels-or-instructions-332) |
+| 3.3.7 | Redundant Entry | [Rule →](/support/docs/accessibility-web-rules/#redundant-entry-337) |
+| 3.3.8 | Accessible Authentication (Minimum) | [Rule →](/support/docs/accessibility-web-rules/#accessible-authentication-minimum-338) |
+| 4.1.1 | Parsing (obsolete in WCAG 2.2) | [Rule →](/support/docs/accessibility-web-rules/#parsing-411) |
+| 4.1.2 | Name, Role, Value | [Rule →](/support/docs/accessibility-web-rules/#name-role-value-412) |
+| 4.1.3 | Status Messages | [Rule →](/support/docs/accessibility-web-rules/#status-messages-413) |
 
 ---
 

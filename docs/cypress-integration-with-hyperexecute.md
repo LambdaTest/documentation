@@ -206,7 +206,7 @@ Cypress Tests can be executed on HyperExecute using 2 methods:
 
 The Auto-Split mechanism enables you to run tests at predefined concurrency levels and distribute them across available infrastructure. Concurrency can be achieved at various levels, including file, module, test suite, test, and scenario.
 
-> To learn more about Auto-Split, refer to the [Auto-Split Getting Started Guide](/support/docs/getting-started-with-hyperexecute/#smart-auto-test-splitting)
+> To learn more about Auto-Split, refer to the [Auto-Split Getting Started Guide](/support/docs/hyperexecute-test-splitting-and-multiplexing/#enabling-auto-test-splitting)
 
 ###### Core
 
@@ -578,7 +578,7 @@ pre:
 ```
 
 :::tip
-For in detailed information on how to configure it properly, visit [Cypress Detailed Command Logs](/support/docs/cypress-detailed-command-logs/#for-cypress-v10-and-later-versions) documentation.
+For in detailed information on how to configure it properly, visit [Cypress Detailed Command Logs](/support/docs/cypress-detailed-command-logs/#configure-detailed-command-logs-for-cypress-v10-and-above) documentation.
 :::
 
 </TabItem>
@@ -1004,7 +1004,7 @@ pre:
 ```
 
 :::tip
-For in detailed information on how to configure it properly, visit [Cypress Detailed Command Logs](/support/docs/cypress-detailed-command-logs/#for-cypress-v9-and-previous-versions) documentation.
+For in detailed information on how to configure it properly, visit [Cypress Detailed Command Logs](/support/docs/cypress-detailed-command-logs/#configure-detailed-command-logs-for-cypress-v9-and-below) documentation.
 :::
 
 </TabItem>

@@ -328,7 +328,7 @@ The secrets file contains highly sensitive information and must be strictly excl
 ***
 
 ### `-k, --key`
-The access key of your <BrandName /> account. To find out how to retrieve your access key, visit [this page](/support/docs/hyperexecute-guided-walkthrough/#hyperexecute-dashboard).
+The access key of your <BrandName /> account. To find out how to retrieve your access key, visit [this page](/support/docs/hyperexecute-running-your-first-job/#how-to-get-my-username-and-access-key).
 
 <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">

@@ -71,7 +71,7 @@ Author and manage datasets directly inside KaneAI Test Manager to drive the same
 <img loading="lazy" src={require('../assets/images/kane-ai/features/datasets/5.png').default} alt="Autofill with AI populating dataset values automatically" className="doc_img img_center"/>
 
 **Documentation:**
-- [KaneAI Datasets](/support/docs/kane-ai-using-parameters/#datasets)
+- [KaneAI Datasets](/support/docs/kane-ai-using-parameters/#step-7-apply-the-datasets)
 
 ---
 

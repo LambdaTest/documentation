@@ -48,7 +48,7 @@ This document contains detailed explanations for all YAML flags, providing an in
 ## Mandatory Parameters
 
 ### `version`
-The version of HyperExecute YAML being used to run the tests. Currently there are two supported versions are [0.1](/support/docs/deep-dive-into-hyperexecute-yaml/#hyperexecute-yaml-parameters) and [0.2](/support/docs/deep-dive-into-hyperexecute-yaml/#hyperexecute-yaml-v02-framework-flags-and-discovery-config). 
+The version of HyperExecute YAML being used to run the tests. Currently there are two supported versions are [0.1](/support/docs/deep-dive-into-hyperexecute-yaml/#mandatory-parameters) and [0.2](/support/docs/deep-dive-into-hyperexecute-yaml/#hyperexecute-yaml-v02-framework-flags-and-discovery-config). 
 ```yaml
 version: 0.1
 ```
@@ -1966,7 +1966,7 @@ The ```framework``` field in HyperExecute YAML Version 0.2 allows you to configu
 | [runnerFlags](#runnerflags) | Array | No | Command line flags to pass to the custom runner for test execution only. |
 | [discoveryType](#discoverytype) | String | No | Specifies the type of test discovery to use. Supported values are "method" and "class". The default is "method".|
 | [discoveryMode](#discoverymode) | String | No | Specifies where the test discovery runs. Supported values are "local" and "remote".|
-| [workingDirectory](#workingDirectory) | String | No | Specifies the working directory where all discovery and execution commands will be executed.|
+| [workingDirectory](#workingdirectory) | String | No | Specifies the working directory where all discovery and execution commands will be executed.|
 | [defaultReports](#defaultreports) | Boolean | No | Specifies whether to create default reports for the specified framework.|
 | [region](#region) | String | No | Specifies in which region you want to spin your appium tests.|
 | [artifacts](#artifacts) | Boolean | No | Specifies whether to generate artifacts or not |

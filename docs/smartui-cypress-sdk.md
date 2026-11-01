@@ -196,9 +196,9 @@ Once, the configuration file will be created, you will be seeing the default con
 }
 ```
 :::info Advanced options in SmartUI configuration
-- For capturing fullpage or viewport screenshots, please refer to this [documentation](/docs/smartui-sdk-config-options/#12-viewports)
-- For the list of available mobile viewports, please refer to this [documentation](/docs/smartui-sdk-config-options/#list-of-supported-device-viewports)
-- For more information about SmartUI config global options, please refer to this [documentation](/docs/smartui-sdk-config-options/#3-global-options-optional).
+- For capturing fullpage or viewport screenshots, please refer to this [documentation](/support/docs/smartui-sdk-config-options/#configuration-options)
+- For the list of available mobile viewports, please refer to this [documentation](/support/docs/smartui-sdk-config-options/#configuration-options)
+- For more information about SmartUI config global options, please refer to this [documentation](/support/docs/smartui-sdk-config-options/#configuration-options).
 :::
 
 ### **Step 5:** Adding SmartUI function to take screenshot

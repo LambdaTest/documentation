@@ -42,7 +42,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
-The **HyperExecute YAML** file serves as the foundational component for test execution within the HyperExecute Platform. The subsequent list enumerates the diverse configuration options supported by [HyperExecute YAML](/support/docs/hyperexecute-yaml-parameters/#sample-hyperexecute-yaml), providing you with the flexibility to tailor test execution according to the specific requirements of your project.
+The **HyperExecute YAML** file serves as the foundational component for test execution within the HyperExecute Platform. The subsequent list enumerates the diverse configuration options supported by [HyperExecute YAML](/support/docs/deep-dive-into-hyperexecute-yaml/#sample-hyperexecute-yaml), providing you with the flexibility to tailor test execution according to the specific requirements of your project.
 
 ## Mandatory Parameters
 
@@ -74,13 +74,13 @@ The **HyperExecute YAML** file serves as the foundational component for test exe
 | Key | Type | Description|
 |-----|------|------------|
 | [parallelism](/support/docs/deep-dive-into-hyperexecute-yaml/#parallelism) | Integer | Parallelism defines number VMs to be spawned in case of [`hybrid`](/support/docs/hyperexecute-test-splitting-and-multiplexing/#hybrid-strategy-in-hyperexecute) mode, if the user is not defining the parallelism then he must define platform specific parallelism (win , mac and linux). If both are defined the preference will be given to platform base parallelism |
-| [macParallelism](/support/docs/deep-dive-into-hyperexecute-yaml/#macparallelism) | Integer | It defines number of mac VM to be spawned for job. |
-| [winParallelism](/support/docs/deep-dive-into-hyperexecute-yaml/#winparallelism) | Integer | It defines number of win VM to be spawned for job. |
-| [linuxParallelism](/support/docs/deep-dive-into-hyperexecute-yaml/#linuxparallelism) | Integer | It defines number of linux VM to be spawned for job. |
+| [macParallelism](/support/docs/deep-dive-into-hyperexecute-yaml/#platform-specific-parallelism---macparallelism-winparallelism-and-linuxparallelism) | Integer | It defines number of mac VM to be spawned for job. |
+| [winParallelism](/support/docs/deep-dive-into-hyperexecute-yaml/#platform-specific-parallelism---macparallelism-winparallelism-and-linuxparallelism) | Integer | It defines number of win VM to be spawned for job. |
+| [linuxParallelism](/support/docs/deep-dive-into-hyperexecute-yaml/#platform-specific-parallelism---macparallelism-winparallelism-and-linuxparallelism) | Integer | It defines number of linux VM to be spawned for job. |
 | [testRunnerCommand](/support/docs/deep-dive-into-hyperexecute-yaml/#testrunnercommand) | String | A command used to run a single test entity in isolation.This entity could be a file , module, feature or scenario. |
-| [macTestRunnerCommand](/support/docs/deep-dive-into-hyperexecute-yaml/#mactestrunnercommand) | String | Test runner command for MAC. | 
-| [winTestRunnerCommand](/support/docs/deep-dive-into-hyperexecute-yaml/#wintestrunnercommand) | String | Test runner command for Windows. |
-| [linuxTestRunnerCommand](/support/docs/deep-dive-into-hyperexecute-yaml/#linuxtestrunnercommand) | String | Test runner command for Linux. |
+| [macTestRunnerCommand](/support/docs/deep-dive-into-hyperexecute-yaml/#platform-specific-testrunnercommand) | String | Test runner command for MAC. | 
+| [winTestRunnerCommand](/support/docs/deep-dive-into-hyperexecute-yaml/#platform-specific-testrunnercommand) | String | Test runner command for Windows. |
+| [linuxTestRunnerCommand](/support/docs/deep-dive-into-hyperexecute-yaml/#platform-specific-testrunnercommand) | String | Test runner command for Linux. |
 
 ## Basic Parameters
 
@@ -160,13 +160,13 @@ The **HyperExecute YAML** file serves as the foundational component for test exe
 | [dataJsonPath](/support/docs/deep-dive-into-hyperexecute-yaml/#datajsonpath) | Array of String | DataJsonPaths helps to distribute data over VMs based on different Jsons.| 
 | [dataJsonBuilder](/support/docs/deep-dive-into-hyperexecute-yaml/#datajsonbuilder) | Array of String | dataJsonBuilder flag reads the data from your specified JSON files for distributed testing scenarios.| 
 | [strict](/support/docs/deep-dive-into-hyperexecute-yaml/#strict) | Boolean |If strict is set to true in yaml then the variables used in yaml must be present in either vars or environment variables on the user machine. | 
-| [codeDirectory](/support/docs/deep-dive-into-hyperexecute-yaml/#codedirectory) | String |Defines in which directory all of your commands defined in yaml would run. Your code would be downloaded in this directory. | 
+| [codeDirectory](/support/docs/deep-dive-into-hyperexecute-yaml/#advanced-parameters) | String |Defines in which directory all of your commands defined in yaml would run. Your code would be downloaded in this directory. | 
 | [preDirectives](/support/docs/deep-dive-into-hyperexecute-yaml/#predirectives) | Map | Similar to pre with option to retry and specify shell. |
 | [postDirectives](/support/docs/deep-dive-into-hyperexecute-yaml/#postdirectives) | Map |Similar to post with option to retry. |
 | [alwaysRunPostSteps](/support/docs/deep-dive-into-hyperexecute-yaml/#alwaysrunpoststeps) | Boolean | Execute the Post Steps in every scenario case |
 | [cacheTestURL](/support/docs/deep-dive-into-hyperexecute-yaml/#cachetesturl) | Boolean |It enables users to cache static test files. |
 | [project](/support/docs/deep-dive-into-hyperexecute-yaml/#project) | String | Segregate data at a project/repo level |
-| [slackChannel](/support/docs/deep-dive-into-hyperexecute-yaml/#slackchannel) | String | Allows you to receive notifications of your Job updates directly in your preferred Slack channel. |
+| [slackChannel](/support/docs/deep-dive-into-hyperexecute-yaml/#advanced-parameters) | String | Allows you to receive notifications of your Job updates directly in your preferred Slack channel. |
 | [afterEachScenario](/support/docs/deep-dive-into-hyperexecute-yaml/#aftereachscenario) | List of Strings | Allows you to trigger your define tasks after each test scenario. |
 | [syncStart](/support/docs/deep-dive-into-hyperexecute-yaml/#syncstart) | Map | Ensures all VMs are ready before starting parallel tasks.|
 
