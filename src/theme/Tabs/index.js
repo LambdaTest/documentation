@@ -1,147 +1,56 @@
 /**
- * Swizzled (ejected) Tabs — faithful copy of @docusaurus/theme-classic Tabs,
- * with ONE addition: for queryString-backed tab groups, the URL is kept as just
- * `?framework=...` and never `?framework=...#section-anchor`.
+ * Wrapper around the original theme Tabs (Docusaurus "wrap" swizzle). It does NOT copy or import any
+ * theme internals, so it works with whichever @docusaurus/theme-classic version is installed.
+ * Both additions are only active for queryString-backed tab groups:
  *
- * Docusaurus updates the query param with react-router's history.replace, which
- * PRESERVES the current #hash. A post-render effect (deferred to the next frame,
- * so it runs after that replace and after the browser's initial scroll) strips
- * the hash via native history.replaceState — silently, with no route change or
- * scroll-to-top. It only acts when the query param is actually present, so plain
- * `#section` deep-links (with no `?framework=`) are left untouched. This fires on
- * initial load (cleaning inbound `?framework=x#anchor` URLs) and on tab change.
+ * 1) The URL is kept as just `?framework=...`, never `?framework=...#section-anchor`.
+ *    Docusaurus updates the query param with react-router's history.replace, which PRESERVES the
+ *    current #hash. A deferred post-render effect strips the hash with native history.replaceState
+ *    (no route change, no scroll-to-top). It only acts when the query param is present, so plain
+ *    `#section` deep-links are left untouched.
+ *
+ * 2) Opt-in `scrollToTab` prop: when the page is opened with `?<key>=<value>` (or a PUSH navigation
+ *    changes that query, e.g. a sidebar link while already on the page) and <value> is one of THIS
+ *    group's tabs, the tab list is scrolled into view just below the navbar. The browser only
+ *    scrolls to a #hash, so a bare `?framework=junit` link used to open the right tab but leave the
+ *    reader at the top of a very long page. The scroll is repeated a few times because content
+ *    above the tabs keeps changing height while the page hydrates; any user scroll/keypress/touch
+ *    cancels it. Tab clicks (history REPLACE) and TOC clicks (same query) never move the page.
+ *    Tabs without `scrollToTab` are rendered exactly as the original (no extra DOM).
  */
-import React, {cloneElement, useEffect, useRef} from 'react';
-import clsx from 'clsx';
-import {
-  useScrollPositionBlocker,
-  useTabs,
-  sanitizeTabsChildren,
-} from '@docusaurus/theme-common/internal';
-import useIsBrowser from '@docusaurus/useIsBrowser';
+import React, {useEffect, useRef} from 'react';
+import OriginalTabs from '@theme-original/Tabs';
 import {useHistory, useLocation} from '@docusaurus/router';
-import styles from './styles.module.css';
 
-function TabList({
-  className,
-  block,
-  selectedValue,
-  selectValue,
-  tabValues,
-  queryString,
-}) {
-  const tabRefs = [];
-  const {blockElementScrollPositionUntilNextRender} =
-    useScrollPositionBlocker();
-  const handleTabChange = (event) => {
-    const newTab = event.currentTarget;
-    const newTabIndex = tabRefs.indexOf(newTab);
-    const newTabValue = tabValues[newTabIndex].value;
-    if (newTabValue !== selectedValue) {
-      blockElementScrollPositionUntilNextRender(newTab);
-      selectValue(newTabValue);
+function childValues(children) {
+  const values = [];
+  React.Children.forEach(children, (child) => {
+    if (child && child.props && child.props.value !== undefined) {
+      values.push(String(child.props.value));
     }
-  };
-  const handleKeydown = (event) => {
-    let focusElement = null;
-    switch (event.key) {
-      case 'Enter': {
-        handleTabChange(event);
-        break;
-      }
-      case 'ArrowRight': {
-        const nextTab = tabRefs.indexOf(event.currentTarget) + 1;
-        focusElement = tabRefs[nextTab] ?? tabRefs[0];
-        break;
-      }
-      case 'ArrowLeft': {
-        const prevTab = tabRefs.indexOf(event.currentTarget) - 1;
-        focusElement = tabRefs[prevTab] ?? tabRefs[tabRefs.length - 1];
-        break;
-      }
-      default:
-        break;
-    }
-    focusElement?.focus();
-  };
-  return (
-    <ul
-      role="tablist"
-      aria-orientation="horizontal"
-      className={clsx(
-        'tabs',
-        {
-          'tabs--block': block,
-        },
-        className,
-      )}>
-      {tabValues.map(({value, label, attributes}) => (
-        <li
-          role="tab"
-          tabIndex={selectedValue === value ? 0 : -1}
-          aria-selected={selectedValue === value}
-          key={value}
-          ref={(tabControl) => {
-            tabRefs.push(tabControl);
-          }}
-          onKeyDown={handleKeydown}
-          onClick={handleTabChange}
-          {...attributes}
-          className={clsx('tabs__item', styles.tabItem, attributes?.className, {
-            'tabs__item--active': selectedValue === value,
-          })}>
-          {label ?? value}
-        </li>
-      ))}
-    </ul>
-  );
+  });
+  return values;
 }
-function TabContent({lazy, children, selectedValue}) {
-  const childTabs = (Array.isArray(children) ? children : [children]).filter(
-    Boolean,
-  );
-  if (lazy) {
-    const selectedTabItem = childTabs.find(
-      (tabItem) => tabItem.props.value === selectedValue,
-    );
-    if (!selectedTabItem) {
-      return null;
-    }
-    return cloneElement(selectedTabItem, {
-      className: clsx('margin-top--md', selectedTabItem.props.className),
-    });
-  }
-  return (
-    <div className="margin-top--md">
-      {childTabs.map((tabItem, i) =>
-        cloneElement(tabItem, {
-          key: i,
-          hidden: tabItem.props.value !== selectedValue,
-        }),
-      )}
-    </div>
-  );
-}
-function TabsComponent(props) {
-  const tabs = useTabs(props);
-  const {queryString = false, groupId} = props;
-  const {selectedValue} = tabs;
-  // Keep queryString-backed tab URLs as just `?<key>=<value>` — never
-  // `?<key>=<value>#section-anchor`. Runs after react-router's history.replace
-  // (which preserves the #hash) via a deferred frame, so this strip wins the
-  // race; also runs on initial load to clean inbound `?<key>=x#anchor` URLs
-  // (after the browser has already scrolled to the anchor). Gated on the query
-  // param being present, so plain `#section` deep-links are left untouched.
+
+export default function Tabs(props) {
+  const {queryString = false, groupId, scrollToTab = false} = props;
+  const location = useLocation();
+  const history = useHistory();
+  const containerRef = useRef(null);
+  const lastSearch = useRef(null);
+  const queryKey = queryString
+    ? typeof queryString === 'string'
+      ? queryString
+      : groupId
+    : null;
+
+  // (1) keep `?key=value` free of a trailing #hash
   useEffect(() => {
-    if (!queryString || typeof window === 'undefined') {
-      return undefined;
-    }
-    const key = typeof queryString === 'string' ? queryString : groupId;
-    if (!key) {
+    if (!queryKey || typeof window === 'undefined') {
       return undefined;
     }
     const frame = window.requestAnimationFrame(() => {
-      const hasParam = new URLSearchParams(window.location.search).has(key);
+      const hasParam = new URLSearchParams(window.location.search).has(queryKey);
       if (hasParam && window.location.hash) {
         window.history.replaceState(
           window.history.state,
@@ -151,40 +60,24 @@ function TabsComponent(props) {
       }
     });
     return () => window.cancelAnimationFrame(frame);
-  }, [queryString, groupId, selectedValue]);
-  // Opt-in (`scrollToTab` prop): when the page is opened with `?<key>=<value>` and
-  // <value> is one of THIS group's tabs, bring the tab list into view. The browser
-  // only scrolls to a #hash, so a bare `?framework=junit` link used to open the
-  // right tab but leave the reader at the top of a very long page. The scroll is
-  // repeated a few times because content above the tabs keeps changing height
-  // while the page hydrates and images load; any user scroll/keypress/touch
-  // cancels it so we never fight the reader.
-  const containerRef = useRef(null);
-  const {scrollToTab = false} = props;
-  const location = useLocation();
-  const history = useHistory();
-  const lastSearch = useRef(null);
+  }, [queryKey, location.key]);
+
+  // (2) opt-in: bring this tab group into view for `?key=value` URLs
   useEffect(() => {
-    // Runs on mount (page opened with the URL) and whenever the query string
-    // changes through a real navigation (PUSH, e.g. a sidebar link to
-    // `?framework=junit` while already on this page). A tab click only REPLACEs
-    // the URL and a TOC click keeps the same query, so neither moves the page.
+    // Runs on mount, and whenever the query string changes through a real
+    // navigation (PUSH). A tab click only REPLACEs the URL; a TOC click keeps
+    // the same query - neither moves the page.
     const isFirstRun = lastSearch.current === null;
     const searchChanged = lastSearch.current !== location.search;
     lastSearch.current = location.search;
     if (!isFirstRun && !(searchChanged && history.action === 'PUSH')) {
       return undefined;
     }
-    if (!scrollToTab || !queryString || typeof window === 'undefined') {
+    if (!scrollToTab || !queryKey || typeof window === 'undefined') {
       return undefined;
     }
-    const key = typeof queryString === 'string' ? queryString : groupId;
-    const wanted = key
-      ? new URLSearchParams(window.location.search).get(key)
-      : null;
-    // `selectedValue` can still be the default tab on this first render, so check
-    // that the URL value belongs to this group rather than comparing to it.
-    if (wanted === null || !tabs.tabValues.some((t) => t.value === wanted)) {
+    const wanted = new URLSearchParams(window.location.search).get(queryKey);
+    if (wanted === null || !childValues(props.children).includes(wanted)) {
       return undefined;
     }
     let cancelled = false;
@@ -214,22 +107,13 @@ function TabsComponent(props) {
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [location.key]);
+
+  if (!scrollToTab) {
+    return <OriginalTabs {...props} />;
+  }
   return (
-    <div ref={containerRef} className={clsx('tabs-container', styles.tabList)}>
-      <TabList {...tabs} {...props} />
-      <TabContent {...tabs} {...props} />
+    <div ref={containerRef}>
+      <OriginalTabs {...props} />
     </div>
-  );
-}
-export default function Tabs(props) {
-  const isBrowser = useIsBrowser();
-  return (
-    <TabsComponent
-      // Remount tabs after hydration
-      // Temporary fix for https://github.com/facebook/docusaurus/issues/5653
-      key={String(isBrowser)}
-      {...props}>
-      {sanitizeTabsChildren(props.children)}
-    </TabsComponent>
   );
 }
