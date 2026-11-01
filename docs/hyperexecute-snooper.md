@@ -198,7 +198,7 @@ To implement the `snooper` command on HyperExecute, we simply need to update our
 ### `testDiscovery`
 This command helps to discover all the test scenarios within the project. It offers two methods to implement it:
 
-#### Method 1: Discovering test cases on HyperExecute machines:
+### Method 1: Discovering test cases on HyperExecute machines:
 
 - `featureFilePaths`: Path where all feature files are located
 - `frameWork`: Framework of Testing
@@ -216,7 +216,7 @@ testDiscovery:
     specificTags: [""]
 ```
 
-#### Method 2: Discovering test cases on Local machines
+### Method 2: Discovering test cases on Local machines
 
 - `command`: It is a mandatory parameter in the yaml file and would throw an error if not found by the compiler.
 
@@ -235,7 +235,7 @@ This command helps to execute the test cases and needs a command that will help 
 
 There are two methods to execute the runner command for cucumber:
 
-#### Method 1: Using `options` flag
+### Method 1: Using `options` flag
 
 <VerifiedTag value="Verified" />
 
@@ -245,7 +245,7 @@ testRunnerCommand: mvn test -Dcucumber.options="$test"
 
 - `-Dcucumber.options`: This parameter is used to specify the feature that will help execute on VMs.
 
-#### Method 2: Using `features` flag
+### Method 2: Using `features` flag
 
 > **Note:** This flag is applicable for cucumber version 7 and above only.
 
@@ -271,7 +271,7 @@ To debug the discovery of the snooper, configure the following command as per th
 
 > **Note:** .hyperexecute and snooper binary are created only after first execution of the yaml file.
 
-#### How to effectively utilize tags incorporating various custom parameters for enhanced functionality?
+### How to effectively utilize tags incorporating various custom parameters for enhanced functionality?
 
 - Snooper discovery can be customized where you can use set of tags that you want to discover the tests.
 

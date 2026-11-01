@@ -310,15 +310,15 @@ If macOS reports **permission denied** when you run the CLI, make it executable 
 
 Open the [HyperExecute Dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute) and find your job. A successful run shows the job as **Completed** with passing tests, and the **pre**, **scenario**, and **post** stages available as logs. Open each stage to validate the API responses your suite tested.
 
-#### Pre-run logs
+### Pre-run logs
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/integration/products/api/1.png').default} alt="HyperExecute dashboard showing pre-run logs"  width="1920" height="868" className="doc_img"/>
 
-#### Scenario logs
+### Scenario logs
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/integration/products/api/2.png').default} alt="HyperExecute dashboard showing scenario logs"  width="1920" height="868" className="doc_img"/>
 
-#### Post-run logs
+### Post-run logs
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/integration/products/api/3.png').default} alt="HyperExecute dashboard showing post-run logs"  width="1920" height="868" className="doc_img"/>
 

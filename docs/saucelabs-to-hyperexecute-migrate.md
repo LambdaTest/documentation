@@ -359,7 +359,7 @@ capabilities.setCapability("console",true);
 capabilities.setCapability("visual",true);
 ```
 
-#### Update the **Hub URL** and **Authentication** in the Test Scripts
+### Update the **Hub URL** and **Authentication** in the Test Scripts
 
 For a Java-based implementation, here are the changes in the script as far as the authentication stage is concerned:
 

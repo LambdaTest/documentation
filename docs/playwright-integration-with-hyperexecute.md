@@ -269,7 +269,7 @@ To run the tests on HyperExecute from your local system, you are required:
 - [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) in order to initiate a test execution Job.
 - Setup the [Environmental Variable](/support/docs/hyperexecute-running-your-first-job/#set-up-authentication-and-environment-variables)
 
-#### Download the HyperExecute CLI
+### Download the HyperExecute CLI
 
 The CLI is used for triggering the tests on HyperExecute. It is recommend to download the CLI binary on the host system and keep it in the root directory of the suite to perform the tests on HyperExecute.
 
@@ -281,7 +281,7 @@ You can download the CLI for your desired platform from the below mentioned link
 | MacOS | https://downloads.lambdatest.com/hyperexecute/darwin/hyperexecute |
 | Linux | https://downloads.lambdatest.com/hyperexecute/linux/hyperexecute |
 
-#### Setup Environment Variable
+### Setup Environment Variable
 
 Now, you need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [<BrandName /> Profile page](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/details/profile).
 
@@ -320,13 +320,13 @@ Once the CLI is downloaded and the environment variables are set, follow the fra
 
 ### JavaScript
 
-<Tabs className="docs__val" groupId="pw-js">
+<Tabs className="docs__val" groupId="pw-js" queryString="framework">
 
 <TabItem value="vanillajs" label="VanillaJS" default>
 
 Playwright is a Node.js library that uses a single API to automate Chromium, Firefox, and WebKit. It is designed to enable powerful, reliable, and efficient automated browser testing. Playwright can also automate Microsoft Edge since it is built on the open-source Chromium web framework.
 
-#### Step 1: Configure Your Test Suite
+### Step 1: Configure Your Test Suite
 
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
@@ -344,7 +344,7 @@ By setting up the Hub endpoint, you establish the communication channel between 
 
 > You can also use **dev** and **beta** browser versions. To generate capabilities for your test requirements, you can use our inbuilt 🔗 <a href={`${BRAND_URL}/capabilities-generator/`}>Capabilities Generator</a>.
 
-#### Step 2: Configure YAML in your Test Suite
+### Step 2: Configure YAML in your Test Suite
 
 Configure your YAML file as per your use cases using **key value** pairs.
 
@@ -394,7 +394,7 @@ testRunnerCommand: npx playwright test $test
 jobLabel: [playwright-VanillaJS, linux, autosplit] 
 ```
 
-#### Step 3: Execute your Test Suite
+### Step 3: Execute your Test Suite
 
 > **NOTE :** In case of MacOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
 
@@ -420,13 +420,13 @@ OR use this command if you have not exported your username and access key.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/cmd_2.png').default} alt="JUnit HyperExecute Terminal Logs"  width="1920" height="868" className="doc_img"/>
 
-#### Step 4: Monitor the Test Execution
+### Step 4: Monitor the Test Execution
 
 Visit the [HyperExecute Dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/testng_autosplit_1.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
-#### Step 5: Download Artifacts and Reports
+### Step 5: Download Artifacts and Reports
 
 HyperExecute also facilitates the provision to download the [Artifacts](/support/docs/hyperexecute-artifacts/) and [Reports](/support/docs/hyperexecute-job-reports/) on your local machine. Click on the corresponding button to download your generated artifacts and reports.
 
@@ -438,7 +438,7 @@ HyperExecute also facilitates the provision to download the [Artifacts](/support
 
 Jest is a popular JavaScript testing framework primarily used for testing React applications, although it can be employed for any JavaScript project. Developed by Facebook, Jest is known for its simplicity and speed. It provides a testing environment, assertion utilities, and features like snapshot testing, parallel test execution, and mocking to ensure efficient and reliable testing of JavaScript codebases.
 
-#### Step 1: Configure Your Test Suite
+### Step 1: Configure Your Test Suite
 
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
@@ -456,7 +456,7 @@ By setting up the Hub endpoint, you establish the communication channel between 
 
 > You can also use **dev** and **beta** browser versions. To generate capabilities for your test requirements, you can use our inbuilt 🔗 <a href={`${BRAND_URL}/capabilities-generator/`}>Capabilities Generator</a>.
 
-#### Step 2: Configure YAML in your Test Suite
+### Step 2: Configure YAML in your Test Suite
 
 Configure your YAML file as per your use cases using **key value** pairs.
 
@@ -506,7 +506,7 @@ testRunnerCommand: npm test -- $test
 jobLabel: [playwright-JestJS, linux, autosplit]
 ```
 
-#### Step 3: Execute your Test Suite
+### Step 3: Execute your Test Suite
 
 > **NOTE :** In case of MacOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
 
@@ -532,20 +532,20 @@ OR use this command if you have not exported your username and access key.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/cmd_2.png').default} alt="JUnit HyperExecute Terminal Logs"  width="1920" height="868" className="doc_img"/>
 
-#### Step 4: Monitor the Test Execution
+### Step 4: Monitor the Test Execution
 
 Visit the [HyperExecute Dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/testng_autosplit_1.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
-#### Step 5: Download Artifacts and Reports
+### Step 5: Download Artifacts and Reports
 
 HyperExecute also facilitates the provision to download the [Artifacts](/support/docs/hyperexecute-artifacts/) and [Reports](/support/docs/hyperexecute-job-reports/) on your local machine. Click on the corresponding button to download your generated artifacts and reports.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/testng_autosplit_2.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
 
-#### Using the Jest Agent Skill with TestMu AI
+### Using the Jest Agent Skill with TestMu AI
 ***
 
 The [jest-skill](https://github.com/LambdaTest/agent-skills/tree/main/jest-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
@@ -571,7 +571,7 @@ It provides structured guidance for:
 * Debugging patterns
 * CI/CD integration
 
-##### Installing Jest Agent Skill
+### Installing Jest Agent Skill
 ***
 
 Install a Jest Agent Skill using the command below:
@@ -595,7 +595,7 @@ cp -r agent-skills/jest-skill .cursor/skills/
 
 CodeceptJS is a versatile end-to-end testing framework for JavaScript that allows testing web applications using various libraries like Puppeteer and WebDriver. It stands out for its simplicity and ability to write tests in a more human-readable and expressive manner, making it accessible for both developers and non-developers.
 
-#### Step 1: Configure Your Test Suite
+### Step 1: Configure Your Test Suite
 
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
@@ -613,7 +613,7 @@ By setting up the Hub endpoint, you establish the communication channel between 
 
 > You can also use **dev** and **beta** browser versions. To generate capabilities for your test requirements, you can use our inbuilt 🔗 <a href={`${BRAND_URL}/capabilities-generator/`}>Capabilities Generator</a>.
 
-#### Step 2: Configure YAML in your Test Suite
+### Step 2: Configure YAML in your Test Suite
 
 Configure your YAML file as per your use cases using **key value** pairs.
 
@@ -663,7 +663,7 @@ testRunnerCommand: npx codeceptjs run $test --steps
 jobLabel: [playwright-CodeceptJS, linux, autosplit]
 ```
 
-#### Step 3: Execute your Test Suite
+### Step 3: Execute your Test Suite
 
 > **NOTE :** In case of MacOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
 
@@ -689,13 +689,13 @@ OR use this command if you have not exported your username and access key.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/cmd_2.png').default} alt="JUnit HyperExecute Terminal Logs"  width="1920" height="868" className="doc_img"/>
 
-#### Step 4: Monitor the Test Execution
+### Step 4: Monitor the Test Execution
 
 Visit the [HyperExecute Dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/testng_autosplit_1.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
-#### Step 5: Download Artifacts and Reports
+### Step 5: Download Artifacts and Reports
 
 HyperExecute also facilitates the provision to download the [Artifacts](/support/docs/hyperexecute-artifacts/) and [Reports](/support/docs/hyperexecute-job-reports/) on your local machine. Click on the corresponding button to download your generated artifacts and reports.
 
@@ -708,7 +708,7 @@ HyperExecute also facilitates the provision to download the [Artifacts](/support
 
 JUnit is a widely-used testing framework for Java applications, designed to simplify and enhance the testing process for developers. It provides a flexible and powerful platform for running test suites, enabling effective unit testing, integration testing, and end-to-end testing of Java applications.
 
-#### Step 1: Configure Your Test Suite
+### Step 1: Configure Your Test Suite
 
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
@@ -726,7 +726,7 @@ By setting up the Hub endpoint, you establish the communication channel between 
 
 > You can also use **dev** and **beta** browser versions. To generate capabilities for your test requirements, you can use our inbuilt 🔗 <a href={`${BRAND_URL}/capabilities-generator/`}>Capabilities Generator</a>.
 
-#### Step 2: Configure YAML in your Test Suite
+### Step 2: Configure YAML in your Test Suite
 
 Configure your YAML file as per your use cases using **key value** pairs.
 
@@ -794,7 +794,7 @@ testRunnerCommand: mvn -Dplatname=linux -Dmaven.repo.local=m2_cache_dir -Dtest=$
 jobLabel: [playwright-Junit, linux, autosplit] 
 ```
 
-#### Step 3: Execute your Test Suite
+### Step 3: Execute your Test Suite
 
 > **NOTE :** In case of MacOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
 
@@ -820,20 +820,20 @@ OR use this command if you have not exported your username and access key.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/cmd_2.png').default} alt="JUnit HyperExecute Terminal Logs"  width="1920" height="868" className="doc_img"/>
 
-#### Step 4: Monitor the Test Execution
+### Step 4: Monitor the Test Execution
 
 Visit the [HyperExecute Dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/testng_autosplit_1.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
-#### Step 5: Download Artifacts and Reports
+### Step 5: Download Artifacts and Reports
 
 HyperExecute also facilitates the provision to download the [Artifacts](/support/docs/hyperexecute-artifacts/) and [Reports](/support/docs/hyperexecute-job-reports/) on your local machine. Click on the corresponding button to download your generated artifacts and reports.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/testng_autosplit_2.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
 
-#### Using the JUnit 5 Agent Skill with TestMu AI
+### Using the JUnit 5 Agent Skill with TestMu AI
 ***
 
 The [junit-5-skill](https://github.com/LambdaTest/agent-skills/tree/main/junit-5-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
@@ -859,7 +859,7 @@ It provides structured guidance for:
 * Debugging patterns
 * CI/CD integration
 
-##### Installing JUnit 5 Agent Skill
+### Installing JUnit 5 Agent Skill
 ***
 
 Install a JUnit 5 Agent Skill using the command below:
@@ -881,7 +881,7 @@ cp -r agent-skills/junit-5-skill .cursor/skills/
 
 Playwright for .NET is a framework that enables browser automation and end-to-end testing using the .NET programming language, such as C#. Developed by Microsoft, Playwright offers a comprehensive .NET API for automating interactions with web pages in Chromium, Firefox, and WebKit browsers.
 
-#### Step 1: Configure Your Test Suite
+### Step 1: Configure Your Test Suite
 
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
@@ -899,7 +899,7 @@ By setting up the Hub endpoint, you establish the communication channel between 
 
 > You can also use **dev** and **beta** browser versions. To generate capabilities for your test requirements, you can use our inbuilt 🔗 <a href={`${BRAND_URL}/capabilities-generator/`}>Capabilities Generator</a>.
 
-#### Step 2: Configure YAML in your Test Suite
+### Step 2: Configure YAML in your Test Suite
 
 Configure your YAML file as per your use cases using **key value** pairs.
 
@@ -960,7 +960,7 @@ testRunnerCommand: dotnet run $test
 jobLabel: [playwright-Dotnet, linux, autosplit]
 ```
 
-#### Step 3: Execute your Test Suite
+### Step 3: Execute your Test Suite
 
 > **NOTE :** In case of MacOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
 
@@ -986,13 +986,13 @@ OR use this command if you have not exported your username and access key.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/cmd_2.png').default} alt="JUnit HyperExecute Terminal Logs"  width="1920" height="868" className="doc_img"/>
 
-#### Step 4: Monitor the Test Execution
+### Step 4: Monitor the Test Execution
 
 Visit the [HyperExecute Dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/testng_autosplit_1.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
-#### Step 5: Download Artifacts and Reports
+### Step 5: Download Artifacts and Reports
 
 HyperExecute also facilitates the provision to download the [Artifacts](/support/docs/hyperexecute-artifacts/) and [Reports](/support/docs/hyperexecute-job-reports/) on your local machine. Click on the corresponding button to download your generated artifacts and reports.
 
@@ -1000,13 +1000,13 @@ HyperExecute also facilitates the provision to download the [Artifacts](/support
 
 ### Python
 
-<Tabs className="docs__val" groupId="pw-python">
+<Tabs className="docs__val" groupId="pw-python" queryString="framework">
 
 <TabItem value="python" label="Python" default>
 
 Playwright is a powerful browser automation library that allows developers to automate browser interactions. When using Python with Playwright, developers can leverage a robust testing framework to create automated tests for web applications. This combination enables end-to-end testing, ensuring the functionality, performance, and reliability of web applications.
 
-#### Step 1: Configure Your Test Suite
+### Step 1: Configure Your Test Suite
 
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
@@ -1024,7 +1024,7 @@ By setting up the Hub endpoint, you establish the communication channel between 
 
 > You can also use **dev** and **beta** browser versions. To generate capabilities for your test requirements, you can use our inbuilt 🔗 <a href={`${BRAND_URL}/capabilities-generator/`}>Capabilities Generator</a>.
 
-#### Step 2: Configure YAML in your Test Suite
+### Step 2: Configure YAML in your Test Suite
 
 Configure your YAML file as per your use cases using **key value** pairs.
 
@@ -1081,7 +1081,7 @@ testRunnerCommand: python $test
 jobLabel: [playwright-Python, linux, autosplit]
 ```
 
-#### Step 3: Execute your Test Suite
+### Step 3: Execute your Test Suite
 
 > **NOTE :** In case of MacOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
 
@@ -1107,13 +1107,13 @@ OR use this command if you have not exported your username and access key.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/cmd_2.png').default} alt="JUnit HyperExecute Terminal Logs"  width="1920" height="868" className="doc_img"/>
 
-#### Step 4: Monitor the Test Execution
+### Step 4: Monitor the Test Execution
 
 Visit the [HyperExecute Dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/testng_autosplit_1.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
-#### Step 5: Download Artifacts and Reports
+### Step 5: Download Artifacts and Reports
 
 HyperExecute also facilitates the provision to download the [Artifacts](/support/docs/hyperexecute-artifacts/) and [Reports](/support/docs/hyperexecute-job-reports/) on your local machine. Click on the corresponding button to download your generated artifacts and reports.
 
@@ -1125,7 +1125,7 @@ HyperExecute also facilitates the provision to download the [Artifacts](/support
 
 Pytest is a popular Python testing framework that can be seamlessly integrated with Playwright for efficient end-to-end testing of web applications. Pytest simplifies the testing process with its straightforward syntax and rich set of features.
 
-#### Step 1: Configure Your Test Suite
+### Step 1: Configure Your Test Suite
 
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
@@ -1143,7 +1143,7 @@ By setting up the Hub endpoint, you establish the communication channel between 
 
 > You can also use **dev** and **beta** browser versions. To generate capabilities for your test requirements, you can use our inbuilt 🔗 <a href={`${BRAND_URL}/capabilities-generator/`}>Capabilities Generator</a>.
 
-#### Step 2: Configure YAML in your Test Suite
+### Step 2: Configure YAML in your Test Suite
 
 Configure your YAML file as per your use cases using **key value** pairs.
 
@@ -1200,7 +1200,7 @@ testRunnerCommand: pytest $test
 jobLabel: [playwright-pytest, linux, autosplit]
 ```
 
-#### Step 3: Execute your Test Suite
+### Step 3: Execute your Test Suite
 
 > **NOTE :** In case of MacOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
 
@@ -1226,20 +1226,20 @@ OR use this command if you have not exported your username and access key.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/cmd_2.png').default} alt="JUnit HyperExecute Terminal Logs"  width="1920" height="868" className="doc_img"/>
 
-#### Step 4: Monitor the Test Execution
+### Step 4: Monitor the Test Execution
 
 Visit the [HyperExecute Dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/testng_autosplit_1.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
-#### Step 5: Download Artifacts and Reports
+### Step 5: Download Artifacts and Reports
 
 HyperExecute also facilitates the provision to download the [Artifacts](/support/docs/hyperexecute-artifacts/) and [Reports](/support/docs/hyperexecute-job-reports/) on your local machine. Click on the corresponding button to download your generated artifacts and reports.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/testng_autosplit_2.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
 
-#### Using the Pytest Agent Skill with TestMu AI
+### Using the Pytest Agent Skill with TestMu AI
 ***
 
 The [pytest-skill](https://github.com/LambdaTest/agent-skills/tree/main/pytest-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
@@ -1265,7 +1265,7 @@ It provides structured guidance for:
 * Debugging patterns
 * CI/CD integration
 
-##### Installing Pytest Agent Skill
+### Installing Pytest Agent Skill
 ***
 
 Install a Pytest Agent Skill using the command below:
@@ -1290,7 +1290,7 @@ cp -r agent-skills/pytest-skill .cursor/skills/
 
 This section explains how to run your **Playwright** tests on **Real devices (Android and iOS)** using HyperExecute.
 
-#### Step 1: Set Up Your Test Project
+### Step 1: Set Up Your Test Project
 
 You can use your own Playwright project or try the sample repo. For demo purposes, we are using the sample repository.
 
@@ -1300,7 +1300,7 @@ Download or Clone the code sample for the Playwright Real Device from the <Brand
 <a href="https://github.com/LambdaTest/LambdaTest-HyperExecute-Playwright-Appium-Sample" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
 :::
 
-##### Configure Desired Capabilities
+### Configure Desired Capabilities
 
 Update your test configuration with the required capabilities.
 
@@ -1320,7 +1320,7 @@ Update your test configuration with the required capabilities.
 
 > You can also use **dev** and **beta** browser versions. To generate capabilities for your test requirements, you can use our inbuilt 🔗 <a href={`${BRAND_URL}/capabilities-generator/`}>Capabilities Generator</a>.
 
-##### Configure the CDP URL
+### Configure the CDP URL
 
 You will have to update the **CDP (Chrome DevTools Protocol) URL** which is a protocol used for communication between the browser and the developer tools.
 
@@ -1332,7 +1332,7 @@ const browser = await chromium.connect({
 })
 ```
 
-#### Step 2: Configure YAML in your Test Suite
+### Step 2: Configure YAML in your Test Suite
 Use the sample YAML below to configure your execution:
 
 <Tabs className="docs__val">
@@ -1367,7 +1367,7 @@ framework:
 - If **`reservation : false`**, it means that it will allocate the device from any region. If you want to allocate the device of any specific region, keep the **`reservation : true`**.
 :::
 
-#### Step 3: Execute your Test Suite
+### Step 3: Execute your Test Suite
 
 > **NOTE :** In case of MacOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
 
@@ -1381,13 +1381,13 @@ Run the below command in your terminal at the root folder of the project:
   </CodeBlock>
 </div>
 
-#### Step 4: Monitor the Test Execution
+### Step 4: Monitor the Test Execution
 
 Visit the [HyperExecute Dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/playwright/real-device/3.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
-#### Step 5: Download Artifacts and Reports
+### Step 5: Download Artifacts and Reports
 
 HyperExecute also facilitates the provision to download the [Artifacts](/support/docs/hyperexecute-artifacts/) and [Reports](/support/docs/hyperexecute-job-reports/) on your local machine. Click on the corresponding button to download your generated artifacts and reports.
 
@@ -1471,7 +1471,7 @@ It provides structured guidance for:
 * Debugging patterns
 * CI/CD integration
 
-#### Installing Playwright Agent Skill
+### Installing Playwright Agent Skill
 ***
 
 Install a Playwright Agent Skill using the command below:

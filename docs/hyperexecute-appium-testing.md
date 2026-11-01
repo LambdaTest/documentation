@@ -827,7 +827,7 @@ All the code samples in this documentation can be found on **<BrandName />'s Git
 
 ### Steps to Run Your Test
 
-#### Step 1: Upload your Application
+### Step 1: Upload your Application
 Upload your <b>_android_</b> application (.apk file) to the <BrandName /> servers using our <b>REST API</b>. Use the `virtualDevice` upload endpoint. You need to provide your <b>Username</b> and <b>AccessKey</b> in the format `Username:AccessKey` in the <b>cURL</b> command for authentication. Make sure to add the path of the <b>appFile</b> in the cURL request. Here is an example cURL request to upload your app using our REST API:
 
 <Tabs className="docs__val">
@@ -894,7 +894,7 @@ Upload your <b>_android_</b> application (.apk file) to the <BrandName /> server
 
 > Response of above cURL will be a **JSON** object containing the `App URL` of the format - ``lt://APP123456789123456789`` and will be used in the next step.
 
-#### Step 2: Configure your Test Script
+### Step 2: Configure your Test Script
 Write Your Automation Script in the client language of your choice from the ones supported by Appium. An automation script for the sample applications have been provided below.
 
 Here is a sample automation script in Java for the sample app downloaded above. Ensure to update the `app_url`, `username` and `accesskey` in the below code.
@@ -905,7 +905,7 @@ Here is a sample automation script in Java for the sample app downloaded above. 
 https://github.com/LambdaTest/hyperexecute-appium-testng/blob/android-emulator/src/main/java/AndroidEmulator.java
 ```
 
-#### Step 3: Update your XML file
+### Step 3: Update your XML file
 Create `.XML` file in order to run your test and define device capabilities. Please find sample code below for the same.
 
 <VerifiedTag value="Verified" />
@@ -914,14 +914,14 @@ Create `.XML` file in order to run your test and define device capabilities. Ple
 https://github.com/LambdaTest/hyperexecute-appium-testng/blob/android-emulator/src/test/java/android-emulator.xml
 ```
 
-#### Step 4: Configure YAML and Execute your Script
+### Step 4: Configure YAML and Execute your Script
 <VerifiedTag value="Verified" />
 
 ```yaml reference title="android-emulator.yaml"
 https://github.com/LambdaTest/hyperexecute-appium-testng/blob/android-emulator/yaml/hyp-android-emulator.yaml
 ```
 
-#### Step 5: Execute your Test Suite
+### Step 5: Execute your Test Suite
 > **NOTE :** In case of MacOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
 
 Run the below command in your terminal at the root folder of the project:
@@ -951,7 +951,7 @@ This section outlines how to execute your Virtual Device tests on HyperExecute w
 Currently, App Automation is available for Emulators and Simulators in the Beta phase, with support for the Appium framework. To use this feature, [Contact Sales](https://www.testmuai.com/contact-us/).
 :::
 
-#### Prerequisites
+### Prerequisites
 
 To run the Tests on HyperExecute from your Local System, you are required:
 
@@ -968,15 +968,15 @@ Run your samplе tеsts on HyperExecute using our samplе Android and iOS applic
 * [Samplе iOS App](https://prod-mobile-artefacts.lambdatest.com/assets/docs/firefox.zip) 
 :::
 
-#### Step 1: Setup Your Test Suite
+### Step 1: Setup Your Test Suite
 
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
-#### Step 2: Setup the CLI in your Test Suite
+### Step 2: Setup the CLI in your Test Suite
 
 After cloning / downloading the sample repo, you need to setup the CLI and the environment variables.
 
-##### Download the HyperExecute CLI
+### Download the HyperExecute CLI
 
 The CLI is used for triggering the tests on HyperExecute. It is recommend to download the CLI binary on the host system and keep it in the root directory of the suite to perform the tests on HyperExecute.
 
@@ -988,7 +988,7 @@ You can download the CLI for your desired platform from the below mentioned link
 | MacOS | https://downloads.lambdatest.com/hyperexecute/darwin/hyperexecute |
 | Linux | https://downloads.lambdatest.com/hyperexecute/linux/hyperexecute |
 
-##### Setup Environment Variable
+### Setup Environment Variable
 
 Now, you need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [<BrandName /> Profile page](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/details/profile).
 
@@ -1023,7 +1023,7 @@ set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </TabItem>
 </Tabs>
 
-#### Step 3: Upload your Application
+### Step 3: Upload your Application
 
 Upload your **iOS** application (*.app* file) or **Android** application (*.apk* file) to the <BrandName /> servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format `Username:AccessKey` in the **cURL** command for authentication. Make sure to add the path of the **appFile** in the cURL request. Here is an example cURL request to upload your app using our REST API:
 
@@ -1088,7 +1088,7 @@ Upload your **iOS** application (*.app* file) or **Android** application (*.apk*
 
 > Response of above cURL will be a **JSON** object containing the `App URL` of the format `lt://APP123456789123456789`
 
-#### Step 4: Update Your Automation Script
+### Step 4: Update Your Automation Script
 
 Here is a sample automation script in Java for the sample app downloaded above. In the below test script, ensure to update the `app_url`, or `app_id`
 
@@ -1216,7 +1216,7 @@ public void iOSApp1(String device, String version, String platform) {
 </TabItem>
 </Tabs>
 
-#### Step 5: Configure YAML in your Test Suite
+### Step 5: Configure YAML in your Test Suite
 
 <VerifiedTag value="Verified" />
 
@@ -1246,7 +1246,7 @@ framework:
 jobLabel: ['HYP', 'Virtual Device', 'iOS', 'Single Device']
 ```
 
-#### Step 6: Execute your Test Suite
+### Step 6: Execute your Test Suite
 
 > **NOTE :** In case of MacOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
 

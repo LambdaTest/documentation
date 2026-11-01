@@ -268,7 +268,7 @@ The steps below create test chains using connected workflows in HyperExecute, wi
 - **Centralized Configuration:** Set up and manage workflows easily within the HyperExecute platform.
 
 ### Real-World Use Case Scenarios
-#### Example 1: Conditional Regression Testing
+### Example 1: Conditional Regression Testing
 Let’s consider a development scenario where:
 - **Workflow A** (smoke tests) runs first. This workflow contains a set of critical tests that must pass to ensure the build is functional.
 - **Workflow B** (regression tests) runs next, but only if Workflow A passes.
@@ -279,7 +279,7 @@ Our objective is to automatically trigger the regression tests after the smoke t
 - **Workflow A - Smoke tests (runs daily):** Executes a subset of tests (e.g., 30 high-severity or critical tests).
 - **Workflow B: Regression tests (triggered after successful execution of Workflow A):** Executes a larger set of tests, ensuring that the product remains functional after code changes.
 
-#### Example 2: Severity-based Test Execution
+### Example 2: Severity-based Test Execution
 In this scenario, you can define tests to run based on their severity levels.
 - **Workflow A:** High-severity tests (e.g., critical functionality tests) are executed every day.
 - **Workflow B:** General regression tests (run only after Workflow A passes).
@@ -295,11 +295,11 @@ This setup ensures that resources are focused on high-priority tests while the m
 ### Steps to Set Up Connected Workflows in HyperExecute
 Follow these steps to configure connected workflows in HyperExecute:
 
-#### Prerequisite
+### Prerequisite
 - Setup your [Project](/support/docs/hyperexecute-projects/#setup-custom-project) before setting up the Workflows.
 - You must have created your required [workflows](/support/docs/hyperexecute-projects/#schedule-your-workflows) that you want to trigger.
 
-#### Step 1: Setup Workflow
+### Step 1: Setup Workflow
 - Click on the "**Setup Workflow**" button:
 - Enter Workflow Details:
     - **Workflow Name:** Give your workflow a descriptive name (e.g., "Smoke Tests" or "Regression Tests").
@@ -309,10 +309,10 @@ Follow these steps to configure connected workflows in HyperExecute:
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/test-chains/1.png').default} alt="Image" className="doc_img"/>
 
-#### Step 2: Configure the Schedule
+### Step 2: Configure the Schedule
 - Configure the schedule of your workflow. Select the **days** and **time** at which you want to trigger your tests. Click on **Next**.
 
-#### Step 3: Workflow Linking
+### Step 3: Workflow Linking
 You can link this workflow to other existing workflows within the same project or across other projects you own. Once this workflow completes successfully, it can automatically trigger the linked workflows, enabling seamless execution across stages. To set this up, simply select the projects and workflows you wish to trigger from the available list. This feature allows you to build automated, end-to-end workflow chains, ideal for orchestrating complex testing and deployment pipelines.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/test-chains/2.png').default} alt="Image" className="doc_img"/>

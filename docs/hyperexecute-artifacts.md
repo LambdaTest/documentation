@@ -184,13 +184,13 @@ To view or download your Artifacts, click the **Artifacts** button.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/features/artifacts-reports/0.png').default} alt="Image"  className="doc_img"/>
 
-#### For a Single file
+### For a Single file
 
 If you only have one file as an _Artifact_, then a preview of the file will be opened on your browser. 
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/features/artifacts-reports/1.png').default} alt="Image"  className="doc_img"/>
 
-#### For Multiple files
+### For Multiple files
 
 If you have multiple files as an _Artifact_, then you will get an option to download all the files directly.
 
@@ -202,7 +202,7 @@ To make the most of this feature, follow the steps below.
 
 > **Prioritize**: To access your _Artiacts_ for a particular _Job ID_, they must have a name.
 
-#### 1. Constructing the URL
+### 1. Constructing the URL
 
 The URL to view an _Artifact_ in a standard job is:
 
@@ -220,7 +220,7 @@ For example, if you want to access the _Artifacts_ for a job with _Job ID_: `2d8
 
 ***
 
-#### 2. Additional Filters
+### 2. Additional Filters
 
 You can also use this feature to cycle through the files in your _Artifacts_.
 
@@ -516,7 +516,7 @@ With artifact processing in `globalPost`, that final step moves inside HyperExec
 
 **Run your tests → HyperExecute collects every task's artifacts → your commands process them → results appear in the dashboard and inbox**
 
-#### Benefits
+### Benefits
 
 - **No external post-processing pipeline:** Merge reports, build summaries, or transform data right after the job, without a separate CI/CD stage.
 - **Terminate your pipeline early:** Because processing runs inside HyperExecute, your outer pipeline can exit as soon as tests are queued (for example, with `--no-track`) and still receive the final report.
@@ -559,7 +559,7 @@ globalPost:
     templatePath: mailtemplates/template.html
 ```
 
-#### Fields
+### Fields
 
 | Field | Required | Description |
 |---|---|---|
@@ -578,7 +578,7 @@ globalPost:
 
 Once your tasks finish, HyperExecute downloads their artifacts to a VM and runs your `commands` in order. Your commands read the downloaded artifacts from one directory and write anything they want uploaded to another. Both locations are exposed as environment variables you can reference in your commands.
 
-#### `ARTIFACTS_DIR` — where the downloaded artifacts live
+### `ARTIFACTS_DIR` — where the downloaded artifacts live
 
 Artifacts from all tasks land under `ARTIFACTS_DIR`, with one top-level folder per task ID. Inside each task folder, the artifacts keep their original upload structure (a folder per artifact name, then the original hierarchy).
 
@@ -599,7 +599,7 @@ $ARTIFACTS_DIR/
 │       └── output.log
 ```
 
-#### `UPLOAD_DIR` — where to place your output
+### `UPLOAD_DIR` — where to place your output
 
 Write anything you want returned to the job into `UPLOAD_DIR`. Everything placed here becomes visible in the job's **Artifacts** section on the HyperExecute dashboard. The folder structure you create is preserved exactly, so even a deep, multi-level layout is uploaded as-is.
 
@@ -623,11 +623,11 @@ If `downloadArtifacts` is enabled but your commands don't write anything to `${U
 
 When `email.to` is configured, HyperExecute sends an email after your `globalPost` commands finish and the results are uploaded. The email includes the job number and dashboard link, the size of the uploaded artifact zip, and a direct download link for the artifacts.
 
-#### Reusing your `uploadArtifacts` email config
+### Reusing your `uploadArtifacts` email config
 
 If you do not specify `email` under `globalPost` but your YAML's [`uploadArtifacts`](/support/docs/hyperexecute-artifacts/) section already has its own email configuration, that configuration is reused automatically for the `globalPost` results. You do not need to repeat it.
 
-#### Disabling email
+### Disabling email
 
 To suppress email entirely, set `disableEmail: true` under `globalPost`. This is useful when you want the processing and upload but not a notification, and it overrides any email configured under `uploadArtifacts`.
 
@@ -643,7 +643,7 @@ globalPost:
   disableEmail: true
 ```
 
-#### Custom email templates
+### Custom email templates
 
 `email.templatePath` points to a custom HTML email template. This is an advanced option — the default template covers most needs. The template is a [Go template](https://pkg.go.dev/text/template) and supports the following variables:
 

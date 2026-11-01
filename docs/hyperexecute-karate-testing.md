@@ -246,7 +246,7 @@ The CLI triggers your tests on HyperExecute. Download the binary for your platfo
 
 `HyperExecute.yaml` in the sample repo tells HyperExecute how to build, discover, and run the suite. The sections below explain each part.
 
-#### Environment and runtime
+### Environment and runtime
 
 Set the OS, Java runtime, and how many sessions run in parallel:
 
@@ -263,7 +263,7 @@ runtime:
   version: 11
 ```
 
-#### Resolve Maven dependencies
+### Resolve Maven dependencies
 
 The `pre` step pulls all Maven dependencies into a local `.m2` directory once, so each runner reuses them for a reproducible build:
 
@@ -274,7 +274,7 @@ pre:
   - mvn -Dmaven.repo.local=./.m2 dependency:resolve
 ```
 
-#### Test runner command
+### Test runner command
 
 `testRunnerCommand` runs one feature file per runner. With `autosplit: true`, HyperExecute passes each discovered `.feature` path in through the `$test` placeholder:
 
@@ -301,7 +301,7 @@ mvn test -Dkarate.options="--tags @smoke"
 
 :::
 
-#### Test discovery
+### Test discovery
 
 `testDiscovery` lists the `.feature` files to run and hands them to the runner. HyperExecute splits this list across the parallel nodes:
 
@@ -320,7 +320,7 @@ testDiscovery:
 - **`--frameWork=java`**: the framework snooper parses for.
 - **`sed 's/:.*//' | uniq`**: trims and de-duplicates snooper's output.
 
-#### How discovery and execution work
+### How discovery and execution work
 
 The discovery command runs first and lists paths to every `.feature` file. HyperExecute saves each path as a test case and passes one at a time to a runner through the `$test` placeholder. Each runner executes its feature in parallel, up to `concurrency`:
 

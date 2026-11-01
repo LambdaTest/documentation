@@ -305,7 +305,7 @@ Download the HyperExecute CLI and copy it into the root folder of the downloaded
 ### Step 3: Configure your hyperexecute.yml file
 The core of HyperExecute configuration lies in the `hyperexecute.yaml` file. Let’s understand how it is constructed, step by step:
 
-#### 1. Define Test Environment and Execution Strategy
+### 1. Define Test Environment and Execution Strategy
 The first step is to define the environment your tests will run on using the runson parameter. You can also configure intelligent parallelization and test exit conditions.
 
 <VerifiedTag value="Verified" />
@@ -318,7 +318,7 @@ concurrency: 1   # Defines the number of test sessions to run concurrently
 scenarioCommandStatusOnly: true
 ```
 
-#### 2. Dependency Resolution with Maven
+### 2. Dependency Resolution with Maven
 Before running the actual performance test, ensure all project dependencies are resolved locally for a reproducible build. This step pulls all required Maven dependencies to a local directory (.m2), ensuring environment consistency.
 
 <VerifiedTag value="Verified" />
@@ -328,7 +328,7 @@ pre:
   - mvn -Dmaven.repo.local=./.m2 dependency:resolve
 ```
 
-#### 3. Configure Test Discovery (Optional)
+### 3. Configure Test Discovery (Optional)
 Test discovery determines what files or test suites should be run. You can customize this to dynamically scan simulation classes.
 
 <VerifiedTag value="Verified" />
@@ -341,7 +341,7 @@ testDiscovery:
 ```
 The `command` is a placeholder here. In advanced setups, you can provide a script to programmatically discover test files.
 
-#### 4. Configure the Test Execution Command
+### 4. Configure the Test Execution Command
 Specify the command that runs your Gatling tests via Maven:
 
 <VerifiedTag value="Verified" />
@@ -350,7 +350,7 @@ Specify the command that runs your Gatling tests via Maven:
 testRunnerCommand: mvn gatling:test
 ```
 
-#### 5. Add Background Services (Optional)
+### 5. Add Background Services (Optional)
 If your test depends on a backend server or application under test, you can spin it up in the background:
 
 <VerifiedTag value="Verified" />
@@ -362,7 +362,7 @@ background:
 
 When `autosplit` is enabled, this command can be intelligently distributed across runners.
 
-#### 6. Upload Test Reports
+### 6. Upload Test Reports
 Once the test completes, use uploadArtefacts to store Gatling reports:
 
 <VerifiedTag value="Verified" />
@@ -376,7 +376,7 @@ uploadArtefacts:
 
 These will be visible in the HyperExecute logs UI after the run.
 
-#### 7. Add Retry Logic (Optional)
+### 7. Add Retry Logic (Optional)
 You can automatically retry failed tests to avoid flakiness.
 
 <VerifiedTag value="Verified" />
@@ -444,7 +444,7 @@ Select your simulation file and click on the **Run** button. A configuration mod
   </TabItem>
 </Tabs>
 
-#### Test Types
+### Test Types
 
 HyperExecute supports three types of performance tests:
 
@@ -454,7 +454,7 @@ HyperExecute supports three types of performance tests:
 | **Stress Test** | Simulate a load peak to find out if your application crashes and recovers | Test system stability under extreme conditions |
 | **Soak Test** | Simulate regular production use and monitor how your application behaves over time | Identify memory leaks and performance degradation |
 
-#### Configuration Parameters
+### Configuration Parameters
 
 Depending on the selected test type, configure the following parameters:
 

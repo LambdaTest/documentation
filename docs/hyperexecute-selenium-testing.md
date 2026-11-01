@@ -128,10 +128,10 @@ Pick your language, then your framework. Clone the matching sample repository (e
 
 ### Java
 
-<Tabs className="docs__val" groupId="sel-java">
+<Tabs className="docs__val" groupId="sel-java" queryString="framework">
 <TabItem value="testng" label="TestNG" default>
 
-#### Running TestNG Framework Tests on HyperExecute
+### Running TestNG Framework Tests on HyperExecute
 
 TestNG is a widely-used testing framework for Java applications, designed to simplify and enhance the testing process for developers. It provides a flexible and powerful platform for running test suites, enabling effective unit testing, integration testing, and end-to-end testing of Java applications.
 
@@ -142,11 +142,11 @@ Execute your **TestNG** framework tests on **HyperExecute** using [YAML 0.2](/su
 - [**Using Local System**](/support/docs/hyperexecute-selenium-testing/#1-testing-using-local-system) - You can use your own local machine to execute tests.
 - [**Using Gitpod Platform**](/support/docs/hyperexecute-selenium-testing/#2-testing-using-gitpod) - Execute tests using GitPod. (Requires a [Gitpod](https://gitpod.io/login/) account)
 
-##### 1. Testing Using Local System
+### 1. Testing Using Local System
 
 Follow the step-by-step guide to execute your test on HyperExecute.
 
-###### Step 1: Configure Your Test Suite
+### Step 1: Configure Your Test Suite
 
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
@@ -175,7 +175,7 @@ capabilities.setCapability("name", "TestMu AI JavaSample");
 
 > You can also use **dev** and **beta** browser versions. To generate capabilities for your test requirements, you can use our inbuilt 🔗 <a href={`${BRAND_URL}/capabilities-generator/`}>Capabilities Generator</a>.
 
-###### Step 2: Configure YAML in your Test Suite
+### Step 2: Configure YAML in your Test Suite
 
 Configure your YAML file as per your use cases using **key value** pairs.
 
@@ -194,7 +194,7 @@ In this sample YAML file, we have mentioned:
 https://github.com/LambdaTest/testng-selenium-hyperexecute-sample/blob/main/yaml/linux/v2/testng_hyperexecute_autosplit_sample.yaml
 ```
 
-###### Step 3: Execute your Test Suite
+### Step 3: Execute your Test Suite
 
 > **NOTE :** In case of MacOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** -> **Security & Privacy** -> **General tab**.
 
@@ -222,19 +222,19 @@ OR use this command if you have not exported your username and access key.
 
 🎉 Congratulations! You've successfully triggered the TestNG tests on HyperExecute. Visit the [HyperExecute Dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status.
 
-###### Step 4: Monitor the Test Execution
+### Step 4: Monitor the Test Execution
 
 Visit the [HyperExecute Dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/testng_autosplit_1.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
-###### Step 5: Download Artifacts and Reports
+### Step 5: Download Artifacts and Reports
 
 HyperExecute also facilitates the provision to download the [Artifacts](/support/docs/hyperexecute-artifacts/) and [Reports](/support/docs/hyperexecute-job-reports/) on your local machine. Click on the corresponding button to download your generated artifacts and reports.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/testng_autosplit_2.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
-##### 2. Testing Using Gitpod
+### 2. Testing Using Gitpod
 
 You can also use the Gitpod platform to execute our sample repository. It will fetch all the sample codebases and trigger the CLI to execute the tests.
 
@@ -263,7 +263,7 @@ Follow the below steps to run Test using Gitpod:
 You can also implement [Secret Keys](/support/docs/hyperexecute-how-to-save-and-manage-secrets/) in your YAML file.
 :::
 
-##### Navigation in Automation Dashboard
+### Navigation in Automation Dashboard
 
 Every test run on the HyperExecute has a unique *jobId* associated with it. Each *jobId* can in turn constitute single (or multiple) *groupId*(s). You can visit [HyperExecute Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build) for checking the status of the test execution.
 
@@ -275,7 +275,7 @@ The snapshot below shows the videos, logs and other meta data for that specific 
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/testng_artifacts_2.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
-#### Using the TestNG Agent Skill with TestMu AI
+### Using the TestNG Agent Skill with TestMu AI
 ***
 
 The [testng-skill](https://github.com/LambdaTest/agent-skills/tree/main/testng-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
@@ -301,7 +301,7 @@ It provides structured guidance for:
 * Debugging patterns
 * CI/CD integration
 
-##### Installing TestNG Agent Skill
+### Installing TestNG Agent Skill
 ***
 
 Install a TestNG Agent Skill using the command below:
@@ -322,7 +322,7 @@ cp -r agent-skills/testng-skill .cursor/skills/
 </TabItem>
 <TabItem value="junit" label="JUnit">
 
-#### Running JUnit Framework Tests on HyperExecute
+### Running JUnit Framework Tests on HyperExecute
 
 JUnit is a widely-used testing framework for Java that is extensively employed in Selenium test automation. It provides annotations and assertions to structure and validate test cases, making it an integral part of the Selenium testing ecosystem.
 
@@ -333,11 +333,11 @@ Execute your **JUnit** framework tests on **HyperExecute** via two different met
 - [**Using Local System**](/support/docs/hyperexecute-selenium-testing/#1-testing-using-local-system) - You can use your own local machine to execute tests.
 - [**Using Gitpod Platform**](/support/docs/hyperexecute-selenium-testing/#2-testing-using-gitpod) - Execute tests using GitPod. (Requires a [Gitpod](https://gitpod.io/login/) account)
 
-##### 1. Testing Using Local System
+### 1. Testing Using Local System
 
 Follow the step-by-step guide to execute your test on HyperExecute.
 
-###### Step 1: Configure Your Test Suite
+### Step 1: Configure Your Test Suite
 
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
@@ -372,7 +372,7 @@ capabilities.setCapability("console", true); # To capture console logs
 
 > You can also use **dev** and **beta** browser versions. To generate capabilities for your test requirements, you can use our inbuilt 🔗 <a href={`${BRAND_URL}/capabilities-generator/`}>Capabilities Generator</a>.
 
-###### Step 2: Configure YAML in your Test Suite
+### Step 2: Configure YAML in your Test Suite
 
 Configure your YAML file as per your use cases using **key value** pairs.
 
@@ -447,7 +447,7 @@ testRunnerCommand: mvn -Dplatname=linux -Dmaven.repo.local=m2_cache_dir -Dtest=$
 jobLabel: [selenium-junit, linux, autosplit]
 ```
 
-###### Step 3: Execute your Test Suite
+### Step 3: Execute your Test Suite
 
 > **NOTE :** In case of MacOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** -> **Security & Privacy** -> **General tab**.
 
@@ -473,19 +473,19 @@ OR use this command if you have not exported your username and access key.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/junit/junit_cmd2.png').default} alt="JUnit HyperExecute Terminal Logs"  width="1920" height="868" className="doc_img"/>
 
-###### Step 4: Monitor the Test Execution
+### Step 4: Monitor the Test Execution
 
 Visit the [HyperExecute Dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/junit/dashboard1.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
-###### Step 5: Download Artifacts and Reports
+### Step 5: Download Artifacts and Reports
 
 HyperExecute also facilitates the provision to download the [Artifacts](/support/docs/hyperexecute-artifacts/) and [Reports](/support/docs/hyperexecute-job-reports/) on your local machine. Click on the corresponding button to download your generated artifacts and reports.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/junit/artefact_report.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
-##### 2. Testing Using Gitpod
+### 2. Testing Using Gitpod
 
 You can also use the Gitpod platform to execute our sample repository. It will fetch all the sample codebases and trigger the CLI to execute the tests.
 
@@ -514,7 +514,7 @@ Follow the below steps to run Test using Gitpod:
 You can also implement [Secret Keys](/support/docs/hyperexecute-how-to-save-and-manage-secrets/) in your YAML file.
 :::
 
-##### Navigation in Automation Dashboard
+### Navigation in Automation Dashboard
 
 Every test run on the HyperExecute has a unique *jobId* associated with it. Each *jobId* can in turn constitute single (or multiple) *groupId*(s). You can visit [HyperExecute Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build) for checking the status of the test execution.
 
@@ -526,7 +526,7 @@ The snapshot below shows the videos, logs and other meta data for that specific 
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/junit/automation.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
-#### Using the JUnit 5 Agent Skill with TestMu AI
+### Using the JUnit 5 Agent Skill with TestMu AI
 ***
 
 The [junit-5-skill](https://github.com/LambdaTest/agent-skills/tree/main/junit-5-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
@@ -552,7 +552,7 @@ It provides structured guidance for:
 * Debugging patterns
 * CI/CD integration
 
-##### Installing JUnit 5 Agent Skill
+### Installing JUnit 5 Agent Skill
 ***
 
 Install a JUnit 5 Agent Skill using the command below:
@@ -573,7 +573,7 @@ cp -r agent-skills/junit-5-skill .cursor/skills/
 </TabItem>
 <TabItem value="cucumber" label="Cucumber">
 
-#### Running Cucumber Framework Tests on HyperExecute
+### Running Cucumber Framework Tests on HyperExecute
 
 Cucumber is a widely-used testing framework for Java applications, designed to simplify and enhance the testing process for developers. It provides a flexible and powerful platform for running test suites, enabling effective unit testing, integration testing, and end-to-end testing of Java applications.
 
@@ -584,11 +584,11 @@ Execute your **Cucumber** framework tests on **HyperExecute** via two different 
 - [**Using Local System**](/support/docs/hyperexecute-selenium-testing/#1-testing-using-local-system) - You can use your own local machine to execute tests.
 - [**Using Gitpod Platform**](/support/docs/hyperexecute-selenium-testing/#2-testing-using-gitpod) - Execute tests using GitPod. (Requires a [Gitpod](https://gitpod.io/login/) account)
 
-##### 1. Testing Using Local System
+### 1. Testing Using Local System
 
 Follow the step-by-step guide to execute your test on HyperExecute.
 
-###### Step 1: Configure Your Test Suite
+### Step 1: Configure Your Test Suite
 
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
@@ -618,7 +618,7 @@ capability.setCapability("build", "Your Build Name");
 
 > You can generate capabilities for your test requirements with the help of our inbuilt 🔗 <a href={`${BRAND_URL}/capabilities-generator/`}>Capabilities Generator</a>.
 
-###### Step 2: Configure YAML in your Test Suite
+### Step 2: Configure YAML in your Test Suite
 
 Configure your YAML file as per your use cases using **key value** pairs.
 
@@ -695,7 +695,7 @@ testRunnerCommand: mvn test -Dplatname=linux -Dmaven.repo.local=m2_cache_dir -Dc
 jobLabel: [selenium-cucumber-java, linux, autosplit]
 ```
 
-###### Step 3: Execute your Test Suite
+### Step 3: Execute your Test Suite
 
 > **NOTE :** In case of MacOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** -> **Security & Privacy** -> **General tab**.
 
@@ -721,19 +721,19 @@ OR use this command if you have not exported your username and access key.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/cmd_2.png').default} alt="JUnit HyperExecute Terminal Logs"  width="1920" height="868" className="doc_img"/>
 
-###### Step 4: Monitor the Test Execution
+### Step 4: Monitor the Test Execution
 
 Visit the [HyperExecute Dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/testng_autosplit_1.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
-###### Step 5: Download Artifacts and Reports
+### Step 5: Download Artifacts and Reports
 
 HyperExecute also facilitates the provision to download the [Artifacts](/support/docs/hyperexecute-artifacts/) and [Reports](/support/docs/hyperexecute-job-reports/) on your local machine. Click on the corresponding button to download your generated artifacts and reports.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/testng_autosplit_2.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
-##### 2. Testing Using Gitpod
+### 2. Testing Using Gitpod
 
 You can also use the Gitpod platform to execute our sample repository. It will fetch all the sample codebases and trigger the CLI to execute the tests.
 
@@ -762,7 +762,7 @@ Follow the below steps to run Test using Gitpod:
 You can also implement [Secret Keys](/support/docs/hyperexecute-how-to-save-and-manage-secrets/) in your YAML file.
 :::
 
-##### Navigation in Automation Dashboard
+### Navigation in Automation Dashboard
 
 Every test run on the HyperExecute has a unique *jobId* associated with it. Each *jobId* can in turn constitute single (or multiple) *groupId*(s). You can visit [HyperExecute Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build) for checking the status of the test execution.
 
@@ -774,7 +774,7 @@ The snapshot below shows the videos, logs and other meta data for that specific 
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/testng_artifacts_2.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
-#### Using the Cucumber Agent Skill with TestMu AI
+### Using the Cucumber Agent Skill with TestMu AI
 ***
 
 The [cucumber-skill](https://github.com/LambdaTest/agent-skills/tree/main/cucumber-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
@@ -800,7 +800,7 @@ It provides structured guidance for:
 * Debugging patterns
 * CI/CD integration
 
-##### Installing Cucumber Agent Skill
+### Installing Cucumber Agent Skill
 ***
 
 Install a Cucumber Agent Skill using the command below:
@@ -823,10 +823,10 @@ cp -r agent-skills/cucumber-skill .cursor/skills/
 
 ### Python
 
-<Tabs className="docs__val" groupId="sel-python">
+<Tabs className="docs__val" groupId="sel-python" queryString="framework">
 <TabItem value="pytest" label="PyTest" default>
 
-#### Running PyTest Framework Tests on HyperExecute
+### Running PyTest Framework Tests on HyperExecute
 
 PyTest is a testing framework for Python that is widely used with Selenium for automated testing. Known for its simplicity and powerful features, Pytest allows efficient test organization, parameterization, and fixtures.
 
@@ -837,11 +837,11 @@ Run your **PyTest** framework tests on **HyperExecute** via two methods:
 - [**Using Local System**](/support/docs/hyperexecute-selenium-testing/#python) - You can use your own local machine to execute tests.
 - [**Using Gitpod Platform**](/support/docs/hyperexecute-selenium-testing/#python) -  Execute tests using GitPod. (Requires a [Gitpod](https://gitpod.io/login/) account)
 
-##### 1. Testing Using Local System
+### 1. Testing Using Local System
 
 Follow the step-by-step guide to execute your test on HyperExecute.
 
-##### Step 1: Configure Your Test Suite
+### Step 1: Configure Your Test Suite
 
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
@@ -872,11 +872,11 @@ capabilities = {
 
 > You can also use **dev** and **beta** browser versions. To generate capabilities for your test requirements, you can use our inbuilt 🔗 <a href={`${BRAND_URL}/capabilities-generator/`}>Capabilities Generator</a>.
 
-##### Step 2: Setup the CLI in your Test Suite
+### Step 2: Setup the CLI in your Test Suite
 
 After cloning / downloading the sample repo, you need to setup the CLI and the environment variables as described in the page-level prerequisites.
 
-##### Step 3: Configure YAML in your Test Suite
+### Step 3: Configure YAML in your Test Suite
 
 Configure your YAML file as per your use cases using **key value** pairs.
 
@@ -945,7 +945,7 @@ testRunnerCommand: pytest -s  --verbose --html=reports/report.html $test
 jobLabel: [selenium-pytest, linux, autosplit]
 ```
 
-##### Step 4: Execute your Test Suite
+### Step 4: Execute your Test Suite
 
 > **NOTE :** In case of MacOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
 
@@ -971,19 +971,19 @@ OR use this command if you have not exported your username and access key in the
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/cmd_2.png').default} alt="JUnit HyperExecute Terminal Logs"  width="1920" height="868" className="doc_img"/>
 
-##### Step 5: Monitor the Test Execution
+### Step 5: Monitor the Test Execution
 
 Visit the [HyperExecute Dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status. 
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/testng_autosplit_1.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
-##### Step 6: Download Artifacts and Reports
+### Step 6: Download Artifacts and Reports
 
 HyperExecute also facilitates the provision to download the [Artifacts](/support/docs/hyperexecute-artifacts/) and [Reports](/support/docs/hyperexecute-job-reports/) on your local machine. Click on the corresponding button to download your generated artifacts and reports.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/testng_autosplit_2.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
-##### 2. Testing Using Gitpod
+### 2. Testing Using Gitpod
 
 You can also use the Gitpod platform to execute our sample repository. It will fetch all the sample codebases and trigger the CLI to execute the tests.
 
@@ -1012,7 +1012,7 @@ Follow the below steps to run Test using Gitpod:
 You can also implement [Secret Keys](/support/docs/hyperexecute-how-to-save-and-manage-secrets/) in your YAML file.
 :::
 
-##### Navigation in Automation Dashboard
+### Navigation in Automation Dashboard
 
 Every test run on the HyperExecute has a unique *jobId* associated with it. Each *jobId* can in turn constitute single (or multiple) *groupId*(s). You can visit [HyperExecute Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build) for checking the status of the test execution.
 
@@ -1027,7 +1027,7 @@ The snapshot below shows the videos, logs and other meta data for that specific 
 > For any query or doubt, please feel free to contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@testmuai.com**.<br />
 Happy testing!
 
-#### Using the Pytest Agent Skill with TestMu AI
+### Using the Pytest Agent Skill with TestMu AI
 ***
 
 The [pytest-skill](https://github.com/LambdaTest/agent-skills/tree/main/pytest-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
@@ -1053,7 +1053,7 @@ It provides structured guidance for:
 * Debugging patterns
 * CI/CD integration
 
-##### Installing Pytest Agent Skill
+### Installing Pytest Agent Skill
 ***
 
 Install a Pytest Agent Skill using the command below:
@@ -1074,7 +1074,7 @@ cp -r agent-skills/pytest-skill .cursor/skills/
 </TabItem>
 <TabItem value="pyunit" label="PyUnit">
 
-#### Running PyUnit Framework Tests on HyperExecute
+### Running PyUnit Framework Tests on HyperExecute
 
 PyUnit, also known as unittest, is a testing framework in Python that is commonly used with Selenium for automated testing. It provides a structure for organizing and executing test cases, along with features like test fixtures, assertions, and test discovery.
 
@@ -1085,11 +1085,11 @@ Run your **PyUnit** framework tests on **HyperExecute** via two methods:
 - [**Using Local System**](/support/docs/hyperexecute-selenium-testing/#python) - You can use your own local machine to execute tests.
 - [**Using Gitpod Platform**](/support/docs/hyperexecute-selenium-testing/#python) -  Execute tests using GitPod. (Requires a [Gitpod](https://gitpod.io/login/) account)
 
-##### 1. Testing Using Local System
+### 1. Testing Using Local System
 
 Follow the step-by-step guide to execute your test on HyperExecute.
 
-##### Step 1: Configure Your Test Suite
+### Step 1: Configure Your Test Suite
 
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
@@ -1121,11 +1121,11 @@ capabilities = {
 
 > You can also use **dev** and **beta** browser versions. To generate capabilities for your test requirements, you can use our inbuilt 🔗 <a href={`${BRAND_URL}/capabilities-generator/`}>Capabilities Generator</a>.
 
-##### Step 2: Setup the CLI in your Test Suite
+### Step 2: Setup the CLI in your Test Suite
 
 After cloning / downloading the sample repo, you need to setup the CLI and the environment variables as described in the page-level prerequisites.
 
-##### Step 3: Configure YAML in your Test Suite
+### Step 3: Configure YAML in your Test Suite
 
 Configure your YAML file as per your use cases using **key value** pairs.
 
@@ -1190,7 +1190,7 @@ testRunnerCommand: python3 $test
 jobLabel: [selenium-pyunit, linux, autosplit]
 ```
 
-##### Step 4: Execute your Test Suite
+### Step 4: Execute your Test Suite
 
 > **NOTE :** In case of MacOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
 
@@ -1216,19 +1216,19 @@ OR use this command if you have not exported your username and access key in the
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/cmd_2.png').default} alt="JUnit HyperExecute Terminal Logs"  width="1920" height="868" className="doc_img"/>
 
-##### Step 5: Monitor the Test Execution
+### Step 5: Monitor the Test Execution
 
 Visit the [HyperExecute Dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status. 
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/testng_autosplit_1.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
-##### Step 6: Download Artifacts and Reports
+### Step 6: Download Artifacts and Reports
 
 HyperExecute also facilitates the provision to download the [Artifacts](/support/docs/hyperexecute-artifacts/) and [Reports](/support/docs/hyperexecute-job-reports/) on your local machine. Click on the corresponding button to download your generated artifacts and reports.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/testng_autosplit_2.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
-##### 2. Testing Using Gitpod
+### 2. Testing Using Gitpod
 
 You can also use the Gitpod platform to execute our sample repository. It will fetch all the sample codebases and trigger the CLI to execute the tests.
 
@@ -1257,7 +1257,7 @@ Follow the below steps to run Test using Gitpod:
 You can also implement [Secret Keys](/support/docs/hyperexecute-how-to-save-and-manage-secrets/) in your YAML file.
 :::
 
-##### Navigation in Automation Dashboard
+### Navigation in Automation Dashboard
 
 Every test run on the HyperExecute has a unique *jobId* associated with it. Each *jobId* can in turn constitute single (or multiple) *groupId*(s). You can visit [HyperExecute Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build) for checking the status of the test execution.
 
@@ -1275,7 +1275,7 @@ Happy testing!
 </TabItem>
 <TabItem value="behave" label="Behave">
 
-#### Running Behave Framework Tests on HyperExecute
+### Running Behave Framework Tests on HyperExecute
 
 Behave is a behavior-driven development (BDD) framework for Python that is commonly used with Selenium for automated testing. It allows teams to write test scenarios in a natural language format using Gherkin syntax.
 
@@ -1286,11 +1286,11 @@ Run your **Behave** framework tests on **HyperExecute** via two methods:
 - [**Using Local System**](/support/docs/hyperexecute-selenium-testing/#python) - You can use your own local machine to execute tests.
 - [**Using Gitpod Platform**](/support/docs/hyperexecute-selenium-testing/#python) -  Execute tests using GitPod. (Requires a [Gitpod](https://gitpod.io/login/) account)
 
-##### 1. Testing Using Local System
+### 1. Testing Using Local System
 
 Follow the step-by-step guide to execute your test on HyperExecute.
 
-##### Step 1: Configure Your Test Suite
+### Step 1: Configure Your Test Suite
 
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
@@ -1324,11 +1324,11 @@ Configure the desired capabilities based on your test requirements. For example:
 
 > You can also use **dev** and **beta** browser versions. To generate capabilities for your test requirements, you can use our inbuilt 🔗 <a href={`${BRAND_URL}/capabilities-generator/`}>Capabilities Generator</a>.
 
-##### Step 2: Setup the CLI in your Test Suite
+### Step 2: Setup the CLI in your Test Suite
 
 After cloning / downloading the sample repo, you need to setup the CLI and the environment variables as described in the page-level prerequisites.
 
-##### Step 3: Configure YAML in your Test Suite
+### Step 3: Configure YAML in your Test Suite
 
 Configure your YAML file as per your use cases using **key value** pairs.
 
@@ -1397,7 +1397,7 @@ testRunnerCommand: behave -f json.pretty -o reports/test_report.json $test
 jobLabel: [selenium-behave, linux, autosplit]
 ```
 
-##### Step 4: Execute your Test Suite
+### Step 4: Execute your Test Suite
 
 > **NOTE :** In case of MacOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
 
@@ -1423,19 +1423,19 @@ OR use this command if you have not exported your username and access key in the
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/cmd_2.png').default} alt="JUnit HyperExecute Terminal Logs"  width="1920" height="868" className="doc_img"/>
 
-##### Step 5: Monitor the Test Execution
+### Step 5: Monitor the Test Execution
 
 Visit the [HyperExecute Dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status. 
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/testng_autosplit_1.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
-##### Step 6: Download Artifacts and Reports
+### Step 6: Download Artifacts and Reports
 
 HyperExecute also facilitates the provision to download the [Artifacts](/support/docs/hyperexecute-artifacts/) and [Reports](/support/docs/hyperexecute-job-reports/) on your local machine. Click on the corresponding button to download your generated artifacts and reports.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/testng_autosplit_2.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
-##### 2. Testing Using Gitpod
+### 2. Testing Using Gitpod
 
 You can also use the Gitpod platform to execute our sample repository. It will fetch all the sample codebases and trigger the CLI to execute the tests.
 
@@ -1464,7 +1464,7 @@ Follow the below steps to run Test using Gitpod:
 You can also implement [Secret Keys](/support/docs/hyperexecute-how-to-save-and-manage-secrets/) in your YAML file.
 :::
 
-##### Navigation in Automation Dashboard
+### Navigation in Automation Dashboard
 
 Every test run on the HyperExecute has a unique *jobId* associated with it. Each *jobId* can in turn constitute single (or multiple) *groupId*(s). You can visit [HyperExecute Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build) for checking the status of the test execution.
 
@@ -1478,7 +1478,7 @@ The snapshot below shows the videos, logs and other meta data for that specific 
 
 > For any query or doubt, please feel free to contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@testmuai.com**.<br />
 
-#### Using the Behave Agent Skill with TestMu AI
+### Using the Behave Agent Skill with TestMu AI
 ***
 
 The [behave-skill](https://github.com/LambdaTest/agent-skills/tree/main/behave-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
@@ -1504,7 +1504,7 @@ It provides structured guidance for:
 * Debugging patterns
 * CI/CD integration
 
-##### Installing Behave Agent Skill
+### Installing Behave Agent Skill
 ***
 
 Install a Behave Agent Skill using the command below:
@@ -1525,7 +1525,7 @@ cp -r agent-skills/behave-skill .cursor/skills/
 </TabItem>
 <TabItem value="robot" label="Robot">
 
-#### Running Robot Framework Tests on HyperExecute
+### Running Robot Framework Tests on HyperExecute
 
 Robot Framework is a powerful open-source automation framework for Selenium that supports keyword-driven and behavior-driven development. With an easy-to-read syntax and a rich set of libraries, it simplifies the creation and execution of Selenium test scripts. 
 
@@ -1540,11 +1540,11 @@ Run your **Robot** framework tests on **HyperExecute** via two methods:
 Testing a mainframe terminal with Robot Framework? See [Mainframe Testing with HyperExecute](/support/docs/mainframe-testing-with-hyperexecute/) for a suite that installs the `s3270`/`x3270` emulators, runs mock hosts as background services, and records the `x3270` GUI.
 :::
 
-##### 1. Testing Using Local System
+### 1. Testing Using Local System
 
 Follow the step-by-step guide to execute your test on HyperExecute.
 
-##### Step 1: Configure Your Test Suite
+### Step 1: Configure Your Test Suite
 
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
@@ -1564,11 +1564,11 @@ By setting up the Hub endpoint, you establish the communication channel between 
 
 > You can also use **dev** and **beta** browser versions. To generate capabilities for your test requirements, you can use our inbuilt 🔗 <a href={`${BRAND_URL}/capabilities-generator/`}>Capabilities Generator</a>.
 
-##### Step 2: Setup the CLI in your Test Suite
+### Step 2: Setup the CLI in your Test Suite
 
 After cloning / downloading the sample repo, you need to setup the CLI and the environment variables as described in the page-level prerequisites.
 
-##### Step 3: Configure YAML in your Test Suite
+### Step 3: Configure YAML in your Test Suite
 
 Configure your YAML file as per your use cases using **key value** pairs.
 
@@ -1642,7 +1642,7 @@ testRunnerCommand: make $test
 jobLabel: [selenium-robot, linux, autosplit]
 ```
 
-##### Step 4: Execute your Test Suite
+### Step 4: Execute your Test Suite
 
 > **NOTE :** In case of MacOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
 
@@ -1668,19 +1668,19 @@ OR use this command if you have not exported your username and access key in the
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/cmd_2.png').default} alt="JUnit HyperExecute Terminal Logs"  width="1920" height="868" className="doc_img"/>
 
-##### Step 5: Monitor the Test Execution
+### Step 5: Monitor the Test Execution
 
 Visit the [HyperExecute Dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status. 
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/testng_autosplit_1.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
-##### Step 6: Download Artifacts and Reports
+### Step 6: Download Artifacts and Reports
 
 HyperExecute also facilitates the provision to download the [Artifacts](/support/docs/hyperexecute-artifacts/) and [Reports](/support/docs/hyperexecute-job-reports/) on your local machine. Click on the corresponding button to download your generated artifacts and reports.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/testng_autosplit_2.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
-##### 2. Testing Using Gitpod
+### 2. Testing Using Gitpod
 
 You can also use the Gitpod platform to execute our sample repository. It will fetch all the sample codebases and trigger the CLI to execute the tests.
 
@@ -1709,7 +1709,7 @@ Follow the below steps to run Test using Gitpod:
 You can also implement [Secret Keys](/support/docs/hyperexecute-how-to-save-and-manage-secrets/) in your YAML file.
 :::
 
-##### Navigation in Automation Dashboard
+### Navigation in Automation Dashboard
 
 Every test run on the HyperExecute has a unique *jobId* associated with it. Each *jobId* can in turn constitute single (or multiple) *groupId*(s). You can visit [HyperExecute Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build) for checking the status of the test execution.
 
@@ -1724,7 +1724,7 @@ The snapshot below shows the videos, logs and other meta data for that specific 
 > For any query or doubt, please feel free to contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@testmuai.com**.<br />
 Happy testing!
 
-#### Using the Robot Framework Agent Skill with TestMu AI
+### Using the Robot Framework Agent Skill with TestMu AI
 ***
 
 The [robot-framework-skill](https://github.com/LambdaTest/agent-skills/tree/main/robot-framework-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
@@ -1750,7 +1750,7 @@ It provides structured guidance for:
 * Debugging patterns
 * CI/CD integration
 
-##### Installing Robot Framework Agent Skill
+### Installing Robot Framework Agent Skill
 ***
 
 Install a Robot Framework Agent Skill using the command below:
@@ -1773,10 +1773,10 @@ cp -r agent-skills/robot-framework-skill .cursor/skills/
 
 ### C#
 
-<Tabs className="docs__val" groupId="sel-csharp">
+<Tabs className="docs__val" groupId="sel-csharp" queryString="framework">
 <TabItem value="nunit" label="NUnit" default>
 
-#### Running NUnit Framework Tests on HyperExecute
+### Running NUnit Framework Tests on HyperExecute
 
 NUnit is a testing framework for .NET languages, commonly used with Selenium for automated testing. It provides a structure for organizing and executing tests, supporting features like test fixtures, assertions, and setup/teardown methods.
 
@@ -1785,11 +1785,11 @@ Run your **NUnit** framework tests on **HyperExecute** via two methods:
 - [**Using Local System**](/support/docs/hyperexecute-selenium-testing/#c) - You can use your own local machine to execute tests.
 - [**Using Gitpod Platform**](/support/docs/hyperexecute-selenium-testing/#c) -  Execute tests using GitPod. (Requires a [Gitpod](https://gitpod.io/login/) account)
 
-##### 1. Testing Using Local System
+### 1. Testing Using Local System
 
 Follow the step-by-step guide to execute your test on HyperExecute.
 
-###### Step 1: Configure Your Test Suite
+### Step 1: Configure Your Test Suite
 
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
@@ -1818,11 +1818,11 @@ capabilities.SetCapability(CapabilityType.Platform, "Windows 10");
 
 > You can also use **dev** and **beta** browser versions. To generate capabilities for your test requirements, you can use our inbuilt 🔗 <a href={`${BRAND_URL}/capabilities-generator/`}>Capabilities Generator</a>.
 
-###### Step 2: Setup the CLI in your Test Suite
+### Step 2: Setup the CLI in your Test Suite
 
 After cloning / downloading the sample repo, you need to setup the CLI and the environment variables as described in the common steps above.
 
-###### Step 3: Configure YAML in your Test Suite
+### Step 3: Configure YAML in your Test Suite
 
 Configure your YAML file as per your use cases using **key value** pairs.
 
@@ -1891,7 +1891,7 @@ testRunnerCommand: dotnet test $solution --filter TestCategory=$test
 jobLabel: [selenium-Nunit, linux, autosplit]
 ```
 
-###### Step 4: Execute your Test Suite
+### Step 4: Execute your Test Suite
 
 > **NOTE :** In case of MacOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
 
@@ -1917,19 +1917,19 @@ OR use this command if you have not exported your username and access key in the
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/cmd_2.png').default} alt="JUnit HyperExecute Terminal Logs"  width="1920" height="868" className="doc_img"/>
 
-###### Step 5: Monitor the Test Execution
+### Step 5: Monitor the Test Execution
 
 Visit the [HyperExecute Dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status. 
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/testng_autosplit_1.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
-###### Step 6: Download Artifacts and Reports
+### Step 6: Download Artifacts and Reports
 
 HyperExecute also facilitates the provision to download the [Artifacts](/support/docs/hyperexecute-artifacts/) and [Reports](/support/docs/hyperexecute-job-reports/) on your local machine. Click on the corresponding button to download your generated artifacts and reports.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/testng_autosplit_2.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
-##### 2. Testing Using Gitpod
+### 2. Testing Using Gitpod
 
 You can also use the Gitpod platform to execute our sample repository. It will fetch all the sample codebases and trigger the CLI to execute the tests.
 
@@ -1958,7 +1958,7 @@ Follow the below steps to run Test using Gitpod:
 You can also implement [Secret Keys](/support/docs/hyperexecute-how-to-save-and-manage-secrets/) in your YAML file.
 :::
 
-##### Navigation in Automation Dashboard
+### Navigation in Automation Dashboard
 
 Every test run on the HyperExecute has a unique *jobId* associated with it. Each *jobId* can in turn constitute single (or multiple) *groupId*(s). You can visit [HyperExecute Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build) for checking the status of the test execution.
 
@@ -1970,7 +1970,7 @@ The snapshot below shows the videos, logs and other meta data for that specific 
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/testng_artifacts_2.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
-#### Using the NUnit Agent Skill with TestMu AI
+### Using the NUnit Agent Skill with TestMu AI
 ***
 
 The [nunit-skill](https://github.com/LambdaTest/agent-skills/tree/main/nunit-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
@@ -1996,7 +1996,7 @@ It provides structured guidance for:
 * Debugging patterns
 * CI/CD integration
 
-##### Installing NUnit Agent Skill
+### Installing NUnit Agent Skill
 ***
 
 Install a NUnit Agent Skill using the command below:
@@ -2017,7 +2017,7 @@ cp -r agent-skills/nunit-skill .cursor/skills/
 </TabItem>
 <TabItem value="specflow" label="SpecFlow">
 
-#### Running SpecFlow Framework Tests on HyperExecute
+### Running SpecFlow Framework Tests on HyperExecute
 
 SpecFlow is a behavior-driven development (BDD) framework for .NET languages, often used with Selenium for automated testing. It enables collaboration between technical and non-technical team members by expressing tests in natural language. 
 
@@ -2026,11 +2026,11 @@ Run your **Specflow** framework tests on **HyperExecute** via two methods:
 - [**Using Local System**](/support/docs/hyperexecute-selenium-testing/#c) - You can use your own local machine to execute tests.
 - [**Using Gitpod Platform**](/support/docs/hyperexecute-selenium-testing/#c) -  Execute tests using GitPod. (Requires a [Gitpod](https://gitpod.io/login/) account)
 
-##### 1. Testing Using Local System
+### 1. Testing Using Local System
 
 Follow the step-by-step guide to execute your test on HyperExecute.
 
-###### Step 1: Configure Your Test Suite
+### Step 1: Configure Your Test Suite
 
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
@@ -2059,11 +2059,11 @@ capabilities.SetCapability(CapabilityType.Platform, "Windows 10");
 
 > You can also use **dev** and **beta** browser versions. To generate capabilities for your test requirements, you can use our inbuilt 🔗 <a href={`${BRAND_URL}/capabilities-generator/`}>Capabilities Generator</a>.
 
-###### Step 2: Setup the CLI in your Test Suite
+### Step 2: Setup the CLI in your Test Suite
 
 After cloning / downloading the sample repo, you need to setup the CLI and the environment variables as described in the common steps above.
 
-###### Step 3: Configure YAML in your Test Suite
+### Step 3: Configure YAML in your Test Suite
 
 Configure your YAML file as per your use cases using **key value** pairs.
 
@@ -2142,7 +2142,7 @@ testRunnerCommand: dotnet test --filter "(Category=$test)"
 jobLabel: [selenium-specflow, linux, autosplit]
 ```
 
-###### Step 4: Execute your Test Suite
+### Step 4: Execute your Test Suite
 
 > **NOTE :** In case of MacOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
 
@@ -2168,19 +2168,19 @@ OR use this command if you have not exported your username and access key in the
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/cmd_2.png').default} alt="JUnit HyperExecute Terminal Logs"  width="1920" height="868" className="doc_img"/>
 
-###### Step 5: Monitor the Test Execution
+### Step 5: Monitor the Test Execution
 
 Visit the [HyperExecute Dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status. 
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/testng_autosplit_1.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
-###### Step 6: Download Artifacts and Reports
+### Step 6: Download Artifacts and Reports
 
 HyperExecute also facilitates the provision to download the [Artifacts](/support/docs/hyperexecute-artifacts/) and [Reports](/support/docs/hyperexecute-job-reports/) on your local machine. Click on the corresponding button to download your generated artifacts and reports.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/testng_autosplit_2.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
-##### 2. Testing Using Gitpod
+### 2. Testing Using Gitpod
 
 You can also use the Gitpod platform to execute our sample repository. It will fetch all the sample codebases and trigger the CLI to execute the tests.
 
@@ -2209,7 +2209,7 @@ Follow the below steps to run Test using Gitpod:
 You can also implement [Secret Keys](/support/docs/hyperexecute-how-to-save-and-manage-secrets/) in your YAML file.
 :::
 
-##### Navigation in Automation Dashboard
+### Navigation in Automation Dashboard
 
 Every test run on the HyperExecute has a unique *jobId* associated with it. Each *jobId* can in turn constitute single (or multiple) *groupId*(s). You can visit [HyperExecute Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build) for checking the status of the test execution.
 
@@ -2221,7 +2221,7 @@ The snapshot below shows the videos, logs and other meta data for that specific 
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/testng_artifacts_2.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
-#### Using the SpecFlow Agent Skill with TestMu AI
+### Using the SpecFlow Agent Skill with TestMu AI
 ***
 
 The [specflow-skill](https://github.com/LambdaTest/agent-skills/tree/main/specflow-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
@@ -2247,7 +2247,7 @@ It provides structured guidance for:
 * Debugging patterns
 * CI/CD integration
 
-##### Installing SpecFlow Agent Skill
+### Installing SpecFlow Agent Skill
 ***
 
 Install a SpecFlow Agent Skill using the command below:
@@ -2268,7 +2268,7 @@ cp -r agent-skills/specflow-skill .cursor/skills/
 </TabItem>
 <TabItem value="reqnroll" label="Reqnroll">
 
-#### Running Reqnroll Framework Tests on HyperExecute
+### Running Reqnroll Framework Tests on HyperExecute
 
 Reqnroll is an open-source behavior-driven development (BDD) framework for .NET, the successor to SpecFlow. It allows you to define test scenarios in plain language using Gherkin syntax, making collaboration between technical and non-technical team members seamless.
 
@@ -2277,11 +2277,11 @@ Run your **Reqnroll** framework tests on **HyperExecute** via two methods:
 - [**Using Local System**](/support/docs/hyperexecute-selenium-testing/#c) - You can use your own local machine to execute tests.
 - [**Using Gitpod Platform**](/support/docs/hyperexecute-selenium-testing/#c) -  Execute tests using GitPod. (Requires a [Gitpod](https://gitpod.io/login/) account)
 
-##### Testing Using Local System
+### Testing Using Local System
 
 Follow the step-by-step guide to execute your test on HyperExecute.
 
-###### Step 1: Configure Your Test Suite
+### Step 1: Configure Your Test Suite
 
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
@@ -2310,11 +2310,11 @@ capabilities.SetCapability(CapabilityType.Platform, "Windows 10");
 
 > You can also use **dev** and **beta** browser versions. To generate capabilities for your test requirements, you can use our inbuilt 🔗 <a href={`${BRAND_URL}/capabilities-generator/`}>Capabilities Generator</a>.
 
-###### Step 2: Setup the CLI in your Test Suite
+### Step 2: Setup the CLI in your Test Suite
 
 After cloning / downloading the sample repo, you need to setup the CLI and the environment variables as described in the common steps above.
 
-###### Step 3: Configure YAML in your Test Suite
+### Step 3: Configure YAML in your Test Suite
 
 Configure your YAML file as per your use cases using **key value** pairs.
 
@@ -2381,7 +2381,7 @@ testRunnerCommand: dotnet test --logger "console;verbosity=detailed" --filter "(
 jobLabel: [selenium-reqnroll, linux, autosplit]
 ```
 
-###### Step 4: Execute your Test Suite
+### Step 4: Execute your Test Suite
 
 > **NOTE :** In case of MacOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
 
@@ -2403,7 +2403,7 @@ OR use this command if you have not exported your username and access key in the
   </CodeBlock>
 </div>
 
-###### Step 5: Monitor the Test Execution
+### Step 5: Monitor the Test Execution
 
 Visit the [HyperExecute Dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status.
 
@@ -2411,7 +2411,7 @@ Every test run on the HyperExecute has a unique *jobId* associated with it. Each
 
 You can seamlessly navigate between JobId's and taskId's. You need to click on the *testID* to navigate from the HyperExecute logs to the Automation Dashboard.
 
-###### Step 6: Download Artifacts and Reports
+### Step 6: Download Artifacts and Reports
 
 HyperExecute also facilitates the provision to download the [Artifacts](/support/docs/hyperexecute-artifacts/) and [Reports](/support/docs/hyperexecute-job-reports/) on your local machine. Click on the corresponding button to download your generated artifacts and reports.
 
@@ -2420,10 +2420,10 @@ HyperExecute also facilitates the provision to download the [Artifacts](/support
 
 ### Ruby
 
-<Tabs className="docs__val" groupId="sel-ruby">
+<Tabs className="docs__val" groupId="sel-ruby" queryString="framework">
 <TabItem value="ruby" label="Ruby" default>
 
-#### Running Ruby Framework Tests on HyperExecute
+### Running Ruby Framework Tests on HyperExecute
 
 RSpec is a behavior-driven development (BDD) framework for Ruby commonly used in conjunction with Selenium for automated testing. It facilitates expressive and readable specifications, making it easier to define and manage Selenium test cases. RSpec supports a variety of assertions and provides powerful reporting tools, enhancing the efficiency and clarity of Selenium test scripts written in Ruby.
 
@@ -2434,11 +2434,11 @@ Run your **RSpec** framework tests on **HyperExecute** via two methods:
 - [**Using Local System**](/support/docs/hyperexecute-selenium-testing/#ruby) - You can use your own local machine to execute tests.
 - [**Using Gitpod Platform**](/support/docs/hyperexecute-selenium-testing/#ruby) -  Execute tests using GitPod. (Requires a [Gitpod](https://gitpod.io/login/) account)
 
-##### 1. Testing Using Local System
+### 1. Testing Using Local System
 
 Follow the step-by-step guide to execute your test on HyperExecute.
 
-###### Step 1: Configure Your Test Suite
+### Step 1: Configure Your Test Suite
 
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
@@ -2456,11 +2456,11 @@ By setting up the Hub endpoint, you establish the communication channel between 
 
 > You can also use **dev** and **beta** browser versions. To generate capabilities for your test requirements, you can use our inbuilt 🔗 <a href={`${BRAND_URL}/capabilities-generator/`}>Capabilities Generator</a>.
 
-###### Step 2: Setup the CLI in your Test Suite
+### Step 2: Setup the CLI in your Test Suite
 
 After cloning / downloading the sample repo, you need to setup the CLI and the environment variables.
 
-###### Step 3: Configure YAML in your Test Suite
+### Step 3: Configure YAML in your Test Suite
 
 Configure your YAML file as per your use cases using **key value** pairs.
 
@@ -2520,7 +2520,7 @@ partialReports:
 jobLabel: [selenium-Rspec, linux, autosplit]
 ```
 
-###### Step 4: Execute your Test Suite
+### Step 4: Execute your Test Suite
 
 > **NOTE :** In case of MacOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
 
@@ -2546,19 +2546,19 @@ OR use this command if you have not exported your username and access key in the
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/cmd_2.png').default} alt="JUnit HyperExecute Terminal Logs"  width="1920" height="868" className="doc_img"/>
 
-###### Step 5: Monitor the Test Execution
+### Step 5: Monitor the Test Execution
 
 Visit the [HyperExecute Dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/testng_autosplit_1.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
-###### Step 6: Download Artifacts and Reports
+### Step 6: Download Artifacts and Reports
 
 HyperExecute also facilitates the provision to download the [Artifacts](/support/docs/hyperexecute-artifacts/) and [Reports](/support/docs/hyperexecute-job-reports/) on your local machine. Click on the corresponding button to download your generated artifacts and reports.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/testng_autosplit_2.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
-##### 2. Testing Using Gitpod
+### 2. Testing Using Gitpod
 
 You can also use the Gitpod platform to execute our sample repository. It will fetch all the sample codebases and trigger the CLI to execute the tests.
 
@@ -2587,7 +2587,7 @@ Follow the below steps to run Test using Gitpod:
 You can also implement [Secret Keys](/support/docs/hyperexecute-how-to-save-and-manage-secrets/) in your YAML file.
 :::
 
-##### Navigation in Automation Dashboard
+### Navigation in Automation Dashboard
 
 Every test run on the HyperExecute has a unique *jobId* associated with it. Each *jobId* can in turn constitute single (or multiple) *groupId*(s). You can visit [HyperExecute Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build) for checking the status of the test execution.
 
@@ -2602,7 +2602,7 @@ The snapshot below shows the videos, logs and other meta data for that specific 
 </TabItem>
 <TabItem value="capybara" label="Capybara">
 
-#### Running Capybara Framework Tests on HyperExecute
+### Running Capybara Framework Tests on HyperExecute
 
 Capybara is a Ruby-based testing framework commonly used with Selenium for end-to-end web application testing. It provides a clean and expressive DSL (Domain-Specific Language) for interacting with web pages and handling common browser interactions.
 
@@ -2613,11 +2613,11 @@ Run your **Capybara** framework tests on **HyperExecute** via two methods:
 - [**Using Local System**](/support/docs/hyperexecute-selenium-testing/#ruby) - You can use your own local machine to execute tests.
 - [**Using Gitpod Platform**](/support/docs/hyperexecute-selenium-testing/#ruby) -  Execute tests using GitPod. (Requires a [Gitpod](https://gitpod.io/login/) account)
 
-##### 1. Testing Using Local System
+### 1. Testing Using Local System
 
 Follow the step-by-step guide to execute your test on HyperExecute.
 
-###### Step 1: Configure Your Test Suite
+### Step 1: Configure Your Test Suite
 
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
@@ -2654,11 +2654,11 @@ Configure the desired capabilities based on your test requirements. For example:
 
 > You can also use **dev** and **beta** browser versions. To generate capabilities for your test requirements, you can use our inbuilt 🔗 <a href={`${BRAND_URL}/capabilities-generator/`}>Capabilities Generator</a>.
 
-###### Step 2: Setup the CLI in your Test Suite
+### Step 2: Setup the CLI in your Test Suite
 
 After cloning / downloading the sample repo, you need to setup the CLI and the environment variables.
 
-###### Step 3: Configure YAML in your Test Suite
+### Step 3: Configure YAML in your Test Suite
 
 Configure your YAML file as per your use cases using **key value** pairs.
 
@@ -2720,7 +2720,7 @@ testRunnerCommand: bundle exec cucumber "$test" --format html --out cucumber_res
 jobLabel: [selenium-capybara, linux, autosplit]
 ```
 
-###### Step 4: Execute your Test Suite
+### Step 4: Execute your Test Suite
 
 > **NOTE :** In case of MacOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
 
@@ -2746,19 +2746,19 @@ OR use this command if you have not exported your username and access key in the
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/cmd_2.png').default} alt="JUnit HyperExecute Terminal Logs"  width="1920" height="868" className="doc_img"/>
 
-###### Step 5: Monitor the Test Execution
+### Step 5: Monitor the Test Execution
 
 Visit the [HyperExecute Dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/testng_autosplit_1.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
-###### Step 6: Download Artifacts and Reports
+### Step 6: Download Artifacts and Reports
 
 HyperExecute also facilitates the provision to download the [Artifacts](/support/docs/hyperexecute-artifacts/) and [Reports](/support/docs/hyperexecute-job-reports/) on your local machine. Click on the corresponding button to download your generated artifacts and reports.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/testng_autosplit_2.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
-##### 2. Testing Using Gitpod
+### 2. Testing Using Gitpod
 
 You can also use the Gitpod platform to execute our sample repository. It will fetch all the sample codebases and trigger the CLI to execute the tests.
 
@@ -2787,7 +2787,7 @@ Follow the below steps to run Test using Gitpod:
 You can also implement [Secret Keys](/support/docs/hyperexecute-how-to-save-and-manage-secrets/) in your YAML file.
 :::
 
-##### Navigation in Automation Dashboard
+### Navigation in Automation Dashboard
 
 Every test run on the HyperExecute has a unique *jobId* associated with it. Each *jobId* can in turn constitute single (or multiple) *groupId*(s). You can visit [HyperExecute Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build) for checking the status of the test execution.
 
@@ -2799,7 +2799,7 @@ The snapshot below shows the videos, logs and other meta data for that specific 
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/testng_artifacts_2.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
-#### Using the Capybara Agent Skill with TestMu AI
+### Using the Capybara Agent Skill with TestMu AI
 ***
 
 The [capybara-skill](https://github.com/LambdaTest/agent-skills/tree/main/capybara-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
@@ -2825,7 +2825,7 @@ It provides structured guidance for:
 * Debugging patterns
 * CI/CD integration
 
-##### Installing Capybara Agent Skill
+### Installing Capybara Agent Skill
 ***
 
 Install a Capybara Agent Skill using the command below:
@@ -2848,7 +2848,7 @@ cp -r agent-skills/capybara-skill .cursor/skills/
 
 ### JavaScript
 
-<Tabs className="docs__val" groupId="sel-js">
+<Tabs className="docs__val" groupId="sel-js" queryString="framework">
 <TabItem value="webdriverio" label="WebdriverIO" default>
 
 WebdriverIO is a widely-used testing framework for Java applications, designed to simplify and enhance the testing process for developers. It provides a flexible and powerful platform for running test suites, enabling effective unit testing, integration testing, and end-to-end testing of Java applications
@@ -2858,11 +2858,11 @@ Run your **WebdriverIO** framework tests on **HyperExecute** via two methods:
 - **Using Local System** - You can use your own local machine to execute tests.
 - **Using Gitpod Platform** - Execute tests using GitPod. (Requires a [Gitpod](https://gitpod.io/login/) account)
 
-#### 1. Testing Using Local System
+### 1. Testing Using Local System
 
 Follow the step-by-step guide to execute your test on HyperExecute.
 
-##### Step 1: Configure Your Test Suite
+### Step 1: Configure Your Test Suite
 
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
@@ -2895,11 +2895,11 @@ capabilities: [{
 
 > You can also use **dev** and **beta** browser versions. To generate capabilities for your test requirements, you can use our inbuilt 🔗 <a href={`${BRAND_URL}/capabilities-generator/`}>Capabilities Generator</a>.
 
-##### Step 2: Setup the CLI in your Test Suite
+### Step 2: Setup the CLI in your Test Suite
 
 After cloning / downloading the sample repo, you need to setup the CLI and the environment variables. Download the HyperExecute CLI and set up your environment variables as described in the sections above.
 
-##### Step 3: Configure YAML in your Test Suite
+### Step 3: Configure YAML in your Test Suite
 
 Configure your YAML file as per your use cases using **key value** pairs.
 
@@ -2962,7 +2962,7 @@ testRunnerCommand: npx wdio wdio.conf.js --spec=$test
 jobLabel: [selenium-webdriverIO, linux, autosplit]
 ```
 
-##### Step 4: Execute your Test Suite
+### Step 4: Execute your Test Suite
 
 > **NOTE :** In case of MacOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
 
@@ -2988,19 +2988,19 @@ OR use this command if you have not exported your username and access key in the
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/cmd_2.png').default} alt="JUnit HyperExecute Terminal Logs"  width="1920" height="868" className="doc_img"/>
 
-##### Step 5: Monitor the Test Execution
+### Step 5: Monitor the Test Execution
 
 Visit the [HyperExecute Dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status. 
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/testng_autosplit_1.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
-##### Step 6: Download Artifacts and Reports
+### Step 6: Download Artifacts and Reports
 
 HyperExecute also facilitates the provision to download the [Artifacts](/support/docs/hyperexecute-artifacts/) and [Reports](/support/docs/hyperexecute-job-reports/) on your local machine. Click on the corresponding button to download your generated artifacts and reports.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/testng_autosplit_2.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
-#### 2. Testing Using Gitpod
+### 2. Testing Using Gitpod
 
 You can also use the Gitpod platform to execute our sample repository. It will fetch all the sample codebases and trigger the CLI to execute the tests.
 
@@ -3029,7 +3029,7 @@ Follow the below steps to run Test using Gitpod:
 You can also implement [Secret Keys](/support/docs/hyperexecute-how-to-save-and-manage-secrets/) in your YAML file.
 :::
 
-#### Navigation in Automation Dashboard
+### Navigation in Automation Dashboard
 
 Every test run on the HyperExecute has a unique *jobId* associated with it. Each *jobId* can in turn constitute single (or multiple) *groupId*(s). You can visit [HyperExecute Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build) for checking the status of the test execution.
 
@@ -3041,7 +3041,7 @@ The snapshot below shows the videos, logs and other meta data for that specific 
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/testng_artifacts_2.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
-#### Using the WebdriverIO Agent Skill with TestMu AI
+### Using the WebdriverIO Agent Skill with TestMu AI
 ***
 
 The [webdriverio-skill](https://github.com/LambdaTest/agent-skills/tree/main/webdriverio-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
@@ -3067,7 +3067,7 @@ It provides structured guidance for:
 * Debugging patterns
 * CI/CD integration
 
-##### Installing WebdriverIO Agent Skill
+### Installing WebdriverIO Agent Skill
 ***
 
 Install a WebdriverIO Agent Skill using the command below:
@@ -3095,11 +3095,11 @@ Run your **Nightwatch** framework tests on **HyperExecute** via two methods:
 - **Using Local System** - You can use your own local machine to execute tests.
 - **Using Gitpod Platform** - Execute tests using GitPod. (Requires a [Gitpod](https://gitpod.io/login/) account)
 
-#### 1. Testing Using Local System
+### 1. Testing Using Local System
 
 Follow the step-by-step guide to execute your test on HyperExecute.
 
-##### Step 1: Configure Your Test Suite
+### Step 1: Configure Your Test Suite
 
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
@@ -3142,11 +3142,11 @@ module.exports = (function(settings) {
 
 > You can generate capabilities for your test requirements with the help of our inbuilt 🔗 <a href={`${BRAND_URL}/capabilities-generator/`}>Capabilities Generator</a>.
 
-##### Step 2: Setup the CLI in your Test Suite
+### Step 2: Setup the CLI in your Test Suite
 
 After cloning / downloading the sample repo, you need to setup the CLI and the environment variables. Download the HyperExecute CLI and set up your environment variables as described in the sections above.
 
-##### Step 3: Configure YAML in your Test Suite
+### Step 3: Configure YAML in your Test Suite
 
 Configure your YAML file as per your use cases using **key value** pairs.
 
@@ -3205,7 +3205,7 @@ testRunnerCommand: ./node_modules/.bin/nightwatch -e $test
 jobLabel: [selenium-Nightwatch, linux, autosplit]
 ```
 
-##### Step 4: Execute your Test Suite
+### Step 4: Execute your Test Suite
 
 > **NOTE :** In case of MacOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
 
@@ -3231,19 +3231,19 @@ OR use this command if you have not exported your username and access key in the
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/cmd_2.png').default} alt="JUnit HyperExecute Terminal Logs"  width="1920" height="868" className="doc_img"/>
 
-##### Step 5: Monitor the Test Execution
+### Step 5: Monitor the Test Execution
 
 Visit the [HyperExecute Dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status. 
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/testng_autosplit_1.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
-##### Step 6: Download Artifacts and Reports
+### Step 6: Download Artifacts and Reports
 
 HyperExecute also facilitates the provision to download the [Artifacts](/support/docs/hyperexecute-artifacts/) and [Reports](/support/docs/hyperexecute-job-reports/) on your local machine. Click on the corresponding button to download your generated artifacts and reports.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/testng_autosplit_2.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
-#### 2. Testing Using Gitpod
+### 2. Testing Using Gitpod
 
 You can also use the Gitpod platform to execute our sample repository. It will fetch all the sample codebases and trigger the CLI to execute the tests.
 
@@ -3272,7 +3272,7 @@ Follow the below steps to run Test using Gitpod:
 You can also implement [Secret Keys](/support/docs/hyperexecute-how-to-save-and-manage-secrets/) in your YAML file.
 :::
 
-#### Navigation in Automation Dashboard
+### Navigation in Automation Dashboard
 
 Every test run on the HyperExecute has a unique *jobId* associated with it. Each *jobId* can in turn constitute single (or multiple) *groupId*(s). You can visit [HyperExecute Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build) for checking the status of the test execution.
 
@@ -3284,7 +3284,7 @@ The snapshot below shows the videos, logs and other meta data for that specific 
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/testng_artifacts_2.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
-#### Using the NightwatchJS Agent Skill with TestMu AI
+### Using the NightwatchJS Agent Skill with TestMu AI
 ***
 
 The [nightwatchjs-skill](https://github.com/LambdaTest/agent-skills/tree/main/nightwatchjs-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
@@ -3310,7 +3310,7 @@ It provides structured guidance for:
 * Debugging patterns
 * CI/CD integration
 
-##### Installing NightwatchJS Agent Skill
+### Installing NightwatchJS Agent Skill
 ***
 
 Install a NightwatchJS Agent Skill using the command below:
@@ -3338,11 +3338,11 @@ Run your **Protractor** framework tests on **HyperExecute** via two methods:
 - **Using Local System** - You can use your own local machine to execute tests.
 - **Using Gitpod Platform** - Execute tests using GitPod. (Requires a [Gitpod](https://gitpod.io/login/) account)
 
-#### 1. Testing Using Local System
+### 1. Testing Using Local System
 
 Follow the step-by-step guide to execute your test on HyperExecute.
 
-##### Step 1: Configure Your Test Suite
+### Step 1: Configure Your Test Suite
 
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
@@ -3373,11 +3373,11 @@ capabilities = {
 
 > You can also use **dev** and **beta** browser versions. To generate capabilities for your test requirements, you can use our inbuilt 🔗 <a href={`${BRAND_URL}/capabilities-generator/`}>Capabilities Generator</a>.
 
-##### Step 2: Setup the CLI in your Test Suite
+### Step 2: Setup the CLI in your Test Suite
 
 After cloning / downloading the sample repo, you need to setup the CLI and the environment variables. Download the HyperExecute CLI and set up your environment variables as described in the sections above.
 
-##### Step 3: Configure YAML in your Test Suite
+### Step 3: Configure YAML in your Test Suite
 
 Configure your YAML file as per your use cases using **key value** pairs.
 
@@ -3438,7 +3438,7 @@ testRunnerCommand: protractor conf/single.conf.js --specs=$test --browser=chrome
 jobLabel: [selenium-protractor, linux, autosplit]
 ```
 
-##### Step 4: Execute your Test Suite
+### Step 4: Execute your Test Suite
 
 > **NOTE :** In case of MacOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
 
@@ -3464,19 +3464,19 @@ OR use this command if you have not exported your username and access key in the
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/cmd_2.png').default} alt="JUnit HyperExecute Terminal Logs"  width="1920" height="868" className="doc_img"/>
 
-##### Step 5: Monitor the Test Execution
+### Step 5: Monitor the Test Execution
 
 Visit the [HyperExecute Dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status. 
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/testng_autosplit_1.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
-##### Step 6: Download Artifacts and Reports
+### Step 6: Download Artifacts and Reports
 
 HyperExecute also facilitates the provision to download the [Artifacts](/support/docs/hyperexecute-artifacts/) and [Reports](/support/docs/hyperexecute-job-reports/) on your local machine. Click on the corresponding button to download your generated artifacts and reports.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/testng_autosplit_2.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
-#### 2. Testing Using Gitpod
+### 2. Testing Using Gitpod
 
 You can also use the Gitpod platform to execute our sample repository. It will fetch all the sample codebases and trigger the CLI to execute the tests.
 
@@ -3505,7 +3505,7 @@ Follow the below steps to run Test using Gitpod:
 You can also implement [Secret Keys](/support/docs/hyperexecute-how-to-save-and-manage-secrets/) in your YAML file.
 :::
 
-#### Navigation in Automation Dashboard
+### Navigation in Automation Dashboard
 
 Every test run on the HyperExecute has a unique *jobId* associated with it. Each *jobId* can in turn constitute single (or multiple) *groupId*(s). You can visit [HyperExecute Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build) for checking the status of the test execution.
 
@@ -3517,7 +3517,7 @@ The snapshot below shows the videos, logs and other meta data for that specific 
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/testng_artifacts_2.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
-#### Using the Protractor Agent Skill with TestMu AI
+### Using the Protractor Agent Skill with TestMu AI
 ***
 
 The [protractor-skill](https://github.com/LambdaTest/agent-skills/tree/main/protractor-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
@@ -3543,7 +3543,7 @@ It provides structured guidance for:
 * Debugging patterns
 * CI/CD integration
 
-##### Installing Protractor Agent Skill
+### Installing Protractor Agent Skill
 ***
 
 Install a Protractor Agent Skill using the command below:

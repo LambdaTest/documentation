@@ -534,7 +534,7 @@ Want to know more about HyperExecute? Here’s a [link](/support/docs/getting-st
 
 >If your favourite CI/CD tool is not in the list mentioned above, then just give us a <span className="doc__lt" onClick={() => window.openLTChatWidget()}>shout</span> and we will have it ready shortly for you.
 
-#### Using the CI/CD Pipeline Agent Skill with TestMu AI
+### Using the CI/CD Pipeline Agent Skill with TestMu AI
 ***
 
 The [cicd-pipeline-skill](https://github.com/LambdaTest/agent-skills/tree/main/cicd-pipeline-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
@@ -560,7 +560,7 @@ It provides structured guidance for:
 * Debugging patterns
 * CI/CD integration
 
-##### Installing CI/CD Pipeline Agent Skill
+### Installing CI/CD Pipeline Agent Skill
 ***
 
 Install a CI/CD Pipeline Agent Skill using the command below:
@@ -724,7 +724,7 @@ You can now integrate HyperExecute with other <BrandName /> products like Smart 
 
 HyperExecute, a powerful test automation orchestration platform, boasts seamless compatibility and effortless integration with a wide range of industry-leading testing tools. This document delves into HyperExecute's integration capabilities, highlighting its compatibility with Katalon, ACCELQ, Provar, Tosca, Azure Test Plans, Excel, and other <BrandName /> products.
 
-#### Integrate HyperExecute Effortlessly
+### Integrate HyperExecute Effortlessly
 
 - [**Katalon Studio**](/docs/katalon-integration-with-hyperexecute/): HyperExecute directly integrates with Katalon Studio, enabling you to leverage Katalon's robust object repository and keyword-driven testing within your orchestrated test suites. Execute Katalon tests seamlessly alongside other tools for comprehensive test coverage.
 
@@ -740,7 +740,7 @@ HyperExecute, a powerful test automation orchestration platform, boasts seamless
 
 - [**<BrandName /> Products**](#hyperexecute-integrations-with-testmu-ai-products): HyperExecute integrates with various <BrandName /> products, including Smart UI and Real Devices. Execute tests across diverse browsers, devices, and operating systems seamlessly within HyperExecute's orchestration framework.
 
-#### Benefits of Integration
+### Benefits of Integration
 
 There are enormous advantages of integrating HyperExecute with the above mentioned tools, some of them are:
 
@@ -752,7 +752,7 @@ There are enormous advantages of integrating HyperExecute with the above mention
 
 - **Simplified Management:** Gain centralized control over your testing ecosystem, reducing complexity and improving visibility.
 
-#### Conclusion
+### Conclusion
 
 HyperExecute's seamless compatibility and effortless integration with various testing tools empower you to create robust, efficient, and scalable test automation strategies. Embrace the power of unified test orchestration and experience the value of HyperExecute's integrations firsthand.
 

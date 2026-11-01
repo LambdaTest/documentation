@@ -581,10 +581,10 @@ partialReports:
 ```
 
 ### 📘 Use Cases
-#### Use Case 1: One Test per Task
+### Use Case 1: One Test per Task
 If you're executing one test per task, a single `report.xml` will be generated per job. These individual reports can then be merged later for a consolidated result.
 
-#### Use Case 2: Multiple Tests on the same Task
+### Use Case 2: Multiple Tests on the same Task
 In this case, the `report.xml` file gets overwritten after each test execution. This results in only the last test's results being preserved. To prevent overwriting, update your `testRunnerCommand` in the `hyperexecute.yaml` file to rename the report after each test:
 
 <VerifiedTag value="Verified" />
@@ -599,12 +599,12 @@ This ensures that each test result is saved with a unique name like test1.xml, t
 In some cases, you may want to test against a pre-installed application on the device (instead of uploading and installing a new APK/IPA). Maestro supports this by allowing you to specify the app’s package identifier (Android) or bundle identifier (iOS) in your test configuration.
 
 ### Identifying the App ID (Package Name / Bundle ID)
-#### For Android:
+### For Android:
   - Visit the app’s page on the Google Play Store.
   - The id parameter in the URL is the package name.
   - Example: For the Wikipedia app → `org.wikipedia`.
 
-#### For iOS:
+### For iOS:
   - Identify the bundle identifier (e.g., com.apple.Preferences for Settings).
 
 ### Updating Your HyperExecute Configuration

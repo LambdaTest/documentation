@@ -183,7 +183,7 @@ Extent Reports is a powerful reporting library used in test automation framework
 ### Steps to Generate Extent Reports `(Version <= 2)` on HyperExecute 
 Follow these steps to enable Extent Reports for your HyperExecute job:
 
-#### Step 1: Add Dependency
+### Step 1: Add Dependency
 If using Maven, add the following dependency to your `pom.xml` file:
 
 <VerifiedTag value="Verified" />
@@ -196,7 +196,7 @@ If using Maven, add the following dependency to your `pom.xml` file:
 </dependency>
 ```
 
-#### Step 2: Create an Extent Report Listener
+### Step 2: Create an Extent Report Listener
 Create a class, e.g., `ExtentReportListenerV2.java`, to initialize and flush Extent Reports during test execution. This listener will log each test case’s status to the report.
 
 <VerifiedTag value="Verified" />
@@ -222,7 +222,7 @@ public class ExtentReportListenerV2 implements ITestListener {
 ### Steps to Generate Extent Reports `(Version > 2)` on HyperExecute 
 Follow these steps to enable Extent Reports for your HyperExecute job:
 
-#### Step 1: Add Dependency
+### Step 1: Add Dependency
 If using Maven, add the latest extentreports dependency to `pom.xml` file:
 
 <VerifiedTag value="Verified" />
@@ -235,7 +235,7 @@ If using Maven, add the latest extentreports dependency to `pom.xml` file:
 </dependency>
 ```
 
-#### Step 2: Create an Extent Report Listener
+### Step 2: Create an Extent Report Listener
 For Extent Reports > 2, use `ExtentHtmlReporter` to generate and customize the HTML report. Create `ExtentReportListener.java`:
 
 <VerifiedTag value="Verified" />
@@ -291,7 +291,7 @@ Before implementing Extent Native Reports, ensure the following prerequisites ar
 
 Follow these steps to enable Extent Native Reports for your HyperExecute job:
 
-#### 1. Upgrade Extent Reporting Version
+### 1. Upgrade Extent Reporting Version
 
 Update the `pom.xml` file to include the latest version of the Extent Reporting library (version 5). Ensure that the necessary dependencies are correctly configured.
 
@@ -305,7 +305,7 @@ Update the `pom.xml` file to include the latest version of the Extent Reporting 
 </dependency>
 ```
 
-#### 2. Modify Import Statements
+### 2. Modify Import Statements
 
 Update import statements in your codebase to reflect the new package structure in Extent Reporting version 5. Replace `com.relevantcodes` with `com.aventstack`.
 
@@ -321,11 +321,11 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 ```
 
-#### 3. Generate JSON Reports
+### 3. Generate JSON Reports
 
 Make changes in your codebase to generate individual JSON reports. These reports will serve as the source for the Extent Native Reports.
 
-#### 4. Update HyperExecute YAML Configuration
+### 4. Update HyperExecute YAML Configuration
 
 In the HyperExecute YAML configuration, add the following section to instruct the HyperExecute systems to generate Extent Native Reports:
 
@@ -357,11 +357,11 @@ The Native TestNG Reports offer a standardized and easily accessible summary of 
 
 Follow these steps to enable Extent Native Reports for your HyperExecute job:
 
-#### 1. Generate JSON Reports
+### 1. Generate JSON Reports
 
 You need to ensure that the `emailable-report.html` file should be generated within your test-suite
 
-#### 2. Update HyperExecute YAML Configuration
+### 2. Update HyperExecute YAML Configuration
 
 In the HyperExecute YAML configuration, add the following section to instruct the HyperExecute systems to generate Extent Native Reports:
 
@@ -470,7 +470,7 @@ Cucumber itself provides basic reporting in the command line, but additional plu
 
 ### Steps to Generate Cucumber Reports on HyperExecute
 
-#### Step 1: Configure the TestRunner File
+### Step 1: Configure the TestRunner File
 In your `TestRunner` file, configure `@CucumberOptions` to specify report formats and output paths. Here’s an example configuration:
 
 <VerifiedTag value="Verified" />
@@ -495,7 +495,7 @@ Explanation of plugin Options:
 - **json:target/cucumber-reports/CucumberTestReport.json :** Generates JSON report, often required for CI/CD and advanced reporting.
 - **rerun:target/cucumber-reports/rerun.txt :** Logs any failed scenarios for rerun.
 
-#### Step 2: Configure the HyperExecute YAML File
+### Step 2: Configure the HyperExecute YAML File
 In your HyperExecute YAML configuration, define the [`report`](/support/docs/deep-dive-into-hyperexecute-yaml/#report) parameters like this:
 
 <VerifiedTag value="Verified" />
@@ -508,7 +508,7 @@ partialReports:
  type: json
 ```
 
-#### Step 3: Execute Your Tests
+### Step 3: Execute Your Tests
 Run your tests on HyperExecute using the CLI. After your job completes, you can visit the HyperExecute dashboard to download and view the Cucumber report.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/reports/cucumber.png').default} alt="Image" className="doc_img"/> 
@@ -519,7 +519,7 @@ Playwright offers built-in HTML reports to help visualize the results of your te
 ### Steps to Generate Consolidated HTML Report
 Follow these steps to generate a consolidated Playwright HTML report:
 
-#### Step 1: Update Your Playwright Configuration
+### Step 1: Update Your Playwright Configuration
 
 In your Playwright configuration file `playwright.config.js`, add the following code to enable the reporter:
 
@@ -540,7 +540,7 @@ const config = {
 - By default, the report is written into the **playwright-report folder** in the current working directory. The same location can be used in the report parameters in the YAML file.
 :::
 
-#### Step 2: Configure the HyperExecute YAML File
+### Step 2: Configure the HyperExecute YAML File
 In your HyperExecute YAML configuration, define the [`report`](/support/docs/deep-dive-into-hyperexecute-yaml/#report) parameters like this:
 
 <VerifiedTag value="Verified" />
@@ -553,7 +553,7 @@ partialReports:
   type: html
 ```
 
-#### Step 3: Execute Your Tests
+### Step 3: Execute Your Tests
 Run your Playwright tests on HyperExecute using the CLI. After your job completes, you can visit the HyperExecute dashboard to download and view the consolidated Plywright HTML report.
 
 <video class="right-side" width="80%" controls id="vid">
@@ -627,10 +627,10 @@ A JUnit XML report is an XML-based test result file format used to represent the
 ### Steps to Generate Consolidated JUnit XML Report
 Follow these steps to generate a consolidated JUnit XML report:
 
-#### Step 1: Update Your Project Configuration
+### Step 1: Update Your Project Configuration
 Configure all the necessary dependencies and configurations to your project.
 
-#### Step 2: Configure the HyperExecute YAML File
+### Step 2: Configure the HyperExecute YAML File
 In your HyperExecute YAML configuration, define the [report](/support/docs/deep-dive-into-hyperexecute-yaml/#report) parameters like this:
 
 <VerifiedTag value="Verified" />
@@ -643,7 +643,7 @@ partialReports:
     type: xml
 ```
 
-#### Step 3: Execute Your Tests
+### Step 3: Execute Your Tests
 Run your tests on HyperExecute using the CLI. After your job completes, you can visit the HyperExecute dashboard to download and view the consolidated junit xml report.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/reports/junit-xml-report.png').default} alt="Image" className="doc_img"/> 
@@ -758,7 +758,7 @@ All the tests on HyperExecute get executed as a Job. Each Job has a Status, a un
 |<img loading="lazy" src={require('../assets/images/hyperexecute/icons/ignored.png').default} alt="Image" style={{width: '30px',margin: '0px',}} className="doc_img no-zoom"/>|Ignored| It is a user-defined status, used when a test case is intentionally not executed, such as when it is marked for future development, or a feature is not yet implemented.
 |<img loading="lazy" src={require('../assets/images/hyperexecute/icons/blocked.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img no-zoom"/>|Blocked| The job is currently stuck due to an external dependency or resource constraint. This could involve waiting for another job using the same resources to finish or limitations on available browsers/devices. |
 
-#### Abort Job
+### Abort Job
 
 You can abort a running job directly from the HyperExecute portal. Once a job is in **Running** state, click on the job to open the Job Details page. You will see an **Abort** option that provides the following choices:
 
@@ -822,7 +822,7 @@ The most granular level, representing an individual test case verifying a specif
 |<img loading="lazy" src={require('../assets/images/hyperexecute/icons/idle-timeout.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img no-zoom"/>|Idle Timeout| It indicates that your session was inactive for the defined time.
 |<img loading="lazy" src={require('../assets/images/hyperexecute/icons/lambda-error.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img no-zoom"/>|Lambda Error| An error originating from <BrandName />'s side prevented the stage from executing as planned. This could be a temporary glitch or require contacting <BrandName /> support for further investigation.
 
-#### User Defined Status
+### User Defined Status
 HyperExecute allows users to define the status of tests using **lambda hooks**. This can be helpful for monitoring test status and results.
 
 HyperExecute supports the following user-defined lambda hooks status:
@@ -836,7 +836,7 @@ HyperExecute supports the following user-defined lambda hooks status:
 |<img loading="lazy" src={require('../assets/images/hyperexecute/icons/unknown.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img"/>|Unknown| When a user wants to mark status of their tests as undecided. <br /> `driver.executeScript("lambda-status=unknown");`|
 |<img loading="lazy" src={require('../assets/images/hyperexecute/icons/error.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img"/>|Error| A test case can end in an error status when an unexpected exception is thrown during its execution. This error can be due to a coding error or a defect in the application under test. <br /> `driver.executeScript("lambda-status=error");`|
 
-#### Priority Scenario Mapping
+### Priority Scenario Mapping
 
 In a **Scenario**, there can be numerous tests running, and each test has its own status, which means the final status of the scenario is derived from its test status depending on the status of the test with the **highest priority**.
 

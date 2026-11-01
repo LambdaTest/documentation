@@ -592,7 +592,7 @@ You can run this command if you need any help in understanding the definition of
 --job-secret-file <RELATIVE_PATH_OF_YOUR_SECRET_FILE>
 ```
 
-#### Sample Secret File
+### Sample Secret File
 
 <VerifiedTag value="Verified" />
 
@@ -864,7 +864,7 @@ To enable the **Quiet Mode**, you need to paas these commands in your terminal a
 </TabItem>
 </Tabs>
 
-#### Output
+### Output
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/cli/cli-execute.png').default} alt="Image" width="1350" height="619" className="doc_img"/>
 <br /><br />

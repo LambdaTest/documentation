@@ -208,7 +208,7 @@ Download or Clone the code sample from the <BrandName /> GitHub repository to ru
 
 ### Step 2: Configure the GoCD Pipeline
 
-#### Part 1: Material
+### Part 1: Material
 
 - Select the **Material Type**. For the demo purposes, we will be using the Git.
 
@@ -220,11 +220,11 @@ Download or Clone the code sample from the <BrandName /> GitHub repository to ru
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/gocd/2.png').default} alt="Image"  className="doc_img"/>
 
-#### Part 2: Pipeline Name
+### Part 2: Pipeline Name
 
 - Enter your **Pipeline Name**.
 
-#### Part 3: Stage Details
+### Part 3: Stage Details
 
 A Stage is a group of Jobs and a Job is a work which needs to be executed.
 
@@ -232,7 +232,7 @@ A Stage is a group of Jobs and a Job is a work which needs to be executed.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/gocd/3.png').default} alt="Image"  className="doc_img"/>
 
-#### Part 4: Job and Tasks
+### Part 4: Job and Tasks
 
 - Enter the **Job Name**.
 

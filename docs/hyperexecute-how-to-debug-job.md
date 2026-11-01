@@ -222,7 +222,7 @@ Running Network Scanner:
 Network Scan Passed!
 ```
 
-#### IPs to be Whitelisted
+### IPs to be Whitelisted
 
 | FQDN | Protocol:Port | Reason |
 |------|---------------|--------|
@@ -531,7 +531,7 @@ You can see in the screenshot mentioned below that the Pre Step of the Task has 
 
 This section will help you debug your failed job if you are facing any errors in the pre-command stage.
 
-#### Lambda Error
+### Lambda Error
 
 While executing a playwright project in HyperExecute, you may encounter a Lambda Error.
 
@@ -544,7 +544,7 @@ pre:
   - npx install playwright
 ```
 
-#### .Net Build Issue in C#
+### .Net Build Issue in C#
 
 If you encounter a similar error while running the command `dotnet build` in pre steps, as mentioned below, it means that you are not using a **core dotnet** version but instead a **framework** version.
 
@@ -560,11 +560,11 @@ We need to build it by invoking **MSBuild.exe** from the Visual Studio directory
 
 The target Framework can be replaced with dotnet version targeted in the user’s repository. **``/p:TargetFramework=net70302``**
 
-#### SSL Certificate Error
+### SSL Certificate Error
 
 This error is generated while installing the dependencies in your project suite.
 
-##### Error in Python
+### Error in Python
 
 You can encounter a similar error while installing dependencies 
 
@@ -589,7 +589,7 @@ pip_cache --trusted-host http://pypi.org  --trusted-host http://pypi.python.org 
 pip setuptools 
 ```
 
-##### Error in Maven
+### Error in Maven
 
 You can encounter a similar error while running Maven Project as well, Now to resolve this issue for **maven**, pass the following command
 
@@ -599,7 +599,7 @@ You can encounter a similar error while running Maven Project as well, Now to re
 -Dmaven.wagon.http.ssl.insecure=true -Dmaven.wagon.http.ssl.allowall=true -Dmaven.wagon.http.ssl.ignore.validity.dates=true
 ```
 
-#### Registry Error
+### Registry Error
 
 If you incorporate any npm registry related error in the **Pre** stage, then pass the following command in your YAML file in the pre command before npm install:
 
@@ -610,7 +610,7 @@ pre:
   - npm config set registry <artifactory_URL>
 ```
 
-#### Incompatible Node Version
+### Incompatible Node Version
 
 If you encounter an error as mentioned below, it implies that you are using node version **below 15**, so you need to upgrade to **>=15.0** using runtime command.
 
@@ -630,7 +630,7 @@ runtime:
   version: "15"
 ```
 
-#### Java version Conflict
+### Java version Conflict
 
 This error incorporates that the version of Java that you are using in your local machine or in pom.xml file is not matching with the one used in the HyperExecute.
 
@@ -667,13 +667,13 @@ If you were unable to find the error and want a deep analysis of it, then you ca
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/debugging-guide/debug/hyp-view-test.png').default} alt="Image"  className="doc_img"/>
 
-#### Video Recording
+### Video Recording
 
 Here you can check which part of your test case is causing an error in the video format, along with the required logs to check at which timestamp you are encountering this error and what the reason behind it is.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/debugging-guide/debug/hyp-scenario-view-log1.png').default} alt="Image"  className="doc_img"/>
 
-#### Command Logs
+### Command Logs
 
 - You can view all kinds of logs as well like [**Network Logs**](/support/docs/debugging-options/#network-logs). You can toggle between the [**Console Logs**](/support/docs/debugging-options/#console-logs), [**Terminal Logs**](/support/docs/debugging-options/#terminal-logs) and the **Test Framework Logs**.
 
@@ -687,7 +687,7 @@ Here you can check which part of your test case is causing an error in the video
 
 This section will help you debug your failed job if you are facing any errors in the Scenario stage.
 
-#### Invalid Credentials
+### Invalid Credentials
 
 If you're encountering an error message as shown below, it means you have entered an invalid  **Username** and **Access Key** in your test file capabilities.
 
@@ -700,7 +700,7 @@ OpenQA.Selenium.WebDriverException : The newSession command returned an unexpect
 
 To resolve this issue, you have to visit our [Automation Capability Generator](https://www.testmuai.com/capabilities-generator/) site and configure your project suite capabilities generated as per your desired language and framework.
 
-#### Unable to create Session
+### Unable to create Session
 
 When you initiate a test execution and encounter the issue that your session is not getting started,
 
@@ -714,7 +714,7 @@ This is possible due to the following reasons:
 
 To address this challenge, our recommended solution is to visit the [Automation Capability Generator](https://www.testmuai.com/capabilities-generator/) website. Here, you can seamlessly generate accurate and valid sets of credentials and capabilities, thereby rectifying issues associated with test failures.
 
-#### Invalid HUB Endpoint
+### Invalid HUB Endpoint
 
 If you put the wrong HUB Endpoint in your test file, you will receive the following error:
 
@@ -722,15 +722,15 @@ If you put the wrong HUB Endpoint in your test file, you will receive the follow
 
 To rectify this issue, you need to cross-check your HUB URL. You can also visit [this](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build) website and click on **Access Key** button to get your correct HUB URL.
 
-#### Tunnel Error
+### Tunnel Error
 
-##### When Tunnel is Disconnected or Not Running
+### When Tunnel is Disconnected or Not Running
 
 - If you have mentioned the Tunnel URL in both capabilities and the YAML file, then it is likely that your Tunnel may get disconnected or will not run. To resolve this, you need to simply remove the Tunnel URL from either of the files.
 
 - If you are running Tunnel using Binary, then you need to ensure that your credentials for binary and capability are the same.
 
-##### When you try to access a Private Endpoint
+### When you try to access a Private Endpoint
 
 If you are trying to access an internal website or any other private endpoint which is behind any firewall using tunnel and you are getting the below mentioned error:
 
@@ -749,7 +749,7 @@ To resolve this, you have to pass this flag in your YAML file:
 tunnel: true
 ```
 
-#### Stage is Stuck
+### Stage is Stuck
 
 When you encounter a situation where the stage appears to be stuck or unresponsive (machines are taking lot of time to allocate), then follow these measures to diagnose and address the issue.
 
@@ -775,7 +775,7 @@ After identifying the issue, follow these steps to resolve the situation:
 
 **Step 3:** Consider printing the responses during debugging to verify whether the API is providing the expected responses.
 
-#### Test is Stuck
+### Test is Stuck
 
 When a particular test is taking longer than expected to complete, follow these measures to diagnose the issue:
 
@@ -799,7 +799,7 @@ After identifying the issue, follow these steps to resolve the situation:
 
 3. **Restructure Test Code:** Refactor the test code to improve its overall structure and efficiency. Consider using conditional statements, data-driven testing techniques, or parallel execution strategies to streamline test execution.
 
-#### Test Idle Timeout
+### Test Idle Timeout
 
 When the test encounters an idle timeout, it indicates that commands are not being executed for an extended period of time. Additionally, the quit() command fails to execute, causing the test to get stuck.
 
@@ -831,7 +831,7 @@ Remedy:
 
 4. **Optimize Resource Usage:** Ensure that the test environment has sufficient resources, such as CPU, memory, and network bandwidth, to handle the test workload. Resource constraints can lead to performance bottlenecks and idle timeouts.
 
-#### API Timeout
+### API Timeout
 
 When the test encounters an API timeout, indicating that the API call did not receive a response within the specified timeout period, follow these measures to diagnose and address the issue.
 

@@ -132,25 +132,25 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 ### 🎉 What's New
 
-#### Rebranding & Package Updates
+### Rebranding & Package Updates
 
 - **MCP HyperExecute** is now **MCP <BrandName />** to better reflect our expanded capabilities
 - Updated package name to `mcp-lambdatest` on NPM
 - Stable 1.0.0 release with comprehensive feature set
 
-#### Transport Support
+### Transport Support
 
 - **STDIO Transport**: Available via NPM package for local installations
 - **StreamableHTTP Transport**: Replaces deprecated SSE transport for remote connections
 - Enhanced connection reliability and performance
 
-#### Enhanced Migration Tools
+### Enhanced Migration Tools
 
 - Expanded migration capabilities for easier transition to <BrandName /> platform
 - Improved app upload functionality for mobile testing
 - Resolved template loading and asset management for migration tools
 
-#### Security & Reliability Improvements
+### Security & Reliability Improvements
 
 - Enhanced authentication mechanisms
 - Improved credential handling and validation
@@ -160,7 +160,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 ### 🔧 Connection Configuration
 
-#### ⚠️ Breaking Changes
+### ⚠️ Breaking Changes
 
 The previous SSE-based connection method has been **removed**:
 
@@ -171,7 +171,7 @@ The previous SSE-based connection method has been **removed**:
 http://mcp.lambdatest.com/hyperexecute?&username=[your-lt-username]&accessKey=[your-lt-access-key]
 ```
 
-#### ✅ Connection Methods
+### ✅ Connection Methods
 
 **Option 1: Remote MCP Server (StreamableHTTP)**
 
@@ -230,14 +230,14 @@ http://mcp.lambdatest.com/hyperexecute?&username=[your-lt-username]&accessKey=[y
 
 ### 📋 Available Tools
 
-#### HyperExecute Tools
+### HyperExecute Tools
 
 - **generateHyperExecuteYAML**: Generate YAML configurations for your test projects
 - **answerHyperExecuteQuery**: Get answers from HyperExecute documentation
 - **getHyperExecuteJobInfo**: Fetch detailed job information
 - **getHyperExecuteJobSessions**: Retrieve job session details
 
-#### Migration Tools
+### Migration Tools
 
 - **upload_app**: Upload mobile applications for testing
 

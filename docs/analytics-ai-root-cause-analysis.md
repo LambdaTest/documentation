@@ -328,7 +328,7 @@ Configure intelligent targeting rules to precisely control which tests, builds, 
    - **Project Names**: Include or exclude tests from specific projects using regex patterns
    - **Job Labels**: Include tests with specific job labels or tags
 
-#### Rule Logic and Application
+### Rule Logic and Application
 
 The intelligent targeting system applies rules using the following logic:
 
@@ -345,7 +345,7 @@ The intelligent targeting system applies rules using the following logic:
 - **Regular Review**: Periodically review and update rules based on changing test patterns
 
 <!-- #### Example Configuration -->
-#### Example Configuration for Production Test Analysis
+### Example Configuration for Production Test Analysis
 
 :::tip
 
@@ -373,7 +373,7 @@ Custom RCA Categories allow you to define intelligent classification categories 
 
 <img loading="lazy" src={require('../assets/images/analytics/test-intelligence-ai-test-rca-category.webp').default} alt="Custom RCA Categories Management" width="800" height="400" className="doc_img"/>
 
-#### Managing Categories
+### Managing Categories
 
 1. In the **Automatic AI RCA** configuration page, locate the **Custom RCA Categories** section
 2. Click the **Manage** button to open the category management drawer

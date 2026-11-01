@@ -159,9 +159,9 @@ autosplit: true
 
 Along with that, you need to provide [`testDiscovery`](/support/docs/deep-dive-into-hyperexecute-yaml/#testdiscovery) and [`testRunnerCommand`](/support/docs/deep-dive-into-hyperexecute-yaml/#testrunnercommand) flags in your YAML file as well.
 
-#### Configuration Parameters
+### Configuration Parameters
 
-##### 1. `concurrency`
+### 1. `concurrency`
 The `concurrency`  key indicates the total number of concurrent sessions that can run in parallel. With both of these commands (`testDiscovery` and `testRunnerCommand`), HyperExecute intelligently distributes tests over multiple virtual machines as specified by the `concurrency` directive in the YAML file.
 
 For example, assume that the total number of test scenarios [discovered via `testDiscovery`] are 27 and `concurrency` is set to 7. In this case, HyperExecute would allocate 7 nodes for running the 27 tests in parallel.
@@ -172,7 +172,7 @@ For example, assume that the total number of test scenarios [discovered via `tes
 concurrency: 7
 ```
 
-##### 2. `testDiscovery`
+### 2. `testDiscovery`
 - It is used to list down all the values to be distributed. HyperExecute will execute the **`testDiscovery`** command verbatim and expects distinct values to be on separate lines. It can be as simple as a list of files on different lines.
 - This can be used later to split tests over files, modules, or any level supported by your [language and framework](/support/docs/getting-started-with-hyperexecute/).
 - It is used for locating/discovering the tests that are a part of the project. You can use the combination of *grep*, **`awk`**, **`sed`**, or any valid command to locate the tests that you intend to run. For NodeJS, usually at file level, for Python at class level, in Java  at class and module level. For Cucumber based frameworks at scenario level or feature level or at tag level. 
@@ -198,13 +198,13 @@ testDiscovery:
   command: grep 'class name' testng.xml | awk '{print$2}' | sed 's/name=//g' | sed 's/\x3e//g'
 ```
 
-##### 3. `testRunnerCommand`
+### 3. `testRunnerCommand`
 - It is used to run a single item from the **`testDiscovery`**. You need to add **`$test`** in the `testRunnerCommand` for interpolating one of the values from the `testDiscovery`.
 - It tells the system how to run a single test entity in isolation. This entity could be a file, module, feature or scenario. Test runner command will run over each of the values extracted from the `testDiscovery` command.
 
 ### Advanced Concepts
 
-#### Automatic Reordering of Test Cases
+### Automatic Reordering of Test Cases
 
 Suppose you are performing regression testing in your large test suite project via github actions, but some test cases are failing unexpectedly for no reason. These flaky tests have become a time-consuming nightmare for QA and developers. After fixing the issues, you trigger the testing pipeline again, but you have to wait to check the status of that particular test.
 
@@ -212,7 +212,7 @@ It would be much better if those flaky tests ran first in the sequence, so you d
 
 That's exactly the problem HyperExecute's autosplit with automatic re-ordering aims to solve! It's like having a testing assistant who remembers which tests were tricky last time.
 
-##### How does it work?
+### How does it work?
 When you run tests with HyperExecute's autosplit feature, your tests are divided up and run simultaneously on multiple machines, executing them in parallel. This is great for speeding things up, but during this run, HyperExecute keeps track of which tests fail.
 
 After the initial run is complete, HyperExecute takes note of the failing tests. It may use this information to automatically reorder your tests for the next time you run them.
@@ -235,11 +235,11 @@ By utilizing the Matrix Multiplexing Strategy, you can parallelize your testing 
 
 ### Configuration and Execution
 
-#### Setting Up Matrix Multiplexing
+### Setting Up Matrix Multiplexing
 
 To initiate Matrix Multiplexing, define `key-value` pairs in the HyperExecute YAML file. Each pair represents a combination of parameters under consideration, such as browser versions, OS, files, folders, tags, features, scenarios, input values, etc.
 
-#### Generating and Running Virtual Machines
+### Generating and Running Virtual Machines
 
 HyperExecute will generate and manage virtual machines for each key-value combination, injecting them as environment variables or command-line variables. The specified commands will then run for each combination.
 
@@ -344,7 +344,7 @@ Now the given `parallelism` is 2, hence it will create the same set of the above
 
 ### Using Hybrid Strategy with HyperExecute
 
-#### Prerequisites:
+### Prerequisites:
 
 -   The version of the YAML file that you are using is `0.1`.    
 -   The test discovery mode has to be `remote`.

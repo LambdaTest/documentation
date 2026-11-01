@@ -160,7 +160,7 @@ Enter the **Workspace Details**, i.e., Username (mandatory) and Password (option
 
 To Integrate Tosca with HyperExecute using YAML, follow the below mentioned steps:
 
-##### Prerequisite
+### Prerequisite
 
 -  Ensure that you have integrated Tosca with [<BrandName />'s cloud-based Selenium Grid](/support/docs/tricentis-tosca-integration-testmu-selenium-grid/).
 
@@ -285,7 +285,7 @@ This documentation provides a detailed guide on seamlessly integrating Tosca wit
 
 ### Steps to Integrate Tosca
 
-#### Step 1: Initialize the Tosca Project
+### Step 1: Initialize the Tosca Project
 
 - Go to the [HyperExecute Dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/). Click on the **Projects**.
 
@@ -297,7 +297,7 @@ This documentation provides a detailed guide on seamlessly integrating Tosca wit
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/integration/products/tosca/tosca-dex/step2.png').default} alt="Image" width="1365" height="650" className="doc_img"/>
 
-#### Step 2: Manage your License and Credentials
+### Step 2: Manage your License and Credentials
 
 - Select the **Type** as Cloud License. Enter the **License Details**, i.e. Username and Password with which you want to execute your tests. **Cloud Server id** field is optional.
 
@@ -311,7 +311,7 @@ Enter the **Workspace Details**, i.e., Username (mandatory) and Password (option
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/integration/products/tosca/tosca-dex/step4.png').default} alt="Image" width="1365" height="650" className="doc_img"/>
 
-#### Step 3: Configure DEX Server Details
+### Step 3: Configure DEX Server Details
 
 - You need to provide the details of your DEX Server as per the **prerequisites**.
 
@@ -323,7 +323,7 @@ Click on **Save** button.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/integration/products/tosca/tosca-dex/step5.png').default} alt="Image" width="1365" height="650" className="doc_img"/>
 
-#### Step 4: Execute Your Project
+### Step 4: Execute Your Project
 
 - Please wait for the discovered test events to get populated. Now, select the desired test events that you want to execute, and then click on the **Run** button.
 
@@ -333,7 +333,7 @@ Click on **Save** button.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/integration/products/tosca/tosca-dex/step7.png').default} alt="Image" width="1365" height="650" className="doc_img"/>
 
-#### Step 5: Check the Logs Status in Dashboard
+### Step 5: Check the Logs Status in Dashboard
 
 - Now go to the [**Jobs**](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute/jobs) section and check the results.
 
@@ -375,7 +375,7 @@ This documentation provides a detailed guide on seamlessly integrating Tosca wit
 
 To Integrate Tosca with HyperExecute, follow the below mentioned steps:
 
-#### Step 1: Initialize the Tosca Project
+### Step 1: Initialize the Tosca Project
 
 - Go to the [HyperExecute Dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/). Click on the **Projects**.
 
@@ -387,7 +387,7 @@ To Integrate Tosca with HyperExecute, follow the below mentioned steps:
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/integration/products/tosca/tosca-commander/tosca-sap.png').default} alt="Image" width="1365" height="650" className="doc_img"/>
 
-#### Step 2: Manage your License and Credentials
+### Step 2: Manage your License and Credentials
 
 - Enter the **License Details**, i.e. Username and Password with which you want to execute your tests.
 
@@ -401,7 +401,7 @@ To Integrate Tosca with HyperExecute, follow the below mentioned steps:
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/integration/products/tosca/tosca-commander/Step5.webp').default} alt="Image" width="1365" height="650" className="doc_img"/>
 
-#### Step 3: Execute Your Project
+### Step 3: Execute Your Project
 
 - Please wait for the discovered execution list to get populated. Now, select the desired tests that you want to execute, and then click on the **Run** button.
 <img loading="lazy" src={require('../assets/images/hyperexecute/integration/products/tosca/tosca-commander/Step6.webp').default} alt="Image" width="1365" height="650" className="doc_img"/>
@@ -409,7 +409,7 @@ To Integrate Tosca with HyperExecute, follow the below mentioned steps:
 - Now set the total number of **Concurrent Sessions** that you want to run on HyperExecute and click on the **Run** button.
 <img loading="lazy" src={require('../assets/images/hyperexecute/integration/products/tosca/tosca-commander/Step7.webp').default} alt="Image" width="1365" height="650" className="doc_img"/>
 
-#### Step 4: Check the Logs Status in Dashboard
+### Step 4: Check the Logs Status in Dashboard
 
 - Now go to the [**Jobs**](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute/jobs) section and check the results.
 <img loading="lazy" src={require('../assets/images/hyperexecute/integration/products/tosca/tosca-commander/Step8.webp').default} alt="Image" width="1365" height="650" className="doc_img"/>

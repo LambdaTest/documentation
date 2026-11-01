@@ -114,7 +114,7 @@ set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 ## Run a Puppeteer Test in Your Runner
 ---
 
-<Tabs className="docs__val" groupId="puppeteer-runner">
+<Tabs className="docs__val" groupId="puppeteer-runner" queryString="framework">
 
 <TabItem value="mocha" label="Mocha" default>
 
@@ -125,7 +125,7 @@ You can execute your Mocha framework tests on HyperExecute via two different met
 - **Using Local System** - You can use your own local machine to execute tests.
 - **Using Gitpod Platform** - Execute tests using GitPod. (Requires a [Gitpod](https://gitpod.io/login/) account)
 
-#### Download the Sample Repository
+### Download the Sample Repository
 
 :::tip Sample repo
 
@@ -159,7 +159,7 @@ exports.capabilities = {
 ```
 > You can also use **dev** and **beta** browser versions. To generate capabilities for your test requirements, you can use our inbuilt 🔗 <a href={`${BRAND_URL}/capabilities-generator/`}>Capabilities Generator</a>.
 
-#### Configure YAML in your Test Suite
+### Configure YAML in your Test Suite
 
 Configure your YAML file as per your use cases using **key value** pairs.
 
@@ -208,7 +208,7 @@ testRunnerCommand: npm test $test
 jobLabel: [puppeteer-Mocha, linux, autosplit]
 ```
 
-#### Execute your Test Suite
+### Execute your Test Suite
 
 > **NOTE :** In case of MacOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
 
@@ -234,19 +234,19 @@ OR use this command if you have not exported your username and access key.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/cmd_2.png').default} alt="Mocha HyperExecute Terminal Logs"  width="1920" height="868" className="doc_img"/>
 
-#### Monitor the Test Execution
+### Monitor the Test Execution
 
 Visit the [HyperExecute Dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/testng_autosplit_1.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
-#### Download Artifacts and Reports
+### Download Artifacts and Reports
 
 HyperExecute also facilitates the provision to download the [Artifacts](/support/docs/hyperexecute-artifacts/) and [Reports](/support/docs/hyperexecute-job-reports/) on your local machine. Click on the corresponding button to download your generated artifacts and reports.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/testng_autosplit_2.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
-#### Testing Using Gitpod
+### Testing Using Gitpod
 
 You can also use the Gitpod platform to execute our sample repository. It will fetch all the sample codebases and trigger the CLI to execute the tests.
 
@@ -275,7 +275,7 @@ Follow the below steps to run Test using Gitpod:
 You can also implement [Secret Keys](/support/docs/hyperexecute-how-to-save-and-manage-secrets/) in your YAML file.
 :::
 
-#### Navigation in Automation Dashboard
+### Navigation in Automation Dashboard
 
 Every test run on the HyperExecute has a unique *jobId* associated with it. Each *jobId* can in turn constitute single (or multiple) *groupId*(s). You can visit [HyperExecute Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build) for checking the status of the test execution.
 
@@ -287,7 +287,7 @@ The snapshot below shows the videos, logs and other meta data for that specific 
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/testng_artifacts_2.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
-#### Using the Mocha Agent Skill with TestMu AI
+### Using the Mocha Agent Skill with TestMu AI
 ***
 
 The [mocha-skill](https://github.com/LambdaTest/agent-skills/tree/main/mocha-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
@@ -313,7 +313,7 @@ It provides structured guidance for:
 * Debugging patterns
 * CI/CD integration
 
-##### Installing Mocha Agent Skill
+### Installing Mocha Agent Skill
 ***
 
 Install a Mocha Agent Skill using the command below:
@@ -342,7 +342,7 @@ You can execute your Jest framework tests on HyperExecute via two different meth
 - **Using Local System** - You can use your own local machine to execute tests.
 - **Using Gitpod Platform** - Execute tests using GitPod. (Requires a [Gitpod](https://gitpod.io/login/) account)
 
-#### Configure Your Test Suite
+### Configure Your Test Suite
 
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
@@ -379,7 +379,7 @@ const capability = {
 
 > You can also use **dev** and **beta** browser versions. To generate capabilities for your test requirements, you can use our inbuilt 🔗 <a href={`${BRAND_URL}/capabilities-generator/`}>Capabilities Generator</a>.
 
-#### Configure YAML in your Test Suite
+### Configure YAML in your Test Suite
 
 Configure your YAML file as per your use cases using **key value** pairs.
 
@@ -427,7 +427,7 @@ testRunnerCommand: npm test -- $test
 jobLabel: [puppeteer-JestJS, linux, autosplit]
 ```
 
-#### Execute your Test Suite
+### Execute your Test Suite
 
 > **NOTE :** In case of MacOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
 
@@ -453,19 +453,19 @@ OR use this command if you have not exported your username and access key.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/cmd_2.png').default} alt="Jest HyperExecute Terminal Logs"  width="1920" height="868" className="doc_img"/>
 
-#### Monitor the Test Execution
+### Monitor the Test Execution
 
 Visit the [HyperExecute Dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/testng_autosplit_1.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
-#### Download Artifacts and Reports
+### Download Artifacts and Reports
 
 HyperExecute also facilitates the provision to download the [Artifacts](/support/docs/hyperexecute-artifacts/) and [Reports](/support/docs/hyperexecute-job-reports/) on your local machine. Click on the corresponding button to download your generated artifacts and reports.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/testng_autosplit_2.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
-#### Testing Using Gitpod
+### Testing Using Gitpod
 
 You can also use the Gitpod platform to execute our sample repository. It will fetch all the sample codebases and trigger the CLI to execute the tests.
 
@@ -494,7 +494,7 @@ Follow the below steps to run Test using Gitpod:
 You can also implement [Secret Keys](/support/docs/hyperexecute-how-to-save-and-manage-secrets/) in your YAML file.
 :::
 
-#### Navigation in Automation Dashboard
+### Navigation in Automation Dashboard
 
 Every test run on the HyperExecute has a unique *jobId* associated with it. Each *jobId* can in turn constitute single (or multiple) *groupId*(s). You can visit [HyperExecute Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build) for checking the status of the test execution.
 
@@ -506,7 +506,7 @@ The snapshot below shows the videos, logs and other meta data for that specific 
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/testng_artifacts_2.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
-#### Using the Jest Agent Skill with TestMu AI
+### Using the Jest Agent Skill with TestMu AI
 ***
 
 The [jest-skill](https://github.com/LambdaTest/agent-skills/tree/main/jest-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
@@ -532,7 +532,7 @@ It provides structured guidance for:
 * Debugging patterns
 * CI/CD integration
 
-##### Installing Jest Agent Skill
+### Installing Jest Agent Skill
 ***
 
 Install a Jest Agent Skill using the command below:
@@ -561,7 +561,7 @@ You can execute your Codecept framework tests on HyperExecute via two different 
 - **Using Local System** - You can use your own local machine to execute tests.
 - **Using Gitpod Platform** - Execute tests using GitPod. (Requires a [Gitpod](https://gitpod.io/login/) account)
 
-#### Configure Your Test Suite
+### Configure Your Test Suite
 
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
@@ -579,7 +579,7 @@ By setting up the Hub endpoint, you establish the communication channel between 
 
 > You can also use **dev** and **beta** browser versions. To generate capabilities for your test requirements, you can use our inbuilt 🔗 <a href={`${BRAND_URL}/capabilities-generator/`}>Capabilities Generator</a>.
 
-#### Configure YAML in your Test Suite
+### Configure YAML in your Test Suite
 
 Configure your YAML file as per your use cases using **key value** pairs.
 
@@ -628,7 +628,7 @@ testRunnerCommand: npx codeceptjs run $test --steps
 jobLabel: [puppeteer-CodeceptJS, linux, autosplit]
 ```
 
-#### Execute your Test Suite
+### Execute your Test Suite
 
 > **NOTE :** In case of MacOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
 
@@ -654,19 +654,19 @@ OR use this command if you have not exported your username and access key.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/cmd_2.png').default} alt="CodeceptJS HyperExecute Terminal Logs"  width="1920" height="868" className="doc_img"/>
 
-#### Monitor the Test Execution
+### Monitor the Test Execution
 
 Visit the [HyperExecute Dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/testng_autosplit_1.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
-#### Download Artifacts and Reports
+### Download Artifacts and Reports
 
 HyperExecute also facilitates the provision to download the [Artifacts](/support/docs/hyperexecute-artifacts/) and [Reports](/support/docs/hyperexecute-job-reports/) on your local machine. Click on the corresponding button to download your generated artifacts and reports.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/testng_autosplit_2.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
-#### Testing Using Gitpod
+### Testing Using Gitpod
 
 You can also use the Gitpod platform to execute our sample repository. It will fetch all the sample codebases and trigger the CLI to execute the tests.
 
@@ -695,7 +695,7 @@ Follow the below steps to run Test using Gitpod:
 You can also implement [Secret Keys](/support/docs/hyperexecute-how-to-save-and-manage-secrets/) in your YAML file.
 :::
 
-#### Navigation in Automation Dashboard
+### Navigation in Automation Dashboard
 
 Every test run on the HyperExecute has a unique *jobId* associated with it. Each *jobId* can in turn constitute single (or multiple) *groupId*(s). You can visit [HyperExecute Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build) for checking the status of the test execution.
 

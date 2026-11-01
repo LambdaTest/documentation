@@ -175,10 +175,10 @@ ACCELQ is the most powerful software testing tool to achieve Codeless test autom
 ## Additional Details
 ### Where to Find the Parameters?
 
-#### ACCELQ - URL, User-ID, API key, Tenant Code
+### ACCELQ - URL, User-ID, API key, Tenant Code
 <img loading="lazy" src={require('../assets/images/hyperexecute/integration/products/accelq/accelq-1.webp').default} alt="accelq-dashboard"  width="1920" height="868" className="doc_img"/>
 
-#### How to create a Job ID?
+### How to create a Job ID?
 
 **Step 1:** Create an LT profile with with the below configuration and save it
 <img loading="lazy" src={require('../assets/images/hyperexecute/integration/products/accelq/accelq-2.webp').default} alt="accelq-dashboard"  width="1920" height="868" className="doc_img"/>
@@ -196,7 +196,7 @@ Agent.property file is a type of file that gets generated when you configures th
 - You can configure your [<BrandName /> from ACCELQ Agent Dashboard](/support/docs/accelq-integration/#integrating-lambdatest-from-accelq-agent-dashboard)
 - You can also find the same at the location `(ACCELQAgent/AgentInstances/<agent folder>/agent.properties)` in your local system.
 
-#### Sample File
+### Sample File
 <VerifiedTag value="Verified" />
 
 ```bash
@@ -325,7 +325,7 @@ provider_username = <LambdaTest Username>
 
 ### Sample YAML Files
 
-#### Single YAML File
+### Single YAML File
 
 <VerifiedTag value="Verified" />
 
@@ -353,7 +353,7 @@ testDiscovery:
 testRunnerCommand: node $env:ACCELQ --url "https://poc.accelq.io" --userID "<Accelq UserID>" --apiKey "<Accelq API Key>" --tenantCode "poc" --jobID "<Accelq jobID>"; C:\Users\ltuser.ghtestVM\Downloads\acc_installer_win\ACCELQAgent\Dashboard\AQAgentControllerShutdown.exe;
 ```
 
-#### Parallel YAML File
+### Parallel YAML File
 
 <VerifiedTag value="Verified" />
 

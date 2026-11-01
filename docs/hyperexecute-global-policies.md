@@ -298,13 +298,13 @@ The **Project Scope** tab decides where the rule applies. It has two controls th
 
 Between them, you can set up any pattern: from "every project, no exceptions" to "just these projects, minus one."
 
-#### Including: All Projects or a specific list
+### Including: All Projects or a specific list
 
 Keep the Scope dropdown on **All Projects** when the rule should apply to the whole org. Any new project you create later is covered automatically; you don't need to come back and add it. Use this for rules you want every team to follow (caching required, retry caps, forced reports).
 
 Pick the specific-list option when the rule should only apply to a few projects you choose. For example, trying a `maxRetries` cap on one team first, or a `post` policy that only makes sense for the projects publishing to a shared dashboard. Only the projects you tick are covered, and new projects you create later are **not** added automatically.
 
-#### Excluding projects from the chosen set
+### Excluding projects from the chosen set
 
 Switch **Exclude Specific Projects** to **Yes** when you want to leave a few projects out of the Scope you picked. The **Add Excluded Projects** search appears below. Type a project name, then tick the ones you want to leave out. You can tick as many as you need.
 
@@ -312,7 +312,7 @@ Switch **Exclude Specific Projects** to **Yes** when you want to leave a few pro
 
 Use the exclude list for genuine exceptions. If one team has a real reason to opt out, add their project here instead of changing the rule for everyone. Keep the list short, because every entry is an exception someone has to remove later.
 
-#### Which combination to use
+### Which combination to use
 
 | You want to… | Scope | Exclude Specific Projects |
 | :---- | :---- | :---- |
@@ -486,7 +486,7 @@ The response returns the created policy's generated `id`, which you use for ever
 `default` is required. HyperExecute injects the command block matching the job's `runson` value, and falls back to the `default` block for any OS you didn't list. If you supply commands for a single OS only, they are treated as universal and run on every job in scope.
 :::
 
-#### `prepend` mode
+### `prepend` mode
 
 `post` and `afterEachScenario` accept `prepend` as well as `append`. Use `prepend` when your commands have to run **before** anything the developer wrote, for example cleaning a workspace or warming a cache that their steps depend on. The `value` shape is identical to `append`; only the `mode` changes:
 
@@ -508,7 +508,7 @@ The response returns the created policy's generated `id`, which you use for ever
 }
 ```
 
-#### `afterEachScenario`
+### `afterEachScenario`
 
 `afterEachScenario` policies share the per-OS `commands` shape used by `globalPost` and `post`, and support both `append` and `prepend`. They inject into the per-scenario teardown rather than a job- or task-level post step. Use this for anything that has to run after every scenario: clearing cookies, resetting fixtures, capturing per-scenario logs.
 

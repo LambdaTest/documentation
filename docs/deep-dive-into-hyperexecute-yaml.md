@@ -954,7 +954,7 @@ testDiscovery:
 ```
 
 It contains the following attributes: 
-#### `type` 
+### `type` 
 <VerifiedTag value="Verified" />
 
 ```yaml
@@ -981,7 +981,7 @@ type: automatic
 
 In summary, `type:raw` is a basic and straightforward approach for discovering tests based on a specified command, while `type:automatic` provides more flexibility and advanced capabilities by leveraging external tools and backend logic.
 
-#### `mode`
+### `mode`
 This attribute defines where the test discovery occurs and how it is executed. HyperExecute supports two discovery modes: `local` and `remote`.
 
 > **NOTE:** The earlier `dynamic` discovery mode has been deprecated. Use `remote` instead for all new and existing YAML configurations.
@@ -1010,7 +1010,7 @@ This setup helps to ease the discovery process and makes it more efficient, espe
 
 > **NOTE :** [`type`](/support/docs/deep-dive-into-hyperexecute-yaml/#type) is not required with remote discovery.
 
-#### Key Features:
+### Key Features:
 - **Centralized Discovery Tasks:** Tests are discovered remotely in a Virtual Machines designed for this purpose. Discovery tasks focus solely on identifying the tests without executing them, optimizing the discovery process.
 
 - **Orchestration Support:** Once tests are identified, orchestration algorithms ensure they are efficiently distributed across Virtual Machines, reducing idle time and improving resource utilization.
@@ -1021,7 +1021,7 @@ This setup helps to ease the discovery process and makes it more efficient, espe
 
 - **Code Caching:** For users cloning their codebase via Git, Remote Discovery caches the code during the discovery task, reducing Git rate limits and accelerating the execution tasks.
 
-#### `command`
+### `command`
 The command that fetches the list of test scenario that would be further executed using the value passed in `testRunnerCommand`
 <VerifiedTag value="Verified" />
 
@@ -1155,7 +1155,7 @@ In the above example we have total of 3 combinations for each os i.e.<br />
 
 So each combination will run on a parallelism provided in the yaml. Here all combinations will run on a parallelism of 2.
 
-#### Platform specific parallelism -> `macParallelism`, `winParallelism`, and `linuxParallelism`
+### Platform specific parallelism -> `macParallelism`, `winParallelism`, and `linuxParallelism`
 
 If you want to provide different parallelism for macOS, linux and windows. If any of the specific operating system parallelism is not present it will consider the `parallelism` as the default value.
 
@@ -1185,7 +1185,7 @@ testRunnerCommand: mvn test -Dcucumber.options="$test" -Dscenario="$test" -DOs="
 # This command runs the test using Maven and passes in the options for Cucumber, the scenario to run, and the operating system to use.
 ```
 
-#### Platform specific `testRunnerCommand`
+### Platform specific `testRunnerCommand`
 
 In [hybrid mode](/support/docs/hyperexecute-test-splitting-and-multiplexing/#hybrid-strategy-in-hyperexecute), you can run your tests on multiple operating system using the same yaml. You can provide different `testRunnerCommand` for macOS, linux and windows.
 
@@ -1263,7 +1263,7 @@ env:
   PLATFORM: windows
 ```
 
-#### Special Character Encoding
+### Special Character Encoding
 
 HyperExecute VMs support special character encoding, ensuring tests with multilingual content and special characters (e.g., ñ, á, é, í, ó, ú, ü, ¿, ¡) execute correctly. You can configure this using the `env` and `pre` flags in your YAML file.
 
@@ -1357,11 +1357,11 @@ The `retryOnFailure` enables automatic retries for failed test scenarios only wh
 retryOnFailure: true
 ```
 
-#### 🔍 Important Behavior Notes:
+### 🔍 Important Behavior Notes:
 - Retries are triggered only if the test command fails.
 - Retries are not triggered if the command exits successfully but the test results are marked as failed by the user.
 
-#### ✅ Use Case:
+### ✅ Use Case:
 This feature helps avoid re-running the entire job to determine if a test failure is due to a genuine issue or a transient problem (e.g., flaky tests, network hiccups). By enabling `retryOnFailure`, only the failing command is retried, allowing for quicker feedback and more efficient test execution.
 
 :::tip
@@ -1450,7 +1450,7 @@ framework:
 ```
 :::
 
-#### Regex Support for Dynamic Report Paths
+### Regex Support for Dynamic Report Paths
 You can now use **glob-style wildcards `(**)`** in the location field of `partialReports` to dynamically match nested folders and custom report paths. This is especially useful when your test reports are generated inside directories that include date stamps, environment names, or other runtime variables.
 
 Example:
@@ -1515,7 +1515,7 @@ errorCategorizedReport:
 ### `jobLabel`
 The `jobLabel` YAML key is used to add tags or labels to jobs. This allows you to search your jobs using the labels or tags assigned to them. 
 
-#### Prioritize Your Job Pipeline
+### Prioritize Your Job Pipeline
 
 To prioritize your jobs, you need to add the required priority to the jobLabel key in the YAML file e.g `high`, `low`, and `'medium'`. With `'high'` priority jobs triggered first, followed by `'medium'` priority jobs and finally `'low'` priority jobs. The values are case insensitive and the default priority is 'medium'.
 
@@ -1571,12 +1571,12 @@ The uploadArtefact flag is not currently supported for tests running with the **
 ### `globalPre`
 The `globalPre` flag allows you to define a pre-execution step that runs once before any of your tasks starts. This flag ensures that all necessary setup tasks, such as installing dependencies, configuring environments, or initializing resources, are completed before test execution begins.
 
-#### Functionality
+### Functionality
 - Runs before any test execution starts, ensuring the environment is properly configured.
 - Executes on a separate machine (VM) or the local machine, based on the [test discovery mode](/support/docs/deep-dive-into-hyperexecute-yaml/#mode) selected.
 - Useful for setup tasks, such as fetching credentials, initializing databases, or downloading required files.
 
-#### Limitations
+### Limitations
 - This feature is supported in YAML version 0.1 and 0.2 only.
 - `remote` mode is not supported for **XCUI** and **Espresso** framework jobs. Default mode for these frameworks is `local`.
 
@@ -1606,7 +1606,7 @@ beforeAll:
 ```
 ::: -->
 
-#### Parameters
+### Parameters
 | Parameter | Type | Description |
 |-----------|------|-------------|
 | mode | string | Defines where the pre-step commands will be executed. <br /> Options: [local or remote](/support/docs/deep-dive-into-hyperexecute-yaml/#mode). Default `mode` is `remote`.|
@@ -1614,7 +1614,7 @@ beforeAll:
 | runson | string | It specifies the operating system on which all the task would run in case of `remote mode`. By default, it is set to `linux`. |
 | cache | boolean | It is used to cache the payload after all commands have executed. It is useful in cases like: <br /> &nbsp;&nbsp;&nbsp; - If you want to made some modification in the payload at runtime by executing some set of commands. <br /> &nbsp;&nbsp;&nbsp; - If the payload is fetched from git source. By caching the payload, git rate limiting can be avoided as the payload will only be fetched once per job with `cache: true`. |
 
-#### Difference between `globalPre` and `pre` flags
+### Difference between `globalPre` and `pre` flags
 | Scenario | globalPre | pre |
 |----------|-----------|-----|
 |Purpose | Global setup (e.g., install dependencies, initialize environment) | Task-specific setup (e.g., prepare test data) |
@@ -1627,12 +1627,12 @@ beforeAll:
 ### `globalPost`
 The `globalPost` flag defines a post-execution step that runs once after all tasks have completed. This step ensures that cleanup tasks, such as removing temporary files, logging results, or notifying external systems, are performed after test execution.
 
-#### Functionality
+### Functionality
 - Runs after all test execution is completed, ensuring final cleanup and reporting.
 - Executes on a separate machine (VM) or the local machine, based on the mode selected.
 - Useful for cleanup tasks, such as deleting test artifacts, summarizing reports, or deallocating cloud resources.
 
-#### Limitations
+### Limitations
 - This feature is supported in YAML version 0.1 and 0.2 only.
 - `remote` mode is not supported for **XCUI** and **Espresso** framework jobs. Default mode for these frameworks is `local`.
 
@@ -1662,14 +1662,14 @@ afterAll:
 ```
 ::: -->
 
-#### Parameters
+### Parameters
 | Parameter | Type | Description |
 |-----------|------|-------------|
 | mode | string | Defines where the post-step commands will be executed. <br /> Options: [local or remote](/support/docs/deep-dive-into-hyperexecute-yaml/#mode). Default `mode` is `remote`. |
 | commands | list | List of shell commands to execute after test execution completes. |
 | runson | string | It specifies the operating system on which all the task would run in case of `remote mode`. By default, it is set to `linux`. |
 
-#### Difference between `globalPost` and `post` flags
+### Difference between `globalPost` and `post` flags
 | Scenario | globalPost |	post |
 |----------|------------|------|
 |Purpose | Global cleanup (e.g., remove logs, finalize reports) | Task-specific cleanup (e.g., delete temporary files) |
@@ -1827,7 +1827,7 @@ Regular Expressions provides more granular control over when test retries are tr
 - It works seamlessly with Cypress, CDP, and Selenium framework tests.
 - It is supported in both YAML 0.1 and 0.2
 
-#### Configuration:
+### Configuration:
 
 - Set `retryOnFailure: true` to activate the retry feature.
 - Indicate the maximum number of retry attempts with `maxRetries: <number>`.
@@ -2063,14 +2063,14 @@ This can be utilised for advanced use cases where teams want to define status in
 
 There are two scenarios associated with it:
 
-#### Scenario 1: When Sessions do not open up for certain scenarios:
+### Scenario 1: When Sessions do not open up for certain scenarios:
 -  For certain scenarios that do not open up a session hence no tests are associated with that scenario, because of this the scenario gets marked as skipped and the task as partially completed. Need a way to mark those scenarios as completed/passed instead of skipped and see a green tick instead of a grey tick.
 
 **Solution :** When `scenarioCommandStatusOnly` is set `true` in YAML, it will mark the task as passed even though no test is associated to it. In the given screenshot **task 8** is passed even though no test is associated to it.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/yaml/scenario-1.png').default} alt="Image" className="doc_img"/>
 
-#### Scenario 2: When test cases are run n no of times:
+### Scenario 2: When test cases are run n no of times:
 - Some times a user might runs some test cases n no of times inherently due to framework retries etc.  Those test cases are considered as separate entries for us, and if one fails, scenario is marked as failed and hence the task and job is marked as fail. Need a way to update status of the task as if a test case first fails and then passes, it should be shown as passing and with green tick. Currently it shows as failed.
 
 **Solution :** When `scenarioCommandStatusOnly` is set `true` in YAML, it will mark the status of scenario as passed.
@@ -2155,7 +2155,7 @@ DataJsonPaths helps to distribute data/configs over the VMs. In this you can cre
 
 To access the data from the JSON files, there are primarily 2 methods:
 
-#### 1. By reading the JSON file
+### 1. By reading the JSON file
 
 In the JSON file, we have a data object and not an array of objects, hence you can directly read the data from the file.
 
@@ -2168,7 +2168,7 @@ In the JSON file, we have a data object and not an array of objects, hence you c
 }
 ```
 
-#### 2. Using via env variables
+### 2. Using via env variables
 
 You can use the env variables to access the defined parameters as:
 
@@ -2211,7 +2211,7 @@ dataJsonBuilder:
         values: [<value1>, <value2>, ...]
 ```
 
-#### Configuration
+### Configuration
 - **path (required) :** Specifies the path to the JSON file containing the data. Example:
   <VerifiedTag value="Verified" />
 
@@ -2242,7 +2242,7 @@ dataJsonBuilder:
         values: ["@x", "@y"]
     ```
 
-#### Working of `dataJsonBuilder`
+### Working of `dataJsonBuilder`
 
 - The **input JSON data** should follow this format:
   <VerifiedTag value="Verified" />
@@ -2311,7 +2311,7 @@ dataJsonBuilder:
   ```
 The objects with **usernames** `"abc"` and `"bcd"` and **tags** `"@x"` and `"@y"` are selected as they meet the criteria defined by the attributes filter.
 
-#### Indexing and Test Case Distribution:
+### Indexing and Test Case Distribution:
 After filtering, the JSON data is indexed to distribute test cases. Here’s how the distribution works:
 - **VM Allocation:** Each filtered JSON object corresponds to a separate VM. If the filtered JSON contains 3 objects, 3 VMs are allocated.
 - **Test Case Distribution:** Test cases are then distributed across these VMs. For each VM, test cases are distributed based on the `username` present in the filtered JSON objects. All test cases related to the same `username` are assigned to the VMs containing that `username`.
@@ -2353,7 +2353,7 @@ So as per the above filtered JSON data:
 
 Test cases related to `username: "abc"` will be split between **VM1** and **VM3**, while test cases related to `username: "bcd"` will be handled by **VM2**.
 
-#### Use Cases
+### Use Cases
 - **Filtering and Indexing :** When both filtering and indexing are required, filters are applied first, followed by indexing of the filtered results.
   <VerifiedTag value="Verified" />
 
@@ -2509,7 +2509,7 @@ To set `buildName`:
 These commands utilize `--labels` to specify the parameter being configured and `--vars "name=xyz"` to define the value to be replaced for `${name}`.
 :::
 
-#### Key Pointers
+### Key Pointers
 
 - #### Build Configuration Handling:
 
@@ -2616,7 +2616,7 @@ This feature allows you to run long-running **Application Server** tasks like *"
 
 To enable this feature from the YAML file you can use either of the below mentioned methods:
 
-#### 1. Using `backgroundDirectives`
+### 1. Using `backgroundDirectives`
 
 <VerifiedTag value="Verified" />
 
@@ -2638,7 +2638,7 @@ It contains the following attributes:
 
 - The **`name` **property specifies the name of your Background Service.
 
-#### 2. Using `background`
+### 2. Using `background`
 
 <VerifiedTag value="Verified" />
 
@@ -2891,7 +2891,7 @@ base:
 
 Go through the example attached below to understand how the resultant YAML will function if you inherit a base YAML in your parent YAML file. 
 
-#### Parent YAML
+### Parent YAML
 
 <VerifiedTag value="Verified" />
 
@@ -2927,7 +2927,7 @@ maxRetries: 1
 jobLabel: [selenium-testng, linux, v1, autosplit]
 ```
 
-#### Base YAML
+### Base YAML
 <VerifiedTag value="Verified" />
 
 ```yaml
@@ -2959,7 +2959,7 @@ maxRetries: 1
 jobLabel: [selenium-testng, autosplit]
 ```
 
-#### Resultant YAML
+### Resultant YAML
 <VerifiedTag value="Verified" />
 
 ```yaml
@@ -3031,7 +3031,7 @@ The ```framework``` field in HyperExecute YAML Version 0.2 allows you to configu
 | [locale](#locale) | String | No | Defines the regional format settings such as date, time, currency, and number conventions. |
 | [mitmProxy](#mitmproxy) | Boolean | No | Capture network logs directly from emulator sessions using MITM. |
 
-#### `name`
+### `name`
 Specifies the testing framework used in your repository.
 
 <VerifiedTag value="Verified" />
@@ -3077,7 +3077,7 @@ framework:
 - For **gradle/spock**, also apply the `groovy` plugin, since Spock specifications are written in Groovy.
 :::
 
-#### `flags`
+### `flags`
 Specifies the command line flags to pass to the custom runner for both test discovery and execution.
 
 <VerifiedTag value="Verified" />
@@ -3088,7 +3088,7 @@ framework:
   flags: ["-Dplatname=win", "-Dgroups=selenium-test"]
 ```
 
-#### `discoveryFlags`
+### `discoveryFlags`
 Specifies the command line flags to pass to the custom runner for test discovery only.
 
 <VerifiedTag value="Verified" />
@@ -3099,7 +3099,7 @@ framework:
   discoveryFlags: ["-Dgroups=selenium-test"]
 ```
 
-#### `runnerFlags`
+### `runnerFlags`
 Specifies the command line flags to pass to the custom runner for test execution only.
 
 <VerifiedTag value="Verified" />
@@ -3110,7 +3110,7 @@ framework:
   runnerFlags: ["-Dgroups=database"]
 ```
 
-#### `discoveryType`
+### `discoveryType`
 Specifies the level at which user wants to discover the tests. Supported values are "method" and "class". The default is "method".
 
 <VerifiedTag value="Verified" />
@@ -3130,7 +3130,7 @@ framework:
 - For **wdio/mocha** and **wdio/jasmine** the supported discovery types are **test, spec, suite** and **wdiosuite**. The default is **spec**. 
 :::
 
-#### `discoveryMode`
+### `discoveryMode`
 Specifies where the test discovery runs. Supported values are `local` and `remote`.
 
 - **`local`**: Test discovery runs on the same machine as the HyperExecute CLI and needs the framework dependencies available locally.
@@ -3149,7 +3149,7 @@ framework:
 Remote discovery is supported for all Java runners: **maven/testng**, **maven/junit4**, **maven/junit5**, **maven/spock**, **gradle/testng**, **gradle/junit4**, **gradle/junit5**, and **gradle/spock**.
 :::
 
-#### `workingDirectory`
+### `workingDirectory`
 <!-- Specifies the working directory where all discovery and execution commands will be executed. -->
 
 The `working directory` specifies the location of the directory in which all test discovery and execution commands will be run, as well as the location of any files or directories that are created as a result of the command execution.  If the `workingDirectory` option is not specified, then the working directory will be the directory where the YAML file is located.
@@ -3165,7 +3165,7 @@ framework:
     - "-Dplatname=win"
 ```
 
-#### `defaultReports`
+### `defaultReports`
 Specifies whether to create default reports for the specified framework.
 
 <VerifiedTag value="Verified" />
@@ -3178,7 +3178,7 @@ framework:
     - "-Dplatname=win"
 ```
 
-#### `region`
+### `region`
 
 The region parameter specifies the region or location where the Appium tests will be executed. Our platform supports the following three regions:
 
@@ -3196,7 +3196,7 @@ framework:
     region: us
 ```
 
-#### `artifacts`
+### `artifacts`
 
 To generate artifacts for your Espresso tests, add the `artifacts: true` flag in your YAML file:
 
@@ -3211,7 +3211,7 @@ framework:
 > 📕 Learn [how to perform group-based test discovery in TestNG](/support/docs/hyperexecute-how-to-perform-group-based-test-discovery-in-testng)
 
 
-#### `language`
+### `language`
 
 Specifies the device’s system language for the test session. This determines the language in which your app’s UI and strings will be displayed.
 
@@ -3223,7 +3223,7 @@ framework:
     language: es
 ```
 
-#### `locale`
+### `locale`
 
 Defines the regional format settings such as date, time, currency, and number conventions.
 
@@ -3236,7 +3236,7 @@ framework:
 ```
 
 
-#### `mitmProxy`
+### `mitmProxy`
 
 You can now capture network logs directly from emulator sessions using MITM. This enhancement enables deeper debugging of API calls, request/response payloads, and overall network traffic during test execution.
 
@@ -3351,11 +3351,11 @@ Smart Caching operates on a distributed caching architecture, leveraging a netwo
 
 The core functionalities of Smart Caching include:
 
-#### Dependency Doping
+### Dependency Doping
 
 Caches frequently used libraries, frameworks, and test assets at caching nodes, eliminating the need for repeated downloads and reducing test execution times.
 
-#### Environment Enhancers
+### Environment Enhancers
 
 Pre-configures and stores ready-to-use testing environments based on test configurations, eliminating time-consuming environment setup for each test case.
 
