@@ -164,6 +164,9 @@ module.exports = {
           "hyperexecute-mcp-server-release-notes-1-0-0",
         ],
       },
+
+      // FAQs
+      { type: "doc", id: "he-general-faqs", label: "FAQs", className: "menu-bold" },
     ],
   ],
 

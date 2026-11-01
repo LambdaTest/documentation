@@ -187,5 +187,5 @@ Open the [HyperExecute Dashboard](https://www.testmuai.com/login/?redirectTo=htt
 
 <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap' }}>
   <DocCard heading="Auto-split test execution" link="/support/docs/hyperexecute-test-splitting-and-multiplexing/#autosplit-strategy" description="Distribute tests across parallel machines automatically." />
-  <DocCard heading="HyperExecute FAQs" link="https://www.testmuai.com/support/faq/?tab=hye" description="Common questions on YAML, the CLI, and the platform." />
+  <DocCard heading="HyperExecute FAQs" link="/support/docs/hyperexecute-general-faqs/" description="Common questions on YAML, the CLI, and the platform." />
 </div>

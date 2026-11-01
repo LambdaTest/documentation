@@ -253,7 +253,7 @@ For enterprises that want to keep everything behind their own firewalls, HyperEx
 
 You can use HyperExecute’s [Quickstart feature](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/quickstart) to run your first test, and go through our Concepts page to understand the ins and out of HyperExecute. 
 
-[Frequently asked questions](https://www.testmuai.com/support/faq/?tab=hye) about HyperExecute Features.
+[Frequently asked questions](/support/docs/hyperexecute-general-faqs/#hyperexecute-feature-faqs) about HyperExecute Features.
 
 ## List of Supported Languages and Addons w.r.t. Operating System
 
