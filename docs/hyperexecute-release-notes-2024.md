@@ -129,7 +129,7 @@ Now, you can download artifacts for your test runs on both **Espresso** and **XC
 
 - To generate artifacts for your XCUI tests, add the `artifacts: true` flag in your YAML file and pass the `--download-artifacts` flag with the CLI command
 
-  > 📕 Refer to our detailed documentation to generate [XCUI Artifacts](/support/docs/hyperexecute-xcui-testing/#step-5-generate-artifacts)
+  > 📕 Refer to our detailed documentation to generate [XCUI Artifacts](/support/docs/hyperexecute-xcui-testing/#step-5-generate-reports-and-artifacts)
 
 ### Browser and Selenium Updates
 
@@ -552,7 +552,7 @@ runtime:
     version: 8.6.5
 ```
 
-📕 Refer to our [runtime YAML flag](/support/docs/deep-dive-into-hyperexecute-yaml/#runtime/) to know more!
+📕 Refer to our [runtime YAML flag](/support/docs/deep-dive-into-hyperexecute-yaml/#runtime) to know more!
 
 ---
 

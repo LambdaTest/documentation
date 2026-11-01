@@ -109,22 +109,22 @@ Use this page to see **which rules App Scanner / automation can report** (with l
 
 | Rule | WCAG (maps) | Doc |
 |------|-------------|-----|
-| Interactive Role Undefined | 4.1.2 | [Rule →](/support/docs/accessibility-android-rules/#interactive-role-undefined) |
+| Interactive Role Undefined | 4.1.2 | [Rule →](/support/docs/accessibility-android-rules/#interactive-role-undefined-android) |
 | Missing Image Alt | 1.1.1 | [Rule →](/support/docs/accessibility-android-rules/#missing-image-alt) |
 | Missing View Accessibility | 4.1.2 | [Rule →](/support/docs/accessibility-android-rules/#missing-view-accessibility) |
 | Unlabeled Checkbox Element | 4.1.2 | [Rule →](/support/docs/accessibility-android-rules/#unlabeled-checkbox-element) |
 | Insufficient Color Ratio | 1.4.3 | [Rule →](/support/docs/accessibility-android-rules/#insufficient-color-ratio) |
 | Missing Field Label | 3.3.2 | [Rule →](/support/docs/accessibility-android-rules/#missing-field-label) |
-| Non-accessible Interaction | 4.1.2 | [Rule →](/support/docs/accessibility-android-rules/#non-accessible-interaction) |
+| Non-accessible Interaction | 4.1.2 | [Rule →](/support/docs/accessibility-android-rules/#non-accessible-interaction-android) |
 | Missing Screen Title | 2.4.2 | [Rule →](/support/docs/accessibility-android-rules/#missing-screen-title) |
 | Unlabeled Toggle Control | 4.1.2 | [Rule →](/support/docs/accessibility-android-rules/#unlabeled-toggle-control) |
-| Mismatched Label Text *(Beta)* | 2.5.3 | [Rule →](/support/docs/accessibility-android-rules/#mismatched-label-text-beta) |
+| Mismatched Label Text *(Beta)* | 2.5.3 | [Rule →](/support/docs/accessibility-android-rules/#mismatched-label-text-android) |
 | Missing Input Value | 4.1.2 | [Rule →](/support/docs/accessibility-android-rules/#missing-input-value) |
 | Inaccessible Text Focus | 4.1.2 | [Rule →](/support/docs/accessibility-android-rules/#inaccessible-text-focus) |
 | Misplaced Field Label *(Beta)* | 2.5.3 | [Rule →](/support/docs/accessibility-android-rules/#misplaced-field-label-beta) |
 | Nested Control Issues | 4.1.2 | [Rule →](/support/docs/accessibility-android-rules/#nested-control-issues) |
 | Unnamed Nested Element | 4.1.2 | [Rule →](/support/docs/accessibility-android-rules/#unnamed-nested-element) |
-| Fixed Orientation Lock | 1.3.4 | [Rule →](/support/docs/accessibility-android-rules/#fixed-orientation-lock) |
+| Fixed Orientation Lock | 1.3.4 | [Rule →](/support/docs/accessibility-android-rules/#fixed-orientation-lock-android) |
 | Undersized Touch Target | 2.5.5 | [Rule →](/support/docs/accessibility-android-rules/#undersized-touch-target) |
 | Insufficient Target Spacing | 2.5.5 | [Rule →](/support/docs/accessibility-android-rules/#insufficient-target-spacing) |
 | Duplicate Accessibility Label | 4.1.2 | [Rule →](/support/docs/accessibility-android-rules/#duplicate-accessibility-label) |
@@ -133,7 +133,7 @@ Use this page to see **which rules App Scanner / automation can report** (with l
 | Redundant State Keyword in Accessibility Label | 4.1.2 | [Rule →](/support/docs/accessibility-android-rules/#redundant-state-keyword-in-accessibility-label) |
 | Redundant Role Keyword in Accessibility Label | 4.1.2 | [Rule →](/support/docs/accessibility-android-rules/#redundant-role-keyword-in-accessibility-label) |
 | Non-Descriptive Link Text | 2.4.4 | [Rule →](/support/docs/accessibility-android-rules/#non-descriptive-link-text) |
-| Traversal Order Does Not Match Visual Layout *(Beta)* | 2.4.3 | [Rule →](/support/docs/accessibility-android-rules/#traversal-order-does-not-match-visual-layout-beta) |
+| Traversal Order Does Not Match Visual Layout *(Beta)* | 2.4.3 | [Rule →](/support/docs/accessibility-android-rules/#traversal-order-does-not-match-visual-layout) |
 | Dynamic Type Support | 1.4.4 | [Rule →](/support/docs/accessibility-android-rules/#dynamic-type-support) |
 | Non-Responsive Container Clips Text | 1.4.10 | [Rule →](/support/docs/accessibility-android-rules/#non-responsive-container-clips-text) |
 | Unique Option Names | 4.1.2 | [Rule →](/support/docs/accessibility-android-rules/#unique-option-names) |

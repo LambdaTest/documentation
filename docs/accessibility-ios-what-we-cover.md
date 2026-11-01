@@ -115,15 +115,15 @@ Use this page to see **which rules App Scanner / automation can report** (with l
 | Assistive Technology Access | 4.1.2 | [Rule →](/support/docs/accessibility-ios-rules/#assistive-technology-access) |
 | Text Truncation Issues | 1.4.4 | [Rule →](/support/docs/accessibility-ios-rules/#text-truncation-issues) |
 | Accessibility Role Definition | 4.1.2 | [Rule →](/support/docs/accessibility-ios-rules/#accessibility-role-definition) |
-| Dynamic Type Support | 1.4.4 | [Rule →](/support/docs/accessibility-ios-rules/#dynamic-type-support) |
+| Dynamic Type Support | 1.4.4 | [Rule →](/support/docs/accessibility-ios-rules/#dynamic-type-support-ios) |
 | Accessibility Label Not Punctuated | 3.3.2 | [Rule →](/support/docs/accessibility-ios-rules/#accessibility-label-not-punctuated) |
 | Missing Image Element Label | 1.1.1 | [Rule →](/support/docs/accessibility-ios-rules/#missing-image-element-label) |
 | Missing Button Element Label | 4.1.2 | [Rule →](/support/docs/accessibility-ios-rules/#missing-button-element-label) |
-| Button Element Capitalisation Check | 3.1.6 | [Rule →](/support/docs/accessibility-ios-rules/#button-element-capitalisation-check) |
+| Button Element Capitalisation Check | 3.1.6 | [Rule →](/support/docs/accessibility-ios-rules/#button-element-capitalisation-check-ios) |
 | Missing Checkbox Element Label | 4.1.2 | [Rule →](/support/docs/accessibility-ios-rules/#missing-checkbox-element-label) |
 | Missing Editable Element Label | 4.1.2 | [Rule →](/support/docs/accessibility-ios-rules/#missing-editable-element-label) |
 | Missing Switch Element Label | 4.1.2 | [Rule →](/support/docs/accessibility-ios-rules/#missing-switch-element-label) |
-| Duplicate Accessibility Label | 4.1.2 | [Rule →](/support/docs/accessibility-ios-rules/#duplicate-accessibility-label) |
+| Duplicate Accessibility Label | 4.1.2 | [Rule →](/support/docs/accessibility-ios-rules/#duplicate-accessibility-label-ios) |
 | Emoji or Symbol Used in Accessibility Label | Best Practice | [Rule →](/support/docs/accessibility-ios-rules/#emoji-or-symbol-used-in-accessibility-label) |
 | Fixed Orientation Lock | 1.3.4 | [Rule →](/support/docs/accessibility-ios-rules/#fixed-orientation-lock) |
 | Images with Text | 1.1.1 | [Rule →](/support/docs/accessibility-ios-rules/#images-with-text) |
@@ -132,8 +132,8 @@ Use this page to see **which rules App Scanner / automation can report** (with l
 | Invalid Range Values | 4.1.2 | [Rule →](/support/docs/accessibility-ios-rules/#invalid-range-values) |
 | Meaningful Sequence | 1.3.2 | [Rule →](/support/docs/accessibility-ios-rules/#meaningful-sequence) |
 | Minimum Text Size | Best Practice | [Rule →](/support/docs/accessibility-ios-rules/#minimum-text-size) |
-| Mismatched Label Text *(Beta)* | 2.5.3 | [Rule →](/support/docs/accessibility-ios-rules/#mismatched-label-text-beta) |
-| Misplaced Field Label *(Beta)* | 2.5.3 | [Rule →](/support/docs/accessibility-ios-rules/#misplaced-field-label-beta) |
+| Mismatched Label Text *(Beta)* | 2.5.3 | [Rule →](/support/docs/accessibility-ios-rules/#mismatched-label-text) |
+| Misplaced Field Label *(Beta)* | 2.5.3 | [Rule →](/support/docs/accessibility-ios-rules/#misplaced-field-label) |
 | Non-accessible Interaction | 4.1.2 | [Rule →](/support/docs/accessibility-ios-rules/#non-accessible-interaction) |
 | Non-Descriptive Link Text | 2.4.4 | [Rule →](/support/docs/accessibility-ios-rules/#non-descriptive-link-text) |
 | Overlapping Interactive Elements | 2.5.5 | [Rule →](/support/docs/accessibility-ios-rules/#overlapping-interactive-elements) |

@@ -123,7 +123,7 @@ To run **TalkBack** or **VoiceOver** inside your **Appium** tests on real device
 | Android app or web | [TalkBack on Android](#talkback-on-android) (often paired with [App Scanner](/support/docs/accessibility-app-scanner/)) |
 | Android or iOS app, inside Appium tests | [Screen Reader Automation](/support/docs/accessibility-screen-reader-automation/) (TalkBack and VoiceOver on real devices, with an auto-generated Screen Reader Report and executor hooks for assertions) |
 
-For the best coverage, run an automated or DevTools scan first (start with a [DevTools Keyboard Scan](/support/docs/accessibility-devtools/#keyboard-scan/) to catch focus-order gaps), export the top issues, then walk the same URLs with a screen reader to confirm real-world impact before filing engineering bugs. The sections below walk each screen reader end to end in that order.
+For the best coverage, run an automated or DevTools scan first (start with a [DevTools Keyboard Scan](/support/docs/accessibility-devtools/#keyboard-scan) to catch focus-order gaps), export the top issues, then walk the same URLs with a screen reader to confirm real-world impact before filing engineering bugs. The sections below walk each screen reader end to end in that order.
 
 <video class="right-side" width="100%" controls id="vid">
 <source src= {require('../assets/images/accessibility-testing/screen-reader/output.mp4').default} type="video/mp4" />

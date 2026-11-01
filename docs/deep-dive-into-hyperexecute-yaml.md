@@ -114,7 +114,7 @@ concurrency: 10
 ```
 :::tip Pro Tip
 - After analyzing your test cases and usage patterns, the platform will automatically recommend the optimal concurrency settings tailored to your needs. These recommendations are displayed in the banner on the left-hand side. [Learn more here.](/support/docs/hyperexecute-how-to-find-correct-concurrency/)
-- You can see the overall concurrency trends using our [analytics widgets.](/support/docs/analytics-modules-resource-utilization/#concurrency-trends)
+- You can see the overall concurrency trends using our [analytics widgets.](/support/docs/analytics-modules-resource-utilization/#concurrency-trends-org-level)
 :::
 
 ***
@@ -1962,17 +1962,17 @@ The ```framework``` field in HyperExecute YAML Version 0.2 allows you to configu
 |:---|:--|:---|:---|
 | [name](#name) | String | Yes | You need to specify which testing framework you are using in your repo.|
 | [flags](#flags) | Array | No | Command line flags to pass to the custom runner for both test discovery and execution.|
-| [discoveryFlags](#discoveryFlags) | Array | No | Command line flags to pass to the custom runner for test discovery only.|
-| [runnerFlags](#runnerFlags) | Array | No | Command line flags to pass to the custom runner for test execution only. |
-| [discoveryType](#discoveryType) | String | No | Specifies the type of test discovery to use. Supported values are "method" and "class". The default is "method".|
-| [discoveryMode](#discoveryMode) | String | No | Specifies where the test discovery runs. Supported values are "local" and "remote".|
+| [discoveryFlags](#discoveryflags) | Array | No | Command line flags to pass to the custom runner for test discovery only.|
+| [runnerFlags](#runnerflags) | Array | No | Command line flags to pass to the custom runner for test execution only. |
+| [discoveryType](#discoverytype) | String | No | Specifies the type of test discovery to use. Supported values are "method" and "class". The default is "method".|
+| [discoveryMode](#discoverymode) | String | No | Specifies where the test discovery runs. Supported values are "local" and "remote".|
 | [workingDirectory](#workingDirectory) | String | No | Specifies the working directory where all discovery and execution commands will be executed.|
-| [defaultReports](#defaultReports) | Boolean | No | Specifies whether to create default reports for the specified framework.|
+| [defaultReports](#defaultreports) | Boolean | No | Specifies whether to create default reports for the specified framework.|
 | [region](#region) | String | No | Specifies in which region you want to spin your appium tests.|
 | [artifacts](#artifacts) | Boolean | No | Specifies whether to generate artifacts or not |
 | [language](#language) | String | No | Specifies the device’s system language for the test session. This determines the language in which your app’s UI and strings will be displayed. |
 | [locale](#locale) | String | No | Defines the regional format settings such as date, time, currency, and number conventions. |
-| [mitmProxy](#mitmProxy) | Boolean | No | Capture network logs directly from emulator sessions using MITM. |
+| [mitmProxy](#mitmproxy) | Boolean | No | Capture network logs directly from emulator sessions using MITM. |
 
 #### `name`
 Specifies the testing framework used in your repository.

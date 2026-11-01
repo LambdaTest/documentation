@@ -214,5 +214,5 @@ Instead of adding each hostname individually, you can whitelist the wildcard dom
 
 ## Additional Links
 
-- [Network Whitelisting Guide](/support/docs/network-whitelisting-and-tunnel-guide/#2-when-dedicated-proxy-whitelisting-has-to-be-done/)
+- [Network Whitelisting Guide](/support/docs/network-whitelisting-and-tunnel-guide/#2-when-dedicated-proxy-whitelisting-has-to-be-done)
 - [Dedicated Proxy - IP Whitelisting](/support/docs/dedicated-proxy/)
