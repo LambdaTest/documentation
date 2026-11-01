@@ -30,8 +30,8 @@ module.exports = {
         type: "category",
         collapsed: true,
         label: "Languages & Frameworks",
+        link: { type: "doc", id: "hyperexecute-supported-languages-and-frameworks" },
         items: [
-          "hyperexecute-supported-languages-and-frameworks",
           "hyperexecute-selenium-testing",
           "playwright-integration-with-hyperexecute",
           "cypress-integration-with-hyperexecute",
