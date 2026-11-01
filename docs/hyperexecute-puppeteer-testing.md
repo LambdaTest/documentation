@@ -23,6 +23,7 @@ import TabItem from '@theme/TabItem';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -50,6 +51,8 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 # Running Puppeteer Tests on HyperExecute
 ---
+
+HyperExecute is an AI Native Test Orchestration Cloud Platform that empowers you to run **end-to-end** tests **quickly** and **efficiently**. It provides Just-in-Time (JIT) testing infrastructure with fast execution **speeds**, **smart orchestration**, and **detailed logs**.
 
 HyperExecute runs your Puppeteer suites at scale across popular JavaScript test runners. Pick your runner below, clone the matching sample repository, and trigger the job with the HyperExecute CLI. The setup steps are identical, only the sample repository changes.
 
@@ -272,6 +275,50 @@ The snapshot below shows the videos, logs and other meta data for that specific 
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/testng_artifacts_2.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
+#### Using the Mocha Agent Skill with TestMu AI
+***
+
+The [mocha-skill](https://github.com/LambdaTest/agent-skills/tree/main/mocha-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
+
+The mocha-skill package includes:
+
+<VerifiedTag value="Verified" />
+
+```
+mocha-skill/
+├── SKILL.md
+└── reference/
+    ├── playbook.md
+    └── advanced-patterns.md
+```
+
+It provides structured guidance for:
+
+* Project structure and setup
+* Dependency configuration
+* Local execution
+* TestMu AI cloud execution
+* Debugging patterns
+* CI/CD integration
+
+##### Installing Mocha Agent Skill
+***
+
+Install a Mocha Agent Skill using the command below:
+
+<VerifiedTag value="Verified" />
+
+```
+# Clone the repo and copy the skill you need
+git clone https://github.com/LambdaTest/agent-skills.git
+cp -r agent-skills/mocha-skill .claude/skills/
+
+# Or for Cursor / Copilot
+cp -r agent-skills/mocha-skill .cursor/skills/
+```
+
+**Note**: If you prefer installing all available framework skills instead of only mocha-skill, clone the repository directly into your tool's skills directory (for example, .claude/skills/, .cursor/skills/, .gemini/skills/, or .agent/skills/).
+
 </TabItem>
 
 <TabItem value="jest" label="Jest">
@@ -439,6 +486,50 @@ The snapshot below shows the videos, logs and other meta data for that specific 
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/testng_artifacts_2.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
+#### Using the Jest Agent Skill with TestMu AI
+***
+
+The [jest-skill](https://github.com/LambdaTest/agent-skills/tree/main/jest-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
+
+The jest-skill package includes:
+
+<VerifiedTag value="Verified" />
+
+```
+jest-skill/
+├── SKILL.md
+└── reference/
+    ├── playbook.md
+    └── advanced-patterns.md
+```
+
+It provides structured guidance for:
+
+* Project structure and setup
+* Dependency configuration
+* Local execution
+* TestMu AI cloud execution
+* Debugging patterns
+* CI/CD integration
+
+##### Installing Jest Agent Skill
+***
+
+Install a Jest Agent Skill using the command below:
+
+<VerifiedTag value="Verified" />
+
+```
+# Clone the repo and copy the skill you need
+git clone https://github.com/LambdaTest/agent-skills.git
+cp -r agent-skills/jest-skill .claude/skills/
+
+# Or for Cursor / Copilot
+cp -r agent-skills/jest-skill .cursor/skills/
+```
+
+**Note**: If you prefer installing all available framework skills instead of only jest-skill, clone the repository directly into your tool's skills directory (for example, .claude/skills/, .cursor/skills/, .gemini/skills/, or .agent/skills/).
+
 </TabItem>
 
 <TabItem value="codecept" label="CodeceptJS">
@@ -592,6 +683,9 @@ The snapshot below shows the videos, logs and other meta data for that specific 
 
 </TabItem>
 </Tabs>
+
+> For any query or doubt, please feel free to contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@testmuai.com**.<br />
+Happy testing!
 
 Once the CLI prints the job link, open the [HyperExecute Dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute) to watch tests run in real time and download [artifacts and reports](/support/docs/hyperexecute-artifacts/).
 

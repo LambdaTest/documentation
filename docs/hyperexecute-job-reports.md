@@ -43,6 +43,82 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 ></script>
 HyperExecute Job Reports are designed to offer deep insights into the performance of your tests. By utilizing these reports, you can identify issues, track progress, and enhance your software testing workflow. Whether you're a developer or QA engineer, understanding and leveraging the various report types is crucial to delivering high-quality software efficiently.
 
+Reports provide summarized job information, including status counts and links to tests. You can generate and download detailed reports at the end of job execution that helps you analyze the outcome of your tests based on your framework.
+
+## Steps to Generate and Download Reports
+
+Follow the below mentioned steps to generate the Reports for your desired framework:
+
+**Step 1:** Go to the HyperExecute YAML file
+
+**Step 2:** Add the below mentioned parameters in the YAML file to generate the Reports
+
+- You must set the `report` flag to **true**.
+- You will have to specify the **location**, **type** and **framework** associated with your report in the `partialReports` field to generate it. 
+
+<VerifiedTag value="Verified" />
+
+```yaml
+report: true
+partialReports:
+  frameworkName: testng
+  location: target/surefire-reports/html
+  type: html
+```
+> **Note**: If you do not specify a framework but you do mention the type of the report, then a report of the default framework is created.
+
+**Step 3:** Now trigger your job and go to the [HyperExecute](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute/jobs) dashboard.
+
+**Step 4:** Click on the **Open** button of the **Reports**.
+
+<img loading="lazy" src={require('../assets/images/hyperexecute/features/artifacts-reports/reports.gif').default} alt="Image"  className="doc_img"/>
+
+Here is the sample report generated.
+
+<img loading="lazy" src={require('../assets/images/hyperexecute/features/artifacts-reports/report4.png').default} alt="Image"  className="doc_img"/>
+
+## Generate Multiple Reports
+If you want to generate multiple reports of different types [supported by HyperExecute](/support/docs/hyperexecute-job-reports/), simply add the required specifications in the `partialReports` field as shown below:
+
+<VerifiedTag value="Verified" />
+
+```yaml
+partialReports:
+  - location: reports/json
+    type: json
+    frameworkName: extent-native
+    
+  - location: target/surefire-reports
+    type: html
+    frameworkName: testng
+```
+
+## Regex Support for Dynamic Report Paths
+You can now use **glob-style wildcards `(**)`** in the location field of `partialReports` to dynamically match nested folders and custom report paths. This is especially useful when your test reports are generated inside directories that include date stamps, environment names, or other runtime variables.
+
+Example:
+
+<VerifiedTag value="Verified" />
+
+```yaml title="hyperexecute.yaml"
+partialReports:
+  location: reports/**/cucumber/
+  # location: target/abc/**/pqr/**/cucumber-reports
+  frameworkName: cucumber
+  type: json
+```
+
+Ensure that your Testrunner.java file should have the complete path from where partial reports will be added. Example:
+
+<VerifiedTag value="Verified" />
+
+```java title="Testrunner.java"
+plugin = {
+    "json:target/abc/mno/pqr/xyz/cucumber-reports/CucumberTestReport.json",
+    "json:target/abc/its/pqr/abc/cucumber-reports/CucumberTestReport.json"
+}
+```
+
 ## Extent Report
 Extent Reports is a powerful reporting library used in test automation frameworks to generate visually appealing and detailed test reports. It provides insights into the status of each test case, including whether they passed, failed, or were skipped, along with additional information such as logs, screenshots, and system/environment details. This makes it especially popular in Selenium, Appium, and API testing frameworks.
 
@@ -361,6 +437,7 @@ In your Playwright configuration file `playwright.config.js`, add the following 
 
 ```javascript title="playwright.config.js"
 import { devices } from '@playwright/test';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 const config = {
   ...//

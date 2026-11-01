@@ -30,6 +30,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import HyperExecuteSupportedLanguageDocs from '../src/component/SupportedLanguages/HyperExecuteSupportedLanguageDocs';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -83,6 +84,8 @@ Whether testing web or mobile applications, HyperExecute empowers your team to d
 
 ## Compatible with All Major Frameworks
 HyperExecute seamlessly supports all major test automation frameworks as shown below. Regardless of your existing testing stack, it will integrate smoothly to enhance your workflows without disruption.
+
+Out of the box, HyperExecute supports multiple languages and testing frameworks like Selenium, Cypress, Playwright, Puppeteer etc. Currently we provide sample code for the following languages and frameworks:
 
 <HyperExecuteSupportedLanguageDocs />
 
@@ -252,6 +255,432 @@ You can use HyperExecute’s [Quickstart feature](https://www.testmuai.com/login
 
 [Frequently asked questions](https://www.testmuai.com/support/faq/?tab=hye) about HyperExecute Features.
 
+## List of Supported Languages and Addons w.r.t. Operating System
+
+This document provides a comprehensive list of all the supported versions of programming languages across different operating systems on our platform.
+
+<Tabs className="docs__val">
+
+<TabItem value="linux" label="Linux" default>
+| Supported Languages | Version |
+|---------------------|---------|
+|<b>Java</b>| `1.8.0` **(default)**, `8`, `9`, `11`, `13`, `15`, `16`, `17`, `18`, `19`, `21`|
+|<b>Ruby</b>|`2.0.0`, `2.1.9`, `2.3.0`, `2.3.1`, `2.3.3`, `2.4.1`, `2.4.2`, `2.4.3`, `2.4.4`, `2.4.5`, `2.4.6`,` 2.4.7`, `2.4.9`, `2.4.10`, `2.5.0`, `2.5.1`, `2.5.3`, `2.5.5`, `2.5.6`, `2.5.7`, `2.5.8`, `2.5.9`, `2.6.0`, `2.6.1`, `2.6.2`, `2.6.3`, `2.6.4`, `2.6.5`, `2.6.6`, `2.6.7`, `2.6.8`, `2.6.9`, `2.6.10`, `2.7.0` **(default)** , `2.7.1`, `2.7.2`, `2.7.3`, `2.7.4`, `2.7.5`, `2.7.5`, `2.7.6`, `3.0.0`, `3.0.1`, `3.0.2`, `3.0.3`, `3.0.4`, `3.1.0`, `3.1.1`, `3.1.2` |
+|<b>DotNet</b>| `5`, `6.0.425` **(default)** , `7`, `8`|
+|<b>Python </b>| `3.8.10` **(default)** , `3.9`, `3.10`, `3.11`|
+|<b>NodeJs </b>| `12`, `13`, `14`, `15`, `16`, `17`, `18.20.0` **(default)**, `19`, `20` |
+</TabItem>
+
+<TabItem value="windows" label="Windows" default>
+    <Tabs className="docs__val">
+        <TabItem value="win10" label="Windows 10" default>
+            | Supported Languages | Version |
+            |---------------------|---------|
+            |<b>Java</b>| `1.8.0` **(default)**, `8`, `9`, `11`, `13`, `15`, `16`, `17`, `18`, `19`, `21`|
+            |<b>Ruby</b>|`2.0.0`, `2.1.9`, `2.2.6`, `2.3.0`, `2.3.1`, `2.3.3`, `2.4.1`, `2.4.2`, `2.4.3`, `2.4.4`, `2.4.5`, `2.4.6`, `2.4.7`, `2.4.9`, `2.4.10`, `2.5.0`, `2.5.1`, `2.5.3`, `2.5.5`, `2.5.6`, `2.5.7`, `2.5.8`, `2.5.9`, `2.6.0`, `2.6.1`, `2.6.2`, `2.6.3`, `2.6.4`, 2.6.5, `2.6.6`, `2.6.7`, `2.6.8`, `2.6.9`, `2.6.10`, `2.7.0`, `2.7.1`, `2.7.2` **(default)** , `2.7.3`, `2.7.4`, `2.7.5`, `2.7.5`, `2.7.6`, `3.0.0`, `3.0.1`, `3.0.2`, `3.0.3`, `3.0.4`, `3.1.0`, `3.1.1`, `3.1.2`|
+            |<b>DotNet</b>| `4.6`, `4.7`, `5`, `6`, `7`, `8` **(default)**,|
+            |<b>Python</b> |`3.7.9` **(default)**, `3.8`, `3.9`, `3.10`, `3.11` |
+            |<b>NodeJs </b>| `12`, `13`, `14`, `15`, `16`, `17`, `18`, `18.17.1` **(default)**, `19`, `20` |
+            |<b>Katalon</b>| `9.0.0`, `9.1.0`, `9.2.0`, `9.3.1`|
+        </TabItem>
+        <TabItem value="win11" label="Windows 11" default>
+            | Supported Languages | Version |
+            |---------------------|---------|
+            |<b>Java</b>|  `1.8.0` **(default)**, `8`, `9`, `11`, `13`, `15`, `16`, `17`, `18`, `19`, `21`|
+            |<b>Ruby</b>| `2.0.0`, `2.1.9`, `2.2.6`, `2.3.0`, `2.3.1`, `2.3.3`, `2.4.1`, `2.4.2`, `2.4.3`, `2.4.4`, `2.4.5`, `2.4.6`, `2.4.7`, `2.4.9`, `2.4.10`, `2.5.0`, `2.5.1`, `2.5.3`, `2.5.5`, `2.5.6`, `2.5.7`, `2.5.8`, `2.5.9`, `2.6.0`, `2.6.1`, `2.6.2`, `2.6.3`, `2.6.4`, `2.6.5`, `2.6.6`, `2.6.7`, `2.6.8`, `2.6.9`, `2.6.10`, `2.7.0` **(default)**, `2.7.1`, `2.7.2`, `2.7.3`, `2.7.4`, `2.7.5`, `2.7.5`, `2.7.6`, `3.0.0`, `3.0.1`, `3.0.2`, `3.0.3`, `3.0.4`, `3.1.0`, `3.1.1`, `3.1.2`|
+            |<b>DotNet</b>|`5` **(default)**, `6`, `7`, `8` |
+            |<b>Python</b> |`3.8`, `3.9`, `3.10`, `3.11`, `3.11.1` **(default)** |
+            |<b>NodeJs </b>| `12`, `13`, `14`, `15`, `16`, `17`, `18`, `18.17.1` **(default)**, `19`, `20` |
+        </TabItem>
+    </Tabs>
+</TabItem>
+
+<TabItem value="mac" label="macOS (Intel)" default>
+    <Tabs className="docs__val">
+        <TabItem value="mac12" label="macOS 12" default>
+            | Supported Languages | Version |
+            |---------------------|---------|
+            |<b>Java</b>| `8` **(default)**, `9`, `11`, `13`, `15`, `16`, `17`, `18`, `19`, `21`|
+            |<b>Ruby</b>| `2.0.0`, `2.1.9`, `2.2.6`, `2.3.0`, `2.3.1`, `2.3.3`, `2.4.1`, `2.4.2`, `2.4.3`, `2.4.4`, `2.4.5`, `2.4.6`, `2.4.7`, `2.4.9`, `2.4.10`, `2.5.0`, `2.5.1`, `2.5.3`, `2.5.5`, `2.5.6`, `2.5.7`, `2.5.8`, `2.5.9`, `2.6.0`, `2.6.1`, `2.6.2`, `2.6.3`, `2.6.4`, `2.6.5`, `2.6.6`, `2.6.7`, `2.6.8`, `2.6.9`, `2.6.10` **(default)**, `2.7.0`, `2.7.1`, `2.7.2`, `2.7.3`, `2.7.4`, `2.7.5`, `2.7.5`, `2.7.6`, `3.0.0`, `3.0.1`, `3.0.2`, `3.0.3`, `3.0.4`, `3.1.0`, `3.1.1`, `3.1.2`|
+            |<b>DotNet</b>| `5`, `5.0.407` **(default)**, `6`, `7`, `8`|
+            |<b>Python</b> |`3.8`, `3.9`, `3.10`, `3.10.11` **(default)**, `3.11` |
+            |<b>NodeJs </b>| `12`, `13`, `14`, `15`, `16`, `17`, `18`, `18.17.1` **(default)**, `19`, `20` |
+        </TabItem>
+        <TabItem value="mac13" label="macOS 13" default>
+            | Supported Languages | Version |
+            |---------------------|---------|
+            |<b>Java</b>| `8` **(default)**, `9`, `11`, `13`, `15`, `16`, `17`, `18`, `19`, `21`|
+            |<b>Ruby</b>| `2.0.0`, `2.1.9`, `2.2.6`, `2.3.0`, `2.3.1`, `2.3.3`, `2.4.1`, `2.4.2`, `2.4.3`, `2.4.4`, `2.4.5`, `2.4.6`, `2.4.7`, `2.4.9`, `2.4.10`, `2.5.0`, `2.5.1`, `2.5.3`, `2.5.5`, `2.5.6`, `2.5.7`, `2.5.8`, `2.5.9`, `2.6.0`, `2.6.1`, `2.6.2`, `2.6.3`, `2.6.4`, `2.6.5`, `2.6.6`, `2.6.7`, `2.6.8`, `2.6.9`, `2.6.10` **(default)**, `2.7.0`, `2.7.1`, `2.7.2`, `2.7.3`, `2.7.4`, `2.7.5`, `2.7.5`, `2.7.6`, `3.0.0`, `3.0.1`, `3.0.2`, `3.0.3`, `3.0.4`, `3.1.0`, `3.1.1`, `3.1.2`|
+            |<b>DotNet</b>| `5`, `5.0.407` **(default)**, `6`, `7`, `8`|
+            |<b>Python</b> |`3.8`, `3.9`, `3.10`, `3.10.11` **(default)**, `3.11` |
+            |<b>NodeJs </b>| `12`, `13`, `14`, `15`, `16`, `17`, `18`, `18.17.1` **(default)**, `19`, `20` |
+        </TabItem>
+    </Tabs>
+</TabItem>
+
+</Tabs>
+
+## HyperExecute Integrations
+
+Integrate HyperExecute with your favourite CI/CD tools, products and <BrandName /> tools to accelerate and optimize your testing ecosystem. To ensure that your testing environment can be optimised, HyperExecute provides you with multiple integrations, such as:
+
+<div className="support_main">
+  <a href="#hyperexecute-integration-with-cicd-tools">
+  <div className="support_inners">
+    <h3>Integrations with CI/CD Tool</h3>
+    <p>Explore a range of CI/CD tool integrations to optimize your testing pipeline.</p>
+  </div>
+  </a>
+
+  <a href="#hyperexecute-integrations-with-products">
+  <div className="support_inners">
+    <h3>Integration with Products</h3>
+    <p>Effortlessly integrate with products like Tosca, Katalon and more for streamlined test execution and management.</p>
+  </div>
+  </a>
+
+  <a href="#hyperexecute-integrations-with-testmu-ai-products">
+  <div className="support_inners">
+    <h3>Integration with <BrandName /> Products</h3>
+    <p>Integrate seamlessly with other <BrandName /> products sucha as Smart UI or Real Device and enhance your testing environment's efficiency.</p>
+  </div>
+  </a>
+</div>
+
+>If your favourite integrations are not mentioned in the list above, then just give us a <span className="doc__lt" onClick={() => window.openLTChatWidget()}>shout</span> and we will have them ready shortly for you.
+
+### Related integrations
+
+- [HyperExecute GitHub App Integration](/support/docs/hyperexecute-github-app-integration/) — trigger and manage HyperExecute jobs directly from the GitHub App.
+
+### HyperExecute Integration With CI/CD Tools
+HyperExecute offers integrations with numerous CI/CD tools to assist you to:
+- Expend less manual effort
+- Deliver faster
+- Reduce risk
+
+<img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/ci-cd.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
+
+To integrate any CI pipeline with HyperExecute, follow these steps:
+
+1. **Download the HyperExecute CLI Binary:**
+
+To integrate HyperExecute with your preferred CI pipeline, you need to make use of the HyperExecute CLI. HyperExecute CLI is a command line client used to interact and run tests on HyperExecute and provide a host of other useful features that accelerate test execution.
+
+For triggering tests using HyperExecute CLI, you have to download the HyperExecute CLI binary corresponding to the platform (or OS) from where the tests are triggered: Below are the HyperExecute CLI download links for different operating systems:
+
+| OS | HyperExecute CLI download link |
+| ---------| --------------------------- |
+| Windows | https://downloads.lambdatest.com/hyperexecute/windows/hyperexecute.exe |
+| macOS | https://downloads.lambdatest.com/hyperexecute/darwin/hyperexecute |
+| Linux | https://downloads.lambdatest.com/hyperexecute/linux/hyperexecute |
+
+- If the Pipeline VM Image agent has the OS flavor of Linux or Mac, then the HyperExecute CLI binary would need additional permission. Run the command below to get the required permission: 
+
+<VerifiedTag value="Verified" />
+
+```
+chmod u+x hyperexecute
+```
+
+2. **Execute the HyperExecute CLI Binary**
+
+To execute the HyperExecute CLI binary, run the following command:
+
+- **For Windows**
+
+<VerifiedTag value="Verified" />
+
+```
+hyperexecute.exe –user LT_USERNAME –key LT_ACCESS_KEY –config path of the Hyperexecute YAML file 
+```
+
+- **For Mac/Linux**
+
+<VerifiedTag value="Verified" />
+
+```
+./hyperexecute –user LT_USERNAME –key LT_ACCESS_KEY –config path of the Hyperexecute YAML file 
+```
+
+Below are detailed instructions for CI/CD tool integrations to help you get the most out of HyperExecute.
+
+<div className="download_btn mb-10">
+<a href="https://www.testmuai.com/support/docs/aws-codepipeline-with-hyperexecute/">AWS CodePipeline Integration</a>
+</div>
+
+<div className="download_btn mb-10">
+<a href="https://www.testmuai.com/support/docs/azure-with-hyperexecute/">Azure DevOps Pipeline Integration</a>
+</div>
+
+<div className="download_btn mb-10">
+<a href="https://www.testmuai.com/support/docs/github-actions-with-hyperexecute/">GitHub Actions Pipeline Integration</a>
+</div>
+
+<div className="download_btn mb-10">
+<a href="https://www.testmuai.com/support/docs/gitlab-integration-with-hyperexecute/">GitLab Pipeline Integration</a>
+</div>
+
+<div className="download_btn mb-10">
+<a href="https://www.testmuai.com/support/docs/circle-ci-with-hyperexecute/">CircleCI Pipeline Integration</a>
+</div>
+
+<div className="download_btn mb-10">
+<a href="https://www.testmuai.com/support/docs/jenkins-with-hyperexecute/">Jenkins Integration</a>
+</div>
+
+<div className="download_btn mb-10">
+<a href="https://www.testmuai.com/support/docs/bitbucket-pipeline-with-hyperexecute/">Bitbucket Pipeline Integration</a>
+</div>
+
+<div className="download_btn mb-10">
+<a href="https://www.testmuai.com/support/docs/travis-ci-with-hyperexecute/">Travis CI Integration</a>
+</div>
+
+<div className="download_btn mb-10">
+<a href="https://www.testmuai.com/support/docs/teamcity-with-hyperexecute/">TeamCity Integration</a>
+</div>
+
+<div className="download_btn mb-10">
+<a href="https://www.testmuai.com/support/docs/gocd-integration-with-hyperexecute/">GoCD Integration</a>
+</div>
+
+<div className="download_btn mb-10">
+<a href="https://www.testmuai.com/support/docs/bamboo-integration-with-hyperexecute/">Bamboo CI Integration</a>
+</div>
+
+<div className="download_btn mb-10">
+<a href="https://www.testmuai.com/support/docs/semaphore-integration-with-hyperexecute/">Semaphore Integration</a>
+</div>
+
+***
+
+Want to know more about HyperExecute? Here’s a [link](/support/docs/getting-started-with-hyperexecute/) to our Documentation.
+
+>If your favourite CI/CD tool is not in the list mentioned above, then just give us a <span className="doc__lt" onClick={() => window.openLTChatWidget()}>shout</span> and we will have it ready shortly for you.
+
+#### Using the CI/CD Pipeline Agent Skill with TestMu AI
+***
+
+The [cicd-pipeline-skill](https://github.com/LambdaTest/agent-skills/tree/main/cicd-pipeline-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
+
+The cicd-pipeline-skill package includes:
+
+<VerifiedTag value="Verified" />
+
+```
+cicd-pipeline-skill/
+├── SKILL.md
+└── reference/
+    ├── playbook.md
+    └── advanced-patterns.md
+```
+
+It provides structured guidance for:
+
+* Project structure and setup
+* Dependency configuration
+* Local execution
+* TestMu AI cloud execution
+* Debugging patterns
+* CI/CD integration
+
+##### Installing CI/CD Pipeline Agent Skill
+***
+
+Install a CI/CD Pipeline Agent Skill using the command below:
+
+<VerifiedTag value="Verified" />
+
+```
+# Clone the repo and copy the skill you need
+git clone https://github.com/LambdaTest/agent-skills.git
+cp -r agent-skills/cicd-pipeline-skill .claude/skills/
+
+# Or for Cursor / Copilot
+cp -r agent-skills/cicd-pipeline-skill .cursor/skills/
+```
+
+**Note**: If you prefer installing all available framework skills instead of only cicd-pipeline-skill, clone the repository directly into your tool's skills directory (for example, .claude/skills/, .cursor/skills/, .gemini/skills/, or .agent/skills/).
+
+### HyperExecute Integrations with Products
+
+<BrandName /> now offers you the chance to integrate HyperExecute with products like Tosca, Katalon and more. You can go through the links below to see the integrations we offer at the moment. 
+
+<img loading="lazy" src={require('../assets/images/hyperexecute/integration/products/hyp-products.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
+
+<div className="support_main">
+
+  <a href = "/support/docs/hyperexecute-accelq-integration/">
+  <div className="support_inners">
+    <h2>ACCELQ</h2>
+    <p>Perform codeless automated functional and API testing using Acceelq.</p>
+  </div>
+  </a>
+
+  <a href = "/support/docs/hyperexecute-algoqa-integration/">
+  <div className="support_inners">
+    <h2>algoQA</h2>
+    <p>Perform software testing through automated test case generation and execution for various applications.</p>
+  </div>
+  </a>
+
+  <a href = "/support/docs/hyperexecute-azure-test-plan/">
+  <div className="support_inners">
+    <h2>Azure Test Plan</h2>
+    <p>Manage test plans, test suites, and test cases for your web and desktop applications.</p>
+  </div>
+  </a>
+
+  <a href = "/support/docs/katalon-integration-with-hyperexecute/">
+  <div className="support_inners">
+    <h2>Katalon</h2>
+    <p>Perform Cross Platform Testing ranging from web, API, mobile, and desktop applications.</p>
+  </div>
+  </a>
+
+  <a href = "/support/docs/hyperexecute-provar-integration/">
+  <div className="support_inners">
+    <h2>Provar</h2>
+    <p>Enable efficient creation and execution of UI and API tests.</p>
+  </div>
+  </a>
+
+  <a href = "/support/docs/hyperexecute-qtest-integration/">
+  <div className="support_inners">
+    <h2>qTest</h2>
+    <p>Perform Cross Platform Testing, and get a centralized test management tool.</p>
+  </div>
+  </a>
+
+  <a href = "/support/docs/hyperexecute-sikuli-integration/">
+  <div className="support_inners">
+    <h2>Sikuli</h2>
+    <p>Automate the visual testing of any software by integrating Sikuli with HyperExecute.</p>
+  </div>
+  </a>
+
+  <a href = "/support/docs/hyperexecute-slack-integration/">
+  <div className="support_inners">
+    <h2>Slack</h2>
+    <p>Receive real-time notifications and crucial job details directly within your Slack workspace.</p>
+  </div>
+  </a>
+
+  <a href = "/support/docs/hyperexecute-testim-integration/">
+  <div className="support_inners">
+    <h2>Testim</h2>
+    <p>Automate your software testing by creating stable automated tests.</p>
+  </div>
+  </a>
+
+  <a href = "/support/docs/hyperexecute-testsigma-integration/">
+  <div className="support_inners">
+    <h2>Testsigma</h2>
+    <p>Perform codeless test automation to easily create and maintain tests.</p>
+  </div>
+  </a>
+
+  <a href = "/support/docs/tosca-integration-with-hyperexecute/">
+  <div className="support_inners">
+    <h2>Tosca</h2>
+    <p>Optimize and accelerate end-to-end testing for your entire digital landscape.</p>
+  </div>
+  </a>
+
+  <a href = "/support/docs/hyperexecute-winapp-integration/">
+  <div className="support_inners">
+    <h2>WinAppDriver</h2>
+    <p>Perform the testing for the tests that are based on Microsoft Office Suite for TestNG Framework.</p>
+  </div>
+  </a>
+
+  <a href = "/support/docs/hyperexecute-zephyr-scale-integration/">
+  <div className="support_inners">
+    <h2>Zephyr</h2>
+    <p>Zephyr is a test case management tool allows you to centrally manage your test suite cases.</p>
+  </div>
+  </a>
+</div>
+
+>If your favourite products are not mentioned in the list above, then just give us a <span className="doc__lt" onClick={() => window.openLTChatWidget()}>shout</span> and we will have them ready for you.
+
+### HyperExecute Integrations with TestMu AI Products
+
+You can now integrate HyperExecute with other <BrandName /> products like Smart UI testing. You can go through the links below to see the integrations we offer at the moment. 
+
+<img loading="lazy" src={require('../assets/images/hyperexecute/integration/lt-products/hyp-lt-products.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
+
+<div className="support_main">
+  
+  <a href = "/support/docs/smart-ui-testing/">
+  <div className="support_inners">
+    <h2>Smart UI - Hooks</h2>
+    <p>Execute Smart UI Tests to ensure the visual consistency of web applications using HyperExecute.</p>
+  </div>
+  </a>
+
+  <a href = "/support/docs/smart-ui-testing/">
+  <div className="support_inners">
+    <h2>Smart UI - SDK</h2>
+    <p>Execute Smart UI Tests using SDK to ensure the visual consistency of web applications using HyperExecute.</p>
+  </div>
+  </a>
+  
+  <a href = "/support/docs/hyperexecute-appium-testing/#virtual-device-integration-with-hyperexecute">
+  <div className="support_inners">
+    <h2>Virtual Devices</h2>
+    <p>Run app automated tests on Emulators and Simulators using HyperExecute.</p>
+  </div>
+  </a>
+
+  <a href = "/support/docs/hyperexecute-appium-testing/#real-devices-integration-with-hyperexecute">
+  <div className="support_inners">
+    <h2>Real Devices</h2>
+    <p>Run app automated tests on Real Mobile Devices using HyperExecute..</p>
+  </div>
+  </a>
+
+</div>
+
+>If your favourite products are not mentioned in the list above, then just give us a <span className="doc__lt" onClick={() => window.openLTChatWidget()}>shout</span> and we will have them ready for you.
+
+### Seamless Integration for Enhanced Test Orchestration
+
+HyperExecute, a powerful test automation orchestration platform, boasts seamless compatibility and effortless integration with a wide range of industry-leading testing tools. This document delves into HyperExecute's integration capabilities, highlighting its compatibility with Katalon, ACCELQ, Provar, Tosca, Azure Test Plans, Excel, and other <BrandName /> products.
+
+#### Integrate HyperExecute Effortlessly
+
+- [**Katalon Studio**](/docs/katalon-integration-with-hyperexecute/): HyperExecute directly integrates with Katalon Studio, enabling you to leverage Katalon's robust object repository and keyword-driven testing within your orchestrated test suites. Execute Katalon tests seamlessly alongside other tools for comprehensive test coverage.
+
+- [**ACCELQ**](/docs/hyperexecute-accelq-integration/): HyperExecute seamlessly integrates with ACCELQ's data-driven testing capabilities. Leverage ACCELQ's data sheets and dynamic test case generation within HyperExecute's orchestration workflows for efficient test execution.
+
+- [**MS Office Suite**](/docs/hyperexecute-winapp-integration/): HyperExecute seamlessly integrates with MS Office tools. Leverage Excel, Notepad and other tools for data-driven testing within HyperExecute's orchestration workflows, using familiar functionalities for efficient test data management.
+
+<!-- - Provar: HyperExecute integrates with Provar's low-code test automation framework. Execute Provar tests alongside other tools within HyperExecute's orchestration, benefiting from Provar's intuitive interface and ease of use. -->
+
+- [**Tosca**](/docs/tosca-integration-with-hyperexecute/): HyperExecute integrates with Tosca's model-based testing capabilities. Execute Tosca tests orchestrated within HyperExecute's workflows, combining the power of model-based testing with flexible orchestration.
+
+- [**Azure Test Plans**](/docs/hyperexecute-azure-test-plan/): HyperExecute integrates with Azure Test Plans, enabling you to execute tests defined within Azure Pipelines directly from HyperExecute. Manage and orchestrate your Azure test executions efficiently.
+
+- [**<BrandName /> Products**](#hyperexecute-integrations-with-testmu-ai-products): HyperExecute integrates with various <BrandName /> products, including Smart UI and Real Devices. Execute tests across diverse browsers, devices, and operating systems seamlessly within HyperExecute's orchestration framework.
+
+#### Benefits of Integration
+
+There are enormous advantages of integrating HyperExecute with the above mentioned tools, some of them are:
+
+- **Unified Test Orchestration:** Manage and execute tests from various tools within a single platform, streamlining your testing process.
+
+- **Improved Efficiency:** Automate repetitive tasks and orchestrate complex test flows across diverse tools, saving time and resources.
+
+- **Enhanced Coverage:** Combine the strengths of different tools to achieve comprehensive test coverage across various testing methodologies.
+
+- **Simplified Management:** Gain centralized control over your testing ecosystem, reducing complexity and improving visibility.
+
+#### Conclusion
+
+HyperExecute's seamless compatibility and effortless integration with various testing tools empower you to create robust, efficient, and scalable test automation strategies. Embrace the power of unified test orchestration and experience the value of HyperExecute's integrations firsthand.
+
 ## Next Steps
 
 Now that you've set up HyperExecute and run your first test, explore these resources to make the most of the platform:
@@ -365,6 +794,105 @@ Once your first job is running, these guides cover day-to-day configuration, mon
 - [Private Cloud setup on Azure](/support/docs/hyperexecute-private-cloud-setup-with-azure/): deploy HyperExecute Private Cloud on Microsoft Azure.
 - [VNet peering for Private Cloud](/support/docs/hyperexecute-private-cloud-setup-with-azure/#vnet-peering-and-vnet-links): connect your VNet to HyperExecute Private Cloud.
 - [Migrate from Sauce Labs to HyperExecute](/support/docs/saucelabs-to-hyperexecute-migrate/): move your Sauce Labs suite to HyperExecute.
+- [C# use cases on HyperExecute](/support/docs/hyperexecute-csharp-use-cases/) — common C# test scenarios and configurations on HyperExecute.
+- [TestNG use cases on HyperExecute](/support/docs/hyperexecute-testng-use-cases/) — common TestNG scenarios on HyperExecute.
+- [Provar on HyperExecute](/support/docs/hyperexecute-provar-integration/) — run Provar (Salesforce) tests on HyperExecute.
+
+### How-To Guides
+
+<div className="support_main">  
+  <a href="/support/docs/hyperexecute-running-your-first-job/#how-to-get-my-username-and-access-key">
+    <div className="support_inners">
+      <h2>Username and Access Key</h2>
+      <p>Understand the step by step process of how to get your username and access key.</p>
+    </div>
+  </a>
+  <a href="/support/docs/hyperexecute-running-your-first-job/#set-up-authentication-and-environment-variables">
+    <div className="support_inners">
+      <h2>Environment Variables</h2>
+      <p>Learn how to setup HyperExecute environment variables.</p>
+    </div>
+  </a>
+  <a href="/support/docs/hyperexecute-how-to-save-and-manage-secrets/">
+    <div className="support_inners">
+      <h2>Manage Secrets</h2>
+      <p>Learn how to save and manage your secrets in HyperExecute Vault.</p>
+    </div>
+  </a>
+    <a href="/support/docs/hyperexecute-how-to-configure-tunnel/">
+  <div className="support_inners">
+    <h2>Configure Tunnel</h2>
+    <p>Learn how to configure tunnel for testing locally hosted websites using HyperExecute.</p>
+  </div>
+  </a>
+  <a href="/support/docs/hyperexecute-how-to-find-correct-concurrency/">
+  <div className="support_inners">
+    <h2>Job Concurrency</h2>
+    <p>Learn how to find correct concurrency for my Job</p>
+  </div>
+  </a>
+    <a href="/support/docs/hyperexecute-how-to-configure-sourcePayload/">
+  <div className="support_inners">
+    <h2>Configure your Source Payload</h2>
+    <p>Learn about how you can configure your sourcePayload.</p>
+  </div>
+  </a>
+  <a href="/support/docs/hyperexecute-browser-list-api/">
+  <div className="support_inners">
+    <h2>Supported Browsers</h2>
+    <p>How to get the list of all the supported browsers in HyperExecute via API call.</p>
+  </div>
+  </a>
+    <a href="/support/docs/hyperexecute-how-to-run-tests-using-local-selenium-drivers/">
+    <div className="support_inners">
+      <h2>Local Selenium Webdriver</h2>
+      <p>Learn how to run your selenium tests via local driver without setting remote driver in HyperExecute.</p>
+    </div>
+  </a>
+</div>
+
+### HyperExecute Knowledge Base
+
+<div className="support_main">  
+  <a href="/support/docs/hyperexecute-job-reports/#hyperexecute-status">
+    <div className="support_inners">
+      <h2>HyperExecute Status</h2>
+      <p>Learn all the status of the HyperExecute at different levels - Job level, Task level, Stage level and Test level.</p>
+    </div>
+  </a>
+  <a href="/support/docs/getting-started-with-hyperexecute/#how-to-guides">
+    <div className="support_inners">
+      <h2>How To Guide</h2>
+      <p>Understand how to perform various activities in the HyperExecute Dashboard.</p>
+    </div>
+  </a>
+  <a href="/support/docs/hyperexecute-testng-use-cases/">
+    <div className="support_inners">
+      <h2>HyperExecute Use Cases</h2>
+      <p>Learn about the real world implementations of the HyperExecute.</p>
+    </div>
+  </a>
+  <a href="/support/docs/hyperexecute-widgets/">
+    <div className="support_inners">
+      <h2>HyperExecute Widgets</h2>
+      <p>Learn the insights of your Tasks based on the defined parameters in the Tests.</p>
+    </div>
+  </a>
+  <a href="/support/docs/hyperexecute-job-reports/">
+  <div className="support_inners">
+    <h2>HyperExecute Job Reports</h2>
+    <p>Learn about different types of Job Reports based on various frameworks.</p>
+  </div>
+  </a>
+  <a href="/support/docs/saucelabs-to-hyperexecute-migrate/">
+  <div className="support_inners">
+    <h2>Migration Guide</h2>
+    <p>Learn how to migrate your tests from the Sauce Labs to HyperExecute.</p>
+  </div>
+  </a>
+</div>
+
+>If you have more questions, then just give us a <span className="doc__lt" onClick={() => window.openLTChatWidget()}>shout</span> and we will answer them for you.
 
 :::tip  We’re Already in Your Favorite Cloud!
 Deploy our cloud-native test orchestration platform directly from your trusted marketplace:

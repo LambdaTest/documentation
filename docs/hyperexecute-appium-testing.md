@@ -599,9 +599,30 @@ Sample Capabilities for both android and iOS web app mentioned below -
 
 > Refer to the [Automation Capabilities Generator](https://www.testmuai.com/capabilities-generator/) to understand more about it.
 
+### Navigation in Automation Dashboard for WebApp Tests
+
+Every test run on the HyperExecute has a unique *jobId* associated with it. Each *jobId* can in turn constitute single (or multiple) *groupId*(s). You can visit [HyperExecute automation dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/hyperexecute/) for checking the status of the test execution.
+
+The snapshot below shows how to navigate to the respective *testID* for viewing the Selenium logs:
+
+<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/appium/hyperexecute-webapp-appium.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
+
+### Conclusion
+By following the instructions in this documentation, you can seamlessly execute the Appium tests on HyperExecute for WebApps, leveraging its secure cloud infrastructure, advanced features, and optimized test execution workflow.
+
 ## Appium Virtual Device Testing
 
 Appium Virtual Device testing runs your Appium tests on emulators (Android) and simulators (iOS) instead of physical hardware. The workflow mirrors real-device testing, but you upload your app to the `virtualDevice` endpoint and set the `isRealMobile` capability to `false` so the session launches on a virtual device.
+
+### Virtual Device Prerequisites
+
+- Ensure you have Appium’s [Java client library](https://github.com/appium/java-client) installed.
+- Access to an **Android** app (.apk or .aab file)
+
+:::tip Sample repo
+All the code samples in this documentation can be found on **<BrandName />'s Github Repository**. You can either download or clone the repository to quickly run your tests. <a href="https://github.com/LambdaTest/hyperexecute-appium-testng/tree/android-emulator" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
+:::
+> If you do not have any **.apk** file, you can run your sample tests on <BrandName /> by using our sample :link: [Android app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk)
 
 ### Steps to Run Your Test
 
@@ -1011,6 +1032,75 @@ OR use this command if you have not exported your username and access key.
 </div>
 
 Visit the [HyperExecute Dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status 🚀
+
+## Real Devices Integration with HyperExecute
+
+Till now you have executed your test scripts on the [Real Device Automation](/support/docs/appium-python/). This Document will not only explain to you about how to use Real Devices on HyperExecute but also the superpower you just unlocked with HyperExecute - Test Orchestration and Intelligence.
+
+HyperExecute is a smart test orchestration platform to run end-to-end tests at the fastest speed possible. HyperExecute lets you achieve an accelerated time to market by providing a test infrastructure that offers optimal speed, test orchestration, and detailed execution logs.
+
+**Let's first take a look at the different ways of executing tests on HyperExecute:**
+
+### 1. Triggering a job on HyperExecute  
+In order to trigger a job on HyperExecute, it requires the [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) and a set of instructions inside the [HyperExecute Yaml](/support/docs/deep-dive-into-hyperexecute-yaml/) file. When you trigger the CLI command, it connects with the HyperExecute APIs which then distributes the tests across different machines/nodes for parallel execution as shown in the diagram below:
+<img loading="lazy" src={require('../assets/images/hyperexecute/integration/lt-products/real-devices/rd1.png').default} alt="Image"  className="doc_img"/>
+
+### 2. Real Devices Test Execution on HyperExecute
+In case of Real devices test execution the test scripts from the machines run the actual tests on connected real devices as shown in the diagram below:
+<img loading="lazy" src={require('../assets/images/hyperexecute/integration/lt-products/real-devices/rd2.png').default} alt="Image"  className="doc_img"/>
+
+### 3. Triggering through local machine
+When you are triggering your test cases from the local machine the flow of data is as shown in the diagram below:
+<img loading="lazy" src={require('../assets/images/hyperexecute/integration/lt-products/real-devices/rd3.png').default} alt="Image"  className="doc_img"/>
+
+### 4. Triggering through Jenkins
+In order to execute a job on HyperExecute via Jenkins, you would need to perform 2 simple steps :  
+<img loading="lazy" src={require('../assets/images/hyperexecute/integration/lt-products/real-devices/rd4.png').default} alt="Image"  className="doc_img"/>   
+
+You can read more about it [here](/support/docs/getting-started-with-hyperexecute/#hyperexecute-integration-with-cicd-tools).  When you want the job to be initiated from the Jenkins Pipeline, it would look as shown in the diagram below: 
+<img loading="lazy" src={require('../assets/images/hyperexecute/integration/lt-products/real-devices/rd5.png').default} alt="Image"  className="doc_img"/>  
+
+### 5. How to Trigger Real Device tests on HyperExecute ?
+You can seamlessly trigger your favorite mobile app framework test scripts with HyperExecute.
+
+<div className="support_main">  
+  <a href="/support/docs/hyperexecute-appium-testing/">
+    <div className="support_inners">
+      <h3>Appium Testing for Apps</h3>
+      <p>Test your native Android and iOS mobile applications on Appium automation cloud.</p>
+    </div>
+  </a>
+  <a href="/support/docs/hyperexecute-appium-testing/#appium-webapp-testing">
+    <div className="support_inners">
+      <h3>Appium Testing for WebApps</h3>
+      <p>Test your Android and iOS web applications on Appium automation cloud.</p>
+    </div>
+  </a>
+  <a href="/support/docs/hyperexecute-espresso-testing/">
+    <div className="support_inners">
+      <h3>Espresso Testing</h3>
+      <p>Test your Android mobile applications on Espresso automation cloud.</p>
+    </div>
+  </a>
+    <a href="/support/docs/hyperexecute-maestro-testing/">
+    <div className="support_inners">
+      <h3>Maestro Testing</h3>
+      <p>Test your Android mobile applications on Maestro automation cloud.</p>
+    </div>
+  </a>
+  <a href="/support/docs/hyperexecute-xcui-testing/">
+    <div className="support_inners">
+      <h3>XCUI Testing</h3>
+      <p>Test your iOS applications on XCUI automation cloud.</p>
+    </div>
+  </a>
+</div>
+
+### Support
+
+We at TestMu AI take pride in our Support system. We ensure that we do the heavy lifting while our customers can focus on the test scripts and strategy. As a first step in the POC, our support engineers conduct a working session over Zoom or Gmeet to understand your use case and provide you with the right configuration to execute your test cases on HyperExecute. Our support engineers are always available over slack, mail and calls to ensure that we provide you with the right kind of support and set you up for a win. 
+
+Please feel free to give us a shout if you have any questions or require any assistance.
 
 ## Navigation in Automation Dashboard
 

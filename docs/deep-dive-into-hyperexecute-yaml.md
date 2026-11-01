@@ -356,6 +356,8 @@ macTestRunnerCommand: mvn test -Dcucumber.options="$test" -Dscenario="$test" -DO
 ## Basic Parameters
 
 ### `cacheKey`
+To learn how caching speeds up your test runs, see [How Smart Caching Boosts Your Tests Execution Speed](#how-smart-caching-boosts-your-tests-execution-speed).
+
 It is a unique identifier that enables HyperExecute to store and retrieve cached results efficiently. HyperExecute generates a hash value for the files specified in the `cacheKey` and checks the database to see if an entry with this hash already exists.
 
 If an entry exists and the dependencies haven't changed, HyperExecute reuses the cached directives. If no entry exists, a new one is created. Upon successful job completion, the directives are cached for future use. This process avoids redundant downloads of dependencies, ensuring faster test execution.
@@ -2247,3 +2249,52 @@ https://github.com/LambdaTest/testng-selenium-hyperexecute-sample/blob/main/yaml
 | Defining test metadata        | `build`, `name`              |
 | Network capture and debugging | `network`, `tunnel`          |
 | Switching Selenium versions   | `selenium_version`           |
+
+## How Smart Caching Boosts Your Tests Execution Speed
+
+Smart Caching significantly reduces test execution times by optimizing resource utilization and minimizing redundant processes. This document provides a comprehensive technical overview of Smart Caching, detailing its architecture, functionalities, and benefits for software development teams.
+
+### Architecture
+
+Smart Caching operates on a distributed caching architecture, leveraging a network of caching nodes across <BrandName />'s global infrastructure. This ensures low latency and high availability for test execution, regardless of user location.
+
+The core functionalities of Smart Caching include:
+
+#### Dependency Doping
+
+Caches frequently used libraries, frameworks, and test assets at caching nodes, eliminating the need for repeated downloads and reducing test execution times.
+
+#### Environment Enhancers
+
+Pre-configures and stores ready-to-use testing environments based on test configurations, eliminating time-consuming environment setup for each test case.
+
+### Functionalities
+Key functionalities offered by Smart Caching:
+
+- **Global Caching Network:** Leverage a geographically distributed network of caching nodes for optimal performance and low latency.
+
+- **Intelligent Caching Strategy:** Smart algorithms identify and cache the most frequently used dependencies and environments for maximum efficiency.
+
+<!-- - **Automatic Cache Invalidation:** Expired or outdated cached data is automatically invalidated and refreshed to ensure test accuracy. -->
+
+- **Seamless Scalability:** The caching network automatically scales to accommodate growing test suites and concurrent test runs.
+
+<!-- - **Granular Control:** Configure caching behavior for specific dependencies, environments, and test cases based on your specific needs.
+
+- **Real-time Monitoring:** Monitor cache utilization and performance metrics within the HyperExecute interface. -->
+
+### Benefits
+
+Implementing Smart Caching offers numerous benefits:
+
+- **50%-80% Faster Test Execution:** Dramatically reduce test execution times, freeing up valuable developer resources.
+
+- **Improved Resource Utilization:** Minimize resource consumption, leading to cost savings and infrastructure optimization.
+
+- **Enhanced Developer Productivity:** Developers spend less time waiting for tests, focusing more on coding, innovation, and problem-solving.
+
+- **Increased Scalability:** Handle large and complex test suites with ease due to the inherent scalability of the caching network.
+
+### Additional Resources
+
+- [Deliver Faster: How Smart Caching Turbocharges Your Testing Workflow](https://www.testmuai.com/blog/how-smart-caching-turbocharges-your-testing-workflow/)

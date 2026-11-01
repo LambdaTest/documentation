@@ -22,6 +22,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -730,6 +731,50 @@ Run the following command on the terminal to trigger the tests as per your machi
   </TabItem>
 
 </Tabs>
+
+### Using the Cypress Agent Skill with TestMu AI
+***
+
+The [cypress-skill](https://github.com/LambdaTest/agent-skills/tree/main/cypress-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
+
+The cypress-skill package includes:
+
+<VerifiedTag value="Verified" />
+
+```
+cypress-skill/
+├── SKILL.md
+└── reference/
+    ├── playbook.md
+    └── advanced-patterns.md
+```
+
+It provides structured guidance for:
+
+* Project structure and setup
+* Dependency configuration
+* Local execution
+* TestMu AI cloud execution
+* Debugging patterns
+* CI/CD integration
+
+#### Installing Cypress Agent Skill
+***
+
+Install a Cypress Agent Skill using the command below:
+
+<VerifiedTag value="Verified" />
+
+```
+# Clone the repo and copy the skill you need
+git clone https://github.com/LambdaTest/agent-skills.git
+cp -r agent-skills/cypress-skill .claude/skills/
+
+# Or for Cursor / Copilot
+cp -r agent-skills/cypress-skill .cursor/skills/
+```
+
+**Note**: If you prefer installing all available framework skills instead of only cypress-skill, clone the repository directly into your tool's skills directory (for example, .claude/skills/, .cursor/skills/, .gemini/skills/, or .agent/skills/).
 
 Visit [HyperExecute Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/hyperexecute) to check the status of execution
 

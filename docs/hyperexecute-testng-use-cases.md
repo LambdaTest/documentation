@@ -45,6 +45,51 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 This guide covers common language-specific use cases for running tests on HyperExecute, organized by framework: **Java + TestNG**, **Python**, and **C#**.
 
+## HyperExecute Use Cases
+
+<div className="support_main">  
+  <a href="/support/docs/hyperexecute-testng-use-cases/">
+    <div className="support_inners">
+      <h2>TestNG</h2>
+    </div>
+  </a>
+  <a href="/support/docs/hyperexecute-python-use-cases/">
+    <div className="support_inners">
+      <h2>Python + Pytest + Behave</h2>
+    </div>
+  </a>
+    <a href="/support/docs/hyperexecute-csharp-use-cases/">
+    <div className="support_inners">
+      <h2>C# + NUnit + SpecFlow</h2>
+    </div>
+  </a>
+    <a href="/support/docs/playwright-integration-with-hyperexecute/#hyperexecute-yaml-creation-for-playwright">
+    <div className="support_inners">
+      <h2>YAML creation for Playwright tests</h2>
+    </div>
+  </a>
+  <a href="/support/docs/deep-dive-into-hyperexecute-yaml/#how-smart-caching-boosts-your-tests-execution-speed">
+    <div className="support_inners">
+      <h2>How you can turbo boost your tests execution with our Smart Caching feature?</h2>
+    </div>
+  </a>
+  <a href="/support/docs/getting-started-with-hyperexecute/#seamless-integration-for-enhanced-test-orchestration">
+    <div className="support_inners">
+      <h2>How you can seamlessly integrate your tests testing tool with HyperExecute for enhanced Test Orchestration?</h2>
+    </div>
+  </a>
+  <a href="/support/docs/hyperexecute-build-mobile-apps-using-tools/">
+    <div className="support_inners">
+      <h2>How to build your mobile applications via HyperExecute?</h2>
+    </div>
+  </a>
+  <a href="/support/docs/hyperexecute-sikuli-integration/#leveraging-custom-libraries-in-sikulix-for-advanced-visual-verification">
+  <div className="support_inners">
+    <h2>How to leverage custom libraries in SikuliX for advanced visual verification?</h2>
+  </div>
+  </a>
+</div>
+
 ## TestNG Use Cases
 
 This guide outlines common **Java + TestNG** scenarios for running tests on [HyperExecute](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute/jobs)

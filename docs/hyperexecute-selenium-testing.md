@@ -25,6 +25,7 @@ import TabItem from '@theme/TabItem';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -260,6 +261,50 @@ The snapshot below shows the videos, logs and other meta data for that specific 
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/testng_artifacts_2.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
+#### Using the TestNG Agent Skill with TestMu AI
+***
+
+The [testng-skill](https://github.com/LambdaTest/agent-skills/tree/main/testng-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
+
+The testng-skill package includes:
+
+<VerifiedTag value="Verified" />
+
+```
+testng-skill/
+├── SKILL.md
+└── reference/
+    ├── playbook.md
+    └── advanced-patterns.md
+```
+
+It provides structured guidance for:
+
+* Project structure and setup
+* Dependency configuration
+* Local execution
+* TestMu AI cloud execution
+* Debugging patterns
+* CI/CD integration
+
+##### Installing TestNG Agent Skill
+***
+
+Install a TestNG Agent Skill using the command below:
+
+<VerifiedTag value="Verified" />
+
+```
+# Clone the repo and copy the skill you need
+git clone https://github.com/LambdaTest/agent-skills.git
+cp -r agent-skills/testng-skill .claude/skills/
+
+# Or for Cursor / Copilot
+cp -r agent-skills/testng-skill .cursor/skills/
+```
+
+**Note**: If you prefer installing all available framework skills instead of only testng-skill, clone the repository directly into your tool's skills directory (for example, .claude/skills/, .cursor/skills/, .gemini/skills/, or .agent/skills/).
+
 </TabItem>
 <TabItem value="junit" label="JUnit">
 
@@ -459,6 +504,50 @@ The snapshot below shows the videos, logs and other meta data for that specific 
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/junit/automation.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
+#### Using the JUnit 5 Agent Skill with TestMu AI
+***
+
+The [junit-5-skill](https://github.com/LambdaTest/agent-skills/tree/main/junit-5-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
+
+The junit-5-skill package includes:
+
+<VerifiedTag value="Verified" />
+
+```
+junit-5-skill/
+├── SKILL.md
+└── reference/
+    ├── playbook.md
+    └── advanced-patterns.md
+```
+
+It provides structured guidance for:
+
+* Project structure and setup
+* Dependency configuration
+* Local execution
+* TestMu AI cloud execution
+* Debugging patterns
+* CI/CD integration
+
+##### Installing JUnit 5 Agent Skill
+***
+
+Install a JUnit 5 Agent Skill using the command below:
+
+<VerifiedTag value="Verified" />
+
+```
+# Clone the repo and copy the skill you need
+git clone https://github.com/LambdaTest/agent-skills.git
+cp -r agent-skills/junit-5-skill .claude/skills/
+
+# Or for Cursor / Copilot
+cp -r agent-skills/junit-5-skill .cursor/skills/
+```
+
+**Note**: If you prefer installing all available framework skills instead of only junit-5-skill, clone the repository directly into your tool's skills directory (for example, .claude/skills/, .cursor/skills/, .gemini/skills/, or .agent/skills/).
+
 </TabItem>
 <TabItem value="cucumber" label="Cucumber">
 
@@ -654,6 +743,50 @@ You can seamlessly navigate between JobId's and taskId's. You need to click on t
 The snapshot below shows the videos, logs and other meta data for that specific *test_ID*
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/testng_artifacts_2.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
+
+#### Using the Cucumber Agent Skill with TestMu AI
+***
+
+The [cucumber-skill](https://github.com/LambdaTest/agent-skills/tree/main/cucumber-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
+
+The cucumber-skill package includes:
+
+<VerifiedTag value="Verified" />
+
+```
+cucumber-skill/
+├── SKILL.md
+└── reference/
+    ├── playbook.md
+    └── advanced-patterns.md
+```
+
+It provides structured guidance for:
+
+* Project structure and setup
+* Dependency configuration
+* Local execution
+* TestMu AI cloud execution
+* Debugging patterns
+* CI/CD integration
+
+##### Installing Cucumber Agent Skill
+***
+
+Install a Cucumber Agent Skill using the command below:
+
+<VerifiedTag value="Verified" />
+
+```
+# Clone the repo and copy the skill you need
+git clone https://github.com/LambdaTest/agent-skills.git
+cp -r agent-skills/cucumber-skill .claude/skills/
+
+# Or for Cursor / Copilot
+cp -r agent-skills/cucumber-skill .cursor/skills/
+```
+
+**Note**: If you prefer installing all available framework skills instead of only cucumber-skill, clone the repository directly into your tool's skills directory (for example, .claude/skills/, .cursor/skills/, .gemini/skills/, or .agent/skills/).
 
 </TabItem>
 </Tabs>
@@ -855,6 +988,50 @@ The snapshot below shows the videos, logs and other meta data for that specific 
 
 > For any query or doubt, please feel free to contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@testmuai.com**.<br />
 Happy testing!
+
+#### Using the Pytest Agent Skill with TestMu AI
+***
+
+The [pytest-skill](https://github.com/LambdaTest/agent-skills/tree/main/pytest-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
+
+The pytest-skill package includes:
+
+<VerifiedTag value="Verified" />
+
+```
+pytest-skill/
+├── SKILL.md
+└── reference/
+    ├── playbook.md
+    └── advanced-patterns.md
+```
+
+It provides structured guidance for:
+
+* Project structure and setup
+* Dependency configuration
+* Local execution
+* TestMu AI cloud execution
+* Debugging patterns
+* CI/CD integration
+
+##### Installing Pytest Agent Skill
+***
+
+Install a Pytest Agent Skill using the command below:
+
+<VerifiedTag value="Verified" />
+
+```
+# Clone the repo and copy the skill you need
+git clone https://github.com/LambdaTest/agent-skills.git
+cp -r agent-skills/pytest-skill .claude/skills/
+
+# Or for Cursor / Copilot
+cp -r agent-skills/pytest-skill .cursor/skills/
+```
+
+**Note**: If you prefer installing all available framework skills instead of only pytest-skill, clone the repository directly into your tool's skills directory (for example, .claude/skills/, .cursor/skills/, .gemini/skills/, or .agent/skills/).
 
 </TabItem>
 <TabItem value="pyunit" label="PyUnit">
@@ -1247,6 +1424,50 @@ The snapshot below shows the videos, logs and other meta data for that specific 
 
 > For any query or doubt, please feel free to contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@testmuai.com**.<br />
 
+#### Using the Behave Agent Skill with TestMu AI
+***
+
+The [behave-skill](https://github.com/LambdaTest/agent-skills/tree/main/behave-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
+
+The behave-skill package includes:
+
+<VerifiedTag value="Verified" />
+
+```
+behave-skill/
+├── SKILL.md
+└── reference/
+    ├── playbook.md
+    └── advanced-patterns.md
+```
+
+It provides structured guidance for:
+
+* Project structure and setup
+* Dependency configuration
+* Local execution
+* TestMu AI cloud execution
+* Debugging patterns
+* CI/CD integration
+
+##### Installing Behave Agent Skill
+***
+
+Install a Behave Agent Skill using the command below:
+
+<VerifiedTag value="Verified" />
+
+```
+# Clone the repo and copy the skill you need
+git clone https://github.com/LambdaTest/agent-skills.git
+cp -r agent-skills/behave-skill .claude/skills/
+
+# Or for Cursor / Copilot
+cp -r agent-skills/behave-skill .cursor/skills/
+```
+
+**Note**: If you prefer installing all available framework skills instead of only behave-skill, clone the repository directly into your tool's skills directory (for example, .claude/skills/, .cursor/skills/, .gemini/skills/, or .agent/skills/).
+
 </TabItem>
 <TabItem value="robot" label="Robot">
 
@@ -1443,6 +1664,50 @@ The snapshot below shows the videos, logs and other meta data for that specific 
 > For any query or doubt, please feel free to contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@testmuai.com**.<br />
 Happy testing!
 
+#### Using the Robot Framework Agent Skill with TestMu AI
+***
+
+The [robot-framework-skill](https://github.com/LambdaTest/agent-skills/tree/main/robot-framework-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
+
+The robot-framework-skill package includes:
+
+<VerifiedTag value="Verified" />
+
+```
+robot-framework-skill/
+├── SKILL.md
+└── reference/
+    ├── playbook.md
+    └── advanced-patterns.md
+```
+
+It provides structured guidance for:
+
+* Project structure and setup
+* Dependency configuration
+* Local execution
+* TestMu AI cloud execution
+* Debugging patterns
+* CI/CD integration
+
+##### Installing Robot Framework Agent Skill
+***
+
+Install a Robot Framework Agent Skill using the command below:
+
+<VerifiedTag value="Verified" />
+
+```
+# Clone the repo and copy the skill you need
+git clone https://github.com/LambdaTest/agent-skills.git
+cp -r agent-skills/robot-framework-skill .claude/skills/
+
+# Or for Cursor / Copilot
+cp -r agent-skills/robot-framework-skill .cursor/skills/
+```
+
+**Note**: If you prefer installing all available framework skills instead of only robot-framework-skill, clone the repository directly into your tool's skills directory (for example, .claude/skills/, .cursor/skills/, .gemini/skills/, or .agent/skills/).
+
 </TabItem>
 </Tabs>
 
@@ -1636,6 +1901,50 @@ You can seamlessly navigate between JobId's and taskId's. You need to click on t
 The snapshot below shows the videos, logs and other meta data for that specific *test_ID*
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/testng_artifacts_2.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
+
+#### Using the NUnit Agent Skill with TestMu AI
+***
+
+The [nunit-skill](https://github.com/LambdaTest/agent-skills/tree/main/nunit-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
+
+The nunit-skill package includes:
+
+<VerifiedTag value="Verified" />
+
+```
+nunit-skill/
+├── SKILL.md
+└── reference/
+    ├── playbook.md
+    └── advanced-patterns.md
+```
+
+It provides structured guidance for:
+
+* Project structure and setup
+* Dependency configuration
+* Local execution
+* TestMu AI cloud execution
+* Debugging patterns
+* CI/CD integration
+
+##### Installing NUnit Agent Skill
+***
+
+Install a NUnit Agent Skill using the command below:
+
+<VerifiedTag value="Verified" />
+
+```
+# Clone the repo and copy the skill you need
+git clone https://github.com/LambdaTest/agent-skills.git
+cp -r agent-skills/nunit-skill .claude/skills/
+
+# Or for Cursor / Copilot
+cp -r agent-skills/nunit-skill .cursor/skills/
+```
+
+**Note**: If you prefer installing all available framework skills instead of only nunit-skill, clone the repository directly into your tool's skills directory (for example, .claude/skills/, .cursor/skills/, .gemini/skills/, or .agent/skills/).
 
 </TabItem>
 <TabItem value="specflow" label="SpecFlow">
@@ -1835,6 +2144,50 @@ You can seamlessly navigate between JobId's and taskId's. You need to click on t
 The snapshot below shows the videos, logs and other meta data for that specific *test_ID*
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/testng_artifacts_2.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
+
+#### Using the SpecFlow Agent Skill with TestMu AI
+***
+
+The [specflow-skill](https://github.com/LambdaTest/agent-skills/tree/main/specflow-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
+
+The specflow-skill package includes:
+
+<VerifiedTag value="Verified" />
+
+```
+specflow-skill/
+├── SKILL.md
+└── reference/
+    ├── playbook.md
+    └── advanced-patterns.md
+```
+
+It provides structured guidance for:
+
+* Project structure and setup
+* Dependency configuration
+* Local execution
+* TestMu AI cloud execution
+* Debugging patterns
+* CI/CD integration
+
+##### Installing SpecFlow Agent Skill
+***
+
+Install a SpecFlow Agent Skill using the command below:
+
+<VerifiedTag value="Verified" />
+
+```
+# Clone the repo and copy the skill you need
+git clone https://github.com/LambdaTest/agent-skills.git
+cp -r agent-skills/specflow-skill .claude/skills/
+
+# Or for Cursor / Copilot
+cp -r agent-skills/specflow-skill .cursor/skills/
+```
+
+**Note**: If you prefer installing all available framework skills instead of only specflow-skill, clone the repository directly into your tool's skills directory (for example, .claude/skills/, .cursor/skills/, .gemini/skills/, or .agent/skills/).
 
 </TabItem>
 <TabItem value="reqnroll" label="Reqnroll">
@@ -2348,6 +2701,50 @@ The snapshot below shows the videos, logs and other meta data for that specific 
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/testng_artifacts_2.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
+#### Using the Capybara Agent Skill with TestMu AI
+***
+
+The [capybara-skill](https://github.com/LambdaTest/agent-skills/tree/main/capybara-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
+
+The capybara-skill package includes:
+
+<VerifiedTag value="Verified" />
+
+```
+capybara-skill/
+├── SKILL.md
+└── reference/
+    ├── playbook.md
+    └── advanced-patterns.md
+```
+
+It provides structured guidance for:
+
+* Project structure and setup
+* Dependency configuration
+* Local execution
+* TestMu AI cloud execution
+* Debugging patterns
+* CI/CD integration
+
+##### Installing Capybara Agent Skill
+***
+
+Install a Capybara Agent Skill using the command below:
+
+<VerifiedTag value="Verified" />
+
+```
+# Clone the repo and copy the skill you need
+git clone https://github.com/LambdaTest/agent-skills.git
+cp -r agent-skills/capybara-skill .claude/skills/
+
+# Or for Cursor / Copilot
+cp -r agent-skills/capybara-skill .cursor/skills/
+```
+
+**Note**: If you prefer installing all available framework skills instead of only capybara-skill, clone the repository directly into your tool's skills directory (for example, .claude/skills/, .cursor/skills/, .gemini/skills/, or .agent/skills/).
+
 </TabItem>
 </Tabs>
 
@@ -2537,6 +2934,50 @@ You can seamlessly navigate between JobId's and taskId's. You need to click on t
 The snapshot below shows the videos, logs and other meta data for that specific *test_ID*
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/testng_artifacts_2.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
+
+#### Using the WebdriverIO Agent Skill with TestMu AI
+***
+
+The [webdriverio-skill](https://github.com/LambdaTest/agent-skills/tree/main/webdriverio-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
+
+The webdriverio-skill package includes:
+
+<VerifiedTag value="Verified" />
+
+```
+webdriverio-skill/
+├── SKILL.md
+└── reference/
+    ├── playbook.md
+    └── advanced-patterns.md
+```
+
+It provides structured guidance for:
+
+* Project structure and setup
+* Dependency configuration
+* Local execution
+* TestMu AI cloud execution
+* Debugging patterns
+* CI/CD integration
+
+##### Installing WebdriverIO Agent Skill
+***
+
+Install a WebdriverIO Agent Skill using the command below:
+
+<VerifiedTag value="Verified" />
+
+```
+# Clone the repo and copy the skill you need
+git clone https://github.com/LambdaTest/agent-skills.git
+cp -r agent-skills/webdriverio-skill .claude/skills/
+
+# Or for Cursor / Copilot
+cp -r agent-skills/webdriverio-skill .cursor/skills/
+```
+
+**Note**: If you prefer installing all available framework skills instead of only webdriverio-skill, clone the repository directly into your tool's skills directory (for example, .claude/skills/, .cursor/skills/, .gemini/skills/, or .agent/skills/).
 
 </TabItem>
 <TabItem value="nightwatch" label="Nightwatch">
@@ -2729,6 +3170,50 @@ The snapshot below shows the videos, logs and other meta data for that specific 
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/testng_artifacts_2.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
+#### Using the NightwatchJS Agent Skill with TestMu AI
+***
+
+The [nightwatchjs-skill](https://github.com/LambdaTest/agent-skills/tree/main/nightwatchjs-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
+
+The nightwatchjs-skill package includes:
+
+<VerifiedTag value="Verified" />
+
+```
+nightwatchjs-skill/
+├── SKILL.md
+└── reference/
+    ├── playbook.md
+    └── advanced-patterns.md
+```
+
+It provides structured guidance for:
+
+* Project structure and setup
+* Dependency configuration
+* Local execution
+* TestMu AI cloud execution
+* Debugging patterns
+* CI/CD integration
+
+##### Installing NightwatchJS Agent Skill
+***
+
+Install a NightwatchJS Agent Skill using the command below:
+
+<VerifiedTag value="Verified" />
+
+```
+# Clone the repo and copy the skill you need
+git clone https://github.com/LambdaTest/agent-skills.git
+cp -r agent-skills/nightwatchjs-skill .claude/skills/
+
+# Or for Cursor / Copilot
+cp -r agent-skills/nightwatchjs-skill .cursor/skills/
+```
+
+**Note**: If you prefer installing all available framework skills instead of only nightwatchjs-skill, clone the repository directly into your tool's skills directory (for example, .claude/skills/, .cursor/skills/, .gemini/skills/, or .agent/skills/).
+
 </TabItem>
 <TabItem value="protractor" label="Protractor">
 
@@ -2909,6 +3394,50 @@ You can seamlessly navigate between JobId's and taskId's. You need to click on t
 The snapshot below shows the videos, logs and other meta data for that specific *test_ID*
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/testng_artifacts_2.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
+
+#### Using the Protractor Agent Skill with TestMu AI
+***
+
+The [protractor-skill](https://github.com/LambdaTest/agent-skills/tree/main/protractor-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
+
+The protractor-skill package includes:
+
+<VerifiedTag value="Verified" />
+
+```
+protractor-skill/
+├── SKILL.md
+└── reference/
+    ├── playbook.md
+    └── advanced-patterns.md
+```
+
+It provides structured guidance for:
+
+* Project structure and setup
+* Dependency configuration
+* Local execution
+* TestMu AI cloud execution
+* Debugging patterns
+* CI/CD integration
+
+##### Installing Protractor Agent Skill
+***
+
+Install a Protractor Agent Skill using the command below:
+
+<VerifiedTag value="Verified" />
+
+```
+# Clone the repo and copy the skill you need
+git clone https://github.com/LambdaTest/agent-skills.git
+cp -r agent-skills/protractor-skill .claude/skills/
+
+# Or for Cursor / Copilot
+cp -r agent-skills/protractor-skill .cursor/skills/
+```
+
+**Note**: If you prefer installing all available framework skills instead of only protractor-skill, clone the repository directly into your tool's skills directory (for example, .claude/skills/, .cursor/skills/, .gemini/skills/, or .agent/skills/).
 
 </TabItem>
 </Tabs>

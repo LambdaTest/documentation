@@ -16,6 +16,7 @@ slug: hyperexecute-how-to-debug-job/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-how-to-debug-job/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -55,7 +56,9 @@ The HyperExecute Dashboard provides a central view of all your test runs, includ
 
 ## Common CLI Errors
 
-If you are facing any CLI issues, the following errors will help you debug your failed job.
+This section will help you debug your failed job if you are facing any CLI issues. 
+
+If the CLI printed an error code such as `ERR::HTTP::RESP`, look it up in [Error Codes](#error-codes) below.
 
 :::tip
 If you are encountering any error which is properly not detailed, it is recommend to use [**`verbose`**](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/#--verbose) mode in HyperExecute CLI command.
@@ -67,27 +70,100 @@ This error will mark your Job as a **Lambda Error**.
 
 You can encounter this error when you try to upload the **node_modules** directory along with the payload to trigger your Job in HyperExecute. This error generally occurs with your Node.js projects. You must avoid doing this, as it will not only save storage space but also avoid potential issues with version control. The node_modules folder holds all the project dependencies, and adding it to the repository can cause unnecessary file duplication and increase the repository size.
 
-To resolve this issue, either you remove that directory or you simply add node_modules to the **.gitignore** file. This ensures you have a smooth development process without unnecessary hiccups.
+To resolve this issue, either you remove that directory or you simply add node_modules to the **.gitignore** file. This ensures you have a smooth development process without unnecessary hiccups.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/debugging-guide/cli-errors/symlink.png').default} alt="Image"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/debugging-guide/cli-errors/symlink.png').default} alt="HyperExecute CLI output for a Symbolic Link Error, ending in Exiting with error: Lambda error found"  className="doc_img"/>
+
+The CLI output looks like this:
+
+<VerifiedTag value="Verified" />
+
+```text
+error    ERR::JOB::STS     Job lambda_error!
+taskID:<task-id> has errored with remark: error in extracting: reading file in zip archive: <path>/node_modules/.bin/he: making symbolic link for: symlink #!/usr/bin/env node
+LAMBDA_ERROR
+error    Exiting with error: Lambda error found.
+```
 
 ### Snooper Failed Error
 
-It's crucial to understand a specific characteristic of Gherkin: it exclusively supports the use of **Examples** with the **Scenario Outline**. If you come across an error, it likely indicates that the **Scenario** is being employed with **Examples** instead of the intended **Scenario Outline**. To resolve this, ensure that you use the appropriate structure, employing the Scenario Outline when incorporating Examples.
+It's crucial to understand a specific characteristic of Gherkin – it exclusively supports the use of **Examples** with the **Scenario Outline**. If you come across an error, it likely indicates that the **Scenario** is being employed with **Examples** instead of the intended **Scenario Outline**. To resolve this, ensure that you use the appropriate structure, employing the Scenario Outline when incorporating Examples.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/debugging-guide/cli-errors/snooper1.png').default} alt="Image"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/debugging-guide/cli-errors/snooper1.png').default} alt="Gherkin comparison: Examples under a Scenario Outline is recommended, Examples under a plain Scenario is not"  className="doc_img"/>
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/debugging-guide/cli-errors/snooper.png').default} alt="Image"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/debugging-guide/cli-errors/snooper.png').default} alt="Snooper failed output: Unable to extract scenarios, Unable to parse file"  className="doc_img"/>
+
+The CLI prints output like this:
+
+<VerifiedTag value="Verified" />
+
+```text
+Snooper failed:
+ Error occurred while running snooper command
+ Caused by -> Unable to extract scenarios
+ Caused by -> Unable to parse file: <path>/<file>.feature
+```
+
+Use **Examples** only under a **Scenario Outline**:
+
+<VerifiedTag value="Verified" />
+
+```text
+Scenario Outline: test
+  Then Click on User Profile
+  And Click on Admin Dashboard
+  Then Click on Save button
+  Examples:
+    | User |
+    | home |
+```
+
+Not under a plain **Scenario**, which causes the error above:
+
+<VerifiedTag value="Verified" />
+
+```text
+Scenario: test
+  Then Click on User Profile
+  And Click on Admin Dashboard
+  Then Click on Save button
+  Examples:
+    | User |
+    | home |
+```
 
 ### Authentication Error
 
 There may be cases where, when trying to connect to HyperExecute services, the CLI throws the following error:
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/debugging-guide/cli-errors/auth.png').default} alt="Image"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/debugging-guide/cli-errors/auth.png').default} alt="HyperExecute CLI output: ERR:HTTP:HOST Facing problem in connecting with LUMS_HOST"  className="doc_img"/>
+
+<VerifiedTag value="Verified" />
+
+```text
+error    ERR:HTTP:HOST     Facing problem in connecting with LUMS_HOST :: https://auth.hyperexecute.cloud - prod  - error in authenticating user.
+```
+
+If the CLI printed an error code such as `ERR::NO::USER`, `ERR::NO::KEY`, or `ERR::HTTP::RESP`, see [Error Codes](#error-codes) below.
 
 Now, to validate the connectivity and to make sure the **auth.hyperexecute.cloud** is reachable, you have to run a `scan` command in your CLI, as shown below. If the network scan fails, then you are required to whitelist the IP address.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/debugging-guide/cli-errors/auth1.png').default} alt="Image"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/debugging-guide/cli-errors/auth1.png').default} alt="Output of hyperexecute --scan showing each HyperExecute host as reachable"  className="doc_img"/>
+
+<VerifiedTag value="Verified" />
+
+```text
+hyperexecute.exe --scan
+Running Network Scanner:
+✓ Tunnel Host hts.lambdatest.com is reachable
+✓ Download Assets Host downloads.lambdatest.com is reachable
+✓ API Host api-hyperexecute.lambdatest.com is reachable
+✓ Storage Host hypertestproduction.blob.core.windows.net is reachable
+✓ Download Assets Host downloads.hyperexecute.cloud is reachable
+✓ Authentication Host auth.hyperexecute.cloud is reachable
+
+Network Scan Passed!
+```
 
 #### IPs to be Whitelisted
 
@@ -362,6 +438,14 @@ The CLI can also print the codes below. Their causes are not documented yet. If 
 
 > Two codes use single colons, `ERR:HTTP:LINK` and `ERR:HTTP:HOST`. This matches what the CLI prints.
 
+
+### Related
+
+- [Kane CLI Error Codes](/support/docs/kane-cli-error-codes/)
+- [KaneAI Errors](/support/docs/error-handling-kaneai/)
+- [Platform Error Messages](/support/docs/error-messages/)
+- [Tunnel Error Messages](/support/docs/troubleshooting-lambda-tunnel/#error-messages)
+- [Timeouts, Issues and Resolutions](/support/docs/timeouts-issues-and-resolutions/)
 
 ## Pre Steps
 You can see in the screenshot mentioned below that the Pre Step of the Task has failed. To understand the issue causing the step to fail, scroll down, go through the logs once, and you can find the **type of error** and its **location** in the code as well.

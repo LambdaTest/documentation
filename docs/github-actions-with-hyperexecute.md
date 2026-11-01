@@ -18,6 +18,7 @@ slug: github-actions-with-hyperexecute/
 canonical: https://www.testmuai.com/support/docs/github-actions-with-hyperexecute/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -50,6 +51,76 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 GitHub Actions is a continuous integration and continuous delivery (CI/CD) platform that allows you to automate your build, test, and deployment pipeline. You can create workflows that build and test every pull request to your repository, or deploy merged pull requests to production.
 
 This document will show you how to integrate GitHub Actions Pipeline with HyperExecute to greatly shorten your test cycles.
+
+## Prerequisites For Integrating GitHub CI With HyperExecute
+***
+To perform your WebdriverIO tests with HyperExecute, you would need the following essentials to be already set up.
+
+1. **Global Dependencies**
+
+* A Git or GitHub repository.
+* Download and install node.js and node package manager or npm.
+* To install node.js with homebrew use the command below.
+
+<VerifiedTag value="Verified" />
+
+```
+$ brew install node
+```
+
+* If you already have npm set up, you might want to update to the most recent version. To upgrade npm, run the following code in your terminal.
+
+<VerifiedTag value="Verified" />
+
+```
+npm install npm@latest –g
+```
+
+* Install WebdriverIO with the npm command below.
+
+<VerifiedTag value="Verified" />
+
+```
+npm install webdriverio
+```
+
+2. **<BrandName /> Authentication Credentials**
+
+Keep your <BrandName /> login, access key, and HubURL handy for authentication purposes. They must be configured as environment variables. You can find them on your <BrandName /> automation dashboard by clicking on the key symbol next to the help button.
+
+* **For Linux/Mac**
+
+<VerifiedTag value="Verified" />
+
+```
+$ export LT_USERNAME=<YOUR_LAMBDATEST_USERNAME> 
+$ export LT_ACCESS_KEY=<YOUR_LAMBDATEST_ACCESS_KEY>
+```
+
+* **For Windows**
+
+<VerifiedTag value="Verified" />
+
+```
+$ set LT_USERNAME=<YOUR_LAMBDATEST_USERNAME>
+$ set LT_ACCESS_KEY=<YOUR_LAMBDATEST_ACCESS_KEY>
+```
+
+## Integrating HyperExecute With GitHub CI
+***
+To integrate GitHub CI with HyperExecute, you need to make use of the HyperExecute CLI. HyperExecute CLI is a command line client to interact and run tests on HyperExecute and provides a host of other useful features that accelerate test execution.
+
+For triggering tests using HyperExecute CLI, you have to download the HyperExecute CLI binary corresponding to the platform (or OS) from where the tests are triggered: Below are the HyperExecute CLI download links for different operating systems:
+
+| OS | HyperExecute CLI download link |
+| ---------| --------------------------- |
+| Windows | https://downloads.lambdatest.com/hyperexecute/windows/hyperexecute.exe |
+| macOS | https://downloads.lambdatest.com/hyperexecute/darwin/hyperexecute |
+| Linux | https://downloads.lambdatest.com/hyperexecute/linux/hyperexecute |
+
+HyperExecute CLI provides different command-line flags that let you customize the HyperExecute experience. Once you download the HyperExecute CLI in your machine, run the command *hyperexecute.exe --help* on the terminal to explore the different flags.
+
+<img loading="lazy" src={require('../assets/images/hyperexecute/cli/cli-help.png').default} alt="Image"  className="doc_img"/>
 
 ## How To Integrate GitHub Actions Pipeline with HyperExecute
 
