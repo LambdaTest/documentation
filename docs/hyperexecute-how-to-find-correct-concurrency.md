@@ -16,6 +16,8 @@ slug: hyperexecute-how-to-find-correct-concurrency/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-how-to-find-correct-concurrency/
 ---
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
@@ -49,6 +51,8 @@ This page explains how you can find what concurrency would be best suited for yo
 ***
     
 The `concurrency` is one of the parameters in the HyperExecute Yaml. It indicates the number of concurrent tasks to run for processing all your test scenarios/test-cases. A HyperExecute job, thus triggered, creates as many threads(also known as tasks) as per the value provided in the `concurrency` key. 
+
+<VerifiedTag value="Verified" />
 
 ```bash
 concurrency: 10   

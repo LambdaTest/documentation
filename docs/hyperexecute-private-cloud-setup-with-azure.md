@@ -15,6 +15,8 @@ slug: hyperexecute-private-cloud-setup-with-azure/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-private-cloud-setup-with-azure/
 ---
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
@@ -175,6 +177,8 @@ You can enable Vnet peering and Vnet linking in your account by following the pr
 - Clear all the text present in the editor and paste the contents of the ARM script provided below.  
   
     **ARM Template**
+
+<VerifiedTag value="Verified" />
 
 ```bash
   // ####################################################################################

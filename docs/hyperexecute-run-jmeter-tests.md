@@ -17,6 +17,8 @@ slug: hyperexecute-run-jmeter-tests/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-run-jmeter-tests/
 ---
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
@@ -129,11 +131,15 @@ To use custom variables, define the value in your JMX file using the JMeter `__P
 
 Example:
 
+<VerifiedTag value="Verified" />
+
 ```xml
 <stringProp name="ThreadGroup.num_threads">${__P(f_threads,5)}</stringProp>
 ```
 
 You can override the default value when running the test:
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 jmeter:

@@ -92,6 +92,8 @@ Export your <BrandName /> credentials as environment variables so the CLI can au
 
 <TabItem value="bash" label="Linux / macOS" default>
 
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
@@ -102,6 +104,8 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </TabItem>
 
 <TabItem value="powershell" label="Windows">
+
+  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
@@ -158,6 +162,8 @@ By setting up the Hub endpoint, you establish the communication channel between 
 
 Update your TestNG test configuration to point to the <BrandName /> hub and set capabilities as needed:
 
+<VerifiedTag value="Verified" />
+
 ```java title="test.java"
 DesiredCapabilities capabilities = new DesiredCapabilities();
 capabilities.setCapability("browserName", "chrome");
@@ -182,6 +188,8 @@ In this sample YAML file, we have mentioned:
 - **Reports and Artefacts** that will be generated after the completion of tests
 - and other necessary YAML Parameters
 
+<VerifiedTag value="Verified" />
+
 ```yaml reference title="HyperExecute AutoSplit YAML"
 https://github.com/LambdaTest/testng-selenium-hyperexecute-sample/blob/main/yaml/linux/v2/testng_hyperexecute_autosplit_sample.yaml
 ```
@@ -192,11 +200,15 @@ https://github.com/LambdaTest/testng-selenium-hyperexecute-sample/blob/main/yaml
 
 Run the below command in your terminal at the root folder of the project:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 ./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE
 ```
 
 OR use this command if you have not exported your username and access key.
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">
@@ -343,6 +355,8 @@ By setting up the Hub endpoint, you establish the communication channel between 
 
 Configure the desired capabilities based on your test requirements. For example:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 DesiredCapabilities capabilities = new DesiredCapabilities();
 capabilities.setCapability("browserName", "chrome");
@@ -370,6 +384,8 @@ In this sample YAML file, we have mentioned:
 - **Pre and Post** commands
 - **Reports and Artefacts** that will be generated after the completion of tests
 - and other necessary YAML Parameters
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 ---
@@ -437,11 +453,15 @@ jobLabel: [selenium-junit, linux, autosplit]
 
 Run the below command in your terminal at the root folder of the project:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 ./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE
 ```
 
 OR use this command if you have not exported your username and access key.
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">
@@ -586,6 +606,8 @@ By setting up the Hub endpoint, you establish the communication channel between 
 
 Configure the desired capabilities based on your test requirements. For example:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 DesiredCapabilities capability = new DesiredCapabilities();
 capability.setCapability(CapabilityType.BROWSER_NAME, browser);
@@ -608,6 +630,8 @@ In this sample YAML file, we have mentioned:
 - **Pre and Post** commands
 - **Reports and Artefacts** that will be generated after the completion of tests
 - and other necessary YAML Parameters
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 ---
@@ -677,11 +701,15 @@ jobLabel: [selenium-cucumber-java, linux, autosplit]
 
 Run the below command in your terminal at the root folder of the project:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 ./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE
 ```
 
 OR use this command if you have not exported your username and access key.
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">
@@ -831,6 +859,8 @@ By setting up the Hub endpoint, you establish the communication channel between 
 
 Configure the desired capabilities based on your test requirements. For example:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 capabilities = {
 "build": "Sample PY Build",
@@ -858,6 +888,8 @@ In this sample YAML file, we have mentioned:
 - **Pre and Post** commands
 - **Reports and Artefacts** that will be generated after the completion of tests
 - and other necessary YAML Parameters
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 ---
@@ -919,11 +951,15 @@ jobLabel: [selenium-pytest, linux, autosplit]
 
 Run the below command in your terminal at the root folder of the project:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 ./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE
 ```
 
 OR use this command if you have not exported your username and access key in the step 2.
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">
@@ -1071,6 +1107,8 @@ By setting up the Hub endpoint, you establish the communication channel between 
 
 Configure the desired capabilities based on your test requirements. For example:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 capabilities = {
 "build": "UnitTest-Selenium-Sample",
@@ -1099,6 +1137,8 @@ In this sample YAML file, we have mentioned:
 - **Pre and Post** commands
 - **Reports and Artefacts** that will be generated after the completion of tests
 - and other necessary YAML Parameters
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 ---
@@ -1156,11 +1196,15 @@ jobLabel: [selenium-pyunit, linux, autosplit]
 
 Run the below command in your terminal at the root folder of the project:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 ./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE
 ```
 
 OR use this command if you have not exported your username and access key in the step 2.
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">
@@ -1264,6 +1308,8 @@ By setting up the Hub endpoint, you establish the communication channel between 
 
 Configure the desired capabilities based on your test requirements. For example:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 [
   {
@@ -1294,6 +1340,8 @@ In this sample YAML file, we have mentioned:
 - **Pre and Post** commands
 - **Reports and Artefacts** that will be generated after the completion of tests
 - and other necessary YAML Parameters
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 ---
@@ -1355,11 +1403,15 @@ jobLabel: [selenium-behave, linux, autosplit]
 
 Run the below command in your terminal at the root folder of the project:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 ./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE
 ```
 
 OR use this command if you have not exported your username and access key in the step 2.
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">
@@ -1529,6 +1581,8 @@ In this sample YAML file, we have mentioned:
 - **Reports and Artefacts** that will be generated after the completion of tests
 - and other necessary YAML Parameters
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 ---
 version: 0.1
@@ -1594,11 +1648,15 @@ jobLabel: [selenium-robot, linux, autosplit]
 
 Run the below command in your terminal at the root folder of the project:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 ./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE
 ```
 
 OR use this command if you have not exported your username and access key in the step 2.
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">
@@ -1749,6 +1807,8 @@ By setting up the Hub endpoint, you establish the communication channel between 
 
 Configure the desired capabilities based on your test requirements. For example:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 DesiredCapabilities capabilities = new DesiredCapabilities();
 capabilities.SetCapability(CapabilityType.BrowserName, "Chrome");
@@ -1774,6 +1834,8 @@ In this sample YAML file, we have mentioned:
 - **Pre and Post** commands
 - **Reports and Artefacts** that will be generated after the completion of tests
 - and other necessary YAML Parameters
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 ---
@@ -1835,11 +1897,15 @@ jobLabel: [selenium-Nunit, linux, autosplit]
 
 Run the below command in your terminal at the root folder of the project:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 ./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE
 ```
 
 OR use this command if you have not exported your username and access key in the previous step.
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">
@@ -1982,6 +2048,8 @@ By setting up the Hub endpoint, you establish the communication channel between 
 
 Configure the desired capabilities based on your test requirements. For example:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 DesiredCapabilities capabilities = new DesiredCapabilities();
 capabilities.SetCapability(CapabilityType.BrowserName, "Chrome");
@@ -2007,6 +2075,8 @@ In this sample YAML file, we have mentioned:
 - **Pre and Post** commands
 - **Reports and Artefacts** that will be generated after the completion of tests
 - and other necessary YAML Parameters
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 ---
@@ -2078,11 +2148,15 @@ jobLabel: [selenium-specflow, linux, autosplit]
 
 Run the below command in your terminal at the root folder of the project:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 ./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE
 ```
 
 OR use this command if you have not exported your username and access key in the previous step.
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">
@@ -2225,6 +2299,8 @@ By setting up the Hub endpoint, you establish the communication channel between 
 
 Configure the desired capabilities based on your test requirements. For example:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 DesiredCapabilities capabilities = new DesiredCapabilities();
 capabilities.SetCapability(CapabilityType.BrowserName, "Chrome");
@@ -2250,6 +2326,8 @@ In this sample YAML file, we have mentioned:
 - **Pre and Post** commands
 - **Reports and Artefacts** that will be generated after the completion of tests
 - and other necessary YAML Parameters
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 ---
@@ -2309,11 +2387,15 @@ jobLabel: [selenium-reqnroll, linux, autosplit]
 
 Run the below command in your terminal at the root folder of the project:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 ./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE
 ```
 
 OR use this command if you have not exported your username and access key in the previous step.
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">
@@ -2391,6 +2473,8 @@ In this sample YAML file, we have mentioned:
 - **Reports and Artefacts** that will be generated after the completion of tests
 - and other necessary YAML Parameters
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 ---
 version: "0.1"
@@ -2442,11 +2526,15 @@ jobLabel: [selenium-Rspec, linux, autosplit]
 
 Run the below command in your terminal at the root folder of the project:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 ./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE
 ```
 
 OR use this command if you have not exported your username and access key in the step 2.
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">
@@ -2547,6 +2635,8 @@ By setting up the Hub endpoint, you establish the communication channel between 
 
 Configure the desired capabilities based on your test requirements. For example:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 @caps = {
   "browserName"=>lt_browser,
@@ -2580,6 +2670,8 @@ In this sample YAML file, we have mentioned:
 - **Pre and Post** commands
 - **Reports and Artefacts** that will be generated after the completion of tests
 - and other necessary YAML Parameters
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 ---
@@ -2634,11 +2726,15 @@ jobLabel: [selenium-capybara, linux, autosplit]
 
 Run the below command in your terminal at the root folder of the project:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 ./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE
 ```
 
 OR use this command if you have not exported your username and access key in the step 2.
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">
@@ -2784,6 +2880,8 @@ By setting up the Hub endpoint, you establish the communication channel between 
 
 Configure the desired capabilities based on your test requirements. For example:
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 capabilities: [{
   browserName: 'chrome',
@@ -2813,6 +2911,8 @@ In this sample YAML file, we have mentioned:
 - **Pre and Post** commands
 - **Reports and Artefacts** that will be generated after the completion of tests
 - and other necessary YAML Parameters
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 ---
@@ -2868,11 +2968,15 @@ jobLabel: [selenium-webdriverIO, linux, autosplit]
 
 Run the below command in your terminal at the root folder of the project:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 ./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE
 ```
 
 OR use this command if you have not exported your username and access key in the step 2.
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">
@@ -3013,6 +3117,8 @@ By setting up the Hub endpoint, you establish the communication channel between 
 
 Configure the desired capabilities based on your test requirements. For example:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 # nightwatch.conf.js
 
@@ -3052,6 +3158,8 @@ In this sample YAML file, we have mentioned:
 - **Pre and Post** commands
 - **Reports and Artefacts** that will be generated after the completion of tests
 - and other necessary YAML Parameters
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 ---
@@ -3103,11 +3211,15 @@ jobLabel: [selenium-Nightwatch, linux, autosplit]
 
 Run the below command in your terminal at the root folder of the project:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 ./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE
 ```
 
 OR use this command if you have not exported your username and access key in the step 2.
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">
@@ -3248,6 +3360,8 @@ By setting up the Hub endpoint, you establish the communication channel between 
 
 Configure the desired capabilities based on your test requirements. For example:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 capabilities = {
   build: 'protractor-LambdaTest-Single',
@@ -3275,6 +3389,8 @@ In this sample YAML file, we have mentioned:
 - **Pre and Post** commands
 - **Reports and Artefacts** that will be generated after the completion of tests
 - and other necessary YAML Parameters
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 ---
@@ -3328,11 +3444,15 @@ jobLabel: [selenium-protractor, linux, autosplit]
 
 Run the below command in your terminal at the root folder of the project:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 ./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE
 ```
 
 OR use this command if you have not exported your username and access key in the step 2.
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">

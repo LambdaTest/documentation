@@ -18,6 +18,8 @@ slug: bamboo-integration-with-hyperexecute/
 canonical: https://www.testmuai.com/support/docs/bamboo-integration-with-hyperexecute/
 ---
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
@@ -80,6 +82,8 @@ Below are the mentioned softwares used for this documentation:
 
     - Go to the following file location
 
+    <VerifiedTag value="Verified" />
+
     ```bash
     ROOT_FOLDER/atlassian-bamboo/WEB-INF/classes/bamboo-init.properties
     ``` 
@@ -88,6 +92,8 @@ Below are the mentioned softwares used for this documentation:
 ### Step 2: Start the Bamboo Server
 
 - Change to the **ROOT_FOLDER** from the command-line and start the server
+
+<VerifiedTag value="Verified" />
 
 ```bash
 cd ROOT_FOLDER
@@ -158,6 +164,8 @@ cd ROOT_FOLDER
 - Select the **Interpreter** as **Shell**.
 - Choose the **Script Location** as **Inline**.
 - Add the following code in the **Script Body**
+
+<VerifiedTag value="Verified" />
 
 ```bash
 curl -O https://downloads.lambdatest.com/hyperexecute/linux/hyperexecute

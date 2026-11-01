@@ -18,6 +18,8 @@ slug: hyperexecute-appium-testing/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-appium-testing/
 ---
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import Tabs from '@theme/Tabs';
@@ -85,6 +87,8 @@ Run the below mentioned commands in the terminal to setup the CLI and the enviro
 
 <TabItem value="bash" label="Linux / MacOS" default>
 
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
@@ -95,6 +99,8 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
+
+  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
@@ -117,6 +123,8 @@ Upload your <b>_iOS_</b> application (.ipa file) or <b>_android_</b> application
 <Tabs className="docs__val">
 <TabItem value="macos-file" label="Linux / MacOS" default>
 
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" --location --request POST 'https://manual-api.lambdatest.com/app/upload/realDevice' --form 'name="Android_App"' --form 'appFile=@"<RELATIVE_PATH_OF_YOUR_APP>"' 
@@ -127,6 +135,8 @@ Upload your <b>_iOS_</b> application (.ipa file) or <b>_android_</b> application
 </TabItem>
 
 <TabItem value="windows-file" label="Windows" default>
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-powershell">
 {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "appFile=@"<RELATIVE_PATH_OF_YOUR_APP>""
@@ -142,6 +152,8 @@ Upload your <b>_iOS_</b> application (.ipa file) or <b>_android_</b> application
 <Tabs className="docs__val">
 <TabItem value="macos-url" label="Linux / MacOS" default>
 
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" \\
@@ -154,6 +166,8 @@ Upload your <b>_iOS_</b> application (.ipa file) or <b>_android_</b> application
 </TabItem>
 
 <TabItem value="windows-url" label="Windows" default>
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-powershell">
 {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" --location --request POST "https://manual-api.lambdatest.com/app/upload/realDevice" --header "Content-Type: application/x-www-form-urlencoded" --data-urlencode "url=:https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk" --data-urlencode "name=Proverbial_App"`}
@@ -231,11 +245,15 @@ https://github.com/LambdaTest/hyperexecute-real-device-appium-testng/blob/main/y
 
 Run the below command in your terminal at the root folder of the project:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 ./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE
 ```
 
 OR use this command if you have not exported your username and access key in the step 2.
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">
@@ -246,6 +264,8 @@ OR use this command if you have not exported your username and access key in the
 ## Configure Smart UI
 
 To configure SmartUI with HyperExecute, you need to simply add a capability in your test file:
+
+<VerifiedTag value="Verified" />
 
 ```bash java
 "smartUI.project": "<YOUR_SMARTUI_PROJECT_NAME>"
@@ -537,6 +557,8 @@ Once you have run your tests, you can view the test execution along with logs. Y
 
 ### Sample YAML 0.2
 
+<VerifiedTag value="Verified" />
+
 ```bash
 version: "0.1"
 runson: win
@@ -637,6 +659,8 @@ Upload your <b>_android_</b> application (.apk file) to the <BrandName /> server
 <Tabs className="docs__val">
 <TabItem value="vd-macos-file" label="Linux / MacOS" default>
 
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" --location --request POST 'https://manual-api.lambdatest.com/app/upload/virtualDevice' --form 'name="Android_App"' --form 'appFile=@"<RELATIVE_PATH_OF_YOUR_APP>"' 
@@ -647,6 +671,8 @@ Upload your <b>_android_</b> application (.apk file) to the <BrandName /> server
 </TabItem>
 
 <TabItem value="vd-windows-file" label="Windows" default>
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-powershell">
 {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/virtualDevice" -F "appFile=@"<RELATIVE_PATH_OF_YOUR_APP>""
@@ -662,6 +688,8 @@ Upload your <b>_android_</b> application (.apk file) to the <BrandName /> server
 <Tabs className="docs__val">
 <TabItem value="vd-macos-url" label="Linux / MacOS" default>
 
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" \\
@@ -674,6 +702,8 @@ Upload your <b>_android_</b> application (.apk file) to the <BrandName /> server
 </TabItem>
 
 <TabItem value="vd-windows-url" label="Windows" default>
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-powershell">
 {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" --location --request POST "https://manual-api.lambdatest.com/app/upload/virtualDevice" --header "Content-Type: application/x-www-form-urlencoded" --data-urlencode "url=:https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk" --data-urlencode "name=Proverbial_App"`}
@@ -692,6 +722,8 @@ Write Your Automation Script in the client language of your choice from the ones
 
 Here is a sample automation script in Java for the sample app downloaded above. Ensure to update the `app_url`, `username` and `accesskey` in the below code.
 
+<VerifiedTag value="Verified" />
+
 ```java reference title="AndroidEmulator.java"
 https://github.com/LambdaTest/hyperexecute-appium-testng/blob/android-emulator/src/main/java/AndroidEmulator.java
 ```
@@ -699,11 +731,15 @@ https://github.com/LambdaTest/hyperexecute-appium-testng/blob/android-emulator/s
 #### Step 3: Update your XML file
 Create `.XML` file in order to run your test and define device capabilities. Please find sample code below for the same.
 
+<VerifiedTag value="Verified" />
+
 ```xml reference title="android-emulator.xml"
 https://github.com/LambdaTest/hyperexecute-appium-testng/blob/android-emulator/src/test/java/android-emulator.xml
 ```
 
 #### Step 4: Configure YAML and Execute your Script
+<VerifiedTag value="Verified" />
+
 ```yaml reference title="android-emulator.yaml"
 https://github.com/LambdaTest/hyperexecute-appium-testng/blob/android-emulator/yaml/hyp-android-emulator.yaml
 ```
@@ -713,11 +749,15 @@ https://github.com/LambdaTest/hyperexecute-appium-testng/blob/android-emulator/y
 
 Run the below command in your terminal at the root folder of the project:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 ./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE
 ```
 
 OR use this command if you have not exported your username and access key.
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">
@@ -781,6 +821,8 @@ Run the below mentioned commands in your terminal to setup the CLI and the envir
 
 <TabItem value="vdi-bash" label="Linux / MacOS" default>
 
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
@@ -791,6 +833,8 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </TabItem>
 
 <TabItem value="vdi-powershell" label="Windows" default>
+
+  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
@@ -812,6 +856,8 @@ Upload your **iOS** application (*.app* file) or **Android** application (*.apk*
 <Tabs className="docs__val">
 <TabItem value="vdi-macos-file" label="Linux/macOS" default>
 
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" --location --request POST 'https://manual-api.lambdatest.com/app/upload/virtualDevice' --form 'name="Android_App"' --form 'appFile=@"/Users/macuser/Downloads/proverbial_android.apk"'  
@@ -822,6 +868,8 @@ Upload your **iOS** application (*.app* file) or **Android** application (*.apk*
 </TabItem>
 
 <TabItem value="vdi-windows-file" label="Windows" default>
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-powershell">
 {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" --location --request POST 'https://manual-api.lambdatest.com/app/upload/virtualDevice' --form 'name="Android_App"' --form 'appFile=@"/Users/macuser/Downloads/proverbial_android.apk"' 
@@ -837,6 +885,8 @@ Upload your **iOS** application (*.app* file) or **Android** application (*.apk*
 <Tabs className="docs__val">
 <TabItem value="vdi-macos-url" label="Linux macOS" default>
 
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" --location --request POST 'https://manual-api.lambdatest.com/app/upload/virtualDevice' --form 'name="Android_App"' --form 'url="https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk"'`}
@@ -846,6 +896,8 @@ Upload your **iOS** application (*.app* file) or **Android** application (*.apk*
 </TabItem>
 
 <TabItem value="vdi-windows-url" label="Windows" default>
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-powershell">
 {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" --location --request POST "https://manual-api.lambdatest.com/app/upload/virtualDevice" --header "Content-Type: application/x-www-form-urlencoded" --data-urlencode "url=:https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk" --data-urlencode "name=Proverbial_App"`}
@@ -989,6 +1041,8 @@ public void iOSApp1(String device, String version, String platform) {
 
 #### Step 5: Configure YAML in your Test Suite
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 ---
 version: 0.2
@@ -1021,11 +1075,15 @@ jobLabel: ['HYP', 'Virtual Device', 'iOS', 'Single Device']
 
 Run the below command in your terminal at the root folder of the project:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 ./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE
 ```
 
 OR use this command if you have not exported your username and access key.
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">

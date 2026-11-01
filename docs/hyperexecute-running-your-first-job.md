@@ -16,6 +16,8 @@ slug: hyperexecute-running-your-first-job/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-running-your-first-job/
 ---
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 import TabItem from '@theme/TabItem';
 import Tabs from '@theme/Tabs';
 import CodeBlock from '@theme/CodeBlock';
@@ -94,6 +96,8 @@ Run the below mentioned commands in your terminal to setup the CLI and the envir
 
 <TabItem value="bash" label="Linux / MacOS" default>
 
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
@@ -104,6 +108,8 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
+
+  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
@@ -180,6 +186,8 @@ We will be taking care of everything one by one, just follow the steps given bel
 :::note
 The generic command required to initiate test execution is given below. You will need to insert the name of your YAML file in place of the `RELATIVE_PATH_OF_YOUR_YAML_FILE` before running this command. (Skip if you already used the command from Step 6. )
 
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">
     {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE `}
@@ -225,6 +233,8 @@ data needs to be transferred and uploaded to the testing environment.
 ### How to write `.hyperexecuteignore`  file?
 
 The HyperExecuteIgnore file follows a format similar to the .gitignore file used with Git. It allows the use of wildcards to exclude patterns of files based on specific naming conventions.
+
+<VerifiedTag value="Verified" />
 
 ```bash
 examplename

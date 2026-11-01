@@ -18,6 +18,8 @@ slug: hyperexecute-bidi-testing/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-bidi-testing/
 ---
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import Tabs from '@theme/Tabs';
@@ -87,6 +89,8 @@ Download the HyperExecute CLI and copy it into the root folder of the downloaded
 
 > The `webSocketUrl` capability is set to `true` to enable BiDi support.
 
+<VerifiedTag value="Verified" />
+
 ```javascript title="wdio.lambdatest.config.js"
 
 capabilities: [{
@@ -106,6 +110,8 @@ capabilities: [{
 
 ### Step 4: Configure YAML in your Test Suite
 
+<VerifiedTag value="Verified" />
+
 ```yaml reference title="hyperexecute.yaml"
 https://github.com/LambdaTest/hyperexecute-bidi-sample/blob/main/yaml/hyperexecute-linux.yaml
 ```
@@ -114,6 +120,8 @@ https://github.com/LambdaTest/hyperexecute-bidi-sample/blob/main/yaml/hyperexecu
 From the project root directory, execute the below CLI command in your terminal:
 
 > **NOTE :** In case of MacOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">

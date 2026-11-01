@@ -178,6 +178,8 @@ Network Scan Passed!
 
 When a HyperExecute run fails, the CLI prints an error code, a short title, and a suggested fix, then exits with code `1`. For example:
 
+<VerifiedTag value="Verified" />
+
 ```text
 error    ERR::NO::USER     Unable to find LT username.    Unable to parse LT username. Use --user cli flag or LT_USERNAME environment variable
 Error: ERR::NO::USER     Unable to find LT username.
@@ -200,6 +202,8 @@ The CLI checks your credentials **before** it validates your YAML. If your crede
 | **What to do** | Set the `LT_USERNAME` environment variable, or pass `--user`. See [how to find your username and access key](/support/docs/hyperexecute-running-your-first-job/#how-to-get-my-username-and-access-key). |
 | **Exit code** | `1` |
 
+<VerifiedTag value="Verified" />
+
 ```text
 error    ERR::NO::USER     Unable to find LT username.    Unable to parse LT username. Use --user cli flag or LT_USERNAME environment variable
 Error: ERR::NO::USER     Unable to find LT username.
@@ -213,6 +217,8 @@ Error: ERR::NO::USER     Unable to find LT username.
 | **What happened** | The CLI could not find a <BrandName /> access key. |
 | **What to do** | Set the `LT_ACCESS_KEY` environment variable, or pass `--key`. See [how to find your username and access key](/support/docs/hyperexecute-running-your-first-job/#how-to-get-my-username-and-access-key). |
 | **Exit code** | `1` |
+
+<VerifiedTag value="Verified" />
 
 ```text
 error    ERR::NO::KEY     Unable to find LT access key.    Unable to parse LT access key. Use --key cli flag or LT_ACCESS_KEY environment variable
@@ -229,6 +235,8 @@ Error: ERR::NO::KEY     Unable to find LT access key.
 | **You may be seeing this for a different reason** | Credentials are checked before your YAML. A missing `framework:` key, an invalid `partialReports` type, and a `--config` path that does not exist all show this code when the credentials are also wrong. Fix the credentials first. |
 | **Exit code** | `1` |
 
+<VerifiedTag value="Verified" />
+
 ```text
 error    ERR::UP::VER     Unable to fetch latest version from upstream  ERR::HTTP::RESP     non-20x status code 401    Invalid user/key credentials
 Error: ERR::HTTP::RESP     non-20x status code 401    Invalid user/key credentials
@@ -244,6 +252,8 @@ Error: ERR::HTTP::RESP     non-20x status code 401    Invalid user/key credentia
 | **What to do** | Fix the credentials problem reported by [ERR::HTTP::RESP](#err_http_resp). |
 | **Exit code** | `1` |
 
+<VerifiedTag value="Verified" />
+
 ```text
 error    ERR::UP::VER     Unable to fetch latest version from upstream  ERR::HTTP::RESP     non-20x status code 401    Invalid user/key credentials
 ```
@@ -255,6 +265,8 @@ error    ERR::UP::VER     Unable to fetch latest version from upstream  ERR::HTT
 | **Alias** | `ERR_HTTP_HOST` |
 | **What happened** | The CLI could not connect to the HyperExecute authentication service at `auth.hyperexecute.cloud`. |
 | **What to do** | Run the CLI with `--scan` to check each host, and allow the hosts in [IPs to be Whitelisted](#ips-to-be-whitelisted). See [Authentication Error](#authentication-error). |
+
+<VerifiedTag value="Verified" />
 
 ```text
 error    ERR:HTTP:HOST     Facing problem in connecting with LUMS_HOST :: https://auth.hyperexecute.cloud - prod  - error in authenticating user.
@@ -268,6 +280,8 @@ error    ERR:HTTP:HOST     Facing problem in connecting with LUMS_HOST :: https:
 | **What happened** | The job finished with an error status, which the CLI prints after the code, for example `Job lambda_error!`. |
 | **Example** | In the [Symbolic Link Error](#symbolic-link-error) above, the status was `lambda_error`, caused by symbolic links in an uploaded `node_modules` folder. |
 | **What to do** | Read the task remarks printed below the code. |
+
+<VerifiedTag value="Verified" />
 
 ```text
 error    ERR::JOB::STS     Job lambda_error!
@@ -287,6 +301,8 @@ error    ERR::JOB::STS     Job lambda_error!
 ## Handling Error Codes in CI
 
 Every failure exits with a non-zero code and prints the error code, so you can branch on it:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 OUTPUT=$(hyperexecute --config hyperexecute.yaml 2>&1)
@@ -464,6 +480,8 @@ While executing a playwright project in HyperExecute, you may encounter a Lambda
 
 To resolve this issue, you need to pass the below mentioned command in the pre step in your YAML file
 
+<VerifiedTag value="Verified" />
+
 ```bash
 pre:
   - npx install playwright
@@ -472,6 +490,8 @@ pre:
 #### .Net Build Issue in C#
 
 If you encounter a similar error while running the command `dotnet build` in pre steps, as mentioned below, it means that you are not using a **core dotnet** version but instead a **framework** version.
+
+<VerifiedTag value="Verified" />
 
 ```bash
 error : MSB4803: The task "ResolveComReference" is not supported on the .NET Core version of MSBuild
@@ -491,6 +511,8 @@ This error is generated while installing the dependencies in your project suite.
 
 You can encounter a similar error while installing dependencies 
 
+<VerifiedTag value="Verified" />
+
 ```bash
 There was a problem confirming the ssl certificate:
 HTTPSConnectionPool(host='http://pypi.org ', port=443):
@@ -502,6 +524,8 @@ certificate verify failed: self signed certificate in certificate chain
 
 To resolve the above issue, you are required to pass the following command
 
+<VerifiedTag value="Verified" />
+
 ```bash
 pip install -r requirements.txt --cache-dir
 pip_cache --trusted-host http://pypi.org  --trusted-host http://pypi.python.org  --trusted-host files.pythonhosted.org
@@ -512,6 +536,8 @@ pip setuptools
 
 You can encounter a similar error while running Maven Project as well, Now to resolve this issue for **maven**, pass the following command
 
+<VerifiedTag value="Verified" />
+
 ```bash
 -Dmaven.wagon.http.ssl.insecure=true -Dmaven.wagon.http.ssl.allowall=true -Dmaven.wagon.http.ssl.ignore.validity.dates=true
 ```
@@ -519,6 +545,8 @@ You can encounter a similar error while running Maven Project as well, Now to re
 #### Registry Error
 
 If you incorporate any npm registry related error in the **Pre** stage, then pass the following command in your YAML file in the pre command before npm install:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 pre:
@@ -529,11 +557,15 @@ pre:
 
 If you encounter an error as mentioned below, it implies that you are using node version **below 15**, so you need to upgrade to **>=15.0** using runtime command.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 SyntaxError: Unexpected token '||='
 ```
 
 To resolve this, simply pass the below mentioned command in your YAML file
+
+<VerifiedTag value="Verified" />
 
 ```bash
 runtime:
@@ -545,12 +577,16 @@ runtime:
 
 This error incorporates that the version of Java that you are using in your local machine or in pom.xml file is not matching with the one used in the HyperExecute.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.7.0:compile (default-compile) on project My-Project: Fatal error compiling: invalid target release: 1.10 -> [Help 1]
 org.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.7.0:compile (default-compile) on project My-Project: Fatal error compiling
 ```
 
 To rectify this, you need to simply pass the **runtime** flag with the correct java version in your YAML file.
+
+<VerifiedTag value="Verified" />
 
 ```bash
 runtime:
@@ -598,6 +634,8 @@ This section will help you debug your failed job if you are facing any errors in
 
 If you're encountering an error message as shown below, it means you have entered an invalid  **Username** and **Access Key** in your test file capabilities.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 OpenQA.Selenium.WebDriverException : The newSession command returned an unexpected error. 
 401 Unauthorized !! Please include  `user` & `accessKey` in desired capabilities.
@@ -639,12 +677,16 @@ To rectify this issue, you need to cross-check your HUB URL. You can also visit 
 
 If you are trying to access an internal website or any other private endpoint which is behind any firewall using tunnel and you are getting the below mentioned error:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 System.AggregateException: One or more errors occurred. --->
 OpenQA.Selenium.WebDriverException: unknown error: net::ERR_NAME_NOT_RESOLVED
 ```
 
 To resolve this, you have to pass this flag in your YAML file:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 tunnel: true
@@ -760,6 +802,8 @@ After identifying the issue, follow these steps to resolve the situation:
 
 Here's an example of how you can set connection and **socket timeouts**:
 
+<VerifiedTag value="Verified" />
+
 ```java
 public static void main(String[] args) {
 
@@ -784,6 +828,8 @@ public static void main(String[] args) {
 ```
 
 Make sure to include the necessary dependencies in your project. If you are using Maven, you can add the following dependencies to your pom.xml file:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 <dependencies>

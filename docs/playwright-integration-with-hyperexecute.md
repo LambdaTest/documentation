@@ -216,6 +216,8 @@ Run the below mentioned commands in your terminal to setup the CLI and the envir
 
 <TabItem value="bash" label="Linux / MacOS" default>
 
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
@@ -226,6 +228,8 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </TabItem>
 
 <TabItem value="powershell" label="Windows">
+
+  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
@@ -278,6 +282,8 @@ In this sample YAML file, we have mentioned:
 - **Reports and Artefacts** that will be generated after the completion of tests
 - and other necessary YAML Parameters
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 ---
 version: "0.1"
@@ -319,11 +325,15 @@ jobLabel: [playwright-VanillaJS, linux, autosplit]
 
 Run the below command in your terminal at the root folder of the project:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 ./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE
 ```
 
 OR use this command if you have not exported your username and access key.
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">
@@ -384,6 +394,8 @@ In this sample YAML file, we have mentioned:
 - **Reports and Artefacts** that will be generated after the completion of tests
 - and other necessary YAML Parameters
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 ---
 version: "0.1"
@@ -425,11 +437,15 @@ jobLabel: [playwright-JestJS, linux, autosplit]
 
 Run the below command in your terminal at the root folder of the project:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 ./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE
 ```
 
 OR use this command if you have not exported your username and access key.
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">
@@ -535,6 +551,8 @@ In this sample YAML file, we have mentioned:
 - **Reports and Artefacts** that will be generated after the completion of tests
 - and other necessary YAML Parameters
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 ---
 version: "0.1"
@@ -576,11 +594,15 @@ jobLabel: [playwright-CodeceptJS, linux, autosplit]
 
 Run the below command in your terminal at the root folder of the project:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 ./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE
 ```
 
 OR use this command if you have not exported your username and access key.
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">
@@ -642,6 +664,8 @@ In this sample YAML file, we have mentioned:
 - **Reports and Artefacts** that will be generated after the completion of tests
 - and other necessary YAML Parameters
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 ---
 version: 0.1
@@ -701,11 +725,15 @@ jobLabel: [playwright-Junit, linux, autosplit]
 
 Run the below command in your terminal at the root folder of the project:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 ./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE
 ```
 
 OR use this command if you have not exported your username and access key.
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">
@@ -809,6 +837,8 @@ In this sample YAML file, we have mentioned:
 - **Reports and Artefacts** that will be generated after the completion of tests
 - and other necessary YAML Parameters
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 ---
 version: 0.1
@@ -861,11 +891,15 @@ jobLabel: [playwright-Dotnet, linux, autosplit]
 
 Run the below command in your terminal at the root folder of the project:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 ./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE
 ```
 
 OR use this command if you have not exported your username and access key.
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">
@@ -928,6 +962,8 @@ In this sample YAML file, we have mentioned:
 - **Reports and Artefacts** that will be generated after the completion of tests
 - and other necessary YAML Parameters
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 ---
 version: "0.1"
@@ -976,11 +1012,15 @@ jobLabel: [playwright-Python, linux, autosplit]
 
 Run the below command in your terminal at the root folder of the project:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 ./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE
 ```
 
 OR use this command if you have not exported your username and access key.
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">
@@ -1041,6 +1081,8 @@ In this sample YAML file, we have mentioned:
 - **Reports and Artefacts** that will be generated after the completion of tests
 - and other necessary YAML Parameters
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 ---
 version: "0.1"
@@ -1089,11 +1131,15 @@ jobLabel: [playwright-pytest, linux, autosplit]
 
 Run the below command in your terminal at the root folder of the project:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 ./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE
 ```
 
 OR use this command if you have not exported your username and access key.
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">
@@ -1203,6 +1249,8 @@ Update your test configuration with the required capabilities.
 
 You will have to update the **CDP (Chrome DevTools Protocol) URL** which is a protocol used for communication between the browser and the developer tools.
 
+<VerifiedTag value="Verified" />
+
 ```javascript title="playwright-ios-real-device.js"
 const browser = await chromium.connect({
   wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(JSON.stringify(capabilities))}`
@@ -1229,6 +1277,8 @@ Use the sample YAML below to configure your execution:
 :::info
 To Run test on Mobile Containers in a Particular Region
 
+<VerifiedTag value="Verified" />
+
 ```yaml title="hyperexecute.yaml"
 dynamicAllocation: true
 
@@ -1247,6 +1297,8 @@ framework:
 > **NOTE :** In case of MacOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
 
 Run the below command in your terminal at the root folder of the project:
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">
@@ -1369,6 +1421,8 @@ This guide outlines common use cases and solutions for configuring Playwright te
 ### Q: How can private dependencies be accessed via a custom registry?
 If your project uses private dependencies hosted on a custom registry, you must configure access before installing the packages. Add the following commands in the `pre` section of your YAML file:
 
+<VerifiedTag value="Verified" />
+
 ```yaml title="hyperexecute.yaml"
 pre:
   - npm config set registry <URL>
@@ -1378,12 +1432,16 @@ pre:
 ### Q: How can a specific Playwright project be executed?
 When a project has multiple Playwright projects defined, it may be necessary to run a specific one. Using the `--project` flag ensures that only the intended project executes without affecting others. Check that your execution command includes `--project="PROJECTNAME"`and append it to the `testRunnerCommand`.
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 npx playwright test --project=chromium
 ```
 
 ### Q: How can tests be executed with a specific configuration file?
 For setups with multiple configuration files, specifying the correct config file during execution ensures that the intended environment and settings are applied, avoiding conflicts or unexpected behavior.
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 npx playwright test --config=playwright.config.staging.ts
@@ -1395,6 +1453,8 @@ To ignore test cases marked with test.skip, create a custom Node.js script.
 - Create a file named `discovery.js` and add the script from the [Gist](https://gist.github.com/mohitsaini28r/453368e52143fa43efa271b1511aa2e7).
 - Update the `testDiscovery` block in your YAML:
 
+<VerifiedTag value="Verified" />
+
 ```yaml title="hyperexecute.yaml"
 testDiscovery:
   command: node discovery.js
@@ -1405,6 +1465,8 @@ When private dependencies require access through a private network, configure HT
 
 **For npm:**
 
+<VerifiedTag value="Verified" />
+
 ```yaml title="hyperexecute.yaml"
 pre:
   - npm config set proxy http://${LT_PROXY_HOST}:${LT_PROXY_PORT}
@@ -1412,6 +1474,8 @@ pre:
 ```
 
 **For yarn:**
+
+<VerifiedTag value="Verified" />
 
 ```yaml title="hyperexecute.yaml"
 pre:
@@ -1425,6 +1489,8 @@ Use the `post` parameter in the YAML file. Typical use cases include:
 - Running cleanup scripts
 - Closing API connections
 - Uploading test results to tools like Report Portal or Zephyr
+
+<VerifiedTag value="Verified" />
 
 ```yaml title="hyperexecute.yaml"
 post:
@@ -1440,6 +1506,8 @@ Common use cases:
 - Sending email notifications
 - Posting summaries to APIs or services
 
+<VerifiedTag value="Verified" />
+
 ```yaml title="hyperexecute.yaml"
 globalPost:
   - ./scripts/merge-reports.sh
@@ -1454,6 +1522,8 @@ Examples:
 - Import data
 - Run preparatory commands
 
+<VerifiedTag value="Verified" />
+
 ```yaml title="hyperexecute.yaml"
 globalPre:
   - ./scripts/setup-env.sh
@@ -1465,6 +1535,8 @@ Caching dependencies improves efficiency by avoiding repeated installations. Usi
 
 **For npm:**
 
+<VerifiedTag value="Verified" />
+
 ```yaml title="hyperexecute.yaml"
 cacheKey: '{{ checksum "package-lock.json" }}'
 cacheDirectories:
@@ -1472,6 +1544,8 @@ cacheDirectories:
 ```
 
 **For yarn:**
+
+<VerifiedTag value="Verified" />
 
 ```yaml title="hyperexecute.yaml"
 cacheKey: '{{ checksum "yarn.lock" }}'
@@ -1484,6 +1558,8 @@ cacheDirectories:
 
 **File-level discovery:**
 
+<VerifiedTag value="Verified" />
+
 ```yaml title="hyperexecute.yaml"
 testDiscovery:
   type: raw
@@ -1492,6 +1568,8 @@ testDiscovery:
 ```
 
 **Test-level discovery:**
+
+<VerifiedTag value="Verified" />
 
 ```yaml title="hyperexecute.yaml"
 testDiscovery:
@@ -1505,11 +1583,15 @@ To generate and access Playwright HTML reports in HyperExecute, the reports must
 
 - Update `playwright.config` to specify the report output location:
 
+<VerifiedTag value="Verified" />
+
 ```javascript title="playwright.config"
 reporter: [["html", { outputFolder: "playwright-report", open: "never" }]]
 ```
 
 - Update `hyperexecute.yaml` file:
+
+<VerifiedTag value="Verified" />
 
 ```yaml title="hyperexecute.yaml"
 report: true
@@ -1526,6 +1608,8 @@ If tests include tags and only specific tags need to be executed, a custom Node.
 - Copy the script from the [Gist](https://gist.github.com/gauravchawhan/9568ed96d6bc115707d37f695a56a6e7) into that file.
 - Update the testDiscovery section in your hyperexecute.yaml to run this script using the node command, and pass your desired tag expression.
 
+<VerifiedTag value="Verified" />
+
 ```yaml title="hyperexecute.yaml"
 testDiscovery:
   type: raw
@@ -1539,6 +1623,8 @@ This occurs due to a version mismatch between the Playwright client and server. 
 - Verify the required Playwright version by checking the dependency listed in your `package.json` file.
 - Once identified, install the specific version of Playwright during the pre step of the YAML:
 
+<VerifiedTag value="Verified" />
+
 ```yaml title="hyperexecute.yaml"
 pre:
   - npx playwright@1.41.0 install
@@ -1548,6 +1634,8 @@ pre:
 ### Q: Why are tests retried multiple times within a single scenario?
 Multiple retries occur when retry logic is configured both at the Playwright framework level and in HyperExecute YAML. This can cause duplicate scenarios, incorrect reporting, and multiple executions of the same test. Disabling framework-level retries and using only HyperExecute-level retries avoids this problem.
 
+<VerifiedTag value="Verified" />
+
 ```yaml title="hyperexecute.yaml"
 retryOnFailure: true
 maxRetries: 1
@@ -1556,11 +1644,15 @@ maxRetries: 1
 ### Q: How can environment variables required for test execution be configured?
 Certain frameworks or projects require specific environment variables, such as credentials or base URLs. Configuring these variables via the `env` section in the YAML or using a `.env` file ensures that tests execute successfully in HyperExecute.
 
+<VerifiedTag value="Verified" />
+
 ```yaml title="hyperexecute.yaml"
 env:
   BASE_URL: https://example.com
   API_KEY: your_api_key_here
 ```
+
+<VerifiedTag value="Verified" />
 
 ```bash title=".env"
 BASE_URL=https://example.com
@@ -1571,6 +1663,8 @@ API_KEY=your_api_key_here
 Playwright tests may hang if the HTML report is configured to automatically open on a local server after execution. Since HyperExecute runs in a headless CI environment, attempting to open the report in a browser window causes the process to stall indefinitely.
 
 To prevent this, update your `playwright.config.ts` file to prevent the report from opening automatically by setting the open option to `'never'`.
+
+<VerifiedTag value="Verified" />
 
 ```javascript title=playwright.config.ts"
 reporter: [['html', { open: 'never' }]]
@@ -1584,6 +1678,8 @@ These errors can happen when there is a version mismatch between the Playwright 
 
 For example, to install version `1.50.0`:
 
+<VerifiedTag value="Verified" />
+
 ```yaml title="hyperexecute.yaml"
 pre:
   - npx playwright@1.50.0 install
@@ -1591,6 +1687,8 @@ pre:
 
 ### Q: Why might the browser fail to launch on HyperExecute?
 Tests may fail to start if required browser binaries are missing or not installed correctly. Installing all Playwright dependencies, including browsers, ensures successful test execution.
+
+<VerifiedTag value="Verified" />
 
 ```yaml title="hyperexecute.yaml"
 pre:
@@ -1600,12 +1698,16 @@ pre:
 ### Q: Why do tests time out on HyperExecute but pass locally?
 Tests can time out due to differences in resource availability, execution speed, or default timeouts between local and HyperExecute environments. Increasing the timeout in the Playwright config or test file mitigates this issue.
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 test.setTimeout(60000); // 60 seconds
 ```
 
 ### Q: Why do configuration files fail when using hardcoded absolute paths?
 Absolute paths specific to a local environment may not exist in HyperExecute. Using relative paths from the project root ensures that scripts and configuration files remain portable across environments.
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 // Instead of require("C:/user/folder/test.js")
@@ -1616,6 +1718,8 @@ require("./tests/test.js")
 If Playwright is not configured to capture screenshots, videos, or traces, or if these artifacts are not uploaded correctly from HyperExecute, they will not appear in the report. Correct configuration in both `playwright.config.ts` and YAML ensures artifacts are captured and visible.
 
 - Update the `playwright.config.ts` file:
+<VerifiedTag value="Verified" />
+
 ```javascript title="playwright.config.ts"
 use: {
   screenshot: 'on',
@@ -1625,6 +1729,8 @@ use: {
 ```
 
 - Update the `hyperexecute.yaml` file:
+<VerifiedTag value="Verified" />
+
 ```yaml title="hyperexecute.yaml"
 uploadArtefacts:
   - name: FinalReport
@@ -1635,6 +1741,8 @@ uploadArtefacts:
 
 ### Q: Why do "Cannot find module" errors occur during execution?
 These errors occur when required modules are missing or the installation step is skipped. Ensuring that all dependencies listed in `package.json` are installed in the `pre` step of the YAML prevents this issue.
+
+<VerifiedTag value="Verified" />
 
 ```yaml title="hyperexecute.yaml"
 pre:

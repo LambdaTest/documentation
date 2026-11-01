@@ -21,6 +21,8 @@ slug: hyperexecute-qtest-integration/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-qtest-integration/
 ---
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
@@ -64,6 +66,8 @@ This document details the seamless integration between HyperExecute and qTest, e
 <img loading="lazy" src={require('../assets/images/qtest-integration/qtest1.png').default} alt="provide access to <BrandName /> account" width="1280" height="684" className="doc_img"/>
 
 - Navigate to the **agentctl** directory and start the host by running the following command:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 ./agentctl start
@@ -121,6 +125,8 @@ You can download the CLI for your desired platform from the below mentioned link
     - **qtest_api_token :** The token used to authorize the connection to qTest Manager.
     - **qtest_url :** The personal url that is used to access QASymphony API.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 {
   "git_url": "<YOUR_PROJECT_GItHUB_URL>",
@@ -131,6 +137,8 @@ You can download the CLI for your desired platform from the below mentioned link
 ```
 
 - If you are macOS user, go to the `run.sh` file or if you are a windows user go to the `run.bat` file and instead of `mvn` command, you need to pass the below mentioned command:
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">

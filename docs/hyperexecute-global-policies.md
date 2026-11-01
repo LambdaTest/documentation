@@ -19,6 +19,8 @@ slug: hyperexecute-global-policies/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-global-policies/
 ---
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
@@ -204,6 +206,8 @@ Everything you can do in the UI, you can do over the API — which is usually wh
 
 Policy routes sit under a `/logistics` path prefix on the HyperExecute API host:
 
+<VerifiedTag value="Verified" />
+
 ```text
 https://api.hyperexecute.cloud/logistics
 ```
@@ -211,6 +215,8 @@ https://api.hyperexecute.cloud/logistics
 ### Authentication
 
 Policy endpoints use HTTP Basic authentication with your <BrandName /> **username** and **access key**, the same credentials as the rest of the HyperExecute API. Because policy management is admin-only, use an organization admin user, or a **service account** if you are driving this from automation with no interactive login.
+
+<VerifiedTag value="Verified" />
 
 ```bash
 curl -u "<YOUR_USERNAME>:<YOUR_ACCESS_KEY>" \
@@ -260,6 +266,8 @@ The `value` field takes a different shape for each parameter:
 
 This example appends a result-logging command to every job in the organization, with a per-OS command list:
 
+<VerifiedTag value="Verified" />
+
 ```json
 {
   "name": "post-job-result-logging",
@@ -282,6 +290,8 @@ This example appends a result-logging command to every job in the organization, 
 
 The response returns the created policy's generated `id`, which you use for every subsequent call:
 
+<VerifiedTag value="Verified" />
+
 ```json
 {
   "data": {
@@ -298,6 +308,8 @@ The response returns the created policy's generated `id`, which you use for ever
 :::
 
 A checking policy adds a `severity` and drops the per-OS structure:
+
+<VerifiedTag value="Verified" />
 
 ```json
 {
@@ -316,6 +328,8 @@ A checking policy adds a `severity` and drops the per-OS structure:
 `PUT /v1.0/policies/{id}` updates a policy's **value**, **scope**, **severity**, or **enabled** state. Send the full object back, including `name` and `parameter` unchanged — neither can be modified. To change either one, create a new policy instead.
 
 To pause enforcement without losing the policy, use the toggle endpoint. `updatedBy` is optional and records who made the change for the audit trail:
+
+<VerifiedTag value="Verified" />
 
 ```json
 {

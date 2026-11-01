@@ -14,6 +14,8 @@ slug: hyperexecute-how-to-resolve-version-conflict/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-how-to-resolve-version-conflict/
 ---
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
@@ -57,6 +59,8 @@ This section provides detailed instructions for version consistency across diffe
 For Java projects using Selenium, TestNG and Cucumber dependencies should match between the YAML pre-steps and the pom.xml file.
 
 - **TestNG :** Ensure the TestNG version in your `pom.xml` matches the version specified in the YAML configuration under [`pre-steps`](/support/docs/deep-dive-into-hyperexecute-yaml/#pre):
+<VerifiedTag value="Verified" />
+
 ```xml
 <dependency>
     <groupId>org.testng</groupId>
@@ -70,6 +74,8 @@ For Java projects using Selenium, TestNG and Cucumber dependencies should match 
 
 ### Selenium/Playwright/Puppeteer/Cypress - JavaScript
 For JavaScript frameworks like Selenium, Playwright, Puppeteer, and Cypress, the framework versions specified in the YAML configuration should align with `package.json`:
+
+<VerifiedTag value="Verified" />
 
 ```json
 {
@@ -85,6 +91,8 @@ Consistency ensures dependencies are installed with the expected versions, avoid
 
 ### Selenium/Playwright - C# (.NET)
 For .NET projects, Selenium and Playwright versions should match between the YAML pre-steps and the `.csproj` file, which specifies NuGet packages:
+
+<VerifiedTag value="Verified" />
 
 ```xml
 <PropertyGroup>

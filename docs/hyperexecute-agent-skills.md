@@ -19,6 +19,8 @@ slug: hyperexecute-agent-skills/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-agent-skills/
 ---
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
@@ -104,6 +106,8 @@ Add your TestMu AI credentials as environment variables so the generated jobs ca
 
 Visit the [TestMu AI Dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard), navigate to the left sidebar, and select **Credentials**. Copy your **Username** and **Access Key**, then run:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
 export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
@@ -137,6 +141,8 @@ The Agent Skill automatically handles:
 ---
 
 A breakdown of everything the skill package contains.
+
+<VerifiedTag value="Verified" />
 
 ```
 hyperexecute-skill/

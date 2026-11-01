@@ -17,6 +17,8 @@ slug: tosca-integration-with-hyperexecute/
 canonical: https://www.testmuai.com/support/docs/tosca-integration-with-hyperexecute/
 ---
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
@@ -121,6 +123,8 @@ To Integrate Tosca with HyperExecute using YAML, follow the below mentioned step
 
 - **Sample TC-Shell Script:**
 
+<VerifiedTag value="Verified" />
+
 ```bash
 //script
 
@@ -146,6 +150,8 @@ save
 
 - Use the following command to execute this test via command line. 
 
+<VerifiedTag value="Verified" />
+
 ```bash
 - TCShell.exe -workspace <Path to your tosca workspace file> -login <your email here> <your password here> "<Path to TC-Shell Script>"
 ```
@@ -166,6 +172,8 @@ save
 Thus, you might see a security popup on whether to allow the execution of the tool or not. You can allow it from your **System Preferences** > **Security & Privacy** > **General** tab.
 
   **Sample HyperExecute YAML file for TOSCA**:
+  <VerifiedTag value="Verified" />
+
   ```yaml
 ---
 version: "0.1"
@@ -194,6 +202,8 @@ uploadArtefacts:
 > Each machine has a Tosca commander Client installed on HyperExecute. To successfully run your tests, your Tosca licenses must be pre-configured on the machine. To do so, we use the **ToscaLicenseConfiguration.exe** along with the **connect-cloud** parameter to validate the licenses as a **pre-step** before triggering the tests. The complete command is added under **pre** in the above sample.
 
 - After configuring the YAML, execute it via terminal using the following command:
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">

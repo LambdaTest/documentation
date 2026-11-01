@@ -16,6 +16,8 @@ slug: hyperexecute-how-to-configure-os-and-browser/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-how-to-configure-os-and-browser/
 ---
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import HyperExecuteSupportedLanguageRepos from '../src/component/SupportedLanguages/HyperExecuteSupportedLanguageRepos';
@@ -59,6 +61,8 @@ Configuring the capabilities is the first step to define the environment for you
 - **`version` :** Defines the specific version or sets it as latest to always use the most recent version.
 
 Below is a Java example using the TestNG framework:
+<VerifiedTag value="Verified" />
+
 ```java title="Test.java"
 DesiredCapabilities caps = new DesiredCapabilities();
 caps.setCapability("platform", "Windows");

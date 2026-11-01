@@ -129,6 +129,8 @@ Follow these steps to enable Extent Reports for your HyperExecute job:
 #### Step 1: Add Dependency
 If using Maven, add the following dependency to your `pom.xml` file:
 
+<VerifiedTag value="Verified" />
+
 ```xml title="pom.xml"
 <dependency>
   <groupId>com.relevantcodes</groupId>
@@ -139,6 +141,8 @@ If using Maven, add the following dependency to your `pom.xml` file:
 
 #### Step 2: Create an Extent Report Listener
 Create a class, e.g., `ExtentReportListenerV2.java`, to initialize and flush Extent Reports during test execution. This listener will log each test case’s status to the report.
+
+<VerifiedTag value="Verified" />
 
 ```java title="ExtentReportListenerV2.java"
 import com.relevantcodes.extentreports.ExtentReports;
@@ -164,6 +168,8 @@ Follow these steps to enable Extent Reports for your HyperExecute job:
 #### Step 1: Add Dependency
 If using Maven, add the latest extentreports dependency to `pom.xml` file:
 
+<VerifiedTag value="Verified" />
+
 ```xml title="pom.xml"
 <dependency>
   <groupId>com.aventstack</groupId>
@@ -174,6 +180,8 @@ If using Maven, add the latest extentreports dependency to `pom.xml` file:
 
 #### Step 2: Create an Extent Report Listener
 For Extent Reports > 2, use `ExtentHtmlReporter` to generate and customize the HTML report. Create `ExtentReportListener.java`:
+
+<VerifiedTag value="Verified" />
 
 ```java title="ExtentReportListener.java"
 import com.aventstack.extentreports.ExtentReports;
@@ -199,6 +207,8 @@ public class ExtentReportListener implements ITestListener {
 
 ### Configure the HyperExecute YAML File
 In your HyperExecute YAML configuration, define the [`report`](/support/docs/deep-dive-into-hyperexecute-yaml/#report) parameters like this:
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 report: true
@@ -228,6 +238,8 @@ Follow these steps to enable Extent Native Reports for your HyperExecute job:
 
 Update the `pom.xml` file to include the latest version of the Extent Reporting library (version 5). Ensure that the necessary dependencies are correctly configured.
 
+<VerifiedTag value="Verified" />
+
 ```xml
 <dependency>
     <groupId>com.aventstack</groupId>
@@ -239,6 +251,8 @@ Update the `pom.xml` file to include the latest version of the Extent Reporting 
 #### 2. Modify Import Statements
 
 Update import statements in your codebase to reflect the new package structure in Extent Reporting version 5. Replace `com.relevantcodes` with `com.aventstack`.
+
+<VerifiedTag value="Verified" />
 
 ```java
 // Before
@@ -257,6 +271,8 @@ Make changes in your codebase to generate individual JSON reports. These reports
 #### 4. Update HyperExecute YAML Configuration
 
 In the HyperExecute YAML configuration, add the following section to instruct the HyperExecute systems to generate Extent Native Reports:
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 report: true
@@ -292,6 +308,8 @@ You need to ensure that the `emailable-report.html` file should be generated wit
 
 In the HyperExecute YAML configuration, add the following section to instruct the HyperExecute systems to generate Extent Native Reports:
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 report: true
 partialReports:
@@ -322,6 +340,8 @@ If your testing framework already generates Allure reports, you can seamlessly i
 
 **Step 1:** To configure the Allure reporter in the **WDIO framework**, update your `wdio.conf.js` file as follows:
 
+<VerifiedTag value="Verified" />
+
 ```javascript title="wdio.conf.js"
 export const config = {
     reporters: [['allure', {
@@ -338,12 +358,16 @@ export const config = {
 :::tip
 Alternatively this can also be done by creating an `allure.properties` file in the `src/test/resources` directory. 
 
+<VerifiedTag value="Verified" />
+
 ```yaml title="allure.properties"
 allure.results.directory=reports/allure-results
 ```
 :::
 
 **Step 2:** Add the following report parameters in your HyperExecute YAML file
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 report: true
@@ -359,6 +383,8 @@ partialReports:
 To enrich Allure reports with more specific details, we can use custom plugins. These plugins require configurations to function properly.
 
 To achieve this, you can use `configPath` flag within HyperExecute YAML. This specifies the location of the configuration file containing the custom plugin settings, allowing Allure to generate reports with the desired level of detail and this will be passed as `allure --config <CONFIG_PATH>`
+
+<VerifiedTag value="Verified" />
 
 ```bash
 report: true
@@ -390,6 +416,8 @@ Cucumber itself provides basic reporting in the command line, but additional plu
 #### Step 1: Configure the TestRunner File
 In your `TestRunner` file, configure `@CucumberOptions` to specify report formats and output paths. Here’s an example configuration:
 
+<VerifiedTag value="Verified" />
+
 ```javascript title="TestRunner.java"
 @CucumberOptions(
         features = "src/main/java/Features",
@@ -412,6 +440,8 @@ Explanation of plugin Options:
 
 #### Step 2: Configure the HyperExecute YAML File
 In your HyperExecute YAML configuration, define the [`report`](/support/docs/deep-dive-into-hyperexecute-yaml/#report) parameters like this:
+
+<VerifiedTag value="Verified" />
 
 ```yaml title="hyperexecute.yaml"
 report: true
@@ -436,6 +466,8 @@ Follow these steps to generate a consolidated Playwright HTML report:
 
 In your Playwright configuration file `playwright.config.js`, add the following code to enable the reporter:
 
+<VerifiedTag value="Verified" />
+
 ```javascript title="playwright.config.js"
 import { devices } from '@playwright/test';
 
@@ -453,6 +485,8 @@ const config = {
 
 #### Step 2: Configure the HyperExecute YAML File
 In your HyperExecute YAML configuration, define the [`report`](/support/docs/deep-dive-into-hyperexecute-yaml/#report) parameters like this:
+
+<VerifiedTag value="Verified" />
 
 ```yaml title="hyperexecute.yaml"
 report: true
@@ -480,6 +514,8 @@ This technical document provides a guide on generating SpecFlow reports after ex
 **Step 1:** Configure all the necessary dependencies and configurations to your project.
 
 **Step 2:** Configure the report parameters in the HyperExecute YAML file.
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 report: true
@@ -511,6 +547,8 @@ You can generate and download other reports as well, along with the error-report
 
 This report is generated when your job includes multiple error categories. To enable the error categorization report, simply pass the [`errorCategorizedReport`](/support/docs/deep-dive-into-hyperexecute-yaml/#errorcategorizedreport) flag to your YAML file:
 
+<VerifiedTag value="Verified" />
+
 ```yaml title="hyperexecute.yaml"
 errorCategorizedReport:
   enabled: true
@@ -538,6 +576,8 @@ Configure all the necessary dependencies and configurations to your project.
 #### Step 2: Configure the HyperExecute YAML File
 In your HyperExecute YAML configuration, define the [report](/support/docs/deep-dive-into-hyperexecute-yaml/#report) parameters like this:
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 report: true
 partialReports:
@@ -561,6 +601,8 @@ Karate framework supports generating detailed test execution reports that help v
 **Step 1:** Configure all the necessary dependencies and configurations to your project.
 
 **Step 2:** Configure the report parameters in the HyperExecute YAML file.
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 report: true
@@ -586,6 +628,8 @@ Robot Framework is a generic, open-source automation framework designed for acce
 **Step 2:** Configure the report parameters in the HyperExecute YAML file
 
 Add the following configurations in your YAML file:
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 testRunnerCommand: YOUR_RUNNER_COMMAND --outputdir Reports 
@@ -618,6 +662,8 @@ HyperExecute provides seamless integration with Katalon Studio, enabling you to 
 **Step 2:** Configure the report parameters in the HyperExecute YAML file
 
 Add the following configurations in your YAML file:
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 report: true

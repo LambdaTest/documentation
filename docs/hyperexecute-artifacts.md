@@ -53,6 +53,8 @@ Follow the below mentioned steps to generate the Artifacts for your desired fram
 
 **Step 2:** Add the below mentioned parameters in the YAML file to generate the Artifacts
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 uploadArtifacts:
     - name: Executed-Job-Artifacts #user defined name of the artifact
@@ -66,6 +68,8 @@ uploadArtifacts:
 - If you are generating multiple artifacts, then it is recommended to use this parameter, [`mergeArtifacts`](/support/docs/deep-dive-into-hyperexecute-yaml/#mergeartifacts) in your YAML, as it will zip all your Artifacts files while downloading from the dashboard.
 
 - You can replace the Artifacts folder name value with any of the Matrix parameters value.
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 matrix:
@@ -184,6 +188,8 @@ Downloading Job Reports and Artifacts manually from the HyperExecute UI can be a
 
 To receive the Artifacts and Reports via mail, you will have to add the `email` flag with a `to` tag to select the email IDs where the report or artifacts should be sent. The example added below shows you how to add your email IDs:
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 email:
   to: 
@@ -194,6 +200,8 @@ email:
 You can also use the `currentUser` tag to send the reports to the email ID of your choice.
 
 - **currentUser**: This tag will allow you to send the report to the email ID associated with your <BrandName /> account.
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 email:
@@ -208,6 +216,8 @@ Follow the below mentioned steps to receive your Artifacts via email:
 **Step 1:** You need to mention the `email` flag along with the `to` tag under the `uploadArtifacts` flag in the YAML file configuration.
 
 > **NOTE:** You can also add a separate email ID for each report generated, as mentioned below in the YAML code.
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 uploadArtifacts:
@@ -238,6 +248,8 @@ Follow the below mentioned steps to receive your Job Reports via email:
 **Step 2:** Make sure to check the `location`, `type` and `frameworkName` fields in the `partialReports` flag are configured correctly.
 
 **Step 3:** Add the `email` flag with `to` tag in the YAML file configuration:
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 report: true
@@ -318,6 +330,8 @@ Job status keys are supported under `partialReports.email` and `uploadArtifacts[
 
 The Email IDs that you enter must be valid. You can enter your email IDs in the formats mentioned below.
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 - John Doe <johndoe@example.com>
 - John <johndoe@example.com>
@@ -325,6 +339,8 @@ The Email IDs that you enter must be valid. You can enter your email IDs in the 
 ```
 
 However, if your email IDs are added in an unsupported format, the feature will not work. A few examples of unsupported email ID formats are added below.
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 - John Doe johndoe@example.com>
@@ -339,6 +355,8 @@ Now that you have added your email IDs successfully, you can access your job rep
 In your YAML configuration file instead of hardcoding the email address to which you want to share the report or artifacts, you can use a variable that can be set dynamically when you pass the execution command.
 
 In this example, the `${email}` and `${email1}` variables are used to specify the email address. You can pass the value of this variable using the [`vars`](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/#--vars) flag as an argument when executing your test via CLI.
+
+<VerifiedTag value="Verified" />
 
 ```yaml title="hyperexecute.yaml"
 report: true
@@ -367,12 +385,16 @@ uploadArtifacts:
 
 This is how you can pass the value of your email address via CLI by running the command
 
+<VerifiedTag value="Verified" />
+
 ```bash
 ./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE --vars "email=xyz@abc.com" --vars "email1=abc@xyz.com"
 ```
 
 :::note
 If you have a pipeline that requires multiple email values, consider consolidating them into a single variable separated by commas. This approach eliminates the need for multiple variables or manual pipeline edits whenever the email list changes.
+
+<VerifiedTag value="Verified" />
 
 ```yaml title="hyperexecute.yaml"
 report: true
@@ -396,6 +418,8 @@ uploadArtifacts:
         - "${email}"
 # highlight-end
 ```
+
+<VerifiedTag value="Verified" />
 
 ```bash
 ./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE --vars "email=xyz@abc.com,abc@xyz.com,def@wxy.com"
@@ -441,6 +465,8 @@ For the artifact-download step to run, all of the following must be true. If any
 
 Add a `globalPost` section to your HyperExecute YAML and set `downloadArtifacts: true`:
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 globalPost:
   mode: remote
@@ -482,6 +508,8 @@ Once your tasks finish, HyperExecute downloads their artifacts to a VM and runs 
 
 Artifacts from all tasks land under `ARTIFACTS_DIR`, with one top-level folder per task ID. Inside each task folder, the artifacts keep their original upload structure (a folder per artifact name, then the original hierarchy).
 
+<VerifiedTag value="Verified" />
+
 ```text
 $ARTIFACTS_DIR/
 ├── task-id-1/
@@ -500,6 +528,8 @@ $ARTIFACTS_DIR/
 #### `UPLOAD_DIR` — where to place your output
 
 Write anything you want returned to the job into `UPLOAD_DIR`. Everything placed here becomes visible in the job's **Artifacts** section on the HyperExecute dashboard. The folder structure you create is preserved exactly, so even a deep, multi-level layout is uploaded as-is.
+
+<VerifiedTag value="Verified" />
 
 ```text
 $UPLOAD_DIR/
@@ -526,6 +556,8 @@ If you do not specify `email` under `globalPost` but your YAML's [`uploadArtifac
 #### Disabling email
 
 To suppress email entirely, set `disableEmail: true` under `globalPost`. This is useful when you want the processing and upload but not a notification, and it overrides any email configured under `uploadArtifacts`.
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 globalPost:

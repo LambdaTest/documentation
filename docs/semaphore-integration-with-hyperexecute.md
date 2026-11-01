@@ -18,6 +18,8 @@ site_name: TestMu AI
 slug: semaphore-integration-with-hyperexecute/
 canonical: https://www.testmuai.com/support/docs/semaphore-integration-with-hyperexecute/
 ---
+
+import VerifiedTag from '@site/src/component/verifiedTag';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
@@ -82,6 +84,8 @@ Download or Clone the code sample from the <BrandName /> GitHub repository to ru
 
 **Step 6:** In the #Job1 add the below mentioned script. Make sure to replace the `username` and `key` with your <BrandName /> [UserName and Access Key](/support/docs/hyperexecute-running-your-first-job/#how-to-get-my-username-and-access-key).
 
+<VerifiedTag value="Verified" />
+
 ```bash
 curl -O https://downloads.lambdatest.com/hyperexecute/linux/hyperexecute
 chmod +x hyperexecute
@@ -101,6 +105,8 @@ Click on **Run the workflow** button.
 <img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/semaphore/7.png').default} alt="Image"  className="doc_img"/>
 
 ## Sample Workflow File
+
+<VerifiedTag value="Verified" />
 
 ```bash
 version: 1

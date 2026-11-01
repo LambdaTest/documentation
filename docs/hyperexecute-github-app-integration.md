@@ -20,6 +20,8 @@ slug: hyperexecute-github-app-integration/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-github-app-integration/
 ---
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
@@ -117,6 +119,8 @@ The redirect URL includes an `installation_id` parameter required for configurat
    - Example URL format: `https://github.com/settings/installations/{installation_id}`
 
 2. Navigate to the <BrandName /> setup page:
+<VerifiedTag value="Verified" />
+
 ```
    https://{{accounts_base_url}}/org-settings/hyperexecute/git-integration
 ```
@@ -130,6 +134,8 @@ The redirect URL includes an `installation_id` parameter required for configurat
 **Additional Required Configuration**
 
 Create an org-level secret via the Logistics Secret API:
+<VerifiedTag value="Verified" />
+
 ```
 github_app_private_key_{{git_tenant}}
 ```
@@ -147,6 +153,8 @@ This private key is used to generate short-lived tokens internally.
 **Installation Steps**
 
 1. Navigate to the private app installation URL:
+<VerifiedTag value="Verified" />
+
 ```
    https://github.com/apps/{private-app-name}/installations/new
 ```
@@ -161,6 +169,8 @@ This private key is used to generate short-lived tokens internally.
 **Post-Installation Configuration**
 
 GitHub will redirect you to the private setup URL configured for your environment:
+<VerifiedTag value="Verified" />
+
 ```
 https://{{private_accounts_base_url}}/org-settings/hyperexecute/git-integration
 ```

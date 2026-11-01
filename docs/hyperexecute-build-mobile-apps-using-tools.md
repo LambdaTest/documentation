@@ -18,6 +18,8 @@ slug: hyperexecute-build-mobile-apps-using-tools/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-build-mobile-apps-using-tools/
 --- 
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
@@ -53,6 +55,8 @@ HyperExecute facilitate the development of mobile applications using various too
 
 HyperExecute provides a [`runtime`](/support/docs/deep-dive-into-hyperexecute-yaml/#runtime) flag feature that dynamically downloads and installs required language and framework versions based on your needs. This removes the need for pre-installed environments on the execution machines.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 runtime:
   language: java
@@ -71,6 +75,8 @@ runtime:
 This is useful when you have the project and you have to build it across different java, gradle and android-sdk versions.
 
 To provide multiple versions for each of these dependencies, the DataJson can be leveraged provided by HyperExecute.
+
+<VerifiedTag value="Verified" />
 
 ```bash
 [

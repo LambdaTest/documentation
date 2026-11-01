@@ -15,6 +15,8 @@ slug: hyperexecute-test-splitting-and-multiplexing/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-test-splitting-and-multiplexing/
 ---
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
@@ -92,6 +94,8 @@ The Smart **Auto Split Strategy** enables you to distribute tests across multipl
 
 For enabling auto-test splitting, set the `autosplit` key to *true*  in the HyperExecute YAML file.
 
+<VerifiedTag value="Verified" />
+
 ``` yaml
 autosplit: true
 ```
@@ -105,6 +109,8 @@ The `concurrency`  key indicates the total number of concurrent sessions that ca
 
 For example, assume that the total number of test scenarios [discovered via `testDiscovery`] are 27 and `concurrency` is set to 7. In this case, HyperExecute would allocate 7 nodes for running the 27 tests in parallel.
 
+<VerifiedTag value="Verified" />
+
 ``` yaml
 concurrency: 7
 ```
@@ -116,6 +122,8 @@ concurrency: 7
 
 A few samples are given below:
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 # The following command (or value) when assigned to testDiscoverer key searches for the scenarios by matching the string Scenario [or Scenario Outline] in the .feature  files located in the *src* directory of the project.
 testDiscovery:
@@ -123,6 +131,8 @@ testDiscovery:
   mode: remote
   command: grep -nri 'Scenario:\^|Scenario Outline:' src -ir --include=\*.feature |  awk '{print $1}' | sed 's/\.\///g' | sed 's/\(.*\):/\1 /'
 ```
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 testDiscovery:
@@ -180,6 +190,8 @@ Consider a scenario where the matrix calculation results in 10 different possibl
 
 You can use a key as [browser], [files]  or any other unique key name. 
 
+<VerifiedTag value="Verified" />
+
 ``` yaml
 matrix:
   files: ["Test1","Test2","Test3"]
@@ -198,6 +210,8 @@ Here, ‘N’ could be browser version  number(s) that are common between the tw
 In matrix multiplexing strategy, *`key`:`value`* pairs mentioned in the source code override the same `key`:`value`  pairs mentioned in the HyperExecute YAML file.
 
 Let’s modify the above YAML file to run the scenarios on "latest" version of the Firefox browser:
+
+<VerifiedTag value="Verified" />
 
 ``` yaml
 #runson defines the OS of your test execution node.
@@ -226,6 +240,8 @@ Let’s take a case where the test scenarios are implemented in Java. Files File
 
 ### Exclusion in Matrix Strategy
 Assuming that you created a matrix but there is one specific combination that you don't want the system to consider. This can happen for instance if you have a combination of Safari and Windows which won't be a valid combination, in such cases you can exclude such a combination using the `exclusionMatrix` parameter as shown below.
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 #runson defines the OS of your test execution node.
@@ -281,6 +297,8 @@ Now the given `parallelism` is 2, hence it will create the same set of the above
 
 - **autosplit**: To use HyperExecute’s AutoSplit Strategy, you need to set this flag to `true`. Similarly, this flag should be set to `true` in Hybrid Strategy too.
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 autosplit: true
 ```
@@ -288,12 +306,16 @@ autosplit: true
 - **parallelism**: This key indicates the number of tests that can run in parallel.  
       
     
+<VerifiedTag value="Verified" />
+
 ```yaml
 parallelism: 5
 ```
     
 - You can define the `parallelism` for each operating system. If you have not defined the `parallelism` for any particular OS, then the value for that OS will be set to the global `parallelism` value.         
         
+<VerifiedTag value="Verified" />
+
 ```yaml
 Parallelism: 4 
 winParallelism: 2 
@@ -305,6 +327,8 @@ macParallelism: 3
 - **matrix**: This flag is used to define the combination of tests you want to run in your job. You can use the matrix flag to define combinations of browsers, operating systems, and even custom parameters like files, folders, tags, scenarios, and more.  
       
     
+<VerifiedTag value="Verified" />
+
 ```yaml
 matrix:
   os: [mac, win, linux] 
@@ -316,6 +340,8 @@ runson: ${matrix.os}
           
 - **testDiscovery**: The `testDiscovery` command is used to list down all the values that have to be distributed. It can be used to split tests over files, modules, or any level supported by your language and framework.  
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 testDiscovery:
   type: raw
@@ -325,6 +351,8 @@ testDiscovery:
     
 - It can also be defined selectively for every platform. If you have not defined the `testDiscovery` command for a specific OS, then it takes the global value of the command.  
             
+<VerifiedTag value="Verified" />
+
 ```yaml
 testDiscovery:
   type: raw
@@ -338,6 +366,8 @@ testDiscovery:
               
 - **testRunnerCommand**: The `testRunnerCommand` tells the system how to run a single test entity in isolation. This entity could be a file, module, feature or scenario. It will run over each of the values extracted from the `testDiscovery` command.  
       
+<VerifiedTag value="Verified" />
+
 ```yaml
 testRunnerCommand: mvn test -Dcucumber.options="$test" -Dscenario="$test" -DOs="win 10"
   winTestRunnerCommand: mvn test -Dcucumber.options="$test" -Dscenario="$test" -DOs="win 10"
@@ -350,6 +380,8 @@ testRunnerCommand: mvn test -Dcucumber.options="$test" -Dscenario="$test" -DOs="
 ### Sample YAML file
 
 A sample YAML file used to run a job on Hybrid Strategy for your reference below:
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 ---

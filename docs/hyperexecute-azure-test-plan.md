@@ -17,6 +17,8 @@ slug: hyperexecute-azure-test-plan/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-azure-test-plan/
 ---
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
@@ -166,6 +168,8 @@ To execute the Test Plan with HyperExecute, you will have to follow the below me
 
 **Step 2:** Add the following command in your YAML file
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 testDiscovery:
   command: testplan-discovery-win.exe <test_plan_id> <test_suite_id> <azure_org> <azure_project> <azure_access_token>
@@ -175,11 +179,15 @@ testDiscovery:
 
 **Step 3:** To keep the test case distribution perfectly, make sure you pass the `dynamicAllocation` flag as `true`.
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 dynamicAllocation: true
 ```
 
 **Step 4:** Now, you need to pass the following command in your YAML file. 
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 testRunnerCommand: dotnet test path\of\dll --settings path\of\runsettings --filter '"Name=$test"' ; ./testplan-status-update-win.exe <testplan_id> <test_suite_id> <azure_org> <azure_project> <azure_access_token> <lt_username> <lt_access_key> ; ./test-link-attach-win.exe <azure_org_name> <azure_project_name> <azure_access_token>
@@ -201,6 +209,8 @@ testRunnerCommand: dotnet test path\of\dll --settings path\of\runsettings --filt
 
 <TabItem value="bash" label="Linux / MacOS" default>
 
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
@@ -211,6 +221,8 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
+
+  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
@@ -226,11 +238,15 @@ set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
 - Run the below command in your terminal at the root folder of the project
 
+<VerifiedTag value="Verified" />
+
 ```bash
 ./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE
 ```
 
 OR use this command if you have not exported your username and access key.
+
+<VerifiedTag value="Verified" />
 
 ```bash
 ./hyperexecute --user ${YOUR_LAMBDATEST_USERNAME()} --key ${YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE

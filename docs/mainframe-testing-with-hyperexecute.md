@@ -19,6 +19,8 @@ slug: mainframe-testing-with-hyperexecute/
 canonical: https://www.testmuai.com/support/docs/mainframe-testing-with-hyperexecute/
 ---
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
@@ -83,6 +85,8 @@ Everything the tests need at runtime (`s3270`, `x3270`, X fonts, Python packages
 
 Clone the FNB mainframe suite. It ships the `hyperexecute.yaml`, the Robot suites under `tests/`, and the mock hosts under `mock_server/`.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git clone https://github.com/alif-laam-Meem/mainframe-robot
 cd mainframe-robot
@@ -99,6 +103,8 @@ Get them from your [Account Settings](https://accounts.lambdatest.com/security/u
 
 <TabItem value="powershell" label="Windows (PowerShell)" default>
 
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
   {`$env:LT_USERNAME = "${ YOUR_LAMBDATEST_USERNAME()}"
@@ -109,6 +115,8 @@ $env:LT_ACCESS_KEY = "${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </TabItem>
 
 <TabItem value="bash" label="Git Bash / Linux / macOS">
+
+  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">

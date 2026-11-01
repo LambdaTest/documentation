@@ -14,6 +14,8 @@ slug: hyperexecute-projects/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-projects/
 ---
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
@@ -55,6 +57,8 @@ If you already have a project in HyperExecute, follow these steps to connect you
 5. All jobs using this YAML will automatically appear in your selected project. 
 
 The copied project detail which you need to add to the YAML will look like this:
+<VerifiedTag value="Verified" />
+
 ```yaml
  project:
     name: 'demo-project' #project name
@@ -71,6 +75,8 @@ Want to start fresh or organize jobs under a new project? You can create one dir
 
 1. Think of a unique name that clearly identifies what you're testing.
 2. Include the project name in your YAML file in the following format.
+
+<VerifiedTag value="Verified" />
 
 ```yaml
  project:

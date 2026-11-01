@@ -19,6 +19,8 @@ site_name: TestMu AI
 slug: aws-codepipeline-with-hyperexecute/
 canonical: https://www.testmuai.com/support/docs/aws-codepipeline-with-hyperexecute/
 ---
+
+import VerifiedTag from '@site/src/component/verifiedTag';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
@@ -95,6 +97,8 @@ Download or Clone the code sample from the <BrandName /> GitHub repository to ru
 - Create a `buildspec.yml` file in the root directory of the repository where the tests are written.
 
 - ### Sample `buildspec.yml` file
+
+<VerifiedTag value="Verified" />
 
 ```bash
 version: 0.2

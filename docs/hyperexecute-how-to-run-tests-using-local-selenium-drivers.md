@@ -16,6 +16,8 @@ slug: hyperexecute-how-to-run-tests-using-local-selenium-drivers/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-how-to-run-tests-using-local-selenium-drivers/
 ---
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
@@ -71,6 +73,8 @@ Download or Clone the code sample for the TestNG from the <BrandName /> GitHub r
 - Add the `platformConfig` flag to your YAML file, specifying the platforms and configurations for your tests.
 - Use the `platform` flag to define individual platform configurations (OS, browser/device, capabilities).
 - **(Optional)** Utilize the `config` flag to set global capabilities applicable to all platforms.
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 ---
@@ -175,6 +179,8 @@ The number of tasks created = **(total number of platforms) * (parallelism)** = 
 
 - Execute your tests as usual through your test framework (e.g., JUnit, TestNG).
 - HyperExecute automatically intercepts Selenium commands and routes them to its platform.
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">

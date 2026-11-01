@@ -20,6 +20,8 @@ slug: hyperexecute-api-testing/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-api-testing/
 ---
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
@@ -69,6 +71,8 @@ Before you start, make sure you have:
 
 The sample is a Java + Maven project that uses REST Assured with TestNG. REST Assured sends HTTP requests (GET, POST, PUT, DELETE) and asserts on the responses using a readable `given().when().then()` syntax. For example, this call fetches a resource and asserts that the API returns a `200` status code:
 
+<VerifiedTag value="Verified" />
+
 ```java
 given().when().get(url).then().assertThat().statusCode(200);
 ```
@@ -111,6 +115,8 @@ Export the `LT_USERNAME` and `LT_ACCESS_KEY` from your TestMu AI Profile (linked
 
 <TabItem value="bash" label="Linux / macOS" default>
 
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
@@ -121,6 +127,8 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </TabItem>
 
 <TabItem value="powershell" label="Windows (PowerShell)">
+
+  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
@@ -136,6 +144,8 @@ $env:LT_ACCESS_KEY = "${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
 The `hyperexecute.yaml` at the repository root tells HyperExecute how to build the suite, discover tests, and run them. It ships ready to use. Review it to see the `pre` (Maven build), `testDiscovery`, and `testRunnerCommand` steps.
 
+<VerifiedTag value="Verified" />
+
 ```yaml reference title="hyperexecute.yaml"
 https://github.com/LambdaTest/hyp-api-testing/blob/master/hyperexecute.yaml
 ```
@@ -144,11 +154,15 @@ https://github.com/LambdaTest/hyp-api-testing/blob/master/hyperexecute.yaml
 
 From the root folder of the project, run the CLI against your YAML file:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 ./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE
 ```
 
 If you did not export your credentials in Step 3, pass them inline instead:
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">

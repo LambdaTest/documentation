@@ -16,6 +16,8 @@ slug: hyperexecute-how-to-configure-tunnel/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-how-to-configure-tunnel/
 ---
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
@@ -57,6 +59,8 @@ There are 3 main ways to use a tunnel in HyperExecute:
 ### 1. Simple `tunnel` Connection
 Enable tunnel directly by setting the `tunnel` flag to `true` in your HyperExecute YAML file. The HyperExecute CLI will launch a tunnel as sub process for accessing your applications which are locally hosted or behind a firewall. 
 
+<VerifiedTag value="Verified" />
+
 ```yaml title="hyperexecute.yaml"
 tunnel: true
 ```
@@ -64,6 +68,8 @@ tunnel: true
 
 ### 2. Using Existing `tunnel`
 If you already have a running tunnel, you can reuse it by specifying its name to access your applications which are locally hosted or behind a firewall.
+
+<VerifiedTag value="Verified" />
 
 ```yaml title="hyperexecute.yaml"
 tunnelNames: ["lambdatest_tunnel"]
@@ -85,6 +91,8 @@ These are the parameters you can use to configure your [tunnel](/support/docs/de
 
 > HyperExecute now supports tunnel capabilities for [Maestro](/support/docs/hyperexecute-maestro-testing/) tests running on both virtual devices and real devices using the Raw Framework configuration.
 
+<VerifiedTag value="Verified" />
+
 ```yaml title="hyperexecute.yaml"
 tunnel: true
 
@@ -103,6 +111,8 @@ Private repositories are hosted on a private network or behind a firewall, and y
 You can now clone all your **public** and **private** repositories from your Git provider via **tunnel**.
 
 After specifying the details of your repository, you need to set the `useInCodeSetUp` flag to `true` as shown below.
+
+<VerifiedTag value="Verified" />
 
 ```bash
 sourcePayload:
@@ -123,6 +133,8 @@ tunnelOpts:
 
 If you are unable to access a particular website via the Actions environment even after setting the `tunnel: true` in the YAML file then please execute the following curl command:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 response=$(curl -o /dev/null -s -w "%{http_code}" https://www.testmuai.com)
 
@@ -130,6 +142,8 @@ response=$(curl -o /dev/null -s -w "%{http_code}" https://www.testmuai.com)
 ```
 
 Now you need to check the response of the website by passing the command:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 echo $response

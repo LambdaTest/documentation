@@ -14,6 +14,8 @@ slug: hyperexecute-how-to-perform-dependent-test-based-discovery/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-how-to-perform-dependent-test-based-discovery/
 ---
 
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
@@ -45,6 +47,8 @@ Dependent tests signify that one test relies on the outcome of another. To achie
 
 For instance, consider the code snippet in which '**SignIn()**' depends on '**OpenBrowser()**,' and '**LogOut()**' depends on 'SignIn().'
 
+<VerifiedTag value="Verified" />
+
 ```java
 import org.testng.annotations.Test;
 public class DependsOnTest {
@@ -67,6 +71,8 @@ public class DependsOnTest {
 
 To discover and manage dependent tests using the Test Discovery command, you can use the following syntax:
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 mvn test -Dmode=discover -Dplatname=win -Dframework=testng -Ddiscovery=dependent
 ```
@@ -80,6 +86,8 @@ TestNG provides group-based test discovery functionality. You can specify groups
 To perform group-based test discovery, you can use the ***@BeforeGroups*** and ***@AfterGroups*** annotations in your TestNG tests. These annotations allow you to specify setup and cleanup methods that run before and after specific groups of tests.
 
 For example:
+
+<VerifiedTag value="Verified" />
 
 ```java
 public class GroupIntegrationTest {
@@ -119,6 +127,8 @@ public class GroupIntegrationTest {
 
 In the HyperExecute YAML Version 0.2 configuration, you can use the ```discoveryFlags``` parameter to specify the groups to discover during test discovery.
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 framework:
   name: "maven/testng"
@@ -128,6 +138,8 @@ framework:
 Here it will only discover tests belonging to the group database. Use comma-separated values if you want to specify multiple groups.
 
 Similarly, you can use the ```excludedGroups``` parameter that can be used to run all test groups except for the defined set of groups.
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 framework:
@@ -139,6 +151,8 @@ This discovers all test of groups except database.
 
 
 Alternatively, you can also specify the groups or excluded groups directly in the pom.xml file using the Maven Surefire Plugin
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 <plugins>
