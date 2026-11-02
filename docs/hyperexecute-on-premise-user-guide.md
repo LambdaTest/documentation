@@ -54,21 +54,6 @@ HyperExecute on-prem works the same way as the SaaS platform for most tasks. Thi
 - Pause a workflow during a maintenance window and resume it afterwards.
 - Find results, rerun failures, and fix the most common errors on your own.
 
-## Who does what
-
-On-prem deployments split work between platform admins and the teams who run tests. Knowing which side owns a task saves time when something is blocked.
-
-| Task | Owned by | Where to read more |
-|------|----------|--------------------|
-| Deploy and upgrade the platform | <BrandName /> and your platform admin | [HyperExecute Private Cloud](/support/docs/hyperexecute-private-cloud-setup/) |
-| Create users, roles and access keys | Org Admin | [Username and access key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/) |
-| Connect Git (GitHub App or Bitbucket) | Org Admin | [GitHub App integration](/support/docs/hyperexecute-github-app-integration/) |
-| Define environments and OS queues | Org Admin | [Environments and queues](#environments-and-queues) |
-| Set org-wide rules (Global Policies) | Org Admin | [Global Policies](/support/docs/hyperexecute-global-policies/) |
-| Write the YAML and trigger jobs | Test teams | [Deep Dive into YAML](/support/docs/deep-dive-into-hyperexecute-yaml/) |
-| Create and manage workflows | Project Admin | [Workflows](/support/docs/hyperexecute-workflows/) |
-| Pause and resume workflows | Org Admin or Project Admin | [Manage workflow states](#step-7-manage-workflow-states) |
-
 ## How on-prem differs from SaaS
 
 Read this table once before you start. Most "it works on SaaS but not here" issues come from one of these rows.
