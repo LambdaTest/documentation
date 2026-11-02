@@ -308,7 +308,7 @@ Both balance thresholds are entered as an absolute number of credits.
 
 ### Turn on auto-reload
 
-Auto-reload buys credits for you, using your organization's saved card, whenever the available balance drops below a level you choose, so runs are not blocked by an empty balance. It is off until an admin turns it on, and it is available on the parent organization only, not on sub-organizations. Auto-reload is currently available for organizations in the US region.
+Auto-reload buys credits for you, using your organization's saved card, whenever the available balance drops below a level you choose, so runs are not blocked by an empty balance. It is off until an admin turns it on, and it is available on the parent organization only, not on sub-organizations.
 
 Before you start, make sure your organization has a saved card set as the default payment method.
 
