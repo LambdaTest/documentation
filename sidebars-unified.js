@@ -97,7 +97,6 @@ const CDPTestingSidebar = [backToDocs, { type: 'doc', id: 'run-tests-with-chrome
 const BiDiTestingSidebar = [backToDocs, { type: 'doc', id: 'run-tests-with-webdriver-bidi', label: 'BiDi Testing' }];
 
 // App Automation
-const XCUITestingSidebar = dedicated(s.XCUITestingSidebar);
 const FlutterTestingSidebar = dedicated(s.FlutterTestingSidebar);
 const MobilewrightTestingSidebar = dedicated(s.MobilewrightTestingSidebar);
 const VirtualDevicesSidebar = dedicated(s.EmuSimuSidebar);
@@ -160,6 +159,10 @@ const SettingsAndSecuritySidebar = [
   },
 ];
 
+// Dedicated sidebar for XCUI Testing. The XCUI Testing entry in docsSidebar is a
+// link (above), so these docs live ONLY here — Docusaurus displays this dedicated
+// sidebar whenever a reader is inside XCUI Testing.
+const XCUITestingSidebar = [backToDocs, ...items(s.XCUITestingSidebar)];
 // Espresso Testing is a link in docsSidebar (above), so its docs live ONLY in
 // this dedicated sidebar — Docusaurus displays it (with the back-to-docs link)
 // whenever a reader is inside an Espresso Testing page.
