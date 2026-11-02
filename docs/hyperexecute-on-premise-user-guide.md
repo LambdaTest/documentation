@@ -424,8 +424,6 @@ Use the CLI command from [step 5](#step-5-trigger-a-job-from-the-cli) as a pipel
 | Job ends with `lambda_error` | Symbolic links or very large files in the upload | See [Symbolic link error](/support/docs/hyperexecute-cli-error/#symbolic-link-error) and use a [.hyperexecuteignore file](/support/docs/hyperexecute-gitignore/). |
 | Gradle job passes with zero tests | Gradle version below 7.0 | Upgrade Gradle to 7.0 or later. |
 
-If none of these match, collect the job ID, the CLI version (`./hyperexecute --version`) and the full error text, then contact support at [hyperexecute-privatecloudsupport@testmuai.com](mailto:hyperexecute-privatecloudsupport@testmuai.com).
-
 ## Dependencies checklist
 
 | Dependency | Needed for | Owner |
