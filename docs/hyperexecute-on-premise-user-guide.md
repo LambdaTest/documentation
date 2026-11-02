@@ -65,6 +65,7 @@ Read this table once before you start. Most "it works on SaaS but not here" issu
 | Network | Public internet endpoints must be reachable | Traffic stays inside your network. Corporate proxies and internal certificates often apply |
 | Operating systems | Linux, Windows and macOS | Linux and Windows. See [Private Cloud benefits](/support/docs/hyperexecute-private-cloud-benefits/) |
 | Environments | Managed by <BrandName /> | Defined by your admin. Jobs with no environment fall back to the org default |
+| Test discovery | `mode: local` or `mode: remote` | `mode: remote` only |
 | Tunnel | Used when tests need to reach private apps | Usually not needed. Tunnel settings are ignored for jobs started from a Workflow or the Trigger API |
 | Git access | Marketplace GitHub App or tokens | Your own or a dedicated GitHub App, or Bitbucket |
 | Analytics | Full Intelligent Test Analytics | Not available. Use job reports, the job **Insights (Beta)** tab and the Organisation Summary |
@@ -241,6 +242,7 @@ The YAML file tells HyperExecute what to run and how to split it. It is the same
 - Use `linux` or `win` in `runson`. macOS is not available on-prem.
 - If you do not set an environment, the job uses your organization's default environment.
 - Your admin may allow only some environment variables. If you set one that is not allowed, the CLI shows a warning that names it.
+- Set `testDiscovery.mode: remote` in every YAML. On-prem supports remote discovery only, so `mode: local` does not work, whether you start the job from the CLI or from a Workflow. See [testDiscovery](/support/docs/deep-dive-into-hyperexecute-yaml/#mode).
 - Org-wide [Global Policies](/support/docs/hyperexecute-global-policies/) can add steps to your job or reject it. Check the **Applied Policies** panel on the job page to see what changed.
 
 Validate the file before you submit it:
