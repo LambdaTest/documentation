@@ -103,7 +103,71 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 The TestMu AI Agent Testing Platform tests a voice agent the same way it tests a chat agent, except the conversation happens as audio instead of text. It holds a spoken conversation with your agent, transcribes the responses, and scores the interaction across the same 9 quality metrics. It covers voice assistants and voice-enabled support agents.
 
-A voice agent uses the same setup as a chat agent: upload the documents that describe it, generate scenarios, and run an evaluation. The difference is the medium, audio rather than text.
+A voice agent uses a similar setup to a chat agent: describe the agent in a prompt, generate scenarios, and run an evaluation. The difference is the medium, audio rather than text.
+
+## How to Run Your First Voice Agent Test
+
+---
+
+Follow these six steps in the dashboard.
+
+**Step 1: Create the voice agent.** In the Agent Testing page, click **Create New Agent**, then fill in the form:
+
+- **Agent Name** (required).
+- **Description** (optional).
+- **Agent Type** (required): select **Voice Agent**.
+
+Click **Create New Agent** to confirm.
+
+<img loading="lazy" src={require('../assets/images/agent-to-agent/create-voice-agent-form.webp').default} alt="Create New Agent panel with Voice Agent selected as the agent type" width="1914" height="936"  className="doc_img"/>
+
+**Step 2: Define the agent prompt.** Open the **Prompt** tab, which sits between **Scenarios** and **Test Profile**.
+
+- In **Agent-Under-Evaluation Prompt**, define the ideal behavior and role of your agent to guide conversations.
+- Optionally, under **Upload Files**, add PDF, MS Word, MS Excel, TXT, MD, MP3, WAV, M4A, PNG, JPG, or WEBP files. Multiple files are allowed, up to 5 MB each.
+- Click **Save Prompt**.
+
+<img loading="lazy" src={require('../assets/images/agent-to-agent/voice-agent-prompt-tab-upload-files.webp').default} alt="Prompt tab with the Agent-Under-Evaluation Prompt editor and optional file upload for a voice agent" width="1918" height="940"  className="doc_img"/>
+
+**Step 3: Generate scenarios.** Open the **Scenarios** tab and click **Generate Scenarios**, then set:
+
+- **Number of Scenarios:** use the slider or type a number.
+- **Scenario Types:**
+  - **Happy Path:** normal flows and success scenarios.
+  - **Negative:** errors, invalid inputs, and failure paths.
+  - **Edge Case:** boundary values and unusual conditions.
+  - **Red Team:** security attacks and adversarial inputs.
+- **Select Languages for Scenarios:** for example English, Spanish, Portuguese, German, Swedish, Indonesian, or Filipino.
+
+Click **Generate Scenarios** to confirm.
+
+<img loading="lazy" src={require('../assets/images/agent-to-agent/voice-agent-generate-scenarios-dialog.webp').default} alt="Generate Scenarios dialog with number of scenarios, scenario types and language selection for a voice agent" width="1918" height="937"  className="doc_img"/>
+
+**Step 4: Create a suite.** Open the **Suites** tab and click **Create New Suite**.
+
+- Enter a **Suite Name**.
+- Use **Search scenario** and the checkboxes to select the scenarios to include.
+- For each selected scenario, choose one or more voices, a persona, and a test profile, and set the **Iterations**.
+- Check the footer, which shows how many calls will fire, then click **Create New Suite**.
+
+<img loading="lazy" src={require('../assets/images/agent-to-agent/voice-agent-create-new-suite-personas-voices.webp').default} alt="Create New Suite dialog selecting scenarios with voice, persona, test profile and iterations for a voice agent" width="1918" height="942"  className="doc_img"/>
+
+**Step 5: Set up an endpoint profile.** Open the **Endpoint Profiles** tab. Until you add one, it shows **No Endpoint Profiles Yet**.
+
+- Click **Create New Endpoint Profile**, or click **Import**.
+- Endpoint profiles define multi-step API flows for complex authentication scenarios: login, session creation, and chat endpoints, with variable extraction and injection.
+
+<img loading="lazy" src={require('../assets/images/agent-to-agent/voice-agent-endpoint-profiles-tab.webp').default} alt="Endpoint Profiles tab with the Create New Endpoint Profile and Import options for a voice agent" width="1918" height="936"  className="doc_img"/>
+
+**Step 6: Run the suite.** On the **Suites** tab, click **Run** next to your suite. In the **Run Voice Suite** dialog:
+
+1. Under **Select Endpoint Profile**, choose the profile that connects to your voice agent. A badge shows the transport, for example **OPENAI REALTIME TRANSPORT**.
+2. Under **HyperExecute Tunnel**, you can select a tunnel to use for the evaluation.
+3. Click **Run Voice Test**.
+
+When the run finishes, review the scores against the metrics below.
+
+<img loading="lazy" src={require('../assets/images/agent-to-agent/run-voice-suite-select-endpoint-profile.webp').default} alt="Run Voice Suite dialog with endpoint profile and HyperExecute tunnel selection and the Run Voice Test button" width="1918" height="943"  className="doc_img"/>
 
 ## How Voice Agent Testing Works
 
