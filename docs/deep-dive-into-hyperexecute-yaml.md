@@ -1013,6 +1013,13 @@ mode: local  #or
 mode: remote
 ```
 
+:::info On-premise deployments
+On-premise deployments have no macOS machines. Test discovery and test execution run on Linux or Windows only.
+
+- With `mode: remote`, discovery runs on a Linux or Windows machine in your deployment. Write the discovery `command` for that OS, and do not use macOS-only commands or paths.
+- With `mode: local`, discovery runs where the CLI runs, which can be a Mac. The discovered tests still execute on Linux or Windows, so keep `runson` and `matrix.os` to `linux` or `win`.
+:::
+
 **`mode: local`**
 
 - **Purpose:** Test discovery is performed locally on the machine where the CLI is running.
