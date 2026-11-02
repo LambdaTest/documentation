@@ -1019,6 +1019,7 @@ On-premise deployments support `mode: remote` only. `mode: local` is not availab
 
 - Discovery runs on a Linux or Windows machine in your deployment. There are no macOS machines on-premise, so write the discovery `command` for Linux or Windows and do not use macOS-only commands or paths.
 - Keep `runson` and `matrix.os` to `linux` or `win`.
+- For a discovery `command` and `testRunnerCommand` that fit your framework, start from its guide in [Frameworks you can run](/support/docs/hyperexecute-on-premise-user-guide/#frameworks-you-can-run).
 :::
 
 **`mode: local`**
