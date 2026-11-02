@@ -47,8 +47,8 @@ const docsSidebar = [
       { type: 'link', label: 'Espresso Testing', href: '/docs/getting-started-with-espresso-testing/' },
       { type: 'link', label: 'XCUI Testing', href: '/docs/getting-started-with-xcuitest/' },
       { type: 'link', label: 'Mobilewright Testing', href: '/docs/mobilewright-overview/' },
-      { type: 'link', label: 'Flutter Testing', href: '/docs/appium-flutter-integration/' },
-      { type: 'link', label: 'Virtual Devices', href: '/docs/app-automation-on-emulators-simulators/' },
+      { type: 'link', label: 'Flutter Testing', href: '/docs/getting-started-with-flutter-dart-android-automation/' },
+      { type: 'category', label: 'Virtual Devices', collapsible: true, collapsed: true, items: items(s.EmuSimuSidebar) },
     ],
   },
   { type: 'link', label: 'HyperExecute', href: '/docs/getting-started-with-hyperexecute/' },
@@ -97,7 +97,6 @@ const CDPTestingSidebar = [backToDocs, { type: 'doc', id: 'run-tests-with-chrome
 const BiDiTestingSidebar = [backToDocs, { type: 'doc', id: 'run-tests-with-webdriver-bidi', label: 'BiDi Testing' }];
 
 // App Automation
-const FlutterTestingSidebar = dedicated(s.FlutterTestingSidebar);
 const MobilewrightTestingSidebar = dedicated(s.MobilewrightTestingSidebar);
 const VirtualDevicesSidebar = dedicated(s.EmuSimuSidebar);
 
@@ -159,6 +158,10 @@ const SettingsAndSecuritySidebar = [
   },
 ];
 
+// Dedicated sidebar for Flutter Testing. The Flutter Testing entry in docsSidebar is a
+// link (above), so these docs live ONLY here — Docusaurus displays this dedicated
+// sidebar whenever a reader is inside Flutter Testing.
+const FlutterTestingSidebar = [backToDocs, ...items(s.FlutterTestingSidebar)];
 // Dedicated sidebar for XCUI Testing. The XCUI Testing entry in docsSidebar is a
 // link (above), so these docs live ONLY here — Docusaurus displays this dedicated
 // sidebar whenever a reader is inside XCUI Testing.
