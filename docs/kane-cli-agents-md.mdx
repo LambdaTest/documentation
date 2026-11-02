@@ -1,0 +1,131 @@
+---
+title: "Kane CLI AGENTS.md: Agent MD File for Coding Agents"
+sidebarTitle: "AGENTS.md"
+description: "Add the Kane CLI AGENTS.md file to your repository as AGENTS.md, CLAUDE.md, or GEMINI.md so any AI coding agent can test web and mobile apps with Kane CLI."
+keywords: ['kane cli agents.md', 'kane cli agent md', 'kanecli agent md', 'agents.md browser testing', 'claude.md kane cli', 'gemini.md', 'cursor agents.md', 'codex agents.md', 'ai coding agent browser testing', 'ai coding agent mobile app testing']
+"og:description": "Add the Kane CLI AGENTS.md file to your repository as AGENTS.md, CLAUDE.md, or GEMINI.md so any AI coding agent can test web and mobile apps with Kane CLI."
+---
+
+import { KaneCliCta } from "/snippets/KaneCliCta.mdx";
+
+The Kane CLI AGENTS.md file is a markdown instruction file for AI coding agents. Put it at the root of your repository and the agent learns when to reach for a real browser or a mobile app, how to run `kane-cli`, how to read the result, and how to save tests that replay.
+
+It is one self-contained file, so it works in any agent that reads an instruction file: Codex CLI, Cursor, GitHub Copilot, Windsurf, Amp, Jules, Claude Code, Gemini CLI, and others. Nothing else needs to be installed besides Kane CLI itself.
+
+<Note>
+Open the raw file as AGENTS.md, CLAUDE.md, or GEMINI.md from [testmuai.com/kane-cli-agent](https://www.testmuai.com/kane-cli-agent/), or go straight to [testmuai.com/kane-cli-agent/AGENTS.md](https://www.testmuai.com/kane-cli-agent/AGENTS.md).
+</Note>
+
+---
+
+## Add the File
+
+You need Kane CLI installed and signed in first. See [Installation](/docs/kane-cli-installation/) and [Authentication](/docs/kane-cli-authentication/).
+
+Each agent looks for a different file name. The contents are the same in every case.
+
+<Tabs>
+  <Tab title="AGENTS.md">
+
+Read by Codex CLI, Cursor, GitHub Copilot, Windsurf, Amp, Jules, and most other coding agents.
+
+```bash
+curl -fsSL https://www.testmuai.com/kane-cli-agent/AGENTS.md >> AGENTS.md
+```
+
+  </Tab>
+  <Tab title="CLAUDE.md">
+
+Read by Claude Code.
+
+```bash
+curl -fsSL https://www.testmuai.com/kane-cli-agent/AGENTS.md >> CLAUDE.md
+```
+
+If your repository already has an `AGENTS.md` with the Kane CLI section, add one line to `CLAUDE.md` instead, so you keep a single copy:
+
+```markdown
+@AGENTS.md
+```
+
+To use it in every project, append it to `~/.claude/CLAUDE.md`.
+
+  </Tab>
+  <Tab title="GEMINI.md">
+
+Read by Gemini CLI.
+
+```bash
+curl -fsSL https://www.testmuai.com/kane-cli-agent/AGENTS.md >> GEMINI.md
+```
+
+To use it in every project, append it to `~/.gemini/GEMINI.md`.
+
+  </Tab>
+</Tabs>
+
+The `>>` operator appends. If the file already exists, your current instructions stay and the Kane CLI section is added at the end. If it does not exist, the command creates it.
+
+Commit the file. Teammates, CI agents, and cloud agents that check out the repository then get the same instructions.
+
+---
+
+## Try It
+
+Open your agent in the repository and ask for something that needs a browser or a mobile app:
+
+```text
+check that the checkout flow works on staging
+```
+
+The agent writes an objective, runs `kane-cli run ... --agent`, reads the final `run_end` event and the exit code, and reports a pass or fail with what happened, the duration, credits used, and a link to the test case in Test Manager.
+
+---
+
+## What the File Covers
+
+| Section | What the agent learns |
+|---------|----------------------|
+| Rules | Use `kane-cli` for any browser task instead of Playwright, Puppeteer, or Selenium. Always pass `--agent`. End `testrun run` in `< /dev/null`. Never ask for secrets in chat |
+| Install and sign in | `npm install -g @testmuai/kane-cli`, `kane-cli login --oauth`, and Basic Auth for CI |
+| Run a one-off browser task | `kane-cli run` and its most-used flags |
+| Write the objective | Action, assertion, extraction, and API call patterns, the "store as" rule, and ending every flow in a check |
+| Read the result | The NDJSON event shapes, the `run_end` fields, and exit codes `0` to `3` |
+| Save a test that replays | The `_test.md` format, `kane-cli testmd run`, and committing `output-<stem>/` |
+| Run a suite | `kane-cli testrun run` with `--match`, `--tags`, `--parallel`, `--dry-run`, and `--remote` |
+| Test cases from requirements | The assurance commands: `context ingest`, `design tests`, `cover`, and `maintain reconcile` |
+| Mobile apps | `--target emulator` or `--target simulator` with `--app`, and `--remote` from any machine |
+| Before you open a pull request | Gate the agent's own work on the committed tests and their exit codes |
+
+---
+
+## AGENTS.md or the Kane CLI Skill
+
+Both teach the agent the same commands. Choose by the agent you use and how much guidance you want.
+
+| | AGENTS.md file | Kane CLI skill |
+|---|---|---|
+| Agents | Any agent that reads an instruction file | Claude Code, Codex CLI, Gemini CLI |
+| Install | `curl ... >> AGENTS.md` | `npx @testmuai/kane-cli-skill` |
+| Lives in | Your repository | Your agent's skills folder, global or per project |
+| Context | Always loaded, about 200 lines | Short core file, references loaded only when a task needs them |
+| Extras | None | Ready check, result cards, first-run tour, saved preferences, live status strip in Claude Code |
+
+You can use both. See [Skills](/docs/kane-cli-skills/) for the skill.
+
+---
+
+## Keep It Up to Date
+
+The file mirrors the Kane CLI skill in the [LambdaTest/kane-cli](https://github.com/LambdaTest/kane-cli) repository, and the version it tracks is written at the top. When you update Kane CLI, fetch the file again. If you appended it to an existing file, replace the old Kane CLI section rather than appending a second copy.
+
+---
+
+## Next Steps
+
+- [AI Coding Agents](/docs/kane-cli-with-ai-coding-agents/): walkthroughs for Claude Code, Cursor, Gemini CLI, and Kiro.
+- [Skills](/docs/kane-cli-skills/): install the full skill for Claude Code, Codex CLI, or Gemini CLI.
+- [Agent Mode](/docs/kane-cli-agent-mode/): the `--agent` flag and the NDJSON event schema.
+- [Test.md](/docs/kane-cli-testmd/): saved tests that replay from a recording.
+
+<KaneCliCta />

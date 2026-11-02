@@ -1,0 +1,830 @@
+---
+title: "E-commerce Testing Use Cases"
+sidebarTitle: "E-commerce Testing"
+description: "E-commerce testing use cases for Kane CLI: search, variants, cart, checkout, discounts, grocery slots, orders, returns, and store admin, each with a recorded run and the exact test.md file behind it."
+keywords: ['kane cli e-commerce testing', 'checkout testing', 'cart testing', 'storefront testing', 'kane cli', 'kaneai', 'natural language testing', 'testmu ai']
+"og:description": "E-commerce testing use cases for Kane CLI: search, variants, cart, checkout, discounts, grocery slots, orders, returns, and store admin, each with a recorded run and the exact test.md file behind it."
+---
+
+import { KaneCliCta } from "/snippets/KaneCliCta.mdx";
+
+The costly bugs in a store rarely throw an error: a variant photo changes while the price stays old, a discount appears in the summary but the total does not drop, or a pickup slot is chosen and never reaches the order. These use cases check the parts of a store that have to agree with each other, across search, cart, checkout, orders, and the admin side.
+
+Every use case below was recorded against a demo storefront and comes with the `_test.md` file that produced the run. Each step in the file is written in natural language and ends with a check, so Kane CLI fails the run when what the shopper sees stops matching what the store recorded.
+
+## Run these recipes
+
+Save any recipe below as a file ending in `_test.md`, change the `url` to your own store, and replace the product names and prices with values from your catalog. Then run it:
+
+```bash
+kane-cli testmd run tests/add-to-cart-with-variant_test.md --agent
+```
+
+The first run authors each step and records it. Later runs replay the recording without calling the model, so the same file works as a regression check in CI. To run every e-commerce recipe as one suite, tag the files and run `kane-cli testrun run --tags ecommerce --parallel 4 --headless`. See [Test.md](/docs/kane-cli-testmd/) and [Batch Runs](/docs/kane-cli-testrun/) for the full format and flags.
+
+<Note>
+The same files run against a native app on an Android emulator or an iOS simulator when you add `target` and `app` to the frontmatter. See [Mobile Testing](/docs/kane-cli-mobile/).
+</Note>
+
+## Search and product pages
+
+Search and product pages decide whether a shopper reaches the right item at the right price. These recipes check that the result, the product page, and the selection controls all describe the same product.
+
+### Search to product page
+
+A search that opens the wrong product page still looks like a working search. This recipe searches the storefront, opens the result, and checks that the title, brand, price, and buy box on the product page match the item that was searched for.
+
+<video class="right-side" width="100%" controls id="vid">
+<source src="https://assets.testmuai.com/resources/videos/kane-cli/use-cases/search-to-product-page.mp4" type="video/mp4" />
+</video>
+
+```markdown search-to-product-page_test.md
+---
+mode: testing
+url: https://your-app.example.com
+max_steps: 40
+tags: [ecommerce, search]
+---
+
+# Search to product page
+
+## Search the storefront
+Type "headset" into the "Search ShopKart" box and press Enter, then verify the results page shows "1 result for “headset”" and a result titled "Wireless Gaming Headset 7.1".
+
+## Open the product
+Click the result "Wireless Gaming Headset 7.1" and verify the product page shows the title "Wireless Gaming Headset 7.1", the brand "Aurex" and the price "$79.99".
+
+## Confirm the buy box is usable
+Verify the buy box shows "In Stock" and both an "Add to Cart" and a "Buy Now" button are present.
+```
+
+Kane CLI fails the run if the product page shows a different title or price from the search result, or if the buy box is missing its Add to Cart or Buy Now button.
+
+### Search with filters
+
+A size that can be selected but has no stock is a lost order. This recipe searches for running shoes, applies a size filter and a price band, opens the only result, and then checks that size 8 is selectable and actually in stock.
+
+<video class="right-side" width="100%" controls id="vid">
+<source src="https://assets.testmuai.com/resources/videos/kane-cli/use-cases/search-with-filters.mp4" type="video/mp4" />
+</video>
+
+```markdown search-with-filters_test.md
+---
+mode: testing
+url: https://your-app.example.com
+max_steps: 45
+tags: [ecommerce, search]
+---
+
+# Search with filters
+
+## Search for running shoes
+Type "running shoes" into the search box, click "Search", and verify the results page shows "4 results".
+
+## Filter by size 8
+Click the "8" size filter and verify the result count line contains "size 8".
+
+## Narrow by price band
+Click the "₹1,500 – ₹3,000" price filter and verify the results show "1 result" and list "Trailburst Running Shoes".
+
+## Open the filtered result
+Click "Trailburst Running Shoes" and verify the product page shows the price "₹2,499.00" and that size "8" can be selected.
+
+## Confirm the size is genuinely available
+Click size "8" and verify a badge appears reading "Size 8 · 12 left".
+```
+
+The last step reads the stock badge after the size is picked, so a size that is selectable but sold out fails the run.
+
+### Add to cart with a variant
+
+On a product with several colours and connection types, each variant can carry its own price. This recipe switches colour and connection, checks that the price and the selection label update together at every step, and then confirms the cart received the exact variant and price.
+
+<video class="right-side" width="100%" controls id="vid">
+<source src="https://assets.testmuai.com/resources/videos/kane-cli/use-cases/add-to-cart-with-variant.mp4" type="video/mp4" />
+</video>
+
+```markdown add-to-cart-with-variant_test.md
+---
+mode: testing
+url: https://your-app.example.com/dp/sku_headset
+max_steps: 40
+tags: [ecommerce, variant]
+---
+
+# Add to cart with variant
+
+## Switch colour to Arctic White
+Click "Arctic White" and verify the price reads "$84.99" and the selection reads "Selected: Arctic White · Wireless".
+
+## Switch connection to Wired
+Click "Wired" and verify the price reads "$69.99" and the selection reads "Selected: Arctic White · Wired".
+
+## Add the chosen variant to the cart
+Click "Add to Cart" and verify a confirmation appears reading "Added to Cart: 1 × Wireless Gaming Headset 7.1 (Arctic White · Wired) at $69.99".
+```
+
+A variant picker that updates the label but keeps the old price, or adds the wrong variant to the cart, fails the run at the step where the two stop agreeing.
+
+### Size guide and size selection
+
+A size guide is only useful if the size picked from it is the size that ends up in the bag. This recipe opens the size guide, selects a size from the conversion table, confirms a sold-out size is disabled, and checks the bag carries the chosen size.
+
+<video class="right-side" width="100%" controls id="vid">
+<source src="https://assets.testmuai.com/resources/videos/kane-cli/use-cases/size-guide-and-selection.mp4" type="video/mp4" />
+</video>
+
+```markdown size-guide-and-selection_test.md
+---
+mode: testing
+url: https://your-app.example.com
+max_steps: 45
+tags: [ecommerce, sizing]
+---
+
+# Size guide and selection
+
+## Open a running shoe
+Click "Nyke Aeroglide 41" and verify the product page shows the colourway "Black / Volt" and the price "$139.99".
+
+## Open the size guide
+Click "📏 Size guide" and verify a dialog appears titled "Size guide" showing a row where US "9" maps to UK "8", EU "42.5" and CM "27".
+
+## Select a size from the guide
+Click "Select" on the US "9" row and verify the product page shows a badge reading "Selected: US 9".
+
+## Confirm a sold-out size cannot be chosen
+Verify the size "US 9.5 ✕" option is shown as disabled.
+
+## Add to bag and confirm the size carried
+Click "Add to Bag", click the "Bag" link in the header, and verify the bag shows "Nyke Aeroglide 41" with "Black / Volt · Size US 9".
+```
+
+Kane CLI checks the bag line for the colourway and the size, so a size that is lost between the product page and the bag fails the run.
+
+### Shop search and favorites
+
+Favorites that disappear after a reload make a marketplace feel broken even when no error appears. This recipe searches for a shop, favorites one listing, opens the favorites page, and reloads it to confirm the favorite was saved.
+
+<video class="right-side" width="100%" controls id="vid">
+<source src="https://assets.testmuai.com/resources/videos/kane-cli/use-cases/shop-search-and-favorite.mp4" type="video/mp4" />
+</video>
+
+```markdown shop-search-and-favorite_test.md
+---
+mode: testing
+url: https://your-app.example.com
+max_steps: 40
+tags: [ecommerce, marketplace, favorites]
+---
+
+# Shop search and favorite
+
+## Search for a shop
+Type "KilnAndClay" into the search box and verify the results show "2 listings" including "Hand-thrown Speckled Mug".
+
+## Favorite an item
+Click the "♡ Favorite" button on "Hand-thrown Speckled Mug" and verify the button now reads "♥ Favorited".
+
+## Open the favorites list
+Click the "Favorites" link in the header and verify the favorites page shows "1 favorite" and lists "Hand-thrown Speckled Mug".
+
+## Confirm it survives a reload
+Reload the page and verify the favorites page still shows "1 favorite" and still lists "Hand-thrown Speckled Mug".
+```
+
+The reload step is what proves persistence: a favorite that only lives in page state fails the run after the reload.
+
+## Cart and checkout
+
+Checkout is where a wrong number costs money directly. These recipes check totals, payment, and confirmation together, so a page that loads with the wrong amount still fails.
+
+### Storefront guest checkout
+
+Guest checkout is the shortest path to an order, and every field on it can break the order. This recipe adds a product, fills contact and shipping details as a guest, pays with a test card, and checks the thank-you page for the order number and the total.
+
+<video class="right-side" width="100%" controls id="vid">
+<source src="https://assets.testmuai.com/resources/videos/kane-cli/use-cases/storefront-guest-checkout.mp4" type="video/mp4" />
+</video>
+
+```markdown storefront-guest-checkout_test.md
+---
+mode: testing
+url: https://your-app.example.com
+max_steps: 45
+tags: [ecommerce, checkout]
+---
+
+# Storefront guest checkout
+
+## Add a product to the cart
+Click "Add to cart" on "Heavyweight Cotton Tee" and verify the page shows a confirmation reading "Added Heavyweight Cotton Tee to cart".
+
+## Open the cart
+Click "View cart" and verify the cart lists "Heavyweight Cotton Tee" with a subtotal of "$32.00".
+
+## Go to checkout
+Click "Checkout" and verify the checkout page shows "Guest checkout — no account required" and a "Contact" section.
+
+## Fill in contact and shipping
+Type "guest@example.com" into Email, "Dana Reyes" into "Full name", "9 Pine Lane" into Address, "Austin" into City, and "78701" into ZIP, then verify the order summary shows a Total of "$41.06".
+
+## Pay with the test card
+Type "4242 4242 4242 4242" into "Card number", "12 / 34" into Expiration, "123" into CVC, click the Pay button, and verify the page shows "Thank you for your order!" with order number "#1003" and a total paid of "$41.06".
+```
+
+The total is checked twice, once in the order summary before payment and once on the thank-you page, so a total that changes during payment fails the run.
+
+### One-click checkout
+
+One-click checkout depends on a saved address and a saved card being the ones actually charged. This recipe confirms the saved address and card in the buy box, buys with one click, and checks the confirmation for the order number and the card that was charged.
+
+<video class="right-side" width="100%" controls id="vid">
+<source src="https://assets.testmuai.com/resources/videos/kane-cli/use-cases/one-click-checkout.mp4" type="video/mp4" />
+</video>
+
+```markdown one-click-checkout_test.md
+---
+mode: testing
+url: https://your-app.example.com/dp/sku_headset
+max_steps: 40
+tags: [ecommerce, checkout]
+---
+
+# One-click checkout
+
+## Confirm the 1-Click settings are shown
+Verify the buy box shows "📍 Home — 418 Maple Street, Austin" and "💳 Visa ending in 4242".
+
+## Buy with one click
+Click "Buy Now" and verify the page shows "Order placed, thank you!" with a heading containing "Order placed".
+
+## Confirm the order number and charge
+Verify the confirmation shows an order number starting with "112-" and text reading "Charged" with "Visa ending in 4242".
+```
+
+Kane CLI checks the card on the confirmation page against the card shown before purchase, so a charge to a different saved card fails the run.
+
+### Discount code application
+
+A discount code can appear in the order summary while the total stays the same, and nothing on the page looks broken. This recipe tries an invalid code first, then applies a ten percent code and checks both the discount line and the final total.
+
+<video class="right-side" width="100%" controls id="vid">
+<source src="https://assets.testmuai.com/resources/videos/kane-cli/use-cases/discount-code-application.mp4" type="video/mp4" />
+</video>
+
+```markdown discount-code-application_test.md
+---
+mode: testing
+url: https://your-app.example.com
+max_steps: 45
+tags: [ecommerce, discount]
+---
+
+# Discount code application
+
+## Add a product and open checkout
+Click "Add to cart" on "Heavyweight Cotton Tee", click "View cart", click "Checkout", and verify the order summary shows a Total of "$41.06".
+
+## Apply an invalid code first
+Type "NOTACODE" into the "Discount code" field, click "Apply", and verify an error appears reading "Discount code NOTACODE isn't valid for this order."
+
+## Apply the ten percent code
+Clear the discount field, type "WELCOME10", click "Apply", and verify a badge appears reading "WELCOME10 (10% off) applied".
+
+## Confirm the discounted total
+Verify the summary shows a discount line "Discount (WELCOME10)" of "−$3.20" and a Total of "$37.60".
+```
+
+Because the discount line and the total are checked together, a code that is accepted but not applied to the total fails the run.
+
+### Buy It Now checkout
+
+An order confirmation page shows that a purchase started, and the buyer's purchase history shows that the store recorded it. This recipe buys a listing with a saved card and then follows the order into the purchase history to check the item, price, and card.
+
+<video class="right-side" width="100%" controls id="vid">
+<source src="https://assets.testmuai.com/resources/videos/kane-cli/use-cases/buy-it-now-checkout.mp4" type="video/mp4" />
+</video>
+
+```markdown buy-it-now-checkout_test.md
+---
+mode: testing
+url: https://your-app.example.com
+max_steps: 40
+tags: [ecommerce, checkout]
+---
+
+# Buy It Now checkout
+
+## Open a Buy It Now listing
+Click "Studio Monitor Headphones" and verify the listing shows a price of "$129.99" and shipping of "Free".
+
+## Confirm the saved payment method
+Verify the buy panel shows "Paying with Visa ending in 4242".
+
+## Buy it now
+Click "Buy It Now — $129.99" and verify the page shows "Order confirmed" for "Studio Monitor Headphones" with a total paid of "$129.99".
+
+## Confirm the purchase is recorded
+Click "My eBid" and verify the purchases list shows "Studio Monitor Headphones" at "$129.99" paid with "Visa ••••4242".
+```
+
+A purchase that confirms on screen but never reaches the purchase history fails the run at the last step.
+
+### Checkout extension render
+
+A checkout extension adds custom fields and upsells to the payment page, and a broken extension can block payment entirely. This recipe confirms the extension block renders, fills its custom field, takes the gift-wrap upsell, and then completes payment.
+
+<video class="right-side" width="100%" controls id="vid">
+<source src="https://assets.testmuai.com/resources/videos/kane-cli/use-cases/checkout-extension-render.mp4" type="video/mp4" />
+</video>
+
+```markdown checkout-extension-render_test.md
+---
+mode: testing
+url: https://your-app.example.com
+max_steps: 45
+tags: [ecommerce, extension]
+---
+
+# Checkout extension render
+
+## Reach the checkout
+Click "Add to cart" on "Enamel Camp Mug", click "View cart", click "Checkout", and verify the checkout page is shown with a "Payment" section.
+
+## Confirm the extension block rendered
+Verify an "Order details" card is shown containing the badge "Checkout extension · Alder Add-ons v1.4" and a custom field labelled "Delivery instructions".
+
+## Use the custom field
+Type "Leave at the side door" into "Delivery instructions" and verify the field contains "Leave at the side door".
+
+## Take the upsell
+Click the "Add gift wrapping — $4.50" checkbox and verify the order summary now lists "Gift wrapping × 1" at "$4.50".
+
+## Confirm payment still works after the extension
+Type "4242 4242 4242 4242" into "Card number", "12 / 34" into Expiration, "123" into CVC, click the Pay button, and verify the page shows "Thank you for your order!" with a "Delivery instructions" card reading "Leave at the side door".
+```
+
+The final step checks that the delivery instruction typed into the extension appears on the thank-you page, which proves the extension data reached the order.
+
+## Grocery, pickup, and delivery
+
+Grocery and delivery flows carry preferences, slots, and per-store fees through checkout. These recipes check that each choice the shopper makes survives to the order summary and the confirmation.
+
+### Multi-store cart
+
+A cart with items from two stores needs two sets of fees and two delivery windows. This recipe adds items from two stores and checks that checkout shows a separate service fee and a separately selectable delivery window for each store.
+
+<video class="right-side" width="100%" controls id="vid">
+<source src="https://assets.testmuai.com/resources/videos/kane-cli/use-cases/multi-store-cart.mp4" type="video/mp4" />
+</video>
+
+```markdown multi-store-cart_test.md
+---
+mode: testing
+url: https://your-app.example.com
+max_steps: 45
+tags: [ecommerce, grocery, multi-store]
+---
+
+# Multi-store cart
+
+## Add an item from the first store
+Click "Add" on "Organic Strawberries, 1 lb" and verify the carts panel shows "GreenLeaf Market".
+
+## Add an item from a second store
+Click "Add" on "Coffee Beans, 2 lb" and verify the carts panel shows "Your carts (2 stores)" with both "GreenLeaf Market" and "BulkBarn Wholesale".
+
+## Open checkout
+Click "Go to checkout" and verify the checkout page shows "2 stores · each delivers separately".
+
+## Confirm each store has its own fees
+Verify the GreenLeaf Market card shows a service fee of "$3.99" and the BulkBarn Wholesale card shows a service fee of "$5.49".
+
+## Confirm each store picks its own window
+Click "Within 2 hours · 3:00pm – 5:00pm" in the GreenLeaf Market card, click "This evening · 6:00pm – 8:00pm" in the BulkBarn Wholesale card, and verify both options are selected in their own store cards.
+```
+
+Kane CLI fails the run if the stores share one fee or one window, or if selecting a window in one store card changes the other.
+
+### Delivery slot checkout
+
+A priority delivery slot adds a fee, and that fee has to reach the confirmation. This recipe picks a priority slot, adds a tip, pays with a test card, and checks that the confirmation carries the same window, service fee, and priority fee.
+
+<video class="right-side" width="100%" controls id="vid">
+<source src="https://assets.testmuai.com/resources/videos/kane-cli/use-cases/delivery-slot-checkout.mp4" type="video/mp4" />
+</video>
+
+```markdown delivery-slot-checkout_test.md
+---
+mode: testing
+url: https://your-app.example.com
+max_steps: 45
+tags: [ecommerce, grocery, checkout]
+---
+
+# Delivery slot checkout
+
+## Add an item and open checkout
+Click "Add" on "Organic Strawberries, 1 lb", click "Go to checkout", and verify the checkout page shows "GreenLeaf Market".
+
+## Choose the priority slot
+Click "Priority — within 1 hour · 2:00pm – 3:00pm" and verify the store card shows a priority fee of "$4.99".
+
+## Pay with the test card
+Type "4242 4242 4242 4242" into the card number field, click "$5.00" for the tip, and verify the order total shows "$23.84".
+
+## Place the order
+Click "Place order" and verify the confirmation shows "Order placed" with an order number starting with "IC-".
+
+## Confirm the window and fees carried through
+Verify the confirmation shows a delivery window of "Priority — within 1 hour · 2:00pm – 3:00pm", a service fee of "$3.99" and a priority fee of "$4.99".
+```
+
+The order total is checked before payment and the fees are checked again after it, so a fee that drops off during checkout fails the run.
+
+### Store pickup selection
+
+Changing the pickup store or time should change the order summary too. This recipe chooses a nearby store and a free pickup slot, and then checks that the summary shows the same store, the same slot, and a free pickup fee.
+
+<video class="right-side" width="100%" controls id="vid">
+<source src="https://assets.testmuai.com/resources/videos/kane-cli/use-cases/store-pickup-selection.mp4" type="video/mp4" />
+</video>
+
+```markdown store-pickup-selection_test.md
+---
+mode: testing
+url: https://your-app.example.com
+max_steps: 45
+tags: [ecommerce, pickup]
+---
+
+# Store pickup selection
+
+## Add a grocery item
+Click "Add to cart" on "Whole Milk, 1 gal" and verify the cart shows "Whole Milk, 1 gal" with a subtotal of "$3.64".
+
+## Open checkout
+Click "Continue to checkout" and verify the checkout page shows "Free pickup at store" selected and a "Pickup store" section.
+
+## Choose a nearby store
+Select "Wallmark Neighborhood Market — Ben White · 3.8 mi" as the pickup store and verify the store address shows "710 E Ben White Blvd, Austin TX".
+
+## Choose a free pickup slot
+Click "Today, 4pm – 5pm" and verify the order summary shows a pickup fee of "Free".
+
+## Confirm the summary carries store and slot
+Verify the order summary shows the pickup store "Wallmark Neighborhood Market — Ben White" and the pickup slot "Today, 4pm – 5pm".
+```
+
+If the summary keeps the default store or the old slot after the shopper changes them, the run fails.
+
+### Grocery substitution preference
+
+If a substitution setting stops saving, the shopper receives a brand they refused. This recipe sets a same-brand-only preference on one item, places an order, and checks that the preference is still attached to that item after checkout.
+
+<video class="right-side" width="100%" controls id="vid">
+<source src="https://assets.testmuai.com/resources/videos/kane-cli/use-cases/grocery-substitution.mp4" type="video/mp4" />
+</video>
+
+```markdown grocery-substitution_test.md
+---
+mode: testing
+url: https://your-app.example.com
+max_steps: 45
+tags: [ecommerce, grocery]
+---
+
+# Grocery substitution
+
+## Add two grocery items
+Click "Add to cart" on "Whole Milk, 1 gal", click "Add to cart" on "Honey Wheat Bread", and verify the cart shows both items.
+
+## Set a substitution preference
+Select "Same brand only" in the "If this item is out of stock" dropdown for "Whole Milk, 1 gal" and verify a badge appears reading "Preference saved: Same brand only".
+
+## Go to checkout and choose a slot
+Click "Continue to checkout", click "Today, 6pm – 7pm", and verify the order summary shows the pickup slot "Today, 6pm – 7pm".
+
+## Place the order
+Click "Place order" and verify the confirmation shows "Order placed" with an order number starting with "W-".
+
+## Confirm the preference survived the order
+Verify the "Substitution preferences" card shows "Whole Milk, 1 gal" with "Same brand only" and "Honey Wheat Bread" with "Pick the best available match".
+```
+
+The last step reads the preferences on the confirmed order, so a setting that was shown as saved but lost at checkout fails the run.
+
+### Membership upsell
+
+Every offer added to checkout raises one review question: what happens when the shopper says no. This recipe triggers the membership offer with an express slot, checks the plan prices, declines the offer, and confirms checkout is still usable.
+
+<video class="right-side" width="100%" controls id="vid">
+<source src="https://assets.testmuai.com/resources/videos/kane-cli/use-cases/membership-upsell.mp4" type="video/mp4" />
+</video>
+
+```markdown membership-upsell_test.md
+---
+mode: testing
+url: https://your-app.example.com
+max_steps: 45
+tags: [ecommerce, membership, modal]
+---
+
+# Membership upsell
+
+## Add an item and open checkout
+Click "Add to cart" on "Large Eggs, 12 ct", click "Continue to checkout", and verify the checkout page shows a "Pickup time" section.
+
+## Trigger the upsell with a paid express slot
+Click "Tomorrow, 12pm – 1pm · Express" and verify a dialog appears titled "Save on this order with Wallmark+".
+
+## Confirm plan pricing renders
+Verify the dialog shows "Annual — $98.00/year" and "Monthly — $12.95/month".
+
+## Close the modal cleanly
+Click "No thanks" and verify the dialog is no longer shown and the checkout page still shows the "Order summary" with a "Place order" button.
+```
+
+An upsell dialog that blocks the Place order button after No thanks is clicked fails the run.
+
+### Reorder from history
+
+A reorder button is only useful if it brings back the same items in the same quantities. This recipe reorders a past purchase and checks the cart for every item, the quantity of each, and the subtotal.
+
+<video class="right-side" width="100%" controls id="vid">
+<source src="https://assets.testmuai.com/resources/videos/kane-cli/use-cases/reorder-from-history.mp4" type="video/mp4" />
+</video>
+
+```markdown reorder-from-history_test.md
+---
+mode: testing
+url: https://your-app.example.com/orders
+max_steps: 40
+tags: [ecommerce, reorder]
+---
+
+# Reorder from history
+
+## Confirm the purchase history
+Verify the history shows order "W-2208145" with status "Picked up" and a total of "$24.07".
+
+## Reorder the past purchase
+Click "Reorder (3 items)" on order "W-2208145" and verify the storefront cart shows "Whole Milk, 1 gal", "Honey Wheat Bread" and "Large Eggs, 12 ct".
+
+## Confirm the quantities came across
+Verify the cart shows a quantity of "2" for "Whole Milk, 1 gal" and "3" for "Large Eggs, 12 ct", with a subtotal of "$19.12".
+```
+
+A reorder that drops an item or resets quantities to one fails the run at the quantity check.
+
+## Orders, returns, and loyalty
+
+After the purchase, shoppers come back to track, return, review, and spend rewards. These recipes check that post-purchase pages read from the same order data the checkout wrote.
+
+### Order tracking
+
+A tracking page that shows the wrong stage sends customers to support. This recipe opens the order list, opens tracking for an in-transit order, and checks the delivery date, the carrier and tracking ID, and the current stage on the timeline.
+
+<video class="right-side" width="100%" controls id="vid">
+<source src="https://assets.testmuai.com/resources/videos/kane-cli/use-cases/order-tracking.mp4" type="video/mp4" />
+</video>
+
+```markdown order-tracking_test.md
+---
+mode: testing
+url: https://your-app.example.com/orders
+max_steps: 40
+tags: [ecommerce, tracking]
+---
+
+# Order tracking
+
+## Confirm the order list
+Verify the orders page lists "3 orders" including order "112-8830571-2094318" with status text containing "Arriving Tuesday, September 16".
+
+## Open tracking for the in-transit order
+Click "Track package" on order "112-8830571-2094318" and verify the detail page shows "Arriving Tuesday, September 16" and "ShopKart Logistics · Tracking ID TBA304991285001".
+
+## Confirm the timeline stage
+Verify the timeline lists the steps "Ordered", "Shipped", "Out for delivery" and "Delivered", and that "Shipped" is marked "Current status".
+```
+
+Kane CLI checks that the current stage on the timeline is the one the order list reports, so the two pages disagreeing fails the run.
+
+### Return initiation
+
+A return flow has to end with a return authorization and the right refund amount. This recipe opens a delivered order, starts a return with a reason and a pickup method, and checks for a return authorization number and the refund line.
+
+<video class="right-side" width="100%" controls id="vid">
+<source src="https://assets.testmuai.com/resources/videos/kane-cli/use-cases/return-initiation.mp4" type="video/mp4" />
+</video>
+
+```markdown return-initiation_test.md
+---
+mode: testing
+url: https://your-app.example.com/orders
+max_steps: 45
+tags: [ecommerce, returns]
+---
+
+# Return initiation
+
+## Open the delivered order
+Click "Return or replace items" on order "112-4419602-7831456" and verify the order detail page shows "Delivered Friday, September 5".
+
+## Start the return
+Click "Return or replace items" in the Returns section and verify a reason dropdown labelled "Why are you returning this?" is shown.
+
+## Choose a reason and method
+Select "Item arrived damaged" as the reason, click "Schedule a pickup", and verify "Schedule a pickup" is selected.
+
+## Submit the return
+Click "Submit return" and verify the page shows "Return started" with a return authorization starting with "RMA-" and a refund line containing "$86.39".
+```
+
+A return that submits without an authorization number, or with a different refund amount, fails the run.
+
+### Review submission
+
+A review form needs to reject empty reviews and keep the photo a buyer attaches. This recipe submits an empty review to check validation, then posts a five-star review with a photo and checks that both appear under the listing.
+
+<video class="right-side" width="100%" controls id="vid">
+<source src="https://assets.testmuai.com/resources/videos/kane-cli/use-cases/review-submission.mp4" type="video/mp4" />
+</video>
+
+```markdown review-submission_test.md
+---
+mode: testing
+url: https://your-app.example.com/orders
+max_steps: 45
+tags: [ecommerce, marketplace, reviews]
+---
+
+# Review submission
+
+## Confirm a delivered order exists
+Verify the orders page shows order "ET-4471" with status "Delivered August 27, 2026" containing "Hand-thrown Speckled Mug".
+
+## Open the review form
+Click "Leave a review" and verify a review form appears with a Rating dropdown and a "Your review" field.
+
+## Confirm the review text is required
+Click "Post review" without entering text and verify an error appears reading "Write a few words about the item."
+
+## Write the review and attach a photo
+Select "★★★★★ (5)" as the Rating, type "Beautiful glaze and it holds heat well." into "Your review", select "mug-on-shelf.jpg" as the photo, and verify the photo dropdown shows "mug-on-shelf.jpg".
+
+## Post the review
+Click "Post review" and verify the page shows "Review posted" and a review under the listing reading "Beautiful glaze and it holds heat well." with a photo badge "📷 mug-on-shelf.jpg".
+```
+
+The run fails if the empty review is accepted, or if the posted review appears without its text or its photo.
+
+### Loyalty balance
+
+A rewards balance that renders as an error or a blank looks like lost money to the shopper. This recipe checks that the balance renders as a number and that the coin history and lifetime totals back it up.
+
+<video class="right-side" width="100%" controls id="vid">
+<source src="https://assets.testmuai.com/resources/videos/kane-cli/use-cases/supercoins-balance.mp4" type="video/mp4" />
+</video>
+
+```markdown supercoins-balance_test.md
+---
+mode: testing
+url: https://your-app.example.com/rewards
+max_steps: 35
+tags: [ecommerce, rewards]
+---
+
+# SuperCoins balance
+
+## Confirm the balance renders as a number
+Verify the SuperCoins page shows an available balance of "1240" and a badge reading "Balance available".
+
+## Confirm the ledger backs the balance
+Verify the coin history lists an entry "Order OD1180 — earned" with "+48" and an entry "Redeemed on Nexa case" with "-200".
+
+## Confirm lifetime totals are present
+Verify the page shows "Lifetime earned" with the value "140" and "Lifetime redeemed" with the value "200".
+```
+
+Kane CLI checks the balance, the ledger entries, and the lifetime totals on one page, so a balance that does not match its history fails the run.
+
+### Members-only launch draw
+
+A product launch draw has to block signed-out visitors and accept signed-in members. This recipe tries to enter while signed out, signs in, tries again without a size, and then enters with a size and checks the entry ID and status.
+
+<video class="right-side" width="100%" controls id="vid">
+<source src="https://assets.testmuai.com/resources/videos/kane-cli/use-cases/snkrs-draw-entry.mp4" type="video/mp4" />
+</video>
+
+```markdown snkrs-draw-entry_test.md
+---
+mode: testing
+url: https://your-app.example.com/launch
+max_steps: 45
+tags: [ecommerce, launch, draw]
+---
+
+# SNKRS draw entry
+
+## Confirm the launch product
+Verify the launch page shows "Nyke Air Meridian 'First Light'" at "$210.00" with a badge reading "Draw closes September 20, 2026 at 9:00 AM".
+
+## Confirm entry requires membership
+Click "Enter draw" and verify an error appears reading "Sign in to your Nyke account to enter."
+
+## Sign in
+Click "Sign in", type "priya.nair@example.com" into Email, type "member2026" into Password, and click "Sign in", then verify a "Member" badge is shown.
+
+## Confirm a size is required
+Click "Enter draw" and verify an error appears reading "Choose the size you want."
+
+## Enter the draw
+Click "US 10", click "Enter draw", and verify the page shows "You're in the draw" with an entry id starting with "DRAW-", status "Entered — awaiting draw" and size "US 10".
+```
+
+Both sides of the rule are tested in one run: a signed-out entry that is accepted, or a member entry that is rejected, fails the run.
+
+## Store admin
+
+Changes in the admin can break the storefront without anyone touching storefront code. These recipes drive the admin side and then check the result where shoppers or staff will see it.
+
+### Admin draft order creation
+
+Staff create draft orders for phone and email customers, and a draft that never becomes a paid order is a lost sale. This recipe builds a draft order with a customer and a line item, saves it, marks it paid, and checks the orders list.
+
+<video class="right-side" width="100%" controls id="vid">
+<source src="https://assets.testmuai.com/resources/videos/kane-cli/use-cases/admin-order-creation.mp4" type="video/mp4" />
+</video>
+
+```markdown admin-order-creation_test.md
+---
+mode: testing
+url: https://your-app.example.com/admin
+max_steps: 45
+tags: [ecommerce, admin, orders]
+---
+
+# Admin order creation
+
+## Confirm the starting orders list
+Verify the Orders tab shows "Orders (2)" listing order "#1001" and order "#1002".
+
+## Open the draft order builder
+Click "Draft orders" and verify a "Create draft order" card is shown with a "Customer name" field.
+
+## Build the draft
+Type "Marco Oduya" into "Customer name", "marco@example.com" into "Customer email", select "Canvas Market Tote" as the Product, type "2" into Quantity, click "Add line item", and verify a draft total of "$52.00" is shown.
+
+## Save the draft
+Click "Save draft order" and verify the draft orders list shows draft "D1" for "Marco Oduya" with status "open".
+
+## Mark the draft paid
+Click "Mark as paid" on draft "D1" and verify the Orders tab shows order "#1003" for "Marco Oduya" with channel "Draft order" and status "paid".
+```
+
+The last step checks that the new order appears in the orders list with the right customer, channel, and paid status.
+
+### Theme update smoke test
+
+Publishing a new theme can hide a product grid or break the path to checkout. This recipe publishes a different theme from the admin, confirms the storefront picked it up, and walks a product all the way to the payment step.
+
+<video class="right-side" width="100%" controls id="vid">
+<source src="https://assets.testmuai.com/resources/videos/kane-cli/use-cases/theme-update-smoke.mp4" type="video/mp4" />
+</video>
+
+```markdown theme-update-smoke_test.md
+---
+mode: testing
+url: https://your-app.example.com/admin
+max_steps: 45
+tags: [ecommerce, theme, smoke]
+---
+
+# Theme update smoke
+
+## Confirm the live theme
+Click "Themes" and verify the themes list shows "Dawn" marked "Live".
+
+## Publish a different theme
+Click "Publish" on "Refresh", then click "Publish theme" in the confirmation dialog, and verify a notice appears reading "Refresh is now the live theme."
+
+## Confirm the storefront picked up the theme
+Click "View storefront" and verify the storefront shows "Storefront is running the Refresh theme" and the product grid lists "Heavyweight Cotton Tee".
+
+## Walk through to checkout on the new theme
+Click "Add to cart" on "Heavyweight Cotton Tee", click "View cart", click "Checkout", and verify the checkout page renders with a "Payment" section and a "Pay" button.
+```
+
+Kane CLI fails the run if the storefront still shows the old theme, or if checkout cannot be reached on the new one.
+
+## Next steps
+
+- [Payments Testing](/docs/kane-cli-payments-testing/): cards, wallets, pay later, payment links, refunds, and webhook parity
+- [Test.md](/docs/kane-cli-testmd/): the file format used by every recipe on this page
+- [Batch Runs](/docs/kane-cli-testrun/): run a tagged suite with one command and one exit code
+- [CI/CD & DevOps Testing](/docs/kane-cli-cicd-devops-testing/): gate a deploy on these recipes
+
+<KaneCliCta />

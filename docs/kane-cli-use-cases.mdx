@@ -8,9 +8,9 @@ keywords: ['kane cli use cases', 'kane cli', 'kaneai', 'natural language testing
 
 import { KaneCliCta } from "/snippets/KaneCliCta.mdx";
 
-Kane CLI is a natural-language command line tool for testing. Instead of writing test scripts, you describe what you want to test in plain English inside a `kane-cli run "..."` command. Kane CLI opens a real browser session, performs the described navigation and API calls, evaluates your assertions, and prints a live step-by-step log together with a plain-language pass or fail summary. Every successful run can be saved as a structured, shareable test case inside KaneAI Test Manager for future reuse.
+Kane CLI is a natural-language command line tool for testing. Instead of writing test scripts, you describe what you want to test in natural language inside a `kane-cli run "..."` command. Kane CLI opens a real browser session, performs the described navigation and API calls, evaluates your assertions, and prints a live step-by-step log together with a plain-language pass or fail summary. Every successful run can be saved as a structured, shareable test case inside KaneAI Test Manager for future reuse.
 
-The categories below group the most common scenarios you can cover with Kane CLI, each with the exact steps to follow. Every use case is a single command you can copy, adapt to your own endpoints, and drop straight into a CI pipeline.
+The categories below group the most common scenarios you can cover with Kane CLI, each with the exact steps to follow and, where one exists, a recording of the run. Every use case is a command or a `_test.md` file you can copy, adapt to your own app, and drop straight into a CI pipeline.
 
 ## Browse by Category
 
@@ -20,6 +20,38 @@ The categories below group the most common scenarios you can cover with Kane CLI
 
 <Card title="🤖 AI Coding Agents" href="/docs/kane-cli-with-ai-coding-agents/">
   Give Claude Code, Codex CLI, or Gemini CLI a real browser: verify a change, reproduce a bug, diagnose failures, and commit verified runs as tests.
+</Card>
+
+<Card title="🛒 E-commerce Testing" href="/docs/kane-cli-ecommerce-testing/">
+  Search, variants, cart, checkout, discount codes, grocery slots and pickup, orders, returns, reviews, and store admin.
+</Card>
+
+<Card title="💳 Payments Testing" href="/docs/kane-cli-payments-testing/">
+  Card checkout and declines, stored cards, wallets, bank redirects, UPI, pay later, EMI, payment links, invoices, refunds, disputes, and webhook parity.
+</Card>
+
+<Card title="🛠️ DevTools & Performance Testing" href="/docs/kane-cli-devtools-performance-testing/">
+  Assert on network calls, console errors, localStorage, and the clipboard, and gate on page load time, Core Web Vitals, and API response time.
+</Card>
+
+<Card title="🔐 Security & Access Testing" href="/docs/kane-cli-security-access-testing/">
+  Role-based access, sign-in gates, rejected credentials, session cookie flags, token storage, sign-out, and secrets kept out of tests.
+</Card>
+
+<Card title="🚀 CI/CD & DevOps Testing" href="/docs/kane-cli-cicd-devops-testing/">
+  Gate a deploy in GitHub Actions, monitor production on a schedule, check the UI before a pull request, and run suites in parallel or on the cloud grid.
+</Card>
+
+<Card title="🔁 Regression & E2E Testing" href="/docs/kane-cli-regression-e2e-testing/">
+  UI and API in one run, save once and replay on every build, recover when the UI changes, and separate product bugs from test issues.
+</Card>
+
+<Card title="🧪 Test Generation & Exploration" href="/docs/kane-cli-test-generation-exploration/">
+  Generate test cases from a description, a screenshot, or a spec, design a requirement-linked suite from a PRD, and explore an app to find untested flows.
+</Card>
+
+<Card title="📱 Mobile App Testing" href="/docs/kane-cli-mobile-app-testing/">
+  Run natural language checks on Android emulators and iOS simulators, commit mobile tests, reuse web recipes in the app, and run suites on the cloud grid.
 </Card>
 
 <KaneCliCta />

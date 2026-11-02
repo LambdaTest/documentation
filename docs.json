@@ -93,7 +93,15 @@
                 "pages": [
                   "docs/kane-cli-use-cases",
                   "docs/api-testing-with-kane-cli",
-                  "docs/kane-cli-with-ai-coding-agents"
+                  "docs/kane-cli-with-ai-coding-agents",
+                  "docs/kane-cli-ecommerce-testing",
+                  "docs/kane-cli-payments-testing",
+                  "docs/kane-cli-devtools-performance-testing",
+                  "docs/kane-cli-security-access-testing",
+                  "docs/kane-cli-cicd-devops-testing",
+                  "docs/kane-cli-regression-e2e-testing",
+                  "docs/kane-cli-test-generation-exploration",
+                  "docs/kane-cli-mobile-app-testing"
                 ]
               },
               {
@@ -168,6 +176,7 @@
                 "pages": [
                   "docs/kane-cli-cicd",
                   "docs/kane-cli-skills",
+                  "docs/kane-cli-agents-md",
                   "docs/kane-cli-claude-code-plugin"
                 ]
               },

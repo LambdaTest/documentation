@@ -1,0 +1,104 @@
+---
+title: "Mobile App Testing Use Cases"
+sidebarTitle: "Mobile App Testing"
+description: "Mobile app testing use cases for Kane CLI: run a natural language check on an Android emulator or an iOS simulator, commit mobile test.md files, reuse one flow on web and mobile, and run mobile suites on the cloud grid."
+keywords: ['kane cli mobile testing', 'android emulator testing', 'ios simulator testing', 'mobile app automation', 'kane cli', 'kaneai', 'testmu ai']
+"og:description": "Mobile app testing use cases for Kane CLI: run a natural language check on an Android emulator or an iOS simulator, commit mobile test.md files, reuse one flow on web and mobile, and run mobile suites on the cloud grid."
+---
+
+import { KaneCliCta } from "/snippets/KaneCliCta.mdx";
+
+A feature usually ships on the website and in the app at the same time, and the app is where a broken screen is hardest to catch before release. These use cases run Kane CLI against a native app on an Android emulator or an iOS simulator with the same natural language objectives you use for the web.
+
+Local runs need macOS on Apple Silicon with the emulator or simulator set up, and the cloud grid runs the same tests from any machine. See [Mobile Testing](/docs/kane-cli-mobile/) for setup and prerequisites.
+
+## Check an app screen on an Android emulator
+
+<video class="right-side" width="100%" controls id="vid">
+<source src="https://assets.testmuai.com/resources/videos/kane-cli/use-cases/mobile-app-run.mp4" type="video/mp4" />
+</video>
+
+The fastest mobile check is one objective against a fresh install of your build. In this recording, Kane CLI installs an APK on an Android emulator, confirms the home screen is displayed after launch, reads the main heading, and stores it as `home_title`, passing in two steps.
+
+1. List the emulators Kane CLI can use with `kane-cli devices list --target emulator`.
+2. Run the objective against your build, naming the device and OS version exactly as the list prints them:
+
+   ```bash
+   kane-cli run "Verify the app home screen is displayed after launch, then store the main heading text as 'home_title'" \
+     --target emulator --device-name "Pixel 7 API 35" --os-version 15 \
+     --app ./builds/app-debug.apk --max-steps 10
+   ```
+
+3. Watch the emulator as Kane CLI launches the app, generates checkpoints from the objective, and works through them.
+4. Read the summary, which quotes the heading it stored, and open the run in Test Manager to replay each step.
+5. Save the device as a default with `kane-cli config set-device-name` and `kane-cli config set-os-version`, so later runs need only `--target` and `--app`.
+
+## Run the same check on an iOS simulator
+
+An objective that describes what the user sees, rather than how the screen is built, runs on both platforms unchanged. This use case points the same check at an iOS simulator build.
+
+1. List the simulators with `kane-cli devices list --target simulator`.
+2. Run the same objective with the simulator target and a `.zip` build, for example `kane-cli run "Verify the app home screen is displayed after launch, then store the main heading text as 'home_title'" --target simulator --app ./builds/MyApp.zip`.
+3. Compare the stored `home_title` from both runs to confirm the two apps show the same heading.
+
+Every mobile run needs `--app`. The emulator target takes an `.apk`, the simulator target takes a `.zip`, and both accept an uploaded `APP` ID from `kane-cli apps list --target emulator|simulator`.
+
+## Commit a mobile flow as a test
+
+A mobile check becomes a regression test once the target, app, and device live in the file. This use case writes a `_test.md` that replays on every build of the app.
+
+1. Add the mobile keys to the frontmatter:
+
+   ```markdown cart-app_test.md
+   ---
+   mode: testing
+   target: emulator
+   app: ./builds/app-debug.apk
+   device_name: Pixel 7 API 35
+   os_version: "15"
+   tags: [mobile, cart]
+   ---
+
+   # Add to cart in the app
+
+   ## Open a product
+   Tap "Wireless Gaming Headset 7.1" and verify the price reads "$79.99".
+
+   ## Add it to the cart
+   Tap "Add to Cart", open the cart tab, and verify the cart shows 1 item at "$79.99".
+   ```
+
+2. Run it with `kane-cli testmd run tests/cart-app_test.md --agent`. The first run authors each step, and later runs replay them.
+3. Run every mobile test in the folder with `kane-cli testrun run --match '^tests/app/' --device-name "Pixel 7 API 35" --os-version 15`.
+
+See [Mobile Target](/docs/kane-cli-testmd/#mobile-target) for every key, including `no_reset`.
+
+## Reuse a web recipe in the app
+
+The [E-commerce](/docs/kane-cli-ecommerce-testing/) and [Payments](/docs/kane-cli-payments-testing/) recipes describe what the shopper sees, so most of them work in your app with a frontmatter change. This use case reuses one recipe on both platforms.
+
+1. Copy a web recipe, for example `add-to-cart-with-variant_test.md`, to `add-to-cart-with-variant-app_test.md`.
+2. Replace `url` with `target`, `app`, `device_name`, and `os_version`.
+3. Change any web-only wording, such as "click" to "tap" and "page" to "screen", and keep every check the same.
+4. Tag both files with the same feature tag, for example `tags: [variant]`, and run them as separate web and mobile runs.
+
+## Run the mobile suite on the cloud grid
+
+A team member on Linux or Windows, or a CI runner, cannot boot an iOS simulator locally. `kane-cli testrun run --remote` sends the mobile tests to the cloud grid, which boots the device, installs the app, runs the suite, and returns the recordings and the evidence pack.
+
+1. Install the plugin once with `kane-cli plugin install remote-execution`.
+2. List what the grid can provide with `kane-cli devices list --target emulator --remote`.
+3. Check the plan without running anything: `kane-cli testrun run --match '^tests/app/' --remote --device-name "Pixel 7" --os-version 14 --dry-run`.
+4. Run it by removing `--dry-run`. A local build is uploaded from your machine before the job starts.
+5. Keep one platform per job, because emulator members run on one Android version and simulator members run on one HyperExecute pool.
+
+See [Remote Runs on the Cloud Grid](/docs/kane-cli-remote-execution/) for limits and timeouts.
+
+## Next steps
+
+- [Mobile Testing](/docs/kane-cli-mobile/): set up the Android emulator and the iOS simulator
+- [Android Emulator](/docs/kane-cli-mobile-emulator/) and [iOS Simulator](/docs/kane-cli-mobile-simulator/): platform guides
+- [CI/CD & DevOps Testing](/docs/kane-cli-cicd-devops-testing/): run the mobile suite in your pipeline
+- [Evidence](/docs/kane-cli-evidence/): screenshots and logs for every mobile step
+
+<KaneCliCta />

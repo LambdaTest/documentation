@@ -1,0 +1,108 @@
+---
+title: "Test Generation and Exploration Use Cases"
+sidebarTitle: "Test Generation & Exploration"
+description: "Test generation and exploratory testing use cases for Kane CLI: generate test cases from a description, from a screenshot or a spec, design a requirement-linked suite from a PRD, and explore an app to map its screens and design tests."
+keywords: ['kane cli test generation', 'ai test case generation', 'exploratory testing', 'requirements based testing', 'test coverage', 'kane cli', 'kaneai', 'testmu ai']
+"og:description": "Test generation and exploratory testing use cases for Kane CLI: generate test cases from a description, from a screenshot or a spec, design a requirement-linked suite from a PRD, and explore an app to map its screens and design tests."
+---
+
+import { KaneCliCta } from "/snippets/KaneCliCta.mdx";
+
+Writing a test is the second problem, and deciding what to test is the first. These use cases cover the design side of Kane CLI: turning a sentence, a screenshot, or a requirements document into test cases, linking each test to the requirement it proves, and letting Kane CLI explore an app to find the flows nobody has written tests for yet.
+
+Every path on this page ends in runnable `_test.md` files, so the cases you design here run with `kane-cli testmd run` and `kane-cli testrun run` like any other test.
+
+## Generate test cases from a description
+
+<div style={{ position: 'relative', overflow: 'hidden', width: '100%', paddingTop: '56.25%' }}>
+  <iframe
+    src="https://www.youtube.com/embed/5H1PtVG2Ke4"
+    title="AI test case generation in Kane CLI"
+    style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', border: 0 }}
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowFullScreen
+    loading="lazy"
+    referrerPolicy="strict-origin-when-cross-origin"
+  />
+</div>
+
+A one-line description of a feature is enough for Kane CLI to propose scenarios and test cases, each tagged positive, negative, or edge with a priority. This use case goes from a description to saved, runnable tests in three commands.
+
+1. Generate from a description, for example `kane-cli generate "checkout flow on a shopping site"`. The command prints a request ID when it finishes.
+2. Read the scenarios and cases, and refine them in natural language as many times as you need, for example `kane-cli generate "also cover an expired card and an out-of-stock item" --refine --req <id>`.
+3. Save the functional cases as `_test.md` files with `kane-cli generate --save --req <id>`. Kane CLI writes them to `.testmuai/tests/<suite>/<scenario>/<case>_test.md`.
+4. Run a saved case with `kane-cli testmd run <path-to-case>_test.md`, or the whole folder with `kane-cli testrun run --match '^.testmuai/tests/<suite>/'`.
+
+See [Generate Test Cases](/docs/kane-cli-generate/) for the three modes and every option.
+
+## Generate test cases from a screenshot or a spec
+
+<video class="right-side" width="100%" controls id="vid">
+<source src="https://assets.testmuai.com/resources/videos/kane-cli/kane-cli-files-attach-generate.mp4" type="video/mp4" />
+</video>
+
+A screenshot of a design or a page of a spec carries details a one-line description leaves out. In this recording, a screenshot of a sign-up page is attached to a generate request, and Kane CLI returns two scenarios, one for email, Google, and GitHub sign-up and one for input validation, with three cases each, which are then saved as runnable tests.
+
+1. Attach files to a new generation with `--files`, for example `kane-cli generate "Generate test cases for this signup page covering email signup, Google auth, GitHub auth, and the login link" --files ./register-page.png`.
+2. Attach up to ten files of 50 MB or less, including PDFs, Word documents, spreadsheets, images, audio, and video.
+3. In the interactive TUI, type `@` in the generate prompt to attach a file inline.
+4. Open a case to read its priority, preconditions, test data, and steps, and remove the cases you don't want.
+5. Save the rest with `kane-cli generate --save --req <id>`. Files attach to a generation or a refine, not to a save.
+
+## Design a requirement-linked suite from a PRD
+
+<video class="right-side" width="100%" controls id="vid">
+<source src="https://assets.testmuai.com/resources/videos/kane-cli/kane-cli-assurance-loop.mp4" type="video/mp4" />
+</video>
+
+A suite that cannot say which requirement each test proves is hard to trust and harder to maintain. In this recording, Kane CLI reads a bank app's requirement document, proposes four use cases, designs scenarios and tests for one of them, runs them, and shows in the evidence viewer which acceptance criteria each passing test verified.
+
+1. Snapshot your requirement documents with `kane-cli context ingest`.
+2. Run `kane-cli context extract`. An agent reads the sources and proposes use cases, citing the lines it read.
+3. Review the proposals with `kane-cli context review`, and promote the ones you agree with to trusted.
+4. Design tests for one use case with `kane-cli design tests`, which writes acceptance criteria, scenarios, and one `_test.md` per scenario, each tagged with the criteria it verifies.
+5. Approve the design output with `kane-cli context review`, then run the tests with `kane-cli testmd run` or `kane-cli testrun run`.
+6. Run `kane-cli cover` to see what the evidence pack proved and what the design still owes.
+7. When a requirement document changes, run `kane-cli maintain` to bring the suite back in line.
+
+See [Assurance](/docs/kane-cli-assurance/) for the loop, the vocabulary, and what costs credits.
+
+## Explore an app and design tests from what it finds
+
+Exploratory testing finds the screens and flows that a written suite never mentions. `kane-cli explore` runs on the cloud grid, maps the screens, flows, and findings it reaches, and designs tests from that map into your Test Manager project.
+
+1. Start with a read-only exploration, so nothing in your app is changed:
+
+   ```bash
+   kane-cli explore run --project <project-id> \
+     --url https://staging.your-app.com \
+     --prompt "Explore sign-up, the dashboard and the settings pages" \
+     --policy read_only \
+     --max-leases 40
+   ```
+
+2. Always pass `--project`, and pass `--policy read_only` on every run that must not change data, because each run starts from the default `mutating` policy.
+3. Watch the live view for the number of screens, flows, and findings as they grow. Press Ctrl+C to detach, and the exploration keeps running on the grid.
+4. Open the map with `kane-cli explore view --project <project-id>` to see the screens and flows it found.
+5. Move the tests it designed into a folder and run them like any other suite.
+
+For an app behind a login, on localhost, or on a private network, see [Exploration](/docs/kane-cli-exploration/#an-app-behind-a-login).
+
+## Watch for product bugs while tests are authored
+
+The first run of a new test is the moment Kane CLI sees the page for the first time, which makes it a good time to notice a product bug. Bug detection asks the agent to flag suspicious behaviour while it authors steps, and Kane CLI confirms or rejects each suspicion.
+
+1. Run new or generated tests with `--bug-detection continue`, so confirmed bugs are recorded and the run keeps going.
+2. Read the confirmed bugs in the run result and the evidence pack, each with the step where it was found.
+3. Switch to `--bug-detection stop` when a confirmed bug should end the run.
+
+See [Bug detection](/docs/kane-cli-configuration/#bug-detection).
+
+## Next steps
+
+- [Generate Test Cases](/docs/kane-cli-generate/): modes, options, and the shape of a result
+- [Assurance](/docs/kane-cli-assurance/): requirement-linked design, coverage, and maintenance
+- [Exploration](/docs/kane-cli-exploration/): policies, sign-in, private apps, and the map
+- [Regression & E2E Testing](/docs/kane-cli-regression-e2e-testing/): keep the generated tests running on every build
+
+<KaneCliCta />

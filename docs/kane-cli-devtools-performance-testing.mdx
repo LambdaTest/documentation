@@ -1,0 +1,132 @@
+---
+title: "DevTools and Performance Testing Use Cases"
+sidebarTitle: "DevTools & Performance"
+description: "DevTools and performance testing use cases for Kane CLI: assert on network calls, console errors, localStorage, clipboard, Core Web Vitals, page load time, and API response time from a natural language objective."
+keywords: ['kane cli devtools assertions', 'console error testing', 'network assertions', 'core web vitals testing', 'performance testing', 'kane cli', 'kaneai', 'testmu ai']
+"og:description": "DevTools and performance testing use cases for Kane CLI: assert on network calls, console errors, localStorage, clipboard, Core Web Vitals, page load time, and API response time from a natural language objective."
+---
+
+import { KaneCliCta } from "/snippets/KaneCliCta.mdx";
+
+A page can show a green success message while a request behind it returns a 500, the console fills with errors, or the main content takes four seconds to paint. These use cases assert on what the browser recorded during the run: network traffic, console output, storage, the clipboard, and timing.
+
+Kane CLI captures this data in the background on every run, so you add a DevTools check by writing one more sentence in the objective. You don't write code or open DevTools yourself. Each check can be an assertion that fails the run, an extraction that stores a value for later steps, or a condition that branches the flow. See [DevTools Checkpoints](/docs/kane-cli-checkpoint-devtools/) for every domain and what it can query.
+
+## Catch a failing request behind a green screen
+
+<img loading="lazy" src="/assets/images/kane-cli/sketchnotes/ui-flow-network-traffic.svg" alt="A checkout page shows 'Order placed!' while the network panel underneath records POST /cart and POST /order returning 200 and POST /analytics/track returning 500, which Kane CLI catches from the captured traffic" width="1000" height="563" />
+
+The screen can report success while a request the page depends on has failed. This use case adds a network assertion to a normal UI flow, so the run fails when any call returns an error, even if the page looks fine.
+
+1. Write the UI flow as usual, for example `go to the product page, click 'Add to Cart', open the cart`.
+2. Add a network assertion after the step that sends the request, for example `assert no API calls returned 5xx status codes`.
+3. Add a check on the specific call you care about, for example `assert the POST /api/cart returned HTTP status 201`.
+4. Run the full command:
+
+   ```bash
+   kane-cli run "Go to https://your-app.com/product/headset, click 'Add to Cart', open the cart, assert the POST /api/cart returned HTTP status 201, assert no API calls returned 5xx status codes" --agent
+   ```
+
+5. Read the summary. When an assertion fails, the failing step names the request and its status, and the step's network log is in the run's [Evidence Pack](/docs/kane-cli-evidence/).
+
+<Tip>
+Put the network assertion right after the action that triggers the request. Kane CLI only queries traffic captured up to that point in the run. See [Network checkpoints](/docs/kane-cli-checkpoint-devtools-network/#planning-for-multi-step-tests).
+</Tip>
+
+## Fail the run on console errors
+
+<video class="right-side" width="100%" controls id="vid">
+<source src="https://assets.testmuai.com/resources/videos/kane-cli/kane-cli-devtools-assertions.mp4" type="video/mp4" />
+</video>
+
+A JavaScript error in the console often means a broken feature that has not been noticed yet. In this recording, Claude Code runs Kane CLI against a cart page, the Add to Cart button works on screen, and the run still fails because the console logged a 404 for a missing resource.
+
+1. Ask your coding agent, or run it yourself: `kane-cli run "Go to https://your-app.com/cart, click 'Add to Cart', assert the console has no errors" --agent`.
+2. Kane CLI performs the click, checks that the cart badge and button label updated, and then queries the console messages captured during the run.
+3. The run fails with one console error found, while every UI step passed.
+4. The agent reruns with an extraction, for example `store the console errors as 'errors'`, to read the exact message, which in the recording is a resource that returned 404.
+5. Fix the missing resource and rerun the same command until it passes.
+
+Other console checks you can write in the same way:
+
+```text
+Assert: no uncaught JavaScript exceptions
+Assert: no JS errors after clicking Submit
+Assert: console contains "Amplitude SDK triggered"
+```
+
+## Check that a value was saved to localStorage
+
+Many apps keep the session token, feature flags, and user preferences in localStorage, and a regression there shows up only after a reload. This use case changes a setting in the UI and then checks the stored value directly.
+
+1. Run `kane-cli run "Go to https://your-app.com/settings, switch the theme to Dark, assert the theme preference in localStorage is 'dark'" --agent`.
+2. Add a reload to prove persistence, for example `reload the page, assert the page is still in dark mode`.
+3. To check what login writes, add `assert auth_token exists in localStorage` after the sign-in step.
+4. Review the summary. Kane CLI reports the stored value it found next to the value you expected.
+
+See [localStorage checkpoints](/docs/kane-cli-checkpoint-devtools-localstorage/) for JSON values and extractions.
+
+## Verify what a Copy button copied
+
+A Copy button that copies the wrong link or an empty string passes every visual check. Kane CLI runs each test with an isolated test clipboard, so the run can read exactly what the button copied.
+
+1. Run `kane-cli run "Go to https://your-app.com/invoices/42, click the 'Copy link' button, then verify the clipboard contains '/invoice/42'" --agent`.
+2. To reuse the copied value later in the flow, store it, for example `store the clipboard text as 'invoice_link'`, and then `open {{invoice_link}}`.
+3. Review the summary, which quotes the clipboard text Kane CLI found.
+
+See [Clipboard checkpoints](/docs/kane-cli-checkpoint-devtools-clipboard/) for HTML and image clipboard content.
+
+## Gate on page load time
+
+<video class="right-side" width="100%" controls id="vid">
+<source src="https://assets.testmuai.com/resources/videos/kane-cli/use-cases/page-load-time-assertion.mp4" type="video/mp4" />
+</video>
+
+A page that works but loads slowly still loses users. In this recording, Claude Code asks Kane CLI to open a page and assert that it loads in under 3000 ms, and reads the result from the NDJSON stream.
+
+1. Run `kane-cli run "Go to https://your-app.com, assert the page load time is under 3000ms" --agent`.
+2. Kane CLI loads the page, reads the timing it captured, and compares it with your budget.
+3. The `run_end` event carries the pass or fail and the measured value, so an agent or a CI step can act on it.
+4. Tighten the number over time as the page gets faster, so a slow regression fails the run.
+
+## Hold a page to Core Web Vitals
+
+<video class="right-side" width="100%" controls id="vid">
+<source src="https://assets.testmuai.com/resources/videos/kane-cli/agents/glm-x-kane-cli.mp4" type="video/mp4" />
+</video>
+
+Heavy animation, parallax, and large images are where Core Web Vitals go wrong. In this recording, a coding agent builds a scroll-driven landing page and Kane CLI measures LCP, FCP, TTFB, CLS, and INP after a real click, and then gates on LCP and CLS.
+
+1. Navigate to the page and wait for it to load fully.
+2. Perform one real interaction first, for example `click the 'Technology' link in the top navigation once, then wait two seconds`, so INP has an interaction to measure.
+3. Ask for each metric once, for example `read the Core Web Vitals and report LCP, FCP, TTFB, CLS, and INP`. Tell Kane CLI to record a missing metric as `not available` instead of retrying.
+4. End with the gate, for example `confirm that LCP is under 4000 ms and CLS is below 0.1`.
+5. Add `--max-steps` to the command, because an objective with many separate extractions benefits from an explicit ceiling.
+
+In the recorded run, the page misses the budget and the run ends at the gate, which is the job of a performance budget. See [Performance checkpoints](/docs/kane-cli-checkpoint-devtools-performance/) for thresholds and the full metric list.
+
+## Time the API call behind a UI action
+
+<img loading="lazy" src="/assets/images/kane-cli/sketchnotes/sla-and-response-time.svg" alt="Response-time and SLA gates: a request that returns a correct payload can still fail the run when it breaches the response-time budget, catching the slow path before a user does" width="1000" height="563" />
+
+<video class="right-side" width="100%" controls id="vid">
+<source src="https://assets.testmuai.com/resources/videos/kane-cli/use-cases/response-time-and-sla-gates.mp4" type="video/mp4" />
+</video>
+
+A payment that succeeds in four seconds is still a problem at checkout. In this recording, Kane CLI buys a headset with a test card, confirms the payment call returns 201, and times it at 1607 ms against a 2000 ms limit written into the objective.
+
+1. Describe the purchase flow in the objective, for example `buy the Wireless Gaming Headset 7.1 with the test card 4242 4242 4242 4242`.
+2. Assert on the call the UI makes, for example `confirm POST /api/shop/pay returned 201`.
+3. Add the time limit to the same objective, for example `confirm the POST /api/shop/pay response time is under 2000 ms`.
+4. Run it. Kane CLI reports the measured time next to the limit, and a slower call fails the run even when the payment succeeds.
+
+To time an endpoint without the UI, see [Latency and SLA gate testing](/docs/api-testing-with-kane-cli/#latency-and-sla-gate-testing) on the API Testing page.
+
+## Next steps
+
+- [DevTools Checkpoints](/docs/kane-cli-checkpoint-devtools/): every domain, with assertions, extractions, and conditions
+- [Security & Access Testing](/docs/kane-cli-security-access-testing/): cookie flags, token storage, and role checks
+- [Evidence](/docs/kane-cli-evidence/): the per-step console and network logs behind each verdict
+- [CI/CD & DevOps Testing](/docs/kane-cli-cicd-devops-testing/): run these checks on every deploy
+
+<KaneCliCta />

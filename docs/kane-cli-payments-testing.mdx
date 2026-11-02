@@ -1,0 +1,646 @@
+---
+title: "Payments Testing Use Cases"
+sidebarTitle: "Payments Testing"
+description: "Payments testing use cases for Kane CLI: card checkout, declines, stored cards, wallets, bank redirects, UPI, pay later, EMI, payment links, invoices, refunds, disputes, and webhook parity, each with a recorded run and its test.md file."
+keywords: ['kane cli payments testing', 'payment gateway testing', 'checkout testing', 'refund testing', 'webhook testing', 'kane cli', 'kaneai', 'testmu ai']
+"og:description": "Payments testing use cases for Kane CLI: card checkout, declines, stored cards, wallets, bank redirects, UPI, pay later, EMI, payment links, invoices, refunds, disputes, and webhook parity, each with a recorded run and its test.md file."
+---
+
+import { KaneCliCta } from "/snippets/KaneCliCta.mdx";
+
+A payment flow can return a success page while the amount, the method, or the recorded status is wrong. These use cases check what the shopper sees against what the merchant side records: the receipt against the charge, the dashboard against the payment, and the order page against the webhook.
+
+Every use case below was recorded against a demo payment app with test cards and test accounts, and comes with the `_test.md` file that produced the run. No real money moves in any of these runs, and you should point your own copies at a sandbox or test-mode environment.
+
+## Run these recipes
+
+Save any recipe below as a file ending in `_test.md`, change the `url` to your sandbox checkout, and replace the amounts, test cards, and IDs with values from your own test data. Then run it:
+
+```bash
+kane-cli testmd run tests/declined-card-recovery_test.md --agent
+```
+
+The first run authors and records each step, and later runs replay the recording. Keep card numbers and account passwords out of the file by passing them as variables, for example `{{test_card}}` with `--variables-file`. See [Variables & Context](/docs/kane-cli-variables-and-context/) for secrets and [Test.md](/docs/kane-cli-testmd/) for the file format.
+
+## Card checkout
+
+Card checkout is the path most payment changes touch. These recipes cover the happy path, a declined card, a stored card, and a guest card, and each one checks the receipt rather than only the success banner.
+
+### Hosted checkout session
+
+A hosted checkout page has to charge the amount the order summary shows. This recipe checks the plan and total, pays with a test card, and then checks the receipt for the payment ID, the amount paid, the card, and the succeeded status.
+
+<video class="right-side" width="100%" controls id="vid">
+<source src="https://assets.testmuai.com/resources/videos/kane-cli/use-cases/hosted-checkout-session.mp4" type="video/mp4" />
+</video>
+
+```markdown hosted-checkout-session_test.md
+---
+mode: testing
+url: https://your-app.example.com/checkout
+max_steps: 40
+tags: [payments, checkout]
+---
+
+# Hosted checkout
+
+## Verify the checkout total
+Verify the order summary shows "Pro plan — annual" at "$240.00" and "Total due" of "$240.00".
+
+## Fill in the card
+Type "4242 4242 4242 4242" into "Card number", "12 / 34" into "Expiry", "123" into "CVC", and verify the pay button reads "Pay $240.00".
+
+## Pay
+Click "Pay $240.00" and verify a green banner titled "Payment successful" appears.
+
+## Verify the receipt
+Verify the receipt shows "Payment ID" of "pi_3Qb101Mx03", "Amount paid" of "$240.00", "Card" of "Visa ••••4242" and "Status" of "succeeded".
+```
+
+Kane CLI compares the receipt with the order summary, so a success banner over a different amount or a failed status fails the run.
+
+### Declined card recovery
+
+When a shopper's first card is declined, the second card still has to work on the same page. This recipe pays with a decline test card, checks the inline error, confirms the form is still editable, and retries with a working card.
+
+<video class="right-side" width="100%" controls id="vid">
+<source src="https://assets.testmuai.com/resources/videos/kane-cli/use-cases/declined-card-recovery.mp4" type="video/mp4" />
+</video>
+
+```markdown declined-card-recovery_test.md
+---
+mode: testing
+url: https://your-app.example.com/checkout
+max_steps: 45
+tags: [payments, errors]
+---
+
+# Declined card recovery
+
+## Attempt with the declining card
+Type "4000 0000 0000 0002" into "Card number", "12 / 34" into "Expiry", "123" into "CVC", click "Pay $240.00", and verify an inline error under "Card number" reads "Your card was declined. Try a different card."
+
+## Verify the form is still usable
+Verify the "Card number", "Expiry" and "CVC" fields are all still present and editable on the same page.
+
+## Retry with a working card
+Replace the card number with "4242 4242 4242 4242" and click "Pay $240.00".
+
+## Verify the retry succeeded
+Verify a green banner titled "Payment successful" appears, the receipt shows "Amount paid" of "$240.00" and "Card" of "Visa ••••4242", and a badge reads "Succeeded after 1 declined attempt".
+```
+
+The receipt has to show the successful card and a badge recording one declined attempt, so a form that locks after a decline fails the run.
+
+### Stored card reuse
+
+A returning customer paying with a stored card should never see a card number field. This recipe checks that the stored card is preselected, that no card entry is shown, and that the payment result names the stored token.
+
+<video class="right-side" width="100%" controls id="vid">
+<source src="https://assets.testmuai.com/resources/videos/kane-cli/use-cases/stored-card-reuse.mp4" type="video/mp4" />
+</video>
+
+```markdown stored-card-reuse_test.md
+---
+mode: testing
+url: https://your-app.example.com/checkout
+max_steps: 40
+tags: [payments, tokenisation]
+---
+
+# Stored card reuse
+
+## Verify the stored card is preselected
+Verify "Stored payment method" is selected and "Stored card" reads "Visa ending 1111 · exp 03/30".
+
+## Verify no card entry is required
+Verify a badge reads "No card entry needed — paying with a stored token" and no card number field is shown.
+
+## Pay with the token
+Click "Pay €129.50" and verify a green banner titled "Payment authorised" appears.
+
+## Verify the token was used
+Verify the result shows "Method" of "Stored card", "Detail" of "Visa ending 1111 (token tok_8812)" and "Amount" of "€129.50".
+```
+
+A checkout that asks for the card again, or charges a different method, fails the run.
+
+### Guest card payment in a wallet window
+
+Many wallets let shoppers pay by card without an account, and that path is easy to break when the wallet login changes. This recipe opens the wallet window, switches to paying by card as a guest, and checks the payment completes with the guest card.
+
+<video class="right-side" width="100%" controls id="vid">
+<source src="https://assets.testmuai.com/resources/videos/kane-cli/use-cases/guest-card-payment.mp4" type="video/mp4" />
+</video>
+
+```markdown guest-card-payment_test.md
+---
+mode: testing
+url: https://your-app.example.com/checkout
+max_steps: 45
+tags: [payments, checkout]
+---
+
+# Guest card payment
+
+## Open the PayPaal window
+Click "Pay with PayPaal" and verify the dialog titled "PayPaal" opens.
+
+## Switch to paying by card
+Click the "Pay by card" tab and verify a badge reads "Paying as a guest — no PayPaal account needed".
+
+## Fill in the card
+Type "4242 4242 4242 4242" into "Card number", "12 / 34" into "Expiry", "123" into "CVC", and click "Pay $41.06 as guest".
+
+## Verify the payment succeeded without an account
+Verify a green banner titled "Payment complete" says "$41.06" was paid to Alder & Oak with "Guest card" and shows transaction "TX-9921".
+```
+
+Kane CLI checks the method on the result banner, so a payment recorded against a wallet balance instead of the guest card fails the run.
+
+## Wallets, redirects, and local methods
+
+Wallets, bank redirects, and local methods add a popup, a second site, or a validation step to checkout. These recipes follow the shopper through that extra step and back.
+
+### Wallet express checkout
+
+A shopper who reaches the wallet button has already decided to buy, which makes it the worst place for an untested change. This recipe opens the wallet approval window, logs in with a test account, approves the payment, and checks the order completed.
+
+<video class="right-side" width="100%" controls id="vid">
+<source src="https://assets.testmuai.com/resources/videos/kane-cli/use-cases/express-checkout.mp4" type="video/mp4" />
+</video>
+
+```markdown express-checkout_test.md
+---
+mode: testing
+url: https://your-app.example.com/checkout
+max_steps: 45
+tags: [payments, checkout]
+---
+
+# Express checkout
+
+## Verify the basket
+Verify the basket shows "Heavyweight Cotton Tee" and an "Order total" of "$41.06".
+
+## Open the PayPaal approval window
+Click "Pay with PayPaal" and verify a dialog titled "PayPaal" opens showing "Alder & Oak" at "$41.06" with "Log in" and "Pay by card" tabs.
+
+## Log in and approve
+Type "priya.nair@example.com" into "Email", type "demo1234" into "Password", and click "Agree and pay $41.06".
+
+## Verify the order completed
+Verify a green banner titled "Payment complete" says "$41.06" was paid to Alder & Oak with "PayPaal balance" and shows transaction "TX-9921".
+```
+
+The run passes only when the result names the amount, the merchant, the wallet balance as the method, and a transaction ID.
+
+### Bank redirect (iDEAL)
+
+Bank redirect methods send the shopper to the bank and back, and the return trip is where the state gets lost. This recipe picks iDEAL and an issuer, approves the payment in the issuer simulator, and checks the result after the redirect.
+
+<video class="right-side" width="100%" controls id="vid">
+<source src="https://assets.testmuai.com/resources/videos/kane-cli/use-cases/ideal-redirect.mp4" type="video/mp4" />
+</video>
+
+```markdown ideal-redirect_test.md
+---
+mode: testing
+url: https://your-app.example.com/checkout
+max_steps: 45
+tags: [payments, redirect]
+---
+
+# iDEAL redirect
+
+## Choose iDEAL
+Choose "iDEAL" in the drop-in and verify a "Your bank" dropdown appears.
+
+## Pick the issuer
+Select "Rabbo Bank" in "Your bank" and verify the button reads "Continue to Rabbo Bank".
+
+## Complete the issuer simulation
+Click "Continue to Rabbo Bank" and verify a dialog titled "Rabbo Bank — issuer simulator" opens showing "Amount" of "€129.50", then click "Approve payment".
+
+## Verify the redirect returned authorised
+Verify a green banner titled "Payment authorised" shows "Result code" of "Authorised", with "Method" of "iDEAL" and "Detail" of "Rabbo Bank".
+```
+
+Kane CLI checks for an Authorised result code with the method and issuer the shopper picked, so a redirect that returns without a result fails the run.
+
+### UPI intent and VPA validation
+
+A UPI ID field has to reject malformed and unknown IDs before it accepts a good one. This recipe tries a malformed ID, an unknown ID, and a valid ID in turn, and then pays.
+
+<video class="right-side" width="100%" controls id="vid">
+<source src="https://assets.testmuai.com/resources/videos/kane-cli/use-cases/upi-intent.mp4" type="video/mp4" />
+</video>
+
+```markdown upi-intent_test.md
+---
+mode: testing
+url: https://your-app.example.com
+max_steps: 45
+tags: [payments, upi]
+---
+
+# UPI intent
+
+## Open the UPI intent screen
+Click "Pay now" on "Cotton kurta set", make sure "UPI" is selected, and verify a "UPI ID" field with a "Verify UPI ID" button is shown.
+
+## Verify a malformed VPA is rejected
+Type "priya" into "UPI ID", click "Verify UPI ID", and verify an inline error reads "Enter a valid UPI ID, for example name@bank."
+
+## Verify an unknown VPA is rejected
+Replace the UPI ID with "nobody@okhdfb", click "Verify UPI ID", and verify an inline error reads "No account found for that UPI ID."
+
+## Verify a good VPA succeeds
+Replace the UPI ID with "priya@ybl", click "Verify UPI ID", verify a badge reads "UPI ID verified — request will be sent to priya@ybl", then click "Pay ₹1,899.00" and verify a green banner titled "Payment successful" appears.
+```
+
+Each invalid ID must show its own inline error, and the valid ID must lead to a successful payment, so the run fails on the first state that is wrong.
+
+### Currency conversion before sending
+
+An international payment has to show the rate, the spread, and the converted amount before the sender confirms. This recipe enters an amount for a recipient in another currency and checks that the same numbers appear on the review screen and the receipt.
+
+<video class="right-side" width="100%" controls id="vid">
+<source src="https://assets.testmuai.com/resources/videos/kane-cli/use-cases/currency-conversion.mp4" type="video/mp4" />
+</video>
+
+```markdown currency-conversion_test.md
+---
+mode: testing
+url: https://your-app.example.com/send
+max_steps: 45
+tags: [payments, fx]
+---
+
+# Currency conversion
+
+## Choose an international recipient
+Choose "Mira Shah" and verify the option detail reads "mira.shah@example.in · IN · receives INR".
+
+## Enter the amount
+Type "100" into "You send (USD)" and verify a currency conversion panel appears with a badge reading "Currency conversion applies".
+
+## Verify the rate and the converted amount before confirming
+Verify the panel shows "Mid-market rate" of "1 USD = 83.42 INR", "PayPaal rate" of "1 USD = 80.5003 INR", "Currency spread" of "3.5%", "Fee" of "$0.80" and "Mira Shah receives" of "₹8050.03".
+
+## Confirm and verify the receipt carries the same numbers
+Click "Review and send", verify "They receive" reads "₹8050.03", then click "Send now" and verify the receipt shows "Exchange rate" of "1 USD = 80.5003 INR" and "They receive" of "₹8050.03".
+```
+
+If the receipt shows a different rate or amount from the one quoted before confirmation, the run fails.
+
+## Pay later and instalments
+
+Pay-later and EMI flows show a schedule or a plan table that the customer agrees to. These recipes check those numbers before confirmation, and check the fallback when credit is declined.
+
+### Pay in 4
+
+A pay-in-4 checkout has to show the full instalment schedule before the shopper confirms. This recipe completes the quick credit check and checks the four payment amounts, their due dates, the total, and the zero interest line before placing the order.
+
+<video class="right-side" width="100%" controls id="vid">
+<source src="https://assets.testmuai.com/resources/videos/kane-cli/use-cases/pay-in-4.mp4" type="video/mp4" />
+</video>
+
+```markdown pay-in-4_test.md
+---
+mode: testing
+url: https://your-app.example.com/checkout
+max_steps: 45
+tags: [payments, bnpl]
+---
+
+# Pay in 4
+
+## Choose Klarnah
+Verify the page subtitle reads "Studio Lamps · $180.00" and "Pay in 4 with Klarnah" is selected.
+
+## Complete the quick check
+Type "Priya Nair" into "Full name", type "4417" into "Last 4 of ID number", set "Date of birth" to "1992-04-18", and click "Continue with Klarnah".
+
+## Verify the schedule appears before you confirm
+Verify a badge reads "Approved — 4 interest-free payments" and the schedule table shows four payments of "$45.00" due "2026-09-15", "2026-09-29", "2026-10-13" and "2026-10-27", with "Total" of "$180.00" and "Interest" of "$0.00".
+
+## Confirm the order
+Click "Confirm and pay $45.00 today" and verify a green banner titled "Order placed" names order "KL-3301".
+```
+
+Kane CLI checks the schedule before the confirm button is clicked, so a schedule that is missing or adds up to the wrong total fails the run.
+
+### Credit decision decline
+
+When a pay-later provider declines a shopper, the merchant still has to offer another way to pay. This recipe triggers a decline, checks the decline message, and confirms the shopper is returned to the other payment options.
+
+<video class="right-side" width="100%" controls id="vid">
+<source src="https://assets.testmuai.com/resources/videos/kane-cli/use-cases/credit-decision-decline.mp4" type="video/mp4" />
+</video>
+
+```markdown credit-decision-decline_test.md
+---
+mode: testing
+url: https://your-app.example.com/checkout
+max_steps: 45
+tags: [payments, errors]
+---
+
+# Credit decline fallback
+
+## Fill the quick check with the declining id
+Type "Priya Nair" into "Full name", type "0000" into "Last 4 of ID number", set "Date of birth" to "1992-04-18", and click "Continue with Klarnah".
+
+## Verify the decline
+Verify a red banner titled "Klarnah can't approve this purchase" says the decision is based on a soft credit check and does not affect your credit score.
+
+## Verify the merchant fallback options
+Verify an "Other ways to pay" card offers "Card — Pay the full amount now" and "Bank transfer — Pay from your bank account".
+
+## Return to the payment options
+Click "Back to payment options" and verify the "How do you want to pay?" card is shown again with both "Pay in 4 with Klarnah" and "Card" available.
+```
+
+A decline that leaves the shopper on a dead end, with no card or bank transfer option, fails the run.
+
+### EMI plan table
+
+EMI should appear only on orders above the threshold, and each tenure has to show the right rate and monthly amount. This recipe checks that a high-value order offers EMI while a low-value one does not, and then checks every row of the plan table.
+
+<video class="right-side" width="100%" controls id="vid">
+<source src="https://assets.testmuai.com/resources/videos/kane-cli/use-cases/emi-options.mp4" type="video/mp4" />
+</video>
+
+```markdown emi-options_test.md
+---
+mode: testing
+url: https://your-app.example.com
+max_steps: 45
+tags: [payments, emi]
+---
+
+# EMI options
+
+## Verify EMI is offered only on the high value order
+Verify the "Nexa 12 Pro 5G (256 GB)" card at "₹48,999.00" carries an "EMI available" badge and the "Cotton kurta set" card does not.
+
+## Open the checkout for the high value order
+Click "Pay now" on "Nexa 12 Pro 5G (256 GB)" and verify the dialog title reads "Razorpie · ₹48,999.00" and an "EMI" method is listed.
+
+## Open the EMI panel
+Choose "EMI" and verify the bank is "HDFB Bank" with a plans table.
+
+## Verify the tenures and monthly amounts
+Verify the plans table lists 3 months at "13% p.a." with a monthly of "₹16,688.00", 6 months at "14% p.a." with "₹8,503.00", 9 months at "15% p.a." with "₹5,790.00" and 12 months at "16% p.a." with "₹4,446.00".
+```
+
+Kane CLI reads each tenure, rate, and monthly amount from the table, so one wrong row fails the run.
+
+## Payment links and invoices
+
+Links and invoices are paid outside the main checkout, often from an email. These recipes check that each one is paid once and that its status changes everywhere it appears.
+
+### Single-use payment link
+
+A payment link should take one payment and then refuse another. This recipe pays an open link and checks that the badge, the payment banner, and the disabled pay button all show the link as used.
+
+<video class="right-side" width="100%" controls id="vid">
+<source src="https://assets.testmuai.com/resources/videos/kane-cli/use-cases/payment-link.mp4" type="video/mp4" />
+</video>
+
+```markdown payment-link_test.md
+---
+mode: testing
+url: https://your-app.example.com/link
+max_steps: 40
+tags: [payments, links]
+---
+
+# Payment link
+
+## Verify the unpaid link
+Verify the page shows "Design consultation — 1 hour" at "₹3,500.00" with a badge reading "Awaiting payment".
+
+## Pay the link
+Type "4111 1111 1111 1111" into "Card number", click "Pay ₹3,500.00", and verify a green banner titled "This link has been paid" appears.
+
+## Verify the paid state
+Verify the badge now reads "Paid", the banner names payment "pay_R701kLm8Xq" on "2026-09-15" and "Amount paid" reads "₹3,500.00".
+
+## Verify it cannot be reused
+Verify the pay button is replaced by a disabled button reading "Link already paid", with the note that a payment link can only be used once.
+```
+
+A link that still accepts payment after it is paid fails the run at the last step.
+
+### Checkout link receipt
+
+A checkout link sent to a customer has to charge the listed amount and send the receipt to the right address. This recipe pays a checkout link and checks the receipt for the payment ID, the item, the total, and the receipt email.
+
+<video class="right-side" width="100%" controls id="vid">
+<source src="https://assets.testmuai.com/resources/videos/kane-cli/use-cases/checkout-link.mp4" type="video/mp4" />
+</video>
+
+```markdown checkout-link_test.md
+---
+mode: testing
+url: https://your-app.example.com/link
+max_steps: 40
+tags: [payments, checkout]
+---
+
+# Checkout link
+
+## Verify the checkout link
+Verify the page shows "KilnAndClay Studio" with the checkout link "chk_7K21", the item "Pottery workshop — single seat" and an amount of "$65.00".
+
+## Fill in the details
+Type "sam@riverfield.test" into "Email for receipt" and "4242 4242 4242 4242" into "Card number".
+
+## Pay
+Click "Pay $65.00" and verify a green banner titled "Payment complete" says the payment of "$65.00" was received.
+
+## Verify the receipt
+Verify the receipt shows "Payment ID" of "pay_8813", "Item" of "Pottery workshop — single seat", "Total paid" of "$65.00" and "Receipt sent to" of "sam@riverfield.test".
+```
+
+Kane CLI fails the run if the receipt names a different item, amount, or email from the ones entered.
+
+### Invoice pay
+
+Paying an invoice has to flip its status on the invoice page and in the invoice list. This recipe opens an unpaid invoice, checks the billing details and amount due, pays it, and checks the paid status in both places.
+
+<video class="right-side" width="100%" controls id="vid">
+<source src="https://assets.testmuai.com/resources/videos/kane-cli/use-cases/invoice-pay.mp4" type="video/mp4" />
+</video>
+
+```markdown invoice-pay_test.md
+---
+mode: testing
+url: https://your-app.example.com/invoice
+max_steps: 40
+tags: [payments, invoicing]
+---
+
+# Invoice pay
+
+## Open the unpaid invoice
+Verify the "INV-2041" row carries an "unpaid" badge, then click "Open" on it.
+
+## Verify the invoice details
+Verify the page title reads "Invoice INV-2041" with "Billed to" of "Northwind Software · ap@northwind.example", "Amount due" of "$480.00" and "Due date" of "2026-09-22".
+
+## Pay the invoice
+Type "4242 4242 4242 4242" into "Card number", click "Pay $480.00", and verify a green banner titled "Invoice paid" names payment "pay_8813".
+
+## Verify the status flipped
+Verify the invoice status badge now reads "paid", then click "← All invoices" and verify the "INV-2041" row carries a "paid" badge.
+```
+
+An invoice that shows paid on its own page but unpaid in the list fails the run.
+
+## Back office and reconciliation
+
+Support and finance teams work from the dashboard, not the checkout. These recipes check that refunds, disputes, lookups, and webhooks agree with the payment the shopper made.
+
+### Dashboard payment lookup
+
+When a customer questions a charge, support searches the dashboard, and opening the wrong payment sends a refund to the wrong person. This recipe takes a payment, searches the dashboard for its ID, and checks the same ID, amount, and status on the detail page.
+
+<video class="right-side" width="100%" controls id="vid">
+<source src="https://assets.testmuai.com/resources/videos/kane-cli/use-cases/dashboard-payment-lookup.mp4" type="video/mp4" />
+</video>
+
+```markdown dashboard-payment-lookup_test.md
+---
+mode: testing
+url: https://your-app.example.com/checkout
+max_steps: 45
+tags: [payments, dashboard]
+---
+
+# Dashboard payment lookup
+
+## Take a payment first
+Type "4242 4242 4242 4242" into "Card number", "12 / 34" into "Expiry", "123" into "CVC", click "Pay $240.00", and verify the receipt shows "Payment ID" of "pi_3Qb101Mx03".
+
+## Open the dashboard
+Go to https://your-app.example.com/dashboard and verify the page subtitle reads "4 payments".
+
+## Find the latest payment
+Type "pi_3Qb101Mx03" into "Search payments" and verify a single row remains, showing "$240.00" with a "succeeded" status.
+
+## Open its detail
+Click "Open" on that row and verify the payment detail shows "$240.00", "Payment ID" of "pi_3Qb101Mx03", "Description" of "Pro plan — annual", "Payment method" of "Visa ••••4242" and a status of "succeeded".
+```
+
+Kane CLI checks the payment ID on the search row and again on the detail page, so a search that opens a different payment fails the run.
+
+### Partial refund from the dashboard
+
+A partial refund has to update the payment row and the net sales figure together. This recipe refunds part of a payment from the dashboard and checks the refunded amount, the net amount, the status badge, and the net sales total.
+
+<video class="right-side" width="100%" controls id="vid">
+<source src="https://assets.testmuai.com/resources/videos/kane-cli/use-cases/refund-from-dashboard.mp4" type="video/mp4" />
+</video>
+
+```markdown refund-from-dashboard_test.md
+---
+mode: testing
+url: https://your-app.example.com/dashboard
+max_steps: 45
+tags: [payments, refunds]
+---
+
+# Refund from the dashboard
+
+## Verify the starting balance
+Verify "Net sales after refunds" reads "$250.00" and the "pay_8812" row shows a refunded amount of "$0.00" with a "Completed" badge.
+
+## Open the refund dialog
+Click the refund button on the "pay_8812" row and verify a dialog titled "Refund pay_8812" opens showing "Original amount" of "$250.00".
+
+## Refund part of it
+Type "60" into "Refund amount", click "Issue refund", and verify a green banner reads "Refunded $60.00 on pay_8812."
+
+## Verify the refund and the balance
+Verify the "pay_8812" row now shows refunded of "$60.00", a net of "$190.00" and a "Partially refunded" badge, and "Net sales after refunds" reads "$190.00".
+```
+
+If the payment row updates but the net sales total does not, or the other way round, the run fails.
+
+### Dispute filing
+
+A dispute has to create a case with a reference that support can look up later. This recipe opens a transaction, files a dispute with a reason and details, and checks the case reference, reason, and status.
+
+<video class="right-side" width="100%" controls id="vid">
+<source src="https://assets.testmuai.com/resources/videos/kane-cli/use-cases/dispute-filing.mp4" type="video/mp4" />
+</video>
+
+```markdown dispute-filing_test.md
+---
+mode: testing
+url: https://your-app.example.com/activity
+max_steps: 45
+tags: [payments, disputes]
+---
+
+# Dispute filing
+
+## Open the transaction
+Click "Details" on the "Brightline Electronics" row and verify the transaction detail shows "Transaction" of "TX-9920" and "Amount" of "$128.40".
+
+## Choose a reason
+Select "I did not receive the item" in "What went wrong?" and type "Tracking has said out for delivery for nine days." into the detail box.
+
+## File the dispute
+Click "File dispute" and verify a green banner titled "Dispute filed" shows the case "PP-D-5500" for Brightline Electronics at "$128.40".
+
+## Verify the case reference is recorded
+Verify a "Dispute" card shows "Case reference" of "PP-D-5500", "Reason" of "I did not receive the item" and a status of "Under review".
+```
+
+A dispute that shows a success banner but records no case reference fails the run.
+
+### Webhook status parity
+
+The status a merchant sees on the order page has to match the status the payment provider sent in its notification. This recipe takes a payment, opens the merchant order page, and compares the UI status with the webhook status for the same order.
+
+<video class="right-side" width="100%" controls id="vid">
+<source src="https://assets.testmuai.com/resources/videos/kane-cli/use-cases/webhook-status-parity.mp4" type="video/mp4" />
+</video>
+
+```markdown webhook-status-parity_test.md
+---
+mode: testing
+url: https://your-app.example.com/checkout
+max_steps: 45
+tags: [payments, webhooks]
+---
+
+# Webhook status parity
+
+## Take a payment
+Choose "Card", type "4111 1111 1111 1111" into "Card number", "03 / 30" into "Expiry", "737" into "CVC", and click "Pay €129.50".
+
+## Verify the shopper result
+Verify a green banner titled "Payment authorised" shows "Result code" of "Authorised" and "PSP reference" of "PSP883000001717".
+
+## Open the merchant order page
+Click "View the merchant order page" and verify "Order reference" reads "ORD-55120", "Status shown to merchant" reads "Authorised" and "PSP reference" reads "PSP883000001717".
+
+## Verify the notification agrees
+Verify the webhook list shows "AUTHORISATION · ORD-55120" with "success: true", and the parity card reads "UI status" of "Authorised", "Notification status" of "Authorised" and a badge saying "UI status matches the notification".
+```
+
+Kane CLI checks the PSP reference on both pages and the parity card that compares them, so an order page that drifts from the notification fails the run.
+
+## Next steps
+
+- [E-commerce Testing](/docs/kane-cli-ecommerce-testing/): search, cart, checkout, orders, and store admin
+- [API Testing](/docs/api-testing-with-kane-cli/): check payment endpoints directly, including SLA gates
+- [DevTools & Performance Testing](/docs/kane-cli-devtools-performance-testing/): assert on the network calls behind a payment
+- [Variables & Context](/docs/kane-cli-variables-and-context/): keep test cards and passwords out of your files
+
+<KaneCliCta />

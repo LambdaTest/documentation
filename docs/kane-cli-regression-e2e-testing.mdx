@@ -1,0 +1,119 @@
+---
+title: "Regression and End-to-End Testing Use Cases"
+sidebarTitle: "Regression & E2E"
+description: "Regression and end-to-end testing use cases for Kane CLI: UI and API in one run, save once and replay on every build, recover when the UI changes, promote a passing run to a committed test, and separate product bugs from test issues."
+keywords: ['kane cli regression testing', 'end to end testing', 'e2e testing', 'test.md replay', 'self healing tests', 'kane cli', 'kaneai', 'testmu ai']
+"og:description": "Regression and end-to-end testing use cases for Kane CLI: UI and API in one run, save once and replay on every build, recover when the UI changes, promote a passing run to a committed test, and separate product bugs from test issues."
+---
+
+import { KaneCliCta } from "/snippets/KaneCliCta.mdx";
+
+A regression suite earns its keep only if it keeps running as the product changes. These use cases cover the full loop in Kane CLI: writing an end-to-end flow that checks the front end and the back end together, committing it as a test that replays on every build, keeping it alive when the UI moves, and telling a product bug apart from a test that needs an update.
+
+## UI and API in one end-to-end run
+
+<img loading="lazy" src="/assets/images/kane-cli/sketchnotes/end-to-end-ui-plus-api.svg" alt="End-to-end in one run: step one seeds a record through POST /records, step two opens the record in the browser UI, and the run verifies the front end and the back end together" width="1000" height="563" />
+
+<video class="right-side" width="100%" controls id="vid">
+<source src="https://assets.testmuai.com/resources/videos/kane-cli/use-cases/end-to-end-ui-and-api.mp4" type="video/mp4" />
+</video>
+
+A product page can show the right price while the cart API records a different one. In this recording, one Kane CLI run reads a product's title and price from the products API, opens the product page and compares them, clicks Add to Cart, and then checks the `POST` the cart sent and the price in the cart drawer.
+
+1. Start the objective on the API, for example `open https://your-app.com/api/shop/products and, from the JSON, record the title and price of the product with id 'sku_headset'`.
+2. Move to the UI in the same sentence, for example `open the product page for sku_headset and verify it shows the same title and price`.
+3. Act in the UI, for example `click 'Add to Cart'`.
+4. Check the request the click sent, for example `verify the POST to /api/cart returned 201 with 'sku_headset' in the request body`.
+5. Check the result on screen against the API value, for example `verify the cart drawer shows the headset at the price recorded from the API`.
+6. Run it with `--agent`, and read the summary for each value Kane CLI recorded and compared.
+
+In the recorded run, the flow fails on the cart step, and the root cause card in the evidence viewer classifies the failure as an automation issue with 91% confidence: the agent clicked the header cart instead of the **Go to checkout** option the page offered. That label tells you to adjust the step's wording rather than file a product bug.
+
+<Tip>
+To seed data through the API first and then act on it in the UI, see [Create a record](/docs/api-testing-with-kane-cli/#create-a-record-seed-data) and [Multi-step API transaction](/docs/api-testing-with-kane-cli/#multi-step-api-transaction) on the API Testing page.
+</Tip>
+
+## Save once, replay on every build
+
+<img loading="lazy" src="/assets/images/kane-cli/sketchnotes/autoheal-regression.svg" alt="Save once, re-run as regression: a flow saved on build one replays on every later build, and when the UI changes and a button moves, the flow keeps passing on each build" width="1000" height="563" />
+
+<video class="right-side" width="100%" controls id="vid">
+<source src="https://assets.testmuai.com/resources/videos/kane-cli/test-md-video.mp4" type="video/mp4" />
+</video>
+
+An end-to-end flow written in natural language is only a regression test once it replays the same way on every build. In this recording, `kane-cli testmd list` shows the committed tests, the first run of a package search test authors each step, and the next run replays both steps from the recording and passes.
+
+1. Write the flow as a `_test.md` file, with one `##` heading per step and a check at the end of each step:
+
+   ```markdown checkout_test.md
+   ---
+   mode: testing
+   url: https://your-app.com
+   tags: [regression, checkout]
+   ---
+
+   # Checkout
+
+   ## Add an item
+   Search for "headset", open the first result, click "Add to Cart", and verify the cart count is 1.
+
+   ## Pay
+   Open the cart, click "Checkout", pay with {{test_card}}, and verify the page shows "Order placed".
+   ```
+
+2. Run it once with `kane-cli testmd run tests/checkout_test.md --agent`. Kane CLI authors each step and writes the recording to `output-checkout/`.
+3. Commit the `_test.md` file and its `output-checkout/` folder, which is safe to commit.
+4. Run it again on every build. Steps replay from the recording, which is faster and does not call the model, as long as the step text and config stay the same.
+5. List what is committed and what has a recording with `kane-cli testmd list`.
+
+See [Test.md](/docs/kane-cli-testmd/) for the file format and [Running test.md files](/docs/kane-cli-testmd-running/) for replay versus author.
+
+## Recover when the UI changes
+
+<video class="right-side" width="100%" controls id="vid">
+<source src="https://assets.testmuai.com/resources/videos/kane-cli/use-cases/auto-heal-on-ui-change.mp4" type="video/mp4" />
+</video>
+
+Renaming a button breaks every recorded locator that points at it. In this recording, a bank account sign-up test replays until the **Continue** button is renamed in the code, the replay fails on that step, and Kane CLI re-authors the step against the new button so the test passes again.
+
+1. Make the UI change, for example rename **Continue** to **Next step** in your page component.
+2. Run the committed test as usual with `kane-cli testmd run tests/open-account_test.md --agent`.
+3. The replay of the changed step fails. Adaptive healing is on by default, so Kane CLI retries smaller replay windows and then re-authors the affected steps against the current page.
+4. The run passes on the new UI, and the refreshed recording replaces the old one. Commit the updated `output-<stem>/` folder so CI replays the new recording.
+5. If you would rather a replay failure stop the run, pass `--no-adaptive-heal`.
+
+<Note>
+This recording was made with an earlier release that used a `--retry` flag. In current releases adaptive healing is on by default, and `--retry` is accepted but has no effect. See [Handling replay failures](/docs/kane-cli-testmd-running/#handling-replay-failures).
+</Note>
+
+When the flow itself changes on purpose, edit the step's text instead. Editing step N re-authors step N and every step after it on the next run, so a targeted edit keeps re-authoring cheap.
+
+## Promote a passing run to a committed test
+
+An ad-hoc run that passed is already a good regression test, and it should not disappear when the terminal closes. This use case turns a `kane-cli run` into a `_test.md` file in your repo.
+
+1. Rerun the objective that passed with a name, for example `kane-cli run "…" --name checkout-flow --agent`.
+2. Kane CLI writes a `_test.md` file for the run to `.testmuai/tests/` and copies the run's evidence pack into `.testmuai/evidence/`.
+3. Move the file into your repo's `tests/` folder and add tags, for example `tags: [regression]`.
+4. Commit the file and its `output-<stem>/` folder, then run the whole suite with `kane-cli testrun run --tags regression --parallel 4 --headless`.
+
+## Separate product bugs from test issues
+
+A failing regression suite costs time when nobody knows whether the app broke or the test went stale. Kane CLI investigates every failed replay automatically, and bug detection can watch for product bugs while steps are authored.
+
+1. Turn on bug detection for the run with `--bug-detection continue`, or save it with `kane-cli config set-bug-detection continue`.
+2. Run the suite. When the agent suspects a product bug, Kane CLI investigates it and either rejects it or confirms it.
+3. A confirmed product bug arrives in the NDJSON `run_end` event as `result_code` `740` with a `verdict` object, and is recorded in the evidence pack.
+4. For a failed replay, open the evidence pack and read the failure record, which holds the error, the page state at that moment, and links to the step's console and network logs.
+5. Fix the app for a product bug, or edit the step's text for a stale test, and rerun.
+
+Use `--bug-detection stop` in CI when a confirmed product bug should end the run immediately. See [Bug detection](/docs/kane-cli-configuration/#bug-detection) and [Debugging with evidence](/docs/kane-cli-evidence-debugging/).
+
+## Next steps
+
+- [CI/CD & DevOps Testing](/docs/kane-cli-cicd-devops-testing/): run this suite on every push and on a schedule
+- [Test Generation & Exploration](/docs/kane-cli-test-generation-exploration/): design the cases before you write them
+- [Batch Runs](/docs/kane-cli-testrun/): select, parallelize, and gate a suite
+- [Evidence](/docs/kane-cli-evidence/): the record behind every pass and fail
+
+<KaneCliCta />

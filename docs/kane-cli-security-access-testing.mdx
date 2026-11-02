@@ -1,0 +1,140 @@
+---
+title: "Security and Access Control Testing Use Cases"
+sidebarTitle: "Security & Access"
+description: "Security and access control testing use cases for Kane CLI: role-based access, sign-in gates, rejected credentials, session cookie flags, token storage, sign-out, and keeping secrets out of tests."
+keywords: ['kane cli security testing', 'access control testing', 'role based access testing', 'cookie security testing', 'session testing', 'kane cli', 'kaneai', 'testmu ai']
+"og:description": "Security and access control testing use cases for Kane CLI: role-based access, sign-in gates, rejected credentials, session cookie flags, token storage, sign-out, and keeping secrets out of tests."
+---
+
+import { KaneCliCta } from "/snippets/KaneCliCta.mdx";
+
+Most access bugs are functional bugs: a member who can open the admin page, a signed-out visitor who can submit a form, or a session cookie set without the Secure flag. These use cases check those rules the way a user would hit them, by signing in as each role and asserting what the app allows and refuses.
+
+<Note>
+Kane CLI tests how your app enforces its own access rules in the browser and in your app. It is not a vulnerability scanner or a penetration testing tool, so pair these checks with your existing security tooling.
+</Note>
+
+## Role-based access
+
+<img loading="lazy" src="/assets/images/kane-cli/sketchnotes/role-based-access.svg" alt="Role-based access: an admin can open /dashboard, /billing, and /admin, while a member can open /dashboard and /billing but is refused /admin, and Kane CLI fails the run if the member gets in" width="1000" height="563" />
+
+A privilege leak usually appears when a new page is added and nobody checks it with a lower role. This use case signs in as each role and asserts which pages that role can open and which it must be refused.
+
+1. Save one set of credentials per role in `.testmuai/variables/roles.json` inside your project, and mark the passwords as secret. Files in that folder load automatically for every run started from the project:
+
+   ```json
+   {
+     "admin_email": { "value": "admin@your-app.com" },
+     "admin_password": { "value": "…", "secret": true },
+     "member_email": { "value": "member@your-app.com" },
+     "member_password": { "value": "…", "secret": true }
+   }
+   ```
+
+2. Write one `_test.md` per role, so each role signs in with a fresh session:
+
+   ```markdown member-access_test.md
+   ---
+   mode: testing
+   url: https://your-app.com/login
+   tags: [security, access]
+   ---
+
+   # Member access
+
+   ## Sign in as a member
+   Type {{member_email}} into Email and {{member_password}} into Password, click "Sign in", and verify the dashboard is shown.
+
+   ## Allowed pages
+   Open /billing and verify the billing page loads.
+
+   ## Restricted page
+   Open /admin and verify the page shows an access denied message or redirects away from /admin.
+   ```
+
+3. Keep `mode: testing` so Kane CLI pushes through the denied page and checks it, instead of stopping at it.
+4. Run both roles together with `kane-cli testrun run --tags access --headless`.
+5. Review the results. A member who reaches the admin page fails the run at the restricted page step.
+
+## Block signed-out users from members-only actions
+
+<video class="right-side" width="100%" controls id="vid">
+<source src="https://assets.testmuai.com/resources/videos/kane-cli/use-cases/snkrs-draw-entry.mp4" type="video/mp4" />
+</video>
+
+A members-only action has two sides, and both need a test: signed-out visitors are blocked, and signed-in members get through. In this recording, Kane CLI tries to enter a product launch draw while signed out, checks the sign-in error, signs in, and then enters successfully.
+
+1. Start the objective signed out, and attempt the protected action first, for example `click 'Enter draw' and verify an error reads 'Sign in to your account to enter.'`.
+2. Sign in within the same run, for example `click 'Sign in', type {{email}} and {{password}}, click 'Sign in', and verify a 'Member' badge is shown`.
+3. Repeat the protected action and assert the success state, for example `verify the page shows "You're in the draw" with an entry id starting with 'DRAW-'`.
+4. Run it. A signed-out entry that is accepted, or a member entry that is refused, fails the run.
+
+The full test file is on the [E-commerce Testing](/docs/kane-cli-ecommerce-testing/#members-only-launch-draw) page.
+
+## Reject invalid credentials
+
+<video class="right-side" width="100%" controls id="vid">
+<source src="https://assets.testmuai.com/resources/videos/kane-cli/use-cases/negative-path-testing-401.mp4" type="video/mp4" />
+</video>
+
+An API that accepts a wrong password is a security bug that never shows up in a happy-path suite. This use case sends deliberately wrong credentials and asserts the API fails closed.
+
+1. Run `kane-cli run "Open https://your-app.com, then send a POST request to /api/login with header Content-Type: application/json and this raw JSON body: {\"email\":\"notauser@example.com\",\"password\":\"x\"}, confirm the request is rejected with response status 401 and the error field is 'invalid credentials'"`.
+2. Add the same check for an expired or tampered token on a protected endpoint, for example `send a GET request to /api/orders with an Authorization header of 'Bearer expired-token' and confirm the response status is 401`.
+3. Save the session as a regression guard, so you are told the day an invalid login starts returning a success response.
+
+See [Negative path testing](/docs/api-testing-with-kane-cli/#negative-path-testing-401-unauthorized) on the API Testing page for the full walkthrough.
+
+## Check session cookie flags
+
+A session cookie without `HttpOnly` can be read by injected scripts, and one without `Secure` can travel over plain HTTP. Kane CLI reads the cookies the browser holds during the run, including their flags.
+
+1. Sign in as part of the objective, for example `go to https://your-app.com/login and sign in with {{email}} and {{password}}`.
+2. Add cookie assertions after the sign-in step:
+
+   ```text
+   Assert: a cookie named "session_id" exists
+   Assert: the session cookie is httpOnly
+   Assert: no cookies are set without the Secure flag
+   Assert: the auth cookie has sameSite set to "Strict"
+   ```
+
+3. Run the command with `--agent` and read which cookie failed and which flag it was missing from the summary.
+
+See [Cookies checkpoints](/docs/kane-cli-checkpoint-devtools-cookies/) for everything you can query.
+
+## Check where tokens are stored
+
+Tokens kept in localStorage are readable by any script on the page, so many teams require them in httpOnly cookies instead. This use case signs in and checks that storage matches your policy.
+
+1. Sign in in the objective, then add a storage assertion, for example `assert no localStorage key contains 'token'`.
+2. If your app does keep a token in localStorage by design, assert the opposite and its shape instead, for example `assert auth_token exists in localStorage and is not empty`.
+3. Add a cookie assertion from the previous section, so one run checks both storage locations.
+
+## Confirm sign-out ends the session
+
+A sign-out button that only hides the menu leaves the session usable. This use case signs out and then tries to reach a protected page with the same browser.
+
+1. Run `kane-cli run "Go to https://your-app.com/login, sign in with {{email}} and {{password}}, open /account and verify the account page loads, click 'Sign out', then open /account again and verify the sign-in page is shown" --variables-file creds.json --agent`.
+2. Add a storage check after sign-out, for example `assert the session cookie no longer exists`, so a cookie that survives sign-out also fails the run.
+3. Press the browser Back button as an extra step, for example `go back and verify the account details are not shown`, to catch pages served from cache after sign-out.
+
+## Keep credentials out of tests and logs
+
+A test suite is shared widely, so it should never contain a real password. Kane CLI substitutes `{{name}}` variables at run time and masks secret values in output and logs.
+
+1. Mark every password, token, and card number as `"secret": true` in the variables file.
+2. Reference them as `{{name}}` in objectives and `_test.md` steps, never as literal values.
+3. In CI, generate the variables file from your secrets store before the step and pass it with `--variables-file`.
+4. Check the evidence pack and the Test Manager test case after the first run to confirm the values appear masked.
+
+See [Variables & Context](/docs/kane-cli-variables-and-context/#secrets) for how secret values are stored.
+
+## Next steps
+
+- [DevTools & Performance Testing](/docs/kane-cli-devtools-performance-testing/): network, console, storage, and timing checks
+- [API Testing](/docs/api-testing-with-kane-cli/): auth-token chaining and negative paths at the endpoint level
+- [Authentication](/docs/kane-cli-authentication/): how Kane CLI itself signs in, locally and in CI
+- [Batch Runs](/docs/kane-cli-testrun/): run every role's test in one command
+
+<KaneCliCta />

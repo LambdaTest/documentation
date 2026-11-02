@@ -1,0 +1,234 @@
+---
+title: "CI/CD and DevOps Testing Use Cases"
+sidebarTitle: "CI/CD & DevOps"
+description: "CI/CD and DevOps testing use cases for Kane CLI: gate a deploy in GitHub Actions, monitor production on a schedule, check the UI before a pull request, run suites in parallel, and move suites to the cloud grid."
+keywords: ['kane cli ci/cd', 'deploy gate testing', 'synthetic monitoring', 'github actions browser testing', 'pre-pr checks', 'kane cli', 'kaneai', 'testmu ai']
+"og:description": "CI/CD and DevOps testing use cases for Kane CLI: gate a deploy in GitHub Actions, monitor production on a schedule, check the UI before a pull request, run suites in parallel, and move suites to the cloud grid."
+---
+
+import { KaneCliCta } from "/snippets/KaneCliCta.mdx";
+
+A browser check is most useful when it runs without anyone asking for it: on every pull request, before every deploy, and on a schedule against production. These use cases put Kane CLI into that loop, so a broken flow stops a merge or a deploy and the evidence for the failure is attached to the job.
+
+Every Kane CLI command returns a standard exit code, `0` passed, `1` failed, `2` an auth, setup, or parse error, and `3` a timeout or cancellation, so any CI system can act on the result. See [CI/CD Integration](/docs/kane-cli-cicd/) for GitHub Actions, GitLab CI, Jenkins, Bitbucket Pipelines, and Docker.
+
+## Gate a deploy on browser flows
+
+<img loading="lazy" src="/assets/images/kane-cli/sketchnotes/cicd-deploy-gate.svg" alt="Gate the deploy on a passing flow: a commit is built, a pipeline step runs kane-cli run with --headless and --agent, and the exit code (0 passed, 1 failed, 2 auth error, 3 timeout) decides whether the deploy continues" width="1000" height="563" />
+
+<video class="right-side" width="100%" controls id="vid">
+<source src="https://assets.testmuai.com/resources/videos/kane-cli/kane-cli-ci-cd-ready.mp4" type="video/mp4" />
+</video>
+
+A deploy that passes unit tests can still ship a checkout that never loads. In this recording, a GitHub Actions workflow installs Kane CLI, runs four browser flows against the live deploy from a smoke script, and uploads the evidence pack as an artifact, with all four flows passing.
+
+1. Store your username and access key as repository secrets named `LT_USERNAME` and `LT_ACCESS_KEY`, under **Settings > Secrets and variables > Actions**.
+2. Add a workflow that installs Chrome and Kane CLI and runs your flows headless:
+
+   ```yaml .github/workflows/kane-tests.yml
+   name: Browser flows
+   on: [push]
+
+   jobs:
+     kane-tests:
+       runs-on: ubuntu-latest
+       steps:
+         - uses: actions/checkout@v4
+         - uses: actions/setup-node@v4
+           with:
+             node-version: '20'
+         - uses: browser-actions/setup-chrome@v1
+         - run: npm install -g @testmuai/kane-cli
+         - name: Run browser flows against the deploy
+           env:
+             LT_USERNAME: ${{ secrets.LT_USERNAME }}
+             LT_ACCESS_KEY: ${{ secrets.LT_ACCESS_KEY }}
+           run: |
+             kane-cli testrun run --tags smoke --parallel 4 --headless \
+               --on-failure fail-fast \
+               --username "$LT_USERNAME" --access-key "$LT_ACCESS_KEY"
+         - name: Upload Kane evidence
+           if: always()
+           uses: actions/upload-artifact@v4
+           with:
+             name: kane-evidence
+             path: .testmuai/evidence/
+   ```
+
+3. Tag the `_test.md` files that guard the release with `tags: [smoke]`, so the workflow picks them up.
+4. Push a commit. The job fails on any non-zero exit code, which blocks the deploy step that follows it.
+5. Open the uploaded evidence pack when a flow fails, to see the failing step's screenshot, console log, and network log.
+
+<Tip>
+For a shorter setup, use the official GitHub Action, `LambdaTest/kane-cli/integrations/github-action/kane-cli-browser-run@main`. It installs everything, runs an objective or a glob of `_test.md` files, uploads the evidence, and posts the verdict on the pull request. See [GitHub Actions](/docs/kane-cli-cicd/#platform-guides).
+</Tip>
+
+## Monitor production flows on a schedule
+
+<img loading="lazy" src="/assets/images/kane-cli/sketchnotes/scheduled-runs-and-grid.svg" alt="Watch production on a schedule: a clock triggers a run every hour against the production signup and checkout flows, and the same natural language flow also runs across Chrome and Edge on Windows, macOS, and Linux on the cloud grid" width="1000" height="563" />
+
+<video class="right-side" width="100%" controls id="vid">
+<source src="https://assets.testmuai.com/resources/videos/kane-cli/use-cases/synthetic-monitoring.mp4" type="video/mp4" />
+</video>
+
+Uptime checks confirm a server answers, while synthetic monitoring confirms a customer can still sign in and pay. This full walkthrough builds a synthetic monitor for a production app in GitHub Actions: the first scheduled run passes, a price change in the app then breaks the checkout journey, the next run fails and sends an alert email, and the run after the fix passes again.
+
+1. Write each critical journey as one Kane CLI run in a shell script. The script stops with exit code `1` on the first broken journey, which fails the job:
+
+   ```bash tests/synthetic.sh
+   #!/bin/bash
+   # Synthetic monitoring: critical production journeys.
+   VARS="./tests/variables.json"
+
+   run_test() {
+     local name="$1"
+     local objective="$2"
+     echo "=== Monitoring: $name ==="
+     if kane-cli run "$objective" \
+         --variables-file "$VARS" \
+         --username "$LT_USERNAME" \
+         --access-key "$LT_ACCESS_KEY" \
+         --agent --headless \
+         --timeout 120 --max-steps 20; then
+       echo "OK: $name"
+     else
+       echo "ALERT: $name is broken in production (exit $?)"
+       exit 1
+     fi
+   }
+
+   run_test "Login page reachable" \
+     "go to {{app_url}}, assert the page contains 'Ship your idea faster', assert the navigation contains 'Pricing'"
+
+   run_test "Money path: checkout total" \
+     "go to {{app_url}}, click the 'Buy Pro' button, assert the page contains 'Total due today', assert the total due today shows '\$19.00'"
+
+   echo "All critical journeys healthy."
+   ```
+
+2. Keep the production URL and expected values in a variables file, so the same script can watch staging by swapping one file:
+
+   ```json tests/variables.json
+   {
+     "app_url": { "value": "https://your-app.com" },
+     "expected_pro_price": { "value": "$19" }
+   }
+   ```
+
+3. Add a workflow that runs the script on a schedule, emails the team when it fails, and always uploads the run's evidence:
+
+   ```yaml .github/workflows/kane-synthetic.yml
+   name: Synthetic Monitoring
+
+   on:
+     schedule:
+       - cron: '0 9 * * 1,5'   # 09:00 UTC every Monday and Friday
+     workflow_dispatch:
+
+   jobs:
+     synthetic:
+       runs-on: ubuntu-latest
+       steps:
+         - uses: actions/checkout@v4
+         - uses: actions/setup-node@v4
+           with:
+             node-version: '20'
+         - uses: browser-actions/setup-chrome@v1
+         - run: npm install -g @testmuai/kane-cli
+         - name: Monitor critical journeys
+           env:
+             CI: 'true'
+             LT_USERNAME: ${{ secrets.LT_USERNAME }}
+             LT_ACCESS_KEY: ${{ secrets.LT_ACCESS_KEY }}
+           run: |
+             chmod +x ./tests/synthetic.sh
+             ./tests/synthetic.sh
+
+         - name: Email alert on failure
+           if: failure()
+           uses: dawidd6/action-send-mail@v3
+           with:
+             server_address: smtp.gmail.com
+             server_port: 465
+             secure: true
+             username: ${{ secrets.ALERT_EMAIL }}
+             password: ${{ secrets.ALERT_EMAIL_PASSWORD }}
+             subject: "Synthetic monitor FAILED: production journey broken"
+             to: team@your-company.com
+             from: Synthetic Monitor <${{ secrets.ALERT_EMAIL }}>
+             body: |
+               A critical production journey failed.
+               Run details: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+
+         - name: Upload Kane evidence
+           if: always()
+           uses: actions/upload-artifact@v4
+           with:
+             name: synthetic-monitor-logs
+             path: /home/runner/.testmuai/kaneai/sessions/
+   ```
+
+4. Trigger the first run by hand from the **Actions** tab with **Run workflow**, which `workflow_dispatch` enables, and confirm both journeys pass before you rely on the schedule.
+5. When a journey breaks, the job log shows which assertion failed and the value Kane CLI found. In the recording, the checkout page shows a different total from the expected `$19.00`, so the money path fails and the alert email arrives a few minutes later.
+6. Open the `synthetic-monitor-logs` artifact from the failed run to see the screenshot, console log, and network log for the failing step, then fix the app and rerun the workflow.
+
+<Tip>
+Use the same pattern with any alerting tool your team already uses, such as a Slack or PagerDuty step, by replacing the email step and keeping `if: failure()`. Point purchase journeys at a test account or a sandbox payment method, so the monitor never places a real order.
+</Tip>
+
+When the list grows past a few journeys, commit each one as a `_test.md` file tagged `monitor` and replace the script with `kane-cli testrun run --tags monitor --headless --username "$LT_USERNAME" --access-key "$LT_ACCESS_KEY"`. Committed tests replay from their recordings, so a frequent schedule does not call the model unless a step has to be re-authored after the page changes.
+
+## Check the UI before you open a pull request
+
+<img loading="lazy" src="/assets/images/kane-cli/sketchnotes/coding-agent-loop.svg" alt="The coding agent loop: the agent writes the code, runs Kane CLI, reads the run_end status, and on a failure reads the result, fixes the code, and runs again until it passes" width="1000" height="563" />
+
+<video class="right-side" width="100%" controls id="vid">
+<source src="https://assets.testmuai.com/resources/videos/kane-cli/kane-cli-before-pr-ui-check.mp4" type="video/mp4" />
+</video>
+
+The cheapest place to catch a broken flow is on the machine that broke it. In this recording, a `verify.sh` script wraps one Kane CLI run that signs in, creates a project, and checks that the project appears in the sidebar, and the developer runs it with `npm run verify:create-project` before opening a pull request.
+
+1. Write the check as a script in your repo:
+
+   ```bash verify.sh
+   #!/bin/sh
+   kane-cli run --agent --headless --timeout 90 --name create-project \
+     "Go to http://localhost:3000/login, sign in as {{email}} with password {{password}}, click 'New project', fill the name 'Smoke', click Create, and verify the project appears in the sidebar"
+   ```
+
+2. Add it to `package.json` as `"verify:create-project": "./verify.sh"`, so anyone on the team, or a coding agent, runs it the same way.
+3. Run it against your local server before you push. The script exits with Kane CLI's exit code, so a failure stops a pre-push hook.
+4. Tell your coding agent the rule once, for example *"Run npm run verify:create-project before you open a PR, and don't open it if the check fails."* See [AI Coding Agents](/docs/kane-cli-with-ai-coding-agents/#pre-commit-and-pre-pr-smoke-checks).
+5. Run the same script in CI, so the local result and the pipeline result come from one command.
+
+## Run a suite in parallel with one exit code
+
+Looping over test files in a shell script gives you many exit codes and many evidence folders. `kane-cli testrun run` runs a selection of `_test.md` files as one execution with one exit code and one sealed evidence pack.
+
+1. Select tests by tag or by path, for example `--tags smoke,checkout` or `--match '^tests/web/'`.
+2. Add `--parallel 4` to run four tests at a time. Each worker launches its own Chrome, so size the number to your runner.
+3. Add `--on-failure fail-fast` when one failure should stop the rest, or leave the default `continue` to collect every result.
+4. Preview the plan without running anything using `--dry-run`.
+5. Archive `.testmuai/evidence/*.evidence` as the job artifact, so anyone can open the run in the hosted viewer.
+
+See [Batch Runs](/docs/kane-cli-testrun/) for every flag.
+
+## Move the suite to the cloud grid
+
+A CI runner without Chrome, Xcode, or Android Studio can still run your browser and app suites. `kane-cli testrun run --remote` turns the suite into one HyperExecute job on the cloud grid and returns the recordings and the evidence pack to your checkout.
+
+1. Install the plugin once with `kane-cli plugin install remote-execution`.
+2. Run a web suite on four grid runners with `kane-cli testrun run --match '^tests/web/' --remote --parallel 4`.
+3. Run a mobile suite from a Linux runner by adding a grid device, for example `--remote --device-name "Pixel 7" --os-version 14`. List the devices the grid can provide with `kane-cli devices list --target emulator --remote`.
+4. Keep web and mobile tests in separate runs, and allow a timeout of about ten minutes for the first job.
+
+See [Remote Runs on the Cloud Grid](/docs/kane-cli-remote-execution/) for plan requirements and limits.
+
+## Next steps
+
+- [CI/CD Integration](/docs/kane-cli-cicd/): platform guides for GitHub Actions, GitLab CI, Jenkins, Bitbucket, and Docker
+- [Regression & E2E Testing](/docs/kane-cli-regression-e2e-testing/): build the suite these pipelines run
+- [Evidence](/docs/kane-cli-evidence/): open and share the evidence pack from a failed job
+- [Exit Codes](/docs/kane-cli-modes/#exit-codes): the full mapping
+
+<KaneCliCta />
