@@ -72,12 +72,18 @@ Read this table once before you start. Most "it works on SaaS but not here" issu
 
 ## The end-to-end journey
 
-```text
-Find your way and copy credentials  ->  Create a Project  ->  Install the CLI  ->  Write the YAML
-     ->  Run a job  ->  Create a Workflow  ->  Manage its state  ->  Review results and rerun
-```
+Work through these steps in order. Each one lists what to do, what is specific to on-prem, and where the full feature docs live.
 
-Each step below lists what to do, what is specific to on-prem, and where the full feature docs live.
+| Step | What you do | Result |
+|------|-------------|--------|
+| [1. Find your way around the dashboard](#step-1-find-your-way-around-the-dashboard) | Sign in and copy your username and access key | You can authenticate the CLI |
+| [2. Create a Project](#step-2-create-a-project) | Connect your Git repository and add secrets | A home for your suite's jobs and workflows |
+| [3. Install and configure the CLI](#step-3-install-and-configure-the-cli) | Download the CLI from **Help** > **Hyperexecute CLI** | The CLI runs on your machine |
+| [4. Prepare your YAML](#step-4-prepare-your-yaml) | Write and validate `hyperexecute.yaml` | HyperExecute knows what to run |
+| [5. Trigger a job from the CLI](#step-5-trigger-a-job-from-the-cli) | Run the CLI with `--onprem-host` | Your first job runs on your deployment |
+| [6. Configure and run a Workflow](#step-6-configure-and-run-a-workflow) | Set a schedule, links and variables | The suite runs without anyone starting it |
+| [7. Manage workflow states](#step-7-manage-workflow-states) | Pause, resume or extend a workflow | Runs stop and start when you need them to |
+| [8. Review results and rerun failures](#step-8-review-results-and-rerun-failures) | Read reports and artifacts, rerun failed tests | You know what failed and why |
 
 ## Before you start
 
