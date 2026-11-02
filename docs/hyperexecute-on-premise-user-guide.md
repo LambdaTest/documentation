@@ -72,18 +72,68 @@ Read this table once before you start. Most "it works on SaaS but not here" issu
 
 ## The end-to-end journey
 
-Work through these steps in order. Each one lists what to do, what is specific to on-prem, and where the full feature docs live.
+Eight steps, start to finish. Click any card to jump straight to the full instructions.
 
-| Step | What you do | Result |
-|------|-------------|--------|
-| [1. Find your way around the dashboard](#step-1-find-your-way-around-the-dashboard) | Sign in and copy your username and access key | You can authenticate the CLI |
-| [2. Create a Project](#step-2-create-a-project) (if needed) | Connect your Git repository and add secrets. Skip this if your organization already onboarded your Project through its own onboarding process | A home for your suite's jobs and workflows |
-| [3. Install and configure the CLI](#step-3-install-and-configure-the-cli) | Download the CLI from **Help** > **Hyperexecute CLI** | The CLI runs on your machine |
-| [4. Prepare your YAML](#step-4-prepare-your-yaml) | Write and validate `hyperexecute.yaml` | HyperExecute knows what to run |
-| [5. Trigger a job from the CLI](#step-5-trigger-a-job-from-the-cli) | Run the CLI with `--onprem-host` | Your first job runs on your deployment |
-| [6. Configure and run a Workflow](#step-6-configure-and-run-a-workflow) | Set a schedule, links and variables | The suite runs without anyone starting it |
-| [7. Manage workflow states](#step-7-manage-workflow-states) | Pause, resume or extend a workflow | Runs stop and start when you need them to |
-| [8. Review results and rerun failures](#step-8-review-results-and-rerun-failures) | Read reports and artifacts, rerun failed tests | You know what failed and why |
+<div style={{
+  display: 'grid',
+  gridTemplateColumns: 'repeat(auto-fit, minmax(210px, 1fr))',
+  gap: '14px',
+  margin: '22px 0 10px',
+}}>
+  {[
+    { n: 1, t: 'Find your way',       s: 'Sign in and copy your creds',   h: '#step-1-find-your-way-around-the-dashboard' },
+    { n: 2, t: 'Create a Project',    s: 'Connect Git, add secrets',      h: '#step-2-create-a-project' },
+    { n: 3, t: 'Install the CLI',     s: 'Download the binary and config', h: '#step-3-install-and-configure-the-cli' },
+    { n: 4, t: 'Write the YAML',      s: 'Describe your test matrix',     h: '#step-4-prepare-your-yaml' },
+    { n: 5, t: 'Run a job',           s: 'Trigger your first CLI run',    h: '#step-5-trigger-a-job-from-the-cli' },
+    { n: 6, t: 'Create a Workflow',   s: 'Schedule or chain your jobs',   h: '#step-6-configure-and-run-a-workflow' },
+    { n: 7, t: 'Manage its state',    s: 'Pause, resume, extend',         h: '#step-7-manage-workflow-states' },
+    { n: 8, t: 'Review and rerun',    s: 'Open reports, rerun failures',  h: '#step-8-review-results-and-rerun-failures' },
+  ].map(({ n, t, s, h }) => (
+    <a
+      key={n}
+      href={h}
+      style={{
+        display: 'block',
+        padding: '14px 16px',
+        borderRadius: '10px',
+        border: '1px solid var(--ifm-color-emphasis-200)',
+        background: 'var(--ifm-background-surface-color)',
+        color: 'inherit',
+        textDecoration: 'none',
+        transition: 'border-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease',
+      }}
+      onMouseEnter={e => {
+        e.currentTarget.style.borderColor = 'var(--ifm-color-primary)';
+        e.currentTarget.style.transform = 'translateY(-2px)';
+        e.currentTarget.style.boxShadow = '0 6px 16px rgba(15, 23, 42, 0.08)';
+      }}
+      onMouseLeave={e => {
+        e.currentTarget.style.borderColor = 'var(--ifm-color-emphasis-200)';
+        e.currentTarget.style.transform = 'none';
+        e.currentTarget.style.boxShadow = 'none';
+      }}
+    >
+      <div style={{
+        display: 'inline-flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        width: '26px',
+        height: '26px',
+        borderRadius: '999px',
+        background: 'var(--ifm-color-primary)',
+        color: 'var(--ifm-color-content-inverse)',
+        fontSize: '13px',
+        fontWeight: 700,
+        marginBottom: '10px',
+      }}>{n}</div>
+      <div style={{ fontSize: '14px', fontWeight: 600, lineHeight: 1.3 }}>{t}</div>
+      <div style={{ fontSize: '12px', color: 'var(--ifm-color-emphasis-600)', marginTop: '4px', lineHeight: 1.4 }}>{s}</div>
+    </a>
+  ))}
+</div>
+
+Each step below lists what to do, what is specific to on-prem, and where the full feature docs live.
 
 ## Before you start
 
