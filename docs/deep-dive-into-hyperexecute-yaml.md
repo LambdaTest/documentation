@@ -858,6 +858,7 @@ This document contains detailed explanations for all YAML flags, providing an in
 The YAML format is the same on SaaS and on-premise. A few keys behave differently on-premise, and their sections include a note:
 
 - [`runson`](#runson): Linux and Windows only. macOS values are not available.
+- [`testDiscovery`](#testdiscovery): use `mode: remote`. Local discovery is not available on-premise.
 - [`env`](#env): your admin can restrict which environment variables are allowed. The CLI warns you and names any variable that is not allowed.
 - [`tunnel`](#tunnel): usually not needed, and ignored for jobs started from a Workflow or the Trigger API.
 - [`sourcePayload`](#sourcepayload) and Git access go through your organization's own or a dedicated GitHub App.
@@ -1014,10 +1015,10 @@ mode: remote
 ```
 
 :::info On-premise deployments
-On-premise deployments have no macOS machines. Test discovery and test execution run on Linux or Windows only.
+On-premise deployments support `mode: remote` only. `mode: local` is not available on-premise, whether you start the job from the CLI or from a Workflow.
 
-- With `mode: remote`, discovery runs on a Linux or Windows machine in your deployment. Write the discovery `command` for that OS, and do not use macOS-only commands or paths.
-- With `mode: local`, discovery runs where the CLI runs, which can be a Mac. The discovered tests still execute on Linux or Windows, so keep `runson` and `matrix.os` to `linux` or `win`.
+- Discovery runs on a Linux or Windows machine in your deployment. There are no macOS machines on-premise, so write the discovery `command` for Linux or Windows and do not use macOS-only commands or paths.
+- Keep `runson` and `matrix.os` to `linux` or `win`.
 :::
 
 **`mode: local`**
@@ -1055,7 +1056,7 @@ command: grep 'public class' src/test/java/hyperexecute/*.java | awk '{print$3}'
 ```
 
 :::tip
-- Test orchestration will happen with [`mode: local`](/support/docs/deep-dive-into-hyperexecute-yaml/#mode) only.
+- Test orchestration will happen with [`mode: local`](/support/docs/deep-dive-into-hyperexecute-yaml/#mode) only. On-premise deployments support `mode: remote` only.
 - 📕 Learn how to perform [dependent test discovery](/support/docs/hyperexecute-how-to-perform-dependent-test-based-discovery/).
 :::
 

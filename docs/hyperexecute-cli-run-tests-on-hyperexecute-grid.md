@@ -862,7 +862,7 @@ If you're running on a minimal alpine image, please make sure to install essenti
 
 ### Trigger a job on an on-premise deployment
 
-Add `--onprem-host` with the host name of your deployment:
+Add `--onprem-host` with the host name of your deployment. Your YAML must use `testDiscovery` with `mode: remote`, because local discovery is not available on-premise.
 
 ```bash
 ./hyperexecute --user <YOUR_USERNAME> --key <YOUR_ACCESS_KEY> --config RELATIVE_PATH_OF_YOUR_YAML_FILE --onprem-host <YOUR_ONPREM_HOST>

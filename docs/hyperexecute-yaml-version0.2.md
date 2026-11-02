@@ -225,6 +225,7 @@ This version introduces several new features and improvements over Version 0.1. 
 Version 0.2 works the same way on-premise, with these points to check:
 
 - Use `runson: linux` or `runson: win`. On-premise deployments do not run macOS.
+- Set `discoveryMode: remote`. Local discovery is not available on-premise.
 - Your admin maps Linux frameworks to queues for each environment. If a runner does not start, ask which queue serves your framework.
 - Jobs that do not name an environment run in your organization's default environment.
 
