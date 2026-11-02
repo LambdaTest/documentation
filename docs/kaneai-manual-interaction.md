@@ -228,7 +228,7 @@ This ensures that recorded steps remain consistent with the actual UI interactio
 
 Once your actions are recorded as steps, you can rename them to make the step list easier to read. Rename test steps for API, JS, Database, Network Assertion and Visual Comparison to improve clarity and consistency without affecting functionality.
 
-#### Why Rename Steps
+### Why Rename Steps
 ***
 
 The **Rename Test Steps** feature allows users to change a test step’s name without changing how it works.
@@ -240,7 +240,7 @@ The **Rename Test Steps** feature allows users to change a test step’s name wi
 - Works for Web and Mobile slash command instructions
 - The step names are updated even in the execution command logs.
 
-#### How to Rename a Step
+### How to Rename a Step
 ***
 
 1. Ensure the authoring session is open and the relevant step is visible.
@@ -253,7 +253,7 @@ The **Rename Test Steps** feature allows users to change a test step’s name wi
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/rename-instructions/rename_instruction.jpg').default} alt="rename instructions" className="doc_img"/>
 
-#### Rename Limitations
+### Rename Limitations
 ***
 
 - Supported instruction types:
@@ -266,7 +266,7 @@ The **Rename Test Steps** feature allows users to change a test step’s name wi
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/rename-instructions/summary_page.jpg').default} alt="rename summary page" className="doc_img"/>
 
-#### Rename Troubleshooting
+### Rename Troubleshooting
 ***
 
 | Issue | Cause | Solution |

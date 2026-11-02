@@ -260,7 +260,7 @@ Replace `<TestRunID>` with the actual ID from the URL and set additional optiona
 Test case failure retries are supported only for code exported from **May 10, 2026 onwards**. For previously exported code, retries are triggered only on test runner command failure. To use this capability, regenerate the code export for your test cases in Test Manager.
 :::
 
-#### Example API Call:
+### Example API Call:
 
 <VerifiedTag value="Verified" />
 
@@ -314,7 +314,7 @@ curl --location 'https://test-manager-api.lambdatest.com/api/atm/v1/hyperexecute
 }'
 ```
 
-#### Sample API Response:
+### Sample API Response:
 
 The API response contains the job ID for both jobs created for desktop web tests as well as mobile tests on real devices. Here is a sample response for a test run which contains both app and web test cases:
 

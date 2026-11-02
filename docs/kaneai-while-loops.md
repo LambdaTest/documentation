@@ -212,7 +212,7 @@ The condition editor opens in **natural language mode** by default, matching Kan
 
 
 
-#### Option A: Natural Language
+### Option A: Natural Language
 
 Type your condition as a plain‑English sentence. KaneAI interprets the intent and re‑evaluates it at runtime. Examples:
 
@@ -221,7 +221,7 @@ Type your condition as a plain‑English sentence. KaneAI interprets the intent 
 - `while {{count}} is greater than 0`
 - `while {{job_status}} is not "complete"`
 
-#### Option B: Operand & Operator
+### Option B: Operand & Operator
 
 Build the condition explicitly using a **left operand**, a **comparison operator**, and a **right operand**:
 
@@ -247,7 +247,7 @@ Build the condition explicitly using a **left operand**, a **comparison operator
 
 Both operands support variables (`{{var_name}}`), dataset parameters (`${param_name}`), extracted text, and literal values.
 
-#### Confirming the Condition
+### Confirming the Condition
 
 Confirm the condition to open the loop body. Once confirmed, the condition remains editable until the loop begins executing. You can reopen it to adjust operators, operands, or the natural‑language expression.
 
@@ -271,7 +271,7 @@ You can add any of the following inside a loop body:
 
 **Result:** Each step you add runs once per iteration while the condition holds true.
 
-#### Where steps land inside the loop body
+### Where steps land inside the loop body
 
 The cursor decides whether a new step joins the loop body or sits outside it:
 

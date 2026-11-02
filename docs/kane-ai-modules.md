@@ -497,7 +497,7 @@ This feature is currently being rolled out gradually and may not be available to
 
 You can start a bulk module update from two places.
 
-#### From the Module Detail Page
+### From the Module Detail Page
 
 1. Navigate to the module whose version you want to bulk-update.
 2. Click the **Update Test Cases** button.
@@ -505,7 +505,7 @@ You can start a bulk module update from two places.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/bulk-module-update/module-detail-cta.png').default} alt="Update Test Cases button on the module detail page" className="doc_img img_center"/>
 
-#### From the Test Case Summary Page
+### From the Test Case Summary Page
 
 1. Open a test case that uses the module version you want to update.
 2. If there is a newer version of the same module and other test cases still use the older version, you see an **Update Module for all Linked Test Cases** button.
@@ -518,7 +518,7 @@ You can start a bulk module update from two places.
 
 Before the bulk update flow starts, KaneAI checks whether the selected module version is authored and validated and whether there are eligible test cases to update.
 
-#### When Update Is Disabled
+### When Update Is Disabled
 
 The **Update Test Cases** button is disabled if:
 
@@ -536,7 +536,7 @@ You will see a message such as:
 
 After starting the flow, you see a list of all test cases linked to the target module version.
 
-#### Ineligible Test Cases
+### Ineligible Test Cases
 
 | Case | Why it cannot be updated |
 |------|--------------------------|
@@ -577,12 +577,12 @@ After you trigger the update, you see a success banner along with a toast messag
 
 Once the bulk update is completed:
 
-#### Bulk Job Execution
+### Bulk Job Execution
 
 - A single bulk job is created
 - All selected eligible test cases have their module version updated
 
-#### Changes on Each Updated Test Case
+### Changes on Each Updated Test Case
 
 For each updated test case:
 
@@ -614,7 +614,7 @@ The following limitations currently apply to Bulk Module Update:
 ### Bulk Update Troubleshooting
 ***
 
-#### "Update Test Cases" Button Is Disabled
+### "Update Test Cases" Button Is Disabled
 
 **Symptoms:**
 - The **Update Test Cases** button on the module detail page is disabled
@@ -625,7 +625,7 @@ The following limitations currently apply to Bulk Module Update:
 2. Ensure there are eligible KaneAI test cases linked to this module version (non-faulty, non-unverified).
 3. Refresh the module detail page and try again.
 
-#### Some Test Cases Are Greyed Out in the Selection List
+### Some Test Cases Are Greyed Out in the Selection List
 
 **Symptoms:**
 - Certain test cases appear greyed out and cannot be selected
@@ -636,7 +636,7 @@ The following limitations currently apply to Bulk Module Update:
 2. For **non-KaneAI** test cases: bulk update is not supported; update them manually if needed.
 3. For **unverified** test cases: complete the verification steps, then revisit the bulk update flow.
 
-#### Tests Still Show "Code-Gen Unvalidated" After Update
+### Tests Still Show "Code-Gen Unvalidated" After Update
 
 **Symptoms:**
 - After the bulk update, test cases show: "Code-Gen updated after module update – will be validated on next execution."

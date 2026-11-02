@@ -283,7 +283,7 @@ Example:
 - `Wait for 3 seconds`
 - `Assert confirmation text is visible`
 
-#### Step Timeout (per-step wait)
+### Step Timeout (per-step wait)
 
 By default, each App step waits up to **10 seconds** for its target element to appear. On slow-loading screens, you can override this on a **per-step** basis instead of adding fixed `wait` steps:
 

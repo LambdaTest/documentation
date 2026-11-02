@@ -195,10 +195,10 @@ All KaneAI test cases with generated code are available for selection here, rega
 
 A test case that is still missing an assignee or a configuration is flagged on its row, so you can see what is left to complete before the run can be saved.
 
-#### Set Configurations
+### Set Configurations
 - Choose from available desktop browser and mobile app configurations. If a new configuration is needed, click on Create Configuration button and choose from thousands of configuration options.
 
-#### Create New Configuration
+### Create New Configuration
 - Enter **configuration name** and the following details to create a new Desktop configuration:
     - **OS :** e.g., macOS.
     - **OS Version :** e.g., Monterey.

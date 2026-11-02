@@ -170,13 +170,13 @@ Steps that include sub-actions - such as loops, conditionals, or JavaScript snip
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/new-test-run-instance/test-run-instance-quick-view.png').default} alt="test-instance-steps-panel" className="doc_img"/>
 
-#### Auto-Heal Visibility
+### Auto-Heal Visibility
 
 When [Auto-Heal](/support/docs/kaneai-auto-heal/) recovers a step during execution, that step displays an **auto-heal indicator** icon next to its execution duration in the steps panel. This gives you clear, step-level visibility into exactly which steps were healed in a run, without digging through execution logs.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/new-test-run-instance/test-run-instance-auto-heal-step.png').default} alt="auto-heal-indicator-on-step" className="doc_img"/>
 
-#### Autoplay Steps
+### Autoplay Steps
 
 Click the **Autoplay Steps** button at the top of the steps panel to automatically walk through each step in sequence. As each step is highlighted, the center panel updates to show the corresponding screenshot captured during execution. This provides a visual replay of the entire test execution without needing to click through each step manually.
 
@@ -353,7 +353,7 @@ The **Steps** panel lists the steps you authored. Expand a step to see each acti
 
 The center panel shows the page at the selected step, with its URL. The bar below the screenshot marks each action, so you can jump to any point in the run. Click **Hide Cursor** to hide the cursor in the screenshots.
 
-#### Test Execution Logs
+### Test Execution Logs
 
 Click the logs icon in the header to open **Test Execution Logs**.
 
@@ -380,7 +380,7 @@ Coverage is not yet available for KaneAI test runs. For these runs, the **Covera
 
 When a test in the run does not pass, the Evidence Report points you to the cause.
 
-#### Need Your Attention
+### Need Your Attention
 
 The **Report** tab of an unsuccessful run shows a **Need your attention** panel. It lists each failure with its priority and a one-line cause, along with counts of failed, triaged, and untriaged failures. Click **View RCA** to open the root cause analysis.
 
@@ -388,13 +388,13 @@ The **Report** tab of an unsuccessful run shows a **Need your attention** panel.
 
 In this example, the run shows **Broken**. The test could not click a control it had recorded, so the failure was triaged as an automation bug rather than a failed check. It counts under **Others** in the summary.
 
-#### Issues
+### Issues
 
 The **Issues** tab lists every issue found in the evidence pack. Each issue shows its summary, the test and step where it happened, who triaged it, and a category such as **Automation bug**. Use **Search issue** to find an issue, and click it to open its root cause analysis.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/new-test-run-instance/evidence-reporting/issues-tab.webp').default} alt="Issues tab listing one issue triaged by KaneAI and tagged Automation bug" className="doc_img"/>
 
-#### Root Cause Analysis
+### Root Cause Analysis
 
 The **RCA** panel explains the failure.
 
@@ -405,7 +405,7 @@ The **RCA** panel explains the failure.
 - **How to fix it** - A suggested fix. Click **Copy fix prompt** to copy it.
 - Click **Copy RCA** to copy the whole analysis, and use **Was this helpful?** to rate it.
 
-#### Go to the Failed Step
+### Go to the Failed Step
 
 Open the failed instance from the **Test Instances** tab.
 

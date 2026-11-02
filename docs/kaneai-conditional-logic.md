@@ -214,11 +214,11 @@ Click the **If** header to open the condition editor. You can define conditions 
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/if-else/condition-switcher.png').default} alt="Condition mode switcher" className="doc_img"/>
 
-#### Option A: Natural Language
+### Option A: Natural Language
 
 Type your condition as a plain-English sentence (e.g., "login button is visible"). KaneAI interprets the intent and evaluates it at runtime.
 
-#### Option B: Operand & Operator
+### Option B: Operand & Operator
 
 Build the condition explicitly using left operand, operator, and right operand:
 
@@ -242,7 +242,7 @@ Build the condition explicitly using left operand, operator, and right operand:
 
 **Result:** The **If** branch runs only when the condition evaluates to true at runtime.
 
-#### Adding multiple conditions
+### Adding multiple conditions
 
 You can combine conditions using **AND** / **OR** logic:
 
@@ -270,7 +270,7 @@ Use the step input field or press **/** inside a branch to open the slash comman
 
 **Result:** The steps you add run only when that branch's condition matches.
 
-#### Where steps land inside a block
+### Where steps land inside a block
 
 The cursor decides which branch a new step belongs to. Inside an If / Else‑If / Else block it can sit at any step boundary:
 

@@ -197,7 +197,7 @@ hold down the record button for 5 seconds
 long press the Submit button for 30 seconds
 ```
 
-#### Supported NL Patterns
+### Supported NL Patterns
 
 | Pattern | Example | Duration |
 |---------|---------|----------|
@@ -206,14 +206,14 @@ long press the Submit button for 30 seconds
 | Alternative phrasing | `tap and hold the profile avatar` | 1 second |
 | Hold down | `hold down the record button for 5 seconds` | 5 seconds |
 
-#### Duration Rules
+### Duration Rules
 
 - **Default:** 1 second when no duration is specified.
 - **Range:** 0.5 seconds (minimum) to 30 seconds (maximum).
 - **Units:** Seconds only. Minutes, hours, and days are rejected.
 - **Accuracy:** Within ±200 ms of the specified duration.
 
-#### Disambiguation
+### Disambiguation
 
 Only phrases containing **`long press`**, **`press and hold`**, **`tap and hold`**, or **`hold down`** followed by a UI element trigger a long press.
 
@@ -265,7 +265,7 @@ tap twice on the like button
 tap thrice on the notification bell
 ```
 
-#### Supported NL Patterns
+### Supported NL Patterns
 
 | Pattern | Example | Frequency |
 |---------|---------|-----------|
@@ -278,7 +278,7 @@ tap thrice on the notification bell
 On mobile, **`click`** and **`tap`** are interchangeable. `double click X` maps to the same multi-click action as `double tap X`.
 :::
 
-#### Frequency Rules
+### Frequency Rules
 
 - **Maximum:** 20 clicks per instruction. Higher values are rejected as `INVALID_PARAMETER`.
 - **Phrasing:** Use `click X N times` for N ≥ 3. The literal phrase `triple click X` is not supported.
@@ -316,7 +316,7 @@ context click on the selected text
 secondary click on the canvas element
 ```
 
-#### Supported NL Patterns
+### Supported NL Patterns
 
 | Pattern | Example |
 |---------|---------|
@@ -325,7 +325,7 @@ secondary click on the canvas element
 | Context click | `context click on the table row` |
 | Secondary click | `secondary click on the canvas` |
 
-#### Disambiguation
+### Disambiguation
 
 The word **`right`** must directly modify the verb (`click` / `tap` / `press`) to trigger a right click. When `right` modifies a noun or is part of an adverb, it is treated as a normal click.
 
@@ -511,7 +511,7 @@ If a drag step fails on an element that doesn't respond to a long press (for exa
 
 Type the instruction into the KaneAI authoring panel.
 
-#### Supported Drag NL Patterns
+### Supported Drag NL Patterns
 
 | Pattern          | Example                            |
 | ---------------- | ---------------------------------- |
@@ -545,7 +545,7 @@ Natural language drag and drop works best when:
 
 With the session in the **Authoring Steps** state, perform the drag directly on the device viewport. The gesture is captured and the step lands at the cursor — there is no mode to switch to.
 
-#### Drag Gesture Classification
+### Drag Gesture Classification
 
 | Input                                  | Captured As |
 | -------------------------------------- | ----------- |
@@ -558,7 +558,7 @@ With the session in the **Authoring Steps** state, perform the drag directly on 
 For tap, long-press, multi-click, and right-click authoring, see the click sections above on this page.
 :::
 
-#### When Manual Interaction is Required
+### When Manual Interaction is Required
 
 - **Sliders**: volume, range, vertical, payment-style (e.g., slide-to-pay).
 - **Confirmation gestures**: slide-to-confirm, drag-to-pay, swipe-to-unlock.
@@ -599,7 +599,7 @@ Manual recording is recommended for any scenario where the **drop location isn't
 ### Drag Example Use Cases
 ***
 
-#### E-commerce Product Sorting
+### E-commerce Product Sorting
 
 <VerifiedTag value="Verified" />
 
@@ -607,7 +607,7 @@ Manual recording is recommended for any scenario where the **drop location isn't
 drag product "iPhone 15" from available items to comparison table
 ```
 
-#### Project Management Board
+### Project Management Board
 
 <VerifiedTag value="Verified" />
 
@@ -615,19 +615,19 @@ drag product "iPhone 15" from available items to comparison table
 move task card from "To Do" column to "In Progress" column
 ```
 
-#### Mobile Slider (Manual Interaction)
+### Mobile Slider (Manual Interaction)
 
 Use Manual Interaction to capture brightness, volume, or price-range sliders on Android and iOS. NL cannot resolve a moving slider thumb.
 
-#### Payment Confirmation Gesture (Manual Interaction)
+### Payment Confirmation Gesture (Manual Interaction)
 
 Capture a `slide-to-pay` or `swipe-to-unlock` gesture once via Manual Interaction, then reuse the step inside a Module across test cases.
 
-#### Form Builder (Desktop Web)
+### Form Builder (Desktop Web)
 
 Use Manual Interaction to drag form fields from a palette to a canvas, resize input fields, and reorder form sections.
 
-#### Data Visualization Dashboard
+### Data Visualization Dashboard
 
 Use Manual Interaction to adjust date-range sliders, resize chart panels, and rearrange dashboard widgets.
 

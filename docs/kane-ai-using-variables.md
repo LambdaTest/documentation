@@ -231,7 +231,7 @@ On the [variables page](https://www.testmuai.com/login/?redirectTo=https://kanea
 
 While reviewing a Manual Interaction step, replace any hard-coded value in the step's instruction with a Parameter, Variable, or Secret, without deleting or re-recording the step. This flow works on both **Desktop** and **Mobile App** sessions, and while the session is **Paused**, where step editing is available.
 
-#### Convert a Value in a Step
+### Convert a Value in a Step
 
 1. Open the recorded Manual Interaction step (for example, *Type in main search input field 'test.com'*).
 2. **Select the portion** of the instruction text you want to replace (for example, highlight `test.com`).
@@ -243,7 +243,7 @@ While reviewing a Manual Interaction step, replace any hard-coded value in the s
 4. Pick an existing entry from the searchable list, or click **`+` Create Parameter / Variable / Secret** to define a new one inline.
 5. The selected text is replaced with the variable reference (for example, `{{search_query}}`), and the step updates in place.
 
-#### Support matrix
+### Support matrix
 
 | Variable Type | Use Existing | Create New | Scope |
 |---------------|--------------|------------|-------|
@@ -270,7 +270,7 @@ Type the `{{` prefix in the KaneAI session input box to list all existing variab
 
 <img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/variables/syntax.png').default} alt="Syntax for Assertions" className="doc_img img_center"/>
 
-#### String variables example:
+### String variables example:
 
 <VerifiedTag value="Verified" />
 
@@ -286,7 +286,7 @@ assert {{username}} contains 'John'
 ```
 This will assert if the username variable contains the value "John".
 
-#### JSON variables example:
+### JSON variables example:
 JSON variables come from an API response used via the slash command or from a database query output. Reach a specific object inside the JSON hierarchy by typing the `{{` prefix in the KaneAI session input box. For example, assert that the email field inside the API response variable matches "john.doe@example.com".
 
 <VerifiedTag value="Verified" />
@@ -304,23 +304,23 @@ Here is a video to further explain the JSON variables usage:
 
 This section outlines the process of using JSON variables in KaneAI to assert specific objects within an API response. It provides a step-by-step procedure for executing API calls, examining responses, and performing assertions on both status and body of the response.
 
-#### Prerequisites
+### Prerequisites
 
 - Access to KaneAI platform
 - Basic understanding of API testing
 - Familiarity with JSON structures
 
-#### Step 1: Understanding JSON Variable Assertions
+### Step 1: Understanding JSON Variable Assertions
 
 In KaneAI, you can use JSON variables to perform detailed assertions on API responses. This allows you to validate specific objects and elements within the response structure.
 
-#### Step 2: Initiating an API Call
+### Step 2: Initiating an API Call
 
 - Navigate to your desired API endpoint (e.g., a pet store website)
 - Configure the necessary API call parameters
 - Execute the API request
 
-##### Example Workflow:
+### Example Workflow:
 
 - Select the appropriate HTTP method (GET, POST, etc.)
 - Add required headers
@@ -329,7 +329,7 @@ In KaneAI, you can use JSON variables to perform detailed assertions on API resp
 
 <img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/variables/json-variable/image2.jpg').default} alt="Configure and send an API request in KaneAI" className="doc_img img_center"/>
 
-#### Step 3: Accessing Response Variables
+### Step 3: Accessing Response Variables
 
 After executing the API call, KaneAI automatically generates variables containing:
 
@@ -340,7 +340,7 @@ After executing the API call, KaneAI automatically generates variables containin
 
 <img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/variables/json-variable/image3.jpg').default} alt="Response variables generated from the API call" className="doc_img img_center"/>
 
-#### Step 4: Asserting Response Status
+### Step 4: Asserting Response Status
 
 To assert the response status:
 
@@ -350,14 +350,14 @@ To assert the response status:
 
 <img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/variables/json-variable/image4.jpg').default} alt="Select the status variable using the double-curly-brace syntax" className="doc_img img_center"/>
 
-##### Example:
+### Example:
 
 - Expected status: 200
 - If actual status is 500, the assertion will fail
 
 <img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/variables/json-variable/image5.jpg').default} alt="Assert the expected response status code" className="doc_img img_center"/>
 
-#### Step 5: Asserting Response Body
+### Step 5: Asserting Response Body
 
 Navigate through the response body using the same double curly brace method:
 
@@ -367,7 +367,7 @@ Navigate through the response body using the same double curly brace method:
 
 <img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/variables/json-variable/image6.jpg').default} alt="Browse to a JSON element in the response body" className="doc_img img_center"/>
 
-##### Example Validation:
+### Example Validation:
 
 - Check if 'dogs' element exists in the response
 - Verify specific property values
@@ -407,7 +407,7 @@ You can choose the environment (for example, Dev, Stage, or Production) before a
 **Available on request.** Please reach out to Support to enable it. This feature is partially rolled out and will soon be generally available for all users.
 :::
 
-#### How to Select an Environment
+### How to Select an Environment
 
 1. Create a new test or open an existing test in the playground.
 2. In the session configuration panel, open the **Environment** dropdown and choose the environment you want to author against. Choosing an environment is optional.
@@ -415,7 +415,7 @@ You can choose the environment (for example, Dev, Stage, or Production) before a
 
 Once the session starts with an environment, the environment is locked and cannot be changed until the session ends. To author against a different environment, end the session and start a new one with the other environment selected.
 
-#### What Changes in a Session With a Selected Environment
+### What Changes in a Session With a Selected Environment
 
 | Behavior | With an environment selected | Without an environment |
 |---|---|---|
@@ -435,11 +435,11 @@ To fix it, add the variable to that environment from the [variables page](https:
 KaneAI does not check your test's variables against the environment when you select it. A missing variable is reported only when the step that uses it runs.
 :::
 
-#### Import a Module That Uses Environment Variables
+### Import a Module That Uses Environment Variables
 
 If you import a module that uses environment variables into a session without an environment, you're prompted to choose one. This counts as your one environment choice for the session. If the chosen environment is missing any of the module's environment variables, a warning names them and lets you create them in that environment.
 
-#### Choose an Environment Before Automating With KaneAI
+### Choose an Environment Before Automating With KaneAI
 
 You can also choose the environment before KaneAI starts authoring from:
 
@@ -449,7 +449,7 @@ You can also choose the environment before KaneAI starts authoring from:
 
 To use environment variables in manual test cases and modules, see Variables, Parameters, and Secrets in Manual Test Cases and Modules.
 
-#### Your Last Choice Is Remembered
+### Your Last Choice Is Remembered
 
 When you save or close a session, KaneAI stores the environment you used on the test case, including an environment you chose during the session. The next time you open the test for authoring, that environment is pre-selected.
 
@@ -464,12 +464,12 @@ Sessions started from [Kane CLI](/support/docs/kane-cli-introduction/) do not su
 
 Once you author a test case with environment variables, run it in any environment where those variables exist.
 
-#### From the UI
+### From the UI
 When you run or schedule a test run, choose the environment to execute on. All test cases in a test run execute on a single environment at a time.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/variables/test-run-environment.png').default} alt="From the UI" className="doc_img img_center"/>
 
-#### From the API
+### From the API
 Pass the environment name programmatically when you start a test run via the API, so you automate execution across environments. For example:
 
 :::note
@@ -512,7 +512,7 @@ You can create Secrets variables via:
 - Test Manager
 - Web/App Agent
 
-#### Create Secrets via Test Manager
+### Create Secrets via Test Manager
 **Step 1:** Navigate to the Test Manager. <br />
 **Step 2:** Click on the settings icon > Secrets.<br />
 **Step 3:** Click on the **Create new secret** button.<br />
@@ -520,7 +520,7 @@ You can create Secrets variables via:
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/secrets/test-manager-secret.gif').default} className="doc_img"/> 
 
-#### Create Secrets via Web/App Agent
+### Create Secrets via Web/App Agent
 **Step 1:** Navigate to the **"Write a Step"** field where you typically write your test scenarios in plain English. <br />
 **Step 2:** To switch to Secrets mode, type the forward slash / or click on the + icon. You will see a Secret pop-up option appear. <br />
 **Step 3:** Provide the secret key and value and click on the **Create Secret** button.
@@ -600,11 +600,11 @@ Smart Variables are listed under the variables section within an authoring sessi
 
 Smart variables can be referenced in test steps, modules, and test cases using the `{{smart.variable_name}}` syntax. Follow these steps to integrate them into your tests:
 
-#### Step 1: Access the Test Environment
+### Step 1: Access the Test Environment
 
 Enter the Authoring or Editing mode for a KaneAI test case
 
-#### Step 2: Reference a Smart Variable
+### Step 2: Reference a Smart Variable
 
 In the "Write a Step" field type `{{` to trigger the variable overlay. This will display a list of all available variables, including smart variables labeled with "Smart".
 
@@ -620,11 +620,11 @@ Enter the value of {{smart.current_date}} in the date field
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/smart-variables/smart-variables-fetching.png').default} className="doc_img"/> 
 
-#### Step 3: Select a Smart Variable
+### Step 3: Select a Smart Variable
 
 From the overlay, select the desired smart variable. The variable will be inserted into the test step in the correct syntax (e.g., `{{smart.current_date}}`).
 
-#### Step 4: Run Your Test
+### Step 4: Run Your Test
 
 Once the test step is executed the smart variable will dynamically resolve to its corresponding value based on the current environment or condition (e.g., `2025-04-29` for `{{smart.current_date}}`).
 
