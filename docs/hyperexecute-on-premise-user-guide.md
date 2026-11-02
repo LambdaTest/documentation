@@ -77,7 +77,7 @@ Work through these steps in order. Each one lists what to do, what is specific t
 | Step | What you do | Result |
 |------|-------------|--------|
 | [1. Find your way around the dashboard](#step-1-find-your-way-around-the-dashboard) | Sign in and copy your username and access key | You can authenticate the CLI |
-| [2. Create a Project](#step-2-create-a-project) | Connect your Git repository and add secrets | A home for your suite's jobs and workflows |
+| [2. Create a Project](#step-2-create-a-project) (if needed) | Connect your Git repository and add secrets. Skip this if your organization already onboarded your Project through its own onboarding process | A home for your suite's jobs and workflows |
 | [3. Install and configure the CLI](#step-3-install-and-configure-the-cli) | Download the CLI from **Help** > **Hyperexecute CLI** | The CLI runs on your machine |
 | [4. Prepare your YAML](#step-4-prepare-your-yaml) | Write and validate `hyperexecute.yaml` | HyperExecute knows what to run |
 | [5. Trigger a job from the CLI](#step-5-trigger-a-job-from-the-cli) | Run the CLI with `--onprem-host` | Your first job runs on your deployment |
@@ -120,6 +120,10 @@ Two controls appear on every page:
 Keys from the public cloud dashboard do not work on your on-prem deployment. Always copy them from your own dashboard.
 
 ## Step 2: Create a Project
+
+:::note Not needed for everyone
+Many organizations onboard Projects through their own process, so your Project may already exist. Open **HyperExecute** > **Projects** and look for it first. If it is there, skip to [Add Project secrets](#add-project-secrets) or [step 3](#step-3-install-and-configure-the-cli). If you are not sure, ask your admin how Projects are onboarded in your organization.
+:::
 
 A Project holds one test suite: its Git connection, workflows, secrets and jobs. Create one before you run anything, so every job lands in the right place.
 
