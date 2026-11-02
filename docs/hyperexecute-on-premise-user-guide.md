@@ -230,6 +230,7 @@ Learn how to use them in the YAML on [Project-level secrets](/support/docs/hyper
 
 The YAML file tells HyperExecute what to run and how to split it. It is the same format on SaaS and on-prem.
 
+- Start from the guide for your framework in [Frameworks you can run](#frameworks-you-can-run). It has a sample YAML you can adapt.
 - New to the format? Use **Help** > **Generate YAML**, or read [Generate your YAML](/support/docs/hyperexecute-generate-sample-yaml/) and the [Deep Dive into YAML](/support/docs/deep-dive-into-hyperexecute-yaml/).
 - Keep the file at the **YAML Path** you set on the Project (`.lambdatest/hyperexecute.yaml` by default). Workflows look for it there.
 - For Maven projects (TestNG, JUnit 4, JUnit 5) on remote discovery, use [YAML version 0.2](/support/docs/hyperexecute-yaml-version0.2/).
@@ -438,6 +439,21 @@ If none of these match, collect the job ID, the CLI version (`./hyperexecute --v
 | YAML in the repository | Jobs and Workflows | Test team |
 | Secrets created in HyperExecute | Jobs that need credentials | Test team or Org Admin |
 
+## Frameworks you can run
+
+Each guide below shows a sample project, its YAML and its discovery and runner commands for that framework. On-prem, run them on Linux or Windows, use `testDiscovery` with `mode: remote`, and add `--onprem-host` to the CLI command.
+
+| Language | Framework guides |
+|----------|------------------|
+| Java | [TestNG](/support/docs/testng-on-hyperexecute-grid/), [JUnit](/support/docs/junit-on-hyperexecute-grid/), [Cucumber](/support/docs/cucumber-on-hyperexecute-grid/), [REST Assured](/support/docs/hyperexecute-api-testing/), [Karate](/support/docs/hyperexecute-karate-testing/) |
+| JavaScript and TypeScript | [WebdriverIO](/support/docs/webdriverio-on-hyperexecute-grid/), [Playwright](/support/docs/playwright-integration-with-hyperexecute/), [Cypress](/support/docs/cypress-integration-with-hyperexecute/), [Nightwatch](/support/docs/nightwatch-on-hyperexecute-grid/), [Jest](/support/docs/jest-on-hyperexecute/), [Mocha](/support/docs/mocha-on-hyperexecute/), [CodeceptJS](/support/docs/codecept-on-hyperexecute/), [Protractor](/support/docs/protractor-on-hyperexecute-grid/) |
+| Python | [PyTest](/support/docs/pytest-on-hyperexecute-grid/), [PyUnit](/support/docs/pyunit-on-hyperexecute-grid/), [Behave](/support/docs/behave-on-hyperexecute-grid/), [Robot Framework](/support/docs/robot-on-hyperexecute-grid/) |
+| C# and .NET | [NUnit](/support/docs/nunit-on-hyperexecute-grid/), [SpecFlow](/support/docs/specflow-on-hyperexecute-grid/), [Reqnroll](/support/docs/reqnroll-on-hyperexecute-grid/) |
+| Ruby | [Ruby](/support/docs/ruby-on-hyperexecute-grid/), [Capybara](/support/docs/capybara-on-hyperexecute-grid/) |
+| Performance | [JMeter](/support/docs/hyperexecute-run-jmeter-tests/), [Gatling](/support/docs/hyperexecute-gattling-testing/), [k6](/support/docs/hyperexecute-k6-testing/) |
+
+For the full list, see [Languages and frameworks supported on HyperExecute](/support/docs/hyperexecute-supported-languages-and-frameworks/). Mobile frameworks are not listed here. Ask your admin whether your deployment supports them.
+
 ## Feature reference
 
 Every feature below works on-prem unless the page or this guide says otherwise. Use this list to jump to the detail.
@@ -449,7 +465,7 @@ Every feature below works on-prem unless the page or this guide says otherwise. 
 | CLI | [HyperExecute CLI and flags](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/), [Environment variables for the CLI](/support/docs/hyperexecute-environment-variable-setup/), [Ignore files in the upload](/support/docs/hyperexecute-gitignore/), [CLI FAQs](/support/docs/hyperexecute-cli-faqs/) |
 | YAML | [Generate your YAML](/support/docs/hyperexecute-generate-sample-yaml/), [YAML parameters](/support/docs/hyperexecute-yaml-parameters/), [Deep Dive into YAML](/support/docs/deep-dive-into-hyperexecute-yaml/), [YAML version 0.2](/support/docs/hyperexecute-yaml-version0.2/), [Inherit YAML configurations](/support/docs/hyperexecute-inherit-config/), [OS and browser](/support/docs/hyperexecute-how-to-configure-os-and-browser/), [Capability overrides](/support/docs/hyperexecute-yaml-capability-overrides/), [YAML FAQs](/support/docs/hyperexecute-yaml-faqs/) |
 | Splitting and speed | [AutoSplit](/support/docs/hyperexecute-auto-split-strategy/), [Matrix](/support/docs/hyperexecute-matrix-multiplexing-strategy/), [Hybrid](/support/docs/hyperexecute-hybrid-strategy/), [Find the right concurrency](/support/docs/hyperexecute-how-to-find-correct-concurrency/), [Smart caching](/support/docs/hyperexecute-how-smart-caching-boosts-tests-speed/), [Fail Fast](/support/docs/hyperexecute-failfast/), [Prioritize tests](/support/docs/hyperexecute-prioritize-tests/), [Group-based discovery in TestNG](/support/docs/hyperexecute-how-to-perform-group-based-test-discovery-in-testng/) |
-| Frameworks | [TestNG](/support/docs/testng-on-hyperexecute-grid/), [Cucumber](/support/docs/cucumber-on-hyperexecute-grid/), [JUnit](/support/docs/junit-on-hyperexecute-grid/), [WebdriverIO](/support/docs/webdriverio-on-hyperexecute-grid/), [Playwright](/support/docs/playwright-integration-with-hyperexecute/) |
+| Frameworks | [Frameworks you can run](#frameworks-you-can-run): Java, JavaScript, Python, C#, Ruby and performance tools |
 | Workflows | [Workflows](/support/docs/hyperexecute-workflows/), [Test Chains](/support/docs/hyperexecute-test-chains/) |
 | CI/CD | [Integration with CI/CD tools](/support/docs/hyperexecute-integration-with-ci-cd-tools/), [Jenkins](/support/docs/jenkins-with-hyperexecute/), [Azure DevOps](/support/docs/azure-with-hyperexecute/), [Job status callback](/support/docs/hyperexecute-job-callback/) |
 | Results | [Job Reports](/support/docs/hyperexecute-reports/), [Job Artifacts](/support/docs/hyperexecute-artifacts/), [Artifact URLs](/support/docs/hyperexecute-artifacts-url/), [Process artifacts in Global Post](/support/docs/hyperexecute-global-post-artifacts/), [Email reports](/support/docs/hyperexecute-email-reports/), [Filter jobs by label](/support/docs/hyperexecute-jobs-label-filter/), [Test muting](/support/docs/hyperexecute-test-muting/) |
