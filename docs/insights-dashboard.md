@@ -201,9 +201,7 @@ Traceability reports provide end-to-end visibility into how your test cases alig
 Requirements and defects are currently in slow rollout. To get early access, raise a request to our support team. Until they are enabled for your organization, the report lists every linked issue together.
 :::
 
-{/* IMAGE PLACEHOLDER: replace traciability-report.png below with the report showing the Requirement and Defects columns.
-    Suggested filename: ../assets/images/mobile-app-testing/Reports/traceability-requirements-defects.png */}
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/Reports/traciability-report.png').default} alt="Reports Overview" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/Reports/traceability-requirements-defects.png').default} alt="Traceability report with the Requirement and Defects columns" className="doc_img"/>
 
 The report lists these columns: **Requirement**, **Test Case**, **Status**, **Configuration**, **Test Run**, **Defects**, **Executed By**, and **Executed At**.
 
@@ -212,11 +210,9 @@ The report lists these columns: **Requirement**, **Test Case**, **Status**, **Co
 
 A requirement that is linked only to a test run, and not to a test case, does not appear in the report.
 
-The report data can be filtered by **Requirement ID**, **Executed By**, **Status**, and **Test Run**. The CSV export includes the requirements and the defects.
+Search the report by **Requirement ID**, **Test Case Name**, or **Test Case ID**, and filter it by **Executed By**, **Status**, **Test Runs**, and **Defect ID**. The CSV export includes the requirements and the defects. New data may take around 5 minutes to appear in the report.
 
-{/* IMAGE PLACEHOLDER: replace traciablity-filters.png below with the current report filters.
-    Suggested filename: ../assets/images/mobile-app-testing/Reports/traceability-filters.png */}
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/Reports/traciablity-filters.png').default} alt="Reports Overview" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/Reports/traceability-filters.png').default} alt="Traceability report filters with the Defect ID filter open" className="doc_img"/>
 
 Test Manager's [test case filters](/support/docs/manual-test-case-creation/#filter-by-requirement-or-defects) can find the test cases that are not linked to any requirement.
 

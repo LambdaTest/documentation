@@ -141,21 +141,15 @@ Once the integration is complete, follow these steps to link a requirement to yo
 1. Open the **Issues** tab of a test case and click **Link requirement**. On a test run, open its **Issues** tab and click **Link requirement to run**.
 > Note: To link a defect on a test instance or a step, see [Track Bugs and Issues in Test Runs](/support/docs/track-issues-in-test-runs/).
 
-{/* IMAGE PLACEHOLDER: replace 4.png below with the test case Issues tab showing the Link requirement action.
-    Suggested filename: ../assets/images/test-manager/requirements-defects/test-case-link-requirement.png */}
-<img loading="lazy" src={require('../assets/images/ado-linking-test-manager/4.png').default} alt="Link Azure DevOps Issue" className="doc_img" width="1366" height="629"/>
+<img loading="lazy" src={require('../assets/images/test-manager/requirements-defects/test-case-link-requirement.png').default} alt="Issues tab of a test case with the Link requirement action" className="doc_img"/>
 
 2. Select **Jira**, enter the Jira issue key or URL, and click **Link requirement**.
 
-{/* IMAGE PLACEHOLDER: replace Jira-linkIssue-enterId.png below with the Link requirement dialog with Jira selected and an issue key entered.
-    Suggested filename: ../assets/images/test-manager/requirements-defects/link-requirement-jira.png */}
-<img loading="lazy" src={require('../assets/images/ado-linking-test-manager/Jira-linkIssue-enterId.png').default} alt="Link Azure DevOps Issue" className="doc_img" width="1366" height="629"/>
+<img loading="lazy" src={require('../assets/images/test-manager/requirements-defects/link-requirement-jira.png').default} alt="Link requirement dialog with Jira selected and an issue key entered" className="doc_img"/>
 
 3. The Jira issue from your integrated Jira Project is linked and listed under **Requirements**. You can view the Issue summary, ID, type, status, priority, and creator.
 
-{/* IMAGE PLACEHOLDER: replace Jira-Issue-Listed.png below with a Jira issue listed in the Requirements tab of a test case.
-    Suggested filename: ../assets/images/test-manager/requirements-defects/jira-requirement-listed.png */}
-<img loading="lazy" src={require('../assets/images/ado-linking-test-manager/Jira-Issue-Listed.png').default} alt="Link Azure DevOps Issue" className="doc_img" width="1366" height="629"/>
+<img loading="lazy" src={require('../assets/images/test-manager/requirements-defects/jira-requirement-listed.png').default} alt="Jira issue listed in the Requirements tab of a test case" className="doc_img"/>
 
 4. To **unlink an issue**, click on the unlink button located on the right side of the Jira Issue.
 

@@ -146,15 +146,11 @@ Once the integration is complete, follow these steps to link a requirement to yo
 1. Open the **Issues** tab of a test case and click **Link requirement**. On a test run, open its **Issues** tab and click **Link requirement to run**.
 > Note: To link a defect on a test instance or a step, see [Track Bugs and Issues in Test Runs](/support/docs/track-issues-in-test-runs/).
 
-{/* IMAGE PLACEHOLDER: replace 4.png below with the test case Issues tab showing the Link requirement action.
-    Suggested filename: ../assets/images/test-manager/requirements-defects/test-case-link-requirement.png */}
-<img loading="lazy" src={require('../assets/images/ado-linking-test-manager/4.png').default} alt="Link Azure DevOps Issue" className="doc_img" width="1366" height="629"/>
+<img loading="lazy" src={require('../assets/images/test-manager/requirements-defects/test-case-link-requirement.png').default} alt="Issues tab of a test case with the Link requirement action" className="doc_img"/>
 
 2. Select **Azure DevOps**, enter the Azure DevOps Work Item ID or URL, and click **Link requirement**.
 
-{/* IMAGE PLACEHOLDER: replace 5.png below with the Link requirement dialog with Azure DevOps selected and a work item entered.
-    Suggested filename: ../assets/images/test-manager/requirements-defects/link-requirement-ado.png */}
-<img loading="lazy" src={require('../assets/images/ado-linking-test-manager/5.png').default} alt="Link Azure DevOps Issue" className="doc_img" width="1366" height="629"/>
+<img loading="lazy" src={require('../assets/images/test-manager/requirements-defects/link-requirement-ado.png').default} alt="Link requirement dialog with Azure DevOps selected and a work item entered" className="doc_img"/>
 
 
 3. The Azure DevOps Work Item from your integrated Organization is linked and listed under **Requirements**. You can view the work item name, ID, type, state, priority, and creator.
