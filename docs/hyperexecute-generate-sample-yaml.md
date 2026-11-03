@@ -124,6 +124,10 @@ You can also generate the HyperExecute YAML directly from the HyperExecute Porta
 
 > HyperExecute supports multiple languages and testing frameworks. See the comprehensive list & samples [here](/support/docs/hyperexecute-supported-languages-and-frameworks/).
 
+:::info On-premise deployments
+On your organization's own HyperExecute dashboard, open the generator from **Help** > **Generate YAML**. On-prem deployments run on Linux and Windows only, so set `runson` to a Linux or Windows value, such as `linux` or `win`. Do not use `mac` or `mac13`. See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/).
+:::
+
 ## Sample HyperExecute YAML
 A sample HyperExecute YAML file looks like this:
 

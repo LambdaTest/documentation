@@ -102,6 +102,10 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 Smart Caching significantly reduces test execution times by optimizing resource utilization and minimizing redundant processes. This document provides a comprehensive technical overview of Smart Caching, detailing its architecture, functionalities, and benefits for software development teams.
 
+:::info On-premise deployments
+Use the same `cacheKey` and `cacheDirectories` keys on-prem. The distributed caching network described below is part of <BrandName /> cloud infrastructure. See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/).
+:::
+
 ## Architecture
 
 Smart Caching operates on a distributed caching architecture, leveraging a network of caching nodes across <BrandName />'s global infrastructure. This ensures low latency and high availability for test execution, regardless of user location.

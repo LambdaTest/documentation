@@ -854,10 +854,14 @@ import VerifiedTag from '@site/src/component/verifiedTag';
 
 This document contains detailed explanations for all YAML flags, providing an in-depth understanding of each configuration parameter.
 
+:::info On-premise deployments
+The YAML format is the same on-premise. Keys that behave differently, such as [`runson`](#runson), [`testDiscovery`](#testdiscovery), [`sourcePayload`](#sourcepayload) and [`tunnel`](#tunnel), have their own on-prem note below. See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/).
+:::
+
 ## Mandatory Parameters
 
 ### `version`
-The version of HyperExecute YAML being used to run the tests. Currently there are two supported versions are [0.1](/support/docs/deep-dive-into-hyperexecute-yaml/#hyperexecute-yaml-parameters) and [0.2](/support/docs/hyperexecute-yaml-version0.2/). 
+The version of HyperExecute YAML being used to run the tests. Currently there are two supported versions are [0.1](/support/docs/hyperexecute-yaml-parameters/) and [0.2](/support/docs/hyperexecute-yaml-version0.2/). 
 
 <VerifiedTag value="Verified" />
 
@@ -888,6 +892,10 @@ matrix:
 ```
 
 ***
+
+:::info On-premise deployments
+On-premise deployments run Linux and Windows only. Use `linux`, `win` or `win11`, and leave macOS values out of `runson` and `matrix.os`. Your admin maps Linux frameworks to queues for each environment. See [Environments and queues](/support/docs/hyperexecute-on-premise-user-guide/#environments-and-queues).
+:::
 
 ### `pre`
 All actions you need to perform before each test execution, such as installing dependencies. You’ll ideally want to use this parameter to "pre" run simple commands like `npm install`, `yarn install`, `mvn install` etc
@@ -936,7 +944,7 @@ concurrency: 10
 ```
 :::tip Pro Tip
 - After analyzing your test cases and usage patterns, the platform will automatically recommend the optimal concurrency settings tailored to your needs. These recommendations are displayed in the banner on the left-hand side. [Learn more here.](/support/docs/hyperexecute-how-to-find-correct-concurrency/)
-- You can see the overall concurrency trends using our [analytics widgets.](/support/docs/analytics-modules-resource-utilization/#concurrency-trends)
+- You can see the overall concurrency trends using our [analytics widgets.](/support/docs/analytics-modules-resource-utilization/#concurrency-trends-org-level)
 :::
 
 ***
@@ -997,6 +1005,10 @@ mode: local  #or
 mode: remote
 ```
 
+:::info On-premise deployments
+On-premise supports `mode: remote` only, from the CLI and from Workflows. Discovery runs on Linux or Windows, so do not use macOS-only commands or paths. For a discovery `command` that fits your framework, start from [Frameworks you can run](/support/docs/hyperexecute-on-premise-user-guide/#frameworks-you-can-run).
+:::
+
 **`mode: local`**
 
 - **Purpose:** Test discovery is performed locally on the machine where the CLI is running.
@@ -1032,7 +1044,7 @@ command: grep 'public class' src/test/java/hyperexecute/*.java | awk '{print$3}'
 ```
 
 :::tip
-- Test orchestration will happen with [`mode: local`](/support/docs/deep-dive-into-hyperexecute-yaml/#mode) only.
+- Test orchestration will happen with [`mode: local`](/support/docs/deep-dive-into-hyperexecute-yaml/#mode) only. On-premise deployments support `mode: remote` only.
 - 📕 Learn how to perform [dependent test discovery](/support/docs/hyperexecute-how-to-perform-dependent-test-based-discovery/).
 :::
 
@@ -1176,6 +1188,10 @@ matrix:
 ``` 
 In the above example linux combinations will run on a parallelism on 2, `windows` combinations will run on a parallelism on 1, and `mac` combinations will run on a parallelism defined of 3.
 
+:::info On-premise deployments
+On-premise deployments run Linux and Windows only, so `macParallelism` and `macTestRunnerCommand` do not apply.
+:::
+
 ### `testRunnerCommand`
 The `testRunnerCommand` used to run a single test entity in isolation. This entity could be a file, module, feature, or scenario. It is defined in the YAML file and tells the system how to run the test entity.
 
@@ -1263,6 +1279,10 @@ env:
   USERNAME: abc
   PLATFORM: windows
 ```
+
+:::info On-premise deployments
+Your admin can limit which environment variables jobs may use. If you set one that is not allowed, the CLI shows a warning. Remove the variable or ask your admin to allow it. See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/).
+:::
 
 #### Special Character Encoding
 
@@ -1785,6 +1805,10 @@ sourcePayload:
 ```
 
 ***
+
+:::info On-premise deployments
+On-premise, Git access is set up by your admin, and the supported Git providers depend on your deployment (for example your own or a dedicated GitHub App). Ask your admin which providers and repositories you can use before you set `sourcePayload`.
+:::
 
 ### `hostsOverride`
 This field allows you to add domain mappings which are required to be added in the local DNS entry represented by the /etc/hosts file. This is required if you want to map a custom domain name to an ip (local or otherwise) so that any requests on this domain name resolves to the provided ip on HyperExecute machines where your tests are running. For instance, suppose for a domain "example.com", global DNS is having the entry which resolves the network call to the public IP address. With hostsOverride flag you can explicitly route the network call to a local IP address, instead of allowing the call to go through a public IP address.
@@ -2718,6 +2742,10 @@ tunnel: true
 ```
 
 ***
+
+:::info On-premise deployments
+On-premise, test machines already run inside your network, so most teams do not need a tunnel. Tunnel settings are ignored for jobs started from a Workflow or the Trigger API.
+:::
 
 ### `tunnelOpts`
 The options to use when running the [tunnel](/support/docs/deep-dive-into-hyperexecute-yaml/#tunnel).

@@ -221,6 +221,10 @@ This version introduces several new features and improvements over Version 0.1. 
 - The new [`framework`](/support/docs/hyperexecute-yaml-version0.2/#framework) flag has been introduced to configure the test framework.
 :::
 
+:::info On-premise deployments
+On-prem, use `runson: linux` or `runson: win` and set `discoveryMode: remote`. See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/).
+:::
+
 ## Why to use HyperExecute YAML Version 0.2?
 
 - The new framework feature supports caching by default. You do not have to specify any directories to cache for faster performance. If you adds the [`cacheKey`](/support/docs/deep-dive-into-hyperexecute-yaml/#cachekey) and [`cacheDirectories`](/support/docs/deep-dive-into-hyperexecute-yaml/#cachedirectories) keys in your yaml, the default caching gets disabled and preference is given to user specified cache.
@@ -235,17 +239,17 @@ The ```framework``` field in HyperExecute YAML Version 0.2 allows you to configu
 |:---|:--|:---|:---|
 | [name](#name) | String | Yes | You need to specify which testing framework you are using in your repo.|
 | [flags](#flags) | Array | No | Command line flags to pass to the custom runner for both test discovery and execution.|
-| [discoveryFlags](#discoveryFlags) | Array | No | Command line flags to pass to the custom runner for test discovery only.|
-| [runnerFlags](#runnerFlags) | Array | No | Command line flags to pass to the custom runner for test execution only. |
-| [discoveryType](#discoveryType) | String | No | Specifies the type of test discovery to use. Supported values are "method" and "class". The default is "method".|
-| [discoveryMode](#discoveryMode) | String | No | Specifies where the test discovery runs. Supported values are "local" and "remote".|
-| [workingDirectory](#workingDirectory) | String | No | Specifies the working directory where all discovery and execution commands will be executed.|
-| [defaultReports](#defaultReports) | Boolean | No | Specifies whether to create default reports for the specified framework.|
+| [discoveryFlags](#discoveryflags) | Array | No | Command line flags to pass to the custom runner for test discovery only.|
+| [runnerFlags](#runnerflags) | Array | No | Command line flags to pass to the custom runner for test execution only. |
+| [discoveryType](#discoverytype) | String | No | Specifies the type of test discovery to use. Supported values are "method" and "class". The default is "method".|
+| [discoveryMode](#discoverymode) | String | No | Specifies where the test discovery runs. Supported values are "local" and "remote".|
+| [workingDirectory](#workingdirectory) | String | No | Specifies the working directory where all discovery and execution commands will be executed.|
+| [defaultReports](#defaultreports) | Boolean | No | Specifies whether to create default reports for the specified framework.|
 | [region](#region) | String | No | Specifies in which region you want to spin your appium tests.|
 | [artifacts](#artifacts) | Boolean | No | Specifies whether to generate artifacts or not |
 | [language](#language) | String | No | Specifies the device’s system language for the test session. This determines the language in which your app’s UI and strings will be displayed. |
 | [locale](#locale) | String | No | Defines the regional format settings such as date, time, currency, and number conventions. |
-| [mitmProxy](#mitmProxy) | Boolean | No | Capture network logs directly from emulator sessions using MITM. |
+| [mitmProxy](#mitmproxy) | Boolean | No | Capture network logs directly from emulator sessions using MITM. |
 
 ### `name`
 Specifies the testing framework used in your repository.

@@ -142,6 +142,10 @@ import VerifiedTag from '@site/src/component/verifiedTag';
 
 This document will help you debug your failed job if you are facing any errors in the Scenario stage.
 
+:::info On-premise deployments
+Use the credentials and hub URL of your own deployment. Tunnel settings are ignored for jobs started by a Workflow or the Trigger API. See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/).
+:::
+
 ## Invalid Credentials
 
 If you're encountering an error message as shown below, it means you have entered an invalid  **Username** and **Access Key** in your test file capabilities.

@@ -147,7 +147,7 @@ Project-level secrets are bound to a specific HyperExecute project instead of a 
 ## How to Add Project Level Secrets?
 ### Step 1: Create a Project
 
-To begin, create a new project on the <BrandName /> platform. Follow the instructions to [Create a Project](/support/docs/hyperexecute-projects/#setup-your-project)
+To begin, create a new project on the <BrandName /> platform. Follow the instructions to [Create a Project](/support/docs/hyperexecute-projects/#setup-custom-project)
 
 ### Step 2: Add Secrets to the Project
 Once your project is created:
@@ -182,6 +182,10 @@ env:
   LT_SECRET_KEY: ${{.secrets.token}}
 # highlight-end
 ```
+
+:::info On-premise deployments
+On-prem, open the Project from your organization's own dashboard. Only users with access to the Project can run jobs that use its secrets. See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/).
+:::
 
 ## User-Level Secrets vs. Project-Level Secrets
 

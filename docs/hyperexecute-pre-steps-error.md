@@ -177,6 +177,10 @@ import VerifiedTag from '@site/src/component/verifiedTag';
 
 This document will help you debug your failed job if you are facing any errors in the pre-command stage.
 
+:::info On-premise deployments
+On-prem machines often cannot reach public registries such as npm, PyPI or Maven Central. Point your package manager at your internal registry (see [Registry error](#registry-error) and [SSL certificate error](#ssl-certificate-error)). See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/).
+:::
+
 ## Lambda Error
 
 While executing a playwright project in HyperExecute, you may encounter a Lambda Error.

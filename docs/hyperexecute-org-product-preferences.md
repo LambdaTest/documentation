@@ -126,6 +126,10 @@ Now, to access your organization product preferences, follow the below mentioned
 To configure automatic session expiry for your organization, navigate to **Organization Settings → Security → Session Expiry**. You can set the duration for session expiration from predefined options (default: 30 days). Admins can also allow team members to customize their own session expiry settings. Learn more in [Settings and Security](/support/docs/settings-and-security/).
 :::
 
+:::info On-premise deployments
+On-prem, open **Settings** from your organization's own HyperExecute dashboard. [Global Policies](/support/docs/hyperexecute-global-policies/) need a Project Scope on-prem. See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/).
+:::
+
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">

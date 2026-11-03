@@ -148,6 +148,10 @@ Testing your webapp or applications often involves using sensitive data like pas
 
 HyperExecute provides a secure **Secret Management Vault** to keep your sensitive information safe. This doc covers **user-level secrets** that are tied to your individual account.
 
+:::info On-premise deployments
+On-prem, manage secrets from your organization's own HyperExecute dashboard. The `${{.secrets.<KEY_NAME>}}` syntax is the same. See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/).
+:::
+
 ## Secret Scopes
 
 HyperExecute supports secrets at multiple levels:
@@ -289,7 +293,7 @@ Project-level secrets are bound to a specific HyperExecute project instead of a 
 ## How to Add Project Level Secrets?
 ### Step 1: Create a Project
 
-To begin, create a new project on the <BrandName /> platform. Follow the instructions to [Create a Project](/support/docs/hyperexecute-projects/#setup-your-project)
+To begin, create a new project on the <BrandName /> platform. Follow the instructions to [Create a Project](/support/docs/hyperexecute-projects/#setup-custom-project)
 
 ### Step 2: Add Secrets to the Project
 Once your project is created:

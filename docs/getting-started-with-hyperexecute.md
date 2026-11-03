@@ -142,6 +142,10 @@ If you want to learn more about HyperExecute and how it can enable your team, th
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/getting_started/hyperexecute.png').default} alt="Image"  className="doc_img"/>
 
+:::info On-premise teams start here
+If your organization runs HyperExecute on-premise, read the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/) first. It covers your own dashboard URL, the `--onprem-host` CLI flag, environments and queues, and every place where on-prem behaves differently from the public cloud. Quick Run and Gitpod use the public cloud, so on-prem use **Run on Local System** with `--onprem-host`. Then come back to the journey below for the feature details.
+:::
+
 ## What is HyperExecute?
 
 HyperExecute by <BrandName /> is a cutting-edge, AI-powered platform designed for DevOps teams and QA engineers to significantly accelerate software testing pipelines. HyperExecute **replaces traditional hub-and-node test grids** with advanced orchestration techniques, **eliminating network latency and optimizing resource usage**. With HyperExecute:

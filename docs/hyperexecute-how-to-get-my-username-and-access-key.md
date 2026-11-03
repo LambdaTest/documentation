@@ -123,6 +123,10 @@ You can directly copy your Username and Access Key using shortcut key button.
 
 >If you have more questions, then just give us a <span className="doc__lt" onClick={() => window.openLTChatWidget()}>shout</span> and we will answer them for you.
 
+:::info On-premise deployments
+On-prem, click **Credentials** in the left sidebar of your organization's own HyperExecute dashboard and copy **Username** and **Access Key**. Keys from the public cloud do not work on-prem. See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/).
+:::
+
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
