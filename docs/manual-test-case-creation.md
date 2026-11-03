@@ -152,11 +152,11 @@ To find test cases with no requirement:
 1. Open **More** and select **Requirement**.
 2. Set **Link status** to **Not linked**, and click **Apply**.
 
-<img loading="lazy" src={require('../assets/images/test-manager/filters/requirement-filter-not-linked.png').default} alt="Requirement filter with Link status set to Not linked" className="doc_img" style={{ width: '40%', height: 'auto'}}/>
+<img loading="lazy" src={require('../assets/images/test-manager/filters/requirement-filter-not-linked.webp').default} alt="Requirement filter with Link status set to Not linked" className="doc_img"/>
 
 The list shows the matching test cases and how many they are out of the total.
 
-<img loading="lazy" src={require('../assets/images/test-manager/filters/requirement-filter-results.png').default} alt="Test case list filtered to test cases with no linked requirement, with the matching count" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/test-manager/filters/requirement-filter-results.webp').default} alt="Test case list filtered to test cases with no linked requirement, with the matching count" className="doc_img"/>
 
 :::info
 Requirements and defects are currently in slow rollout. To get early access, raise a request to our support team. Until they are enabled for your organization, you see a single **Issues** filter.
