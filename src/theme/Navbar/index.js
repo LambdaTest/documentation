@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from '@docusaurus/router';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import SearchBar from '@theme/SearchBar';
 import CookieTrackingLogin, { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 import styles from './styles.module.css';
@@ -249,6 +250,8 @@ function useMediaQuery(query) {
 }
 
 export default function Navbar() {
+  const { siteConfig } = useDocusaurusContext();
+  const searchEnabled = siteConfig.customFields?.typesenseEnabled !== false;
   const location = useLocation();
   const [colorMode, setColorModeState] = useState(getStoredTheme);
   const [themeChoice, setThemeChoice] = useState(getStoredChoice);
@@ -351,7 +354,7 @@ export default function Navbar() {
         {/* Search — hidden on mobile */}
         <div className={styles.searchGroup}>
           <div className={styles.searchWrapper}>
-            <SearchBar />
+            {searchEnabled && <SearchBar />}
           </div>
         </div>
 
