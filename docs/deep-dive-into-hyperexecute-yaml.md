@@ -1280,7 +1280,9 @@ env:
   PLATFORM: windows
 ```
 
-{/* TODO(verify): on-prem env-var allow-list and the CLI warning. Add an on-prem note here once engineering confirms. */}
+:::info On-premise deployments
+Your admin can limit which environment variables jobs may use. If you set one that is not allowed, the CLI shows a warning. Remove the variable or ask your admin to allow it. See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/).
+:::
 
 #### Special Character Encoding
 
