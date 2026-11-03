@@ -155,9 +155,7 @@ Once the integration is complete, follow these steps to link a requirement to yo
 
 3. The Azure DevOps Work Item from your integrated Organization is linked and listed under **Requirements**. You can view the work item name, ID, type, state, priority, and creator.
 
-{/* IMAGE PLACEHOLDER: replace 6.png below with an Azure DevOps work item listed in the Requirements tab of a test case.
-    Suggested filename: ../assets/images/test-manager/requirements-defects/ado-requirement-listed.png */}
-<img loading="lazy" src={require('../assets/images/ado-linking-test-manager/6.png').default} alt="Link Azure DevOps Issue" className="doc_img" width="1366" height="629"/>
+<img loading="lazy" src={require('../assets/images/test-manager/requirements-defects/ado-requirement-listed.png').default} alt="Azure DevOps work item listed in the Requirements tab of a test case" className="doc_img"/>
 
 4. To **unlink an issue**, click on the unlink button located on the right side of the work item.
 
@@ -165,7 +163,7 @@ Once the integration is complete, follow these steps to link a requirement to yo
 
 ### Issues on a test case
 
-The **Issues** tab of a test case has two tabs, each grouped by tracker. Use the search box and the **Status** and **Issue Type** filters to narrow a long list.
+The **Issues** tab of a test case has two tabs, each grouped by tracker. Use the search box and the **State** and **Work Item Type** filters to narrow a long list.
 
 - **Requirements**: the work items linked on this test case. You can link and unlink them here.
 - **Defects**: the defects raised or linked on this test case's instances and steps, across its test runs. Each one shows where it was raised, and **View in run** opens that run. This list is read-only, so you add and remove defects from the test run.
