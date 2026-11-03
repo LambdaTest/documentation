@@ -226,10 +226,11 @@ export default function Home() {
             <Card href="/support/docs/hyperexecute-private-cloud-setup/" title="Private Cloud" desc="Deploy HyperExecute in private cloud" />
           </Section>
 
-          <Section icon={{ light: 'performance-light-icon.svg', dark: 'performance-dark-icon.svg' }} title="Performance Testing" blurb="Run JMeter and Gatling load tests on scalable cloud infrastructure." tag="NEW">
+          <Section icon={{ light: 'performance-light-icon.svg', dark: 'performance-dark-icon.svg' }} title="Performance Testing" blurb="Run JMeter, Gatling and k6 load tests on scalable cloud infrastructure." tag="NEW">
             <Card href="/support/docs/hyperexecute-performance-testing/" title="Getting Started" desc="Start load and performance testing" />
             <Card href="/support/docs/hyperexecute-run-jmeter-tests/" title="JMeter Testing" desc="Run JMeter tests at scale" />
             <Card href="/support/docs/hyperexecute-gattling-testing/" title="Gatling Testing" desc="Run Gatling load tests on cloud" />
+            <Card href="/support/docs/hyperexecute-k6-ui-testing/" title="k6 Testing" desc="Run k6 load tests at scale" />
           </Section>
 
           <Section icon={{ light: 'analytics-light-icon.svg', dark: 'analytics-dark-icon.svg' }} title="Insights" blurb="Track quality trends with dashboards, analytics, and AI-powered insights.">

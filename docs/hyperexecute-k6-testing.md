@@ -223,6 +223,7 @@ Run the below mentioned commands in your terminal to setup the CLI and the envir
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <Tabs className="docs__val">
 
