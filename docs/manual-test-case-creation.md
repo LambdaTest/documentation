@@ -145,17 +145,18 @@ The **Requirement** and **Defects** filters separate what a test case validates 
 | **Requirement** | **Link status**: Any, Linked, or Not linked | Issues linked on the test case |
 | **Defects** | **Defect status**: Any, Has defects, or No defects | Issues raised or linked on the test case's instances and steps |
 
-To narrow either filter further, use **Tracker** to pick Jira, Azure DevOps, or Linear, or search for and select specific issue keys. A test case that has only defects counts as **Not linked**.
+To narrow either filter further, use **Tracker** to pick one of the trackers with linked issues in the project, or search for and select specific issue keys. A test case that has only defects counts as **Not linked**.
 
 To find test cases with no requirement:
 
 1. Open **More** and select **Requirement**.
 2. Set **Link status** to **Not linked**, and click **Apply**.
 
+<img loading="lazy" src={require('../assets/images/test-manager/filters/requirement-filter-not-linked.png').default} alt="Requirement filter with Link status set to Not linked" className="doc_img" style={{ width: '40%', height: 'auto'}}/>
+
 The list shows the matching test cases and how many they are out of the total.
 
-{/* IMAGE PLACEHOLDER: the Requirement filter dialog with Link status set to Not linked, and the filtered list with its count.
-    Suggested filename: ../assets/images/test-manager/filters/requirement-filter-not-linked.png */}
+<img loading="lazy" src={require('../assets/images/test-manager/filters/requirement-filter-results.png').default} alt="Test case list filtered to test cases with no linked requirement, with the matching count" className="doc_img"/>
 
 :::info
 Requirements and defects are currently in slow rollout. To get early access, raise a request to our support team. Until they are enabled for your organization, you see a single **Issues** filter.
