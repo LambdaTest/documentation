@@ -166,11 +166,11 @@ Linking is repeatable and many-to-many:
 
 ### Unlinking a Linear issue
 
-To **unlink an issue**, click on the unlink button located on the right side of the Linear issue.
+To **unlink an issue**, hover over the Linear issue and click **Unlink requirement** on the right side of its row.
 
 Unlinking removes the association in Test Manager only. The issue itself stays in Linear.
 
-<img loading="lazy" src={require('../assets/images/test-manager/linear/unlink-linear-issue.png').default} alt="unlink-linear-issue" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/test-manager/requirements-defects/unlink-requirement-linear.png').default} alt="Unlink requirement action on a Linear issue in the Requirements tab" className="doc_img"/>
 
 ### Behaviour in specific situations
 
