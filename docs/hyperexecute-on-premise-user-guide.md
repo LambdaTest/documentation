@@ -194,6 +194,7 @@ The YAML file tells HyperExecute what to run and how to split it. It is the same
 
 - Use `linux` or `win` in `runson`. macOS is not available on-prem.
 - If you do not set an environment, the job uses your organization's default environment.
+- Your admin can limit which environment variables jobs may use. If you set one that is not allowed, the CLI shows a warning. See [`env`](/support/docs/deep-dive-into-hyperexecute-yaml/#env).
 - Set `testDiscovery.mode: remote` in every YAML. On-prem supports remote discovery only, so `mode: local` does not work, whether you start the job from the CLI or from a Workflow. See [testDiscovery](/support/docs/deep-dive-into-hyperexecute-yaml/#mode).
 - Org-wide [Global Policies](/support/docs/hyperexecute-global-policies/), set by your Org Admins, can add steps to your job or reject it. You cannot change them from your YAML. Check the **Applied Policies** panel on the job page to see what changed, and ask your Org Admin if a policy blocks your job.
 
@@ -355,6 +356,7 @@ Use the CLI command from [step 5](#step-5-trigger-a-job-from-the-cli) as a pipel
 | Workflow did not start at the scheduled time | Workflow is Paused or Expired, or the run failed to create a job | Check the **Status** column. Open the workflow and check **Past Occurrences** for errors such as a wrong branch or YAML path. |
 | Tests pass on your machine but fail on HyperExecute | Missing dependency or different environment | Check pre-steps output. See [Pre steps errors](/support/docs/hyperexecute-pre-steps-error/) and [Scenario steps errors](/support/docs/hyperexecute-scenario-steps-error/). |
 | Job ends with `lambda_error` | Symbolic links or very large files in the upload | See [Symbolic link error](/support/docs/hyperexecute-cli-error/#symbolic-link-error) and use a [.hyperexecuteignore file](/support/docs/hyperexecute-gitignore/). |
+| The CLI warns about an environment variable | Your admin has limited which environment variables jobs may use | Remove the variable from your YAML, or ask your admin to allow it. |
 | No rerun option on a failed job | The job did not come from Git, or it used YAML version 0.2 | Check the [rerun prerequisites](/support/docs/hyperexecute-rerun-failed-jobs/#prerequisites). Otherwise run the job again from the CLI. |
 | Gradle job passes with zero tests | Gradle version below 7.0 | Upgrade Gradle to 7.0 or later. |
 | Certificate or TLS error from the CLI | The machine or CI agent does not trust the certificate presented by your deployment or proxy | Send the full error to your network or security team. They set up trust for internal certificates on your machines. |
