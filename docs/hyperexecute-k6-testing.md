@@ -16,6 +16,8 @@ canonical: https://www.testmuai.com/support/docs/hyperexecute-k6-testing/
 ---
 
 import CodeBlock from '@theme/CodeBlock';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import VerifiedTag from '@site/src/component/verifiedTag';
@@ -220,10 +222,6 @@ You can download the CLI for your desired platform from the below mentioned link
 Now, you need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [<BrandName /> Profile page](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/details/profile).
 
 Run the below mentioned commands in your terminal to setup the CLI and the environment variables.
-
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 <Tabs className="docs__val">
 
