@@ -192,14 +192,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
 ***
 
 :::info On-premise deployments
-The YAML format is the same on-prem. Differences that affect the answers below:
-
-- On-prem runs on Linux and Windows only. Do not set `runson` to a macOS value.
-- Tunnel settings in the YAML are ignored for jobs started by a Workflow or the Trigger API.
-- Your admin may restrict which environment variables a job can use. The CLI warns you and names any variable that is not allowed.
-- Git access for workflows goes through a GitHub App that your organization registers.
-
-See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/).
+On-prem runs Linux and Windows only, so do not set `runson` to a macOS value. Tunnel settings are ignored for jobs started by a Workflow or the Trigger API. See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/).
 :::
 
 ## 1. I want to run all my feature files and scenarios listed in a folder. How can I do that without listing all of them explicitly in the YAML file?

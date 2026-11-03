@@ -204,12 +204,7 @@ Creating, editing, and deleting policies is **admin-only**. Developers can see w
 Policies are **API-first**, so you can create and maintain them from your automation (Harness, Jenkins, a Git-managed script) exactly like the rest of your pipeline. You can also manage them from the <BrandName /> dashboard under [Org Product Preferences](/support/docs/hyperexecute-org-product-preferences/).
 
 :::info On-premise deployments
-Global Policies work the same way on-prem, with two differences:
-
-- **Project Scope is required.** You must choose the projects a policy covers before you can save it. See [Step 2: Project Scope](#step-2-project-scope).
-- **The default OS falls back to Linux.** For command policies (`globalPost`, `post`, `afterEachScenario`), the Linux block is used when no block matches the job's OS. On-prem runs Linux and Windows only, so a Mac block is never used.
-
-On-prem, open **Org Product Preferences** from your organization's own dashboard. See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/).
+Project Scope is required on-prem (see [Step 2: Project Scope](#step-2-project-scope)). On-prem runs Linux and Windows only, so a `mac` command block is never used, and `default` should name `linux` or `win`. See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/).
 :::
 
 ## What a policy is

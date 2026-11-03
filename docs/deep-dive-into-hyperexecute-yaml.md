@@ -855,16 +855,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
 This document contains detailed explanations for all YAML flags, providing an in-depth understanding of each configuration parameter.
 
 :::info On-premise deployments
-The YAML format is the same on SaaS and on-premise. A few keys behave differently on-premise, and their sections include a note:
-
-- [`runson`](#runson): Linux and Windows only. macOS values are not available.
-- [`testDiscovery`](#testdiscovery): use `mode: remote`. Local discovery is not available on-premise.
-- [`env`](#env): your admin can restrict which environment variables are allowed. The CLI warns you and names any variable that is not allowed.
-- [`tunnel`](#tunnel): usually not needed, and ignored for jobs started from a Workflow or the Trigger API.
-- [`sourcePayload`](#sourcepayload) and Git access go through your organization's own or a dedicated GitHub App.
-- Analytics: Intelligent Test Analytics is not available. Use job reports instead.
-
-Jobs that do not name an environment run in your organization's default environment. Org-wide [Global Policies](/support/docs/hyperexecute-global-policies/), set by your Org Admins, can add steps to your job or reject it. For the full list of differences, see the [on-premise user guide](/support/docs/hyperexecute-on-premise-user-guide/).
+The YAML format is the same on-premise. Keys that behave differently, such as [`runson`](#runson), [`testDiscovery`](#testdiscovery), [`sourcePayload`](#sourcepayload) and [`tunnel`](#tunnel), have their own on-prem note below. See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/).
 :::
 
 ## Mandatory Parameters
@@ -1015,11 +1006,7 @@ mode: remote
 ```
 
 :::info On-premise deployments
-On-premise deployments support `mode: remote` only. `mode: local` is not available on-premise, whether you start the job from the CLI or from a Workflow.
-
-- Discovery runs on a Linux or Windows machine in your deployment. There are no macOS machines on-premise, so write the discovery `command` for Linux or Windows and do not use macOS-only commands or paths.
-- Keep `runson` and `matrix.os` to `linux` or `win`.
-- For a discovery `command` and `testRunnerCommand` that fit your framework, start from its guide in [Frameworks you can run](/support/docs/hyperexecute-on-premise-user-guide/#frameworks-you-can-run).
+On-premise supports `mode: remote` only, from the CLI and from Workflows. Discovery runs on Linux or Windows, so do not use macOS-only commands or paths. For a discovery `command` that fits your framework, start from [Frameworks you can run](/support/docs/hyperexecute-on-premise-user-guide/#frameworks-you-can-run).
 :::
 
 **`mode: local`**
@@ -1293,9 +1280,7 @@ env:
   PLATFORM: windows
 ```
 
-:::info On-premise deployments
-Your admin can limit which environment variables are allowed. If you set one that is not allowed, the CLI shows a warning that names it. Ask your admin to allow the variable, or remove it.
-:::
+{/* TODO(verify): on-prem env-var allow-list and the CLI warning. Add an on-prem note here once engineering confirms. */}
 
 #### Special Character Encoding
 

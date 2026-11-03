@@ -98,10 +98,10 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
-The **HyperExecute YAML** file serves as the foundational component for test execution within the HyperExecute Platform. The subsequent list enumerates the diverse configuration options supported by [HyperExecute YAML](/support/docs/hyperexecute-yaml-parameters/), providing you with the flexibility to tailor test execution according to the specific requirements of your project.
+The **HyperExecute YAML** file serves as the foundational component for test execution within the HyperExecute Platform. The subsequent list enumerates the diverse configuration options supported by HyperExecute YAML, providing you with the flexibility to tailor test execution according to the specific requirements of your project.
 
 :::info On-premise deployments
-The YAML format is the same on-premise. On-premise deployments run Linux and Windows only, so `mac` values for `runson`, `macParallelism` and `macTestRunnerCommand` do not apply. Test discovery must use `mode: remote`, because local discovery is not available on-premise. Your admin may restrict which `env` variables are allowed, and tunnel settings are ignored for jobs started from a Workflow or the Trigger API. See the [on-premise notes in the deep dive](/support/docs/deep-dive-into-hyperexecute-yaml/) and the [on-premise user guide](/support/docs/hyperexecute-on-premise-user-guide/).
+On-prem runs Linux and Windows only, so `mac` values do not apply, and `testDiscovery` must use `mode: remote`. See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/).
 :::
 
 ## Mandatory Parameters
@@ -220,7 +220,7 @@ The YAML format is the same on-premise. On-premise deployments run Linux and Win
 | [dataJsonPath](/support/docs/deep-dive-into-hyperexecute-yaml/#datajsonpath) | Array of String | DataJsonPaths helps to distribute data over VMs based on different Jsons.| 
 | [dataJsonBuilder](/support/docs/deep-dive-into-hyperexecute-yaml/#datajsonbuilder) | Array of String | dataJsonBuilder flag reads the data from your specified JSON files for distributed testing scenarios.| 
 | [strict](/support/docs/deep-dive-into-hyperexecute-yaml/#strict) | Boolean |If strict is set to true in yaml then the variables used in yaml must be present in either vars or environment variables on the user machine. | 
-| [codeDirectory](/support/docs/deep-dive-into-hyperexecute-yaml/) | String |Defines in which directory all of your commands defined in yaml would run. Your code would be downloaded in this directory. | 
+| codeDirectory | String |Defines in which directory all of your commands defined in yaml would run. Your code would be downloaded in this directory. | 
 | [preDirectives](/support/docs/deep-dive-into-hyperexecute-yaml/#predirectives) | Map | Similar to pre with option to retry and specify shell. |
 | [postDirectives](/support/docs/deep-dive-into-hyperexecute-yaml/#postdirectives) | Map |Similar to post with option to retry. |
 | [alwaysRunPostSteps](/support/docs/deep-dive-into-hyperexecute-yaml/#alwaysrunpoststeps) | Boolean | Execute the Post Steps in every scenario case |

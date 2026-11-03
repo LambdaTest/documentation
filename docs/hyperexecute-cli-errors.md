@@ -116,16 +116,7 @@ If you are encountering any error which is properly not detailed, it is recommen
 
 
 :::info On-premise deployments
-Most CLI errors on an on-premise deployment come from the CLI talking to the wrong host, a proxy, or an untrusted certificate. Check these before anything else:
-
-- **Point the CLI at your deployment.** Pass [`--onprem-host`](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/#--onprem-host) on every run. **Help** > **Hyperexecute CLI** on your on-prem dashboard gives you the full command.
-- **Use on-prem credentials.** Copy the username and access key from your organization's own dashboard. A key from the public dashboard returns `ERR::HTTP::RESP` with `401`.
-- **The authentication host is different on-prem.** The `ERR:HTTP:HOST` message names the host the CLI tried to reach. If that is not your deployment's host, check the `--onprem-host` value.
-- **Corporate proxy.** Add [`--auto-proxy`](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/#--auto-proxy) so the CLI uses the `http_proxy` and `https_proxy` values already set on the machine.
-- **Internal certificates.** A certificate or TLS error means the machine or CI agent does not trust your internal certificate authority (CA). Ask your security team for the internal CA certificates and install them on that machine or agent.
-- **Allowed hosts.** The public hosts in [IPs to be whitelisted](#ips-to-be-whitelisted) are for SaaS. On-prem, the CLI must be able to reach your deployment host.
-
-See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/) for the full setup.
+Pass [`--onprem-host`](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/#--onprem-host) on every run and use the credentials from your own dashboard. The public hosts in [IPs to be whitelisted](#ips-to-be-whitelisted) are for SaaS. On-prem, the CLI must reach your deployment host. See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/).
 :::
 
 ## Symbolic Link Error

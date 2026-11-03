@@ -111,12 +111,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
 To provide you with a secure [cross-browser testing](https://www.testmuai.com) environment on-cloud, we recommend integrating <BrandName /> Authentication Credentials in your test scripts. This would allow our cloud servers to establish a secure connection between your local system and [HyperExecute](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/). This document will help you understand how to set up HyperExecute environment variable for your respective operating system. This set up would also help authenticate your colleague's test cases when executed against an individual account.
 
 :::info On-premise deployments
-- Copy your username and access key from your organization's own HyperExecute dashboard, not the public one. Click **Credentials** in the left sidebar, then copy **Username** and **Access Key**.
-- On-prem jobs run on Linux and Windows only. Download the CLI for the OS of the machine that starts the job from **Help** > **Hyperexecute CLI** on your dashboard.
-- The CLI reads `LT_USERNAME` and `LT_ACCESS_KEY` the same way, but you also pass `--onprem-host`.
-- Your admin may restrict which environment variables a job can use. The CLI warns you and names any variable that is not allowed.
-
-See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/).
+Copy `LT_USERNAME` and `LT_ACCESS_KEY` from **Credentials** on your organization's own dashboard, and add `--onprem-host` to the CLI command. See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/).
 :::
 
 ## Where to find <BrandName /> Authentication Credentials?

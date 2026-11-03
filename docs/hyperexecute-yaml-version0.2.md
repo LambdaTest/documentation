@@ -222,13 +222,7 @@ This version introduces several new features and improvements over Version 0.1. 
 :::
 
 :::info On-premise deployments
-Version 0.2 works the same way on-premise, with these points to check:
-
-- Use `runson: linux` or `runson: win`. On-premise deployments do not run macOS.
-- Set `discoveryMode: remote`. Local discovery is not available on-premise.
-- Your admin maps Linux frameworks to queues for each environment. If a runner does not start, ask which queue serves your framework.
-- Jobs that do not name an environment run in your organization's default environment.
-
+On-prem, use `runson: linux` or `runson: win` and set `discoveryMode: remote`. See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/).
 :::
 
 ## Why to use HyperExecute YAML Version 0.2?

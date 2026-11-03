@@ -162,7 +162,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
 Downloading Job Reports and Artifacts manually from the HyperExecute UI can be a time-consuming and repetitive task. To address this pain point, HyperExecute now provides the convenience of receiving Job Reports and Artifacts directly to your specified email addresses. This eliminates the need for manual downloads, allowing you to access critical job information instantly and effortlessly. Embrace the efficiency of automated delivery and spend less time navigating the UI and more time focusing on your development tasks.
 
 :::info On-premise deployments
-On an on-premise deployment, email is sent by your deployment, not by the public <BrandName /> platform. If mail does not arrive, ask your admin whether outbound email is set up for the deployment and whether your mail server accepts it. Check your spam or quarantine folder too.
+On-prem, your deployment sends the email. If it does not arrive, ask your admin whether outbound email is set up. See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/).
 :::
 
 ## YAML Configuration

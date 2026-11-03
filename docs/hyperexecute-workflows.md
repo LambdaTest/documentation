@@ -101,13 +101,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 Workflows give you the speed, reliability, and platform‑native orchestration of HyperExecute on a schedule. Think of Workflows as a lightweight, cloud-native alternative and companion to CI/CD, with all the functionalities of HyperExecute such as reporting, RCA etc.
 
 :::info On-premise deployments
-On-prem, set up workflows from your organization's own HyperExecute dashboard. A few things behave differently:
-
-- Tunnel settings in the YAML are ignored for jobs started by a workflow, so you do not need a tunnel for these runs.
-- When you link workflows, select both the target project (**Select Project**) and the target workflow (**Select Workflow**) before you click **Finish**.
-- Jobs that do not name an environment run in your organization's default environment.
-
-See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/) for the full on-prem setup.
+Tunnel settings are ignored for jobs started by a workflow. When you link workflows, select both **Select Project** and **Select Workflow** before you click **Finish**. See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/).
 :::
 
 ## Why Workflows
@@ -261,7 +255,7 @@ Variables let you customize job runs without the need of creating multiple workf
 - Value length limit: **500 characters** (excluding commas/spaces).
 
 :::info On-premise deployments
-Your admin may restrict which environment variables jobs can use. If a variable is not allowed, the CLI warns you. If you change only Workflow Variables while editing a workflow, check that the new values show after you save.
+If you change only Workflow Variables while editing a workflow, check that the new values show after you save.
 :::
 
 ## FAQ

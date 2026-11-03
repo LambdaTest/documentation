@@ -106,7 +106,8 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 When a job finishes with failures, you do not have to trigger the whole pipeline again to check a fix. From the job page you can **rerun the job**. A rerun is a whole new HyperExecute job, not a retry of individual tests inside the original one: it checks the code out again, uses the same YAML the original job ran with, and gets its own job number, logs and results.
 
 :::info On-premise deployments
-Rerun works the same way on-prem. Project and role checks run inside your deployment, and tunnel checks are skipped. See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/).
+{/* TODO(verify): Re-Run availability on the on-prem job page, and whether tunnel checks are skipped on rerun. */}
+See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/).
 :::
 
 ## Two ways to rerun a job

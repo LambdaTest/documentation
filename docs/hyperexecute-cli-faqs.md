@@ -104,7 +104,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 ***
 
 :::info On-premise deployments
-On-prem deployments run tests on Linux and Windows only. macOS is not available as a test OS.
+On-prem runs tests on Linux and Windows only. See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/).
 :::
 
 ## 1. **Can HyperExecute CLI download test artifacts generated during execution?**
