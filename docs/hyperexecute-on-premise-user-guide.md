@@ -244,7 +244,7 @@ The YAML file tells HyperExecute what to run and how to split it. It is the same
 - If you do not set an environment, the job uses your organization's default environment.
 - Your admin may allow only some environment variables. If you set one that is not allowed, the CLI shows a warning that names it.
 - Set `testDiscovery.mode: remote` in every YAML. On-prem supports remote discovery only, so `mode: local` does not work, whether you start the job from the CLI or from a Workflow. See [testDiscovery](/support/docs/deep-dive-into-hyperexecute-yaml/#mode).
-- Org-wide [Global Policies](/support/docs/hyperexecute-global-policies/) can add steps to your job or reject it. Check the **Applied Policies** panel on the job page to see what changed.
+- Org-wide [Global Policies](/support/docs/hyperexecute-global-policies/), set by your Org Admins, can add steps to your job or reject it. You cannot change them from your YAML. Check the **Applied Policies** panel on the job page to see what changed, and ask your Org Admin if a policy blocks your job.
 
 Validate the file before you submit it:
 

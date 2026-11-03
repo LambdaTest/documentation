@@ -864,7 +864,7 @@ The YAML format is the same on SaaS and on-premise. A few keys behave differentl
 - [`sourcePayload`](#sourcepayload) and Git access go through your organization's own or a dedicated GitHub App.
 - Analytics: Intelligent Test Analytics is not available. Use job reports instead.
 
-Jobs that do not name an environment run in your organization's default environment. Org-wide [Global Policies](/support/docs/hyperexecute-global-policies/) can add steps to your job or reject it. For the full list of differences, see the [on-premise user guide](/support/docs/hyperexecute-on-premise-user-guide/).
+Jobs that do not name an environment run in your organization's default environment. Org-wide [Global Policies](/support/docs/hyperexecute-global-policies/), set by your Org Admins, can add steps to your job or reject it. For the full list of differences, see the [on-premise user guide](/support/docs/hyperexecute-on-premise-user-guide/).
 :::
 
 ## Mandatory Parameters
