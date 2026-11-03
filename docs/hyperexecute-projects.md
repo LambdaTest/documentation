@@ -121,7 +121,7 @@ Organisation admins on the enterprise plan can click **View Summary** at the top
 :::
 
 :::info On-premise deployments
-On-prem, open **Projects** from your organization's own HyperExecute dashboard, not the public one. Repository access usually goes through a GitHub App that your admin has registered for your Git server. See [GitHub App integration](/support/docs/hyperexecute-github-app-integration/) and the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/).
+On-prem, open **Projects** from your organization's own HyperExecute dashboard, not the public one. Which Git providers you can connect depends on how your deployment is set up, so ask your admin. For example, the admin can register a GitHub App for your Git server. See [GitHub App integration](/support/docs/hyperexecute-github-app-integration/) and the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/).
 :::
 
 ## Link Jobs to Projects Using YAML

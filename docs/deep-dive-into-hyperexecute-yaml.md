@@ -1807,7 +1807,7 @@ sourcePayload:
 ***
 
 :::info On-premise deployments
-On-premise, Git access goes through your organization's own GitHub App or a dedicated one, set up by your admin. Ask your admin which repositories it can reach before you use `sourcePayload`.
+On-premise, Git access is set up by your admin, and the supported Git providers depend on your deployment (for example your own or a dedicated GitHub App). Ask your admin which providers and repositories you can use before you set `sourcePayload`.
 :::
 
 ### `hostsOverride`
