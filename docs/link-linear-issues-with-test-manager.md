@@ -132,15 +132,15 @@ Once the integration is complete, follow these steps to link a requirement to yo
 1. Open the **Issues** tab of a test case and click **Link requirement**. On a test run, open its **Issues** tab and click **Link requirement to run**.
 > Note: To link a defect on a test instance or a step, see [Track Bugs and Issues in Test Runs](/support/docs/track-issues-in-test-runs/).
 
-<img loading="lazy" src={require('../assets/images/test-manager/requirements-defects/test-case-link-requirement.png').default} alt="Issues tab of a test case with the Link requirement action" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/test-manager/requirements-defects/test-case-link-requirement.webp').default} alt="Issues tab of a test case with the Link requirement action" className="doc_img"/>
 
 2. Select **Linear** as the source, enter the Linear issue key or URL in the input field, and click **Link requirement**.
 
-<img loading="lazy" src={require('../assets/images/test-manager/requirements-defects/link-requirement-linear.png').default} alt="Link requirement dialog with Linear selected and an issue key entered" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/test-manager/requirements-defects/link-requirement-linear.webp').default} alt="Link requirement dialog with Linear selected and an issue key entered" className="doc_img"/>
 
 3. The Linear issue from your integrated Linear project is linked and listed under **Requirements**.
 
-<img loading="lazy" src={require('../assets/images/test-manager/requirements-defects/linear-requirement-listed.png').default} alt="Linear issues listed in the Requirements tab of a test case" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/test-manager/requirements-defects/linear-requirement-listed.webp').default} alt="Linear issues listed in the Requirements tab of a test case" className="doc_img"/>
 
 ### Issues on a test case
 
@@ -170,7 +170,7 @@ To **unlink an issue**, hover over the Linear issue and click **Unlink requireme
 
 Unlinking removes the association in Test Manager only. The issue itself stays in Linear.
 
-<img loading="lazy" src={require('../assets/images/test-manager/requirements-defects/unlink-requirement-linear.png').default} alt="Unlink requirement action on a Linear issue in the Requirements tab" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/test-manager/requirements-defects/unlink-requirement-linear.webp').default} alt="Unlink requirement action on a Linear issue in the Requirements tab" className="doc_img"/>
 
 ### Behaviour in specific situations
 
