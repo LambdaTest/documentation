@@ -214,8 +214,6 @@ Search the report by **Requirement ID**, **Test Case Name**, or **Test Case ID**
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/Reports/traceability-filters.webp').default} alt="Traceability report filters with the Defect ID filter open" className="doc_img"/>
 
-Test Manager's [test case filters](/support/docs/manual-test-case-creation/#filter-by-requirement-or-defects) can find the test cases that are not linked to any requirement.
-
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
