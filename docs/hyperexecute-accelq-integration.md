@@ -191,7 +191,7 @@ ACCELQ is the most powerful software testing tool to achieve Codeless test autom
 ### Agent.properties file
 Agent.property file is a type of file that gets generated when you configures the agents from the ACCELQ to the <BrandName />.
 
-- You can configure your [<BrandName /> from ACCELQ Agent Dashboard](/support/docs/accelq-integration/#integrating-lambdatest-from-accelq-agent-dashboard)
+- You can configure your [<BrandName /> from ACCELQ Agent Dashboard](/support/docs/accelq-integration/#integrating--from-accelq-agent-dashboard)
 - You can also find the same at the location `(ACCELQAgent/AgentInstances/<agent folder>/agent.properties)` in your local system.
 
 #### Sample File

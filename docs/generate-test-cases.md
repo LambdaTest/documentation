@@ -434,7 +434,7 @@ Keywords used are `Scenario:`, `Given`, `When`, `Then`, `And` and `But`. The fol
 
 ##### Add Issue Links
 - Integrate your <BrandName /> account with Jira/Azure DevOps/Linear. Follow the steps described in the following link to integrate Jira/Azure DevOps/Linear:
-[<BrandName /> Jira Integration](/support/docs/jira-integration/#how-to-establish-integration-with-jira-from-your-lambdatest-account) / [<BrandName /> Azure DevOps Integration](/support/docs/link-ado-issues-with-test-manager/) / [<BrandName /> Linear Integration](/support/docs/linear-app-integration/)
+[<BrandName /> Jira Integration](/support/docs/jira-integration/#how-to-establish-integration-with-jira-from-your--account) / [<BrandName /> Azure DevOps Integration](/support/docs/link-ado-issues-with-test-manager/) / [<BrandName /> Linear Integration](/support/docs/linear-app-integration/)
 
 - After integration is completed, select `Link Jira Issues` / `Link Azure DevOps Issues` / `Link Linear Issues`.
 
