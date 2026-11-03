@@ -151,9 +151,9 @@ Once the integration is complete, follow these steps to link a requirement to yo
 
 <img loading="lazy" src={require('../assets/images/test-manager/requirements-defects/jira-requirement-listed.png').default} alt="Jira issue listed in the Requirements tab of a test case" className="doc_img"/>
 
-4. To **unlink an issue**, click on the unlink button located on the right side of the Jira Issue.
+4. To **unlink an issue**, hover over the Jira issue and click **Unlink requirement** on the right side of its row.
 
-<img loading="lazy" src={require('../assets/images/ado-linking-test-manager/Jira-Unlink-Issue.png').default} alt="Link Azure DevOps Issue" className="doc_img" width="1366" height="629"/>
+<img loading="lazy" src={require('../assets/images/test-manager/requirements-defects/unlink-requirement-jira.png').default} alt="Unlink requirement action on a Jira issue in the Requirements tab" className="doc_img"/>
 
 ### Issues on a test case
 
