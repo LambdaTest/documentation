@@ -97,7 +97,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-05-12T15:56:11+05:30"
+    "dateModified": "2026-10-28T18:00:00+05:30"
   }) }}
 />
 
@@ -123,20 +123,47 @@ Here are the key benefits of using the HyperExecute tool:
 - **Dynamic Commands:** Generate precise test commands tailored to your project
 - **Auto-Configuration:** Create accurate YAML configuration files without manual intervention
 - **Real-Time Monitoring:** Track test executions with immediate updates
-- **Efficient Debugging:** Inspect test results with comprehensive recordings
+- **Efficient Debugging:** Inspect the tasks, stages, logs and artifacts of a job
 - **Instant Documentation:** Access relevant documentation through integrated AI agents
 
 ## Capabilities
-
 ---
 
-The HyperExecute MCP Tool provides five capabilities:
+The HyperExecute MCP Tool provides 15 tools.
 
-1. **Test Runner Command Generation:** Analyzes your project structure and generates appropriate test commands.
-2. **HyperExecute YAML Generation:** Creates a HyperExecute YAML configuration file based on your project analysis.
-3. **HyperExecute Documentation Lookup:** Answers your queries by fetching information from the HyperExecute documentation.
-4. **HyperExecute Job Info:** Retrieves information about a specific test job.
-5. **HyperExecute Sessions:** Fetches session details for a given test run.
+**Set up a job**
+
+| Tool | What it does |
+|---|---|
+| `generateHyperExecuteYAML` | Generates a HyperExecute YAML from the language, framework, test discovery command and test runner command of your project. It covers JavaScript and TypeScript (Playwright, Cypress, WebdriverIO, Puppeteer, Taiko), Python (Pytest, Behave, Robot Framework), Java (TestNG, JUnit, Cucumber), Ruby (RSpec, Capybara), C# (NUnit, xUnit, MSTest) and mobile apps (XCUI, Espresso, Appium). Your AI client works out the discovery and runner commands from your project and passes them in. |
+| `answerHyperExecuteQuery` | Searches the HyperExecute documentation and returns the matching passages with links to their pages. Your AI client writes the answer from them. |
+
+**Monitor and debug jobs**
+
+| Tool | What it does |
+|---|---|
+| `listHyperExecuteJobs` | Lists your jobs, newest first, with an optional status filter over the 200 most recent jobs. |
+| `getHyperExecuteJobInfo` | Gets the status, test results and progress of one job. |
+| `getHyperExecuteJobSessions` | Gets the test sessions of one job. |
+| `analyzeHyperExecuteJob` | Builds a full report of one job: its sessions, tasks, scenario stages and console logs, with pass and fail counts. |
+| `getHyperExecuteJobLiveStream` | Streams the output of a job while it runs. A finished job has no live stream. |
+| `getHyperExecuteTask` | Gets one task of a job. |
+| `getHyperExecuteTaskLogs` | Gets the logs of one task. |
+| `getHyperExecuteStage` | Gets the stages of a task, such as cache, pre-run and scenario. |
+| `getHyperExecuteStageLogs` | Gets the logs of one stage. |
+| `getHyperExecuteStageTasks` | Gets the tasks of one stage. |
+
+**Artifacts**
+
+| Tool | What it does |
+|---|---|
+| `getHyperExecuteJobArtifacts` | Lists the artifacts or categorized errors of a job or task. |
+| `getJobArtifactDetail` | Gets the details of one artifact. |
+| `downloadJobArtifact` | Returns an authenticated download URL for one artifact, with its size and status. It does not return the file itself. |
+
+:::note
+The live stream, task and stage tools use internal HyperExecute APIs, so the format of their output can change.
+:::
 
 ## How to Invoke
 

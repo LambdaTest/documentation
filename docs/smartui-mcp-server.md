@@ -3,7 +3,7 @@ id: smartui-mcp-server
 title: Introducing SmartUI MCP Tool
 hide_title: false
 sidebar_label: SmartUI
-description: Debug visual regressions with SmartUI MCP Tool. Get natural-language summaries of pixel, layout, DOM, and perceptual differences from SmartUI comparison runs.
+description: Use the SmartUI MCP Tool to find SmartUI projects, builds and comparisons, read the CI gate verdict of a build, analyze a comparison, and approve or reject changes from your AI client.
 keywords:
   - smartui
   - visual testing
@@ -61,7 +61,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       "@id": "https://www.testmuai.com/support/docs/smartui-mcp-server/"
     },
     "headline": "Introducing SmartUI MCP Tool",
-    "description": "Debug visual regressions with SmartUI MCP Tool. Get natural-language summaries of pixel, layout, DOM, and perceptual differences from SmartUI comparison runs.",
+    "description": "Use the SmartUI MCP Tool to find SmartUI projects, builds and comparisons, read the CI gate verdict of a build, analyze a comparison, and approve or reject changes from your AI client.",
     "url": "https://www.testmuai.com/support/docs/smartui-mcp-server/",
     "image": {
       "@type": "ImageObject",
@@ -102,95 +102,71 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-05-12T15:56:11+05:30"
+    "dateModified": "2026-10-28T18:00:00+05:30"
   }) }}
 />
 
 # Getting Started with SmartUI MCP Tool
 ---
 
-SmartUI MCP Tool is part of the [TestMu AI MCP Server](/support/docs/testmu-mcp-server/). It lets you debug visual regressions from SmartUI comparison runs by returning natural-language summaries of pixel, layout, DOM, and perceptual differences.
-
-
-<div className="ytframe"> 
-<div className="youtube" data-embed="2Z5F52XxSxQ" data-loading-attribute="eager">
-  <div className="play-button"></div>
-</div>
-</div>
+SmartUI MCP Tool is part of the [TestMu AI MCP Server](/support/docs/testmu-mcp-server/). It lets your AI client find SmartUI projects, builds and comparisons, read the CI gate verdict of a build, inspect the mismatch and screenshots of a comparison, and approve or reject changes, without opening the SmartUI dashboard.
 
 ## How Does It Work?
-
 ---
 
-The SmartUI MCP Tool processes visual comparison data by calling specific analysis capabilities with a `comparisonId`. Each capability simulates a different debugging layer: pixel diff, layout, DOM structure, and human perception.
+SmartUI data is nested: a project contains builds, and a build contains one comparison per screenshot. The tools follow the same path. Your AI client lists projects to get a `project_id`, lists the builds in that project to get a `build_id`, and lists the comparisons in that build to get a `comparison_id` and an `ss_id`. It then analyzes or reviews those comparisons. You can start from a project or build name, and the client looks up the ids for you.
 
-The tool fetches the visual assets (screenshots, DOM snapshots, metadata) and returns natural-language outputs such as:
+A screenshot gets a `comparison_id` only after SmartUI has compared it with a baseline. A new screenshot with no baseline, or one that is still being processed, has an `ss_id` but no `comparison_id` yet.
 
-- "The CTA button lost color contrast, impacting accessibility."
-- "Header layout shifted left due to padding changes."
-
-## Capabilities
-
+## Tools
 ---
 
-All capabilities take a `comparisonId` as input. Start with `analyzeSmartUIRun` for a full picture, then use the individual capabilities to investigate a specific layer.
+| Tool | What it does | Changes your project |
+|---|---|---|
+| `smartui_project_query` | Lists SmartUI projects, with an optional name search, or gets one project with its settings: baseline branch, approvers, Smart Baseline, auto-approval branch, overwrite screenshot, platform and project type. | No |
+| `smartui_build_query` | Lists the builds in a project (filter by branch, status or name), gets one build, or returns the CI gate verdict for a build. | No |
+| `smartui_comparison_query` | Lists the comparisons in a build (filter by status or minimum mismatch), or gets one comparison with its mismatch percentage, status, and the URLs of the baseline, current and diff images. | No |
+| `smartui_comparison_analyze` | Analyzes one comparison through a lens: `consolidated` (default), `pixel` or `dom`. | No |
+| `smartui_screenshot_review` | Approves or rejects comparisons, either by id or every comparison in a build that has a given status. It reads the status back after writing and reports which items were updated and which failed. | Yes |
+| `smartui_baseline_manage` | Merges baselines across branches or builds, then reports the final status of the merged build. | Yes |
+| `smartui_screenshot_upload` | Uploads screenshots to a project as a new build, optionally as a baseline. On the hosted server, pass public image URLs (up to 20); the server cannot read files on your machine. | Yes |
 
-### analyzeSmartUIRun
+### CI Gate Verdict
 
-Runs analysis across all layers - pixel, layout, DOM, and perception - and returns a single consolidated summary. Use this first when a visual diff fails and you are not sure where to look.
+`smartui_build_query` with `action=gate` returns one verdict for a build: `passed`, `failed`, `pending_approval`, `running` or `error`. It also returns the number of screenshots per status, the screenshots that are in the baseline but missing from the build, and the comparisons that block the build. A build that dropped baseline screenshots is `failed`, even if no comparison was rejected. Use this in a pipeline after `smartui_screenshot_upload` or your usual SmartUI capture step.
 
-> "The 'Subscribe' CTA lost its background color and dropped in emphasis. This is likely due to a CSS override on `.cta-btn`. Padding changes have also affected alignment. Suggest restoring background and resetting layout values."
+### Analysis Lenses
 
-### summarizePixelDiff
+- **consolidated** (default): returns the comparison data, that is the mismatch percentage, the status, and the URLs of the baseline, current and diff images.
+- **pixel**: returns the same data, focused on the diff image.
+- **dom**: downloads the DOM snapshots of the baseline and the current screenshot and reports whether they are identical and how much their size differs. It does not list which elements changed. If the build has no DOM snapshot, it returns an error that says so.
 
-Use this when you suspect a color, image, or rendering change. It compares the baseline and current screenshots at the pixel level.
+The `consolidated` and `pixel` lenses report the numbers SmartUI has already computed. They do not run a separate image analysis. Any written explanation of a change comes from your AI client reading this data and the images.
 
-> "Significant pixel differences were detected in the hero banner and footer. These likely stem from background color changes and text shifts."
+By default the tool returns image URLs. If your AI client cannot open URLs, set `include_assets` to `inline` and the images are attached to the result: the diff image for `pixel`, and the baseline, current and diff images for `consolidated`. Images over 1.5 MB, or past 2.25 MB in total, are skipped and listed by URL instead.
 
-### summarizeLayoutDiff
+:::warning
+`smartui_screenshot_review`, `smartui_baseline_manage` and `smartui_screenshot_upload` change your project.
 
-Use this when elements appear misaligned or have moved. It identifies spacing, alignment, and size-related changes.
+- Approving comparisons on the baseline branch can make that build the new baseline.
+- A merge permanently changes the baseline: the merged build becomes the baseline. If the merge fails or ends with no screenshots, the baseline is left on an empty build, and the tool returns an error.
 
-> "The login button has moved 16px downward compared to the baseline. This affects the visual balance of the form."
-
-### summarizeDomDiff
-
-Use this when you suspect an HTML or attribute change caused the visual difference. It compares the DOM structure between runs.
-
-> "The `aria-label` for the submit button has been removed. The button also now includes an extra `disabled` attribute."
-
-### analyzeHumanDiff
-
-Use this when the diff looks minor technically but feels visually wrong. It simulates how a human eye perceives the change in terms of color, weight, and emphasis.
-
-> "The pricing table appears visually heavier due to a font weight increase. This disrupts the balance between sections."
-
-### getSmartUIResources
-
-Fetches the screenshots, DOM snapshots, and metadata for a comparison run. Use this to confirm assets are available before running an analysis.
-
-Returns a description of what was found and flags anything missing.
+These tools declare that they modify data, so MCP clients that use tool annotations ask you to confirm before running them.
+:::
 
 ## How to Invoke
-
 ---
 
-Once your MCP client is connected, use natural language to interact with the SmartUI tool. Example prompts:
+Once your MCP client is connected, use natural language. Example prompts:
 
-- "Run a full SmartUI analysis on comparisonId `<id>`."
-- "What changed in the layout for comparisonId `<id>`?"
-- "Why did the visual diff fail for comparisonId `<id>`?"
-- "Summarize the DOM changes for comparisonId `<id>`."
+- "List my SmartUI projects and show the settings of the checkout project."
+- "Did the latest build in my checkout project pass the visual gate? Which screenshots block it?"
+- "Show the comparisons with more than 5% mismatch in build `<build name>`."
+- "Analyze comparison `<comparison_id>` and check whether the DOM changed."
+- "Approve every comparison with changes in build `<build name>`."
+- "Upload the screenshots at these URLs to my checkout project as a new baseline."
 
-Your AI client will route the request to the appropriate analysis layer.
-
-## Error Handling
-
----
-
-If the `comparisonId` is invalid or resources are missing, you will receive:
-
-> "Error analyzing SmartUI run: comparisonId not found or visual resources are incomplete."
+Your AI client chains the tools in order, for example project, then build, then comparisons, and returns the result inline.
 
 <nav aria-label='breadcrumbs'>
   <ul className='breadcrumbs'>
