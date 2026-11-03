@@ -2,13 +2,12 @@
 id: hyperexecute-on-premise-user-guide
 title: HyperExecute On-Premise User Guide
 sidebar_label: On-Premise User Guide
-description: "End-to-end guide for on-premise HyperExecute: create a Project, run jobs from the CLI, schedule and pause workflows, and troubleshoot."
+description: "End-to-end guide for on-premise HyperExecute: create a Project, run jobs from the CLI, schedule workflows, and troubleshoot."
 keywords:
   - HyperExecute on-premise
   - HyperExecute on-prem CLI
   - HyperExecute private deployment
   - on-prem workflows
-  - pause and resume workflows
   - HyperExecute onprem-host
 url: https://www.testmuai.com/support/docs/hyperexecute-on-premise-user-guide/
 site_name: TestMu AI
@@ -51,7 +50,6 @@ HyperExecute on-prem works the same way as the SaaS platform for most tasks. Thi
 - Install the HyperExecute CLI and point it at your on-prem deployment.
 - Trigger a job from your machine or your CI pipeline.
 - Group jobs under a Project and set up a scheduled Workflow.
-- Pause a workflow during a maintenance window and resume it afterwards.
 - Find results, rerun failures, and fix the most common errors on your own.
 
 ## How on-prem differs from SaaS
@@ -67,7 +65,7 @@ Read this table once before you start. Most "it works on SaaS but not here" issu
 | Environments | Managed by <BrandName /> | Defined by your admin. Jobs with no environment fall back to the org default |
 | Test discovery | `mode: local` or `mode: remote` | `mode: remote` only |
 | Tunnel | Used when tests need to reach private apps | Usually not needed. Tunnel settings are ignored for jobs started from a Workflow or the Trigger API |
-| Git access | Marketplace GitHub App or tokens | Your own or a dedicated GitHub App, or Bitbucket |
+| Git access | Marketplace GitHub App or tokens | Your own or a dedicated GitHub App |
 | Analytics | Full Intelligent Test Analytics | Not available. Use job reports, the job **Insights (Beta)** tab and the Organisation Summary |
 | Access checks | Checked by <BrandName /> | RBAC and project checks run inside your deployment |
 
@@ -75,63 +73,15 @@ Read this table once before you start. Most "it works on SaaS but not here" issu
 
 Eight steps, start to finish. Click any card to jump straight to the full instructions.
 
-<div style={{
-  display: 'grid',
-  gridTemplateColumns: 'repeat(auto-fit, minmax(210px, 1fr))',
-  gap: '14px',
-  margin: '22px 0 10px',
-}}>
-  {[
-    { n: 1, t: 'Find your way',       s: 'Sign in and copy your creds',   h: '#step-1-find-your-way-around-the-dashboard' },
-    { n: 2, t: 'Create a Project',    s: 'Connect Git, add secrets',      h: '#step-2-create-a-project' },
-    { n: 3, t: 'Install the CLI',     s: 'Download the binary and config', h: '#step-3-install-and-configure-the-cli' },
-    { n: 4, t: 'Write the YAML',      s: 'Describe your test matrix',     h: '#step-4-prepare-your-yaml' },
-    { n: 5, t: 'Run a job',           s: 'Trigger your first CLI run',    h: '#step-5-trigger-a-job-from-the-cli' },
-    { n: 6, t: 'Create a Workflow',   s: 'Schedule or chain your jobs',   h: '#step-6-configure-and-run-a-workflow' },
-    { n: 7, t: 'Manage its state',    s: 'Pause, resume, extend',         h: '#step-7-manage-workflow-states' },
-    { n: 8, t: 'Review and rerun',    s: 'Open reports, rerun failures',  h: '#step-8-review-results-and-rerun-failures' },
-  ].map(({ n, t, s, h }) => (
-    <a
-      key={n}
-      href={h}
-      style={{
-        display: 'block',
-        padding: '14px 16px',
-        borderRadius: '10px',
-        border: '1px solid var(--ifm-color-emphasis-200)',
-        background: 'var(--ifm-background-surface-color)',
-        color: 'inherit',
-        textDecoration: 'none',
-        transition: 'border-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease',
-      }}
-      onMouseEnter={e => {
-        e.currentTarget.style.borderColor = 'var(--ifm-color-primary)';
-        e.currentTarget.style.transform = 'translateY(-2px)';
-        e.currentTarget.style.boxShadow = '0 6px 16px rgba(15, 23, 42, 0.08)';
-      }}
-      onMouseLeave={e => {
-        e.currentTarget.style.borderColor = 'var(--ifm-color-emphasis-200)';
-        e.currentTarget.style.transform = 'none';
-        e.currentTarget.style.boxShadow = 'none';
-      }}
-    >
-      <div style={{
-        display: 'inline-flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        width: '26px',
-        height: '26px',
-        borderRadius: '999px',
-        background: 'var(--ifm-color-primary)',
-        color: 'var(--ifm-color-content-inverse)',
-        fontSize: '13px',
-        fontWeight: 700,
-        marginBottom: '10px',
-      }}>{n}</div>
-      <div style={{ fontSize: '14px', fontWeight: 600, lineHeight: 1.3 }}>{t}</div>
-      <div style={{ fontSize: '12px', color: 'var(--ifm-color-emphasis-600)', marginTop: '4px', lineHeight: 1.4 }}>{s}</div>
-    </a>
-  ))}
+<div className="onprem-steps">
+  <a className="onprem-steps__card" href="#step-1-find-your-way-around-the-dashboard"><span className="onprem-steps__num">1</span><strong>Find your way</strong><span>Sign in and copy your creds</span></a>
+  <a className="onprem-steps__card" href="#step-2-create-a-project"><span className="onprem-steps__num">2</span><strong>Create a Project</strong><span>Connect Git, add secrets</span></a>
+  <a className="onprem-steps__card" href="#step-3-install-and-configure-the-cli"><span className="onprem-steps__num">3</span><strong>Install the CLI</strong><span>Download the binary and config</span></a>
+  <a className="onprem-steps__card" href="#step-4-prepare-your-yaml"><span className="onprem-steps__num">4</span><strong>Write the YAML</strong><span>Describe your test matrix</span></a>
+  <a className="onprem-steps__card" href="#step-5-trigger-a-job-from-the-cli"><span className="onprem-steps__num">5</span><strong>Run a job</strong><span>Trigger your first CLI run</span></a>
+  <a className="onprem-steps__card" href="#step-6-configure-and-run-a-workflow"><span className="onprem-steps__num">6</span><strong>Create a Workflow</strong><span>Schedule or chain your jobs</span></a>
+  <a className="onprem-steps__card" href="#step-7-manage-workflow-states"><span className="onprem-steps__num">7</span><strong>Manage its state</strong><span>Check status, extend</span></a>
+  <a className="onprem-steps__card" href="#step-8-review-results-and-rerun-failures"><span className="onprem-steps__num">8</span><strong>Review and rerun</strong><span>Open reports, rerun failures</span></a>
 </div>
 
 Each step below lists what to do, what is specific to on-prem, and where the full feature docs live.
@@ -242,7 +192,6 @@ The YAML file tells HyperExecute what to run and how to split it. It is the same
 
 - Use `linux` or `win` in `runson`. macOS is not available on-prem.
 - If you do not set an environment, the job uses your organization's default environment.
-- Your admin may allow only some environment variables. If you set one that is not allowed, the CLI shows a warning that names it.
 - Set `testDiscovery.mode: remote` in every YAML. On-prem supports remote discovery only, so `mode: local` does not work, whether you start the job from the CLI or from a Workflow. See [testDiscovery](/support/docs/deep-dive-into-hyperexecute-yaml/#mode).
 - Org-wide [Global Policies](/support/docs/hyperexecute-global-policies/), set by your Org Admins, can add steps to your job or reject it. You cannot change them from your YAML. Check the **Applied Policies** panel on the job page to see what changed, and ask your Org Admin if a policy blocks your job.
 
@@ -323,45 +272,21 @@ Full feature reference: [Workflows](/support/docs/hyperexecute-workflows/), [Tes
 
 Every workflow is in one of three states, shown in the **Status** column.
 
-| State | What it means | How it gets there |
-|-------|---------------|-------------------|
-| **Active** | Triggers jobs on its schedule. | Set by an admin |
-| **Paused** | Kept as it is, but triggers no new jobs. Shows the date it was paused. | Set by an admin |
-| **Expired** | The end date has passed, so it no longer runs. | Automatic |
-
-<img loading="lazy" src={require('../assets/images/hyperexecute/features/workflows/workflow-states.webp').default} alt="Workflow list showing Active, Paused and Expired states" className="doc_img"/>
+| State | What it means |
+|-------|---------------|
+| **Active** | Triggers jobs on its schedule. |
+| **Paused** | Kept as it is, but triggers no new jobs. |
+| **Expired** | The end date has passed, so it no longer runs. Set automatically. |
 
 The Project's **Workflows** tab sums them up at the top: **Total Workflows**, **Active Workflows**, **Workflows Running Successfully**, **Workflows with Issues** and **Expired Workflows**. Each row shows the branch, owner, last run, schedule, end date, status and the **Last 5 Jobs**.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/on-prem/project-workflows-tab.webp').default} alt="Project Workflows tab with summary tiles and a list of workflows showing schedule, end date, status and last five jobs" className="doc_img"/>
 
-### Pause a workflow
-
-Pause a workflow when the target environment is down for maintenance, during a code freeze, or while you investigate repeated failures.
-
-1. Open the **Status** dropdown on the workflow row.
-2. Choose **Paused**.
-3. Click **Apply Status**.
-
-<img loading="lazy" src={require('../assets/images/hyperexecute/features/workflows/workflow-set-status.webp').default} alt="Set Status dropdown with Active and Paused options" className="doc_img"/>
-
-While it is paused:
-
-- No new jobs start, and the **Play** button is disabled.
-- Jobs already running finish normally.
-- The schedule, end date and variables stay as they were.
-
-### Resume a workflow
-
-Set the status back to **Active** and click **Apply Status**. The schedule continues from that point. Runs that would have happened during the pause are **not** run afterwards. If you need them, run the workflow once with **Play**.
+{/* TODO(verify): on-prem pause and resume flow (Status dropdown, Apply Status, who can change status, Play disabled while paused, missed runs not replayed). Add a "Pause and resume a workflow" section here once engineering confirms, with on-prem screenshots. */}
 
 ### Bring back an expired workflow
 
-You cannot set **Expired** by hand, and you cannot change it back from the dropdown. Click the **...** menu on the workflow row, choose **Edit Workflow**, and move **Workflow ends on** into the future. The same menu has **Clone Workflow** and **Delete Workflow**.
-
-:::note
-Only Org Admins and Project Admins can change a workflow's status. If the dropdown is disabled for you, ask your admin.
-:::
+You cannot set **Expired** by hand. Click the **...** menu on the workflow row, choose **Edit Workflow**, and move **Workflow ends on** into the future. The same menu has **Clone Workflow** and **Delete Workflow**.
 
 ## Step 8: Review results and rerun failures
 
@@ -372,7 +297,6 @@ Open a job from the **Jobs** page or the Project's **Jobs** tab. The job page sh
 - **Job page:** live logs, task status and the Applied Policies panel. Start with [How to debug a failed job](/support/docs/hyperexecute-how-to-debug-job/).
 - **Reports:** framework reports for each job. See [Job Reports](/support/docs/hyperexecute-reports/).
 - **Artifacts:** files your tests produce. See [Job Artifacts](/support/docs/hyperexecute-artifacts/).
-- **Logs per scenario:** on-prem runs write a separate log file for each scenario, which makes long suites easier to read.
 - **Rerun failed tests:** rerun only what failed instead of the whole job. See [Rerun failed tests](/support/docs/hyperexecute-rerun-failed-jobs/).
 - **Notifications:** if your deployment sends email, send reports by [email](/support/docs/hyperexecute-email-reports/), including different recipients for passed, failed and aborted jobs.
 - **Org view:** admins can click **View Summary** on the Projects page to open the [Organisation Summary](/support/docs/hyperexecute-organisation-summary-dashboard/). It shows organization totals, job and test counts, job status, and failure reasons (Test-level, Config, Infra, Access & Licensing, Unclassified), filtered by project and date, with **Download PDF**.
@@ -383,7 +307,7 @@ Admins define which environments exist and which OS queue each framework uses. A
 
 - Jobs that do not name an environment use the org default.
 - Admins can map Linux frameworks to different queues for each environment.
-- Browser versions: if you ask for an exact version or `latest-N`, you get it when it is installed. If it is not installed, you get the latest available version.
+{/* TODO(verify): browser version fallback on-prem (exact or latest-N when installed, else latest). Add back once confirmed. */}
 
 ## Common scenarios
 
@@ -399,10 +323,6 @@ Create two workflows. Schedule the smoke workflow, and link the regression workf
 
 Create one workflow with a Workflow Variable such as `TARGET_ENV` that has several values. The first value is used for scheduled runs. Pick a different value when you run it with **Play**.
 
-### Maintenance window
-
-Pause the affected workflows before the window starts. Resume them once the environment is back. Run each one manually once if you need the missed coverage.
-
 ### Run from your CI pipeline on every merge
 
 Use the CLI command from [step 5](#step-5-trigger-a-job-from-the-cli) as a pipeline stage. Workflows do not run on commits yet, so use CI for commit-driven runs and workflows for scheduled runs.
@@ -412,14 +332,10 @@ Use the CLI command from [step 5](#step-5-trigger-a-job-from-the-cli) as a pipel
 | What you see | Likely cause | What to do |
 |--------------|--------------|------------|
 | `ERR::HTTP::RESP` with `401` and `Invalid user/key credentials` | Wrong key, or a SaaS key used against on-prem | Copy the username and key from the **on-prem** dashboard. See [ERR::HTTP::RESP](/support/docs/hyperexecute-cli-error/#err_http_resp). |
-| `ERR:HTTP:HOST`, cannot connect to the authentication host | CLI is not pointed at your deployment, or a proxy is blocking it | Check `--onprem-host`, then add `--auto-proxy`. Run `--scan` to test connections. See [ERR:HTTP:HOST](/support/docs/hyperexecute-cli-error/#err_http_host). |
+| `ERR:HTTP:HOST` | CLI cannot reach the host it needs, often because `--onprem-host` is wrong or a proxy blocks it | Check `--onprem-host`, then add `--auto-proxy`. Run `--scan` to test connections. See [ERR:HTTP:HOST](/support/docs/hyperexecute-cli-error/#err_http_host). |
 | `ERR::NO::USER` or `ERR::NO::KEY` | Username or key not passed | Pass `--user` and `--key`, or set them as environment variables. See [Error codes](/support/docs/hyperexecute-cli-error/#error-codes). |
-| Certificate or TLS error | Internal certificate authority not trusted by the machine | Ask your admin for the internal CA bundle and install it on the machine or CI agent. |
 | YAML rejected before the job starts | A Global Policy with `error` severity, or invalid YAML | Read the message, which names the policy and the fix. Run `--validate`. See [YAML validation messages](/support/docs/hyperexecute-cli-error/#yaml-validation-messages). |
-| Warning about a disallowed environment variable | Your admin has limited which variables are allowed | Remove the variable or ask your admin to allow it. |
 | Workflow did not start at the scheduled time | Workflow is Paused or Expired, or the run failed to create a job | Check the **Status** column. Open the workflow and check **Past Occurrences** for errors such as a wrong branch or YAML path. |
-| **Play** button is disabled | Workflow is Paused | Set the status back to **Active**. |
-| Status dropdown is disabled | You are not an Org Admin or Project Admin | Ask your admin to change it. |
 | Tests pass on your machine but fail on HyperExecute | Missing dependency or different environment | Check pre-steps output. See [Pre steps errors](/support/docs/hyperexecute-pre-steps-error/) and [Scenario steps errors](/support/docs/hyperexecute-scenario-steps-error/). |
 | Job ends with `lambda_error` | Symbolic links or very large files in the upload | See [Symbolic link error](/support/docs/hyperexecute-cli-error/#symbolic-link-error) and use a [.hyperexecuteignore file](/support/docs/hyperexecute-gitignore/). |
 | Gradle job passes with zero tests | Gradle version below 7.0 | Upgrade Gradle to 7.0 or later. |
@@ -431,8 +347,8 @@ Use the CLI command from [step 5](#step-5-trigger-a-job-from-the-cli) as a pipel
 | On-prem dashboard URL and host | Everything | Platform admin |
 | User account, role and access key | CLI and dashboard | Org Admin |
 | Network path from your machine or CI agent to the deployment | CLI | Network team |
-| Proxy settings and internal CA certificates | CLI behind a corporate proxy | Network or security team |
-| Git connection (GitHub App or Bitbucket) | Projects and Workflows | Org Admin |
+| Proxy settings | CLI behind a corporate proxy | Network or security team |
+| Git connection (GitHub App) | Projects and Workflows | Org Admin |
 | Environment and queue setup | Running jobs | Org Admin |
 | YAML in the repository | Jobs and Workflows | Test team |
 | Secrets created in HyperExecute | Jobs that need credentials | Test team or Org Admin |
