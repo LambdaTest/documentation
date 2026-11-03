@@ -288,11 +288,11 @@ Open the **Groups** tab and add a budget there.
 
 ---
 
-## Set credit alerts, usage limits and auto-reload (Admins Only)
+## Set credit alerts and usage limits (Admins Only)
 
-**Credits > Alerts & Auto-reload** holds the organization-wide controls that prevent unexpected consumption and keep your balance topped up. Turn on **Email alerts**, fill in the thresholds under **Total Balance Alerts**, then select **Save Changes**.
+**Credits > Alerts** holds the organization-wide controls that prevent unexpected consumption. Turn on **Email alerts**, fill in the thresholds under **Total Balance Alerts**, then select **Save Changes**.
 
-<img loading="lazy" src={require('../assets/images/credits-management/credits-alerts.webp').default} alt="Credits Alerts & Auto-reload page with the email alerts toggle, warn and block balance thresholds, expiry alerts and manage recipients" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/credits-management/credits-alerts.webp').default} alt="Credits Alerts page with the email alerts toggle, warn and block balance thresholds, expiry alerts and manage recipients" className="doc_img"/>
 
 | Setting | What it does |
 |---------|--------------|
@@ -306,15 +306,17 @@ Both balance thresholds are entered as an absolute number of credits.
 **Recommendation:** Start with a soft limit (e.g., 70–80% of your monthly plan) and a hard limit (e.g., 90%).
 :::
 
-### Turn on auto-reload
+---
+
+## Turn on auto-reload (Admins Only)
 
 Auto-reload buys credits for you, using your organization's saved card, whenever the available balance drops below a level you choose, so runs are not blocked by an empty balance. It is off until an admin turns it on, and it is available on the parent organization only, not on sub-organizations.
 
 Before you start, make sure your organization has a saved card set as the default payment method.
 
-1. Go to **Credits > Alerts & Auto-reload**.
-2. Turn on **Auto-reload**.
-3. In **Reload when balance falls below**, enter the balance that should trigger a reload. The default is 1,000 credits. It must be higher than your **Block usage when balance falls below** value, or runs are blocked before a reload can start.
+1. Go to **Credits > Auto-reload**.
+2. Turn on **Reload credits automatically**.
+3. In **Reload when balance falls below**, enter the balance that should trigger a reload. The default is 1,000 credits. It must be higher than your saved **Block usage when balance falls below** value on the Alerts page, or runs are blocked before a reload can start.
 4. In **Reload amount**, enter how many credits to buy each time, at least 100. The price for that amount is shown next to it.
 5. Select **Save Changes**.
 
@@ -329,7 +331,7 @@ If a reload payment does not go through, no credits are added and you are not ch
 | The card was reported lost or stolen, or the bank refused the payment outright | Turns itself off |
 | No default card is saved, or the default payment method is not a card | Turns itself off |
 
-To turn auto-reload back on, fix the payment method under billing, then switch **Auto-reload** on again on the same page. The page shows when the last reload failed and why.
+To turn auto-reload back on, fix the payment method under billing, then switch auto-reload on again on the **Auto-reload** page. The page shows when the last reload failed and why.
 
 ---
 
