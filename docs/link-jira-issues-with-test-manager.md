@@ -141,19 +141,19 @@ Once the integration is complete, follow these steps to link a requirement to yo
 1. Open the **Issues** tab of a test case and click **Link requirement**. On a test run, open its **Issues** tab and click **Link requirement to run**.
 > Note: To link a defect on a test instance or a step, see [Track Bugs and Issues in Test Runs](/support/docs/track-issues-in-test-runs/).
 
-<img loading="lazy" src={require('../assets/images/test-manager/requirements-defects/test-case-link-requirement.png').default} alt="Issues tab of a test case with the Link requirement action" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/test-manager/requirements-defects/test-case-link-requirement.webp').default} alt="Issues tab of a test case with the Link requirement action" className="doc_img"/>
 
 2. Select **Jira**, enter the Jira issue key or URL, and click **Link requirement**.
 
-<img loading="lazy" src={require('../assets/images/test-manager/requirements-defects/link-requirement-jira.png').default} alt="Link requirement dialog with Jira selected and an issue key entered" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/test-manager/requirements-defects/link-requirement-jira.webp').default} alt="Link requirement dialog with Jira selected and an issue key entered" className="doc_img"/>
 
 3. The Jira issue from your integrated Jira Project is linked and listed under **Requirements**. You can view the Issue summary, ID, type, status, priority, and creator.
 
-<img loading="lazy" src={require('../assets/images/test-manager/requirements-defects/jira-requirement-listed.png').default} alt="Jira issue listed in the Requirements tab of a test case" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/test-manager/requirements-defects/jira-requirement-listed.webp').default} alt="Jira issue listed in the Requirements tab of a test case" className="doc_img"/>
 
 4. To **unlink an issue**, hover over the Jira issue and click **Unlink requirement** on the right side of its row.
 
-<img loading="lazy" src={require('../assets/images/test-manager/requirements-defects/unlink-requirement-jira.png').default} alt="Unlink requirement action on a Jira issue in the Requirements tab" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/test-manager/requirements-defects/unlink-requirement-jira.webp').default} alt="Unlink requirement action on a Jira issue in the Requirements tab" className="doc_img"/>
 
 ### Issues on a test case
 
