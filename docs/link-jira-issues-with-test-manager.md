@@ -117,26 +117,58 @@ Test Manager enhances its functionality by seamlessly linking test cases with Ji
 
 4. Select your Jira instance site, click on **Select Site & Proceed**, then select your preferred project and click **Integrate Projects & Install**.
 
-## Linking Jira Issues in Test Manager
+### Requirements and defects
 
-Once the integration is complete, follow these steps to link issues with your test cases or test runs:
+Where you link a Jira issue decides what it is in Test Manager:
 
-1. Head to the issues section in Test Manager, click on **Link Issue** and go to Jira.
-> Note: Issue linking is supported at the Test Case, Test Run, Test Case instance, and step level. To link issues, go to the Issues tab within a Test Case or a Test Run. For linking at the instance and step level within a Test Run, see [Track Bugs and Issues in Test Runs](/support/docs/track-issues-in-test-runs/).
+| Where the issue is linked | What it becomes | What it tells you |
+|---|---|---|
+| Test case or test run | Requirement | What the test validates |
+| Test instance or step in a test run | Defect | What testing found |
 
+The issue type in Jira does not change this. A Jira bug linked on a test case is a requirement, because the test checks that bug, and a sub-task linked on a step is a defect. To change the role of a link, unlink the issue and link it in the right place.
+
+Issues you linked before this change were given a role automatically, using the same rule.
+
+:::info
+Requirements and defects are currently in slow rollout. To get early access, raise a request to our support team. Until they are enabled for your organization, linked issues appear in a single list.
+:::
+
+### Linking Jira Issues in Test Manager
+
+Once the integration is complete, follow these steps to link a requirement to your test cases or test runs:
+
+1. Open the **Issues** tab of a test case and click **Link requirement**. On a test run, open its **Issues** tab and click **Link requirement to run**.
+> Note: To link a defect on a test instance or a step, see [Track Bugs and Issues in Test Runs](/support/docs/track-issues-in-test-runs/).
+
+{/* IMAGE PLACEHOLDER: replace 4.png below with the test case Issues tab showing the Link requirement action.
+    Suggested filename: ../assets/images/test-manager/requirements-defects/test-case-link-requirement.png */}
 <img loading="lazy" src={require('../assets/images/ado-linking-test-manager/4.png').default} alt="Link Azure DevOps Issue" className="doc_img" width="1366" height="629"/>
 
-2. Enter the Jira Issue ID or URL in the input field and click on **Link Issue**.
+2. Select **Jira**, enter the Jira issue key or URL, and click **Link requirement**.
 
+{/* IMAGE PLACEHOLDER: replace Jira-linkIssue-enterId.png below with the Link requirement dialog with Jira selected and an issue key entered.
+    Suggested filename: ../assets/images/test-manager/requirements-defects/link-requirement-jira.png */}
 <img loading="lazy" src={require('../assets/images/ado-linking-test-manager/Jira-linkIssue-enterId.png').default} alt="Link Azure DevOps Issue" className="doc_img" width="1366" height="629"/>
 
-3. The Jira issue from your integrated Jira Project is successfully linked and listed. You can view the Issue summary, ID, type, status, priority, and creator.
+3. The Jira issue from your integrated Jira Project is linked and listed under **Requirements**. You can view the Issue summary, ID, type, status, priority, and creator.
 
+{/* IMAGE PLACEHOLDER: replace Jira-Issue-Listed.png below with a Jira issue listed in the Requirements tab of a test case.
+    Suggested filename: ../assets/images/test-manager/requirements-defects/jira-requirement-listed.png */}
 <img loading="lazy" src={require('../assets/images/ado-linking-test-manager/Jira-Issue-Listed.png').default} alt="Link Azure DevOps Issue" className="doc_img" width="1366" height="629"/>
 
 4. To **unlink an issue**, click on the unlink button located on the right side of the Jira Issue.
 
 <img loading="lazy" src={require('../assets/images/ado-linking-test-manager/Jira-Unlink-Issue.png').default} alt="Link Azure DevOps Issue" className="doc_img" width="1366" height="629"/>
+
+### Issues on a test case
+
+The **Issues** tab of a test case has two tabs, each grouped by tracker. Use the search box and the **Status** and **Issue Type** filters to narrow a long list.
+
+- **Requirements**: the issues linked on this test case. You can link and unlink them here.
+- **Defects**: the defects raised or linked on this test case's instances and steps, across its test runs. Each one shows where it was raised, and **View in run** opens that run. This list is read-only, so you add and remove defects from the test run.
+
+A defect counts as open based on its status in Jira.
 
 
 

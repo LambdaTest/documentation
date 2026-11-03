@@ -122,27 +122,59 @@ Test Manager enhances its functionality by seamlessly linking test cases with Az
 
 <img loading="lazy" src={require('../assets/images/ado-linking-test-manager/3.png').default} alt="Azure DevOps Organization Selection" className="doc_img" width="1366" height="629"/>
 
-## Linking Azure DevOps Work Items
+### Requirements and defects
 
-Once the integration is complete, follow these steps to link work items with your test cases or test runs:
+Where you link an Azure DevOps work item decides what it is in Test Manager:
 
-1. Head to the issues section in Test Manager, click on **Link Issue** and go to Azure DevOps.
-> Note: Issue linking is supported at the Test Case, Test Run, Test Case instance, and step level. To link issues, go to the Issues tab within a Test Case or a Test Run. For linking at the instance and step level within a Test Run, see [Track Bugs and Issues in Test Runs](/support/docs/track-issues-in-test-runs/).
+| Where the work item is linked | What it becomes | What it tells you |
+|---|---|---|
+| Test case or test run | Requirement | What the test validates |
+| Test instance or step in a test run | Defect | What testing found |
 
+The work item type in Azure DevOps does not change this. A Bug linked on a test case is a requirement, because the test checks that bug, and a Task linked on a step is a defect. To change the role of a link, unlink the work item and link it in the right place.
+
+Work items you linked before this change were given a role automatically, using the same rule.
+
+:::info
+Requirements and defects are currently in slow rollout. To get early access, raise a request to our support team. Until they are enabled for your organization, linked issues appear in a single list.
+:::
+
+### Linking Azure DevOps Work Items
+
+Once the integration is complete, follow these steps to link a requirement to your test cases or test runs:
+
+1. Open the **Issues** tab of a test case and click **Link requirement**. On a test run, open its **Issues** tab and click **Link requirement to run**.
+> Note: To link a defect on a test instance or a step, see [Track Bugs and Issues in Test Runs](/support/docs/track-issues-in-test-runs/).
+
+{/* IMAGE PLACEHOLDER: replace 4.png below with the test case Issues tab showing the Link requirement action.
+    Suggested filename: ../assets/images/test-manager/requirements-defects/test-case-link-requirement.png */}
 <img loading="lazy" src={require('../assets/images/ado-linking-test-manager/4.png').default} alt="Link Azure DevOps Issue" className="doc_img" width="1366" height="629"/>
 
-2. Enter the Azure DevOps Work Item ID or URL in the input field and click on **Link Issue**.
+2. Select **Azure DevOps**, enter the Azure DevOps Work Item ID or URL, and click **Link requirement**.
 
+{/* IMAGE PLACEHOLDER: replace 5.png below with the Link requirement dialog with Azure DevOps selected and a work item entered.
+    Suggested filename: ../assets/images/test-manager/requirements-defects/link-requirement-ado.png */}
 <img loading="lazy" src={require('../assets/images/ado-linking-test-manager/5.png').default} alt="Link Azure DevOps Issue" className="doc_img" width="1366" height="629"/>
 
 
-3. The Azure DevOps Work Item from your integrated Organization is successfully linked and listed. You can view the work item name, ID, type, state, priority, and creator.
+3. The Azure DevOps Work Item from your integrated Organization is linked and listed under **Requirements**. You can view the work item name, ID, type, state, priority, and creator.
 
+{/* IMAGE PLACEHOLDER: replace 6.png below with an Azure DevOps work item listed in the Requirements tab of a test case.
+    Suggested filename: ../assets/images/test-manager/requirements-defects/ado-requirement-listed.png */}
 <img loading="lazy" src={require('../assets/images/ado-linking-test-manager/6.png').default} alt="Link Azure DevOps Issue" className="doc_img" width="1366" height="629"/>
 
 4. To **unlink an issue**, click on the unlink button located on the right side of the work item.
 
 <img loading="lazy" src={require('../assets/images/ado-linking-test-manager/7.png').default} alt="Link Azure DevOps Issue" className="doc_img" width="1366" height="629"/>
+
+### Issues on a test case
+
+The **Issues** tab of a test case has two tabs, each grouped by tracker. Use the search box and the **Status** and **Issue Type** filters to narrow a long list.
+
+- **Requirements**: the work items linked on this test case. You can link and unlink them here.
+- **Defects**: the defects raised or linked on this test case's instances and steps, across its test runs. Each one shows where it was raised, and **View in run** opens that run. This list is read-only, so you add and remove defects from the test run.
+
+A defect counts as open based on its state in Azure DevOps.
 
 
 

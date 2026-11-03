@@ -132,6 +132,93 @@ Archived test cases are excluded from every count and coverage metric on this da
 These insights help in monitoring and improving the testing process, ensuring comprehensive coverage and efficient test management. 
 
 
+Test Manager provides powerful reporting capabilities to help teams gain actionable insights from their testing activities. With **Execution and Traceability Reports**, you can measure test coverage, track progress, and ensure alignment between requirements, test cases, and defects.
+
+To access the reports you need to go inside the `Reports` section present inside a Project.
+
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/Reports/Reports-listing-page.png').default} alt="Reports Overview" className="doc_img"/>
+
+There are two type of Reports that you can create here:
+
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/Reports/select-report-type.png').default} alt="Reports Overview" className="doc_img"/>
+
+---
+
+### Execution Reports
+
+Execution based reports allow you to analyze the results of your test executions and identify patterns in test execution.
+
+When you create an Execution Report, you have two ways to filter the data:
+
+#### 1. Filter By Test Runs:
+This option lets you include the results from specific test runs you select.
+
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/Reports/runs-based-execution-report.png').default} alt="Reports Overview" className="doc_img"
+  style={{ width: '60%', height: 'auto'}}/>
+
+#### 2. Filter By Date:
+This option allows you to see all test results that were generated within a specific date range.
+
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/Reports/date-based-execution-report.png').default} alt="Reports Overview" className="doc_img"
+  style={{ width: '60%', height: 'auto'}}/>
+
+You can optionally add **Description** for the Report too but adding **Name** is mandatory to proceed here.
+
+**Recurring Reports:**
+You can select the `Recurring` option, add **Recipients** & **Frequency** to automatically get the mail notification with the reports timely.
+
+This is how the reports will look like:
+
+#### Execution History Report
+
+The detailed Execution History Report lists each Test Instance in the selected test run(s) with the following information: Test Case ID and name, execution status, test run name, step count, configuration (platform, OS, and device), mode, executed by, and executed at. Each row includes a link to navigate directly to that test instance in the product.
+
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/Reports/execution-report.png').default} alt="Execution History Report" className="doc_img"/>
+
+**Step-level data in CSV export**
+
+When you download the report as a CSV, each step for every test instance is listed as a separate row, including:
+
+- **Step** — The step description
+- **Expected Outcome** — The expected result for that step
+- **Step Status** — The execution status of the step, supporting standard statuses (Passed, Failed, Skipped) as well as any custom statuses configured for your project
+
+:::info
+Step-level execution tracking in reports is currently in slow rollout. To get early access, raise a request to our support team.
+:::
+
+:::tip
+ All the Reports can be Downloaded as CSV files.
+:::
+
+---
+
+### Traceability Reports
+
+Traceability reports provide end-to-end visibility into how your test cases align with business requirements and defects. Each requirement is followed through the test cases linked to it, their executions, and the defects those executions found.
+
+:::info
+Requirements and defects are currently in slow rollout. To get early access, raise a request to our support team. Until they are enabled for your organization, the report lists every linked issue together.
+:::
+
+{/* IMAGE PLACEHOLDER: replace traciability-report.png below with the report showing the Requirement and Defects columns.
+    Suggested filename: ../assets/images/mobile-app-testing/Reports/traceability-requirements-defects.png */}
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/Reports/traciability-report.png').default} alt="Reports Overview" className="doc_img"/>
+
+The report lists these columns: **Requirement**, **Test Case**, **Status**, **Configuration**, **Test Run**, **Defects**, **Executed By**, and **Executed At**.
+
+- **Requirement**: every issue linked on a test case, whatever its type and tracker, with the test cases linked to it listed under it. Defects are not listed as requirements.
+- **Defects**: the defects each execution found, with where each one was raised, on a step or on the test instance.
+
+A requirement that is linked only to a test run, and not to a test case, does not appear in the report.
+
+The report data can be filtered by **Requirement ID**, **Executed By**, **Status**, and **Test Run**. The CSV export includes the requirements and the defects.
+
+{/* IMAGE PLACEHOLDER: replace traciablity-filters.png below with the current report filters.
+    Suggested filename: ../assets/images/mobile-app-testing/Reports/traceability-filters.png */}
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/Reports/traciablity-filters.png').default} alt="Reports Overview" className="doc_img"/>
+
+Test Manager's [test case filters](/support/docs/manual-test-case-creation/#filter-by-requirement-or-defects) can find the test cases that are not linked to any requirement.
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
