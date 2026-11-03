@@ -67,7 +67,7 @@ Read this table once before you start. Most "it works on SaaS but not here" issu
 | Environments | Managed by <BrandName /> | Defined by your admin. Jobs with no environment fall back to the org default |
 | Test discovery | `mode: local` or `mode: remote` | `mode: remote` only |
 | Tunnel | Used when tests need to reach private apps | Usually not needed. Tunnel settings are ignored for jobs started from a Workflow or the Trigger API |
-| Git access | Marketplace GitHub App or tokens | Your own or a dedicated GitHub App |
+| Git access | Marketplace GitHub App or tokens | Depends on how your deployment is set up, for example your own or a dedicated GitHub App. Ask your admin which Git providers you can use |
 | Analytics | Full Intelligent Test Analytics | Not available. Use job reports, the job **Insights (Beta)** tab and the Organisation Summary |
 | Access checks | Checked by <BrandName /> | RBAC and project checks run inside your deployment |
 
@@ -97,7 +97,7 @@ Collect these from your admin before step 1. Missing any of them is the most com
 - [ ] A dashboard login. Your username and access key come from the dashboard itself (step 1).
 - [ ] Your **role** (Org Admin, Project Admin or member). Workflow status changes need an admin role.
 - [ ] **Proxy details**, if your machine reaches the network through a corporate proxy.
-- [ ] Access to the **Git repository** that holds your tests, connected to HyperExecute by your admin.
+- [ ] Access to the **Git repository** that holds your tests, connected to HyperExecute by your admin. Supported Git providers depend on your deployment, so confirm yours is connected.
 - [ ] The **environment** name your tests should run in, if it is not the org default.
 
 ## Step 1: Find your way around the dashboard
@@ -370,7 +370,7 @@ Use the CLI command from [step 5](#step-5-trigger-a-job-from-the-cli) as a pipel
 | User account, role and access key | CLI and dashboard | Org Admin |
 | Network path from your machine or CI agent to the deployment | CLI | Network team |
 | Proxy settings | CLI behind a corporate proxy | Network or security team |
-| Git connection (GitHub App) | Projects and Workflows | Org Admin |
+| Git connection for your Git provider (for example a GitHub App) | Projects and Workflows | Org Admin |
 | Environment and queue setup | Running jobs | Org Admin |
 | YAML in the repository | Jobs and Workflows | Test team |
 | Secrets created in HyperExecute | Jobs that need credentials | Test team or Org Admin |
