@@ -416,57 +416,96 @@ module.exports = {
         ],
       },
 
-      // 2. Author Tests
+      // Knowledge Base (flat list, as on testmuCom)
       {
         type: "category",
         collapsed: true,
-        label: "Author Tests",
+        label: "Knowledge Base",
+        link: { type: "doc", id: "kaneai-kb-knowledge-base-index" },
         items: [
           { type: "doc", id: "kaneai-kb-finding-and-interacting-with-elements", label: "Elements" },
-          { type: "doc", id: "kane-ai-click-interactions", label: "Clicks, Long-Press & Drag" },
-          { type: "doc", id: "kane-ai-scroll-in-feature", label: "Scroll" },
           { type: "doc", id: "kaneai-kb-forms-inputs-and-data-entry", label: "Forms" },
-          { type: "doc", id: "kaneai-upload-and-download-files", label: "Upload & Download Files" },
-          { type: "doc", id: "kaneai-kb-dynamic-content-waits-and-page-state", label: "Waits" },
-          { type: "doc", id: "kaneai-manual-interaction", label: "Manual Interaction" },
-          { type: "doc", id: "kaneai-authoring-session", label: "Authoring Session" },
           { type: "doc", id: "kaneai-kb-assertions-and-validation", label: "Assertions" },
-          { type: "doc", id: "kaneai-conditional-logic", label: "Conditional Logic" },
-          { type: "doc", id: "kaneai-while-loops", label: "While Loops" },
-          { type: "doc", id: "kane-ai-modules", label: "Modules" },
+          { type: "doc", id: "kaneai-kb-dynamic-content-waits-and-page-state", label: "Waits" },
+          { type: "doc", id: "kaneai-kb-mobile-app-testing-patterns", label: "Mobile Patterns" },
           { type: "doc", id: "kaneai-kb-authentication-and-session-management", label: "Authentication" },
           { type: "doc", id: "kaneai-kb-api-testing-and-network-assertions", label: "Network" },
-          { type: "doc", id: "kaneai-database", label: "Database" },
-          { type: "doc", id: "kane-ai-javascript-execution", label: "JavaScript Execution & Snippets" },
-          { type: "doc", id: "kane-ai-api-testing", label: "API Testing" },
-          { type: "doc", id: "kaneai-bulk-api-import", label: "Bulk API Import" },
-          { type: "doc", id: "kaneai-api-response-assertions", label: "API Response Assertions" },
-          { type: "doc", id: "kaneai-smartui-visual-testing", label: "Visual Testing" },
-          { type: "doc", id: "kane-ai-deeplink-support", label: "Mobile Deeplinks" },
-          { type: "doc", id: "kaneai-kb-mobile-app-testing-patterns", label: "Mobile Patterns" },
-          { type: "doc", id: "kaneai-mobile-app-accessibility", label: "Mobile App Accessibility" },
+          { type: "doc", id: "kaneai-kb-js-snippets-and-workarounds", label: "JS Snippets & Workarounds" },
+          { type: "doc", id: "kaneai-failure-conditions", label: "Failure Conditions" },
+          { type: "doc", id: "kaneai-smart-locator-priority", label: "Smart Locators" },
           { type: "doc", id: "kane-ai-using-variables", label: "Variables & Secrets" },
+          { type: "doc", id: "kane-ai-secrets", label: "Secrets" },
+          { type: "doc", id: "kane-ai-smart-variables", label: "Smart Variables" },
           { type: "doc", id: "kane-ai-using-parameters", label: "Parameters" },
           { type: "doc", id: "kane-ai-using-datasets", label: "Datasets" },
+          { type: "doc", id: "kaneai-authoring-session", label: "Authoring Session" },
+          { type: "doc", id: "kane-ai-command-guide", label: "Commands" },
+          { type: "doc", id: "kane-ai-automation-code-generation", label: "Code Generation" },
+          { type: "doc", id: "error-handling-kaneai", label: "Errors" },
         ],
       },
 
-      // 3. Configure Tests
-      {
-        type: "category",
-        collapsed: true,
-        label: "Configure Tests",
-        items: [
-          { type: "doc", id: "kaneai-advanced-settings", label: "Advanced Settings" },
-          { type: "doc", id: "kaneai-chrome-options", label: "Chrome Options" },
-          { type: "doc", id: "kaneai-custom-headers", label: "Custom Headers" },
-          { type: "doc", id: "kane-ai-geolocation-tunnel-proxy", label: "Geolocation, Tunnel & Proxy" },
-          { type: "doc", id: "kaneai-network-throttling", label: "Mobile Network Throttling" },
-          { type: "doc", id: "kaneai-gps-location", label: "Mobile GPS Location" },
-          { type: "doc", id: "kaneai-smart-locator-priority", label: "Smart Locators" },
-          { type: "doc", id: "kaneai-healing-and-dynamic-test", label: "Adaptive Heal and Dynamic Test" },
-        ],
-      },
+      // Features (Common / Web / Mobile)
+{
+  type: "category",
+  collapsed: true,
+  label: "Features",
+  items: [
+    {
+      type: "category",
+      collapsed: true,
+      label: "Common",
+      items: [
+        { type: "doc", id: "kaneai-manual-interaction", label: "Manual Interaction" },
+        { type: "doc", id: "kane-ai-javascript-execution", label: "JavaScript Execution & Snippets" },
+        { type: "doc", id: "kane-ai-geolocation-tunnel-proxy", label: "Geolocation, Tunnel & Proxy" },
+        { type: "doc", id: "kaneai-auto-heal", label: "Auto-Heal" },
+        { type: "doc", id: "kane-ai-scroll-in-feature", label: "Scroll" },
+        { type: "doc", id: "kane-ai-drag-drop", label: "Drag and Drop" },
+        { type: "doc", id: "kane-ai-click-interactions", label: "Clicks, Long-Press & Drag" },
+        { type: "doc", id: "kane-ai-jira-integration", label: "Jira" },
+        { type: "doc", id: "kane-ai-api-testing", label: "API Testing" },
+        { type: "doc", id: "kaneai-bulk-api-import", label: "Bulk API Import" },
+        { type: "doc", id: "kaneai-api-response-assertions", label: "API Response Assertions" },
+        { type: "doc", id: "kane-ai-modules", label: "Modules" },
+        { type: "doc", id: "kaneai-modules-versions-and-enhancement", label: "Versioning and Enhancements" },
+        { type: "doc", id: "kaneai-bulk-module-update", label: "Bulk Module Update" },
+        { type: "doc", id: "kaneai-upload-and-download-files", label: "Upload & Download Files" },
+        { type: "doc", id: "kaneai-totp", label: "TOTP Authentication" },
+        { type: "doc", id: "kaneai-database", label: "Database" },
+        { type: "doc", id: "kaneai-rename-instructions", label: "Rename Steps" },
+        { type: "doc", id: "kaneai-conditional-logic", label: "Conditional Logic" },
+        { type: "doc", id: "kaneai-while-loops", label: "While Loops" },
+        { type: "doc", id: "kane-ai-network-assertions", label: "Network Logs Assertions" },
+        { type: "doc", id: "kaneai-advanced-settings", label: "Advanced Settings" },
+        { type: "doc", id: "kaneai-custom-headers", label: "Custom Headers" },
+        { type: "doc", id: "kaneai-smartui-visual-testing", label: "Visual Testing" },
+      ],
+    },
+    {
+      type: "category",
+      collapsed: true,
+      label: "Web",
+      items: [
+        { type: "doc", id: "kaneai-dynamic-url-replacement", label: "Dynamic URL Replacement" },
+        { type: "doc", id: "kaneai-chrome-options", label: "Chrome Options" },
+      ],
+    },
+    {
+      type: "category",
+      collapsed: true,
+      label: "Mobile",
+      items: [
+        { type: "doc", id: "kane-ai-mobile-app-capabilities", label: "Mobile Authoring Capabilities" },
+        { type: "doc", id: "kane-ai-deeplink-support", label: "Mobile Deeplinks" },
+        { type: "doc", id: "kaneai-network-throttling", label: "Mobile Network Throttling" },
+        { type: "doc", id: "kaneai-gps-location", label: "Mobile GPS Location" },
+        { type: "doc", id: "kaneai-scroll-until-mobile", label: "Scroll Until Element" },
+        { type: "doc", id: "kaneai-mobile-app-accessibility", label: "Mobile App Accessibility" },
+      ],
+    },
+  ],
+},
 
       // 4. Run & Analyze
       {
@@ -474,16 +513,14 @@ module.exports = {
         collapsed: true,
         label: "Run & Analyze",
         items: [
-          { type: "doc", id: "kane-ai-automation-code-generation", label: "Code Generation" },
           { type: "doc", id: "kaneai-hyperexecute-test-run-execution", label: "Test Runs" },
           { type: "doc", id: "kaneai-test-run-output", label: "Test Run Output" },
           { type: "doc", id: "kaneai-test-run-instance-view", label: "Test Run Instance View" },
           { type: "doc", id: "kaneai-scheduled-test-runs", label: "Scheduled Test Runs" },
           { type: "doc", id: "kaneai-sequential-test-runs", label: "Sequential Test Runs" },
-          { type: "doc", id: "kaneai-dynamic-url-replacement", label: "Dynamic URL Replacement" },
-          { type: "doc", id: "kaneai-failure-conditions", label: "Failure Conditions" },
           { type: "doc", id: "test-runs-configurations", label: "Configurations" },
           { type: "doc", id: "kaneai-ci-cd-automation", label: "CI/CD" },
+          { type: "doc", id: "kaneai-healing-and-dynamic-test", label: "Adaptive Heal and Dynamic Test" },
         ],
       },
 
@@ -493,31 +530,13 @@ module.exports = {
         collapsed: true,
         label: "Integrations",
         items: [
-          { type: "doc", id: "kane-ai-jira-integration", label: "Jira" },
           { type: "doc", id: "github-app-integration", label: "GitHub App" },
           { type: "doc", id: "kane-ai-azure-devops-integration", label: "Azure DevOps" },
         ],
       },
 
-      // 6. Reference
-      {
-        type: "category",
-        collapsed: true,
-        label: "Reference",
-        items: [
-          { type: "doc", id: "kaneai-kb-knowledge-base-index", label: "Knowledge Base" },
-          { type: "doc", id: "kane-ai-command-guide", label: "Commands" },
-          { type: "doc", id: "error-handling-kaneai", label: "Errors" },
-          { type: "doc", id: "kaneai-auto-heal", label: "Auto-Heal" },
-          { type: "doc", id: "kane-ai-mobile-app-capabilities", label: "Mobile Authoring Capabilities" },
-        ],
-      },
-
       // 7. FAQs
       { type: "doc", id: "kaneai-faqs", label: "FAQs", className: "menu-bold" },
-
-      // 8. Release Notes
-      { type: "doc", id: "kaneai-release-notes", label: "Release Notes", className: "menu-bold" },
     ],
   ],
 
