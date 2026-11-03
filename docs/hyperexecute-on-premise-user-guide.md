@@ -52,7 +52,7 @@ HyperExecute on-prem works the same way as the SaaS platform for most tasks. Thi
 - Trigger a job from your machine or your CI pipeline.
 - Group jobs under a Project and set up a scheduled Workflow.
 - Pause a workflow during a maintenance window.
-- Find results, run jobs again, and fix the most common errors on your own.
+- Find results, rerun failures, and fix the most common errors on your own.
 
 ## How on-prem differs from SaaS
 
@@ -83,7 +83,7 @@ Eight steps, start to finish. Click any card to jump straight to the full instru
   <a className="onprem-steps__card" href="#step-5-trigger-a-job-from-the-cli"><span className="onprem-steps__num">5</span><strong>Run a job</strong><span>Trigger your first CLI run</span></a>
   <a className="onprem-steps__card" href="#step-6-configure-and-run-a-workflow"><span className="onprem-steps__num">6</span><strong>Create a Workflow</strong><span>Schedule or chain your jobs</span></a>
   <a className="onprem-steps__card" href="#step-7-manage-workflow-states"><span className="onprem-steps__num">7</span><strong>Manage its state</strong><span>Pause, check status, extend</span></a>
-  <a className="onprem-steps__card" href="#step-8-review-results-and-run-again"><span className="onprem-steps__num">8</span><strong>Review and run again</strong><span>Open reports and logs</span></a>
+  <a className="onprem-steps__card" href="#step-8-review-results-and-rerun-failures"><span className="onprem-steps__num">8</span><strong>Review and rerun</strong><span>Open reports, rerun failures</span></a>
 </div>
 
 Each step below lists what to do, what is specific to on-prem, and where the full feature docs live.
@@ -300,7 +300,7 @@ A paused workflow keeps its schedule, end date and variables, but triggers no ne
 
 You cannot set **Expired** by hand. Click the **...** menu on the workflow row, choose **Edit Workflow**, and move **Workflow ends on** into the future. The same menu has **Clone Workflow** and **Delete Workflow**.
 
-## Step 8: Review results and run again
+## Step 8: Review results and rerun failures
 
 Open a job from the **Jobs** page or the Project's **Jobs** tab. The job page shows the status, duration, owner and labels at the top, with **YAML**, **Artifacts** and **Report** buttons. The left panel lists each execution task and the global post task. On the right, switch between **Pre Steps**, **Scenarios** and **Post Steps** to read the logs for that task. The **Scenarios** tab lists each scenario with its own status, duration and log, so you can open just the one that failed.
 
@@ -309,8 +309,8 @@ Open a job from the **Jobs** page or the Project's **Jobs** tab. The job page sh
 - **Job page:** live logs, task status and the Applied Policies panel. Start with [How to debug a failed job](/support/docs/hyperexecute-how-to-debug-job/).
 - **Reports:** framework reports for each job. See [Job Reports](/support/docs/hyperexecute-reports/).
 - **Artifacts:** files your tests produce. See [Job Artifacts](/support/docs/hyperexecute-artifacts/).
-- **Run again after a fix:** start the job again from the CLI ([step 5](#step-5-trigger-a-job-from-the-cli)), or click **Play** on the workflow row.
-{/* TODO(verify): Re-Run is not shown on the on-prem job page (checked on a failed job). Confirm whether Rerun Failed Tests is available on-prem before linking /support/docs/hyperexecute-rerun-failed-jobs/. */}
+- **Rerun failed tests:** rerun only the failed scenarios, or all of them, from the job page. The job needs code from Git and YAML version 0.1. See [Rerun failed jobs](/support/docs/hyperexecute-rerun-failed-jobs/).
+- **Run again after a fix:** you can also start the job again from the CLI ([step 5](#step-5-trigger-a-job-from-the-cli)), or click **Play** on the workflow row.
 - **Notifications:** if your deployment sends email, send reports by [email](/support/docs/hyperexecute-email-reports/), including different recipients for passed, failed and aborted jobs.
 - **Org view:** admins can click **View Summary** on the Projects page to open the [Organisation Summary](/support/docs/hyperexecute-organisation-summary-dashboard/). It shows organization totals, job and test counts, job status, and failure reasons (Test-level, Config, Infra, Access & Licensing, Unclassified), filtered by project and date, with **Download PDF**.
 
@@ -355,6 +355,7 @@ Use the CLI command from [step 5](#step-5-trigger-a-job-from-the-cli) as a pipel
 | Workflow did not start at the scheduled time | Workflow is Paused or Expired, or the run failed to create a job | Check the **Status** column. Open the workflow and check **Past Occurrences** for errors such as a wrong branch or YAML path. |
 | Tests pass on your machine but fail on HyperExecute | Missing dependency or different environment | Check pre-steps output. See [Pre steps errors](/support/docs/hyperexecute-pre-steps-error/) and [Scenario steps errors](/support/docs/hyperexecute-scenario-steps-error/). |
 | Job ends with `lambda_error` | Symbolic links or very large files in the upload | See [Symbolic link error](/support/docs/hyperexecute-cli-error/#symbolic-link-error) and use a [.hyperexecuteignore file](/support/docs/hyperexecute-gitignore/). |
+| No rerun option on a failed job | The job did not come from Git, or it used YAML version 0.2 | Check the [rerun prerequisites](/support/docs/hyperexecute-rerun-failed-jobs/#prerequisites). Otherwise run the job again from the CLI. |
 | Gradle job passes with zero tests | Gradle version below 7.0 | Upgrade Gradle to 7.0 or later. |
 | Certificate or TLS error from the CLI | The machine or CI agent does not trust the certificate presented by your deployment or proxy | Send the full error to your network or security team. They set up trust for internal certificates on your machines. |
 | A setting from your YAML is ignored or the job is changed | A Global Policy set by your Org Admins | Open the **Applied Policies** panel on the job page, then ask your Org Admin. |
@@ -401,7 +402,7 @@ Every feature below works on-prem unless the page or this guide says otherwise. 
 | Workflows | [Workflows](/support/docs/hyperexecute-workflows/), [Test Chains](/support/docs/hyperexecute-test-chains/) |
 | CI/CD | [Integration with CI/CD tools](/support/docs/hyperexecute-integration-with-ci-cd-tools/), [Jenkins](/support/docs/jenkins-with-hyperexecute/), [Azure DevOps](/support/docs/azure-with-hyperexecute/), [Job status callback](/support/docs/hyperexecute-job-callback/) |
 | Results | [Job Reports](/support/docs/hyperexecute-reports/), [Job Artifacts](/support/docs/hyperexecute-artifacts/), [Artifact URLs](/support/docs/hyperexecute-artifacts-url/), [Process artifacts in Global Post](/support/docs/hyperexecute-global-post-artifacts/), [Email reports](/support/docs/hyperexecute-email-reports/), [Filter jobs by label](/support/docs/hyperexecute-jobs-label-filter/), [Test muting](/support/docs/hyperexecute-test-muting/) |
-| Reruns | [Rerun rules](/support/docs/hyperexecute-rerun-rules/) |
+| Reruns | [Rerun failed jobs](/support/docs/hyperexecute-rerun-failed-jobs/), [Rerun rules](/support/docs/hyperexecute-rerun-rules/) |
 | Troubleshooting | [Debug a failed job](/support/docs/hyperexecute-how-to-debug-job/), [CLI errors](/support/docs/hyperexecute-cli-error/), [Pre steps errors](/support/docs/hyperexecute-pre-steps-error/), [Scenario steps errors](/support/docs/hyperexecute-scenario-steps-error/), [Version conflicts](/support/docs/hyperexecute-how-to-resolve-version-conflict/), [Snooper](/support/docs/hyperexecute-snooper/) |
 | Network | [Tunnel configuration](/support/docs/hyperexecute-how-to-configure-tunnel/), [Background services](/support/docs/hyperexecute-background-services/), [sourcePayload](/support/docs/hyperexecute-how-to-configure-sourcePayload/) |
 | Administration | [Global Policies](/support/docs/hyperexecute-global-policies/), [Org product preferences](/support/docs/hyperexecute-org-product-preferences/), [GitHub App integration](/support/docs/hyperexecute-github-app-integration/), [Organisation Summary](/support/docs/hyperexecute-organisation-summary-dashboard/) |
