@@ -165,10 +165,10 @@ Use this when you find a defect while executing a test and no ticket exists yet.
 
 <img loading="lazy" src={require('../assets/images/test-run-issues/mark-as-bug-create-issue.png').default} alt="Create an Issue panel for raising a new bug from a test instance" className="doc_img"/>
 
-Test Manager files the ticket in your bug tracker without leaving the run. When the ticket is created in Jira or Azure DevOps, it is added as a defect on the test instance or step, and appears in the same views as a linked issue.
+Test Manager files the ticket in your bug tracker without leaving the run. When the ticket is created in Jira, Azure DevOps, or Linear, it is added as a defect on the test instance or step, and appears in the **Defects** sections of the test case and the Test Run, in the same views as a linked issue.
 
 :::note
-Mark as Bug can file tickets in several bug trackers, but only Jira and Azure DevOps tickets are tracked back to the test instance. See [Supported trackers and visibility](#supported-trackers-and-visibility).
+Mark as Bug can file tickets in several bug trackers, but only Jira, Azure DevOps, and Linear tickets are tracked back to the test instance. See [Supported trackers and visibility](#supported-trackers-and-visibility).
 :::
 
 ## Review the issues on an instance
@@ -236,7 +236,7 @@ The two ways of putting a bug on a test instance do not cover the same set of tr
 
 Linking an existing issue is available for **Jira**, **Azure DevOps**, and **Linear**.
 
-Mark as Bug can create tickets in several bug tracking tools, but only **Jira** and **Azure DevOps** tickets are associated with, and visible in, Test Runs, Test Cases, and test instances. A bug raised in any other tracker, Linear included, is created successfully but does not appear in these views. To track a Linear issue against a test, link it instead.
+Mark as Bug can create tickets in several bug tracking tools, but only **Jira**, **Azure DevOps**, and **Linear** tickets are associated with, and visible in, Test Runs, Test Cases, and test instances. A bug raised in any other tracker is created successfully but does not appear in these views.
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
