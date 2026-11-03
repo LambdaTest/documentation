@@ -145,15 +145,30 @@ Step-level execution tracking in reports is currently in slow rollout. To get ea
 
 ### Traceability Reports
 
-Traceability reports provide end-to-end visibility into how your test cases align with business requirements and defects.
+Traceability reports provide end-to-end visibility into how your test cases align with business requirements and defects. Each requirement is followed through the test cases linked to it, their executions, and the defects those executions found.
 
-The Traceability reports show the Issues based test-execution report allowing you to see the Issues coverage in tests:
+:::info
+Requirements and defects are currently in slow rollout. To get early access, raise a request to our support team. Until they are enabled for your organization, the report lists every linked issue together.
+:::
 
+{/* IMAGE PLACEHOLDER: replace traciability-report.png below with the report showing the Requirement and Defects columns.
+    Suggested filename: ../assets/images/mobile-app-testing/Reports/traceability-requirements-defects.png */}
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/Reports/traciability-report.png').default} alt="Reports Overview" className="doc_img"/>
 
-The report data can be filtered using Test, Issue, and Run metadata.
+The report lists these columns: **Requirement**, **Test Case**, **Status**, **Configuration**, **Test Run**, **Defects**, **Executed By**, and **Executed At**.
 
+- **Requirement**: every issue linked on a test case, whatever its type and tracker, with the test cases linked to it listed under it. Defects are not listed as requirements.
+- **Defects**: the defects each execution found, with where each one was raised, on a step or on the test instance.
+
+A requirement that is linked only to a test run, and not to a test case, does not appear in the report.
+
+The report data can be filtered by **Requirement ID**, **Executed By**, **Status**, and **Test Run**. The CSV export includes the requirements and the defects.
+
+{/* IMAGE PLACEHOLDER: replace traciablity-filters.png below with the current report filters.
+    Suggested filename: ../assets/images/mobile-app-testing/Reports/traceability-filters.png */}
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/Reports/traciablity-filters.png').default} alt="Reports Overview" className="doc_img"/>
+
+Test Manager's [test case filters](/support/docs/manual-test-case-creation/#filter-by-requirement-or-defects) can find the test cases that are not linked to any requirement.
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
