@@ -288,7 +288,7 @@ Running test instances on <BrandName /> Cloud gives you access to a wide range o
 :::
 
 :::note Track bugs during execution
-Bugs raised or linked while executing an instance are surfaced under that Test Case instance. To link Jira or Azure DevOps tickets at the instance and step level, see [Track Bugs and Issues in Test Runs](/support/docs/track-issues-in-test-runs/).
+Bugs raised or linked while executing an instance are surfaced under that Test Case instance. To link Jira, Azure DevOps, or Linear tickets at the instance and step level, see [Track Bugs and Issues in Test Runs](/support/docs/track-issues-in-test-runs/).
 :::
 
 ## 7. Test Run Options
