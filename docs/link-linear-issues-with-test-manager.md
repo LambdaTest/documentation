@@ -132,21 +132,15 @@ Once the integration is complete, follow these steps to link a requirement to yo
 1. Open the **Issues** tab of a test case and click **Link requirement**. On a test run, open its **Issues** tab and click **Link requirement to run**.
 > Note: To link a defect on a test instance or a step, see [Track Bugs and Issues in Test Runs](/support/docs/track-issues-in-test-runs/).
 
-{/* IMAGE PLACEHOLDER: replace link-issue-dialog-linear.png below with the test case Issues tab showing the Link requirement action.
-    Suggested filename: ../assets/images/test-manager/requirements-defects/test-case-link-requirement.png */}
-<img loading="lazy" src={require('../assets/images/test-manager/linear/link-issue-dialog-linear.png').default} alt="issues-tab-with-link-issue-button" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/test-manager/requirements-defects/test-case-link-requirement.png').default} alt="Issues tab of a test case with the Link requirement action" className="doc_img"/>
 
 2. Select **Linear** as the source, enter the Linear issue key or URL in the input field, and click **Link requirement**.
 
-{/* IMAGE PLACEHOLDER: replace enter-linear-issue-id.png below with the Link requirement dialog with Linear selected and an issue key entered.
-    Suggested filename: ../assets/images/test-manager/requirements-defects/link-requirement-linear.png */}
-<img loading="lazy" src={require('../assets/images/test-manager/linear/enter-linear-issue-id.png').default} alt="link-issues-dialog-with-linear-selected-and-issue-id-entered" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/test-manager/requirements-defects/link-requirement-linear.png').default} alt="Link requirement dialog with Linear selected and an issue key entered" className="doc_img"/>
 
 3. The Linear issue from your integrated Linear project is linked and listed under **Requirements**.
 
-{/* IMAGE PLACEHOLDER: replace linear-issue-listed.png below with a Linear issue listed in the Requirements tab of a test case.
-    Suggested filename: ../assets/images/test-manager/requirements-defects/linear-requirement-listed.png */}
-<img loading="lazy" src={require('../assets/images/test-manager/linear/linear-issue-listed.png').default} alt="linked-linear-issue-listed" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/test-manager/requirements-defects/linear-requirement-listed.png').default} alt="Linear issues listed in the Requirements tab of a test case" className="doc_img"/>
 
 ### Issues on a test case
 
