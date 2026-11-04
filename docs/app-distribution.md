@@ -143,6 +143,8 @@ Open any app and go to the **Distribution Page** tab. Here you can
   - **Public** - anyone with the link can download.
   - **Authenticated** - only testers in the app's sharing list can download from the link received in their email.
 
+Every distribution page also shows a **QR code**. Testers scan it with their phone to open the page and tap **Download** — no need to type or copy a URL.
+
 <img loading="lazy" src={require('../assets/images/real-device-app-testing/app-distribution/distribution-page.png').default} alt="Distribution Page tab with the Enable Distribution Page toggle" className="doc_img"/>
 
 ### Sharing Settings
@@ -168,6 +170,32 @@ You can also send notifications manually:
 3. Click **Notify Testers**.
 
 <img loading="lazy" src={require('../assets/images/real-device-app-testing/app-distribution/notify-testers.png').default} alt="Sharing tab showing Auto-Notify on New Builds toggle and Invited Beta Testers search" className="doc_img"/>
+
+### Share a Specific Build
+
+Sometimes you want to hand a tester one exact build — a release candidate or a hotfix — instead of the whole distribution page. The **Distribute** action gives every build its own page and link.
+
+**Step 1:** In **App Manager**, open the build's actions menu (the **⋯** icon on its row) and click **Distribute**.
+
+**Step 2:** The build's own distribution page opens in a new tab at a per-build URL such as `https://app-management.lambdatest.com/app-dist/app/android-qa/build/<build-id>`.
+
+<img loading="lazy" src={require('../assets/images/real-device-app-testing/app-distribution/distribute-build.png').default} alt="App Manager build row actions menu with the Distribute option highlighted" className="doc_img"/>
+
+This page shows only that build — its version, build number, release notes, a **QR code** to scan, and a **Download** button — with no "Previous Versions" list. Share the link or the QR code, and the tester always lands on exactly the build you picked.
+
+<img loading="lazy" src={require('../assets/images/real-device-app-testing/app-distribution/per-build-page.png').default} alt="Per-build distribution page showing a QR code, the app version and build number, and a Download App button" className="doc_img"/>
+
+:::note
+
+**Distribute** is available only when the app's **Distribution Page** is enabled (see [Distribution Page Settings](#distribution-page-settings)). When the page is turned off, the action is disabled and shows the reason "Distribution not enabled".
+
+:::
+
+:::note Build numbers
+
+Version labels across App Distribution include the **build number** — for example `1.5.4 (7)`, where `7` is the build number. This lets testers and QA tell two uploads of the same version apart, both on the dashboard and on the distribution page.
+
+:::
 
 ---
 
