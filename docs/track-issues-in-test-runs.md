@@ -139,7 +139,7 @@ You can add a bug from the run's instance list, from inside an instance, or from
 
 On the test case, each defect shows where it was raised, and **View in run** opens that run:
 
-<img loading="lazy" src={require('../assets/images/test-run-issues/test-case-defects-tab.webp').default} alt="Defects tab of a test case listing a defect with the step and run it was raised in" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/test-run-issues/test-case-defects-tab.png').default} alt="Defects tab of a test case listing a defect with the step and run it was raised in" className="doc_img"/>
 
 ## Link an existing issue to a test instance
 
@@ -188,7 +188,7 @@ Each issue entry shows its title, key, type, status, priority, the project it be
 
 The test instance page also lists the test case's requirements under **Validates**, grouped by tracker, so you know what the test is checking while you run it.
 
-<img loading="lazy" src={require('../assets/images/test-run-issues/instance-validates.webp').default} alt="Test instance page listing the test case's requirements under Validates" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/test-run-issues/instance-validates.png').default} alt="Test instance page listing the test case's requirements under Validates" className="doc_img"/>
 
 ## Add a bug while reviewing an instance or a step
 
@@ -203,7 +203,7 @@ To link an issue at either level:
 2. Choose the tracker: **Jira**, **Azure DevOps**, or **Linear**.
 3. Enter the issue key or paste its URL, and click **Link defect**.
 
-<img loading="lazy" src={require('../assets/images/test-run-issues/step-linked-defect.webp').default} alt="Step on the test instance page with a linked defect listed under it" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/test-run-issues/step-linked-defect.png').default} alt="Step on the test instance page with a linked defect listed under it" className="doc_img"/>
 
 A defect added at a step is listed under that step, on the instance's **Issues** tab, and on the test case's **Defects** tab, so the instance always reflects the full set of defects found.
 
@@ -213,11 +213,11 @@ The Test Run's **Issues** tab has two tabs, each grouped by tracker, useful for 
 
 **Defects found** lists every bug raised or linked across the run's test instances and steps. Each one shows its test case, where it was raised, the configuration, and the requirement it relates to. To focus the list, filter by **Test Case**, for example, to see only the bugs behind one failing test case. You can also filter by **Status** and **Issue Type**, or search by keyword.
 
-<img loading="lazy" src={require('../assets/images/test-run-issues/run-defects-found.webp').default} alt="Defects found tab of a Test Run listing a defect with its test case, step, configuration, and related requirements" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/test-run-issues/run-defects-found.png').default} alt="Defects found tab of a Test Run listing a defect with its test case, step, configuration, and related requirements" className="doc_img"/>
 
 **Requirements covered** lists the issues linked to the run itself and the requirements of the test cases in the run. Each one shows how many instances cover it, their results in this run, and its defects. Filter by **Test Case**, **Status**, and **Results**, or search by keyword.
 
-<img loading="lazy" src={require('../assets/images/test-run-issues/run-requirements-covered.webp').default} alt="Requirements covered tab of a Test Run listing requirements with their instance results and defects" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/test-run-issues/run-requirements-covered.png').default} alt="Requirements covered tab of a Test Run listing requirements with their instance results and defects" className="doc_img"/>
 
 To add an issue to the run's scope, click **Link requirement to run**, choose the tracker, enter the issue key or URL, and click **Link requirement**. It is added as a requirement, not as a defect. To record a defect, add it on a test instance or a step.
 
