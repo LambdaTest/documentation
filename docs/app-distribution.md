@@ -234,7 +234,7 @@ Sometimes you want to hand a tester one exact build — a release candidate or a
 
 **Step 1:** In **App Manager**, open the build's actions menu (the **⋯** icon on its row) and click **Distribute**.
 
-**Step 2:** The build's own distribution page opens in a new tab at a per-build URL such as `https://app-management.lambdatest.com/app-dist/app/android-qa/build/<build-id>`.
+**Step 2:** The build's own distribution page opens in a new tab at a per-build URL of the form `https://app-management.lambdatest.com/app-dist/app/<slug>/build/<build-id>`.
 
 <img loading="lazy" src={require('../assets/images/real-device-app-testing/app-distribution/distribute-build.png').default} alt="App Manager build row actions menu with the Distribute option highlighted" className="doc_img"/>
 
