@@ -1762,6 +1762,7 @@ module.exports = {
           "siesta-integration",
           "testcomplete-integration",
           "testrigor-integration",
+          "e2e-integration-with-testmu",
           "localstack-integration-with-lambdatest",
           "genrocket-integration",
           "netlify-integration-with-lambdatest",
