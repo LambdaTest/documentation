@@ -151,4 +151,4 @@ A network assertion can be included in a reusable **module**, so the same networ
 Available on **Desktop Web**, **Mobile Web**, and **Mobile App** sessions in the Classic experience.
 :::
 
-See [Include a Network Assertion in a Module](/support/docs/kane-ai-modules/#include-a-network-assertion-in-a-module).
+See [Include a Network Assertion in a Module](/support/docs/kane-ai-modules/#include-a-network-assertion).

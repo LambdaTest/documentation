@@ -151,9 +151,6 @@ Format:
 
 ```bash
 use the value of {{secrets.user.email}} in the email text field
-
-<VerifiedTag value="Verified" />
-
 ```
 
 <video class="right-side" width="100%" controls id="vid">
