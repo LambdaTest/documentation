@@ -201,7 +201,7 @@ Traceability reports provide end-to-end visibility into how your test cases alig
 Requirements and defects are currently in slow rollout. To get early access, raise a request to our support team. Until they are enabled for your organization, the report lists every linked issue together.
 :::
 
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/Reports/traceability-requirements-defects.webp').default} alt="Traceability report with the Requirement and Defects columns" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/Reports/traceability-requirements-defects.png').default} alt="Traceability report with the Requirement and Defects columns" className="doc_img"/>
 
 The report lists these columns: **Requirement**, **Test Case**, **Status**, **Configuration**, **Test Run**, **Defects**, **Executed By**, and **Executed At**.
 
@@ -212,7 +212,7 @@ A requirement that is linked only to a test run, and not to a test case, does no
 
 Search the report by **Requirement ID**, **Test Case Name**, or **Test Case ID**, and filter it by **Executed By**, **Status**, **Test Runs**, and **Defect ID**. The CSV export includes the requirements and the defects. New data may take around 5 minutes to appear in the report.
 
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/Reports/traceability-filters.webp').default} alt="Traceability report filters with the Defect ID filter open" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/Reports/traceability-filters.png').default} alt="Traceability report filters with the Defect ID filter open" className="doc_img"/>
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

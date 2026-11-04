@@ -146,20 +146,20 @@ Once the integration is complete, follow these steps to link a requirement to yo
 1. Open the **Issues** tab of a test case and click **Link requirement**. On a test run, open its **Issues** tab and click **Link requirement to run**.
 > Note: To link a defect on a test instance or a step, see [Track Bugs and Issues in Test Runs](/support/docs/track-issues-in-test-runs/).
 
-<img loading="lazy" src={require('../assets/images/test-manager/requirements-defects/test-case-link-requirement.webp').default} alt="Issues tab of a test case with the Link requirement action" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/test-manager/requirements-defects/test-case-link-requirement.png').default} alt="Issues tab of a test case with the Link requirement action" className="doc_img"/>
 
 2. Select **Azure DevOps**, enter the Azure DevOps Work Item ID or URL, and click **Link requirement**.
 
-<img loading="lazy" src={require('../assets/images/test-manager/requirements-defects/link-requirement-ado.webp').default} alt="Link requirement dialog with Azure DevOps selected and a work item entered" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/test-manager/requirements-defects/link-requirement-ado.png').default} alt="Link requirement dialog with Azure DevOps selected and a work item entered" className="doc_img"/>
 
 
 3. The Azure DevOps Work Item from your integrated Organization is linked and listed under **Requirements**. You can view the work item name, ID, type, state, priority, and creator.
 
-<img loading="lazy" src={require('../assets/images/test-manager/requirements-defects/ado-requirement-listed.webp').default} alt="Azure DevOps work item listed in the Requirements tab of a test case" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/test-manager/requirements-defects/ado-requirement-listed.png').default} alt="Azure DevOps work item listed in the Requirements tab of a test case" className="doc_img"/>
 
 4. To **unlink an issue**, hover over the work item and click **Unlink requirement** on the right side of its row.
 
-<img loading="lazy" src={require('../assets/images/test-manager/requirements-defects/unlink-requirement-ado.webp').default} alt="Unlink requirement action on an Azure DevOps work item in the Requirements tab" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/test-manager/requirements-defects/unlink-requirement-ado.png').default} alt="Unlink requirement action on an Azure DevOps work item in the Requirements tab" className="doc_img"/>
 
 ### Issues on a test case
 
