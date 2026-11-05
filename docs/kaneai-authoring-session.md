@@ -472,7 +472,7 @@ While the session is in Authoring Steps, interacting directly with your applicat
 | Web browser on desktop | Supported |
 | Mobile app on Android | Supported |
 | Mobile app on iOS | Supported in portrait; not supported in landscape |
-| Mobile browser | Not supported |
+| Mobile browser | Supported |
 
 On platforms where capture is not supported, build the test with natural language instructions and slash commands. For gesture-level detail, limitations, and use cases, see [Manual Interaction](/support/docs/kaneai-manual-interaction/).
 
@@ -496,7 +496,6 @@ On platforms where capture is not supported, build the test with natural languag
 - Individual steps inside a conditional block, While loop, or generative instruction cannot be run on their own — the block runs as a whole. Modules are the exception.
 - A generative instruction is not addressable internally until it has run once.
 - The cursor is read-only while the session is Running.
-- Direct interaction is not captured on mobile browser sessions, or on iOS in landscape.
 - Editing, duplicating, deleting, and multi-select are available only while the session is Paused.
 
 ## FAQ

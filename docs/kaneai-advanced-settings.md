@@ -200,7 +200,7 @@ The available settings vary depending on the platform of your test case. Refer t
 | **Video Injection** | Toggle | Inject video feed for live detection / face recognition |
 | **Device Orientation** | Dropdown (Auto) | Set device orientation for session |
 | **Capture Network Logs** | Toggle | Capture network logs for network assertions |
-| **Network Throttling** | Dropdown | Select throttling profile |
+| **Network Throttling** | Dropdown | Select a throttling profile, always honored during authoring and test case execution. See [Network Throttling](/support/docs/kaneai-network-throttling/). |
 | **Timezone** | Dropdown | Set timezone for test session |
 | **Language** | Dropdown | Set language for test session |
 
@@ -229,7 +229,7 @@ For more details on mobile app capabilities like biometric authentication, image
 | **Video Injection** | Toggle | Inject recorded video feed |
 | **Device Orientation** | Dropdown (Auto) | Set orientation |
 | **Capture Network Logs** | Toggle | Capture network logs |
-| **Network Throttling** | Dropdown | Select throttling profile |
+| **Network Throttling** | Dropdown | Select a throttling profile, always honored during authoring and test case execution. See [Network Throttling](/support/docs/kaneai-network-throttling/). |
 | **Timezone** | Dropdown | Set timezone |
 | **Language** | Dropdown | Set language |
 

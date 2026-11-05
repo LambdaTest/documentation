@@ -311,7 +311,7 @@ Open an imported test case and click **Automate with KaneAI** in its **Automate*
 
 On the KaneAI dashboard, click **Author Browser Test** or **Author App Test** and set up the session. Then describe each step in natural language. See [Author Your First Desktop Browser Test](/support/docs/author-your-first-desktop-browser-test/) and [Author Your First Mobile App Test](/support/docs/author-your-first-mobile-app-test/).
 
-[Manual Interaction](/support/docs/kaneai-manual-interaction/) records your clicks, typing, scrolling and navigation as steps. It works in desktop browsers, Android apps and iOS apps in portrait, but not in mobile browsers. It cannot record hovers or checks, so write verify and assert steps as instructions.
+[Manual Interaction](/support/docs/kaneai-manual-interaction/) records your clicks, typing, scrolling and navigation as steps. It works in desktop browsers, mobile browsers, Android apps and iOS apps in portrait. It cannot record hovers or checks, so write verify and assert steps as instructions.
 
 While you author, you can also use these features:
 
