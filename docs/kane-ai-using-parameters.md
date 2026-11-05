@@ -3,6 +3,7 @@ id: kane-ai-using-parameters
 title: KaneAI - Using Parameters
 hide_title: false
 sidebar_label: Parameters
+toc_max_heading_level: 2
 description: Learn how to use parameters in the KaneAI test cases
 keywords:
   - testmu ai automation
