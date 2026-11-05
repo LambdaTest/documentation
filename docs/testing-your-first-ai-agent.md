@@ -98,13 +98,13 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-04T12:50:18+05:30"
+    "dateModified": "2026-11-02T12:00:00+05:30"
   }) }}
 />
 
-You can test an AI agent on TestMu AI entirely from the dashboard, without writing code. You create an agent, upload documents that describe it, generate test scenarios, run an evaluation against your agent's API, and read the scored results.
+You can test an AI agent on TestMu AI entirely from the dashboard, without writing code. You create an agent, upload sources that describe it, generate test scenarios, run an evaluation against your agent's API, and read the scored results.
 
-The whole flow takes a few minutes and works for chat and voice agents.
+The whole flow takes a few minutes. This walkthrough uses a chat agent.
 
 ## What You Need Before You Start
 
@@ -113,8 +113,8 @@ The whole flow takes a few minutes and works for chat and voice agents.
 Before you start, make sure you have the following in place.
 
 - A TestMu AI account with access to the Agent Testing platform.
-- Your agent's API endpoint URL. For a chat agent, this is the URL that receives messages.
-- Documents that describe your agent's requirements, such as a PDF or DOCX. The platform uses them to generate relevant scenarios.
+- Your agent's API request details: the endpoint URL, method, and headers, ready to enter as a cURL command. For a chat agent, the URL is the one that receives messages.
+- Sources that describe your agent's requirements, such as a PDF, DOCX, or MD file, or pages from Confluence or Jira. The platform uses them to generate relevant scenarios.
 
 ## How to Run Your First Evaluation
 
@@ -122,31 +122,41 @@ Before you start, make sure you have the following in place.
 
 Follow these seven steps in the dashboard. Each step builds on the previous one.
 
-**Step 1: Create the agent.** In the left sidebar, click **Create Agent**, enter a name and description, then click **Create Agent** to confirm. The agent is created and ready for you to add its requirements.
+**Step 1: Create the agent.** In the Agent Testing page, click **Create New Agent**, then fill in the form:
 
-<img loading="lazy" src={require('../assets/images/agent-to-agent/agentic-one.png').default} alt="Create Agent form with name and description fields in the TestMu AI dashboard" width="1347" height="616"  className="doc_img"/>
+- **Agent Name** (required).
+- **Description** (optional).
+- **Agent Type** (required): Chat Agent, Voice Agent, IVR Agent, Phone Caller Agent, Image Analyzer, or Video Agent. This walkthrough uses **Chat Agent**.
+- **Evaluation Mode** (required for Chat Agent): select **Pre-production testing**, which uploads requirements, generates test scenarios, and simulates conversations against your agent.
 
-**Step 2: Upload requirement documents.** Upload the documents that describe your agent so the platform can analyze its requirements and generate relevant scenarios.
+Click **Create New Agent** to confirm.
 
-<img loading="lazy" src={require('../assets/images/agent-to-agent/agentic-two.png').default} alt="Uploading requirement documents for the agent in the TestMu AI dashboard" width="1347" height="616"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/agent-to-agent/create-chat-agent-evaluation-mode.webp').default} alt="Create New Agent panel with Chat Agent selected and the Pre-production testing and Post-production analysis evaluation modes" width="1899" height="942"  className="doc_img"/>
 
-**Step 3: Select test categories.** After the initial analysis, choose which categories of tests to generate. The platform offers a range of categories, such as **Personality & Tone**, which checks that your agent responds professionally. Select multiple categories to cover a wider range of behavior.
+**Step 2: Upload your sources.** Open the **Workflows** tab. In **Upload Sources**, add the material that describes your agent:
 
-<img loading="lazy" src={require('../assets/images/agent-to-agent/agentic-three.png').default} alt="Selecting test categories including Personality and Tone" width="1347" height="616"  className="doc_img"/>
+- **Files:** drag and drop, or browse. Supported formats are PDF, DOCX, XLSX, CSV, TXT, MD, images, audio, and video, up to 200 MB per file.
+- **Confluence**, **Jira**, or **S3 Bucket:** switch to these tabs to link sources from those tools instead.
 
-**Step 4: Generate the scenarios.** Click **Generate Test Scenarios**. A team of specialized AI agents generates multiple scenarios in parallel in the background.
+<img loading="lazy" src={require('../assets/images/agent-to-agent/upload-sources-agent-testing-workflow.webp').default} alt="Upload Sources screen in the Workflows tab with file, Confluence, Jira and S3 Bucket options" width="1900" height="943"  className="doc_img"/>
 
-<img loading="lazy" src={require('../assets/images/agent-to-agent/agentic-four.png').default} alt="Generate Test Scenarios button with scenario generation in progress" width="1347" height="616"  className="doc_img"/>
+**Step 3: Configure and generate scenarios.** Once your file shows **Ready**, set the generation options:
 
-**Step 5: Review the generated scenarios.** The scenarios appear in a list you can filter by the categories you selected. Each scenario carries a complexity and a risk level. For example, a "tone adaptation when delivering bad news" scenario describes how your agent should respond.
+- **Special Instructions** (optional): text that is included in every generated test scenario.
+- **Languages** (optional): the languages your agent supports. English is used by default if none are selected.
+- **Scenario Count** (optional): **Auto** (calculated from document complexity), 25, 50, 100, 200, or **Custom**.
+- **Scenario Types** (optional): **Happy Path**, **Negative**, **Edge Case**, **Integration**, and **Red Team**. Leave all unselected to generate every type.
 
-<img loading="lazy" src={require('../assets/images/agent-to-agent/agentic-seven.png').default} alt="Generated test scenarios list showing complexity and risk levels" width="1347" height="616"  className="doc_img"/>
+Click **Generate Scenarios**.
 
-**Step 6: Run the evaluation.** When you are satisfied with the scenarios, enter your agent's API URL and click **Run Evaluation**. For the API URL format and authentication, see how to [connect a chat agent over its API](/support/docs/chat-agent-api-integration/).
+<img loading="lazy" src={require('../assets/images/agent-to-agent/scenario-generation-languages-count-types.webp').default} alt="Scenario generation settings with languages, scenario count and scenario types selected before clicking Generate Scenarios" width="1908" height="948"  className="doc_img"/>
 
-<img loading="lazy" src={require('../assets/images/agent-to-agent/agentic-eight.png').default} alt="Entering the agent API URL next to the Run Evaluation button" width="1347" height="616"  className="doc_img"/>
+**Step 4: Review the generated scenarios.** The **Scenarios** tab lists every scenario, with a count on the tab.
 
-**Step 7: Read the results.** Open the **Evaluation Results** tab to see a breakdown across the quality metrics, such as whether the conversation was relevant and whether the agent stayed on topic.
+- Each row shows the scenario name, its persona (such as "The Multitasker"), and its language.
+- Use **Search scenario** or the **Scenario Type** dropdown to narrow the list.
+- Use the pencil icon to edit a scenario, or the trash icon to delete it.
+- Click **Create New Suite** to group scenarios for a run.
 
 <img loading="lazy" src={require('../assets/images/agent-to-agent/generated-test-scenarios-list-agent-testing.webp').default} alt="Scenarios tab listing generated test scenarios with persona and language tags" width="1914" height="948"  className="doc_img"/>
 
