@@ -106,6 +106,88 @@ The TestMu AI Agent Testing Platform tests a chat agent by holding multi-turn co
 
 You provide the endpoint, the agent's intended behavior, and any requirement documents. The platform generates the scenarios and runs the conversations. No code changes to your agent are required.
 
+## Run a Chat Agent Test
+
+---
+
+You can test a chat agent three ways. All three run the same evaluation and produce the same scored results.
+
+- **Dashboard:** create the agent, upload sources, generate scenarios, and run the evaluation. Follow the steps below.
+- **CLI:** point `testmu-a2a test` at your endpoint for a one-command run, or drive scenarios and suites from a config file. See how to [test chat agents from the terminal](/support/docs/agent-testing-cli/).
+- **API integration:** configure the endpoint, authentication, and request or response format directly. See how to [connect a chat agent over its API](/support/docs/chat-agent-api-integration/).
+
+### Run a Chat Agent Test in the Dashboard
+
+Follow these seven steps in the dashboard. Each step builds on the previous one.
+
+**Step 1: Create the agent.** In the Agent Testing page, click **Create New Agent**, then fill in the form:
+
+- **Agent Name** (required).
+- **Description** (optional).
+- **Agent Type** (required): select **Chat Agent**.
+- **Evaluation Mode** (required):
+  - **Pre-production testing:** upload requirements, generate test scenarios, and simulate conversations against your agent.
+  - **Post-production analysis:** upload requirements and production chat transcripts for a grounded evaluation.
+
+Click **Create New Agent** to confirm. Steps 2 to 7 follow the **Pre-production testing** flow.
+
+<img loading="lazy" src={require('../assets/images/agent-to-agent/create-chat-agent-evaluation-mode.webp').default} alt="Create New Agent panel with Chat Agent selected and the Pre-production testing and Post-production analysis evaluation modes" width="1899" height="942"  className="doc_img"/>
+
+**Step 2: Upload your sources.** Open the **Workflows** tab. In **Upload Sources**, add the material that describes your agent:
+
+- **Files:** drag and drop, or browse. Supported formats are PDF, DOCX, XLSX, CSV, TXT, MD, images, audio, and video, up to 200 MB per file.
+- **Confluence**, **Jira**, or **S3 Bucket:** switch to these tabs to link sources from those tools instead.
+
+<img loading="lazy" src={require('../assets/images/agent-to-agent/upload-sources-agent-testing-workflow.webp').default} alt="Upload Sources screen in the Workflows tab with file, Confluence, Jira and S3 Bucket options" width="1900" height="943"  className="doc_img"/>
+
+**Step 3: Configure and generate scenarios.** Once your file shows **Ready**, set the generation options:
+
+- **Special Instructions** (optional): text that is included in every generated test scenario.
+- **Languages** (optional): the languages your agent supports. English is used by default if none are selected.
+- **Scenario Count** (optional): **Auto** (calculated from document complexity), 25, 50, 100, 200, or **Custom**.
+- **Scenario Types** (optional): **Happy Path**, **Negative**, **Edge Case**, **Integration**, and **Red Team**. Leave all unselected to generate every type.
+
+Click **Generate Scenarios**.
+
+<img loading="lazy" src={require('../assets/images/agent-to-agent/scenario-generation-languages-count-types.webp').default} alt="Scenario generation settings with languages, scenario count and scenario types selected before clicking Generate Scenarios" width="1908" height="948"  className="doc_img"/>
+
+**Step 4: Review the generated scenarios.** The **Scenarios** tab lists every scenario, with a count on the tab.
+
+- Each row shows the scenario name, its persona (such as "The Multitasker"), and its language.
+- Use **Search scenario** or the **Scenario Type** dropdown to narrow the list.
+- Use the pencil icon to edit a scenario, or the trash icon to delete it.
+- Click **Create New Suite** to group scenarios for a run.
+
+<img loading="lazy" src={require('../assets/images/agent-to-agent/generated-test-scenarios-list-agent-testing.webp').default} alt="Scenarios tab listing generated test scenarios with persona and language tags" width="1914" height="948"  className="doc_img"/>
+
+**Step 5: Edit a scenario if needed.** Click the pencil icon on a scenario to open **Edit Scenario**.
+
+- Change the **Scenario Name**, **Description**, or **Validation Criteria**.
+- Click **Save Scenario** to keep your changes, or **Cancel** to discard them.
+
+<img loading="lazy" src={require('../assets/images/agent-to-agent/edit-test-scenario-validation-criteria.webp').default} alt="Edit Scenario panel showing scenario name, description and validation criteria fields" width="1911" height="945"  className="doc_img"/>
+
+**Step 6: Run the evaluation.** Run a suite to open the **Run Suite** dialog, then add your agent's API request.
+
+1. Enter your agent's request as a cURL command.
+2. Click **Parse and Evaluate**. To run it later, click **Schedule Run Evaluation** instead.
+3. In the **Confirm Request Details** dialog, check the **URL**, **Method**, **Headers**, and **Body**.
+4. Click **Run Evaluation**.
+
+For the API URL format and authentication, see how to [connect a chat agent over its API](/support/docs/chat-agent-api-integration/).
+
+<img loading="lazy" src={require('../assets/images/agent-to-agent/confirm-request-details-run-evaluation.webp').default} alt="Confirm Request Details dialog showing the agent URL, method and headers before clicking Run Evaluation" width="1915" height="936"  className="doc_img"/>
+
+**Step 7: Read the results.** When the run finishes, open a scenario from the list to see its score and the reasons behind it.
+
+- Start with the scenarios that failed or scored lowest. On the **Turns** tab, read the conversation to find the point where your agent went wrong.
+- Use **Areas for Improvement** and **Recommendations** to decide what to fix in your agent, and **Validation Criteria** to see which of the scenario's criteria it missed. If a criterion is wrong rather than the agent, edit the scenario as in Step 5.
+- After you change your agent, click **Re-run** to run the same scenarios again. Each run is listed separately with its score and time, so you can compare before and after.
+
+See [Metrics](#metrics) for what each score measures.
+
+<img loading="lazy" src={require('../assets/images/agent-to-agent/agent-evaluation-results-metrics-turns.webp').default} alt="Evaluation results for a scenario showing pass status, overall score, quality metrics and the conversation turns" width="1916" height="944"  className="doc_img"/>
+
 ## How Chat Agent Testing Works
 
 ---
