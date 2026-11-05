@@ -266,7 +266,7 @@ KaneAI does not run Testim steps, so you re-create each flow in a KaneAI session
 
 - **From a test case.** Open a saved test case and click **Automate with KaneAI** in its **Automate** section. A KaneAI session opens with the test case's steps filled in, where you author and run the test. [This action](/support/docs/manual-test-case-creation/#automate-with-kaneai) works on one test case at a time, and the test case must have steps or scenarios.
 - **From the generator.** **Create and Automate** saves the generated test cases you select and sends them to KaneAI for automated authoring. It is an experimental feature, so review the steps afterwards.
-- **From scratch.** Start a [browser test](/support/docs/author-your-first-desktop-browser-test/) or an [app test](/support/docs/author-your-first-mobile-app-test/) and write each step in natural language. [Manual Interaction](/support/docs/kaneai-manual-interaction/) also records your clicks, typing, scrolls and navigation as steps. It cannot record hover actions or checks, and it does not capture mobile browsers. Write those as instructions.
+- **From scratch.** Start a [browser test](/support/docs/author-your-first-desktop-browser-test/) or an [app test](/support/docs/author-your-first-mobile-app-test/) and write each step in natural language. [Manual Interaction](/support/docs/kaneai-manual-interaction/) also records your clicks, typing, scrolls and navigation as steps, including in mobile browsers. It cannot record hover actions or checks. Write those as instructions.
 
 Re-create Testim features with their KaneAI counterparts:
 

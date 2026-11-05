@@ -276,7 +276,7 @@ In a KaneAI session, you add steps in natural language, with slash commands or b
 - **A test case in Test Manager.** Open it and click **Automate with KaneAI** in its **Automate** section. KaneAI opens a session pre-filled with the steps, where you author and run the test. The action works on one test case at a time. It works with the Manual Test Steps and Behaviour Driven Development templates, and the test case must have steps or scenarios. See [Automate with KaneAI](/support/docs/manual-test-case-creation/#automate-with-kaneai).
 - **Generated test cases.** In the AI Test Case Generator, **Create and Automate** saves the selected test cases and sends them to KaneAI. It is experimental, so review the authored steps.
 - **A Sauce AI test case.** Create a [KaneAI browser test](/support/docs/author-your-first-desktop-browser-test/) or [app test](/support/docs/author-your-first-mobile-app-test/). Write the objective in natural language from the prompts and step intents you saved.
-- **A recorded or manual flow.** [Manual Interaction](/support/docs/kaneai-manual-interaction/) records the clicks, typing and navigation you perform in a KaneAI session as steps. It works on desktop web, Android apps and iOS apps in portrait, not mobile browsers. Write checks as instructions, because interactions cannot record assertions.
+- **A recorded or manual flow.** [Manual Interaction](/support/docs/kaneai-manual-interaction/) records the clicks, typing and navigation you perform in a KaneAI session as steps. It works on desktop web, mobile browsers, Android apps and iOS apps in portrait. Write checks as instructions, because interactions cannot record assertions.
 
 Then reuse what you can:
 

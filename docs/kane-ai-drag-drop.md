@@ -3,7 +3,7 @@ id: kane-ai-drag-drop
 title: Drag and Drop in KaneAI
 hide_title: false
 sidebar_label: Drag and Drop
-description: Author drag and drop interactions in KaneAI on Desktop Web, Android apps, iOS apps, and Mobile Web using natural language or manual recording. Covers replay behavior, supported scenarios, and limitations.
+description: Author drag and drop interactions in KaneAI using natural language or manual recording on supported platforms. Mobile Web supports natural language only. Covers replay behavior, supported scenarios, and limitations.
 keywords:
   - testmu ai automation
   - testmu ai kaneai
@@ -63,7 +63,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       "@id": "https://www.testmuai.com/support/docs/kane-ai-drag-drop/"
     },
     "headline": "Drag and Drop in KaneAI",
-    "description": "Author drag and drop interactions in KaneAI on Desktop Web, Android apps, iOS apps, and Mobile Web using natural language or manual recording. Covers replay behavior, supported scenarios, and limitations.",
+    "description": "Author drag and drop interactions in KaneAI using natural language or manual recording on supported platforms. Mobile Web supports natural language only. Covers replay behavior, supported scenarios, and limitations.",
     "url": "https://www.testmuai.com/support/docs/kane-ai-drag-drop/",
     "image": {
       "@type": "ImageObject",
@@ -132,7 +132,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
   }) }}
 />
 
-KaneAI lets you author drag interactions across **Desktop Web, Android apps, iOS apps, and Mobile Web** using either natural language or by performing the gesture yourself. Use it for Kanban boards  and any other drag-driven UI flow.
+KaneAI lets you author drag interactions on **Desktop Web, Android apps, and iOS apps** using either natural language or by performing the gesture yourself. On **Mobile Web**, drag and drop can only be authored using natural language; Manual Interaction does not capture drag gestures. Use it for Kanban boards and other drag-driven UI flows.
 
 
 ## Overview
@@ -223,6 +223,8 @@ Natural language drag and drop works best when:
 :::
 
 ## Author with Manual Interaction
+
+Manual drag recording is supported on Desktop Web and mobile apps. It is not supported on mobile browsers.
 
 With the session in the **Authoring Steps** state, perform the drag directly on the device viewport. The gesture is captured and the step lands at the cursor — there is no mode to switch to.
 
@@ -315,7 +317,7 @@ Use Manual Interaction to adjust date-range sliders, resize chart panels, and re
 
 - **Multi-touch gestures** (two-finger drag, pinch-drag): not supported.
 - **Drag path waypoints**: only start and end coordinates are captured; intermediate path points are not preserved.
-- **Mobile Browser manual recording**: not supported. Use NL only.
+- **Mobile Browser manual drag recording**: not supported. Author drag and drop with natural language instead.
 - **Cross-context dragging**: drags between iframes or shadow DOMs are not supported.
 - **Multi-element dragging**: cannot drag multiple elements simultaneously.
 - **Advanced NL** (e.g., `drag X up by 50px`, offset-based reorder): on the roadmap; currently rejected with a graceful error.
@@ -343,8 +345,8 @@ No. Confirmation gestures depend on dynamic UI state and must be captured via Ma
 **My drag step passes on the recording device but fails on another device. What's wrong?**
 KaneAI replays use element resolution by default. Cross-device failures usually indicate that the source or target element identifier changed across builds. Inspect the step logs to see the resolution path used (element vs. coordinate) and ensure the elements expose stable accessibility IDs.
 
-**Why isn't manual recording available on Mobile Web?**
-Interaction capture is not supported for mobile browser sessions. Use natural language instructions or slash commands instead.
+**Can I record drag and drop on Mobile Web?**
+No. Manual Interaction on mobile browsers does not capture drag and drop. Author these steps using [natural language](#author-with-natural-language) instead.
 
 **Can I edit a captured Manual Interaction drag step?**
 You can edit the source / target locators and step-level configuration. The drag vector and gesture timing are immutable for Manual steps to preserve replay fidelity.
@@ -359,6 +361,6 @@ Yes. Use `{{variable_name}}` in the source or target reference. Local variables,
 Yes. Drag steps can be placed inside conditional blocks (`if X is visible then drag Y to Z`) and while loops. Each iteration re-resolves elements at runtime.
 
 **Is drag and drop supported on real devices?**
-Yes, drag works on both real devices and the device cloud for App testing. Real Device Web also supports manual drag.
+Yes, drag works on both real devices and the device cloud for App testing. Manual drag recording is not supported in mobile browsers.
 
 

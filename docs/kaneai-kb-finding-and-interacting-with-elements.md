@@ -440,7 +440,7 @@ drag the first item and drop it below the third item in the list
 drag "Card A" to "Column B"
 ```
 
-Use **Manual Interaction** to capture sliders, slide-to-confirm gestures, and other dynamic-target drags that NL cannot resolve reliably. Manual recording is available on Desktop Web, Android, and iOS. Mobile Web is **NL-only**.
+Use **Manual Interaction** to capture sliders, slide-to-confirm gestures, and other dynamic-target drags that NL cannot resolve reliably on supported platforms. Manual drag recording is available on Desktop Web, Android apps, and iOS apps in portrait. On Mobile Web, drag and drop must be authored using natural language; Manual Interaction does not capture drag gestures.
 
 :::info
 See the [Drag and Drop](/support/docs/kane-ai-drag-drop/) guide for the full platform matrix, gesture classification rules, and replay behavior.
