@@ -88,10 +88,10 @@ That also suppresses the sitemap entirely: the plugin skips a noindexed build.
 
 ### Publishing workflow
 
-The repo uses two branches. Every change reaches them through a PR; `main` also needs one approval.
+The repo uses two branches. Every change reaches them through a PR; `testmuCom` also needs one approval.
 
 - `stage`: staging environment, used for review before production
-- `main`: production
+- `testmuCom`: production
 
 Branch names follow `<prefix>/<ticket-id>`, where the ticket is the one the PR delivers. Allowed prefixes: `feat/`, `bug/`, `hotfix/`, `chore/`, `revert/`, `release/`, `feature/`, `bugfix/`. Other names are rejected on push.
 
@@ -112,9 +112,9 @@ Workflow:
 
 3. Open a PR from your branch against `stage`, link the ticket and tag the docs team for review.
 4. Once merged, verify your changes on the staging site.
-5. When the feature is ready for production, share the related PRs with the docs team. They will merge to `main`.
+5. When the feature is ready for production, share the related PRs with the docs team. They will merge to `testmuCom`.
 
-Merges to `main` deploy to the live documentation site.
+Merges to `testmuCom` deploy to the live documentation site.
 
 ## Contributions
 
