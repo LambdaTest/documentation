@@ -99,7 +99,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-10-13T00:00:00+05:30"
+    "dateModified": "2026-11-05T00:00:00+05:30"
   }) }}
 />
 Datasets in KaneAI-<BrandName /> allow you to manage and reuse input values for test cases efficiently. This guide explains how to create, edit, and manage these data sets while utilizing parameters to run test cases with a variety of inputs, improving flexibility and reducing manual data entry.
@@ -139,6 +139,8 @@ Alternatively, you can use the **Autofill with AI** option to automatically popu
 
 ### Importing Data via CSV Files
 Prepare your data set in CSV format. Use the Import Data feature in the data set editor, verify the imported data, and save the changes to ensure synchronization.
+
+Importing data into a Dataset doesn't create parameters. If the columns in your file don't exist as parameters yet, first [import them as parameters from the CSV](/support/docs/kane-ai-using-parameters/#import-parameters-from-a-csv).
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/datasets/6.png').default} alt="Image" className="doc_img img_center"/>
 
