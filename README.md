@@ -22,12 +22,15 @@ This repository powers TestMu AI documentations built with Docusaurus and React.
 
 ### Setup
 
-Clone the repo and install dependencies:
+Clone the repo, switch to the `stage` branch and install dependencies:
 
 ```bash
-git clone https://github.com/LambdaTest/documentation && cd documentation
+git clone git@github.com:LambdaTest/documentation.git && cd documentation
+git checkout stage
 npm install --legacy-peer-deps
 ```
+
+Work directly in this repo; you do not need a fork.
 
 ### Run locally
 
@@ -85,17 +88,31 @@ That also suppresses the sitemap entirely: the plugin skips a noindexed build.
 
 ### Publishing workflow
 
-The repo uses two branches:
+The repo uses two branches. Every change reaches them through a PR; `main` also needs one approval.
 
 - `stage`: staging environment, used for review before production
 - `main`: production
 
+Branch names follow `<prefix>/<ticket-id>`, where the ticket is the one the PR delivers. Allowed prefixes: `feat/`, `bug/`, `hotfix/`, `chore/`, `revert/`, `release/`, `feature/`, `bugfix/`. Other names are rejected on push.
+
 Workflow:
 
-1. Branch off `stage` and make your changes.
-2. Open a PR against `stage` and tag the docs team for review.
-3. Once merged, verify your changes on the staging site.
-4. When the feature is ready for production, share the related PRs with the docs team. They will merge to `main`.
+1. Create your branch from the latest `stage`:
+
+   ```bash
+   git checkout stage && git pull origin stage
+   git checkout -b feat/TE-1234
+   ```
+
+2. Commit your changes and push the branch to this repo:
+
+   ```bash
+   git push origin feat/TE-1234
+   ```
+
+3. Open a PR from your branch against `stage`, link the ticket and tag the docs team for review.
+4. Once merged, verify your changes on the staging site.
+5. When the feature is ready for production, share the related PRs with the docs team. They will merge to `main`.
 
 Merges to `main` deploy to the live documentation site.
 
