@@ -243,7 +243,7 @@ Open an imported test case and click [Automate with KaneAI](/support/docs/manual
 ### Start a New Test
 
 - Click **Author Browser Test**, or **Author App Test** to add an Android or iOS app. See [Author Your First Desktop Browser Test](/support/docs/author-your-first-desktop-browser-test/) and [Author Your First Mobile App Test](/support/docs/author-your-first-mobile-app-test/).
-- Describe each step in natural language. [Manual Interaction](/support/docs/kaneai-manual-interaction/) also records your clicks and typing as steps in desktop browsers, Android apps, and iOS apps in portrait.
+- Describe each step in natural language. [Manual Interaction](/support/docs/kaneai-manual-interaction/) also records your clicks and typing as steps in desktop browsers, mobile browsers, Android apps, and iOS apps in portrait.
 - Write each check as an instruction, because Manual Interaction does not record checks.
 
 ### Reuse Steps and Data

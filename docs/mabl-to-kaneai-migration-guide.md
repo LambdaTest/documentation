@@ -366,7 +366,7 @@ Open a saved test case and click **Automate with KaneAI** in the **Automate** se
 
 On the KaneAI dashboard, click **Author Browser Test** and write each step in natural language ([Author Your First Desktop Browser Test](/support/docs/author-your-first-desktop-browser-test/)). For mabl mobile tests, click **Author App Test**, select the **Android** or **iOS** tab and add your app ([Author Your First Mobile App Test](/support/docs/author-your-first-mobile-app-test/)).
 
-[Manual Interaction](/support/docs/kaneai-manual-interaction/) records your clicks, typing and scrolling as steps. It works in desktop web browsers, Android apps and iOS apps in portrait, but not in mobile browsers. Add verify or assert steps as written instructions.
+[Manual Interaction](/support/docs/kaneai-manual-interaction/) records your clicks, typing and scrolling as steps. It works in desktop web browsers, mobile browsers, Android apps and iOS apps in portrait. Add verify or assert steps as written instructions.
 
 ### Rebuild Flows, Variables and DataTables
 
