@@ -107,6 +107,58 @@ The TestMu AI Agent Testing Platform tests an image agent by submitting prompts 
 
 You upload images by file or URL, define what a correct image looks like, and the platform scores them. A single run analyzes up to 50 images, which suits regression testing after a model update.
 
+## How to Run Your First Image Analyzer Test
+
+---
+
+Follow these five steps in the dashboard.
+
+**Step 1: Create the agent.** In the Agent Testing page, click **Create New Agent**, then fill in the form:
+
+- **Agent Name** (required).
+- **Description** (optional).
+- **Agent Type** (required): select **Image Analyzer**.
+
+Click **Create New Agent** to confirm.
+
+<img loading="lazy" src={require('../assets/images/agent-to-agent/create-image-analyzer-agent-form.webp').default} alt="Create New Agent panel with Image Analyzer selected as the agent type" width="1914" height="940"  className="doc_img"/>
+
+**Step 2 (optional): Add custom criteria.** Skip this step if the prompt alone defines a correct image. If your images must also follow brand guidelines or technical specifications, open the **Custom Criteria** tab and create the criteria before you analyze:
+
+- Give each criterion a **Name** that says what it checks, such as Brand Colors, so its result is easy to find in an analysis.
+- Choose the **Criteria type**: **Brand guidelines**, **Technical specifications**, or **Custom rules**. The fields below it change to match the type.
+- Fill in the rules. Enter lists, such as allowed colors, as comma-separated values, for example `#FF0000, #00FF00, Blue`.
+- Click **Create criteria**.
+
+Every active criterion is checked on each analysis and returns a Pass, Fail, or Partial result, so switch off any criterion that doesn't apply to the images you're about to test. See [Features](#features) for what each criteria type covers.
+
+<img loading="lazy" src={require('../assets/images/agent-to-agent/image-analyzer-create-custom-criteria-dialog.webp').default} alt="Create custom criteria dialog with name, criteria type set to Brand guidelines, description and allowed colors fields" width="1917" height="936"  className="doc_img"/>
+
+**Step 3: Analyze an image.** On the **Image Analysis** tab, click **Analyze Image**, then:
+
+- Choose **Single Image**, or **Batch Analysis** to score up to 50 images in one run, for example after a model update.
+- Add the image by **Upload Image** or **Image URL**.
+- In **Original Prompt**, paste the exact prompt that generated the image. The Quality Score measures how well the image matches this prompt, so a paraphrased or shortened prompt changes what gets scored.
+- Click **Analyze Image**. The button is available once both the prompt and the image are added.
+
+<img loading="lazy" src={require('../assets/images/agent-to-agent/image-analyzer-analyze-image-dialog.webp').default} alt="Analyze Image panel with single image and batch analysis modes, upload or image URL options, and the original prompt field" width="1915" height="937"  className="doc_img"/>
+
+**Step 4: Read the analysis.** Open an analysis from the **Image Analysis** tab to see its Quality Score and the reasons behind it.
+
+- Use the score band to decide whether the image is usable: 90 to 100 is excellent, 80 to 89 good, 60 to 79 fair, and 0 to 59 poor.
+- Read **Discrepancies** first. They list what is missing or wrong compared with the prompt, which tells you what to fix in your model or prompt. **Matches** confirm what the image already gets right.
+- If you added custom criteria, check each one's result. A **Partial** result means the image meets some but not all of the rule.
+- Bookmark analyses you want to compare later, such as a baseline from before a model change.
+
+<img loading="lazy" src={require('../assets/images/agent-to-agent/image-analyzer-analysis-result-quality-score.webp').default} alt="Image analysis result with the Quality Score, the original prompt and the list of elements that match the prompt" width="1918" height="945"  className="doc_img"/>
+
+**Step 5: Track quality across analyses.** Open the **Analytics** tab once you have several analyses.
+
+- Under **Prompt Performance Analytics**, the **vs Overall** column shows how far each prompt scores above or below your average. Start with the prompts furthest below average: they show where your model struggles most.
+- After a model or prompt change, analyze the same prompts again and use the 30-day quality trend to confirm that scores went up.
+
+<img loading="lazy" src={require('../assets/images/agent-to-agent/image-analyzer-analytics-tab-prompt-performance.webp').default} alt="Analytics tab with average, highest and lowest score, total analyses and prompt performance compared with the overall average" width="1918" height="948"  className="doc_img"/>
+
 ## Features
 
 ---

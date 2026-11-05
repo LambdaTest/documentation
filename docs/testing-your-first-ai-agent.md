@@ -148,7 +148,35 @@ Follow these seven steps in the dashboard. Each step builds on the previous one.
 
 **Step 7: Read the results.** Open the **Evaluation Results** tab to see a breakdown across the quality metrics, such as whether the conversation was relevant and whether the agent stayed on topic.
 
-<img loading="lazy" src={require('../assets/images/agent-to-agent/agentic-five.png').default} alt="Evaluation Results tab showing metric scores for the run" width="1347" height="616"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/agent-to-agent/generated-test-scenarios-list-agent-testing.webp').default} alt="Scenarios tab listing generated test scenarios with persona and language tags" width="1914" height="948"  className="doc_img"/>
+
+**Step 5: Edit a scenario if needed.** Click the pencil icon on a scenario to open **Edit Scenario**.
+
+- Change the **Scenario Name**, **Description**, or **Validation Criteria**.
+- Click **Save Scenario** to keep your changes, or **Cancel** to discard them.
+
+<img loading="lazy" src={require('../assets/images/agent-to-agent/edit-test-scenario-validation-criteria.webp').default} alt="Edit Scenario panel showing scenario name, description and validation criteria fields" width="1911" height="945"  className="doc_img"/>
+
+**Step 6: Run the evaluation.** Run a suite to open the **Run Suite** dialog, then add your agent's API request.
+
+1. Enter your agent's request as a cURL command.
+2. Click **Parse and Evaluate**. To run it later, click **Schedule Run Evaluation** instead.
+3. In the **Confirm Request Details** dialog, check the **URL**, **Method**, **Headers**, and **Body**.
+4. Click **Run Evaluation**.
+
+For the API URL format and authentication, see how to [connect a chat agent over its API](/support/docs/chat-agent-api-integration/).
+
+<img loading="lazy" src={require('../assets/images/agent-to-agent/confirm-request-details-run-evaluation.webp').default} alt="Confirm Request Details dialog showing the agent URL, method and headers before clicking Run Evaluation" width="1915" height="936"  className="doc_img"/>
+
+**Step 7: Read the results.** When the run finishes, open a scenario from the list to see its score and the reasons behind it.
+
+- Start with the scenarios that failed or scored lowest. On the **Turns** tab, read the conversation to find the point where your agent went wrong.
+- Use **Areas for Improvement** and **Recommendations** to decide what to fix in your agent, and **Validation Criteria** to see which of the scenario's criteria it missed. If a criterion is wrong rather than the agent, edit the scenario as in Step 5.
+- After you change your agent, click **Re-run** to run the same scenarios again. Each run is listed separately with its score and time, so you can compare before and after.
+
+See the [chat agent metrics](/support/docs/chat-agent/#metrics) for what each score measures.
+
+<img loading="lazy" src={require('../assets/images/agent-to-agent/agent-evaluation-results-metrics-turns.webp').default} alt="Evaluation results for a scenario showing pass status, overall score, quality metrics and the conversation turns" width="1916" height="944"  className="doc_img"/>
 
 :::note
 If you are testing a voice bot, the platform generates audio for each test case automatically, then evaluates the transcribed audio responses from your agent to confirm they are relevant.
