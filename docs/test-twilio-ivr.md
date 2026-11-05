@@ -149,22 +149,16 @@ Click **Create New Agent** to confirm.
 
 <img loading="lazy" src={require('../assets/images/agent-to-agent/ivr-create-new-suite-region-profile.webp').default} alt="Create New Suite dialog for an IVR agent with agent profile, region and scenario selection" width="1915" height="942"  className="doc_img"/>
 
-**Step 5: Run the suite.** Click **Run** next to your suite. The **Confirm Run** dialog shows how many calls the platform will dial, the **Region**, and the parallel calls available. For each scenario it lists:
-
-- **Voice**, such as Brian (azure).
-- **Background noise**, such as **No Background Noise**.
-- **Iteration**, such as #1.
-
-Click **Trigger 1 call** (the number matches the calls listed) to start.
+**Step 5: Run the suite.** Click **Run** next to your suite. Every call in the suite is a real call to your IVR's number, so the **Confirm Run** dialog lists each one before anything is dialed. Check that the number of calls, the **Region**, and each call's voice and background noise are what you intended, then click the trigger button, such as **Trigger 1 call**, to start.
 
 <img loading="lazy" src={require('../assets/images/agent-to-agent/ivr-confirm-run-trigger-call.webp').default} alt="Confirm Run dialog listing the IVR scenario, voice, background noise and iteration with the Trigger 1 call button" width="1918" height="939"  className="doc_img"/>
 
-**Step 6: Review the call results.** The results page lists your calls on the left and the selected call on the right.
+**Step 6: Review the call results.** Open a call from the list to see whether it passed and why.
 
-- **Call list:** grouped by date, each call shows a pass or fail icon, a badge such as **v1**, and how it ended, such as **customer-ended-call** or **dispatch-failed**. Calls that connected also show a score and the masked number called. Use **Search scenarios** and **Filter** to narrow the list.
-- **Summary badges:** **Passed** status, score, **MOS**, the masked number called, duration, how the call ended, and the last run time.
-- **Recording tab:** the call audio, the **Call Summary** with its **Evidence**, and the **Transcript**.
-- **Other tabs:** **Analytics** and **Validation Results**.
+- Check how each call ended first. A call marked **dispatch-failed** never connected, so it has no score to review.
+- For a connected call that failed, play it on the **Recording** tab alongside the transcript to find the menu step where it went wrong. The usual causes are a digit that didn't register, a speech fallback that never triggered, a drop on timeout, or an unreachable transfer target. See [why Twilio IVR tests fail](#why-do-twilio-ivr-tests-fail).
+- On the **Validation Results** tab, check which of the scenario's success criteria the call met or missed.
+- If a call failed but the flow looks right, check the **MOS** badge. A call's pass or fail can be based on the metrics, on the mean opinion score of the call audio, or on both.
 
 <img loading="lazy" src={require('../assets/images/agent-to-agent/ivr-call-result-recording-transcript.webp').default} alt="IVR call result showing pass status, score, MOS, call recording waveform, call summary and transcript" width="1906" height="945"  className="doc_img"/>
 
