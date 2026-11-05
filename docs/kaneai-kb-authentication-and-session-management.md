@@ -337,11 +337,11 @@ TOTP variables are now **global by default**. You create them once and reuse the
 ### Step-by-step Guide
 ***
 
-#### Create a Global TOTP Variable
+### Create a Global TOTP Variable
 
 You can create a global TOTP variable in two ways:
 
-##### Option A: From the Variables Page
+### Option A: From the Variables Page
 
 1. Open **Test Manager** and navigate to **Variables > TOTP Variables**.
 2. Click **+ Create new**.
@@ -351,14 +351,14 @@ You can create a global TOTP variable in two ways:
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/totp/create-global-totp.png').default} alt="Create TOTP Variable modal" className="doc\_img"/>
 
-##### Option B: From the Authoring Session
+### Option B: From the Authoring Session
 
 1. Start a KaneAI authoring session and press **/**.
 2. Choose **Add TOTP Authentication Key**.
 3. Provide a **Variable Name** and the **Base32 secret key**.
 4. Click **Save**. The variable is created globally and is immediately available across all test cases and modules.
 
-#### Use a TOTP Variable in Your Test
+### Use a TOTP Variable in Your Test
 
 1. Navigate to the OTP input field in your application.
 2. Reference the variable in your instruction, for example, "Enter `{{totp.sso_totp}}` in verify field".
@@ -440,19 +440,19 @@ When you open a test case that contains local TOTP variables, KaneAI displays a 
 ### TOTP FAQ
 ***
 
-#### Does KaneAI store my secret securely?
+### Does KaneAI store my secret securely?
 
 Yes. Secrets are encrypted, stored in Vault, and never exposed in logs or generated code.
 
-#### Do mobile tests support TOTP?
+### Do mobile tests support TOTP?
 
 Yes. The `{{totp.variable_name}}` syntax is available in both Web and Mobile test steps.
 
-#### Can I reuse the same TOTP variable across multiple test cases?
+### Can I reuse the same TOTP variable across multiple test cases?
 
 Yes. Because TOTP variables are global, any test case or module can reference the same variable by name.
 
-#### What happens to my existing tests that use the old `{{totp}}` syntax?
+### What happens to my existing tests that use the old `{{totp}}` syntax?
 
 Existing test runs continue to execute without changes. When you open the test case for editing in the KaneAI playground, you will be prompted to convert local variables to global and adopt the new `{{totp.variable_name}}` syntax.
 

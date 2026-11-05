@@ -208,32 +208,32 @@ The KaneAI Web Agent is an automation tool that executes web interactions based 
 ### General Instruction
 ***
 
-#### 1. Clarity and Specificity
+### 1. Clarity and Specificity
 Always provide clear and specific instructions for the action you wish to perform. Use the appropriate terminology from the list of supported commands. Avoid vague terms such as `do this` or `click that`. Be explicit about which element to interact with.
 
-#### 2. Context
+### 2. Context
 When the action is dependent on a specific element or section of a webpage, provide enough context to help identify the element. Example: `Click the 'Submit' button on the top right corner of the form`.
 
-#### 3. Step-by-Step Instructions
+### 3. Step-by-Step Instructions
 Break down complex tasks into smaller, manageable steps. Use logical connectors like `then` or `after that` to indicate the sequence of actions. Clearly specify the flow, such as `Click 'Login', then type your email in the input field.`
 
-#### 4. Use Examples
+### 4. Use Examples
 Refer to the examples provided in the list of supported commands for guidance on structuring your instructions.
 Example: `Type 'username' in the search bar and press 'Enter' to submit.`
 
-#### 5. Wait Command
+### 5. Wait Command
 Use the wait command when needed to pause execution, allowing operations or page loads to complete before proceeding to the next action. Example: `Click 'Submit' and wait for 5 seconds before proceeding to the next step.`
 
-#### 6. Refining Prompts
+### 6. Refining Prompts
 If the AI response is not as expected, refine your prompt by adding more details or increasing clarity. Use iterative refinement to achieve the desired outcome.
 
-#### 7. Tab Targeting
+### 7. Tab Targeting
 When interacting with elements that open in a new tab, use the prompt `switch to the <TabTitle> tab` to ensure actions stay on the newly opened tab.
 
 ### DO's & DON'Ts
 ***
 
-#### DO's
+### DO's
 - **Specify the Exact Element :** Clearly indicate which element you want to interact with. For instance, use the element's name, position, or attributes.
 Example: `Click on the second product in the list.`
 
@@ -250,7 +250,7 @@ Example: `Hover over the navigation bar.`
 
 - **Use Manual Interaction When Necessary :** If KaneAI struggles to execute the desired action, perform it directly on the application. While the session is in Authoring Steps the action is captured as a step.
 
-#### DON'Ts
+### DON'Ts
 - **Avoid Vague Terms :** Do not use terms like "Click that" or "Do this" without specifying which element or action.
 
 - **Do Not Assume Context Without Detail :** Ensure instructions are detailed enough for the AI to understand which elements are involved. Example of what to avoid: `Click the button" (without specifying which button)`.

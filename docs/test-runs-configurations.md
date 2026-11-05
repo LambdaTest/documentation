@@ -197,7 +197,7 @@ Configure browser-based testing on desktop environments.
 
 Configure testing on physical mobile devices. Supports both **Native App** and **Mobile Browser** testing.
 
-#### Native Application
+### Native Application
 ***
 
 :::info Note
@@ -216,7 +216,7 @@ Native app testing on Real Devices is available only for KaneAI-generated test r
 
 <img loading="lazy" src={require('../assets/images/kane-ai/app-test/RealDeviceConfig.png').default} alt="real-device-configuration" className="doc_img"/>
 
-#### KaneAI-Exclusive Features
+### KaneAI-Exclusive Features
 ***
 
 The following options are available only for KaneAI-generated test runs:
@@ -231,7 +231,7 @@ For organizations with a private cloud real device plan, you can choose between:
 
 KaneAI allows selecting multiple values for Manufacturer, Device, and OS Version. This creates a larger device pool, ensuring test execution can proceed even if specific devices are unavailable.
 
-#### Application Options
+### Application Options
 ***
 
 | Option | Description |
@@ -246,7 +246,7 @@ KaneAI allows selecting multiple values for Manufacturer, Device, and OS Version
 
 <img loading="lazy" src={require('../assets/images/kane-ai/app-test/PreinstalledApp.png').default} alt="preinstalled-app" className="doc_img"/>
 
-#### Mobile Browser
+### Mobile Browser
 ***
 
 :::info Note
@@ -273,7 +273,7 @@ Virtual Mobile configurations are available for non-KaneAI test runs only.
 
 Configure testing on emulators and simulators for both Native App and Mobile Browser testing.
 
-#### Native Application
+### Native Application
 ***
 
 **Environment Variables:**
@@ -287,7 +287,7 @@ Configure testing on emulators and simulators for both Native App and Mobile Bro
 
 <img loading="lazy" src={require('../assets/images/kane-ai/app-test/VirtualWeb.png').default} alt="virtual-device-app-configuration" className="doc_img"/>
 
-#### Mobile Browser
+### Mobile Browser
 ***
 
 **Environment Variables:**

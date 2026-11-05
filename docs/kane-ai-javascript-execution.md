@@ -253,7 +253,7 @@ When your code is ready, press Enter. KaneAI runs the snippet in the current tes
 
 **Result:** The snippet executes on the live page, and any return value is saved as a variable for later steps.
 
-#### Return Values and Variables
+### Return Values and Variables
 If your snippet returns a value, KaneAI saves it as a variable you can use later in the test. The output is captured, assigned to a variable, and available throughout test execution.
 
 For example, in the snippet above:
@@ -268,7 +268,7 @@ The returned object with the keys `First name`, `Last name`, and `email` will be
 
 > To use a variable created from a return value in a later step, reference the specific property (for example, First name) for verification or further actions.
 
-#### JavaScript Snippets in Generated Code
+### JavaScript Snippets in Generated Code
 When your test runs, KaneAI adds your snippet directly into the generated test code. Custom JavaScript interactions become part of the overall test logic, so you can track, debug, and modify them alongside the rest of the test.
 
 <video class="right-side" width="100%" controls id="vid">
@@ -303,7 +303,7 @@ The snippet runs in the context of the page with full access to the DOM, `docume
 
 **Problem:** Many date pickers use read-only inputs that reject typed values. Natural language typing doesn't trigger the custom event handlers these components rely on.
 
-#### Set Date on a Read-Only Date Picker
+### Set Date on a Read-Only Date Picker
 
 <VerifiedTag value="Verified" />
 
@@ -319,7 +319,7 @@ dateInput.dispatchEvent(new Event('change', { bubbles: true }));
 return 'Date set to 2026-03-15';
 ```
 
-#### Set Date on React DatePicker
+### Set Date on React DatePicker
 
 React components use synthetic events. Use the native input setter:
 
@@ -335,7 +335,7 @@ dateInput.dispatchEvent(new Event('input', { bubbles: true }));
 return 'React date picker value set';
 ```
 
-#### Set Date Range Picker
+### Set Date Range Picker
 
 <VerifiedTag value="Verified" />
 
@@ -364,7 +364,7 @@ return 'Date range set: Feb 1 - Feb 28, 2026';
 
 **Problem:** Operations like converting text to lowercase, extracting substrings, or formatting data are not reliably handled via natural language.
 
-#### Convert Text to Lowercase and Validate
+### Convert Text to Lowercase and Validate
 
 <VerifiedTag value="Verified" />
 
@@ -378,7 +378,7 @@ if (lowercase === 'welcome to dashboard') {
 }
 ```
 
-#### Extract and Validate a Substring
+### Extract and Validate a Substring
 
 <VerifiedTag value="Verified" />
 
@@ -393,7 +393,7 @@ if (orderId.length === 5 && !isNaN(orderId)) {
 }
 ```
 
-#### Trim Whitespace and Compare
+### Trim Whitespace and Compare
 
 <VerifiedTag value="Verified" />
 
@@ -414,7 +414,7 @@ if (actual === expected) {
 
 **Problem:** KaneAI can't reliably assert specific cell values in complex tables (e.g., "the 5th column of the 3rd row contains X").
 
-#### Assert Specific Table Cell Value
+### Assert Specific Table Cell Value
 
 <VerifiedTag value="Verified" />
 
@@ -428,7 +428,7 @@ if (thirdRowFifthCol === 'Active') {
 }
 ```
 
-#### Count Table Rows
+### Count Table Rows
 
 <VerifiedTag value="Verified" />
 
@@ -441,7 +441,7 @@ if (rowCount === 10) {
 }
 ```
 
-#### Validate Table is Sorted
+### Validate Table is Sorted
 
 <VerifiedTag value="Verified" />
 
@@ -464,7 +464,7 @@ if (isSorted) {
 
 **Problem:** Natural language can't directly read or write clipboard content.
 
-#### Copy Text to Clipboard
+### Copy Text to Clipboard
 
 <VerifiedTag value="Verified" />
 
@@ -474,7 +474,7 @@ await navigator.clipboard.writeText(text);
 return 'Copied to clipboard: ' + text;
 ```
 
-#### Read Clipboard Content
+### Read Clipboard Content
 
 <VerifiedTag value="Verified" />
 
@@ -490,7 +490,7 @@ return 'Clipboard contains: ' + clipText;
 
 **Problem:** You may need to verify, set, or clear browser storage for test setup or validation.
 
-#### Read a Local Storage Value
+### Read a Local Storage Value
 
 <VerifiedTag value="Verified" />
 
@@ -503,7 +503,7 @@ if (token) {
 }
 ```
 
-#### Set a Local Storage Value (Test Setup)
+### Set a Local Storage Value (Test Setup)
 
 <VerifiedTag value="Verified" />
 
@@ -512,7 +512,7 @@ localStorage.setItem('feature_flag_newUI', 'true');
 return 'Feature flag set';
 ```
 
-#### Clear Session Storage (Logout Simulation)
+### Clear Session Storage (Logout Simulation)
 
 <VerifiedTag value="Verified" />
 
