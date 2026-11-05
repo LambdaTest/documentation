@@ -178,12 +178,13 @@ For the API URL format and authentication, see how to [connect a chat agent over
 
 <img loading="lazy" src={require('../assets/images/agent-to-agent/confirm-request-details-run-evaluation.webp').default} alt="Confirm Request Details dialog showing the agent URL, method and headers before clicking Run Evaluation" width="1915" height="936"  className="doc_img"/>
 
-**Step 7: Read the results.** When the run finishes, the results page lists your scenarios on the left and the selected scenario on the right.
+**Step 7: Read the results.** When the run finishes, open a scenario from the list to see its score and the reasons behind it.
 
-- **Scenario list:** each scenario shows a pass or fail icon, its score, and when it ran. **Search test results**, **Filter**, and **Re-run** sit above the list.
-- **Status and score:** a status badge, such as **PASSED**, and an **Overall Score**.
-- **Metric badges:** such as **Completeness**, **Bias Detection**, **Response Quality**, **Context Awareness**, **Conversation Flow**, **User Satisfaction**, and **Hallucination Detection**.
-- **Detail tabs:** **Metrics**, **Turns**, **Strengths**, **Areas for Improvement**, **Recommendations**, and **Validation Criteria**. The **Turns** tab shows the conversation between the TestMu AI agent and your agent.
+- Start with the scenarios that failed or scored lowest. On the **Turns** tab, read the conversation to find the point where your agent went wrong.
+- Use **Areas for Improvement** and **Recommendations** to decide what to fix in your agent, and **Validation Criteria** to see which of the scenario's criteria it missed. If a criterion is wrong rather than the agent, edit the scenario as in Step 5.
+- After you change your agent, click **Re-run** to run the same scenarios again. Each run is listed separately with its score and time, so you can compare before and after.
+
+See the [chat agent metrics](/support/docs/chat-agent/#metrics) for what each score measures.
 
 <img loading="lazy" src={require('../assets/images/agent-to-agent/agent-evaluation-results-metrics-turns.webp').default} alt="Evaluation results for a scenario showing pass status, overall score, quality metrics and the conversation turns" width="1916" height="944"  className="doc_img"/>
 

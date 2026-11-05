@@ -109,7 +109,7 @@ A voice agent uses a similar setup to a chat agent: describe the agent in a prom
 
 ---
 
-Follow these six steps in the dashboard.
+Follow these seven steps in the dashboard.
 
 **Step 1: Create the voice agent.** In the Agent Testing page, click **Create New Agent**, then fill in the form:
 
@@ -132,7 +132,7 @@ Click **Create New Agent** to confirm.
 **Step 3: Generate scenarios.** Open the **Scenarios** tab and click **Generate Scenarios**, then set:
 
 - **Number of Scenarios:** use the slider or type a number.
-- **Scenario Types:**
+- **Scenario Types:** leave all unchecked to generate normal scenarios, or select one or more types to generate those instead.
   - **Happy Path:** normal flows and success scenarios.
   - **Negative:** errors, invalid inputs, and failure paths.
   - **Edge Case:** boundary values and unusual conditions.
@@ -165,9 +165,17 @@ Click **Generate Scenarios** to confirm.
 2. Under **HyperExecute Tunnel**, you can select a tunnel to use for the evaluation.
 3. Click **Run Voice Test**.
 
-When the run finishes, review the scores against the metrics below.
-
 <img loading="lazy" src={require('../assets/images/agent-to-agent/run-voice-suite-select-endpoint-profile.webp').default} alt="Run Voice Suite dialog with endpoint profile and HyperExecute tunnel selection and the Run Voice Test button" width="1918" height="943"  className="doc_img"/>
+
+**Step 7: Read the results.** When the run finishes, open a scenario from the list to see its score and the reasons behind it.
+
+- Start with the scenarios that failed or scored lowest. On the **Turns** tab, read the transcribed conversation to find the point where your agent went wrong.
+- Use **Areas for Improvement** and **Recommendations** to decide what to fix in your agent, and **Validation Criteria** to see which of the scenario's success criteria it missed.
+- After you change your agent, click **Re-run** to run the same scenarios again. Each run is listed separately with its score and time, so you can compare before and after.
+
+See [Metrics](#metrics) for what each score measures.
+
+<img loading="lazy" src={require('../assets/images/agent-to-agent/agent-evaluation-results-metrics-turns.webp').default} alt="Evaluation results for a scenario showing pass status, overall score, quality metrics and the conversation turns" width="1916" height="944"  className="doc_img"/>
 
 ## How Voice Agent Testing Works
 
