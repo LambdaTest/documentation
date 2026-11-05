@@ -99,7 +99,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-10-13T00:00:00+05:30"
+    "dateModified": "2026-11-05T00:00:00+05:30"
   }) }}
 />
 
@@ -171,6 +171,66 @@ The **Seed Value** is defined with a global parameter in **KaneAI** > **Variable
 <img loading="lazy" src={require('../assets/images/kane-ai/features/data-driven-testing/parameters-list.png').default} alt="KaneAI Parameters list with parameter names and Seed Value column" className="doc_img"/>
 
 If a Dataset cell is empty, KaneAI uses the empty value; it does not fall back to the Seed Value.
+
+## Import parameters from a CSV
+
+When you have many parameters to create, such as the columns of a test data sheet, import them from a CSV file instead of creating them one at a time. Each column in the file becomes one parameter.
+
+### Prepare the CSV file
+
+Put each parameter's name in row 1 and its Seed Value in row 2:
+
+```csv
+user_name,email,city,plan
+John Doe,john.doe@example.com,Bengaluru,Pro
+```
+
+- Each import takes one `.csv` file, up to 5 MB and 500 columns. To import an Excel sheet, save it as CSV first.
+- Only rows 1 and 2 are read. A value in row 3 or below doesn't become a Seed Value, even if row 2 of that column is empty.
+- Parameter names can contain only letters, digits, and underscores. Names that don't follow this rule aren't corrected for you, so fix them in the file before you upload it.
+
+### Import the parameters
+
+1. Go to **KaneAI** > **Variables** > **Parameters**.
+2. Open the dropdown next to **Create new** and select **Import CSV**.
+3. Drag your file into the panel, or click **Browse CSV file**. To start from a template, click **Download Sample CSV**.
+
+    <img loading="lazy" src={require('../assets/images/kane-ai/features/data-driven-testing/import-parameters-upload.png').default} alt="Import Parameters from CSV panel showing the recommended CSV layout, the file upload area, and the sample file link" className="doc_img"/>
+
+4. Review the preview, which lists every column in the file and what will happen to it. You can search by name and filter by outcome. Nothing is created until you confirm, so you can still cancel, or go back and upload a corrected file.
+
+    <img loading="lazy" src={require('../assets/images/kane-ai/features/data-driven-testing/import-parameters-preview.png').default} alt="Preview of an uploaded CSV with three columns to import, one that already exists, and one excluded from import" className="doc_img"/>
+
+5. Click **Import Parameters**. The new parameters are added to the Parameters list, and a confirmation shows how many were imported.
+
+If every column already exists or is excluded, there is nothing to import and **Import Parameters** stays disabled.
+
+Imported parameters work the same way as parameters you create one at a time. To load the rest of the rows from your file as test data, see [Importing Data via CSV Files](/support/docs/kane-ai-using-datasets/#importing-data-via-csv-files).
+
+### What happens to each column
+
+| Preview outcome | When it applies | Result |
+|---|---|---|
+| **Will be imported** | The column has a valid new name and a Seed Value. | A new parameter is created. |
+| **Already exist & skipped** | A parameter with the same name already exists. Letter case is ignored, so `AGE` matches `age`. | The column is skipped. The existing parameter and its Seed Value don't change. |
+| **Excluded from import** | The column breaks one of the rules below. | No parameter is created. |
+
+A column is excluded from the import if:
+
+- Its name is empty, or contains spaces, symbols, or accented letters. Spaces before or after the name also count.
+- Its name repeats an earlier column in the file. Letter case is ignored, and the first column is the one imported.
+- Row 2 of the column is empty.
+- Its value in row 2 is longer than 255 characters.
+
+To include an excluded column, fix it in the CSV and upload the file again.
+
+### Import an updated file
+
+Each import is a one-time copy of the file, so later changes to the CSV don't update your parameters. When your sheet gains new columns, upload it again: columns you already imported are skipped, and only the new ones are created. To change the Seed Value of an existing parameter, edit it in the Parameters list.
+
+### Keep sensitive values out of the file
+
+Parameters are visible to everyone in your organization, and the import doesn't flag columns that look sensitive. Remove passwords, tokens, and similar values from the CSV, and store them as [Secrets](/support/docs/kane-ai-secrets/) instead.
 
 ## Define Parameters in a Web or App Agent Test
 - Navigate to the specific web agent test URL and configure the test to accept input parameters.
