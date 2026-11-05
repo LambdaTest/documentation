@@ -97,7 +97,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-10-13T12:00:00+05:30"
+    "dateModified": "2026-11-05T12:00:00+05:30"
   }) }}
 />
 
@@ -165,6 +165,7 @@ The new value is saved under KaneAI **Variables**, and its reference is inserted
 - Only organization admins can create organization secrets. Other members can create user secrets.
 - On the free plan, you can pick existing parameters and secrets but cannot create new ones.
 - Smart variables, TOTP variables, and JSON variables are created from the [Variables page](https://www.testmuai.com/login/?redirectTo=https://kaneai.lambdatest.com/variables) only.
+- To create many parameters at once, [import them from a CSV](/support/docs/kane-ai-using-parameters/#import-parameters-from-a-csv).
 
 ## Choose an Environment When Automating With KaneAI
 
