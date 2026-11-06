@@ -1,6 +1,6 @@
 ---
 id: parallel-playwright-test
-title: How To Run Playwright Tests In Parallel
+title: Run Playwright Tests in Parallel on TestMu AI
 hide_title: true
 sidebar_label: Parallel Testing
 description: Here you can learn how to run parallel tests with Playwright across multiple browser versions on the TestMu AI automation platform.
@@ -57,7 +57,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       "@type": "WebPage",
       "@id": "https://www.testmuai.com/support/docs/parallel-testing-with-playwright/"
     },
-    "headline": "How To Run Playwright Tests In Parallel",
+    "headline": "Run Playwright Tests in Parallel on TestMu AI",
     "description": "Here you can learn how to run parallel tests with Playwright across multiple browser versions on the TestMu AI automation platform.",
     "url": "https://www.testmuai.com/support/docs/parallel-testing-with-playwright/",
     "image": {
