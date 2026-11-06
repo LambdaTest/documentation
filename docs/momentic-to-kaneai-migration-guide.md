@@ -155,7 +155,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
 
 # Migrating From Momentic To KaneAI
 * * *
-This guide covers your Momentic migration to KaneAI: how to re-create your end-to-end tests and run them on <BrandName />. KaneAI is the <BrandName /> testing agent that authors web and mobile tests from natural language.
+This guide covers your Momentic migration to KaneAI: how to re-create your end-to-end tests and run them on <BrandName />. KaneAI is the <BrandName /> testing agent that authors web and mobile tests from natural language. For a side-by-side look at the two before you switch, see [KaneAI vs Momentic](https://www.testmuai.com/kaneai-vs-momentic/).
 
 
 <b>[Note: KaneAI does not import or convert Momentic tests. This guide follows a manual path. You keep your Momentic YAML files as the reference and run any Playwright code from Momentic on <BrandName />. Then you re-create each test in KaneAI in natural language.]</b>
