@@ -170,7 +170,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
 
 # Migrating From mabl To KaneAI
 * * *
-This guide covers your mabl migration to KaneAI: what you can move to <BrandName />, and how.
+This guide covers your mabl migration to KaneAI: what you can move to <BrandName />, and how. For a side-by-side look at the two platforms before you switch, see [TestMu AI vs mabl](https://www.testmuai.com/testmu-vs-mabl/).
 
 <b>[Note: KaneAI does not import or convert mabl tests. This guide follows a manual path. Export code from mabl and run it on <BrandName />, import test cases from CSV, and re-create tests in KaneAI in natural language.]</b>
 

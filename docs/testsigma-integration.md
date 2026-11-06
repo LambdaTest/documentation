@@ -107,6 +107,10 @@ Testsigma is an unified codeless automation testing platform, designed and built
 
 Testsigma now offers integration with <BrandName /> to help you perform automated cross-browser testing taking advantage of the cloud-based [Selenium Grid](https://www.testmuai.com/blog/why-selenium-grid-is-ideal-for-automated-browser-testing/) on over 2000 real browsers. <BrandName /> Selenium Grid integration to Testsigma will help you run your Selenium automation scripts from Testsigma instance to our cloud-based Selenium Grid very easily. Lets see how.
 
+:::info
+Comparing Testsigma with KaneAI for AI test authoring? [KaneAI vs Testsigma](https://www.testmuai.com/kaneai-vs-testsigma/) sets the two side by side.
+:::
+
 
 ## How To Integrate <BrandName /> With Testsigma
 
