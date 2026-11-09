@@ -32,6 +32,10 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 **Quick Run** executes a single saved KaneAI test case on the configurations you choose. It creates a Test Run in Test Manager so you can track execution and review the results alongside your other runs.
 
+:::info
+Quick Run is being rolled out gradually and may not yet be available for your organization.
+:::
+
 ## Overview
 
 Each Quick Run creates **one Test Run**, with **one test instance per selected configuration**. For example, selecting Windows Chrome and macOS Chrome creates one run with two instances of the same test case.
