@@ -471,7 +471,7 @@ While the session is in Authoring Steps, interacting directly with your applicat
 |---|---|
 | Web browser on desktop | Supported |
 | Mobile app on Android | Supported |
-| Mobile app on iOS | Supported in portrait; not supported in landscape |
+| Mobile app on iOS | Supported |
 | Mobile browser | Supported |
 
 On platforms where capture is not supported, build the test with natural language instructions and slash commands. For gesture-level detail, limitations, and use cases, see [Manual Interaction](/support/docs/kaneai-manual-interaction/).
