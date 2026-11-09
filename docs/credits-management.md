@@ -181,7 +181,7 @@ Credits do not roll over. Whatever is unused when a batch expires is written off
 
 ## View your credit balance and usage
 
-Everything to do with credits lives under **Credits** in the [Billing console](https://billing.lambdatest.com/billing/credits). Only users with the **Admin** role in your <BrandName /> organization can open these screens, and only admins can change budgets and alerts.
+Everything to do with credits lives under **Credits** in the [Billing console](https://billing.lambdatest.com/billing/credits). Only users with the **Admin** role in your <BrandName /> organization can open these screens, and only admins can change budgets, alerts and auto-reload.
 
 **Credits > Overview** is the summary screen for your organization. The subtitle shows the plan cycle the figures cover, and the date range picker at the top right changes the window.
 
@@ -218,7 +218,7 @@ Select **Add Credits** at the top right of the Overview page.
 4. Optionally select **Add Company Info** under **Company Information**. These details appear on your invoice and are used to calculate taxes.
 5. Select **Make Payment**.
 
-Credits are added as soon as the payment goes through, and the pack is valid for **one year**. Purchased credits are deliberately kept independent of your subscription, so a plan change or cancellation cannot remove them.
+Credits are added as soon as the payment goes through, and the pack is valid for **one year**. To buy credits automatically when your balance runs low, see [Turn on auto-reload](#turn-on-auto-reload). Purchased credits are deliberately kept independent of your subscription, so a plan change or cancellation cannot remove them.
 
 ---
 
@@ -305,6 +305,36 @@ Both balance thresholds are entered as an absolute number of credits.
 :::tip
 **Recommendation:** Start with a soft limit (e.g., 70–80% of your monthly plan) and a hard limit (e.g., 90%).
 :::
+
+---
+
+## Turn on auto-reload (Admins Only)
+
+Auto-reload buys credits for you, using your organization's saved card, whenever the available balance drops below a level you choose, so runs are not blocked by an empty balance. It is off until an admin turns it on, and it is available on the parent organization only, not on sub-organizations.
+
+Before you start, make sure your organization has a saved card set as the default payment method. Cards issued in India cannot be used for auto-reload because of RBI rules on recurring payments; add a card issued outside India, or keep buying credits manually with **Add Credits**.
+
+<img loading="lazy" src={require('../assets/images/credits-management/credits-auto-reload.webp').default} alt="Credits Auto-reload page with the Reload credits automatically toggle showing the saved card, the Reload when balance falls below threshold and the Reload amount with its price per reload" className="doc_img"/>
+
+1. Go to **Credits > Auto-reload**.
+2. Turn on **Reload credits automatically**. The saved card that will be charged is shown under the toggle.
+3. In **Reload when balance falls below**, enter the balance that should trigger a reload. It must be greater than 0. If you have set **Block usage when balance falls below** on the Alerts page, it must also be higher than that value, or runs are blocked before a reload can start.
+4. In **Reload amount**, enter how many credits to buy each time, at least 100. The price per reload is shown under the field.
+5. Select **Save Changes**.
+
+When the balance falls below your threshold, <BrandName /> charges the saved card for the reload amount. The credits are added as soon as the payment goes through and appear under **Purchased Credits**, valid for one year. Your organization receives a payment receipt for every reload. Only one reload runs at a time, and there is no monthly limit on how many reloads can happen.
+
+If a reload payment does not go through, no credits are added and you are not charged. Your organization's admins get an email with the reason, and auto-reload waits before trying again.
+
+| What happened | What auto-reload does |
+|---------------|-----------------------|
+| The card was declined | Tries again later. After 3 declines in a row it turns itself off |
+| Your bank asked for authentication (3D Secure) | Turns itself off, because this cannot be completed without you |
+| The card was reported lost or stolen, or the bank refused the payment outright | Turns itself off |
+| No default card is saved, or the default payment method is not a card | Turns itself off |
+| The default card was issued in India | Turns itself off |
+
+To turn auto-reload back on, fix the payment method under billing, then switch auto-reload on again on the **Auto-reload** page. The page shows when the last reload failed and why.
 
 ---
 
