@@ -84,6 +84,8 @@ Since 0.1.16, the result also shows the scenario as it was when the run used it:
 
 Since 0.1.17, a failed result shows a **Why it failed** card, and an unverifiable one shows **Why it couldn't be verified**, in place of the earlier Summary box. The run's page has a collapsible **Failure analysis** section with one card per failure cluster; each card lists the scenarios affected and links to their results. A run made with `--rca` shows each cluster's cause, remedy and files. Without `--rca`, the card says how to get them. The section appears once the run has finished.
 
+Since 0.1.18, the section is headed **Failure clusters analysis** and lists clusters in order: CL-01, CL-02, and so on. A passing result that an attack compromised gets a **Why it was compromised** card with the attack's evidence. An unverifiable result that is in no cluster still shows **Why it couldn't be verified**, with a sentence that says what to do. On a result's card, **See this cluster on the run page** opens that cluster on the run's page. When a remedy contains code blocks, its copy button copies only the code.
+
 This view can show evidence before upload, including a local `--test` run. The redesigned viewer refreshes when workspace records change. The CommerceCare example separates an unmet response requirement from missing tool/state evidence; the hosted triage example below is a different run. An absent verdict or file means it was not recorded or is unavailable; do not turn that absence into a pass. See [local navigation and files](/support/docs/rook-web-ui/#local-results).
 
 ### In the Hosted Web UI
