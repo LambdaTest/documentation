@@ -317,7 +317,7 @@ Use Manual Interaction to adjust date-range sliders, resize chart panels, and re
 
 - **Multi-touch gestures** (two-finger drag, pinch-drag): not supported.
 - **Drag path waypoints**: only start and end coordinates are captured; intermediate path points are not preserved.
-- **Mobile Browser manual drag recording**: not supported. Author drag and drop with natural language instead.
+- **Mobile Browser manual drag recording**: drag and drop and click and drag are not supported through Manual Interaction. Author drag and drop with natural language instead.
 - **Cross-context dragging**: drags between iframes or shadow DOMs are not supported.
 - **Multi-element dragging**: cannot drag multiple elements simultaneously.
 - **Advanced NL** (e.g., `drag X up by 50px`, offset-based reorder): on the roadmap; currently rejected with a graceful error.

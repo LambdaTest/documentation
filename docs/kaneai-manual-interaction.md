@@ -125,8 +125,8 @@ For the full session model — the states, the cursor, and the run actions — s
 |---|---|
 | Web browser on desktop | Supported |
 | Mobile app on Android | Supported |
-| Mobile app on iOS | Supported in portrait; not supported in landscape |
-| Mobile browser | Supported; drag and drop is not captured |
+| Mobile app on iOS | Supported |
+| Mobile browser | Supported; drag and drop and click and drag are not supported |
 
 On platforms where capture is not supported, build the test using natural language instructions and slash commands.
 
@@ -229,7 +229,9 @@ Double click, right click, and press-and-hold (long press) **are now supported**
 
 ### Mobile Browsers
 
-- **Drag and drop:** Manual Interaction does not capture drag gestures in mobile browsers. Author these steps using natural language. See [Drag and Drop](/support/docs/kane-ai-drag-drop/).
+- **Drag and drop and click and drag:** Both gestures are unsupported through Manual Interaction on mobile browsers. You can author drag and drop using natural language. See [Drag and Drop](/support/docs/kane-ai-drag-drop/).
+
+- **iOS keyboard accessory toolbar:** Actions performed on the keyboard accessory toolbar are not supported. KaneAI still attempts to record these actions when you perform them, but the recorded actions will not work.
 
 ### Mobile Apps
 
@@ -242,10 +244,6 @@ Double click, right click, and press-and-hold (long press) **are now supported**
 - **Mobile keyboard actions such as backspace:** Special keyboard keys and actions are not recorded accurately.
 
 - **System level popups:** Popups controlled by the operating system, such as permission dialogs, cannot be captured.
-
-### Platforms without capture
-
-- **iOS app in landscape:** Capture is not supported. Rotate to portrait to record interactions.
 
 **Important Note on Text Input Behavior**
 
@@ -397,7 +395,7 @@ This use case applies when you need to navigate your app to a specific starting 
 
 Check the session state. Capture is active only in **Authoring Steps** — it stops in Paused and in Running. If the session is Paused, click **Resume**.
 
-If the session is already in Authoring Steps, check that your platform supports capture. iOS app sessions in landscape do not capture interactions; rotate to portrait to record them. Mobile browser sessions support capture.
+If the session is already in Authoring Steps, check the [Manual Interaction Limitations](#manual-interaction-limitations) for unsupported actions on your platform.
 
 ### I clicked on the application and nothing happened
 
