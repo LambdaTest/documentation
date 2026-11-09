@@ -155,7 +155,7 @@ As smart TVs continue to grow in popularity, relying solely on manual testing is
 In this guide, you will learn how to set up and run your **Apple TV** automation testing scripts with **Appium** on the **<BrandName /> Real Device Cloud platform**.
 
 :::note Plus Plan Feature
-This feature is available exclusively with the **Private Cloud** Plan.
+This feature is available exclusively with the **Real Device Plus Automation Cloud and Private Cloud** Plans.
 
 To unlock this feature, purchase or upgrade to the required [plan](https://www.testmuai.com/pricing/). If you need assistance, please contact your <BrandName /> support representative, reach out to our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**[24×7 Chat Support]**</span>, or email us at **support@testmuai.com**.
 :::
