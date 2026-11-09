@@ -3,7 +3,7 @@ id: chrome-os-app-testing
 title: ChromeOS App Testing
 hide_title: false
 sidebar_label: ChromeOS App Testing
-description: TestMu AI provides a powerful solution for testing apps designed for Chromebooks by offering live interactive testing capabilities, and device emulation for responsive design testing.
+description: Upload your app and test it live on a virtual ChromeOS device in TestMu AI, with device controls, screenshots, session recording, IP geolocation and network throttling.
 keywords:
     - ChromeOS
     - ChromeOS App
@@ -57,7 +57,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       "@id": "https://www.testmuai.com/support/docs/chrome-os-app-testing/"
     },
     "headline": "ChromeOS App Testing",
-    "description": "TestMu AI provides a powerful solution for testing apps designed for Chromebooks by offering live interactive testing capabilities, and device emulation for responsive design testing.",
+    "description": "Upload your app and test it live on a virtual ChromeOS device in TestMu AI, with device controls, screenshots, session recording, IP geolocation and network throttling.",
     "url": "https://www.testmuai.com/support/docs/chrome-os-app-testing/",
     "image": {
       "@type": "ImageObject",
