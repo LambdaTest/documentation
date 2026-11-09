@@ -46,13 +46,13 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 `kane-cli explore` sends an explorer through your app. It clicks, types and follows links the way a curious tester
 would, and builds a **map** of what it finds: the app's screens, the flows between them, and **findings**: things that
 look broken, and places it couldn't get past, each with its evidence. While it explores, it also **designs tests**
-from what it mapped, into your Test Manager project: the same kind of tests [assurance](/support/docs/kane-cli-assurance/)
+from what it mapped, into your Test Manager project: the same kind of tests [assurance](https://www.testmuai.com/docs/kane-cli-assurance)
 designs from a document.
 
 <img loading="lazy" src="/support/assets/images/kane-cli/exploration-overview.svg" alt="How kane-cli explore works: kane-cli explore run sends the explorer, on HyperExecute, through your app (or localhost through an LT tunnel) and builds the map of screens, flows and findings. While it explores, design jobs save use-cases, scenarios and tests to your Test Manager project, and kane-cli context pull brings them into your folder" className="doc_img img_center" width="1000" height="302" />
 
 Use exploration when you have an app but no written requirements, or to find what your documents missed. Use
-[assurance](/support/docs/kane-cli-assurance/) when you have a PRD or a spec. Both put their tests in the same project, so you
+[assurance](https://www.testmuai.com/docs/kane-cli-assurance) when you have a PRD or a spec. Both put their tests in the same project, so you
 can do both.
 
 Each project has **one exploration of one URL**. Every run adds to that exploration's map.
@@ -61,7 +61,7 @@ Each project has **one exploration of one URL**. Every run adds to that explorat
 
 | You need | Why | How to check |
 |---|---|---|
-| kane-cli, signed in ([Installation](/support/docs/kane-cli-installation/), [Authentication](/support/docs/kane-cli-authentication/)) | the explorer runs as you | `kane-cli whoami` |
+| kane-cli, signed in ([Installation](https://www.testmuai.com/docs/kane-cli-installation), [Authentication](/support/docs/kane-cli-authentication/)) | the explorer runs as you | `kane-cli whoami` |
 | A Test Manager project for the exploration | the map and the tests belong to one project | `kane-cli projects list --search <name>`, or `kane-cli projects create "<name>"` |
 | Permission to create test cases in that project | the design jobs save tests and cases there | if you can't, the map still builds, but no tests are designed ([below](#no-tests-were-designed)) |
 | Credits | an exploration and each design job spend credits | `kane-cli balance` |
@@ -374,4 +374,4 @@ exploration, or no sign-in.
 | `TOO_SOON` on `explore context sync` | a design job started a few minutes ago | try again when it says |
 | `NO_ENDED_RUN` on `explore context sync` | no run has ended yet | wait for the run to end |
 
-Driving exploration from an AI coding agent: every `explore` command takes `--agent` ([Agent Mode](/support/docs/kane-cli-agent-mode/)).
+Driving exploration from an AI coding agent: every `explore` command takes `--agent` ([Agent Mode](https://www.testmuai.com/docs/kane-cli-agent-mode)).

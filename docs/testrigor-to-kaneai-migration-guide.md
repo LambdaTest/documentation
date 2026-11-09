@@ -152,7 +152,7 @@ testRigor tests are written as steps in what testRigor calls "plain English". <!
 | Data Sets | Datasets in Test Manager | Download as CSV in testRigor, then import in the dataset editor |
 | `call api` steps | API steps in a KaneAI test | Paste a curl command for the same request |
 | Authenticator-app 2FA | KaneAI TOTP variables | Add the Base32 secret key |
-| Test case files in a repo (`.txt`, `.yaml`) | Kane CLI `_test.md` files | Re-write browser test steps as a [Markdown test](/support/docs/kane-cli-testmd/) |
+| Test case files in a repo (`.txt`, `.yaml`) | Kane CLI `_test.md` files | Re-write browser test steps as a [Markdown test](https://www.testmuai.com/docs/kane-cli-testmd) |
 | Run history and execution reports | Stay in testRigor | Export what you need from testRigor first |
 
 <!-- Source: https://testrigor.com/how-to-utilise-testrigors-mcp-server/, checked 2026-10-16 -->

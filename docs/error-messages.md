@@ -169,7 +169,7 @@ Find your error by what your test printed. The **W3C error code** is the string 
 | Product | Reference |
 |---|---|
 | HyperExecute CLI | [HyperExecute CLI Errors](/support/docs/hyperexecute-how-to-debug-job/#error-codes) |
-| Kane CLI | [Kane CLI Error Codes](/support/docs/kane-cli-error-codes/) |
+| Kane CLI | [Kane CLI Error Codes](https://www.testmuai.com/docs/kane-cli-error-codes) |
 | KaneAI | [KaneAI Errors](/support/docs/error-handling-kaneai/) |
 | Tunnel | [Tunnel Error Messages](/support/docs/troubleshooting-lambda-tunnel/#error-messages) |
 | SmartUI CLI | [SmartUI Error Message Reference](/support/docs/smartui-troubleshooting-guide/#error-message-reference) |
