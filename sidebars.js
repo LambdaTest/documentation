@@ -1406,7 +1406,7 @@ module.exports = {
         collapsed: true,
         label: "Test Manager",
         items: [
-          "kane-ai-test-plan",
+          "kaneai-quick-run",
           "kaneai-hyperexecute-test-run-execution",
           "kaneai-test-run-output",
           "kaneai-sequential-test-runs",
