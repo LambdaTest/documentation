@@ -107,13 +107,11 @@ ChromeOS is a lightweight, Linux-kernel-based operating system designed for Chro
 
 <div className="support_main">
   <a href="/support/docs/chrome-os-web-browser-testing/">
-  <a href="/support/docs/chrome-os-web-browser-testing/">
     <div className="support_inners">
       <h2>ChromeOS Web Browser Testing</h2>
       <p>Guidebook about the features offered for testing your webapps in ChromeOS</p>
     </div>
   </a>
-   <a href="/support/docs/chrome-os-app-testing/">
    <a href="/support/docs/chrome-os-app-testing/">
     <div className="support_inners"> 
       <h2>ChromeOS App Testing</h2>
