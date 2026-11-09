@@ -189,45 +189,45 @@ The table below shows the frameworks and languages KaneAI can generate code in, 
 
 ## Understanding the Code Tab
 
-After code generation completes, the **Code** tab shows the status of each generated code entry and lets you run a Sample Run Execution to validate it before adding the test case to a full Test Run.
+The **Code** tab shows your generated exports, their generation outcomes, and actions to view, download, or create a pull request for the code.
 
-<img loading="lazy" src={require('../assets/images/kane-ai/code-gen-view.png').default} alt="KaneAI Code tab showing generated code with status and actions" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/kane-ai/test-manager/quick-run/code-tab.png').default} alt="KaneAI Code tab with a generation-success icon beside the export name, Create PR, Download, and Generate new code" className="doc_img"/>
 
-### What determines whether code is generated
+### Check Whether Code is Available
 
-Code generation depends on the state your test case was saved in. A test saved as **Ready** — every step has run and passed — generates code. A test saved as **Faulty** (a step errored) or **Unverified** (steps were added or edited but never run) does not, because code generation needs a step to have run at least once in order to learn the exact elements and actions involved.
+Check the export on the **Code** tab to see whether code was generated successfully. The test case's **Test Summary** status is separate: a test case labeled **Unverified** can still have an available code export.
 
-To move such a test to Ready, reopen it, run the remaining or errored steps to success, and save again. See [Save states](/support/docs/kaneai-authoring-session/#save-states).
+Use **Generate new code** to create an export in a supported framework and language.
 
-### Code Generation States
+### Code Generation Outcomes
 
-The states below describe generated code on the **Code** tab. They are separate from the save state of the test case — code generation only starts once a test is saved as Ready.
+The icon beside an export name indicates whether code generation succeeded or failed. It does not indicate whether the test passed an execution.
 
-| State | What it means |
+| Outcome | What it means |
 |---|---|
 | **Generating** | Code is being created. No actions are available until generation finishes. |
-| **Unverified** | Code generation is complete, but a Sample Run Execution has not been run, or the test case has changed since the last run. |
-| **Verifying** | A Sample Run Execution is in progress via HyperExecute. |
-| **Verified** | The most recent Sample Run Execution completed successfully. |
+| **Generation succeeded** | The export is available. Click its name to open the code. |
+| **Generation failed** | The export shows the failure reason inline. Click **Generate again** to retry. |
+
+These describe generation outcomes, not additional labels on the code card. They do not change the test case's **Test Summary** status.
 
 ### Actions Available After Code is Generated
 
 Once code is generated, the following actions are available:
 
-- **Execute & Verify**: Triggers a Sample Run Execution on HyperExecute. This runs the generated code the same way a real KaneAI test run would, including respecting assertion outcomes. While the run is in progress, the status changes to **Verifying** and a **Sample execution in progress · View in HyperExecute** link appears. Once complete, the status updates to **Verified** and the button label changes to **Execute**.
+- **Export name**: Opens the generated code. Click the name instead of a separate **View code** button.
 - **Download**: Downloads the generated code to your local machine.
+- **Create PR**: Creates a pull request through your configured integration, subject to existing permissions.
+- **Generate new code**: Creates another export using your chosen framework and language.
 
-### Sample Run Execution Behavior
+### Execute the Test Case
 
-- Sample Run Execution can only be initiated from the **Code** tab of a test case.
-- The **Execute** button is always enabled. You can proceed to run the test on HyperExecute regardless of whether a Sample Run Execution has passed, failed, or not been triggered.
+To execute a single case, open **Test Summary** and click **Quick Run**. Select compatible configurations, review the run settings, and click **Start quick run**. This creates one Test Run with one instance per selected configuration. See [Quick Run](/support/docs/kaneai-quick-run/) for the full walkthrough.
 
-### Adding Test Cases to a Test Run
+- **Classic** executes generated code. Execution requires usable code; resolve missing, in-progress, or failed generation first.
+- **New Experience** executes through **Evidence Reporting**, without using generated code. A missing or failed export does not by itself block Evidence execution when the test case and selected configurations are otherwise eligible.
 
-Test cases with generated code can be added to a Test Run regardless of the Sample Run Execution status, whether it passed, failed, or was never triggered. The only cases where a test case is not available for selection in a Test Run are:
-
-- Code generation failed or was not initiated.
-- Code generation is still in progress.
+For a run containing multiple test cases, follow [Test Run Execution](/support/docs/kaneai-hyperexecute-test-run-execution/).
 
 :::note
 KaneAI code export leverages public libraries. The generated automation scripts depend on these published packages:
