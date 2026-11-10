@@ -28,6 +28,8 @@ Alternatively, you can use the **Autofill with AI** option to automatically popu
 ### Importing Data via CSV Files
 Prepare your data set in CSV format. Use the Import Data feature in the data set editor, verify the imported data, and save the changes to ensure synchronization.
 
+Importing data into a Dataset doesn't create parameters. If the columns in your file don't exist as parameters yet, first [import them as parameters from the CSV](/support/docs/kane-ai-using-parameters/#import-parameters-from-a-csv).
+
 ## Utilizing Version History
 - **Version Tracking :** All changes to data sets are recorded.
 - **Revert or Restore :** Easily revert to a previous version if needed.

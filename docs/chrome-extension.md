@@ -20,29 +20,6 @@ canonical: https://www.testmuai.com/support/docs/chrome-extension/
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "TestMu AI",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Chrome Extension",
-          "item": `${BRAND_URL}/support/docs/chrome-extension/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -265,16 +242,3 @@ You can now perform the geolocation testing on the selected country.
 >
 That's all! Increase your productivity with <BrandName /> Chrome Extension. In case you have any queries, feel free to drop them at our **<span className="doc__lt" onClick={() => window.openLTChatWidget()}>Customer Chat Support</span>** or you can also mail us at **[support@testmuai.com](mailto:support@testmuai.com)**.
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href={BRAND_URL}>Home</a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_ self" href={`${BRAND_URL}/support/docs/`}>Support</a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">Chrome Extension</span>
-    </li>
-  </ul>
-</nav>

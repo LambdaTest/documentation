@@ -17,29 +17,6 @@ slug: kaneai-rename-instructions/
 canonical: https://www.testmuai.com/support/docs/kaneai-rename-instructions/
 ---
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "TestMu AI",
-          "item": "https://www.testmuai.com"
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": "https://www.testmuai.com/support/docs/"
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "GPS location",
-          "item": "https://www.testmuai.com/support/docs/kaneai-rename-instructions/"
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

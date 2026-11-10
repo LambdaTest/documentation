@@ -17,29 +17,6 @@ canonical: https://www.testmuai.com/support/docs/link-ado-issues-with-test-manag
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "TestMu AI",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Link Azure DevOps Issues with Test Manager",
-          "item": `${BRAND_URL}/support/docs/link-ado-issues-with-test-manager/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -172,22 +149,3 @@ A defect counts as open based on its state in Azure DevOps.
 
 
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href={BRAND_URL}>
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-       Link Azure DevOps Issues with Test Manager
-      </span>
-    </li>
-  </ul>
-</nav>

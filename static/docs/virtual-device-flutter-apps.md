@@ -2,7 +2,7 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-Testing Flutter apps on TestMu AI runs Appium's Flutter driver across 50,000+ real Android and iOS devices, letting you automate cross-platform apps from a single codebase. Compile your app in debug or profile mode, upload it, and execute automated tests.
+Testing Flutter apps on TestMu AI runs Appium's Flutter driver across 50,000+ real Android and iOS devices, letting you run End-to-End (E2E) testing of cross-platform apps from a single codebase. Compile your app in debug or profile mode, upload it, and execute automated tests.
 
 ## Prerequisites
 
@@ -12,22 +12,22 @@ Before automating Flutter apps using Appium, make sure you have the following th
 
 ```yaml
 dev_dependencies:
-test: Demo
-flutter_test:
-sdk: flutter
-flutter_driver:
-sdk: flutter
+  test: Demo
+  flutter_test:
+    sdk: flutter
+  flutter_driver:
+    sdk: flutter
 ```
 
 - In `main.dart` file, ensure the app has `enableFlutterDriverExtension()` enabled before `runApp`.
 
 ```javascript
 void main() {
-enableFlutterDriverExtension();
-init();
-runApp(MyApp());
+  enableFlutterDriverExtension();
+  init();
+  runApp(MyApp());
 }
-```
+ ```
 
 - Set the `automationName` capability to `flutter` in Appium desired capabilities.
 
@@ -44,12 +44,12 @@ from appium.webdriver import Remote
 from appium_flutter_finder.flutter_finder import FlutterElement, FlutterFinder
 
 driver = Remote('http://LT_USERNAME:LT_ACCESS_KEY@mobile-hub.lambdatest.com/wd/hub/', dict(
-platformName='Android',
-automationName='flutter',
-platformVersion='11',
-deviceName='Google Pixel 4',
-app='<App URL>',
-isRealMobile=false
+  platformName='Android',
+  automationName='flutter',
+  platformVersion='11',
+  deviceName='Google Pixel 4',
+  app='<App URL>',
+  isRealMobile=false
 ))
 
 finder = FlutterFinder()

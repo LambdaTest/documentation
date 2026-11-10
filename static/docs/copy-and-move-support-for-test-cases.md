@@ -6,6 +6,8 @@ The Copy and Move feature for test cases helps streamline the organization of te
 
 Looking to move, copy, or delete test runs instead? See [Bulk Move, Copy, and Delete Test Runs](/support/docs/test-run-bulk-actions/).
 
+A copied test case keeps its linked requirements and starts without defects.
+
 Need the same test case in several projects without creating copies? [Share it across projects](/support/docs/share-test-cases-across-projects/) instead. A shared test case keeps its ID, is maintained in one project, and every change reaches the projects it is shared with. Moving a shared test case to another project moves its shares with it. See [how moving affects shared test cases](/support/docs/share-test-cases-across-projects/#move).
 
 **How to Copy Multiple Test Cases to other Projects & Folders**

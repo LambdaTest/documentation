@@ -27,29 +27,6 @@ import VirtualDeviceTag from '@site/src/component/virtualDevice';
 import VerifiedTag from '@site/src/component/verifiedTag';
 
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "How to Run XCUITest on TestMu AI",
-          "item": `${BRAND_URL}/support/docs/getting-started-with-xcuitest/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -561,22 +538,3 @@ curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/x
 </TabItem>
 </Tabs>
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-        How to Run XCUITest on TestMu AI
-      </span>
-    </li>
-  </ul>
-</nav>

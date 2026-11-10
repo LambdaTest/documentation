@@ -17,29 +17,6 @@ canonical: https://www.testmuai.com/support/docs/link-linear-issues-with-test-ma
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "TestMu AI",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Link Linear Issues with Test Manager",
-          "item": `${BRAND_URL}/support/docs/link-linear-issues-with-test-manager/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -183,22 +160,3 @@ Unlinking removes the association in Test Manager only. The issue itself stays i
 | The issue has been deleted in Linear | The issue is reported as unavailable and can be unlinked |
 | Linear is disconnected from your account | Linked Linear issues are no longer shown. They become visible again if you reconnect the same Linear workspace and projects |
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href={BRAND_URL}>
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-       Link Linear Issues with Test Manager
-      </span>
-    </li>
-  </ul>
-</nav>

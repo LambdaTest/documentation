@@ -23,29 +23,6 @@ canonical: https://www.testmuai.com/support/docs/puppeteer-testing-with-codecept
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import VerifiedTag from '@site/src/component/verifiedTag';
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "TestMu AI",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Puppeteer Testing With CodeceptJS",
-          "item": `${BRAND_URL}/support/docs/puppeteer-testing-with-codecept/`
-        }]
-      })
-    }}
-></script>
 
 # Puppeteer Testing With CodeceptJS
 * * *

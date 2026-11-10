@@ -31,29 +31,6 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "TestMu AI",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "SmartUI Testing",
-          "item": `${BRAND_URL}/support/docs/smart-ui-testing/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -149,16 +126,3 @@ To execute SmartUI Testing using HyperExecute, you can opt for the following met
 
 
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href={BRAND_URL}>Home</a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="/support/docs/">Support</a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">Smart Visual Testing</span>
-    </li>
-  </ul>
-</nav>
