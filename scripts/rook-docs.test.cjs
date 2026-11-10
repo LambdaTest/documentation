@@ -72,6 +72,8 @@ test('all integration pages have valid frontmatter, navigation, images, and loca
     }
     for (const [, resource] of doc.matchAll(/\]\((?:pathname:\/\/)?\/support\/resources\/rook\/([^)]*)\)/g)) {
       assert.ok(fs.existsSync(path.join(examples, resource)), `${slug}: ${resource}`);
+      // The CDN redirects extensionless paths to a trailing-slash URL that 404s.
+      assert.match(resource, /\.\w+$/, `${slug}: ${resource} needs a file extension to download`);
     }
     for (const [, image] of doc.matchAll(/src=\{require\('([^']+)'\)/g)) {
       assert.ok(fs.existsSync(path.resolve(root, 'docs', image)), `${slug}: ${image}`);
@@ -352,8 +354,8 @@ test('Reference pages retain sidebar entries, valid links, and dimensioned scree
 test('downloadable platform examples match the displayed code exactly', () => {
   for (const [slug, file, language] of [
     ['rook-github-actions', 'github-actions.yml', 'yaml'],
-    ['rook-jenkins', 'Jenkinsfile', 'groovy'],
-    ['rook-argocd', 'Dockerfile', 'dockerfile'],
+    ['rook-jenkins', 'Jenkinsfile.groovy', 'groovy'],
+    ['rook-argocd', 'rook.Dockerfile', 'dockerfile'],
     ['rook-argocd', 'argocd-job.yaml', 'yaml'],
   ]) {
     const doc = fs.readFileSync(path.join(root, 'docs', `${slug}.md`), 'utf8');
