@@ -12,7 +12,7 @@ Real test suites repeat themselves. Many tests start with the same login flow. M
 
 `@import` lets you extract a repeating flow into a helper file and reuse it from many tests. Helpers are first-class `_test.md`-style files that live alongside your tests. Editing one helper updates every test that imports it.
 
-This page covers helper files, the `@import` syntax, the rules the resolver enforces, and how recordings work across imports. To learn the file format, see [Writing test.md files](/docs/kane-cli-testmd/). To learn how runs and replays work, see [Running test.md files](/docs/kane-cli-testmd-running/).
+This page covers helper files, the `@import` syntax, the rules the resolver enforces, and how recordings work across imports. To learn the file format, see [Writing test.md files](https://www.testmuai.com/docs/kane-cli-testmd). To learn how runs and replays work, see [Running test.md files](https://www.testmuai.com/docs/kane-cli-testmd-running).
 
 ## Why split a test
 
@@ -249,7 +249,7 @@ Like the test's own `output-<stem>/`, `helper-output-...` directories are safe (
 When you edit a step in a helper:
 
 - The cache for **that step inside every call site** invalidates.
-- Subsequent steps in the same helper invocation also re-author (the same "rest of the file" rule from [Running test.md files](/docs/kane-cli-testmd-running/#edits-cascade-to-the-rest-of-the-file) applies inside helpers).
+- Subsequent steps in the same helper invocation also re-author (the same "rest of the file" rule from [Running test.md files](https://www.testmuai.com/docs/kane-cli-testmd-running#edits-cascade-to-the-rest-of-the-file) applies inside helpers).
 - The root tests' steps that come **after** the `@import` also re-author, because the helper changed what the browser looks like when control returns to the root test.
 
 As a result, a one-line edit to a widely imported helper causes a lot of re-authoring on the next run. This is intentional: otherwise, later steps would replay against page state the edited helper does not produce.
@@ -365,7 +365,7 @@ Editing the login flow in `helpers/login.md` re-authors the login steps and ever
 
 ## Next steps
 
-- [Writing test.md files](/docs/kane-cli-testmd/): frontmatter, step syntax, variables.
-- [Running a test.md](/docs/kane-cli-testmd-running/): the run command, flags, replay model, output.
+- [Writing test.md files](https://www.testmuai.com/docs/kane-cli-testmd): frontmatter, step syntax, variables.
+- [Running a test.md](https://www.testmuai.com/docs/kane-cli-testmd-running): the run command, flags, replay model, output.
 
 <KaneCliCta />

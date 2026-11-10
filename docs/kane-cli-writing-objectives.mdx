@@ -19,7 +19,7 @@ The objective string is the most important input to Kane CLI. How you phrase it 
 | 📦 **Extraction** | store X as 'name' | Reads a value from the page, persists in output |
 
 <Note>
-**Assertions** and **extractions** are evaluated as [Checkpoints](/docs/kane-cli-checkpoints/). See the reference for all analyze methods (Visual, Textual, URL, Title, DevTools) and comparison operators.
+**Assertions** and **extractions** are evaluated as [Checkpoints](https://www.testmuai.com/docs/kane-cli-checkpoints). See the reference for all analyze methods (Visual, Textual, URL, Title, DevTools) and comparison operators.
 </Note>
 
 ### Actions
@@ -100,7 +100,7 @@ Make the closing check something the agent can see on the screen the last action
 
 ### Say the Goal, Not the Clicks
 
-Phrase actions as goals (`Log in as {{tester}}`, `Complete checkout with the saved card`) so a run absorbs a reordered form or an unexpected popup instead of breaking on it. Keep exact values such as credentials, prices, and URLs literal or in `{{variables}}`. When a test needs fresh data on every run, such as a fresh sign-up email, a unique name, or the current date, use a [smart variable](/docs/kane-cli-variables-and-context/#smart-variables) such as `{{smart.random_email}}` or `{{smart.current_date}}`. A fixed value would collide with itself on the second run. For a step that only sometimes appears, such as a cookie banner, write it as a condition (`if a cookie banner appears, dismiss it`) rather than assuming it away.
+Phrase actions as goals (`Log in as {{tester}}`, `Complete checkout with the saved card`) so a run absorbs a reordered form or an unexpected popup instead of breaking on it. Keep exact values such as credentials, prices, and URLs literal or in `{{variables}}`. When a test needs fresh data on every run, such as a fresh sign-up email, a unique name, or the current date, use a [smart variable](https://www.testmuai.com/docs/kane-cli-variables-and-context#smart-variables) such as `{{smart.random_email}}` or `{{smart.current_date}}`. A fixed value would collide with itself on the second run. For a step that only sometimes appears, such as a cookie banner, write it as a condition (`if a cookie banner appears, dismiss it`) rather than assuming it away.
 
 ### Examples
 
@@ -131,9 +131,9 @@ Open https://app.example.com, set a cookie named session with value
 "Copy invite link" button and verify the clipboard contains "/invite/".
 ```
 
-Objectives can also set, delete, and clear cookies, localStorage, and the test clipboard directly. See [Browser State Actions](/docs/kane-cli-browser-state/).
+Objectives can also set, delete, and clear cookies, localStorage, and the test clipboard directly. See [Browser State Actions](https://www.testmuai.com/docs/kane-cli-browser-state).
 
-Objectives can also make API calls directly: POST/GET a URL or paste a `curl`, save the response, and assert on it. See [API Calls](/docs/kane-cli-api-calls/).
+Objectives can also make API calls directly: POST/GET a URL or paste a `curl`, save the response, and assert on it. See [API Calls](https://www.testmuai.com/docs/kane-cli-api-calls).
 
 ### Bad to Better
 
@@ -239,7 +239,7 @@ Objectives are written the same way for a native mobile app as for the browser. 
 kane-cli run "Sign in and open the account tab" --target simulator --app ./builds/MyApp.zip
 ```
 
-A mobile run cannot point at a website. WebViews inside the app under test are supported. See [Mobile Testing](/docs/kane-cli-mobile/).
+A mobile run cannot point at a website. WebViews inside the app under test are supported. See [Mobile Testing](https://www.testmuai.com/docs/kane-cli-mobile).
 
 ## Splitting Long Objectives
 

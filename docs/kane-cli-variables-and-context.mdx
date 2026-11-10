@@ -244,7 +244,7 @@ The check skips these references:
 
 `${x}` is a dataset column reference, not a variables-file reference. If `${x}` is not a column of the dataset row the run received, it gets its own warning.
 
-In agent mode, the same content arrives as one `warning` event with `code: "unresolved_variables"`. See [Modes of Operation](/docs/kane-cli-modes/#unresolved-variables).
+In agent mode, the same content arrives as one `warning` event with `code: "unresolved_variables"`. See [Modes of Operation](https://www.testmuai.com/docs/kane-cli-modes#unresolved-variables).
 
 <Warning>
 Do not commit credential files to version control. Add `.testmuai/variables/` to your `.gitignore`, or use environment variable substitution in CI/CD.

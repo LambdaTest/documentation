@@ -37,7 +37,7 @@ kane-cli run "<objective>" [options]
 | `--max-steps <n>` | Maximum agent reasoning steps | `50` |
 | `--timeout <s>` | Abort after N seconds | No limit |
 | `--cdp-endpoint <url>` | Connect to an existing Chrome via CDP | Auto-launch Chrome |
-| `--ws-endpoint <url>` | Connect to a Playwright WebSocket endpoint (e.g. <BrandName /> `wss://`). The run still executes on this machine and drives that browser; to run a whole suite on the grid, use [`testrun run --remote`](/docs/kane-cli-remote-execution/) | Local Chrome |
+| `--ws-endpoint <url>` | Connect to a Playwright WebSocket endpoint (e.g. <BrandName /> `wss://`). The run still executes on this machine and drives that browser; to run a whole suite on the grid, use [`testrun run --remote`](https://www.testmuai.com/docs/kane-cli-remote-execution) | Local Chrome |
 | `--variables <json>` | Inline variable JSON | None |
 | `--variables-file <path>` | Load variables from a JSON file | None |
 | `--global-context <file>` | Override global context markdown | `~/.testmuai/kaneai/global-memory.md` |
@@ -59,9 +59,9 @@ kane-cli run "<objective>" [options]
 | `--username <user>` | Basic auth username (overrides stored profile) | N/A |
 | `--access-key <key>` | Basic auth access key (overrides stored profile) | N/A |
 
-If a `{{name}}` in the objective has no value, kane-cli prints a warning and the run continues. The name is typed literally as written, unless a step sets its value first. The warning does not change the exit code. See [Unresolved variables](/docs/kane-cli-modes/#unresolved-variables).
+If a `{{name}}` in the objective has no value, kane-cli prints a warning and the run continues. The name is typed literally as written, unless a step sets its value first. The warning does not change the exit code. See [Unresolved variables](https://www.testmuai.com/docs/kane-cli-modes#unresolved-variables).
 
-**Mobile run flags**. The `emulator` and `simulator` targets need macOS Apple Silicon. The `android` and `ios` targets run on a [real device](/docs/kane-cli-mobile-real-device/) in the <BrandName /> cloud, from any machine. A real device comes from the **device hub**, the cloud service that hands out real devices to test sessions.
+**Mobile run flags**. The `emulator` and `simulator` targets need macOS Apple Silicon. The `android` and `ios` targets run on a [real device](https://www.testmuai.com/docs/kane-cli-mobile-real-device) in the <BrandName /> cloud, from any machine. A real device comes from the **device hub**, the cloud service that hands out real devices to test sessions.
 
 | Flag | Description | Default |
 |------|-------------|---------|
@@ -71,7 +71,7 @@ If a `{{name}}` in the objective has no value, kane-cli prints a warning and the
 | `--app <path\|APPid>` | The app under test. A build (emulator `.apk`, simulator `.zip`, android `.apk` or `.aab`, ios `.ipa`) or an uploaded app id | Config value. Required for every mobile run |
 | `--no-stream` | On a real device, don't open the live view (a view-only picture of the device screen) for this run | At a terminal, the live view opens in its own window. It never opens for agents |
 
-On the `desktop` target, the device flags and `--app` are ignored. See [Mobile Testing](/docs/kane-cli-mobile/) for setup.
+On the `desktop` target, the device flags and `--app` are ignored. See [Mobile Testing](https://www.testmuai.com/docs/kane-cli-mobile) for setup.
 
 ---
 
@@ -84,7 +84,7 @@ kane-cli doctor --target emulator              # required checks, each with a fi
 kane-cli doctor --target simulator --install   # install the test tooling Kane CLI manages
 ```
 
-`doctor` prints one line per required check, each with a fix. Run `kane-cli login` before `--install`. See [Mobile Testing](/docs/kane-cli-mobile/).
+`doctor` prints one line per required check, each with a fix. Run `kane-cli login` before `--install`. See [Mobile Testing](https://www.testmuai.com/docs/kane-cli-mobile).
 
 ---
 
@@ -99,7 +99,7 @@ kane-cli devices list --target simulator --remote --os-version 17.5   # only tha
 kane-cli devices list --target android --remote     # the real Android devices in the TestMu AI cloud
 ```
 
-See [Remote Runs](/docs/kane-cli-remote-execution/) for the grid catalog.
+See [Remote Runs](https://www.testmuai.com/docs/kane-cli-remote-execution) for the grid catalog.
 
 ---
 
@@ -136,7 +136,7 @@ Adaptive healing is on by default. After a replay failure, the runner tries up t
 
 Before any step runs, kane-cli checks every `{{name}}` used by the authored steps. A name with no value prints a warning and the run continues. Replayed steps are not checked. Under `--agent`, wait for both the `test_md_done` event and the process exit.
 
-`kane-cli testmd export <path>` regenerates the code export from existing recordings and takes `--language` (`python` or `javascript`), not `--code-language`. See [Running test.md files](/docs/kane-cli-testmd-running/) for the full flag reference and the other `testmd` subcommands (`list`, `status`, `delete`, `export`, `sync`).
+`kane-cli testmd export <path>` regenerates the code export from existing recordings and takes `--language` (`python` or `javascript`), not `--code-language`. See [Running test.md files](https://www.testmuai.com/docs/kane-cli-testmd-running) for the full flag reference and the other `testmd` subcommands (`list`, `status`, `delete`, `export`, `sync`).
 
 ---
 
@@ -162,16 +162,16 @@ Each path you pass must be a `_test.md` file. To select a directory of tests, us
 | `--dry-run` | Build and validate the plan only; run nothing | Off |
 | `--agent` | Print NDJSON on stdout even in a terminal. This is the same stream you get when stdin is not a TTY | Off |
 | `--no-adaptive-heal` | Turn off adaptive healing after a replay failure | Healing enabled |
-| `--bug-detection <mode>` | `off`, `stop`, or `continue`. See [Configuration](/docs/kane-cli-configuration/#bug-detection) | Config value |
+| `--bug-detection <mode>` | `off`, `stop`, or `continue`. See [Configuration](https://www.testmuai.com/docs/kane-cli-configuration#bug-detection) | Config value |
 | `--headless` | Run Chrome without a visible window | Off |
-| `--remote [backend]` | Dispatch the suite to the cloud grid instead of local Chrome or local devices (default backend: `hyper`). Needs `kane-cli plugin install remote-execution`. See [Remote Runs](/docs/kane-cli-remote-execution/) | Off |
+| `--remote [backend]` | Dispatch the suite to the cloud grid instead of local Chrome or local devices (default backend: `hyper`). Needs `kane-cli plugin install remote-execution`. See [Remote Runs](https://www.testmuai.com/docs/kane-cli-remote-execution) | Off |
 | `--device-name <name>` | Device for the suite's mobile members: as `kane-cli devices list` prints it locally, or a grid catalog device with `--remote` | Member's `device_name:` |
 | `--os-version <version>` | OS version for the mobile members (`14`, `17.5`). On its own, it matches any device on that version | Member's `os_version:` |
 | `--username <user>` / `--access-key <key>` | Basic auth instead of OAuth | None |
 
 Adaptive healing is on by default; `--no-adaptive-heal` turns it off. The `--retry` and `--retry-count` flags are accepted but have no effect: they only print a notice. A local suite that contains an emulator or simulator member must use `--parallel 1`. Real-device members can run in parallel, up to the real devices your plan allows.
 
-`testrun run` has no `--variables` flag. To supply values, fill the shared variables file or the member's own `variables:` frontmatter. A member that uses a `{{name}}` with no value still passes preflight, with a warning. See [Batch runs (testrun)](/docs/kane-cli-testrun/).
+`testrun run` has no `--variables` flag. To supply values, fill the shared variables file or the member's own `variables:` frontmatter. A member that uses a `{{name}}` with no value still passes preflight, with a warning. See [Batch runs (testrun)](https://www.testmuai.com/docs/kane-cli-testrun).
 
 ---
 
@@ -193,7 +193,7 @@ kane-cli maintain evolve <ref> --mode agent --answer evolve:<use-case>=1   # 1 =
 | `--mode <mode>` | `interactive` or `agent`; any other value is refused with `MODE_USAGE`. In `agent` mode, kane-cli prints NDJSON on stdout, the blast-radius confirmation becomes a question, and the run pauses with exit `3` |
 | `--answer <pairs...>` | With `--mode agent`: answer a paused run's question by its id, `evolve:<use-case>=1` (proceed) or `=2` (decline). Repeatable. An answer to a question the run does not ask is refused with `ANSWER_USAGE` |
 
-See [Maintaining the suite](/docs/kane-cli-assurance-maintain/) and [Assurance automation](/docs/kane-cli-assurance-automation/) for the event stream.
+See [Maintaining the suite](https://www.testmuai.com/docs/kane-cli-assurance-maintain) and [Assurance automation](https://www.testmuai.com/docs/kane-cli-assurance-automation) for the event stream.
 
 ---
 
@@ -222,7 +222,7 @@ kane-cli login [--profile <name>]
 kane-cli login --username <user> --access-key <key> [--profile <name>]
 ```
 
-See [Authentication](/docs/kane-cli-authentication/) for details on profiles and auth methods.
+See [Authentication](https://www.testmuai.com/docs/kane-cli-authentication) for details on profiles and auth methods.
 
 ---
 
@@ -268,7 +268,7 @@ kane-cli profiles switch <name>  # Switch the active profile
 kane-cli profiles delete <name>  # Delete a profile
 ```
 
-See [Authentication: Profiles](/docs/kane-cli-authentication/#profiles) for details.
+See [Authentication: Profiles](https://www.testmuai.com/docs/kane-cli-authentication#profiles) for details.
 
 ---
 
@@ -303,7 +303,7 @@ kane-cli config set-network-sse <on|off>               # Experimental SSE captur
 Commands without arguments (`chrome-profile`, `project`, `folder`) launch an interactive picker UI. AI agents cannot run these: ask the user to run them directly.
 </Note>
 
-See [Configuration](/docs/kane-cli-configuration/) for the full settings reference.
+See [Configuration](https://www.testmuai.com/docs/kane-cli-configuration) for the full settings reference.
 
 ---
 
@@ -357,7 +357,7 @@ With `--dry-run`, exit `0` means the plan is valid and exit `2` means the plan w
 
 The final `done` event carries the status: `complete` (exit `0`), `refused` (exit `2`: a usage error, `MODE_USAGE`, `ANSWER_USAGE`, or an explicit target that was never designed), `paused` (exit `3`: evolve is waiting on its question or on the design session), or `error` with the design run's own code.
 
-For `generate` and the assurance commands, see [Generate workflow](/docs/kane-cli-generate-workflow/) and [Assurance automation](/docs/kane-cli-assurance-automation/). Always check the process exit code: an early refusal, an invalid plan, or a dry run can exit without the normal completion event.
+For `generate` and the assurance commands, see [Generate workflow](https://www.testmuai.com/docs/kane-cli-generate-workflow) and [Assurance automation](https://www.testmuai.com/docs/kane-cli-assurance-automation). Always check the process exit code: an early refusal, an invalid plan, or a dry run can exit without the normal completion event.
 
 ---
 
@@ -417,7 +417,7 @@ For `generate` and the assurance commands, see [Generate workflow](/docs/kane-cl
 | `code_export.language` | `python` (or `javascript`) | `--code-language` flag |
 | `code_export.skip_validation` | `true` | TUI menu or `--skip-code-validation` flag |
 
-Settings are stored at `~/.testmuai/kaneai/tui-config.json`. See [Configuration](/docs/kane-cli-configuration/) for details.
+Settings are stored at `~/.testmuai/kaneai/tui-config.json`. See [Configuration](https://www.testmuai.com/docs/kane-cli-configuration) for details.
 
 ---
 

@@ -25,7 +25,7 @@ Whether you open a pack in the viewer or unzip it, you find:
 
 Mobile runs add two things. The result summary records the **device** and the **app** in the run environment, such as the device model, OS version, and the app id or build file name. The per-step logs also include **device logs**, next to the usual browser logs.
 
-On a [real device](/docs/kane-cli-mobile-real-device/), `device` is the device the device hub (the cloud service that hands out real devices) allocated, never the name or pattern you requested, and `device_slug` is derived from it. The environment also records `target: android|ios`.
+On a [real device](https://www.testmuai.com/docs/kane-cli-mobile-real-device), `device` is the device the device hub (the cloud service that hands out real devices) allocated, never the name or pattern you requested, and `device_slug` is derived from it. The environment also records `target: android|ios`.
 
 <Note>
 Run artifacts live **only** in the pack. Kane CLI does not keep a separate log directory for each run on disk.
@@ -52,7 +52,7 @@ Whether a pack is copied to the project store depends on how you ran the test:
 | `kane-cli run` / TUI session | Only when the session is **named** (`--name`, `/name` in the TUI, or the save prompt at exit) |
 | `kane-cli testmd run` | Always |
 | `kane-cli testrun run` | Always (the pack is created directly in the store) |
-| `kane-cli testrun run --remote` | Always. The suite's pack is sealed on the grid and downloaded into the store when the job ends, alongside the members' `output-<stem>/` recordings. See [Remote Runs](/docs/kane-cli-remote-execution/) |
+| `kane-cli testrun run --remote` | Always. The suite's pack is sealed on the grid and downloaded into the store when the job ends, alongside the members' `output-<stem>/` recordings. See [Remote Runs](https://www.testmuai.com/docs/kane-cli-remote-execution) |
 
 An interactive TUI session produces one pack. The pack collects every run in the session and is sealed when you `/exit` or start over with `/new`.
 
@@ -62,9 +62,9 @@ If Kane CLI crashes during a run, it removes incomplete or orphaned packs automa
 
 | Command | What it does |
 |---|---|
-| [`evidence serve`](/docs/kane-cli-evidence-viewing/) | Serve one or more sealed packs to the hosted viewer from a localhost-only server |
-| [`evidence validate`](/docs/kane-cli-evidence-validate/) | Check a pack's integrity and completeness against a profile |
-| [`evidence merge`](/docs/kane-cli-evidence-merge/) | Combine several packs into one |
+| [`evidence serve`](https://www.testmuai.com/docs/kane-cli-evidence-viewing) | Serve one or more sealed packs to the hosted viewer from a localhost-only server |
+| [`evidence validate`](https://www.testmuai.com/docs/kane-cli-evidence-validate) | Check a pack's integrity and completeness against a profile |
+| [`evidence merge`](https://www.testmuai.com/docs/kane-cli-evidence-merge) | Combine several packs into one |
 
 ## Publishing to the dashboard
 
@@ -72,12 +72,12 @@ When a run uploads to Test Manager, its sealed pack is attached automatically. R
 
 ## Next steps
 
-- [Pack structure](/docs/kane-cli-evidence-pack-structure/): every file inside a pack and what it is for.
-- [Viewing evidence](/docs/kane-cli-evidence-viewing/): open a pack in the viewer.
-- [Debugging a failed run](/docs/kane-cli-evidence-debugging/): the fastest path from a red run to a cause.
-- [The .evidence format](/docs/kane-cli-evidence-format/): the open format behind the pack.
-- [Batch runs with testrun](/docs/kane-cli-testrun/): many tests, one execution, one pack.
-- [Running test.md files](/docs/kane-cli-testmd-running/): the testmd command family.
-- [Troubleshooting](/docs/kane-cli-troubleshooting/): debugging flows and escape hatches.
+- [Pack structure](https://www.testmuai.com/docs/kane-cli-evidence-pack-structure): every file inside a pack and what it is for.
+- [Viewing evidence](https://www.testmuai.com/docs/kane-cli-evidence-viewing): open a pack in the viewer.
+- [Debugging a failed run](https://www.testmuai.com/docs/kane-cli-evidence-debugging): the fastest path from a red run to a cause.
+- [The .evidence format](https://www.testmuai.com/docs/kane-cli-evidence-format): the open format behind the pack.
+- [Batch runs with testrun](https://www.testmuai.com/docs/kane-cli-testrun): many tests, one execution, one pack.
+- [Running test.md files](https://www.testmuai.com/docs/kane-cli-testmd-running): the testmd command family.
+- [Troubleshooting](https://www.testmuai.com/docs/kane-cli-troubleshooting): debugging flows and escape hatches.
 
 <KaneCliCta />

@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Generates docs/sitemap.xml - a sitemap that lists ONLY the Kane CLI docs.
+ * Generates sitemap.xml (repo root) - a sitemap that lists ONLY the Kane CLI docs.
  *
  * Why this exists: https://www.testmuai.com/sitemap.xml is the main-site
  * sitemap index and the Docusaurus support sitemap lives at
@@ -8,12 +8,17 @@
  * Mintlify at https://www.testmuai.com/docs/sitemap.xml and is referenced
  * from the main index and robots.txt.
  *
+ * It MUST live at the repo root (next to docs.json, like robots.txt), not in
+ * docs/. A root sitemap.xml overrides Mintlify's auto-generated sitemap, which
+ * lists pages as /docs/docs/<slug> (non-canonical). A file in docs/ is only
+ * served at /docs/docs/sitemap.xml and never replaces the default.
+ *
  * The page list comes from the "Kane CLI" group in docs.json, so the sitemap
  * always matches the sidebar. <lastmod> is the last git commit date of each
  * page's source file.
  *
  * Re-run after adding, removing, or editing Kane CLI pages, and commit the
- * regenerated docs/sitemap.xml:
+ * regenerated sitemap.xml:
  *
  *   node scripts/generate-sitemap.js
  */
@@ -24,7 +29,7 @@ const { execFileSync } = require('child_process');
 
 const ROOT = path.join(__dirname, '..');
 const DOCS_JSON = path.join(ROOT, 'docs.json');
-const OUT_FILE = path.join(ROOT, 'docs', 'sitemap.xml');
+const OUT_FILE = path.join(ROOT, 'sitemap.xml');
 
 const SITE_ORIGIN = 'https://www.testmuai.com';
 // Top-level navigation group that holds the Kane CLI docs.
@@ -148,7 +153,7 @@ function main() {
   fs.mkdirSync(path.dirname(OUT_FILE), { recursive: true });
   fs.writeFileSync(OUT_FILE, xml, 'utf8');
 
-  console.log(`Generated docs/sitemap.xml with ${urls.length} Kane CLI URLs.`);
+  console.log(`Generated sitemap.xml with ${urls.length} Kane CLI URLs.`);
   if (skipped.length) {
     console.warn(`Skipped ${skipped.length}:\n   ${skipped.join('\n   ')}`);
   }

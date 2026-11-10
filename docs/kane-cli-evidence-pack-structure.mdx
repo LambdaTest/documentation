@@ -50,7 +50,7 @@ A validation profile sets which files a pack must contain. **L0** is the minimal
 
 | File | Role |
 |---|---|
-| `run.yaml` | The run manifest, which anchors the pack. A directory or zip **is a pack** only if it has a `run.yaml` at the top level. It holds the run's identity, its lifecycle status, and the totals derived from the results. Being a pack does not mean the pack passes validation. See [Validating packs](/docs/kane-cli-evidence-validate/). |
+| `run.yaml` | The run manifest, which anchors the pack. A directory or zip **is a pack** only if it has a `run.yaml` at the top level. It holds the run's identity, its lifecycle status, and the totals derived from the results. Being a pack does not mean the pack passes validation. See [Validating packs](https://www.testmuai.com/docs/kane-cli-evidence-validate). |
 | `tests/<id>/test.md` | The test definition: what the agent was asked to do. The format treats it as **opaque**. It references and hashes the file but never parses it. |
 | `tests/<id>/result.yaml` | The structured outcome of each step in that test. |
 
@@ -87,8 +87,8 @@ The difference between `failed` and `broken` is central to the model. It separat
 
 ## Next steps
 
-- [Viewing evidence](/docs/kane-cli-evidence-viewing/): open a pack in the viewer.
-- [Validating packs](/docs/kane-cli-evidence-validate/): check a pack's integrity.
-- [The .evidence format](/docs/kane-cli-evidence-format/): the profiles and the open contract.
+- [Viewing evidence](https://www.testmuai.com/docs/kane-cli-evidence-viewing): open a pack in the viewer.
+- [Validating packs](https://www.testmuai.com/docs/kane-cli-evidence-validate): check a pack's integrity.
+- [The .evidence format](https://www.testmuai.com/docs/kane-cli-evidence-format): the profiles and the open contract.
 
 <KaneCliCta />

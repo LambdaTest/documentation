@@ -9,7 +9,7 @@ keywords: ['kane cli quickstart', 'kaneai', 'testmu ai', 'browser test', 'first 
 import { BrandName } from "/snippets/BrandName.mdx";
 import { KaneCliCta } from "/snippets/KaneCliCta.mdx";
 
-This guide takes you from a fresh install to a passing run in under five minutes. It uses desktop web, the default target. For Android and iOS (emulator, simulator, or real device), see [Mobile testing](/docs/kane-cli-mobile/) and [Real devices](/docs/kane-cli-mobile-real-device/). To generate a whole suite from your requirements, see [the assurance lifecycle](/docs/kane-cli-assurance/).
+This guide takes you from a fresh install to a passing run in under five minutes. It uses desktop web, the default target. For Android and iOS (emulator, simulator, or real device), see [Mobile testing](https://www.testmuai.com/docs/kane-cli-mobile) and [Real devices](https://www.testmuai.com/docs/kane-cli-mobile-real-device). To generate a whole suite from your requirements, see [the assurance lifecycle](https://www.testmuai.com/docs/kane-cli-assurance).
 
 ## Step 1: Install
 
@@ -17,7 +17,7 @@ This guide takes you from a fresh install to a passing run in under five minutes
 npm install -g @testmuai/kane-cli
 ```
 
-Once `kane-cli --version` prints a version number, you are ready. See [Installation](/docs/kane-cli-installation/) for platform requirements and troubleshooting.
+Once `kane-cli --version` prints a version number, you are ready. See [Installation](https://www.testmuai.com/docs/kane-cli-installation) for platform requirements and troubleshooting.
 
 ## Step 2: Authenticate
 
@@ -57,7 +57,7 @@ kane-cli run "your objective" \
   --headless --agent
 ```
 
-Store `LT_USERNAME` and `LT_ACCESS_KEY` as secrets in your CI/CD platform. See [CI/CD Integration](/docs/kane-cli-cicd/) for platform-specific guides.
+Store `LT_USERNAME` and `LT_ACCESS_KEY` as secrets in your CI/CD platform. See [CI/CD Integration](https://www.testmuai.com/docs/kane-cli-cicd) for platform-specific guides.
 
   </Tab>
 </Tabs>
@@ -68,7 +68,7 @@ Verify authentication at any time:
 kane-cli whoami
 ```
 
-If you prefer username and access key, or need to manage multiple accounts, see [Authentication](/docs/kane-cli-authentication/).
+If you prefer username and access key, or need to manage multiple accounts, see [Authentication](https://www.testmuai.com/docs/kane-cli-authentication).
 
 ## Step 3: Open the TUI
 
@@ -131,7 +131,7 @@ By default, each run starts on the KaneAI playground site, and the agent navigat
 
 ## What Happens at the End of a Run
 
-When the session ends, Kane CLI uploads the run to <BrandName /> Test Manager and prints a share link. It also saves the run as a sealed [evidence pack](/docs/kane-cli-evidence/): screenshots, logs, and results in one file. When Kane CLI offers to open it, you can view the pack in the browser viewer. For details on the upload, share links, and the run mode toggle, see [Test Manager Integration](/docs/kane-cli-tms-integration/). To change settings like window size, Chrome profile, or the active project and folder, see [Configuration](/docs/kane-cli-configuration/).
+When the session ends, Kane CLI uploads the run to <BrandName /> Test Manager and prints a share link. It also saves the run as a sealed [evidence pack](https://www.testmuai.com/docs/kane-cli-evidence): screenshots, logs, and results in one file. When Kane CLI offers to open it, you can view the pack in the browser viewer. For details on the upload, share links, and the run mode toggle, see [Test Manager Integration](https://www.testmuai.com/docs/kane-cli-tms-integration). To change settings like window size, Chrome profile, or the active project and folder, see [Configuration](https://www.testmuai.com/docs/kane-cli-configuration).
 
 <Tip>
 Run `kane-cli --tui` to open the interactive TUI: a full terminal UI where you can type objectives, see step-by-step progress, and chain multiple tests in one session with persistent browser state.
@@ -139,13 +139,13 @@ Run `kane-cli --tui` to open the interactive TUI: a full terminal UI where you c
 
 ## Next Steps
 
-- [Writing Objectives](/docs/kane-cli-writing-objectives/): Learn the three patterns: actions, assertions, extractions
-- [Modes of Operation](/docs/kane-cli-modes/): Understand Interactive TUI, Headless CLI, and Agent Mode
-- [Authentication](/docs/kane-cli-authentication/): Manage profiles and credential methods
-- [Evidence Packs](/docs/kane-cli-evidence/): What every run captures and how to open it in the viewer
-- [Configuration](/docs/kane-cli-configuration/): Window size, Chrome profile, and the active project and folder
-- [Variables & Context](/docs/kane-cli-variables-and-context/): Parameterize tests with credentials and project-specific context
-- [Mobile Testing](/docs/kane-cli-mobile/): Point the same objective at an Android Emulator or iOS Simulator
-- [CI/CD Integration](/docs/kane-cli-cicd/): Add Kane CLI to your pipeline
+- [Writing Objectives](https://www.testmuai.com/docs/kane-cli-writing-objectives): Learn the three patterns: actions, assertions, extractions
+- [Modes of Operation](https://www.testmuai.com/docs/kane-cli-modes): Understand Interactive TUI, Headless CLI, and Agent Mode
+- [Authentication](https://www.testmuai.com/docs/kane-cli-authentication): Manage profiles and credential methods
+- [Evidence Packs](https://www.testmuai.com/docs/kane-cli-evidence): What every run captures and how to open it in the viewer
+- [Configuration](https://www.testmuai.com/docs/kane-cli-configuration): Window size, Chrome profile, and the active project and folder
+- [Variables & Context](https://www.testmuai.com/docs/kane-cli-variables-and-context): Parameterize tests with credentials and project-specific context
+- [Mobile Testing](https://www.testmuai.com/docs/kane-cli-mobile): Point the same objective at an Android Emulator or iOS Simulator
+- [CI/CD Integration](https://www.testmuai.com/docs/kane-cli-cicd): Add Kane CLI to your pipeline
 
 <KaneCliCta />

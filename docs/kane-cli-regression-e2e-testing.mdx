@@ -30,7 +30,7 @@ A product page can show the right price while the cart API records a different o
 In the recorded run, the flow fails on the cart step, and the root cause card in the evidence viewer classifies the failure as an automation issue with 91% confidence: the agent clicked the header cart instead of the **Go to checkout** option the page offered. That label tells you to adjust the step's wording rather than file a product bug.
 
 <Tip>
-To seed data through the API first and then act on it in the UI, see [Create a record](/docs/api-testing-with-kane-cli/#create-a-record-seed-data) and [Multi-step API transaction](/docs/api-testing-with-kane-cli/#multi-step-api-transaction) on the API Testing page.
+To seed data through the API first and then act on it in the UI, see [Create a record](https://www.testmuai.com/docs/api-testing-with-kane-cli#create-a-record-seed-data) and [Multi-step API transaction](https://www.testmuai.com/docs/api-testing-with-kane-cli#multi-step-api-transaction) on the API Testing page.
 </Tip>
 
 ## Save once, replay on every build
@@ -66,7 +66,7 @@ An end-to-end flow written in natural language is only a regression test once it
 4. Run it again on every build. Steps replay from the recording, which is faster and does not call the model, as long as the step text and config stay the same.
 5. List what is committed and what has a recording with `kane-cli testmd list`.
 
-See [Test.md](/docs/kane-cli-testmd/) for the file format and [Running test.md files](/docs/kane-cli-testmd-running/) for replay versus author.
+See [Test.md](https://www.testmuai.com/docs/kane-cli-testmd) for the file format and [Running test.md files](https://www.testmuai.com/docs/kane-cli-testmd-running) for replay versus author.
 
 ## Recover when the UI changes
 
@@ -83,7 +83,7 @@ Renaming a button breaks every recorded locator that points at it. In this recor
 5. If you would rather a replay failure stop the run, pass `--no-adaptive-heal`.
 
 <Note>
-This recording was made with an earlier release that used a `--retry` flag. In current releases adaptive healing is on by default, and `--retry` is accepted but has no effect. See [Handling replay failures](/docs/kane-cli-testmd-running/#handling-replay-failures).
+This recording was made with an earlier release that used a `--retry` flag. In current releases adaptive healing is on by default, and `--retry` is accepted but has no effect. See [Handling replay failures](https://www.testmuai.com/docs/kane-cli-testmd-running#handling-replay-failures).
 </Note>
 
 When the flow itself changes on purpose, edit the step's text instead. Editing step N re-authors step N and every step after it on the next run, so a targeted edit keeps re-authoring cheap.
@@ -107,13 +107,13 @@ A failing regression suite costs time when nobody knows whether the app broke or
 4. For a failed replay, open the evidence pack and read the failure record, which holds the error, the page state at that moment, and links to the step's console and network logs.
 5. Fix the app for a product bug, or edit the step's text for a stale test, and rerun.
 
-Use `--bug-detection stop` in CI when a confirmed product bug should end the run immediately. See [Bug detection](/docs/kane-cli-configuration/#bug-detection) and [Debugging with evidence](/docs/kane-cli-evidence-debugging/).
+Use `--bug-detection stop` in CI when a confirmed product bug should end the run immediately. See [Bug detection](https://www.testmuai.com/docs/kane-cli-configuration#bug-detection) and [Debugging with evidence](https://www.testmuai.com/docs/kane-cli-evidence-debugging).
 
 ## Next steps
 
-- [CI/CD & DevOps Testing](/docs/kane-cli-cicd-devops-testing/): run this suite on every push and on a schedule
-- [Test Generation & Exploration](/docs/kane-cli-test-generation-exploration/): design the cases before you write them
-- [Batch Runs](/docs/kane-cli-testrun/): select, parallelize, and gate a suite
-- [Evidence](/docs/kane-cli-evidence/): the record behind every pass and fail
+- [CI/CD & DevOps Testing](https://www.testmuai.com/docs/kane-cli-cicd-devops-testing): run this suite on every push and on a schedule
+- [Test Generation & Exploration](https://www.testmuai.com/docs/kane-cli-test-generation-exploration): design the cases before you write them
+- [Batch Runs](https://www.testmuai.com/docs/kane-cli-testrun): select, parallelize, and gate a suite
+- [Evidence](https://www.testmuai.com/docs/kane-cli-evidence): the record behind every pass and fail
 
 <KaneCliCta />

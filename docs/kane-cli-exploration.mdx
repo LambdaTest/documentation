@@ -12,13 +12,13 @@ import { KaneCliCta } from "/snippets/KaneCliCta.mdx";
 `kane-cli explore` sends an explorer through your app. It clicks, types and follows links the way a curious tester
 would, and builds a **map** of what it finds: the app's screens, the flows between them, and **findings**: things that
 look broken, and places it couldn't get past, each with its evidence. While it explores, it also **designs tests**
-from what it mapped, into your Test Manager project: the same kind of tests [assurance](/docs/kane-cli-assurance/)
+from what it mapped, into your Test Manager project: the same kind of tests [assurance](https://www.testmuai.com/docs/kane-cli-assurance)
 designs from a document.
 
 <img loading="lazy" src="/assets/images/kane-cli/exploration-overview.svg" alt="How kane-cli explore works: kane-cli explore run sends the explorer, on HyperExecute, through your app (or localhost through an LT tunnel) and builds the map of screens, flows and findings. While it explores, design jobs save use-cases, scenarios and tests to your Test Manager project, and kane-cli context pull brings them into your folder" width="1000" height="302" />
 
 Use exploration when you have an app but no written requirements, or to find what your documents missed. Use
-[assurance](/docs/kane-cli-assurance/) when you have a PRD or a spec. Both put their tests in the same project, so you
+[assurance](https://www.testmuai.com/docs/kane-cli-assurance) when you have a PRD or a spec. Both put their tests in the same project, so you
 can do both.
 
 Each project has **one exploration of one URL**. Every run adds to that exploration's map.
@@ -27,7 +27,7 @@ Each project has **one exploration of one URL**. Every run adds to that explorat
 
 | You need | Why | How to check |
 |---|---|---|
-| kane-cli, signed in ([Installation](/docs/kane-cli-installation/), [Authentication](/docs/kane-cli-authentication/)) | the explorer runs as you | `kane-cli whoami` |
+| kane-cli, signed in ([Installation](https://www.testmuai.com/docs/kane-cli-installation), [Authentication](https://www.testmuai.com/docs/kane-cli-authentication)) | the explorer runs as you | `kane-cli whoami` |
 | A Test Manager project for the exploration | the map and the tests belong to one project | `kane-cli projects list --search <name>`, or `kane-cli projects create "<name>"` |
 | Permission to create test cases in that project | the design jobs save tests and cases there | if you can't, the map still builds, but no tests are designed ([below](#no-tests-were-designed)) |
 | Credits | an exploration and each design job spend credits | `kane-cli balance` |
@@ -113,7 +113,7 @@ kane-cli explore run --project <project-id> --url https://app.example.com \
 
 - `--deps` always needs `--allow-domain`: name every host it signs in or writes on, the `--url`'s own host too if
   that's where it signs in (`--allow-domain app.example.com`). Use a project of its own: one project explores one URL.
-- You can also keep the values in `.testmuai/variables/*.json` (see [Variables & context](/docs/kane-cli-variables-and-context/)).
+- You can also keep the values in `.testmuai/variables/*.json` (see [Variables & context](https://www.testmuai.com/docs/kane-cli-variables-and-context)).
   Only the names your `--prompt` and `--deps` use are sent. Names are letters, digits and `_` (`login_email`, not
   `login-email`); `LT_USERNAME` and `LT_ACCESS_KEY` are taken.
 - **Secrets** (`"secret": true`) go to your **HyperExecute Secrets**. Other values go to your organisation's Test
@@ -162,7 +162,7 @@ HyperExecute browsers ── LT tunnel ── your machine ── your app
    ```
 
    (`$LT_USERNAME` and `$LT_ACCESS_KEY` are your <BrandName /> username and access key: set them in your shell first.
-   [Where to find your access key](/docs/kane-cli-authentication/#where-to-find-your-access-key).) `--env ht-prod` is required.
+   [Where to find your access key](https://www.testmuai.com/docs/kane-cli-authentication#where-to-find-your-access-key).) `--env ht-prod` is required.
    Wait until LT says the tunnel is connected.
 3. In another terminal, explore through it:
 
@@ -296,7 +296,7 @@ In a folder that's already linked to the project, `kane-cli context pull` is eno
 - Each test arrives with no recorded steps yet, so its **first run** writes them in a real browser. That takes
   minutes and uses more credits than a replay. Later runs replay the steps for far fewer.
 - These tests run in Google Chrome on your machine, so install it first (if kane-cli can't find it, see
-  [Chrome failed to launch](/docs/kane-cli-troubleshooting/#chrome-failed-to-launch)).
+  [Chrome failed to launch](https://www.testmuai.com/docs/kane-cli-troubleshooting#chrome-failed-to-launch)).
 - Open a test to see what it checks, then run the ones you want: `kane-cli testrun run .testmuai/tests/<name>_test.md`.
   `kane-cli cover` then shows the project's coverage, the exploration's use-cases included.
 
@@ -340,6 +340,6 @@ exploration, or no sign-in.
 | `TOO_SOON` on `explore context sync` | a design job started a few minutes ago | try again when it says |
 | `NO_ENDED_RUN` on `explore context sync` | no run has ended yet | wait for the run to end |
 
-Driving exploration from an AI coding agent: every `explore` command takes `--agent` ([Agent Mode](/docs/kane-cli-agent-mode/)).
+Driving exploration from an AI coding agent: every `explore` command takes `--agent` ([Agent Mode](https://www.testmuai.com/docs/kane-cli-agent-mode)).
 
 <KaneCliCta />

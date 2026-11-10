@@ -8,7 +8,7 @@ keywords: ['kane cli design tests', 'ai test design', 'acceptance criteria', 'te
 
 import { KaneCliCta } from "/snippets/KaneCliCta.mdx";
 
-`kane-cli design tests` takes **one committed use-case** and produces everything needed to prove it: acceptance criteria (ACs), scenarios, and exactly one runnable test per scenario. It works as a conversation, on the same chat surface that [`kane-cli context extract`](/docs/kane-cli-assurance-context/#extract) uses. Everything the engine produces starts as **derived** knowledge for you to review. Your approval promotes it, and nothing becomes trusted without that approval.
+`kane-cli design tests` takes **one committed use-case** and produces everything needed to prove it: acceptance criteria (ACs), scenarios, and exactly one runnable test per scenario. It works as a conversation, on the same chat surface that [`kane-cli context extract`](https://www.testmuai.com/docs/kane-cli-assurance-context#extract) uses. Everything the engine produces starts as **derived** knowledge for you to review. Your approval promotes it, and nothing becomes trusted without that approval.
 
 ```bash
 kane-cli design tests --use-case uc-manage-the-cart      # design one use-case (chat)
@@ -24,11 +24,11 @@ kane-cli design explain t-add-first-item                 # replay WHY — zero f
 | `--use-case <ref>` | The use-case to design. Optional with `--resume`, because the session remembers it |
 | `--max <n>` | Budget ceiling: the maximum number of scenario and test pairs to keep. **With no value there is no ceiling**: the agent estimates the right size and asks you to confirm. Every pair cut to fit the budget is recorded as a named `budget-evicted` gap |
 | `--strength pairwise\|3-wise` | Sets the covering-array strength manually. When omitted, the agent judges it from risk, and uses 3-wise when money, authentication, or data loss is involved |
-| `--mode <mode>` | How a headless run handles questions: `agent` \| `ci` \| `override`. A non-TTY run with no `--mode` exits `2`. See [Automation](/docs/kane-cli-assurance-automation/) |
+| `--mode <mode>` | How a headless run handles questions: `agent` \| `ci` \| `override`. A non-TTY run with no `--mode` exits `2`. See [Automation](https://www.testmuai.com/docs/kane-cli-assurance-automation) |
 | `--force` | Redesign a use-case that already has a live design. The new scenario and test pairs supersede the old ones, and equivalent ACs are reused |
 | `--phase <name>` | Start the design at a specific phase (`grounding`, `acs`, `scenarios`, `wiring`, `tests`), rebuilt from the earlier phases already committed. If an earlier phase is missing, you are asked on a terminal; in agent mode the run exits `2` and lists the commands to run in `next` |
 | `--allow-unreviewed` | Design against a use-case that is still unreviewed (`derived`) without approving it first. See the gate below |
-| `--resume <sid>` | Resume a paused session ([sessions](/docs/kane-cli-assurance-context/#sessions)) |
+| `--resume <sid>` | Resume a paused session ([sessions](https://www.testmuai.com/docs/kane-cli-assurance-context#sessions)) |
 | `--message "<text>"` | With `--resume`: answer the pending questions, or steer, in plain words |
 | `--answer <q>=<v>` | With `--resume --mode agent`: answer a specific pending question by id, as `<question-id>=<option number or free text>`. Repeatable |
 | `--plan` | Print what each phase would commit (the finalize payload) and commit nothing |
@@ -43,7 +43,7 @@ An interactive run is a chat. The engine works through the phases in order and p
 3. **Path ACs and wiring.** The engine writes criteria for each scenario and records which scenario exercises which invariant. An invariant that no scenario exercises becomes an `invariant-unexercised` gap.
 4. **Tests.** The engine writes exactly **one test per scenario** (strict 1:1). Pairs are scored and cut to fit the budget. Each kept test has a runnable body, a step that captures a baseline when a check needs a before and after comparison, and a written check whose expected value comes from its AC. A check that disagrees with its criterion is rejected, so a test cannot quietly assert something weaker than the requirement.
 
-Between phases the session pauses on a **check-in panel**, the same kind of panel [extract uses](/docs/kane-cli-assurance-context/#the-interactive-session). The headline reads `<phase> done — next: <next>`. A dim line under it explains in plain words what the finished phase produced. The rows are:
+Between phases the session pauses on a **check-in panel**, the same kind of panel [extract uses](https://www.testmuai.com/docs/kane-cli-assurance-context#the-interactive-session). The headline reads `<phase> done — next: <next>`. A dim line under it explains in plain words what the finished phase produced. The rows are:
 
 - `continue to <next>` (row 1). Pressing Enter at every check-in walks through the whole design.
 - `view what's saved`
@@ -54,7 +54,7 @@ Typing anywhere opens the `✎` editor, and your words steer the engine (rename,
 
 **Questions that need a typed value.** When an answer has to be a concrete value, such as a URL or a fixture id, the question does one of two things. It either offers an option row that takes input, where selecting the row opens an inline editor so the answer carries both the pick and your value, or it tells you to type the value directly. A plain option row sends only its label, so the plain options on such a question are the real alternatives (use a placeholder, reduce scope, skip). If a needed value does not arrive, the agent asks once more and then continues with the fallback it stated. It announces this in the narrative; it never happens silently.
 
-In headless runs, each phase reports its progress. Any question pauses an `agent`-mode run, which you can resume. A high-risk question stops a `ci`-mode run with a failure. Each phase still commits and reports on the event stream as it completes. See [Automation](/docs/kane-cli-assurance-automation/).
+In headless runs, each phase reports its progress. Any question pauses an `agent`-mode run, which you can resume. A high-risk question stops a `ci`-mode run with a failure. Each phase still commits and reports on the event stream as it completes. See [Automation](https://www.testmuai.com/docs/kane-cli-assurance-automation).
 
 ## What you get
 
@@ -81,7 +81,7 @@ Confirm count check: 1 (equals) — the stated promise: after adding one in-stoc
 
 Three things to notice:
 
-- **`@verifies` tags** bind each assert step to the acceptance criteria it proves. [`kane-cli cover`](/docs/kane-cli-assurance-coverage/) measures coverage against this link. It is captured when the test is written, and it is permanent and auditable.
+- **`@verifies` tags** bind each assert step to the acceptance criteria it proves. [`kane-cli cover`](https://www.testmuai.com/docs/kane-cli-assurance-coverage) measures coverage against this link. It is captured when the test is written, and it is permanent and auditable.
 - **`{{variables}}`** appear wherever the requirements did not specify a value, such as the store URL or a known in-stock product. See [Variables declared by design](#variables) below.
 - **The `assurance:` frontmatter** links the file to its design entry in the graph, so coverage lookups stay exact even after you move the file.
 
@@ -100,9 +100,9 @@ On the `--mode agent` stream, these two moments are separate events:
 - `variables_declared` lists the stubs a phase commit wrote: `file`, plus `variables[]` with `name`, `description` and `secret`. It fires in the tests phase, just before that phase's `commit` event.
 - `variables_summary` lists every name the run declared. It is sent after `session_complete` when a run completes cleanly; a paused run does not send it.
 
-See [Automation](/docs/kane-cli-assurance-automation/) for the stream.
+See [Automation](https://www.testmuai.com/docs/kane-cli-assurance-automation) for the stream.
 
-Fill in the values before you author the tests. If a name has no value, the run warns you and types the name as written. An agent fills in the values it already has from your documents or your messages and asks you for the rest. A secret value goes straight into the file, never through the chat. See [Variables & context](/docs/kane-cli-variables-and-context/#variables-declared-by-kane-cli-design-tests).
+Fill in the values before you author the tests. If a name has no value, the run warns you and types the name as written. An agent fills in the values it already has from your documents or your messages and asks you for the rest. A secret value goes straight into the file, never through the chat. See [Variables & context](https://www.testmuai.com/docs/kane-cli-variables-and-context#variables-declared-by-kane-cli-design-tests).
 
 ### What else the run records
 
@@ -114,13 +114,13 @@ Alongside the tests, the run records:
 
 You also see **warnings** at commit time, for example when a test's `@verifies` list claims more criteria than its written check actually asserts.
 
-Design output starts as `derived`, like everything else. Review it with [`kane-cli context review`](/docs/kane-cli-assurance-context/#review), or browse it with [`kane-cli context view`](/docs/kane-cli-assurance-context/#inspect).
+Design output starts as `derived`, like everything else. Review it with [`kane-cli context review`](https://www.testmuai.com/docs/kane-cli-assurance-context#review), or browse it with [`kane-cli context view`](https://www.testmuai.com/docs/kane-cli-assurance-context#inspect).
 
 ### From design to execution
 
 A designed test is a normal test file, but it is still `derived` and it has never been *run*. Work through it in this order:
 
-1. **Review the design output** like anything else the engine produces. Approve, edit, or reject the generated ACs, scenarios, and tests with [`kane-cli context review`](/docs/kane-cli-assurance-context/#review). The commit-time warnings appear again there.
+1. **Review the design output** like anything else the engine produces. Approve, edit, or reject the generated ACs, scenarios, and tests with [`kane-cli context review`](https://www.testmuai.com/docs/kane-cli-assurance-context#review). The commit-time warnings appear again there.
 2. **Author each kept test once.** After that it runs in batches like any other test.
 
 ```bash
@@ -128,9 +128,9 @@ kane-cli testmd run .testmuai/tests/t-add-one-…_test.md   # author it (first r
 kane-cli testrun run --match 't-'                          # from then on: batch replay
 ```
 
-[`kane-cli testrun`](/docs/kane-cli-testrun/) can also author fresh tests itself: they are classified as `author` at preflight and consolidated after the run. `kane-cli testmd run` is the way to author a single test. See [Coverage](/docs/kane-cli-assurance-coverage/#the-authoring-bridge).
+[`kane-cli testrun`](https://www.testmuai.com/docs/kane-cli-testrun) can also author fresh tests itself: they are classified as `author` at preflight and consolidated after the run. `kane-cli testmd run` is the way to author a single test. See [Coverage](https://www.testmuai.com/docs/kane-cli-assurance-coverage#the-authoring-bridge).
 
-Until a test's first authored run, [`kane-cli cover`](/docs/kane-cli-assurance-coverage/) reports its criteria as covered on paper but not yet proven. This is intentional.
+Until a test's first authored run, [`kane-cli cover`](https://www.testmuai.com/docs/kane-cli-assurance-coverage) reports its criteria as covered on paper but not yet proven. This is intentional.
 
 <a id="re-runs" />
 ## Gates, re-runs, and `--force`
@@ -141,11 +141,11 @@ Until a test's first authored run, [`kane-cli cover`](/docs/kane-cli-assurance-c
 - In agent mode, the run exits `2` with the review command to run in `next`.
 - In `ci` mode, the run refuses outright.
 
-`--allow-unreviewed` skips this gate on purpose. The recommended path is to review the use-case first with [`context review`](/docs/kane-cli-assurance-context/#review).
+`--allow-unreviewed` skips this gate on purpose. The recommended path is to review the use-case first with [`context review`](https://www.testmuai.com/docs/kane-cli-assurance-context#review).
 
 **Re-runs check whether the design is stale.** If a use-case already has a live design, design does not silently redesign it. It asks you what to do:
 
-- On a terminal, the session tells you whether the design is current or stale and what a redesign would supersede. You can view the design, redesign it, refresh a stale design first with [`maintain evolve`](/docs/kane-cli-assurance-maintain/#evolve), or pick another use-case. A redesign asks for your **reason**, which goes on the record.
+- On a terminal, the session tells you whether the design is current or stale and what a redesign would supersede. You can view the design, redesign it, refresh a stale design first with [`maintain evolve`](https://www.testmuai.com/docs/kane-cli-assurance-maintain#evolve), or pick another use-case. A redesign asks for your **reason**, which goes on the record.
 - In agent mode, the run exits `2` with the follow-up commands in `next`, including the `--force` form.
 - In `ci` mode, the run fails without redesigning.
 
@@ -153,8 +153,8 @@ Until a test's first authored run, [`kane-cli cover`](/docs/kane-cli-assurance-c
 
 `--force` regenerates the scenario and test pairs and supersedes the old ones. ACs are deduplicated first: if the engine produces an AC equivalent to an existing one, it reuses the existing node instead of adding a copy.
 
-- If the staleness comes from a source document you just changed, [`kane-cli maintain reconcile`](/docs/kane-cli-assurance-maintain/) offers the same redesign as part of reviewing the changed source.
-- For staleness from older changes, [`kane-cli maintain evolve`](/docs/kane-cli-assurance-maintain/#evolve) redesigns the use-case and tells you first what the redesign will affect.
+- If the staleness comes from a source document you just changed, [`kane-cli maintain reconcile`](https://www.testmuai.com/docs/kane-cli-assurance-maintain) offers the same redesign as part of reviewing the changed source.
+- For staleness from older changes, [`kane-cli maintain evolve`](https://www.testmuai.com/docs/kane-cli-assurance-maintain#evolve) redesigns the use-case and tells you first what the redesign will affect.
 
 **Citations are verified before they commit.** Every citation a design run wants to record is checked against the pinned source text before anything lands. A citation that does not match is sent back to the agent to fix, so designed items never carry made-up provenance.
 
@@ -182,12 +182,12 @@ The design engine includes a built-in catalog of test-design techniques and surf
 | `0` | Design complete (or `--plan` output complete). |
 | `1` | Runtime failure. |
 | `2` | Usage error or refusal: an unknown use-case; an already-designed or unreviewed target refused in a headless mode (the stream's `next` carries the follow-up commands); a `--phase` whose earlier phases are missing; or a non-TTY run with no `--mode`. |
-| `3` | Session paused and resumable. See [sessions](/docs/kane-cli-assurance-context/#sessions). |
+| `3` | Session paused and resumable. See [sessions](https://www.testmuai.com/docs/kane-cli-assurance-context#sessions). |
 
 ## Next steps
 
-- [Coverage](/docs/kane-cli-assurance-coverage/): measure what the designed tests prove.
-- [Maintaining the suite](/docs/kane-cli-assurance-maintain/): reconcile the suite when requirements change.
-- [Automation](/docs/kane-cli-assurance-automation/): run design headless in CI or from an agent.
+- [Coverage](https://www.testmuai.com/docs/kane-cli-assurance-coverage): measure what the designed tests prove.
+- [Maintaining the suite](https://www.testmuai.com/docs/kane-cli-assurance-maintain): reconcile the suite when requirements change.
+- [Automation](https://www.testmuai.com/docs/kane-cli-assurance-automation): run design headless in CI or from an agent.
 
 <KaneCliCta />

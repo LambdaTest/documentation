@@ -14,7 +14,7 @@ import { KaneCliCta } from "/snippets/KaneCliCta.mdx";
 kane-qe only watches and offers. It never starts a test by itself: Claude runs `kane-cli`, because you asked or because you pressed a button that asks Claude.
 
 <Note>
-kane-qe works alongside the [Kane CLI skill](/docs/kane-cli-skills/). The skill teaches Claude how to run `kane-cli`; the plugin shows you what those runs are doing. Use both.
+kane-qe works alongside the [Kane CLI skill](https://www.testmuai.com/docs/kane-cli-skills). The skill teaches Claude how to run `kane-cli`; the plugin shows you what those runs are doing. Use both.
 </Note>
 
 ---
@@ -24,7 +24,7 @@ kane-qe works alongside the [Kane CLI skill](/docs/kane-cli-skills/). The skill 
 You need:
 
 - **Claude Code** with plugins that use mods (function-hook plugins), in the terminal or the desktop app.
-- **Kane CLI**, installed and logged in. See [Installation](/docs/kane-cli-installation/) and [Authentication](/docs/kane-cli-authentication/).
+- **Kane CLI**, installed and logged in. See [Installation](https://www.testmuai.com/docs/kane-cli-installation) and [Authentication](https://www.testmuai.com/docs/kane-cli-authentication).
 - A **project folder** you open Claude Code in. kane-qe shows `kane-cli` runs whose folder is inside that project.
 
 `kane-cli` runs use KaneAI credits. kane-qe itself spends none: the only `kane-cli` command it runs without being asked is the read-only coverage check.
@@ -150,7 +150,7 @@ Open it with `/kane` or the band's **[ Open ]**. It has three tabs.
 - For a failure: *why*, *kind* (KaneAI's category, severity and how sure it is) and *where*.
 - **Open evidence**.
 
-A suite shows one row per test. A suite on the remote grid shows the grid, the job and its link. See [Remote Runs](/docs/kane-cli-remote-execution/).
+A suite shows one row per test. A suite on the remote grid shows the grid, the job and its link. See [Remote Runs](https://www.testmuai.com/docs/kane-cli-remote-execution).
 
 **Assurance.** Designed and proven coverage bars, how many tests are failing or blocked, when they last ran, and a card per use case. Press a use case to see what it still owes, under *To design* and *To run*, each with the reason and the command that does it. **Close these gaps with Claude** hands that list to Claude.
 
@@ -173,7 +173,7 @@ What happens at the end of Claude's turn depends on the **After Claude changes c
 **Test this change** opens a card in the pane with:
 
 - The files that changed.
-- Your saved tests (in `.testmuai/tests/`) that mention the same feature, each with its last result and a **Run it** button. The closest matches come first; among equal matches, the test that failed last time leads. See [Test.md](/docs/kane-cli-testmd/).
+- Your saved tests (in `.testmuai/tests/`) that mention the same feature, each with its last result and a **Run it** button. The closest matches come first; among equal matches, the test that failed last time leads. See [Test.md](https://www.testmuai.com/docs/kane-cli-testmd).
 - If no saved test matches: **Draft a new objective**. Claude reads the change and writes a one-line test objective. **Run the objective** hands it to Claude to run.
 
 The warning clears as soon as a `kane-cli` test that started after the edit finishes.
@@ -182,7 +182,7 @@ The warning clears as soon as a `kane-cli` test that started after the edit fini
 
 ## Assurance Coverage
 
-If your project has a Kane CLI requirement store (a `.context` folder), the band's third row shows coverage, such as `47% proven · 4 use cases`, or `82% designed · nothing run yet` before anything has run. kane-qe reads it with `kane-cli cover gaps --json` when the session starts and after each run. That command is read-only and spends no credits. See [Assurance](/docs/kane-cli-assurance/) and [Coverage](/docs/kane-cli-assurance-coverage/).
+If your project has a Kane CLI requirement store (a `.context` folder), the band's third row shows coverage, such as `47% proven · 4 use cases`, or `82% designed · nothing run yet` before anything has run. kane-qe reads it with `kane-cli cover gaps --json` when the session starts and after each run. That command is read-only and spends no credits. See [Assurance](https://www.testmuai.com/docs/kane-cli-assurance) and [Coverage](https://www.testmuai.com/docs/kane-cli-assurance-coverage).
 
 Without a requirement store, the row says `not set up` with **[ Set up now ]**. The Assurance tab then offers **Set it up with Claude**, which asks Claude to ingest your requirement (a PRD file, a Jira, Confluence or Linear link, or a web page), extract the use cases and design the tests.
 
@@ -190,7 +190,7 @@ Without a requirement store, the row says `not set up` with **[ Set up now ]**. 
 
 ## Evidence
 
-Kane CLI seals each run's evidence into a pack when it exits. **View evidence** (on a card) and **Open evidence** (in the pane) start Kane CLI's own evidence viewer on your machine and open it in your browser, in one click. A second press reuses the viewer that is already running. See [Viewing Evidence](/docs/kane-cli-evidence-viewing/).
+Kane CLI seals each run's evidence into a pack when it exits. **View evidence** (on a card) and **Open evidence** (in the pane) start Kane CLI's own evidence viewer on your machine and open it in your browser, in one click. A second press reuses the viewer that is already running. See [Viewing Evidence](https://www.testmuai.com/docs/kane-cli-evidence-viewing).
 
 If no viewer can be started, Claude is asked to open the evidence instead. Where the chat cannot take clicks (see [Limits](#limits)), the card shows the evidence file's path instead of buttons.
 
@@ -244,7 +244,7 @@ The plugin's [README](https://github.com/LambdaTest/kane-claude-plugin/blob/main
 - **`auto` mode needs the end-of-turn hook.** Where an organization manages Claude Code centrally, that hook does not run for plugins people install themselves, so Claude is never asked to test the change. Use `offer` there.
 - **This project only.** Runs started in other folders are not shown.
 - **What Kane CLI does not report is left out**: there are no step totals, no credits while a run is going, and no browser name.
-- **A newer Kane CLI** that changes its event format shows only each run's name and time until kane-qe is updated, rather than showing something wrong. See [Agent Output](/docs/kane-cli-agent-output/).
+- **A newer Kane CLI** that changes its event format shows only each run's name and time until kane-qe is updated, rather than showing something wrong. See [Agent Output](https://www.testmuai.com/docs/kane-cli-agent-output).
 
 ---
 
@@ -283,10 +283,10 @@ claude plugin uninstall kane-qe@lambdatest
 
 ## Next Steps
 
-- [Skills for AI Agents](/docs/kane-cli-skills/): teach Claude Code, Codex CLI and Gemini CLI to run Kane CLI.
-- [Agent Mode](/docs/kane-cli-agent-mode/): the `--agent` output the plugin reads.
-- [Evidence Packs](/docs/kane-cli-evidence/): what every run captures and how to view it.
-- [Assurance](/docs/kane-cli-assurance/): requirement-linked test suites and the coverage on the band's third row.
+- [Skills for AI Agents](https://www.testmuai.com/docs/kane-cli-skills): teach Claude Code, Codex CLI and Gemini CLI to run Kane CLI.
+- [Agent Mode](https://www.testmuai.com/docs/kane-cli-agent-mode): the `--agent` output the plugin reads.
+- [Evidence Packs](https://www.testmuai.com/docs/kane-cli-evidence): what every run captures and how to view it.
+- [Assurance](https://www.testmuai.com/docs/kane-cli-assurance): requirement-linked test suites and the coverage on the band's third row.
 - Source code and issues: [github.com/LambdaTest/kane-claude-plugin](https://github.com/LambdaTest/kane-claude-plugin)
 
 <KaneCliCta />

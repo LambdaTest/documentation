@@ -20,10 +20,10 @@ Save any recipe below as a file ending in `_test.md`, change the `url` to your o
 kane-cli testmd run tests/add-to-cart-with-variant_test.md --agent
 ```
 
-The first run authors each step and records it. Later runs replay the recording without calling the model, so the same file works as a regression check in CI. To run every e-commerce recipe as one suite, tag the files and run `kane-cli testrun run --tags ecommerce --parallel 4 --headless`. See [Test.md](/docs/kane-cli-testmd/) and [Batch Runs](/docs/kane-cli-testrun/) for the full format and flags.
+The first run authors each step and records it. Later runs replay the recording without calling the model, so the same file works as a regression check in CI. To run every e-commerce recipe as one suite, tag the files and run `kane-cli testrun run --tags ecommerce --parallel 4 --headless`. See [Test.md](https://www.testmuai.com/docs/kane-cli-testmd) and [Batch Runs](https://www.testmuai.com/docs/kane-cli-testrun) for the full format and flags.
 
 <Note>
-The same files run against a native app on an Android emulator or an iOS simulator when you add `target` and `app` to the frontmatter. See [Mobile Testing](/docs/kane-cli-mobile/).
+The same files run against a native app on an Android emulator or an iOS simulator when you add `target` and `app` to the frontmatter. See [Mobile Testing](https://www.testmuai.com/docs/kane-cli-mobile).
 </Note>
 
 ## Search and product pages
@@ -822,9 +822,9 @@ Kane CLI fails the run if the storefront still shows the old theme, or if checko
 
 ## Next steps
 
-- [Payments Testing](/docs/kane-cli-payments-testing/): cards, wallets, pay later, payment links, refunds, and webhook parity
-- [Test.md](/docs/kane-cli-testmd/): the file format used by every recipe on this page
-- [Batch Runs](/docs/kane-cli-testrun/): run a tagged suite with one command and one exit code
-- [CI/CD & DevOps Testing](/docs/kane-cli-cicd-devops-testing/): gate a deploy on these recipes
+- [Payments Testing](https://www.testmuai.com/docs/kane-cli-payments-testing): cards, wallets, pay later, payment links, refunds, and webhook parity
+- [Test.md](https://www.testmuai.com/docs/kane-cli-testmd): the file format used by every recipe on this page
+- [Batch Runs](https://www.testmuai.com/docs/kane-cli-testrun): run a tagged suite with one command and one exit code
+- [CI/CD & DevOps Testing](https://www.testmuai.com/docs/kane-cli-cicd-devops-testing): gate a deploy on these recipes
 
 <KaneCliCta />

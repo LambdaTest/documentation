@@ -232,7 +232,7 @@ An external obstacle on the target website prevented the agent from completing t
 | **Reason code** | `blocker.paywall` |
 | **Status** | `ERROR` |
 | **What happened** | The page requires a paid subscription to access the content the objective needs. |
-| **Action** | Provide credentials for a subscribed account via [variables](/docs/kane-cli-variables-and-context/), or test against a non-paywalled environment. |
+| **Action** | Provide credentials for a subscribed account via [variables](https://www.testmuai.com/docs/kane-cli-variables-and-context), or test against a non-paywalled environment. |
 
 ### 640 BLOCKED
 
@@ -259,7 +259,7 @@ An external obstacle on the target website prevented the agent from completing t
 | **Reason code** | `blocker.auth_no_credentials` |
 | **Status** | `ERROR` |
 | **What happened** | The agent encountered a login page but no credentials were provided in the objective or variables. |
-| **Action** | Provide login credentials using [variables](/docs/kane-cli-variables-and-context/): |
+| **Action** | Provide login credentials using [variables](https://www.testmuai.com/docs/kane-cli-variables-and-context): |
 
 ```bash
 kane-cli run "Log in and navigate to dashboard" \
@@ -346,7 +346,7 @@ The agent completed its actions but one or more assertions or checkpoints did no
 
 - An unresolved-variable warning (`code: "unresolved_variables"`) does not change the exit code. A step that fails on the literal `{{name}}` text still fails the run.
 - Under `run --analyzer-only`, exit `0` means all conditions were judged, **not** that all are true. Exit `1` means a result was missing, and `3` means cancelled.
-- `testmd run`, `testrun run`, `generate` and the assurance commands have their own exit code tables. See [CLI Reference: Exit Codes](/docs/kane-cli-cli-reference/#exit-codes).
+- `testmd run`, `testrun run`, `generate` and the assurance commands have their own exit code tables. See [CLI Reference: Exit Codes](https://www.testmuai.com/docs/kane-cli-cli-reference#exit-codes).
 
 ---
 
@@ -374,8 +374,8 @@ esac
 
 ## Related Resources
 
-- [Agent Mode](/docs/kane-cli-agent-mode/): NDJSON output format and event schema
-- [Troubleshooting](/docs/kane-cli-troubleshooting/): Common issues and fixes
-- [CLI Reference](/docs/kane-cli-cli-reference/): Full flag and command reference
+- [Agent Mode](https://www.testmuai.com/docs/kane-cli-agent-mode): NDJSON output format and event schema
+- [Troubleshooting](https://www.testmuai.com/docs/kane-cli-troubleshooting): Common issues and fixes
+- [CLI Reference](https://www.testmuai.com/docs/kane-cli-cli-reference): Full flag and command reference
 
 <KaneCliCta />

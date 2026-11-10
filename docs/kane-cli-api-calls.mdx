@@ -28,7 +28,7 @@ curl -X POST https://api.example.com/login -H 'Content-Type: application/json' -
 
 ## Using the response
 
-Refer to the response in plain English. The `{{name}}` syntax is reserved for global variables and secrets (see [Variables and Context](/docs/kane-cli-variables-and-context/)). Never use it for a value the run produces.
+Refer to the response in plain English. The `{{name}}` syntax is reserved for global variables and secrets (see [Variables and Context](https://www.testmuai.com/docs/kane-cli-variables-and-context)). Never use it for a value the run produces.
 
 | To use | Say |
 |---|---|
@@ -55,7 +55,7 @@ then open https://app.example.com/orders and verify an order for "sku_42" is vis
 
 ## Tokens and secrets
 
-Store every API token or credential in a variable marked `secret: true` (see [Variables and Context](/docs/kane-cli-variables-and-context/)). The value is then masked in logs and never stored in plain text:
+Store every API token or credential in a variable marked `secret: true` (see [Variables and Context](https://www.testmuai.com/docs/kane-cli-variables-and-context)). The value is then masked in logs and never stored in plain text:
 
 ```
 curl -X DELETE https://api.example.com/records/42 -H "Authorization: Bearer {{api_token}}"
@@ -66,7 +66,7 @@ curl -X DELETE https://api.example.com/records/42 -H "Authorization: Bearer {{ap
 These are two different features:
 
 - **Make a call (this page)**: *you* tell the agent to send a request, for example to seed a record, call a backend, or set up state.
-- **[Network assertions](/docs/kane-cli-checkpoint-devtools-network/)**: *observe* the requests the page makes on its own during a UI flow, such as status codes, bodies, and timing.
+- **[Network assertions](https://www.testmuai.com/docs/kane-cli-checkpoint-devtools-network)**: *observe* the requests the page makes on its own during a UI flow, such as status codes, bodies, and timing.
 
 They work together: seed state with a direct call, drive the UI, then assert on the page's own network traffic.
 

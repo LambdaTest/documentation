@@ -46,7 +46,7 @@ Kane CLI requires **Google Chrome** on your system. Chrome is the automation bro
 
 ## Install with pnpm or yarn
 
-Kane CLI does not support installation with **pnpm**. pnpm keeps packages in a nested `node_modules/.pnpm/` store, which puts the project-root `node_modules/` deeper on disk than npm does. Kane CLI looks for its platform-specific `v16-runner` binary by searching up the directory tree, and that search does not reach far enough in a pnpm layout. The runner is never found and the CLI stops. You see a silent exit with status 2 shortly after startup. See [CLI exits with code 2 and no output](/docs/kane-cli-troubleshooting/#cli-exits-with-code-2-and-no-output) in the troubleshooting guide. [Issue #24](https://github.com/LambdaTest/kane-cli/issues/24) tracks this limitation.
+Kane CLI does not support installation with **pnpm**. pnpm keeps packages in a nested `node_modules/.pnpm/` store, which puts the project-root `node_modules/` deeper on disk than npm does. Kane CLI looks for its platform-specific `v16-runner` binary by searching up the directory tree, and that search does not reach far enough in a pnpm layout. The runner is never found and the CLI stops. You see a silent exit with status 2 shortly after startup. See [CLI exits with code 2 and no output](https://www.testmuai.com/docs/kane-cli-troubleshooting#cli-exits-with-code-2-and-no-output) in the troubleshooting guide. [Issue #24](https://github.com/LambdaTest/kane-cli/issues/24) tracks this limitation.
 
 Install Kane CLI with one of the supported methods instead:
 
@@ -85,7 +85,7 @@ Kane CLI ships native binaries for the following platforms. When you install the
 | Windows | x64 | ✅ |
 
 <Note>
-**Mobile testing**, the iOS Simulator and the Android Emulator, runs on your own machine on **macOS Apple Silicon (arm64) only**. See [Mobile Testing](/docs/kane-cli-mobile/) for the simulator and emulator prerequisites. On every other platform, mobile suites run on the cloud grid with [`testrun run --remote`](/docs/kane-cli-remote-execution/), which needs no mobile tooling on your machine.
+**Mobile testing**, the iOS Simulator and the Android Emulator, runs on your own machine on **macOS Apple Silicon (arm64) only**. See [Mobile Testing](https://www.testmuai.com/docs/kane-cli-mobile) for the simulator and emulator prerequisites. On every other platform, mobile suites run on the cloud grid with [`testrun run --remote`](https://www.testmuai.com/docs/kane-cli-remote-execution), which needs no mobile tooling on your machine.
 </Note>
 
 ## Update
@@ -142,7 +142,7 @@ node --version
 
 ## Plugins
 
-Some capabilities ship as plugins. Kane CLI installs them under `~/.testmuai/kaneai/plugins/`, with each version kept separately. The plugin you are most likely to need is `remote-execution`. It provides the HyperExecute binary that [`kane-cli testrun run --remote`](/docs/kane-cli-remote-execution/) uses:
+Some capabilities ship as plugins. Kane CLI installs them under `~/.testmuai/kaneai/plugins/`, with each version kept separately. The plugin you are most likely to need is `remote-execution`. It provides the HyperExecute binary that [`kane-cli testrun run --remote`](https://www.testmuai.com/docs/kane-cli-remote-execution) uses:
 
 ```bash
 kane-cli plugin install remote-execution      # install (add --version <v> to pin one)
@@ -153,9 +153,9 @@ kane-cli plugin remove remote-execution
 
 ## Next Step
 
-[Quick Start](/docs/kane-cli-quickstart/): Authenticate and run your first test.
+[Quick Start](https://www.testmuai.com/docs/kane-cli-quickstart): Authenticate and run your first test.
 
-- [Authentication](/docs/kane-cli-authentication/)
-- [Remote Runs](/docs/kane-cli-remote-execution/)
+- [Authentication](https://www.testmuai.com/docs/kane-cli-authentication)
+- [Remote Runs](https://www.testmuai.com/docs/kane-cli-remote-execution)
 
 <KaneCliCta />

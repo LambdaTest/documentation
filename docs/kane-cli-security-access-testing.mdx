@@ -69,7 +69,7 @@ A members-only action has two sides, and both need a test: signed-out visitors a
 3. Repeat the protected action and assert the success state, for example `verify the page shows "You're in the draw" with an entry id starting with 'DRAW-'`.
 4. Run it. A signed-out entry that is accepted, or a member entry that is refused, fails the run.
 
-The full test file is on the [E-commerce Testing](/docs/kane-cli-ecommerce-testing/#members-only-launch-draw) page.
+The full test file is on the [E-commerce Testing](https://www.testmuai.com/docs/kane-cli-ecommerce-testing#members-only-launch-draw) page.
 
 ## Reject invalid credentials
 
@@ -83,7 +83,7 @@ An API that accepts a wrong password is a security bug that never shows up in a 
 2. Add the same check for an expired or tampered token on a protected endpoint, for example `send a GET request to /api/orders with an Authorization header of 'Bearer expired-token' and confirm the response status is 401`.
 3. Save the session as a regression guard, so you are told the day an invalid login starts returning a success response.
 
-See [Negative path testing](/docs/api-testing-with-kane-cli/#negative-path-testing-401-unauthorized) on the API Testing page for the full walkthrough.
+See [Negative path testing](https://www.testmuai.com/docs/api-testing-with-kane-cli#negative-path-testing-401-unauthorized) on the API Testing page for the full walkthrough.
 
 ## Check session cookie flags
 
@@ -101,7 +101,7 @@ A session cookie without `HttpOnly` can be read by injected scripts, and one wit
 
 3. Run the command with `--agent` and read which cookie failed and which flag it was missing from the summary.
 
-See [Cookies checkpoints](/docs/kane-cli-checkpoint-devtools-cookies/) for everything you can query.
+See [Cookies checkpoints](https://www.testmuai.com/docs/kane-cli-checkpoint-devtools-cookies) for everything you can query.
 
 ## Check where tokens are stored
 
@@ -128,13 +128,13 @@ A test suite is shared widely, so it should never contain a real password. Kane 
 3. In CI, generate the variables file from your secrets store before the step and pass it with `--variables-file`.
 4. Check the evidence pack and the Test Manager test case after the first run to confirm the values appear masked.
 
-See [Variables & Context](/docs/kane-cli-variables-and-context/#secrets) for how secret values are stored.
+See [Variables & Context](https://www.testmuai.com/docs/kane-cli-variables-and-context#secrets) for how secret values are stored.
 
 ## Next steps
 
-- [DevTools & Performance Testing](/docs/kane-cli-devtools-performance-testing/): network, console, storage, and timing checks
-- [API Testing](/docs/api-testing-with-kane-cli/): auth-token chaining and negative paths at the endpoint level
-- [Authentication](/docs/kane-cli-authentication/): how Kane CLI itself signs in, locally and in CI
-- [Batch Runs](/docs/kane-cli-testrun/): run every role's test in one command
+- [DevTools & Performance Testing](https://www.testmuai.com/docs/kane-cli-devtools-performance-testing): network, console, storage, and timing checks
+- [API Testing](https://www.testmuai.com/docs/api-testing-with-kane-cli): auth-token chaining and negative paths at the endpoint level
+- [Authentication](https://www.testmuai.com/docs/kane-cli-authentication): how Kane CLI itself signs in, locally and in CI
+- [Batch Runs](https://www.testmuai.com/docs/kane-cli-testrun): run every role's test in one command
 
 <KaneCliCta />

@@ -20,7 +20,7 @@ Nothing on a location is ever overwritten or deleted, so you cannot un-publish a
 Requires Kane CLI 0.8.14 or later.
 </Note>
 
-You share a store you already have. If you do not have one yet, `kane-cli context ingest <file> --mode ci` creates one from a first document; see [Building the context graph](/docs/kane-cli-assurance-context/). Then run:
+You share a store you already have. If you do not have one yet, `kane-cli context ingest <file> --mode ci` creates one from a first document; see [Building the context graph](https://www.testmuai.com/docs/kane-cli-assurance-context). Then run:
 
 ```bash
 kane-cli context sync setup     # guided: share this store, or join your team's
@@ -129,7 +129,7 @@ Two terms appear in the output of these commands:
 | `kane-cli context sync [name] [--answer <id>=<choice>]` | the everyday verb: finish an open rebase, pull, then push | the pull and push lines |
 | `kane-cli context clone <address> [dir] [--credential-env <VAR> \| --credential-file <path>]` | join: make a new store from a location, bound as `origin`. `dir` defaults to the location's last path segment (`team-context` for `../shared/team-context`), and the two flags pass an S3 key pair the same way `kane-cli context sync add` takes it | `cloned into …/bob: 2 records (1..2), 2 blobs, 0 proposals` |
 
-If you leave out `[name]`, the command uses the only location. If there are several, it uses the one called `origin`. Otherwise it asks you to name one. Every command takes `--mode agent` for an NDJSON stream; see [Agents and CI](/docs/kane-cli-assurance-automation/#the-sync-verbs-on-the-stream).
+If you leave out `[name]`, the command uses the only location. If there are several, it uses the one called `origin`. Otherwise it asks you to name one. Every command takes `--mode agent` for an NDJSON stream; see [Agents and CI](https://www.testmuai.com/docs/kane-cli-assurance-automation#the-sync-verbs-on-the-stream).
 
 <a id="tiers" />
 ### What the tier means
@@ -272,7 +272,7 @@ Exit codes:
 - `2`: a precondition is not met.
 - `1`: a record cannot be used.
 
-A refusal tells you what stopped; it does not mean nothing happened. `kane-cli context sync` finishes its pull before its push can be refused, and a push can land before its confirmation is lost. A refusal not listed in this table still tells you what stopped and what to run next. How an agent handles these codes is in [Agents and CI](/docs/kane-cli-assurance-automation/#the-sync-verbs-on-the-stream), and the entries a person meets most are in [Troubleshooting](/docs/kane-cli-troubleshooting/#context-sync-a-location-cannot-be-reached-or-refuses-you).
+A refusal tells you what stopped; it does not mean nothing happened. `kane-cli context sync` finishes its pull before its push can be refused, and a push can land before its confirmation is lost. A refusal not listed in this table still tells you what stopped and what to run next. How an agent handles these codes is in [Agents and CI](https://www.testmuai.com/docs/kane-cli-assurance-automation#the-sync-verbs-on-the-stream), and the entries a person meets most are in [Troubleshooting](https://www.testmuai.com/docs/kane-cli-troubleshooting#context-sync-a-location-cannot-be-reached-or-refuses-you).
 
 ## When two people changed the same thing {#rebase}
 
@@ -468,7 +468,7 @@ A `_test.md` file created by a reapplied record is **restored**, and the summary
 
 ## For agents and CI
 
-Every sync command in the table above takes `--mode agent` and emits NDJSON events: `sync_status`, `sync_pull_done`, `sync_push_done`, the `sync_rebase_*` events, `sync_error{code, detail, remedy}`, and `done` last. A rebase that stops on decisions ends with `done` carrying `paused`, and exit `3`. [Agents and CI](/docs/kane-cli-assurance-automation/#the-sync-verbs-on-the-stream) describes the events in full, and [CI/CD](/docs/kane-cli-cicd/#a-shared-context-store-in-ci) has the CI setup with a GitHub token or deploy key.
+Every sync command in the table above takes `--mode agent` and emits NDJSON events: `sync_status`, `sync_pull_done`, `sync_push_done`, the `sync_rebase_*` events, `sync_error{code, detail, remedy}`, and `done` last. A rebase that stops on decisions ends with `done` carrying `paused`, and exit `3`. [Agents and CI](https://www.testmuai.com/docs/kane-cli-assurance-automation#the-sync-verbs-on-the-stream) describes the events in full, and [CI/CD](https://www.testmuai.com/docs/kane-cli-cicd#a-shared-context-store-in-ci) has the CI setup with a GitHub token or deploy key.
 
 ## FAQ
 
@@ -476,9 +476,9 @@ Every sync command in the table above takes `--mode agent` and emits NDJSON even
 
 ## Next Steps
 
-- [Building the context graph](/docs/kane-cli-assurance-context/) for ingest, extract and review
-- [Agents and CI](/docs/kane-cli-assurance-automation/) for the headless contract, including the sync verbs
-- [Configuration](/docs/kane-cli-configuration/#context-sync-environment-variables) for the sync environment variables and on-disk paths
-- [Troubleshooting](/docs/kane-cli-troubleshooting/) for the sync entries
+- [Building the context graph](https://www.testmuai.com/docs/kane-cli-assurance-context) for ingest, extract and review
+- [Agents and CI](https://www.testmuai.com/docs/kane-cli-assurance-automation) for the headless contract, including the sync verbs
+- [Configuration](https://www.testmuai.com/docs/kane-cli-configuration#context-sync-environment-variables) for the sync environment variables and on-disk paths
+- [Troubleshooting](https://www.testmuai.com/docs/kane-cli-troubleshooting) for the sync entries
 
 <KaneCliCta />

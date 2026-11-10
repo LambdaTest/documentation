@@ -51,7 +51,7 @@ unzip -p <execution_id>.evidence tests/<test-id>/result.yaml
 
 ## When the pack itself looks wrong
 
-If a pack does not open, run [`kane-cli evidence validate`](/docs/kane-cli-evidence-validate/). An unsealed pack, for example from a run that was force-killed, gets the structure checks only and can still report as valid. A truncated pack cannot be read at all. In both cases, the run's pack is also in the session directory:
+If a pack does not open, run [`kane-cli evidence validate`](https://www.testmuai.com/docs/kane-cli-evidence-validate). An unsealed pack, for example from a run that was force-killed, gets the structure checks only and can still report as valid. A truncated pack cannot be read at all. In both cases, the run's pack is also in the session directory:
 
 ```text
 ~/.testmuai/kaneai/sessions/<session-id>/evidence/
@@ -59,7 +59,7 @@ If a pack does not open, run [`kane-cli evidence validate`](/docs/kane-cli-evide
 
 ## Next steps
 
-- [Pack structure](/docs/kane-cli-evidence-pack-structure/): where each artifact lives.
-- [Validating packs](/docs/kane-cli-evidence-validate/): check a suspect pack.
+- [Pack structure](https://www.testmuai.com/docs/kane-cli-evidence-pack-structure): where each artifact lives.
+- [Validating packs](https://www.testmuai.com/docs/kane-cli-evidence-validate): check a suspect pack.
 
 <KaneCliCta />

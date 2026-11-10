@@ -33,7 +33,7 @@ A one-line description of a feature is enough for Kane CLI to propose scenarios 
 3. Save the functional cases as `_test.md` files with `kane-cli generate --save --req <id>`. Kane CLI writes them to `.testmuai/tests/<suite>/<scenario>/<case>_test.md`.
 4. Run a saved case with `kane-cli testmd run <path-to-case>_test.md`, or the whole folder with `kane-cli testrun run --match '^.testmuai/tests/<suite>/'`.
 
-See [Generate Test Cases](/docs/kane-cli-generate/) for the three modes and every option.
+See [Generate Test Cases](https://www.testmuai.com/docs/kane-cli-generate) for the three modes and every option.
 
 ## Generate test cases from a screenshot or a spec
 
@@ -65,7 +65,7 @@ A suite that cannot say which requirement each test proves is hard to trust and 
 6. Run `kane-cli cover` to see what the evidence pack proved and what the design still owes.
 7. When a requirement document changes, run `kane-cli maintain` to bring the suite back in line.
 
-See [Assurance](/docs/kane-cli-assurance/) for the loop, the vocabulary, and what costs credits.
+See [Assurance](https://www.testmuai.com/docs/kane-cli-assurance) for the loop, the vocabulary, and what costs credits.
 
 ## Explore an app and design tests from what it finds
 
@@ -86,7 +86,7 @@ Exploratory testing finds the screens and flows that a written suite never menti
 4. Open the map with `kane-cli explore view --project <project-id>` to see the screens and flows it found.
 5. Move the tests it designed into a folder and run them like any other suite.
 
-For an app behind a login, on localhost, or on a private network, see [Exploration](/docs/kane-cli-exploration/#an-app-behind-a-login).
+For an app behind a login, on localhost, or on a private network, see [Exploration](https://www.testmuai.com/docs/kane-cli-exploration#an-app-behind-a-login).
 
 ## Watch for product bugs while tests are authored
 
@@ -96,13 +96,13 @@ The first run of a new test is the moment Kane CLI sees the page for the first t
 2. Read the confirmed bugs in the run result and the evidence pack, each with the step where it was found.
 3. Switch to `--bug-detection stop` when a confirmed bug should end the run.
 
-See [Bug detection](/docs/kane-cli-configuration/#bug-detection).
+See [Bug detection](https://www.testmuai.com/docs/kane-cli-configuration#bug-detection).
 
 ## Next steps
 
-- [Generate Test Cases](/docs/kane-cli-generate/): modes, options, and the shape of a result
-- [Assurance](/docs/kane-cli-assurance/): requirement-linked design, coverage, and maintenance
-- [Exploration](/docs/kane-cli-exploration/): policies, sign-in, private apps, and the map
-- [Regression & E2E Testing](/docs/kane-cli-regression-e2e-testing/): keep the generated tests running on every build
+- [Generate Test Cases](https://www.testmuai.com/docs/kane-cli-generate): modes, options, and the shape of a result
+- [Assurance](https://www.testmuai.com/docs/kane-cli-assurance): requirement-linked design, coverage, and maintenance
+- [Exploration](https://www.testmuai.com/docs/kane-cli-exploration): policies, sign-in, private apps, and the map
+- [Regression & E2E Testing](https://www.testmuai.com/docs/kane-cli-regression-e2e-testing): keep the generated tests running on every build
 
 <KaneCliCta />

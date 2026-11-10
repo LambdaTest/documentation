@@ -10,7 +10,7 @@ import { KaneCliCta } from "/snippets/KaneCliCta.mdx";
 
 `kane-cli cover` measures coverage on two independent axes over the same store:
 
-- **Depth** is what a real execution **proved**. It is read from the coverage records inside an [evidence pack](/docs/kane-cli-evidence/). These are facts sealed into the pack along with their verdicts, and `cover` never recomputes them.
+- **Depth** is what a real execution **proved**. It is read from the coverage records inside an [evidence pack](https://www.testmuai.com/docs/kane-cli-evidence). These are facts sealed into the pack along with their verdicts, and `cover` never recomputes them.
 - **Completeness** is what the design still **owes**. It is computed live from the `.context/` graph and never reads packs. Even a perfect pack can leave a criterion unverified or a use-case tested only on its happy path.
 
 A run can look green and still leave coverage missing. The two axes make that situation visible.
@@ -62,7 +62,7 @@ The ribbon is a high-level view by design. It has:
 
 The ribbon shows no AC rows, commands, or lists of gaps; that detail lives in the dossier. When nothing has run yet, the all-clear reads `designed · nothing run yet`. The ribbon only says "proven" when every criterion's verifying test actually passed. Piped output follows the same structure; only the color and the width-responsive layout differ.
 
-If you deferred a change during a [reconcile review](/docs/kane-cli-assurance-maintain/#reconcile), it still shows up here: in the ribbon's debt counts, and as a pending row in the dossier and the `--json` document, with the reconcile command as its fix. Deferring postpones a decision; it never hides one.
+If you deferred a change during a [reconcile review](https://www.testmuai.com/docs/kane-cli-assurance-maintain#reconcile), it still shows up here: in the ribbon's debt counts, and as a pending row in the dossier and the `--json` document, with the reconcile command as its fix. Deferring postpones a decision; it never hides one.
 
 ### `cover gaps <uc-id>`: the dossier
 
@@ -94,13 +94,13 @@ Both `cover` and `cover gaps` take `--mode agent|ci`. The run then uses the same
 - `done` is always last, and `done`'s `next[]` carries the worklist's commands, ready to paste.
 - A refusal is an `error` event plus `done`, with exit `2`.
 
-See [Automation](/docs/kane-cli-assurance-automation/).
+See [Automation](https://www.testmuai.com/docs/kane-cli-assurance-automation).
 
 ## The join: how a pack knows your graph
 
 Every per-test result in an evidence pack carries a `definition_id`: a hash of the resolved test definition, identical to the one design stamps on each test it writes. A pack is matched to your graph by this hash and nothing else, so there are no ids to sync and no registry to maintain.
 
-If you edit a test by hand, it hashes differently and stops matching until the graph catches up. That happens on the test's next run, which records the edit as a superseding version and restores the link. A redesign ([`design tests --force`](/docs/kane-cli-assurance-design/#re-runs) or [`maintain evolve`](/docs/kane-cli-assurance-maintain/#evolve)) re-stamps the hash in the same way.
+If you edit a test by hand, it hashes differently and stops matching until the graph catches up. That happens on the test's next run, which records the edit as a superseding version and restores the link. A redesign ([`design tests --force`](https://www.testmuai.com/docs/kane-cli-assurance-design#re-runs) or [`maintain evolve`](https://www.testmuai.com/docs/kane-cli-assurance-maintain#evolve)) re-stamps the hash in the same way.
 
 Coverage records are added to packs automatically whenever the project has a `.context/` store. The inline `run`/`testmd` path and `testrun` both write them before sealing the pack. A project without a store gets packs with no coverage records, exactly as if assurance were not in use. If writing the coverage records fails, the pack is still sealed.
 
@@ -109,8 +109,8 @@ Coverage records are added to packs automatically whenever the project has a `.c
 A freshly designed test has never been executed, and the tools say so:
 
 1. `kane-cli design tests` writes `t-…_test.md` files. They are runnable, but they have no recording yet.
-2. [`kane-cli testrun`](/docs/kane-cli-testrun/) accepts them anyway. At preflight, each test in the run is classified as **replay** (authored before) or **author** (fresh). Author tests run on their own, with the agent authoring each one in a real browser. After both passes, a **best-effort consolidation** merges the evidence into one published execution, recomputes coverage, and syncs the facts into the graph. If consolidation cannot complete (for example, the run was cancelled or the merge degrades), the evidence is kept split rather than lost.
-3. [`kane-cli testmd run <file>`](/docs/kane-cli-testmd-running/) authors one test on its own.
+2. [`kane-cli testrun`](https://www.testmuai.com/docs/kane-cli-testrun) accepts them anyway. At preflight, each test in the run is classified as **replay** (authored before) or **author** (fresh). Author tests run on their own, with the agent authoring each one in a real browser. After both passes, a **best-effort consolidation** merges the evidence into one published execution, recomputes coverage, and syncs the facts into the graph. If consolidation cannot complete (for example, the run was cancelled or the merge degrades), the evidence is kept split rather than lost.
+3. [`kane-cli testmd run <file>`](https://www.testmuai.com/docs/kane-cli-testmd-running) authors one test on its own.
 4. Either way, an authored test replays like any other, and its verdicts join the pack through `definition_id`. `testrun --from-context` selects tests by their assurance test ids and follows edit supersessions, so a superseded test stays connected. Only tombstoned (deleted) tests are excluded.
 
 Until a test's first authored run, `cover` reports its criteria as *covered on paper, not yet proven in execution* (`covered_by` present, execution `not-run`). This is intentional: a designed test is a claim until a run proves it.
@@ -121,8 +121,8 @@ A pack's coverage record is one YAML file you can read, diff, and archive. It ha
 
 ## Next steps
 
-- [The authoring bridge in practice](/docs/kane-cli-assurance-design/#from-design-to-execution): design, author, then run in batches.
-- [Maintaining the suite](/docs/kane-cli-assurance-maintain/): act on what the gaps list tells you.
-- [Evidence packs](/docs/kane-cli-evidence/): everything else inside a pack.
+- [The authoring bridge in practice](https://www.testmuai.com/docs/kane-cli-assurance-design#from-design-to-execution): design, author, then run in batches.
+- [Maintaining the suite](https://www.testmuai.com/docs/kane-cli-assurance-maintain): act on what the gaps list tells you.
+- [Evidence packs](https://www.testmuai.com/docs/kane-cli-evidence): everything else inside a pack.
 
 <KaneCliCta />

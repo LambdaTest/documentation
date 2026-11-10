@@ -11,7 +11,7 @@ import { KaneCliCta } from "/snippets/KaneCliCta.mdx";
 
 Kane CLI saves its settings in `~/.testmuai/kaneai/tui-config.json`. You change most settings with `kane-cli config` subcommands. A few also have interactive pickers in TUI mode, and one (code export) is switched on and off from the TUI menu.
 
-This page covers the settings saved in `tui-config.json`. Authentication credentials are stored separately under `~/.testmuai/kaneai/profiles/`. See [Authentication](/docs/kane-cli-authentication/).
+This page covers the settings saved in `tui-config.json`. Authentication credentials are stored separately under `~/.testmuai/kaneai/profiles/`. See [Authentication](https://www.testmuai.com/docs/kane-cli-authentication).
 
 ---
 
@@ -65,7 +65,7 @@ Every field in `tui-config.json`:
 | `folder_id` | string \| null | `null` | <BrandName /> Test Manager folder ID for upload | `kane-cli config folder [id]` |
 | `folder_name` | string \| null | `null` | Display name of the selected folder (set automatically by the picker) | Set by `kane-cli config folder` |
 | `mode` | `"action"` \| `"testing"` | `"testing"` | Agent behaviour when the run hits an authentication wall, blocked page, or error page. See [Mode](#mode). | `kane-cli config set-mode <action\|testing>` |
-| `target` | `"desktop"` \| `"emulator"` \| `"simulator"` \| `"android"` \| `"ios"` | `"desktop"` | Default run target. `desktop` runs the Chrome browser, the default. `emulator` and `simulator` run against a virtual Android or iOS device on this machine (macOS Apple Silicon only). Other hosts use [`testrun run --remote`](/docs/kane-cli-remote-execution/). `android` and `ios` run on a [real device](/docs/kane-cli-mobile-real-device/) in the <BrandName /> cloud from any machine. Changing the target clears the saved device and app. See [Mobile Target](#mobile-target). | `kane-cli config set-target <desktop\|emulator\|simulator\|android\|ios>` |
+| `target` | `"desktop"` \| `"emulator"` \| `"simulator"` \| `"android"` \| `"ios"` | `"desktop"` | Default run target. `desktop` runs the Chrome browser, the default. `emulator` and `simulator` run against a virtual Android or iOS device on this machine (macOS Apple Silicon only). Other hosts use [`testrun run --remote`](https://www.testmuai.com/docs/kane-cli-remote-execution). `android` and `ios` run on a [real device](https://www.testmuai.com/docs/kane-cli-mobile-real-device) in the <BrandName /> cloud from any machine. Changing the target clears the saved device and app. See [Mobile Target](#mobile-target). | `kane-cli config set-target <desktop\|emulator\|simulator\|android\|ios>` |
 | `device_name` | string \| null | `null` | Default mobile device, by the name `kane-cli devices list --target <kind>` prints. Pairs with `os_version`. When empty, a TTY run prompts once and saves the choice. A non-interactive run needs `--device-name` or this key set. Ignored on the `desktop` target. | `kane-cli config set-device-name <name>` |
 | `os_version` | string \| null | `null` | OS version of the default mobile device (`14`, `17.5`). Required alongside `device_name`. | `kane-cli config set-os-version <version>` |
 | `app` | string \| null | `null` | Default app under test for mobile runs: a build path (`.apk` or `.zip` for emulator and simulator, `.apk` or `.aab` for android, `.ipa` for ios) or an uploaded app id. Ignored on the `desktop` target. | `kane-cli config set-app <path\|APPid>` |
@@ -106,7 +106,7 @@ You can pass a bare domain, and Kane CLI adds the scheme: `config set-url exampl
 
 In TUI mode, set the same value with `/config set-url <url>`, or pick **Default URL** from the interactive `/config` menu.
 
-If none of these three sources supplies a URL, Kane CLI uses a site named in the objective itself (for example, "Go to amazon.com and …"). If there is still no start URL, an interactive terminal asks you for one, and a non-interactive (CI) run fails. To let a non-interactive run start from the browser's current page instead, pass `--allow-missing-url`. See [Run options](/docs/kane-cli-modes/#run-options).
+If none of these three sources supplies a URL, Kane CLI uses a site named in the objective itself (for example, "Go to amazon.com and …"). If there is still no start URL, an interactive terminal asks you for one, and a non-interactive (CI) run fails. To let a non-interactive run start from the browser's current page instead, pass `--allow-missing-url`. See [Run options](https://www.testmuai.com/docs/kane-cli-modes#run-options).
 
 ### Test Manager Project
 
@@ -122,11 +122,11 @@ You can also set a project ID directly without the picker:
 kane-cli config project <project-id>
 ```
 
-In a non-interactive shell (CI, pipes), pass an explicit `<project-id>`. To discover the right ID first, use `kane-cli projects list` (see [Test Manager Integration](/docs/kane-cli-tms-integration/)).
+In a non-interactive shell (CI, pipes), pass an explicit `<project-id>`. To discover the right ID first, use `kane-cli projects list` (see [Test Manager Integration](https://www.testmuai.com/docs/kane-cli-tms-integration)).
 
-If you do not configure a project, Kane CLI picks a sensible default when your first run starts. See [Auto-default on first run](/docs/kane-cli-tms-integration/#auto-default-on-first-run).
+If you do not configure a project, Kane CLI picks a sensible default when your first run starts. See [Auto-default on first run](https://www.testmuai.com/docs/kane-cli-tms-integration#auto-default-on-first-run).
 
-See [Test Manager Integration](/docs/kane-cli-tms-integration/) for how project selection feeds into uploads.
+See [Test Manager Integration](https://www.testmuai.com/docs/kane-cli-tms-integration) for how project selection feeds into uploads.
 
 ### Test Manager Folder
 
@@ -142,9 +142,9 @@ To set a folder ID without the picker:
 kane-cli config folder <folder-id>
 ```
 
-To look up folder IDs from a script or another non-interactive shell, use `kane-cli folders list`. See [Test Manager Integration](/docs/kane-cli-tms-integration/).
+To look up folder IDs from a script or another non-interactive shell, use `kane-cli folders list`. See [Test Manager Integration](https://www.testmuai.com/docs/kane-cli-tms-integration).
 
-See [Test Manager Integration](/docs/kane-cli-tms-integration/) for how folder selection feeds into uploads.
+See [Test Manager Integration](https://www.testmuai.com/docs/kane-cli-tms-integration) for how folder selection feeds into uploads.
 
 ### Self-healing for stale IDs
 
@@ -180,11 +180,11 @@ kane-cli config set-app ./builds/app-debug.apk
   - `kane-cli config set-device-stream on|off` turns the real-device live view on or off. The live view is a view-only picture of the device screen in its own Chrome window.
   - `kane-cli config set-auto-grant-permissions on|off` (Android) and `kane-cli config set-auto-accept-alerts on|off` (iOS) change the setting for the saved target. Real and virtual devices keep separate values.
 
-  See [Real Devices](/docs/kane-cli-mobile-real-device/).
+  See [Real Devices](https://www.testmuai.com/docs/kane-cli-mobile-real-device).
 - **`device_name`** and **`os_version`**: the device a mobile run uses, named exactly as `kane-cli devices list --target <kind>` prints it. On an emulator or simulator, a name needs a version, and a version on its own matches any device on that version. On a real device, either one alone is enough. With neither, the device hub (the cloud service that hands out real devices) picks one. When these are unset, an interactive run asks once and saves your choice. Non-interactive runs need them set, either here or with `--device-name` and `--os-version`.
 - **`app`**: the app under test for a mobile run. Use a build path (emulator `.apk`, simulator `.zip`, android `.apk` or `.aab`, ios `.ipa`) or an uploaded app id, which is `APP` followed by six or more digits. Every mobile run requires an app. On the `desktop` target, the device settings and `app` are ignored.
 
-A run uses these settings as its defaults. To override any of them for a single run, pass `--target`, `--device-name`, `--os-version`, or `--app`. Setup steps and the full list of accepted app formats are in [Mobile Testing](/docs/kane-cli-mobile/). These defaults describe *local* devices. A [`testrun run --remote`](/docs/kane-cli-remote-execution/) run picks its device from the grid catalog with the same two flags (`--device-name` and `--os-version`).
+A run uses these settings as its defaults. To override any of them for a single run, pass `--target`, `--device-name`, `--os-version`, or `--app`. Setup steps and the full list of accepted app formats are in [Mobile Testing](https://www.testmuai.com/docs/kane-cli-mobile). These defaults describe *local* devices. A [`testrun run --remote`](https://www.testmuai.com/docs/kane-cli-remote-execution) run picks its device from the grid catalog with the same two flags (`--device-name` and `--os-version`).
 
 ### Bug detection
 
@@ -196,7 +196,7 @@ kane-cli config set-bug-detection continue
 
 - **`off`** (default): the agent does not watch for product bugs.
 - **`stop`**: a confirmed product bug fails the step and ends the run.
-- **`continue`**: the confirmed bug is recorded (in the run result and the [evidence pack](/docs/kane-cli-evidence/)) and the run keeps going.
+- **`continue`**: the confirmed bug is recorded (in the run result and the [evidence pack](https://www.testmuai.com/docs/kane-cli-evidence)) and the run keeps going.
 
 This setting applies to **authoring** steps only. Replayed steps do not need it, because a failed replay is always investigated automatically.
 
@@ -220,7 +220,7 @@ There is no `kane-cli config` subcommand for code export. Change it in one of th
   - `--code-language <lang>` to pick the output language (`python` or `javascript`; default `python`)
   - `--skip-code-validation` / `--no-skip-code-validation` to skip or run the worker-side validation after code is generated
 
-Code export needs a Test Manager upload, and a project and folder that you configured or that Kane CLI picked by default. The `mode` setting does not affect uploads; it controls only agent behaviour. See [Test Manager Integration](/docs/kane-cli-tms-integration/) for the full upload pipeline.
+Code export needs a Test Manager upload, and a project and folder that you configured or that Kane CLI picked by default. The `mode` setting does not affect uploads; it controls only agent behaviour. See [Test Manager Integration](https://www.testmuai.com/docs/kane-cli-tms-integration) for the full upload pipeline.
 
 ---
 
@@ -271,13 +271,13 @@ A few environment variables control how Kane CLI finds and launches Chrome. Kane
 | `KANE_CLI_CDP_TIMEOUT_MS` | Per-attempt timeout, in milliseconds, for Chrome to become reachable over the DevTools Protocol. Default `30000`. Raise it on slow or cold CI runners. |
 | `KANE_CLI_CDP_RETRIES` | Extra Chrome launch attempts after the first when CDP readiness fails. Default `2` (so up to three attempts total); set `0` for a single attempt. Each retry uses a short backoff. |
 
-CDP is the Chrome DevTools Protocol, which Kane CLI uses to connect to Chrome. The CDP timeout and retry settings affect only temporary launch failures, where Chrome started but did not become reachable in time. A missing or invalid binary fails immediately without retrying. See [Chrome failed to launch](/docs/kane-cli-troubleshooting/#chrome-failed-to-launch) for the matching troubleshooting steps.
+CDP is the Chrome DevTools Protocol, which Kane CLI uses to connect to Chrome. The CDP timeout and retry settings affect only temporary launch failures, where Chrome started but did not become reachable in time. A missing or invalid binary fails immediately without retrying. See [Chrome failed to launch](https://www.testmuai.com/docs/kane-cli-troubleshooting#chrome-failed-to-launch) for the matching troubleshooting steps.
 
 ---
 
 ## Context sync environment variables
 
-[Sharing the context graph](/docs/kane-cli-assurance-sharing/) uses the following environment variables. It never reads these values from `tui-config.json`.
+[Sharing the context graph](https://www.testmuai.com/docs/kane-cli-assurance-sharing) uses the following environment variables. It never reads these values from `tui-config.json`.
 
 | Variable | Effect |
 |----------|--------|
