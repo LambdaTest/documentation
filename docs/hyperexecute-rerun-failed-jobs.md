@@ -107,7 +107,6 @@ When a job finishes with failures, you do not have to trigger the whole pipeline
 
 :::info On-premise deployments
 Rerun is available on-prem, with the same [prerequisites](#prerequisites). If you do not see it on a failed job, check that the job's code came from Git and that it used YAML version 0.1. See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/).
-{/* TODO(verify): whether tunnel checks are skipped on rerun on-prem. */}
 :::
 
 ## Two ways to rerun a job

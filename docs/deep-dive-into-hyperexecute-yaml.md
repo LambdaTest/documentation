@@ -2744,7 +2744,7 @@ tunnel: true
 ***
 
 :::info On-premise deployments
-On-premise, test machines already run inside your network, so most teams do not need a tunnel. Tunnel settings are ignored for jobs started from a Workflow or the Trigger API.
+On-premise, test machines already run inside your network, so most teams do not need a tunnel.
 :::
 
 ### `tunnelOpts`

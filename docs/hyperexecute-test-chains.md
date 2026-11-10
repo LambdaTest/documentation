@@ -196,7 +196,7 @@ You can link this workflow to other existing workflows within the same project o
 <img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/test-chains/2.png').default} alt="Image" className="doc_img"/>
 
 :::info On-premise deployments
-On-prem, select both the target project (**Select Project**) and the target workflow (**Select Workflow**) before you click **Finish**. Tunnel settings are ignored for jobs started by a workflow, which includes jobs started through a chain. See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/).
+On-prem, select both the target project (**Select Project**) and the target workflow (**Select Workflow**) before you click **Finish**. See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/).
 :::
 
 ## Conclusion

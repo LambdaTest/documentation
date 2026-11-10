@@ -127,7 +127,7 @@ To configure automatic session expiry for your organization, navigate to **Organ
 :::
 
 :::info On-premise deployments
-On-prem, open **Settings** from your organization's own HyperExecute dashboard. [Global Policies](/support/docs/hyperexecute-global-policies/) need a Project Scope on-prem. See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/).
+On-prem, open **Settings** from your organization's own HyperExecute dashboard. See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/).
 :::
 
 <nav aria-label="breadcrumbs">

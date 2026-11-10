@@ -204,7 +204,7 @@ Creating, editing, and deleting policies is **admin-only**. Developers can see w
 Policies are **API-first**, so you can create and maintain them from your automation (Harness, Jenkins, a Git-managed script) exactly like the rest of your pipeline. You can also manage them from the <BrandName /> dashboard under [Org Product Preferences](/support/docs/hyperexecute-org-product-preferences/).
 
 :::info On-premise deployments
-Project Scope is required on-prem (see [Step 2: Project Scope](#step-2-project-scope)). On-prem runs Linux and Windows only, so a `mac` command block is never used, and `default` should name `linux` or `win`. See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/).
+On-prem runs Linux and Windows only, so a `mac` command block is never used, and `default` should name `linux` or `win`. See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/).
 :::
 
 ## What a policy is
@@ -300,10 +300,6 @@ The **Project Scope** tab decides where the rule applies. It has two controls th
 2. The **Exclude Specific Projects** toggle lets you leave a few projects out of that base set.
 
 Between them, you can set up any pattern: from "every project, no exceptions" to "just these projects, minus one."
-
-:::info On-premise deployments
-Project Scope is required on-prem. Set the **Scope** before you save the policy, or the policy is not created.
-:::
 
 #### Including: All Projects or a specific list
 

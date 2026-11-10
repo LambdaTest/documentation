@@ -192,7 +192,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
 ***
 
 :::info On-premise deployments
-On-prem runs Linux and Windows only, so do not set `runson` to a macOS value. Tunnel settings are ignored for jobs started by a Workflow or the Trigger API. See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/).
+On-prem runs Linux and Windows only, so do not set `runson` to a macOS value. See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/).
 :::
 
 ## 1. I want to run all my feature files and scenarios listed in a folder. How can I do that without listing all of them explicitly in the YAML file?
@@ -275,10 +275,6 @@ preDirectives:
 > **Note**: The variables ‘LT_PROXY_HOST’ and ‘LT_PROXY_PORT’ are exposed with the tunnel proxy value by default on HyperExecute machines when the tunnel flag is set to _true_ in the HyperExecute YAML. 
 
 ***
-
-:::info On-premise deployments
-On-prem, tunnel settings are ignored for jobs started by a Workflow or the Trigger API, so the machines in your deployment must reach the artifactory directly.
-:::
 
 ## 4. How can I install and set a private node registry on the HyperExecute Machine?
 

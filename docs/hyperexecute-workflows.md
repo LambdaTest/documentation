@@ -101,7 +101,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 Workflows give you the speed, reliability, and platform‑native orchestration of HyperExecute on a schedule. Think of Workflows as a lightweight, cloud-native alternative and companion to CI/CD, with all the functionalities of HyperExecute such as reporting, RCA etc.
 
 :::info On-premise deployments
-Tunnel settings are ignored for jobs started by a workflow. When you link workflows, select both **Select Project** and **Select Workflow** before you click **Finish**. See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/).
+When you link workflows, select both **Select Project** and **Select Workflow** before you click **Finish**. See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/).
 :::
 
 ## Why Workflows
