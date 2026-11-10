@@ -66,9 +66,8 @@ Read this table once before you start. Most "it works on SaaS but not here" issu
 | Operating systems | Linux, Windows and macOS | Linux and Windows. See [Private Cloud benefits](/support/docs/hyperexecute-private-cloud-benefits/) |
 | Environments | Managed by <BrandName /> | Defined by your admin. Jobs with no environment fall back to the org default |
 | Test discovery | `mode: local` or `mode: remote` | `mode: remote` only |
-| Tunnel | Used when tests need to reach private apps | Usually not needed. Tunnel settings are ignored for jobs started from a Workflow or the Trigger API |
 | Git access | Marketplace GitHub App or tokens | Depends on how your deployment is set up, for example your own or a dedicated GitHub App. Ask your admin which Git providers you can use |
-| Analytics | Full Intelligent Test Analytics | Not available. Use job reports, the job **Insights (Beta)** tab and the Organisation Summary |
+| Analytics | Full Intelligent Test Analytics | Not available (see [Private Cloud benefits](/support/docs/hyperexecute-private-cloud-benefits/)). Use job reports, the job **Insights (Beta)** tab and the Organisation Summary |
 | Access checks | Checked by <BrandName /> | RBAC and project checks run inside your deployment |
 
 ## The end-to-end journey
@@ -95,7 +94,7 @@ Collect these from your admin before step 1. Missing any of them is the most com
 - [ ] Your **on-prem dashboard URL**.
 - [ ] Your **on-prem host** value for the CLI. You can also copy it from **Help** > **Hyperexecute CLI** once you can sign in.
 - [ ] A dashboard login. Your username and access key come from the dashboard itself (step 1).
-- [ ] Your **role** (Org Admin, Project Admin or member). Workflow status changes need an admin role.
+- [ ] Your **role** (Org Admin, Project Admin or member).
 - [ ] **Proxy details**, if your machine reaches the network through a corporate proxy.
 - [ ] Access to the **Git repository** that holds your tests, connected to HyperExecute by your admin. Supported Git providers depend on your deployment, so confirm yours is connected.
 - [ ] The **environment** name your tests should run in, if it is not the org default.
@@ -267,7 +266,6 @@ Full feature reference: [Workflows](/support/docs/hyperexecute-workflows/), [Tes
 
 **On-prem specifics:**
 
-- Tunnel settings in the YAML are ignored for jobs started by a workflow, so you do not need a tunnel for these runs.
 - When you link workflows, select both the target project (**Select Project**) and the target workflow (**Select Workflow**) before you click **Finish**.
 - If you change only Workflow Variables while editing, confirm they show your new values after you save.
 
@@ -295,8 +293,6 @@ Pause a workflow when the target environment is down for maintenance, during a c
 
 A paused workflow keeps its schedule, end date and variables, but triggers no new jobs. To run it again on its schedule, open the same **Status** menu on the workflow row and set it back to **Active**.
 
-{/* TODO(verify): who can pause (role), exact label of the resume option, behaviour of Play while paused, and whether runs missed during the pause are replayed. */}
-
 ### Bring back an expired workflow
 
 You cannot set **Expired** by hand. Click the **...** menu on the workflow row, choose **Edit Workflow**, and move **Workflow ends on** into the future. The same menu has **Clone Workflow** and **Delete Workflow**.
@@ -321,7 +317,6 @@ Admins define which environments exist and which OS queue each framework uses. A
 
 - Jobs that do not name an environment use the org default.
 - Admins can map Linux frameworks to different queues for each environment.
-{/* TODO(verify): browser version fallback on-prem (exact or latest-N when installed, else latest). Add back once confirmed. */}
 
 ## Common scenarios
 
@@ -409,7 +404,6 @@ Every feature below works on-prem unless the page or this guide says otherwise. 
 | Network | [Tunnel configuration](/support/docs/hyperexecute-how-to-configure-tunnel/), [Background services](/support/docs/hyperexecute-background-services/), [sourcePayload](/support/docs/hyperexecute-how-to-configure-sourcePayload/) |
 | Administration | [Global Policies](/support/docs/hyperexecute-global-policies/), [Org product preferences](/support/docs/hyperexecute-org-product-preferences/), [GitHub App integration](/support/docs/hyperexecute-github-app-integration/), [Organisation Summary](/support/docs/hyperexecute-organisation-summary-dashboard/) |
 | Deployment | [HyperExecute Private Cloud](/support/docs/hyperexecute-private-cloud-setup/), [Private Cloud benefits](/support/docs/hyperexecute-private-cloud-benefits/), [Release notes](/support/docs/hyperexecute-release-notes/) |
-
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
