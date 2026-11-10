@@ -20,29 +20,6 @@ canonical: https://www.testmuai.com/support/docs/appveyor-ci-integration/
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import VerifiedTag from '@site/src/component/verifiedTag';
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "TestMu AI",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "AppVeyor CI Integration",
-          "item": `${BRAND_URL}/support/docs/appveyor-ci-integration/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -173,16 +150,3 @@ Below is the step-by-step execution of the AppVeyor CI pipeline.
 
 > Deploy your code in a reliable manner at scale using AppVeyor CI integration with <BrandName />, and ensure it looks robust across every browser to provide a seamless user experience to all your visitors. If you have any doubt, please feel free to reach out to us via **24/7 chat support** or by mailing to us on [support@testmuai.com](mailto:support@testmuai.com). Happy testing! 
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href={BRAND_URL}>Home</a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_ self" href={`${BRAND_URL}/support/docs/`}>Support</a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link"> AppVeyor CI Integration with <BrandName /></span>
-    </li>
-  </ul>
-</nav>

@@ -21,28 +21,6 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import VerifiedTag from '@site/src/component/verifiedTag';
 
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://www.testmuai.com"
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": "https://www.testmuai.com/support/docs/"
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Remote runs on the cloud grid",
-          "item": "https://www.testmuai.com/support/docs/kane-cli-remote-execution/"
-        }]
-      }) }}
-></script>
 
 `kane-cli testrun run --remote` dispatches a suite of `_test.md` files to <BrandName /> **HyperExecute** instead of running it on your machine. The grid provisions the runtime, runs every member, and streams the job back to your terminal: one job, one exit code, one sealed [evidence pack](/support/docs/kane-cli-evidence/), and the same recordings and evidence you get from a run on your own machine.
 
