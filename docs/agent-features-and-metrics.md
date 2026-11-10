@@ -13,7 +13,7 @@ keywords:
  - image analyzer agent
  - agent testing
 url: https://www.testmuai.com/support/docs/agent-features-and-metrics/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: agent-features-and-metrics/
 canonical: https://www.testmuai.com/support/docs/agent-features-and-metrics/
 ---
@@ -126,7 +126,7 @@ The platform supports **5 agent types**, each designed for a specific testing sc
 
 <br />
 
-#### 📄 Workflow-Based Test Generation
+### 📄 Workflow-Based Test Generation
 
 Connect your knowledge sources and let the platform auto-generate test scenarios, no manual scripting needed.
 
@@ -137,7 +137,7 @@ Connect your knowledge sources and let the platform auto-generate test scenarios
 
 <br />
 
-#### 🎭 Scenario Management
+### 🎭 Scenario Management
 
 Build and manage the exact conversations you want to test, manually or via AI.
 
@@ -151,7 +151,7 @@ Build and manage the exact conversations you want to test, manually or via AI.
 
 <br />
 
-#### 🗂️ Test Suites
+### 🗂️ Test Suites
 
 Group related scenarios together and track results over time.
 
@@ -162,7 +162,7 @@ Group related scenarios together and track results over time.
 
 <br />
 
-#### 🔌 Endpoint Profiles
+### 🔌 Endpoint Profiles
 
 Configure how the platform connects to your agent's API, supporting everything from simple REST calls to multi-phase auth flows.
 
@@ -177,7 +177,7 @@ Configure how the platform connects to your agent's API, supporting everything f
 
 <br />
 
-#### 🗃️ Test Profiles (Test Data)
+### 🗃️ Test Profiles (Test Data)
 
 Create reusable data sets to power data-driven testing across multiple scenarios.
 
@@ -188,7 +188,7 @@ Create reusable data sets to power data-driven testing across multiple scenarios
 
 <br />
 
-#### 🧪 Playground
+### 🧪 Playground
 
 Interactively test your agent configuration before running a full evaluation suite.
 
@@ -199,18 +199,18 @@ Interactively test your agent configuration before running a full evaluation sui
 
 <br />
 
-#### ⚡ Evaluation Execution
+### ⚡ Evaluation Execution
 
 Run evaluations at scale with real-time feedback on your agent's quality.
 
 - **Metric Selection**: Choose which quality metrics to evaluate (or run all)
 - **Endpoint Profile Selection**: Pick which endpoint profile to evaluate against
-- **HyperExecute Integration**: Run evaluations at scale using LambdaTest's HyperExecute infrastructure with optional tunnel configuration for testing agents behind firewalls or private networks
+- **HyperExecute Integration**: Run evaluations at scale using TestMu AI's HyperExecute infrastructure with optional tunnel configuration for testing agents behind firewalls or private networks
 - **Real-Time Streaming**: Live progress updates during evaluation via Server-Sent Events
 
 <br />
 
-#### 🎚️ Metric Threshold Configuration
+### 🎚️ Metric Threshold Configuration
 
 Define exactly what "passing" means for your project, then enforce it automatically.
 
@@ -221,7 +221,7 @@ Define exactly what "passing" means for your project, then enforce it automatica
 
 <br />
 
-#### 🚦 Go-Live Assessment
+### 🚦 Go-Live Assessment
 
 Get a clear, defensible production-readiness verdict before you ship.
 
@@ -247,7 +247,7 @@ Get a clear, defensible production-readiness verdict before you ship.
 
 <br />
 
-#### 🗓️ Scheduled Runs
+### 🗓️ Scheduled Runs
 
 Automate ongoing regression coverage without manual intervention.
 
@@ -369,7 +369,7 @@ Same **9 quality metrics** as the Chat agent:
 
 <br />
 
-#### 📞 Phone Number Management
+### 📞 Phone Number Management
 
 Register and manage the phone numbers your voice agent answers on.
 
@@ -380,7 +380,7 @@ Register and manage the phone numbers your voice agent answers on.
 
 <br />
 
-#### 🎭 Scenario Management
+### 🎭 Scenario Management
 
 Generate realistic inbound call scenarios at scale with AI or build them manually.
 
@@ -392,7 +392,7 @@ Generate realistic inbound call scenarios at scale with AI or build them manuall
 
 <br />
 
-#### 🎙️ Voice Configuration (Per Scenario)
+### 🎙️ Voice Configuration (Per Scenario)
 
 Control every detail of how the simulated caller sounds and behaves.
 
@@ -405,7 +405,7 @@ Control every detail of how the simulated caller sounds and behaves.
 
 <br />
 
-#### 👤 Agent Profiles (Inbound-Specific)
+### 👤 Agent Profiles (Inbound-Specific)
 
 Create reusable caller personas to standardize how test calls are placed across suites.
 
@@ -415,7 +415,7 @@ Create reusable caller personas to standardize how test calls are placed across 
 
 <br />
 
-#### 🗂️ Test Suites
+### 🗂️ Test Suites
 
 Batch your inbound scenarios into suites and run them all with a single action.
 
@@ -426,7 +426,7 @@ Batch your inbound scenarios into suites and run them all with a single action.
 
 <br />
 
-#### 📡 Call Execution & Monitoring
+### 📡 Call Execution & Monitoring
 
 Trigger, track, and manage live test calls in real-time.
 
@@ -440,7 +440,7 @@ Trigger, track, and manage live test calls in real-time.
 
 <br />
 
-#### 📂 Voice Analytics
+### 📂 Voice Analytics
 
 Upload and analyze real production recordings, no new calls needed.
 
@@ -454,7 +454,7 @@ Upload and analyze real production recordings, no new calls needed.
 
 <br />
 
-#### ▶️ Recording Playback
+### ▶️ Recording Playback
 
 Listen to any call and follow along with a full, speaker-identified transcript.
 
@@ -468,7 +468,7 @@ Listen to any call and follow along with a full, speaker-identified transcript.
 
 <br />
 
-#### 🚦 Go-Live Assessment
+### 🚦 Go-Live Assessment
 
 :::info Production Readiness Verdicts
 | Verdict | Score Range | Meaning |
@@ -488,7 +488,7 @@ Listen to any call and follow along with a full, speaker-identified transcript.
 
 <br />
 
-#### 🎚️ Metric Configuration
+### 🎚️ Metric Configuration
 
 Select exactly which metrics to run. Skip what's not relevant to reduce time and cost.
 
@@ -498,7 +498,7 @@ Select exactly which metrics to run. Skip what's not relevant to reduce time and
 
 <br />
 
-#### 🗓️ Scheduled Runs
+### 🗓️ Scheduled Runs
 
 Keep coverage running continuously without manual effort.
 
@@ -518,7 +518,7 @@ Phone Caller agents are evaluated across **8 metric categories** with **30+ indi
 
 <br />
 
-#### A. Conversation Flow & Interaction Dynamics
+### A. Conversation Flow & Interaction Dynamics
 
 | Metric | Unit | What It Measures |
 |--------|------|-----------------|
@@ -531,7 +531,7 @@ Phone Caller agents are evaluated across **8 metric categories** with **30+ indi
 
 <br />
 
-#### B. Accuracy & Effectiveness
+### B. Accuracy & Effectiveness
 
 | Metric | Unit | What It Measures |
 |--------|------|-----------------|
@@ -543,7 +543,7 @@ Phone Caller agents are evaluated across **8 metric categories** with **30+ indi
 
 <br />
 
-#### C. User Experience & Satisfaction
+### C. User Experience & Satisfaction
 
 | Metric | Unit | What It Measures |
 |--------|------|-----------------|
@@ -554,7 +554,7 @@ Phone Caller agents are evaluated across **8 metric categories** with **30+ indi
 
 <br />
 
-#### D. Business Operational Metrics
+### D. Business Operational Metrics
 
 | Metric | Unit | What It Measures |
 |--------|------|-----------------|
@@ -563,7 +563,7 @@ Phone Caller agents are evaluated across **8 metric categories** with **30+ indi
 
 <br />
 
-#### E. Audio Voice Quality
+### E. Audio Voice Quality
 
 | Metric | Unit | What It Measures |
 |--------|------|-----------------|
@@ -573,7 +573,7 @@ Phone Caller agents are evaluated across **8 metric categories** with **30+ indi
 
 <br />
 
-#### F. Speech-to-Text (STT) Evaluation
+### F. Speech-to-Text (STT) Evaluation
 
 | Metric | Unit | What It Measures |
 |--------|------|-----------------|
@@ -584,7 +584,7 @@ Phone Caller agents are evaluated across **8 metric categories** with **30+ indi
 
 <br />
 
-#### G. Validation Results
+### G. Validation Results
 
 | Metric | Unit | What It Measures |
 |--------|------|-----------------|
@@ -593,7 +593,7 @@ Phone Caller agents are evaluated across **8 metric categories** with **30+ indi
 
 <br />
 
-#### H. Detected Issue Tags (Automated)
+### H. Detected Issue Tags (Automated)
 
 :::warning
 The system automatically detects and flags the following issues in every call recording.
@@ -617,7 +617,7 @@ The system automatically detects and flags the following issues in every call re
 
 <br />
 
-#### Threshold Configurations
+### Threshold Configurations
 
 | Metric | 🟢 Excellent | 🟡 Good | 🔴 Poor |
 |--------|-------------|--------|--------|
@@ -642,7 +642,7 @@ Phone Caller Outbound supports the **same two evaluation modes** as Inbound (Pre
 
 <br />
 
-#### Outbound-Specific Pre-evaluation Features
+### Outbound-Specific Pre-evaluation Features
 
 - **Scenario Generation**: Generate up to **7** outbound test scenarios (vs. 20 for inbound)
 - **Caller Profile Selection**: Select an outbound caller profile when generating scenarios
@@ -652,7 +652,7 @@ Phone Caller Outbound supports the **same two evaluation modes** as Inbound (Pre
 
 <br />
 
-#### Outbound Pool Management
+### Outbound Pool Management
 
 - **View Pool Status**: See available outbound numbers
 - **Reservations**: View and manage per-suite number reservations
@@ -683,7 +683,7 @@ Same as Phone Caller Inbound, all **8 categories** and **30+ metrics**.
 
 <br />
 
-#### 🖼️ Image Analysis
+### 🖼️ Image Analysis
 
 Upload single images or batch-process up to 50 at once, via file upload or URL.
 
@@ -694,7 +694,7 @@ Upload single images or batch-process up to 50 at once, via file upload or URL.
 
 <br />
 
-#### 🎯 Custom Evaluation Criteria
+### 🎯 Custom Evaluation Criteria
 
 Define what "good" means for your images. Choose from three criteria types:
 
@@ -735,7 +735,7 @@ All criteria support Active/Inactive toggling, create/edit/delete operations, an
 
 <br />
 
-#### 📋 Analysis History
+### 📋 Analysis History
 
 - **Search**: Find past analyses by image name or prompt text
 - **Status Tracking**: View analysis status (Pending, Completed, Failed)
@@ -744,7 +744,7 @@ All criteria support Active/Inactive toggling, create/edit/delete operations, an
 
 <br />
 
-#### 📊 Analytics Dashboard
+### 📊 Analytics Dashboard
 
 - **Overall Statistics**: Average score, highest score, lowest score, total analyses count
 - **Quality Trends**: Daily score breakdown over the last 30 days with bar chart visualization

@@ -278,5 +278,260 @@
     "url": "/support/docs/kane-cli-writing-objectives/",
     "reason": "live 301 -> /docs/kane-cli-writing-objectives/",
     "detected": "2026-09-11"
+  },
+  {
+    "url": "/support/docs/behat-with-selenium-running-behat-automation-scripts-on-testmu-selenium-grid/",
+    "reason": "live 301 -> /support/docs/php-with-selenium-running-php-automation-scripts-on-testmu-selenium-grid/?framework=behat",
+    "detected": "2026-10-28"
+  },
+  {
+    "url": "/support/docs/behave-with-selenium-running-behave-automation-scripts-on-testmu-selenium-grid/",
+    "reason": "live 301 -> /support/docs/python-with-selenium-running-python-automation-scripts-on-testmu-selenium-grid/?framework=behave",
+    "detected": "2026-10-28"
+  },
+  {
+    "url": "/support/docs/mstest-with-selenium-running-mstest-automation-scripts-on-testmu-selenium-grid/",
+    "reason": "live 301 -> /support/docs/c-with-selenium-running-c-automation-scripts-on-testmu-selenium-grid/?framework=mstest",
+    "detected": "2026-10-28"
+  },
+  {
+    "url": "/support/docs/executing-tesbo-automation-script-over-online-selenium-grid/",
+    "reason": "live 301 -> /support/docs/java-with-selenium-running-java-automation-scripts-on-testmu-selenium-grid/?framework=tesbo",
+    "detected": "2026-10-28"
+  },
+  {
+    "url": "/support/docs/mark-as-bug-in-automation-testing/",
+    "reason": "live 301 -> /support/docs/filter-your-selenium-tests/#mark-as-bug",
+    "detected": "2026-10-28"
+  },
+  {
+    "url": "/support/docs/selenium-tests-with-nemojs/",
+    "reason": "live 301 -> /support/docs/javascript-with-selenium-running-javascript-automation-scripts-on-testmu-selenium-grid/?framework=nemojs",
+    "detected": "2026-10-28"
+  },
+  {
+    "url": "/support/docs/authentication/",
+    "reason": "live 301 -> /support/docs/getting-started-with-cypress-testing/#authentication",
+    "detected": "2026-10-28"
+  },
+  {
+    "url": "/support/docs/karma-integration-with-testmu/",
+    "reason": "live 301 -> /support/docs/javascript-with-selenium-running-javascript-automation-scripts-on-testmu-selenium-grid/?framework=karma",
+    "detected": "2026-10-28"
+  },
+  {
+    "url": "/support/docs/ruby-with-capybara-running-automation-scripts-on-testmu-selenium-grid/",
+    "reason": "live 301 -> /support/docs/ruby-with-selenium-running-ruby-automation-scripts-on-testmu-selenium-grid/?framework=capybara",
+    "detected": "2026-10-28"
+  },
+  {
+    "url": "/support/docs/selenium-four-capabilities/",
+    "reason": "live 301 -> /support/docs/selenium-automation-capabilities/#selenium-4-capabilities-and-above",
+    "detected": "2026-10-28"
+  },
+  {
+    "url": "/support/docs/parallel-testing-with-playwright/",
+    "reason": "live 301 -> /support/docs/playwright-testing/#run-tests-in-parallel",
+    "detected": "2026-10-28"
+  },
+  {
+    "url": "/support/docs/serenity-test-on-selenium-grid/",
+    "reason": "live 301 -> /support/docs/java-with-selenium-running-java-automation-scripts-on-testmu-selenium-grid/?framework=serenity",
+    "detected": "2026-10-28"
+  },
+  {
+    "url": "/support/docs/automation-testing-with-selenium-and-jest/",
+    "reason": "live 301 -> /support/docs/javascript-with-selenium-running-javascript-automation-scripts-on-testmu-selenium-grid/?framework=jest",
+    "detected": "2026-10-28"
+  },
+  {
+    "url": "/support/docs/testmu-grid-configuration/",
+    "reason": "live 301 -> /support/docs/testmu-running-your-first-selenium-test/",
+    "detected": "2026-10-28"
+  },
+  {
+    "url": "/support/docs/har-log-viewer-with-waterfall/",
+    "reason": "live 301 -> /support/docs/debugging-options/#har-log-viewer",
+    "detected": "2026-10-28"
+  },
+  {
+    "url": "/support/docs/run-your-cypress-tests-in-parallel/",
+    "reason": "live 301 -> /support/docs/getting-started-with-cypress-testing/#run-your-tests-in-parallel",
+    "detected": "2026-10-28"
+  },
+  {
+    "url": "/support/docs/sharing-test-results/",
+    "reason": "live 301 -> /support/docs/filter-your-selenium-tests/#share-test-results",
+    "detected": "2026-10-28"
+  },
+  {
+    "url": "/support/docs/capabilities-for-playwright-android/",
+    "reason": "live 301 -> /support/docs/playwright-android/#capabilities-reference",
+    "detected": "2026-10-28"
+  },
+  {
+    "url": "/support/docs/selenium-three-capabilities/",
+    "reason": "live 301 -> /support/docs/selenium-automation-capabilities/#selenium-3-capabilities-and-below",
+    "detected": "2026-10-28"
+  },
+  {
+    "url": "/support/docs/angularjs-with-karma-running-angular-tests-on-testmu-selenium-grid/",
+    "reason": "live 301 -> /support/docs/javascript-with-selenium-running-javascript-automation-scripts-on-testmu-selenium-grid/?framework=angular",
+    "detected": "2026-10-28"
+  },
+  {
+    "url": "/support/docs/cyp-environment/",
+    "reason": "live 301 -> /support/docs/run-settings/#set-environment-variables",
+    "detected": "2026-10-28"
+  },
+  {
+    "url": "/support/docs/autoheal-with-hooks/",
+    "reason": "live 301 -> /support/docs/auto-healing/",
+    "detected": "2026-10-28"
+  },
+  {
+    "url": "/support/docs/selenium-supported-languages-and-frameworks/",
+    "reason": "live 301 -> /support/docs/java-with-selenium-running-java-automation-scripts-on-testmu-selenium-grid/?framework=junit",
+    "detected": "2026-10-28"
+  },
+  {
+    "url": "/support/docs/selenium-with-xunit/",
+    "reason": "live 301 -> /support/docs/c-with-selenium-running-c-automation-scripts-on-testmu-selenium-grid/?framework=xunit",
+    "detected": "2026-10-28"
+  },
+  {
+    "url": "/support/docs/capabilities-for-playwright/",
+    "reason": "live 301 -> /support/docs/playwright-test-execution-setup/",
+    "detected": "2026-10-28"
+  },
+  {
+    "url": "/support/docs/wd-with-selenium-running-wd-automation-scripts-on-testmu-selenium-grid/",
+    "reason": "live 301 -> /support/docs/javascript-with-selenium-running-javascript-automation-scripts-on-testmu-selenium-grid/?framework=wd",
+    "detected": "2026-10-28"
+  },
+  {
+    "url": "/support/docs/junit-with-playwright/",
+    "reason": "live 301 -> /support/docs/java-with-playwright/?framework=junit",
+    "detected": "2026-10-28"
+  },
+  {
+    "url": "/support/docs/reqnroll-automation-with-selenium-appium-on-testmu/",
+    "reason": "live 301 -> /support/docs/c-with-selenium-running-c-automation-scripts-on-testmu-selenium-grid/?framework=reqnroll",
+    "detected": "2026-10-28"
+  },
+  {
+    "url": "/support/docs/protractor-with-selenium-running-protractor-automation-scripts-on-testmu-selenium-grid/",
+    "reason": "live 301 -> /support/docs/javascript-with-selenium-running-javascript-automation-scripts-on-testmu-selenium-grid/?framework=protractor",
+    "detected": "2026-10-28"
+  },
+  {
+    "url": "/support/docs/build-inactivity-time/",
+    "reason": "live 301 -> /support/docs/filter-your-selenium-tests/#split-builds-with-build-inactivity-time",
+    "detected": "2026-10-28"
+  },
+  {
+    "url": "/support/docs/playwright-with-cucumberjs/",
+    "reason": "live 301 -> /support/docs/javascript-with-playwright/?framework=cucumberjs",
+    "detected": "2026-10-28"
+  },
+  {
+    "url": "/support/docs/group-tests-using-custom-tags/",
+    "reason": "live 301 -> /support/docs/filter-your-selenium-tests/#group-tests-using-custom-tags",
+    "detected": "2026-10-28"
+  },
+  {
+    "url": "/support/docs/rerun-automation-tests/",
+    "reason": "live 301 -> /support/docs/debugging-options/#re-run-automation-tests",
+    "detected": "2026-10-28"
+  },
+  {
+    "url": "/support/docs/selenium-default-capabilities/",
+    "reason": "live 301 -> /support/docs/selenium-automation-capabilities/#default-capabilities",
+    "detected": "2026-10-28"
+  },
+  {
+    "url": "/support/docs/npm-via-tunnel/",
+    "reason": "live 301 -> /support/docs/run-settings/#install-npm-packages-via-a-tunnel",
+    "detected": "2026-10-28"
+  },
+  {
+    "url": "/support/docs/jest-with-playwright/",
+    "reason": "live 301 -> /support/docs/javascript-with-playwright/?framework=jest",
+    "detected": "2026-10-28"
+  },
+  {
+    "url": "/support/docs/codeceptjs-with-selenium/",
+    "reason": "live 301 -> /support/docs/javascript-with-selenium-running-javascript-automation-scripts-on-testmu-selenium-grid/?framework=codeceptjs",
+    "detected": "2026-10-28"
+  },
+  {
+    "url": "/support/docs/command-annotations/",
+    "reason": "live 301 -> /support/docs/filter-your-selenium-tests/#command-annotations",
+    "detected": "2026-10-28"
+  },
+  {
+    "url": "/support/docs/selenium-set-browser-options/",
+    "reason": "live 301 -> /support/docs/selenium-automation-capabilities/",
+    "detected": "2026-10-28"
+  },
+  {
+    "url": "/support/docs/change-browser-window-size/",
+    "reason": "live 301 -> /support/docs/selenium-automation-capabilities/#selenium-3-capabilities-and-below",
+    "detected": "2026-10-28"
+  },
+  {
+    "url": "/support/docs/screen-resolution-testing-with-cypress/",
+    "reason": "live 301 -> /support/docs/run-settings/#set-the-screen-resolution",
+    "detected": "2026-10-28"
+  },
+  {
+    "url": "/support/docs/automation-testing-selenium-with-lettuce/",
+    "reason": "live 301 -> /support/docs/python-with-selenium-running-python-automation-scripts-on-testmu-selenium-grid/?framework=lettuce",
+    "detected": "2026-10-28"
+  },
+  {
+    "url": "/support/docs/extended-debugging-options/",
+    "reason": "live 301 -> /support/docs/debugging-options/#extended-debugging-options",
+    "detected": "2026-10-28"
+  },
+  {
+    "url": "/support/docs/webdriverio-with-selenium-running-webdriverio-automation-scripts-on-testmu-selenium-grid/",
+    "reason": "live 301 -> /support/docs/javascript-with-selenium-running-javascript-automation-scripts-on-testmu-selenium-grid/?framework=webdriverio",
+    "detected": "2026-10-28"
+  },
+  {
+    "url": "/support/docs/selenium-add-test-meta-data/",
+    "reason": "live 301 -> /support/docs/filter-your-selenium-tests/#add-custom-metadata-with-customdata",
+    "detected": "2026-10-28"
+  },
+  {
+    "url": "/support/docs/network-data-masking/",
+    "reason": "live 301 -> /support/docs/selenium-mask-your-data/#network-data-masking",
+    "detected": "2026-10-28"
+  },
+  {
+    "url": "/support/docs/white-listing-proxy-with-testmu/",
+    "reason": "live 301 -> /support/docs/selenium-tests-behind-proxy/#whitelist-the-proxy",
+    "detected": "2026-10-28"
+  },
+  {
+    "url": "/support/docs/kane-cli-assurance-sharing/",
+    "reason": "live 301 -> /docs/kane-cli-assurance-sharing/",
+    "detected": "2026-10-28"
+  },
+  {
+    "url": "/support/docs/lambda-exceptions/",
+    "reason": "live 301 -> /support/docs/debugging-options/#lambda-exceptions",
+    "detected": "2026-10-28"
+  },
+  {
+    "url": "/support/docs/kane-cli-remote-execution/",
+    "reason": "live 301 -> /docs/kane-cli-remote-execution",
+    "detected": "2026-10-28"
+  },
+  {
+    "url": "/support/docs/kane-cli-getting-started/",
+    "reason": "client-side redirect (window.location.replace) -> /docs/kane-cli-quickstart",
+    "detected": "2026-10-28"
   }
 ]

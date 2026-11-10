@@ -1,8 +1,10 @@
 ---
 id: configure-timezones
-title: Configure Timezones for Your Tests
-sidebar_label: Configure Timezones
-description: Set the timezone on test VMs using the timezone capability in LT:Options for accurate locale-based testing on TestMu AI.
+title: How to Test Across Timezones in Selenium on TestMu AI
+toc_max_heading_level: 2
+hide_title: true
+sidebar_label: "Test Across Timezones"
+description: Configure custom timezones in Selenium tests on TestMu AI to validate time-sensitive features across different regions.
 keywords:
   - selenium timezone capability
   - configure timezone selenium
@@ -20,7 +22,6 @@ import TabItem from '@theme/TabItem';
 import CodeBlock from '@theme/CodeBlock';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import VerifiedTag from '@site/src/component/verifiedTag';
-
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -57,8 +58,8 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       "@type": "WebPage",
       "@id": "https://www.testmuai.com/support/docs/configure-timezones/"
     },
-    "headline": "Configure Timezones for Your Tests",
-    "description": "Set the timezone on test VMs using the timezone capability in LT:Options for accurate locale-based testing on TestMu AI.",
+    "headline": "How to Test Across Timezones in Selenium on TestMu AI",
+    "description": "Configure custom timezones in Selenium tests on TestMu AI to validate time-sensitive features across different regions.",
     "url": "https://www.testmuai.com/support/docs/configure-timezones/",
     "image": {
       "@type": "ImageObject",
@@ -71,7 +72,9 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     "keywords": [
       "selenium timezone capability",
       "configure timezone selenium",
-      "timezone testing automation"
+      "timezone testing automation",
+      "IANA timezone selenium",
+      "set timezone test vm"
     ],
     "proficiencyLevel": "Beginner",
     "author": {
@@ -103,35 +106,31 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     "hasPart": [
       {
         "@type": "SoftwareSourceCode",
-        "name": "Java",
+        "name": "Set the Timezone Using the timezone Capability (Java)",
         "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "\n<\/TabItem>\n\n<TabItem value=\"JavaScript\" label=\"JavaScript\" default>\n\n```javascript title=\"timezone-test.js\"\nconst { Builder } = require(\"selenium-webdriver\");\nconst chrome = require(\"selenium-webdriver/chrome\");\n\n(async function timezoneTest() {\n  let options = new chrome.Options();\n  options.setPlatform(\"Windows 11\");\n  options.setBrowserVersion(\"latest\");\n\n  let ltOptions = {\n    username: process.env.LT_USERNAME,\n    accessKey: process.env.LT_ACCESS_KEY,\n    timezone: \"UTC-05:00\",\n    project: \"Timezone Test\",\n  };\n\n  const driver = await new Builder()\n    .usingServer(\"https://hub.lambdatest.com/wd/hub\")\n    .withCapabilities({ ...options.toJSON(), \"LT:Options\": ltOptions })\n    .build();\n\n  await driver.get(\"https://example.com\");\n  await driver.quit();\n})();"
+        "programmingLanguage": "Java",
+        "text": "HashMap<String, Object> ltOptions = new HashMap<>();\nltOptions.put(\"username\", System.getenv(\"LT_USERNAME\"));\nltOptions.put(\"accessKey\", System.getenv(\"LT_ACCESS_KEY\"));\nltOptions.put(\"timezone\", \"UTC-05:00\");\nltOptions.put(\"project\", \"Timezone Test\");\nbrowserOptions.setCapability(\"LT:Options\", ltOptions);"
       },
       {
         "@type": "SoftwareSourceCode",
-        "name": "Python",
+        "name": "Set the Timezone Using the timezone Capability (Python)",
         "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "\n<\/TabItem>\n\n<TabItem value=\"C#\" label=\"C#\" default>\n\n```csharp title=\"TimezoneTest.cs\"\nusing OpenQA.Selenium;\nusing OpenQA.Selenium.Chrome;\nusing OpenQA.Selenium.Remote;\n\nChromeOptions browserOptions = new ChromeOptions();\nbrowserOptions.PlatformName = \"Windows 11\";\nbrowserOptions.BrowserVersion = \"latest\";\n\nDictionary<string, object> ltOptions = new Dictionary<string, object>();\nltOptions.Add(\"username\", Environment.GetEnvironmentVariable(\"LT_USERNAME\"));\nltOptions.Add(\"accessKey\", Environment.GetEnvironmentVariable(\"LT_ACCESS_KEY\"));\nltOptions.Add(\"timezone\", \"UTC-05:00\");\nltOptions.Add(\"project\", \"Timezone Test\");\nbrowserOptions.AddAdditionalOption(\"LT:Options\", ltOptions);\n\nIWebDriver driver = new RemoteWebDriver(\n    new Uri(\"https://hub.lambdatest.com/wd/hub\"), browserOptions);\ndriver.Navigate().GoToUrl(\"https://example.com\");\ndriver.Quit();"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "PHP",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "\n<\/TabItem>\n\n<TabItem value=\"Ruby\" label=\"Ruby\" default>\n\n```ruby title=\"timezone_test.rb\"\nrequire \"selenium-webdriver\"\n\noptions = Selenium::WebDriver::Options.chrome(\n  platform_name: \"Windows 11\",\n  browser_version: \"latest\",\n  \"LT:Options\" => {\n    username: ENV[\"LT_USERNAME\"],\n    accessKey: ENV[\"LT_ACCESS_KEY\"],\n    timezone: \"UTC-05:00\",\n    project: \"Timezone Test\",\n  }\n)\n\ndriver = Selenium::WebDriver.for(\n  :remote,\n  url: \"https://hub.lambdatest.com/wd/hub\",\n  capabilities: options,\n)\ndriver.navigate.to(\"https://example.com\")\ndriver.quit"
+        "programmingLanguage": "Python",
+        "text": "lt_options = {\n    \"username\": os.environ[\"LT_USERNAME\"],\n    \"accessKey\": os.environ[\"LT_ACCESS_KEY\"],\n    \"timezone\": \"UTC-05:00\",\n    \"project\": \"Timezone Test\",\n}\noptions.set_capability(\"LT:Options\", lt_options)"
       }
     ],
-    "dateModified": "2026-09-09T19:13:32+05:30"
+    "dateModified": "2026-09-27T00:00:00+05:30"
   }) }}
 />
+
+# How to Test Across Timezones in Selenium on TestMu AI
+---
 
 Many applications display dates, schedule events, or trigger time-sensitive logic based on the user's timezone. TestMu AI lets you set the timezone on the test VM using the `timezone` capability in `LT:Options`, so you can validate timezone-dependent behavior without changing your local machine settings. The capability accepts UTC offset strings (e.g., `UTC+05:30`).
 
 ## Set the Timezone Using the `timezone` Capability
 ---
-Pass a UTC offset string in `LT:Options` to configure the test VM's system timezone.
+Pass a UTC offset string in `LT:Options` to configure the test VM's system timezone. The `timezone` capability works alongside the other [Selenium automation capabilities](/support/docs/selenium-automation-capabilities/) you set in `LT:Options`.
 
 Add the `timezone` capability to your `LT:Options` configuration. The value is a UTC offset string in the format `UTC+HH:MM` or `UTC-HH:MM` (e.g., `UTC+05:30`). The default is `UTC+00:00`.
 
@@ -344,8 +343,16 @@ Consider setting the `timezone` capability in these scenarios:
 - **Cross-timezone consistency.** Run the same test suite across multiple timezones to catch discrepancies in time-dependent logic.
 
 :::tip
-Combine the `timezone` capability with [geolocation](/support/docs/selenium-geolocation-capabilities/) to simulate a complete locale environment for your tests.
+Combine the `timezone` capability with geolocation to simulate a complete locale environment for your tests.
 :::
+
+## Next Steps
+---
+
+Continue with these related guides:
+
+- [Selenium Geolocation Capabilities](/support/docs/selenium-geolocation-capabilities/)
+- [Selenium Automation Capabilities](/support/docs/selenium-automation-capabilities/)
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

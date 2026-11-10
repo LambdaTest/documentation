@@ -500,7 +500,7 @@ OR use this command if you have not exported your username and access key in the
 
 :::tip Troubleshoot Guide
 
-If you are stumbling upon errors during Espresso test execution, then refer to the [**Espresso Troubleshoot**](/support/docs/troubleshoot-espresso-tests/#sharded-espresso-errors) guide for detailed explanations to your common errors.
+If you are stumbling upon errors during Espresso test execution, then refer to the [**Espresso Troubleshoot**](/support/docs/debugging-espresso-tests/#espresso-via-hyperexecute-shard-errors) guide for detailed explanations to your common errors.
 :::
 
 ## Additional Details

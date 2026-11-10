@@ -152,8 +152,8 @@ You can author any of the three click variants in two ways:
 |----------|:--------------:|:-----------:|:-----------:|:------------------:|
 | **Desktop Web** | ✅ | ✅ | ✅ | ✅ |
 | **Android App** | ✅ | ✅ | ❌ | ✅ |
-| **iOS App** | ✅ | ✅ | ❌ | ✅ (Portrait only) |
-| **Mobile Web** | ✅ | ✅ | ❌ | ❌ (NL only) |
+| **iOS App** | ✅ | ✅ | ❌ | ✅ |
+| **Mobile Web** | ✅ | ✅ | ❌ | ✅ |
 
 :::warning
 **Right click is web-only.** On mobile, use **long press** to open context menus. KaneAI does not silently convert one to the other because they have different semantics.
@@ -400,11 +400,9 @@ Yes. All three work inside Modules: create, import, edit, and version-bump as us
 2. **Mutual exclusivity.** Long press, multi-click, and right click cannot be combined in a single instruction.
 3. **Long press duration range.** Limited to 0.5–30 seconds only.
 4. **Multi-click frequency cap.** Maximum 20 clicks per instruction. The literal phrase `triple click X` is not supported. Use `click X 3 times` instead.
-5. **Mobile Web: no Manual Interaction.** Only NL instructions are available for long press and multi-click on mobile browsers.
-6. **iOS Landscape: no Manual Interaction.** Long press and multi-click MI capture are not supported in Landscape orientation.
-7. **Duration accuracy.** Long press is accurate to ±200 ms. Use cases requiring millisecond precision should account for this tolerance.
-8. **Multi-click on dynamic elements.** If the target moves, disappears, or changes between clicks, later clicks may miss. Ensure element stability.
-9. **Nested if-else not supported.** Single-level if-else with click modifiers works (e.g. `if popup is visible then right click on it`), but nested if-else inside another conditional is not supported.
-10. **Secrets as duration values.** `long press for {{secrets.user.DURATION}} seconds` is not supported. Secret values cannot be parsed as numeric durations.
-11. **No silent conversion.** Right click is not auto-converted to long press on mobile, and long press is not auto-converted to right click on web. Each gesture must be authored explicitly.
+5. **Duration accuracy.** Long press is accurate to ±200 ms. Use cases requiring millisecond precision should account for this tolerance.
+6. **Multi-click on dynamic elements.** If the target moves, disappears, or changes between clicks, later clicks may miss. Ensure element stability.
+7. **Nested if-else not supported.** Single-level if-else with click modifiers works (e.g. `if popup is visible then right click on it`), but nested if-else inside another conditional is not supported.
+8. **Secrets as duration values.** `long press for {{secrets.user.DURATION}} seconds` is not supported. Secret values cannot be parsed as numeric durations.
+9. **No silent conversion.** Right click is not auto-converted to long press on mobile, and long press is not auto-converted to right click on web. Each gesture must be authored explicitly.
 

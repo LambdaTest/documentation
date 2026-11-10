@@ -6,6 +6,8 @@ Testim provides an automated testing platform to create stable tests using AI Na
 
 Integrating TestMu AI with Testim lets you run Testim automated tests on TestMu AI cloud-based grid across 3000+ real browsers and OS.
 
+If you plan to move off Testim, the [Testim to KaneAI migration guide](/support/docs/testim-to-kaneai-migration-guide/) shows what Testim can export and how to re-create tests in KaneAI.
+
 ## Prerequisites
 - Create an account on Testim.
 - Create a TestMu AI account. You can [sign up for free](https://www.testmuai.com/register/?redirectTo=https://accounts.lambdatest.com/dashboard).

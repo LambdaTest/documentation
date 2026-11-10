@@ -102,37 +102,37 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 <div className="support_main">  
   <a href="/support/docs/hyperexecute-status/">
     <div className="support_inners">
-      <h3>HyperExecute Status</h3>
+      <h2>HyperExecute Status</h2>
       <p>Learn all the status of the HyperExecute at different levels - Job level, Task level, Stage level and Test level.</p>
     </div>
   </a>
   <a href="/support/docs/hyperexecute-how-to-guide/">
     <div className="support_inners">
-      <h3>How To Guide</h3>
+      <h2>How To Guide</h2>
       <p>Understand how to perform various activities in the HyperExecute Dashboard.</p>
     </div>
   </a>
   <a href="/support/docs/hyperexecute-use-cases/">
     <div className="support_inners">
-      <h3>HyperExecute Use Cases</h3>
+      <h2>HyperExecute Use Cases</h2>
       <p>Learn about the real world implementations of the HyperExecute.</p>
     </div>
   </a>
   <a href="/support/docs/hyperexecute-widgets/">
     <div className="support_inners">
-      <h3>HyperExecute Widgets</h3>
+      <h2>HyperExecute Widgets</h2>
       <p>Learn the insights of your Tasks based on the defined parameters in the Tests.</p>
     </div>
   </a>
   <a href="/support/docs/hyperexecute-job-reports/">
   <div className="support_inners">
-    <h3>HyperExecute Job Reports</h3>
+    <h2>HyperExecute Job Reports</h2>
     <p>Learn about different types of Job Reports based on various frameworks.</p>
   </div>
   </a>
   <a href="/support/docs/saucelabs-to-hyperexecute-migrate/">
   <div className="support_inners">
-    <h3>Migration Guide</h3>
+    <h2>Migration Guide</h2>
     <p>Learn how to migrate your tests from the Sauce Labs to HyperExecute.</p>
   </div>
   </a>

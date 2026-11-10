@@ -19,7 +19,10 @@ You can install apps uploaded to the TestMu AI platform directly within your aut
 ```python
 driver.execute_script("lambda-install-app=myApp")
 driver.execute_script("lambda-install-app=lt://APP100000000123456789123456789")
+driver.execute_script("lambda-install-app=filename=MyApp.apk")
 ```
+
+You can also pass `filename=` to install the latest uploaded app with that File Name, as shown in App Manager. Installing by file name during a session is not available on iOS simulators. For details on how the app is selected, see [Use the File Name Instead of the App ID](/support/docs/test-setup-and-execution/#use-the-file-name-instead-of-the-app-id).
 
 **JavaScript example:**
 

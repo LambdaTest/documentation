@@ -191,7 +191,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
 
 ***
 
-#### 1. I want to run all my feature files and scenarios listed in a folder. How can I do that without listing all of them explicitly in the YAML file?
+## 1. I want to run all my feature files and scenarios listed in a folder. How can I do that without listing all of them explicitly in the YAML file?
 
 HyperExecute offers you the option to use our AutoSplit mode. You can learn more about the AutoSplit mode by going through [this page](/support/docs/hyperexecute-auto-split-strategy/). A sample YAML file that supports AutoSplit looks like this:
 
@@ -223,13 +223,13 @@ You can simply add the path to the folder of files that you want to run in the _
 
 ***
 
-#### 2. What can I do with pre steps and post steps in the YAML file?
+## 2. What can I do with pre steps and post steps in the YAML file?
 
 Pre and post steps open doors to large amounts of flexibility. You can add certificates just before running tests, start a background process to facilitate testing, compile applications, download dependencies and everything else that you need to do just before and after running your tests in the CI or your system.
 
 ***
 
-#### 3. How can I install private artifactory dependencies that can only be accessed on my organization’s internal network on HyperExecute Machines?
+## 3. How can I install private artifactory dependencies that can only be accessed on my organization’s internal network on HyperExecute Machines?
 
 You can use a tunnel to connect with your organization's private network with the HyperExecute machines. You can do this by setting the tunnel flag to true in HyperExecute’s YAML file. 
 
@@ -272,7 +272,7 @@ preDirectives:
 
 ***
 
-#### 4. How can I install and set a private node registry on the HyperExecute Machine?
+## 4. How can I install and set a private node registry on the HyperExecute Machine?
 
 You can do this by adding the following command in the preDirectives section of the HyperExecute YAML file.
 
@@ -288,7 +288,7 @@ preDirectives:
 
 ***
 
-#### 5. Can I run WDIO tests on HyperExecute via proxy?
+## 5. Can I run WDIO tests on HyperExecute via proxy?
 
 Yes, you can. Use the following parameters in the testRunnerCommand of the HyperExecute YAML file:
 
@@ -299,7 +299,7 @@ testRunnerCommand: $env:GLOBAL_AGENT_NO_PROXY="hub.lambdatest.com";$env:GLOBAL_A
 ```
 ***
 
-#### 6. I want to use a specific version of gradle for my project. How can I set that up on HyperExecute machines?
+## 6. I want to use a specific version of gradle for my project. How can I set that up on HyperExecute machines?
 
 You can set up your Gradle project with HyperExecute by configuring the runtime flag in the YAML file. If you are using the 7.0 version of Gradle, use the following configurations.
 
@@ -315,7 +315,7 @@ runtime:
 ```
 ***
 
-#### 7. I want to pass a specific package through npm in the YAML file,  instead of npm picking the package present in the directory. Can I do that with HyperExecute?
+## 7. I want to pass a specific package through npm in the YAML file,  instead of npm picking the package present in the directory. Can I do that with HyperExecute?
 
 You can accomplish this by running the following command in the preDirectives section of the YAML file:
 
@@ -329,7 +329,7 @@ preDirectives:
 This command will install a package called **my_package.json** from the path that you have provided.
 ***
 
-#### 8. How can I use the Jenkins job choice parameters in the YAML file?
+## 8. How can I use the Jenkins job choice parameters in the YAML file?
 
 You can do this by directly calling the parameter keys in the HyperExecute YAML file and use the Jenkins choice parameters.  
 A sample testRunnerCommand to accomplish this is:
@@ -356,7 +356,7 @@ testRunnerCommand: mvn test `-DselectedTests="$test" `-Dmaven.repo.local=./.m2 d
 
 ***
 
-#### 9. I run a lot of tests with the same YAML configurations. Is there any way where I can run my tests without specifying the same configurations over and over again?
+## 9. I run a lot of tests with the same YAML configurations. Is there any way where I can run my tests without specifying the same configurations over and over again?
 
 You can solve this problem by using HyperExecute's inheritance feature. This feature allows you to inherit the configurations of a base YAML file and saves you the time of configuring the YAML file multiple times. 
 
@@ -374,7 +374,7 @@ To learn more about how to use this feature, go through [this page](/support/doc
 
 ***
 
-#### 10. I want to test the code in my Git repository. Is there a way where I can accomplish that with HyperExecute?
+## 10. I want to test the code in my Git repository. Is there a way where I can accomplish that with HyperExecute?
 
 You can use the `sourcePayload` parameter for the same. Your test scripts are directly sourced from your Git provider with the help of secure access tokens and only your HyperExecute YAML file is encrypted and uploaded through the HyperExecute CLI. To learn more about how this feature works, go through [this page](/support/docs/hyperexecute-how-to-configure-sourcePayload/).
 
@@ -390,7 +390,7 @@ sourcePayload:
 
 ***
 
-#### 11. I am running a non-hub based test on HyperExecute. How can I capture a video of it?
+## 11. I am running a non-hub based test on HyperExecute. How can I capture a video of it?
 
 You can use HyperExecute’s video recording feature even while running non-hub based tests (Selenium, Cypress, CDP are all hub-based). All you need to do is, set the `captureScreenRecordingForScenarios` flag to `true` in your [HyperExecute YAML](/support/docs/deep-dive-into-hyperexecute-yaml/) file to capture the video of your test scenarios.
 
@@ -406,13 +406,13 @@ You can use this feature if you want to trigger a command and want to record it.
 
 ***
 
-#### 12. How to check if there is any private dependency in testng YAML?
+## 12. How to check if there is any private dependency in testng YAML?
 
 We can detect any private dependency in testng YAML using `analyze` flag in CLI.
 
 ***
 
-#### 13. How to handle Maven SSL Cert Error while executing the test?
+## 13. How to handle Maven SSL Cert Error while executing the test?
 
 Pass this maven arguments which require to handle mvn ssl cert errors
 
@@ -424,7 +424,7 @@ Pass this maven arguments which require to handle mvn ssl cert errors
 
 ***
 
-#### 14. Will my YAML parameters overwrite properties in my XML configuration?
+## 14. Will my YAML parameters overwrite properties in my XML configuration?
 
 No, your XML configurations are not overwritten by YAML parameters.
 

@@ -101,7 +101,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     "dateModified": "2026-09-09T19:16:50+05:30"
   }) }}
 />
-Testing shouldn’t slow innovation. KaneAI makes test automation as natural as writing a To Do list with no steep learning curves, no endless script maintenance.
+Testing shouldn’t slow innovation. KaneAI is a GenAI-native testing agent that turns plain natural language into End-to-End (E2E) testing across web and mobile apps — no steep learning curves, no endless script maintenance.
 
 With KaneAI you can:
 
@@ -272,6 +272,6 @@ Ready to go further with KaneAI? These guides cover common authoring and workflo
 - [Create Pull Requests from KaneAI Test Cases](/support/docs/kaneai-create-pr/) — turn KaneAI test cases into pull requests in your repository.
 - [Scroll Until Element for Mobile Authoring](/support/docs/kaneai-scroll-until-mobile/) — scroll until a target element is visible when authoring mobile tests.
 - [Error handling in KaneAI](/support/docs/error-handling-kaneai/) — handle failures and recover gracefully within a KaneAI test.
-- [Kane CLI modes](/support/docs/kane-cli-modes/) — the execution modes available in the Kane CLI.
+- [Kane CLI modes](https://www.testmuai.com/docs/kane-cli-modes) — the execution modes available in the Kane CLI.
 - [Finding and interacting with elements](/support/docs/kaneai-kb-finding-and-interacting-with-elements/) — describe elements so KaneAI can locate them reliably.
 - [Mobile app testing patterns](/support/docs/kaneai-kb-mobile-app-testing-patterns/) — common patterns for authoring mobile app tests with KaneAI.

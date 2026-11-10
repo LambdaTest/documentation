@@ -1,20 +1,3 @@
----
-id: http2-support
-title: HTTP/2 Support in TestMu AI Tunnel
-hide_title: false
-sidebar_label: HTTP/2 Support
-description: Learn how TestMu AI Tunnel supports HTTP/2 for modern, high-performance web application testing.
-keywords:
-  - http2
-  - testmu ai tunnel
-  - performance testing
-  - web protocol
-  - automatic proxy
-url: https://www.testmuai.com/support/docs/http2-support/
-site_name: TestMu AI
-slug: http2-support/
-canonical: https://www.testmuai.com/support/docs/http2-support/
-
 # HTTP/2 Support in TestMu AI Tunnel
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).

@@ -135,7 +135,10 @@ export function generateCodeExample(endpoint, language, { username, password, pa
       const raw = params && params[`__body__${p.name}`];
       const fromExample = rawExample && typeof rawExample === 'object' ? rawExample[p.name] : undefined;
       let val;
-      if (raw) {
+      if (p.format === 'binary') {
+        const isFile = typeof File !== 'undefined' && raw instanceof File;
+        val = isFile ? `/path/to/${raw.name}` : `/path/to/${p.name}`;
+      } else if (raw) {
         val = coerceBodyValue(raw, p.type);
       } else if (fromExample !== undefined) {
         val = fromExample;
@@ -156,8 +159,12 @@ export function generateCodeExample(endpoint, language, { username, password, pa
       let curlBody = '';
       if (bodyExample) {
         if (isMultipart) {
-          curlBody = bodyProps.map((p) => ` \\\n  --form '${p.name}=${bodyExample[p.name]}'`).join('');
-          curlBody = ` \\\n  --header "Content-Type: multipart/form-data"` + curlBody;
+          // curl sets its own multipart boundary from --form; a manual
+          // Content-Type header here would omit it and break the request.
+          curlBody = bodyProps.map((p) => {
+            const v = p.format === 'binary' ? `@${bodyExample[p.name]}` : bodyExample[p.name];
+            return ` \\\n  --form '${p.name}=${v}'`;
+          }).join('');
         } else {
           curlBody = ` \\\n  --header "Content-Type: application/json" \\\n  --data '${JSON.stringify(bodyExample, null, 2).replace(/\n/g, '\n  ')}'`;
         }

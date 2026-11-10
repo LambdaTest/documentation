@@ -2,7 +2,7 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-Test Manager is TestMu AI's AI-native test management platform for planning, creating, executing, and reporting on software tests. It gives QA teams a single workspace for manual and automated test cases, test runs, two-way sync with Jira and Azure DevOps, and release-readiness reporting, with AI that generates test cases from natural language.
+Test Manager is TestMu AI's AI-native test management platform for planning, creating, executing, and reporting on software tests. It gives QA teams a single workspace to organize and track manual, automated, and End-to-End (E2E) testing, with test runs, two-way sync with Jira and Azure DevOps, release-readiness reporting, and AI that generates test cases from natural language.
 
 ## What you can do with Test Manager
 
@@ -96,4 +96,4 @@ Jira and Azure DevOps with two-way sync, plus marketplace apps for both. Linear 
 
 - [Test Case Repository](/support/docs/test-case-repository/) — organize and reuse test cases in the Test Manager repository.
 - [Sync Test Instance](/support/docs/sync-test-instance/) — keep test run instances in sync as your test cases evolve.
-- [Test Instance Audit Logs](/support/docs/test-instance-audit-logs/) — track changes to a test instance with audit logs.
+- [Test Instance Audit Logs](/support/docs/test-run-creation-and-management/) — track changes to a test instance with audit logs.

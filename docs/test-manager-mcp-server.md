@@ -280,7 +280,7 @@ If a referenced id is invalid or a precondition is not met, the tool responds wi
 
 > "A KaneAI run only takes KaneAI-authored test cases. Incompatible: TC-97. Nothing was written."
 
-> "The Jira integration is not set up for this organization. Nothing was linked. Set it up in LambdaTest under Integrations, then retry."
+> "The Jira integration is not set up for this organization. Nothing was linked. Set it up in TestMu AI under Integrations, then retry."
 
 > "This test run is archived. Only open (active) runs can be updated. Re-open or duplicate it in the Test Manager UI first."
 

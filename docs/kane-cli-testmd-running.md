@@ -256,7 +256,7 @@ Every flag accepted by `kane-cli testmd run`:
 | `--url <url>` | string | frontmatter `url:` / config `default_url` | Start URL for the first step. Overrides the frontmatter `url:` key and the configured `default_url`; bare domains are normalized to `https://`. |
 | `--allow-missing-url` | flag | off | Non-TTY only: proceed from the browser's current page instead of failing when the first step has no start URL (`url:` / `--url` are still used if present). |
 | `--cdp-endpoint <url>` | string | none | Reuse an external Chrome over CDP. |
-| `--ws-endpoint <url>` | string | none | LambdaTest / Playwright WebSocket endpoint. |
+| `--ws-endpoint <url>` | string | none | TestMu AI / Playwright WebSocket endpoint. |
 | `--global-context <file>` | path | `~/.testmuai/kaneai/global-memory.md` | Override the global context file. |
 | `--local-context <file>` | path | `<cwd>/.testmuai/context.md` | Override the local context file. |
 | `--variables <json>` | JSON string | none | Inline variables JSON for this run. |

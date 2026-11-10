@@ -208,6 +208,8 @@ Run a Robot Framework suite that drives a mainframe 3270 terminal on TestMu AI H
 
 Mainframe suites depend on the `s3270` and `x3270` 3270 emulator binaries. Those do not install cleanly on Windows or macOS. HyperExecute provisions Ubuntu VMs where they do, installs them from one YAML file, starts the mock hosts, autosplits the suites across parallel machines, and merges the Robot Framework report.
 
+For an overview of the platform, see [mainframe testing on TestMu AI](https://www.testmuai.com/mainframe-testing/).
+
 The sample suite runs on two tracks. The ASCII suites (`tests/01`-`05`) talk to the mock host through a custom socket client (`libs/fnb_client.py`), because Python removed the built-in `telnetlib` in 3.13 under PEP 594. 
 
 The TN3270 suites (`tests/06`-`10`) use the standard [`robotframework-mainframe3270`](https://pypi.org/project/robotframework-mainframe3270/) library driving `s3270`, and the final suite drives the `x3270` GUI.

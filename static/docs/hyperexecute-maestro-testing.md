@@ -1,4 +1,4 @@
-# Execute Maestro Framework Tests on HyperExecute
+# How to Run Maestro Tests on HyperExecute
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
@@ -75,7 +75,7 @@
     {
       "@context": "https://schema.org",
       "@type": "HowTo",
-      "name": "Additional Information: Launching Pre-Installed Apps with Maestro",
+      "name": "Launching Pre-Installed Apps with Maestro",
       "description": "In some cases, you may want to test against a pre-installed application on the device (instead of uploading and installing a new APK/IPA). Maestro supports this by allowing you to specify the app\u2019s package identifier (Android) or bundle identifier (iOS) in your test configuration.",
       "step": [
         {
@@ -104,7 +104,7 @@
   ]) }}
 />
 
-This page outlines how to execute your Maestro tests on HyperExecute with [YAML 0.2](/support/docs/hyperexecute-yaml-version0.2/)
+Run your Maestro tests on HyperExecute with [YAML 0.2](/support/docs/hyperexecute-yaml-version0.2/). The [Prerequisites](#prerequisites), [CLI setup](#setting-up-hyperexecute-cli-for-maestro), and [app upload](#uploading-your-app-for-maestro) apply to every run. From there, execute your suite as standard [Maestro flows](#running-maestro-tests), or with [Maestro and Cucumber (BDD)](#running-maestro-tests-with-cucumber-bdd) if your tests are written in Gherkin. Both approaches conclude with the shared reporting step.
 
 ## Prerequisites
 To run the Tests on HyperExecute from your Local System, you are required:
@@ -114,20 +114,10 @@ To run the Tests on HyperExecute from your Local System, you are required:
 - Setup the [Environmental Variable](/support/docs/hyperexecute-environment-variable-setup/)
 - [HyperExecute YAML](/support/docs/hyperexecute-yaml-version0.2/) file which contains all the necessary instructions.
 
-## Step 1: Setup Your Test Suite
-You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
+## Setting Up HyperExecute CLI for Maestro
+The CLI triggers your tests on HyperExecute. Download the binary on the host system and keep it in the root directory of your test suite.
 
-**Sample repo**
-Download or Clone the code sample for the Maestro framework from the TestMu AI GitHub repository to run the tests on the HyperExecute.
- View on GitHub
-
-## Step 2: Setup the CLI in your Test Suite
-After cloning / downloading the sample repo, you need to setup the CLI and the environment variables.
-
-### Download the HyperExecute CLI
-The CLI is used for triggering the tests on HyperExecute. It is recommend to download the CLI binary on the host system and keep it in the root directory of the suite to perform the tests on HyperExecute.
-
-You can download the CLI for your desired platform from the below mentioned links:
+You can download the CLI for your desired platform from the links below:
 
 | Platform | HyperExecute CLI |
 | ---------| ---------------- |
@@ -135,7 +125,7 @@ You can download the CLI for your desired platform from the below mentioned link
 | MacOS | https://downloads.lambdatest.com/hyperexecute/darwin/hyperexecute |
 | Linux | https://downloads.lambdatest.com/hyperexecute/linux/hyperexecute |
 
-## Step 3: Upload your Application
+## Uploading Your App for Maestro
 Upload your _android_ application (.apk file) or iOS application (.ipa file) to the TestMu AI servers using our REST API. You need to provide your Username and AccessKey in the format `Username:AccessKey` in the cURL command for authentication.
 
 Enter your local path of the code repository instead of `` in the below cURL command.
@@ -145,8 +135,18 @@ Enter your local path of the code repository instead of `` in the below cURL com
 
 > Response of above cURL will be a **JSON** object containing the `App ID` of the format - `` and will be used in the next step.
 
-## Step 4: Configure YAML in your Test Suite
-Enter your `APP_ID` in the YAML file that you have fetched in the above step.
+## Running Maestro Tests
+Your tests are plain **Maestro flow files** that run directly on the grid, with no BDD layer on top.
+
+### Setting Up Your Test Suite
+You can use your own project to configure and test it. For demo purposes, we use the sample repository.
+
+**Sample repo**
+Download or Clone the code sample for the Maestro framework from the TestMu AI GitHub repository to run the tests on the HyperExecute.
+ View on GitHub
+
+### Configuring the HyperExecute YAML
+Enter your `APP_ID` in the YAML file that you fetched when uploading your application. Choose your target device below.
 
 > To enable this for your organizaton, connect with us through our **24/7 chat support** or drop us an email to [support@testmuai.com](mailto:support@testmuai.com).
 
@@ -166,7 +166,7 @@ https://github.com/LambdaTest/hyperexecute-maestro-sample-test/blob/main/yaml/io
 
 > HyperExecute now supports [tunnel capabilities](/support/docs/hyperexecute-how-to-configure-tunnel/) for Maestro tests running on both virtual devices and real devices using the Raw Framework configuration.
 
-### Run Tests on iOS Virtual Devices
+**Running Tests on iOS Virtual Devices**
 To run tests on iOS Virtual Devices, make the following changes in your `hyperexecute.yaml` file:
 
 - Change the `runson` key to `ios26`.
@@ -190,6 +190,10 @@ runson: ios26
 
 # Enable dynamic allocation of resources
 dynamicAllocation: true
+
+# Route test traffic through a secure tunnel to reach locally hosted or firewalled apps.
+# Supported for Maestro on both virtual and real devices. Set to true to enable.
+tunnel: false
 
 # Test framework configuration
 framework:
@@ -219,6 +223,9 @@ framework:
     reservation: false
     isRealMobile: false
     network: true
+    # Route device traffic through your whitelisted dedicated proxy IP.
+    # Requires the Dedicated Proxy paid plan. Set to true to enable.
+    dedicatedProxy: false
     platformName: ios
 
 env:
@@ -258,7 +265,82 @@ jobLabel: ['HYP', 'Maestro', 'iOS', Simulator]
 
 Ensure that the app is built for ARM or Universal (Dual-Architecture) and not as an x86-only binary. As shown in the `appId` field above, use the ARM build for iOS 26.0 and above.
 
-## Step 5: Generate JUnit XML Report
+### Executing Your Test Suite
+> **NOTE :** In case of MacOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
+
+    {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE `}
+
+When the job completes, the [HyperExecute dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute) shows your Maestro run and its status:
+
+## Running Maestro Tests with Cucumber BDD
+Your tests are **Gherkin `.feature` files**, and Cucumber runs the same Maestro flows underneath. Compared to the Maestro path above, only the test suite layout and a couple of YAML keys change.
+
+### Setting Up Your Test Suite
+You can use your own project. For demo purposes, we use the Maestro + Cucumber sample repository.
+
+**Sample repo**
+Download or clone the Maestro + Cucumber sample from the TestMu AI GitHub repository to run the tests on HyperExecute.
+ View on GitHub
+
+The suite is organized so that Cucumber sits on top of Maestro:
+
+| Path | Purpose |
+| ---- | ------- |
+| `features/` | Gherkin `.feature` files, one scenario per behavior |
+| `step_definitions/` | Glue code that maps each Gherkin step to a Maestro flow |
+| `flows/` | The underlying Maestro flow files |
+| `cucumber.js` | Cucumber profiles (`android`, `ios`) |
+
+A feature file reads as plain behavior:
+
+```gherkin
+@android @navigation
+Feature: Navigation
+
+  @regression
+  Scenario: User opens search from the home screen
+    Given the Wikipedia app is installed
+    When I launch the app
+    And I skip onboarding if shown
+    And I tap the search icon
+    Then the search input should be visible
+```
+
+### Configuring the HyperExecute YAML
+The Cucumber YAML uses the same `raw` framework as the Maestro flow, with a few additions so `cucumber-js` can drive Maestro:
+
+- A `runtime` block (Java + Node) is added so `cucumber-js` can run.
+- Tests are discovered dynamically: `testDiscovery.command` runs `./discover/.sh`, which lists the `.feature` files to execute.
+- `testRunnerCommand` runs each feature through Cucumber via `./support/run-.sh $test`.
+- `partialReports` reads the JUnit XML that Cucumber writes to the `reports/` folder.
+
+```yaml reference title="hyperexecute.yaml"
+https://github.com/LambdaTest/hyperexecute-maestro-cucumber-sample/blob/main/yaml/android/android-emulator.yaml
+```
+
+```yaml reference title="hyperexecute.yaml"
+https://github.com/LambdaTest/hyperexecute-maestro-cucumber-sample/blob/main/yaml/android/android-realdevice.yaml
+```
+
+```yaml reference title="hyperexecute.yaml"
+https://github.com/LambdaTest/hyperexecute-maestro-cucumber-sample/blob/main/yaml/ios/ios-simulator.yaml
+```
+
+The Cucumber sample installs the app with `appPath` (drop your build into the `apps/` folder). To run against a build you already uploaded, replace `appPath` with `appId: lt://`.
+
+### Executing Your Test Suite
+Run the CLI exactly as in the Maestro section, pointing `--config` at your Cucumber `hyperexecute.yaml`:
+
+    {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE `}
+
+When the job completes, the HyperExecute dashboard shows your Cucumber run with each feature scenario and its status:
+
+## Generating the JUnit XML Report for Maestro
+Both approaches feed HyperExecute a **JUnit XML** report through `partialReports`, with a small difference in setup:
+
+- **Maestro**: add the `--format junit` flag to `runTest.sh` (steps below).
+- **Maestro + Cucumber**: reporting is already wired. `./support/run-.sh` runs `cucumber-js` with `--format junit:reports/.xml`, and the YAML's `partialReports` (pointing at `reports/`) picks it up. You can skip step 1 below.
+
 1. Update the `runTest.sh` file to include the `--format junit` flag in the maestro test command:
 
 ```yaml
@@ -299,18 +381,10 @@ testRunnerCommand: ./maestro-test/runTest.sh $test && mv report.xml $test.xml
 
 This ensures that each test result is saved with a unique name like test1.xml, test2.xml, etc.
 
-## Step 6: Execute your Test Suite
-> **NOTE :** In case of MacOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
-
-    {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE `}
-
-## Step 7: Monitor the Test Execution
-Visit the [HyperExecute Dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status.
-
-## Additional Information: Launching Pre-Installed Apps with Maestro
+## Launching Pre-Installed Apps with Maestro
 In some cases, you may want to test against a pre-installed application on the device (instead of uploading and installing a new APK/IPA). Maestro supports this by allowing you to specify the app’s package identifier (Android) or bundle identifier (iOS) in your test configuration.
 
-### Step 1: Identify the App ID (Package Name / Bundle ID)
+### Identifying the App ID (Package Name / Bundle ID)
 #### For Android:
   - Visit the app’s page on the Google Play Store.
   - The id parameter in the URL is the package name.
@@ -319,7 +393,7 @@ In some cases, you may want to test against a pre-installed application on the d
 #### For iOS:
   - Identify the bundle identifier (e.g., com.apple.Preferences for Settings).
 
-### Step 2: Update Your HyperExecute Configuration
+### Updating Your HyperExecute Configuration
 You can configure your YAML files to launch the pre-installed app instead of uploading a new one.
 
 ```yaml title="hyperexecute.yaml"
@@ -337,7 +411,7 @@ and the launcher yaml file to tells maestro to use the pre-installed Wikipedia a
 https://github.com/LambdaTest/hyperexecute-maestro-sample-test/blob/main/yaml/android/android-launch.yaml
 ```
 
-### Step 3: Execute your Test Suite
+### Executing Your Test Suite
 > **NOTE :** In case of MacOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
 
     {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE `}
@@ -369,3 +443,99 @@ assertVisible: "Mobile UI testing"
 - Make sure the app is already installed on the device; otherwise, Maestro cannot launch it.
 - The same approach works for iOS using the bundle identifier.
 - You can also switch between multiple apps in a single flow by providing different appId values in separate steps.
+
+## Installing and Switching Between Multiple Apps With otherApps
+The `otherApps` key installs one or more secondary apps on the device alongside your main app, so a single Maestro flow can launch and interact with each of them during the same run. You declare it under `framework.args` in your `hyperexecute.yaml`, passing a list of already-uploaded app IDs. HyperExecute installs every listed app before the test starts.
+
+Use this when a test needs more than the app under test on the device. A common case is simulating real-world memory pressure. Install memory-heavy secondary apps, launch them mid-flow to consume device RAM, and verify how your app behaves under high-memory, background-activity conditions.
+
+### Uploading the Secondary Apps
+Each app you list in `otherApps` must already exist on the TestMu AI servers. Upload every secondary app the same way you uploaded your main app, using the App Upload REST API described in [Uploading Your App for Maestro](#uploading-your-app-for-maestro).
+
+Each upload returns an `App ID` in the `lt://APP...` format, which you pass to `otherApps` in the next step.
+
+### Adding otherApps to Your HyperExecute YAML
+Add the `otherApps` key to the `framework.args` block of the YAML you configured in Step 4. It sits alongside your main `appPath` or `appId` and takes a list of secondary app IDs.
+
+```yaml title="hyperexecute.yaml"
+framework:
+  name: raw
+  args:
+    # Main app under test (local build or an uploaded lt:// app ID)
+    appPath: maestro-test/sample.apk
+    #highlight-start
+    # Secondary apps installed on the device for this run
+    otherApps:
+      - lt://APP10160332171786554938778428
+    #highlight-end
+```
+
+You can list more than one app under `otherApps`. HyperExecute installs each one before the run begins. This matches the configuration used in the Android real-device sample (`android-realdevice.yaml`) in the TestMu AI [Maestro sample repository](https://github.com/LambdaTest/hyperexecute-maestro-sample-test).
+
+### Switching Between Apps in the Maestro Flow
+Once the apps are installed, your Maestro flow controls which one is in the foreground. The `appId` at the top of the flow file sets the default app, and each `launchApp` step can name a different app to switch to it.
+
+The app you launch must already be installed, through `appPath`, `appId`, `otherApps`, or as a pre-installed app on the device.
+
+The following flow launches Wikipedia, switches to the LambdaTest Proverbial app, then returns to Wikipedia:
+
+```yaml title="android-launch.yaml"
+appId: org.wikipedia
+---
+- launchApp
+
+# Launch LambdaTest Proverbial
+- launchApp:
+    appId: com.lambdatest.proverbial
+
+# Launch Wikipedia again
+- launchApp:
+    appId: org.wikipedia
+```
+
+**Explanation:**
+
+- **appId: org.wikipedia** sets Wikipedia as the flow's default app.
+- **launchApp** launches the default app, Wikipedia.
+- **launchApp** with **appId: com.lambdatest.proverbial** switches the foreground to the Proverbial app.
+- **launchApp** with **appId: org.wikipedia** returns to Wikipedia.
+
+Use the package name on Android (for example, `org.wikipedia`) or the bundle identifier on iOS as the `appId` for each app you switch to.
+
+### Best Practices for otherApps
+- Upload every secondary app before the run and reference it by its `lt://APP...` ID.
+- Make sure each app named in a `launchApp` step is installed through `appPath`, `appId`, `otherApps`, or is already present on the device. Maestro cannot launch an app that is not installed.
+- To reproduce memory-pressure scenarios, launch the secondary apps during the flow so they stay resident and consume device RAM while your app under test runs.
+
+## Route Maestro Traffic Through a Dedicated Proxy
+Dedicated Proxy routes the device's network traffic through a single whitelisted IP, so your Maestro tests can reach internal or network-restricted resources behind your firewall. You enable it by setting `dedicatedProxy: true` under `framework.args` in your `hyperexecute.yaml`. It requires a separate paid plan and a proxy IP that your network administrators have whitelisted.
+
+### How Dedicated Proxy Works
+When a dedicated proxy is active, the device routes its network requests through it instead of straight out to the public internet.
+
+1. The allocated device sends its network requests through your dedicated proxy.
+2. The proxy serves publicly available resources directly, and reaches your network-restricted resources through the whitelisted IP.
+3. Because only one IP is whitelisted, you avoid maintaining a list of cloud IP ranges.
+
+Dedicated Proxy is available under a separate paid plan. Once the plan is enabled and your proxy IP is whitelisted, set `dedicatedProxy: true` to route traffic through it.
+
+### Enabling Dedicated Proxy in Your YAML
+Add `dedicatedProxy: true` to the `framework.args` block, alongside your other device capabilities.
+
+```yaml title="hyperexecute.yaml"
+framework:
+  name: raw
+  args:
+    # ...your device capabilities
+    network: true
+    #highlight-next-line
+    dedicatedProxy: true
+    platformName: android
+```
+
+To let specific domains bypass the proxy and resolve locally, such as `localhost` or internal test endpoints, pair it with `bypassProxyDomains`. See [how to bypass domains on a dedicated proxy](/support/docs/bypass-proxy-domains/).
+
+### Verifying the Dedicated Proxy Egress IP
+After the run starts, confirm where traffic exits by opening the **Network** tab on the run and inspecting a request that returns the device's outbound IP. Without a dedicated proxy, traffic exits from a standard TestMu AI cloud address, AWS `us-east-1` (`44.214.175.17`) in this example. With `dedicatedProxy` enabled, it exits from your whitelisted proxy IP.
+
+For the full setup and IP whitelisting steps, see [how dedicated proxy IP whitelisting works](/support/docs/dedicated-proxy/).

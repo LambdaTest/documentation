@@ -87,7 +87,7 @@ TestMu AI maintains enterprise-grade security across the platform with industry-
 - Private tenant deployment for AI features (Azure OpenAI)
 
 **Resources:**
-- [Security & Trust Page](https://www.testmuai.com/trust/security#platform-security)
+- [Security & Trust Page](https://www.testmuai.com/trust/security/#platform-security)
 - [Secrets Management](/support/docs/hyperexecute-how-to-save-and-manage-secrets/)
 
 ## Deployment Options
@@ -167,7 +167,7 @@ TestMu AI provides built-in capabilities to generate, manage, and protect the te
 - [Test Data Generation Overview](/support/docs/test-data-generation/)
 - [KaneAI Datasets](/support/docs/kane-ai-using-datasets/)
 - [KaneAI Variables & Parameters](/support/docs/kaneai-variables-and-parameters/)
-- [Network Data Masking for Selenium](/support/docs/network-data-masking/)
+- [Network Data Masking for Selenium](/support/docs/selenium-mask-your-data/#network-data-masking)
 - [HyperExecute Lambda Masking](/support/docs/hyperexecute-release-notes-2024/#version-231)
 
 ## Reporting & Analytics
@@ -277,7 +277,7 @@ TestMu AI offers multiple product tiers designed for different organizational ne
 - Org-level secrets management
 - Priority support SLA
 
-**For pricing details**: [lambdatest.com/pricing](https://www.testmuai.com/pricing/)
+**For pricing details**: [testmuai.com/pricing](https://www.testmuai.com/pricing/)
 
 ## Need More Information?
 

@@ -6,7 +6,7 @@
       },
       {
         "@type": "SoftwareSourceCode",
-        "name": "Code sample 5",
+        "name": "Run the test",
         "codeSampleType": "code snippet",
         "programmingLanguage": "text",
         "text": "K6_BROWSER_ENABLED=true k6 run k6_sample.js"
@@ -18,7 +18,7 @@
 
 # Getting Started With k6 Browser Testing
 
-The [k6 Browser module](https://github.com/grafana/xk6-browser) brings browser automation and end-to-end web testing to k6 while supporting core k6 features. The Browser module introduces browser-level APIs that enable seamless interaction with browsers and facilitate the collection of frontend performance metrics as an integral part of your k6 tests.
+The [k6 Browser module](https://github.com/grafana/xk6-browser) brings browser automation and End-to-End (E2E) testing to k6 while supporting core k6 features. The Browser module introduces browser-level APIs that enable seamless interaction with browsers and facilitate the collection of frontend performance metrics as an integral part of your k6 tests.
 
 k6 browser module aims to provide rough compatibility with the Playwright API, so you don’t need to learn a completely new API.
 
@@ -134,8 +134,4 @@ K6_BROWSER_ENABLED=true k6 run k6_sample.js
 
 ## View your k6 test results
 
-The TestMu AI Automation Dashboard is where you can see the results of your k6 tests after running them on the TestMu AI platform.
-
-The below screenshot of TestMu AI Automation Dashboard shows the k6 build on the left and the build sessions associated with the selected build on the right.
-
-On clicking the session name of the respective test, you can view the details of k6 test session that you just executed. For example, the below screenshot shows a test execution details of k6 test like Test Name, Test ID, selected configurations, test logs, basic info, input config, and test session video.
+The TestMu AI Automation Dashboard is where you can see the results of your k6 tests after running them on the TestMu AI platform. On clicking the session name of the respective test, you can view the test execution details such as Test Name, Test ID, selected configurations, test logs, basic info, input config, and test session video.

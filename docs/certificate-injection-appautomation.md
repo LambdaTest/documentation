@@ -1,6 +1,7 @@
 ---
 id: certificate-injection-appautomation
 title: Certificate Injection in App Automation on Real Devices
+hide_title: true
 sidebar_label: Certificate Injection
 description: Install custom CA certificates and client identities on TestMu AI real devices during Appium app automation sessions to test certificate-based authentication, SSL pinning, and mutual TLS.
 keywords:
@@ -22,6 +23,7 @@ url: https://www.testmuai.com/support/docs/certificate-injection-appautomation/
 site_name: TestMu AI
 slug: certificate-injection-appautomation/
 canonical: https://www.testmuai.com/support/docs/certificate-injection-appautomation/
+toc_max_heading_level: 2
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -203,6 +205,8 @@ import VerifiedTag from '@site/src/component/verifiedTag';
 
 <RealDeviceTag value="Real Device" />
 
+# Certificate Injection in App Automation on Real Devices
+
 Many apps connect to servers that use certificates issued by a private or corporate certificate authority. Some apps also pin a **self-signed certificate**, or present a **client certificate** to authenticate themselves before a server will respond. On a standard device, these connections fail because the device does not trust your organization's certificates.
 
 <BrandName />'s **Certificate Injection** allows you to test certificate-based authentication on real devices. You upload a certificate once and reference it by ID in your Appium capabilities. <BrandName /> then installs it on the allocated device before your test begins, with no manual steps on the device and no password entry during the run. Certificates are removed when the session ends.
@@ -304,8 +308,6 @@ For a PKCS#12 bundle, send the password along with the upload. The password is s
 
 The response returns the `media_url` that you reference in your capabilities:
 
-<VerifiedTag value="Verified" />
-
 ```json
 {
   "media_url": "lt://MEDIA9f2c4b18a7d54e3ba0c6f19d2e8b7c05",
@@ -343,10 +345,10 @@ If you are testing a native app against a private certificate authority, `custom
 | `certificateId` | String | Yes | The `media_url` returned by the upload API. Both the full `lt://MEDIA...` form and the bare `MEDIA...` identifier are accepted. |
 | `password` | String | No | Overrides the password stored with a `.pfx` certificate at upload time. |
 
-<VerifiedTag value="Verified" />
-
 <Tabs className="docs__val">
   <TabItem value="json" label="JSON" default>
+
+<VerifiedTag value="Verified" />
 
 ```json
 {
@@ -372,6 +374,8 @@ If you are testing a native app against a private certificate authority, `custom
   </TabItem>
   <TabItem value="java" label="Java">
 
+<VerifiedTag value="Verified" />
+
 ```java
 Map<String, Object> caCert = new HashMap<>();
 caCert.put("certificateId", "MEDIA9f2c4b18a7d54e3ba0c6f19d2e8b7c05");
@@ -389,6 +393,8 @@ capabilities.setCapability("LT:Options", ltOptions);
 
   </TabItem>
   <TabItem value="python" label="Python">
+
+<VerifiedTag value="Verified" />
 
 ```python
 lt_options = {
@@ -409,6 +415,8 @@ lt_options = {
 
   </TabItem>
   <TabItem value="javascript" label="JavaScript">
+
+<VerifiedTag value="Verified" />
 
 ```js
 const capabilities = {
@@ -431,6 +439,8 @@ const capabilities = {
 
   </TabItem>
   <TabItem value="yaml" label="YAML">
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 customCertificates:
@@ -473,8 +483,6 @@ If a certificate fails to install, your session **does not fail**. The session s
 ---
 
 ## What Happens on the Device
-
-<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
   <TabItem value="android" label="Android" default>

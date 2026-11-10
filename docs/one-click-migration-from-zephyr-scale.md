@@ -2,7 +2,7 @@
 id: one-click-migration-from-zephyr-scale
 title: One Click Migration from Zephyr Scale
 hide_title: true
-sidebar_label: One Click Migration from Zephyr Scale
+sidebar_label: Import from Zephyr Scale
 description: Migrate your test cases, folders, embedded screenshots, and custom fields from Zephyr Scale (Jira Cloud) to TestMu AI Test Manager in a single click.
 keywords:
   - zephyr scale

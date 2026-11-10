@@ -5,7 +5,7 @@
 Run WebDriverIO 5.6.2 tests on the TestMu AI cloud grid. This guide covers setup, running a sample test, configuring capabilities, and testing locally hosted pages.
 
 **Outdated Version**
-This guide covers WebDriverIO 5.6.2. The current version is 8+. For the latest WebDriverIO guide, see [Selenium With WebDriverIO](/support/docs/webdriverio-with-selenium-running-webdriverio-automation-scripts-on-testmu-selenium-grid/).
+This guide covers WebDriverIO 5.6.2. The current version is 8+. For the latest WebDriverIO guide, see [Selenium With WebDriverIO](/support/docs/javascript-with-selenium-running-javascript-automation-scripts-on-testmu-selenium-grid/?framework=webdriverio).
 
 **Sample repo**
 All the code used in this guide is available in the sample repository.

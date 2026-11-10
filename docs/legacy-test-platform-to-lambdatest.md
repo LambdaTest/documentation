@@ -168,7 +168,7 @@ In this guide,  we will look at how to migrate from legacy test execution platfo
 
 Developers and testers require a robust test execution platform that is reliable, secure, scalable, fast, and affordable. On the other hand, enterprises seek innovation that orchestrates tests and bring in much-needed intelligence to provide faster developer feedback and quicker time-to-market. This is exactly where <BrandName /> steps in to help you in meeting these requirements.
 
-*<BrandName /> is an AI-based test orchestration and execution platform that allows you to perform manual and automated tests at scale on over 5000+ real devices and 10,000+ browser/device combinations.*
+*<BrandName /> is an AI-based test orchestration and execution platform that allows you to perform manual and automated tests at scale on over 50,000+ real devices and 10,000+ browser/device combinations.*
 
 Here's why you should shift from legacy test execution platform to <BrandName />.
 
@@ -201,7 +201,7 @@ You can run your script locally by executing it directly on your machine with yo
 
 
 
-<img loading="lazy" className="doc_img" src={require('../assets/images/browserstack-lambdatest-migration/local-test-script.png').default} alt="Lambdatest text validation result" width="1024" height="667" />
+<img loading="lazy" className="doc_img" src={require('../assets/images/browserstack-lambdatest-migration/local-test-script.png').default} alt="TestMu AI text validation result" width="1024" height="667" />
 
 
 <!-- 
@@ -474,7 +474,7 @@ public class TextValidationTest {
 
 Visit <BrandName /> Web Automation dashboard to view your test execution result.
 
-<img loading="lazy" className="doc_img" src={require('../assets/images/browserstack-lambdatest-migration/lambdatest-safar-execution.png').default} alt="Lambdatest text validation result" width="1024" height="667" />
+<img loading="lazy" className="doc_img" src={require('../assets/images/browserstack-lambdatest-migration/lambdatest-safar-execution.png').default} alt="TestMu AI text validation result" width="1024" height="667" />
 
 
 ## Contact Us for Support

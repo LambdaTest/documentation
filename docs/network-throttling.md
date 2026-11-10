@@ -1,8 +1,10 @@
 ---
 id: network-throttling
-title: Network Throttling for Selenium Tests
-sidebar_label: Test on a Slow Network
-description: Simulate low latency networks like 2G, 3G, LTE, or offline in Selenium tests using network throttling capabilities.
+title: How to Simulate Network Conditions in Selenium on TestMu AI
+toc_max_heading_level: 2
+hide_title: true
+sidebar_label: "Network Throttling"
+description: Simulate different network conditions in Selenium tests on TestMu AI to check website behavior on slow or unstable connections.
 keywords:
   - network throttling selenium capability
   - simulate 2G 3G 4G selenium tests
@@ -51,8 +53,8 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       "@type": "WebPage",
       "@id": "https://www.testmuai.com/support/docs/network-throttling/"
     },
-    "headline": "Network Throttling for Selenium Tests",
-    "description": "Simulate low latency networks like 2G, 3G, LTE, or offline in Selenium tests using network throttling capabilities.",
+    "headline": "How to Simulate Network Conditions in Selenium on TestMu AI",
+    "description": "Simulate different network conditions in Selenium tests on TestMu AI to check website behavior on slow or unstable connections.",
     "url": "https://www.testmuai.com/support/docs/network-throttling/",
     "image": {
       "@type": "ImageObject",
@@ -97,9 +99,9 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     "hasPart": [
       {
         "@type": "SoftwareSourceCode",
-        "name": "Network Throttling",
+        "name": "Set the networkThrottling capability",
         "codeSampleType": "code snippet",
-        "programmingLanguage": "YAML",
+        "programmingLanguage": "Java",
         "text": "capabilities.setCapability(\"networkThrottling\", \"Regular 4G\");"
       },
       {
@@ -111,7 +113,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       },
       {
         "@type": "SoftwareSourceCode",
-        "name": "Configuring Capabilities for Pre-defined Network Settings",
+        "name": "Configuring Capabilities for Pre-Defined Network Settings",
         "codeSampleType": "code snippet",
         "programmingLanguage": "Java",
         "text": "DesiredCapabilities caps = new DesiredCapabilities();\ncaps.setCapability(\"browserName\", \"Chrome\");\ncaps.setCapability(\"build\", \"Demo-TestNG\");\ncaps.setCapability(\"name\", \"TestNG-Todo-Script-1\");\ncaps.setCapability(\"networkThrottling\", \"Regular 4G\");  //Set Network Speed to Regular 4G "
@@ -121,14 +123,14 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         "name": "Configuring Custom Network Settings",
         "codeSampleType": "code snippet",
         "programmingLanguage": "Java",
-        "text": "package com.lambdatest;\n\nimport java.net.MalformedURLException;\nimport java.net.URL;\n\nimport org.openqa.selenium.By;\nimport org.openqa.selenium.remote.DesiredCapabilities;\nimport org.openqa.selenium.remote.RemoteWebDriver;\nimport org.testng.Assert;\nimport org.testng.annotations.AfterSuite;\nimport org.testng.annotations.BeforeSuite;\nimport org.testng.annotations.Test;\n\npublic class TestNGTodo1 {\n\n\tprivate RemoteWebDriver driver;\n\tprivate String Status=\"failed\";\n\n\t@BeforeSuite\n\tpublic void setup() throws MalformedURLException {\n\t\tString username = System.getenv(\"LT_USERNAME\");\n\t\tString authkey = System.getenv(\"LT_ACCESS_KEY\");\n\t\tString hub = \"@hub.lambdatest.com/wd/hub\";\n\n\t\tDesiredCapabilities caps = new DesiredCapabilities();\n\t\tcaps.setCapability(\"browserName\", \"Chrome\");\n\t\tcaps.setCapability(\"build\", \"Demo-TestNG\");\n\t\tcaps.setCapability(\"name\", \"TestNG-Todo-Script-1\");\n\t\tcaps.setCapability(\"networkThrottling\", true);  //To enable network throttling\n\t\n\tdriver = new RemoteWebDriver(new URL(\"https://\" + username + \":\" + authkey + hub), caps);\n\n\t// Custom network throttling using executeScript\n        Map<String, Object> throttleParams = new HashMap<>();\n        throttleParams.put(\"download\", 500); // Maximum download speed in kbps\n        throttleParams.put(\"upload\", 100);   // Maximum upload speed in kbps\n        throttleParams.put(\"latency\", 30);   // Latency in ms\n        \n        // Use executeScript with the provided payload\n        driver.executeScript(\"lambda-throttle-network\", throttleParams);\n\t\n\t}\n\n\n\t@Test\n\tpublic void basicTest() throws InterruptedException {\n\t\tString spanText;\n\t\tSystem.out.println(\"Loading Url\");\n\t\tThread.sleep(100);\n\t\tdriver.get(\"https://4dvanceboy.github.io/lambdatest/todo.html\");\n\t\tThread.sleep(100);\n\n\t\tSystem.out.println(\"Checking Box\");\n\t\tdriver.findElement(By.name(\"todo-1\")).click();\n\t\tThread.sleep(400);\n\n\t\tSystem.out.println(\"Checking Another Box\");\n\t\tdriver.findElement(By.name(\"todo-2\")).click();\n\t\tThread.sleep(400);\n\n\t\tSystem.out.println(\"Checking Box\");\n\t\tdriver.findElement(By.name(\"todo-3\")).click();\n\t\tThread.sleep(400);\n\n\t\tSystem.out.println(\"Checking Another Box\");\n\t\tdriver.findElement(By.name(\"todo-4\")).click();\n\t\tThread.sleep(400);\n\n\t\tdriver.findElement(By.id(\"todotext\")).sendKeys(\" List Item 6\");\n\t\tdriver.findElement(By.id(\"addbutton\")).click();\n\t\tThread.sleep(200);\n\n\t\tdriver.findElement(By.id(\"todotext\")).sendKeys(\" List Item 7\");\n\t\tdriver.findElement(By.id(\"addbutton\")).click();\n\t\tThread.sleep(200);\n\n\t\tdriver.findElement(By.id(\"todotext\")).sendKeys(\" List Item 8\");\n\t\tdriver.findElement(By.id(\"addbutton\")).click();\n\t\tThread.sleep(200);\n\n\t\tSystem.out.println(\"Checking Another Box\");\n\t\tdriver.findElement(By.name(\"todo-1\")).click();\n\t\tThread.sleep(300);\n\n\t\tSystem.out.println(\"Checking Another Box\");\n\t\tdriver.findElement(By.name(\"todo-3\")).click();\n\t\tThread.sleep(300);\n\n\t\tSystem.out.println(\"Checking Another Box\");\n\t\tdriver.findElement(By.name(\"todo-7\")).click();\n\t\tThread.sleep(300);\n\n\t\tSystem.out.println(\"Checking Another Box\");\n\t\tdriver.findElement(By.name(\"todo-8\")).click();\n\t\tThread.sleep(300);\n\n\t\tSystem.out.println(\"Entering Text\");\n\t\tdriver.findElement(By.id(\"todotext\")).sendKeys(\"Get Taste of Lambda and Stick to It\");\n\t\tThread.sleep(300);\n\n\t\tdriver.findElement(By.id(\"addbutton\")).click();\n\n\t\tSystem.out.println(\"Checking Another Box\");\n\t\tdriver.findElement(By.name(\"todo-9\")).click();\n\t\tThread.sleep(300);\n\t\t// Let's also assert that the todo we added is present in the list.\n\n\t\tspanText = driver.findElementByXPath(\"/html/body/div/div/div/ul/li[9]/span\").getText();\n\t\tAssert.assertEquals(\"Get Taste of Lambda and Stick to It\", spanText);\n\t\tStatus=\"passed\";\n\t\tThread.sleep(150);\n\n\t\tSystem.out.println(\"TestFinished\");\n\n\t}\n\n\t@AfterSuite\n\tpublic void tearDown() {\n\t\tdriver.executeScript(\"lambda-status=\" + Status);\n\t\tdriver.quit();\n\t}\n\n}"
+        "text": "package com.lambdatest;\n\nimport java.net.MalformedURLException;\nimport java.net.URL;\nimport java.util.HashMap;\nimport java.util.Map;\n\nimport org.openqa.selenium.By;\nimport org.openqa.selenium.remote.DesiredCapabilities;\nimport org.openqa.selenium.remote.RemoteWebDriver;\nimport org.testng.Assert;\nimport org.testng.annotations.AfterSuite;\nimport org.testng.annotations.BeforeSuite;\nimport org.testng.annotations.Test;\n\npublic class TestNGTodo1 {\n\n\tprivate RemoteWebDriver driver;\n\tprivate String Status=\"failed\";\n\n\t@BeforeSuite\n\tpublic void setup() throws MalformedURLException {\n\t\tString username = System.getenv(\"LT_USERNAME\");\n\t\tString authkey = System.getenv(\"LT_ACCESS_KEY\");\n\t\tString hub = \"@hub.lambdatest.com/wd/hub\";\n\n\t\tDesiredCapabilities caps = new DesiredCapabilities();\n\t\tcaps.setCapability(\"browserName\", \"Chrome\");\n\t\tcaps.setCapability(\"build\", \"Demo-TestNG\");\n\t\tcaps.setCapability(\"name\", \"TestNG-Todo-Script-1\");\n\t\tcaps.setCapability(\"networkThrottling\", true);  //To enable network throttling\n\t\n\tdriver = new RemoteWebDriver(new URL(\"https://\" + username + \":\" + authkey + hub), caps);\n\n\t// Custom network throttling using executeScript\n        Map<String, Object> throttleParams = new HashMap<>();\n        throttleParams.put(\"download\", 500); // Maximum download speed in kbps\n        throttleParams.put(\"upload\", 100);   // Maximum upload speed in kbps\n        throttleParams.put(\"latency\", 30);   // Latency in ms\n        \n        // Use executeScript with the provided payload\n        driver.executeScript(\"lambda-throttle-network\", throttleParams);\n\t\n\t}\n}"
       }
     ],
-    "dateModified": "2026-09-09T19:13:32+05:30"
+    "dateModified": "2026-09-27T00:00:00+05:30"
   }) }}
 />
 
-# Network Throttling
+# How to Simulate Network Conditions in Selenium on TestMu AI
 
 ---
 
@@ -138,18 +140,18 @@ To validate your website on such network profiles, simulate these network condit
 
 | KEY | VALUES |CAPABILITY |
 |-----|--------|-----------|
-| networkThrottling | Regular 4G, Regular 3G, Regular 2G, Good 3G, Good 2G, Offline, Reset, GPRS, DSL | Based on the user-provided input, this capability starts the test suite with the specified default network. For example, if the user selects **Regular 4G**, the capability looks like this: <br/> ```capabilities.setCapability("networkThrottling", "Regular 4G");``` |
+| networkThrottling | Regular 4G, Regular 3G, Regular 2G, Good 3G, Good 2G, Offline, Reset, GPRS, DSL | Based on the user-provided input, this capability starts the test suite with the specified default network. For example, if the user selects **Regular 4G**, the capability looks like this: |
 
 <VerifiedTag value="Verified" />
 
-```yaml
+```java
 capabilities.setCapability("networkThrottling", "Regular 4G");
 ```
 
 ## List of Network Profiles
 ---
 
-The following table lists all available preset network profiles with their speed and latency values.
+The following table lists all available preset network profiles with their speed and latency values. To mirror how users in a specific region experience your app, pair these profiles with Selenium geolocation testing, and use custom DNS mapping when the test must resolve a hostname to a particular IP.
 
 | CONDITION  | MAX DOWNLOAD SPEED (KBPS) | MAX UPLOAD SPEED (KBPS) | LATENCY (MS)     |
 | ------------ | --------------------------- | ------------------------- | ------------------ |
@@ -192,11 +194,13 @@ TestMu AI allows you to select a network profile before running automation tests
 ## Configuring Network Throttling in Test Automation
 ---
 
-Define network throttle capabilities in your automation scripts to configure network throttling.
+Define network throttle capabilities in your automation scripts to configure network throttling. You can set these together with the other [Selenium automation capabilities](/support/docs/selenium-automation-capabilities/) that control your test environment.
 
 To configure network throttling in automation, use the [TestMu AI TestNG GitHub repository](https://github.com/LambdaTest/Java-TestNG-Selenium) to run automation tests.
 
-### Configuring Capabilities for Pre-defined Network Settings
+### Configuring Capabilities for Pre-Defined Network Settings
+
+---
 
 <VerifiedTag value="Verified" />
 
@@ -212,6 +216,8 @@ The following TestNG code validates your TestMu AI credentials for authenticatio
 
 ### Configuring Custom Network Settings
 
+---
+
 <VerifiedTag value="Verified" />
 
 ```java
@@ -219,6 +225,8 @@ package com.lambdatest;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.HashMap;
+import java.util.Map;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -344,6 +352,15 @@ public class TestNGTodo1 {
 
 
 > In case you have any questions, feel free to share them with us.Our experts are available on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 Customer chat support**</span>. You can also drop us a mail at support@testmuai.com. Happy testing! 🙂
+
+## Next Steps
+---
+
+Continue with these related guides:
+
+- [Selenium Geolocation Capabilities](/support/docs/selenium-geolocation-capabilities/)
+- [Custom DNS Map](/support/docs/custom-dns-map/)
+- [Selenium Automation Capabilities](/support/docs/selenium-automation-capabilities/)
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

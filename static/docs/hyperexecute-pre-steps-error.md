@@ -49,7 +49,7 @@ The target Framework can be replaced with dotnet version targeted in the user’
 
 This error is generated while installing the dependencies in your project suite.
 
-#### Error in Python
+### Error in Python
 
 You can encounter a similar error while installing dependencies
 
@@ -70,7 +70,7 @@ pip_cache --trusted-host http://pypi.org  --trusted-host http://pypi.python.org 
 pip setuptools
 ```
 
-#### Error in Maven
+### Error in Maven
 
 You can encounter a similar error while running Maven Project as well, Now to resolve this issue for **maven**, pass the following command
 

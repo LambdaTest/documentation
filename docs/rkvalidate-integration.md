@@ -3,7 +3,7 @@ id: rktracer-integration
 title: RKTracer Integration
 hide_title: true
 sidebar_label: RKTracer
-description: Generate code coverage for web and mobile apps across 5000+ real devices and 10,000+ browser/device combinations with TestMu AI and RKTracer.
+description: Generate code coverage for web and mobile apps across 50,000+ real devices and 10,000+ browser/device combinations with TestMu AI and RKTracer.
 keywords:
 - rktracer testmu ai
 - rktracer integration
@@ -54,7 +54,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       "@id": "https://www.testmuai.com/support/docs/rktracer-integration/"
     },
     "headline": "RKTracer Integration",
-    "description": "Generate code coverage for web and mobile apps across 5000+ real devices and 10,000+ browser/device combinations with TestMu AI and RKTracer.",
+    "description": "Generate code coverage for web and mobile apps across 50,000+ real devices and 10,000+ browser/device combinations with TestMu AI and RKTracer.",
     "url": "https://www.testmuai.com/support/docs/rktracer-integration/",
     "image": {
       "@type": "ImageObject",
@@ -135,7 +135,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
 
 Developed by RKValidate, RKTracer is a Code coverage tool capable of generating coverage data for different programming languages like C, C++, C#, Java, Kotlin, JavaScript, Python, etc; regardless of what compiler, cross compiler, embedded targets, or servers you use to test your apps.
 
-With <BrandName /> and RKTracer, you can generate Code coverage for your web and mobile apps across 5000+ real devices and 10,000+ browser/device combinations.
+With <BrandName /> and RKTracer, you can generate Code coverage for your web and mobile apps across 50,000+ real devices and 10,000+ browser/device combinations.
 
 ## RKTracer With Web Automation On <BrandName />
 ***

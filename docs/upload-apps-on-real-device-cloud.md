@@ -148,13 +148,19 @@ Hover over the app, click on the settings icon for the app settings to open.
 
 - Set the **App Name** to easily identify it on the dashboard.
 
-- Use the **App ID** provided by LambdaTest to execute your automation scripts.
+- Use the **App ID** provided by TestMu AI to execute your automation scripts.
 
 - Control **Visibility** to manage who in your team can view or edit the app.
 
 - Use the **App Version Code** to differentiate between different builds.
 
 You can edit the information at any time and save the changes. If an app is no longer needed, you have the option to delete it permanently from your account.
+
+:::note
+
+- Only the app owner (the user who uploaded the app to <BrandName />) can change an app’s visibility. The app name can be changed by either the owner or an admin of the organization.
+- Organization admins have permission to delete applications uploaded by any member of the organization.
+:::
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

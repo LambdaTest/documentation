@@ -14,12 +14,13 @@ slug: sim-support/
 canonical: https://www.testmuai.com/support/docs/sim-support/
 site_name: TestMu AI
 url: https://www.testmuai.com/support/docs/sim-support/
+toc_max_heading_level: 2
 ---
 import CodeBlock from '@theme/CodeBlock';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import RealDeviceTag from '../src/component/realDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import RealDeviceTag from '@site/src/component/realDevice';
 import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
@@ -154,9 +155,11 @@ import VerifiedTag from '@site/src/component/verifiedTag';
   ]) }}
 />
 
-# SIM Support On Public Real Devices
-<RealDeviceTag value="Real Device" /> 
-SIM & eSIM support enables testing of SMS-driven use cases on real mobile devices, such as **OTP verification** and **two-factor authentication** workflows. By automating SIM interactions, teams can validate SMS handling, **verify phone numbers**, and confirm secure onboarding processes without relying on physical test phones.
+<RealDeviceTag value="Real Device" />
+
+# SIM & eSIM Automation on Real Devices
+
+SIM and eSIM automation on TestMu AI lets you test SMS-driven flows like OTP verification and two-factor authentication on real devices. Request SIM-enabled devices, retrieve phone numbers at runtime, and poll incoming SMS to validate secure onboarding without physical phones.
 
 **SMS-based authentication** is one of the most widely used security and identity verification methods. Automating these flows ensures consistent validation, reduces manual effort, and helps uncover edge cases early in the testing cycle.
 
@@ -220,11 +223,11 @@ Region and carrier values are case-sensitive. Make sure to enter them exactly as
 
 To enable SIM & eSIM support, include the following capability in your automation session as highlighted in the Capabilities:
 
-<VerifiedTag value="Verified" />
-
 <Tabs className="docs__val">
 
 <TabItem value="ios-config" label="iOS" default>
+
+<VerifiedTag value="Verified" />
 
 ```python title="iOS(.ipa)"
  desired_caps = {
@@ -243,6 +246,8 @@ To enable SIM & eSIM support, include the following capability in your automatio
 
 </TabItem>
 <TabItem value="android-config" label="Android" default>
+
+<VerifiedTag value="Verified" />
 
 ```python title="Android(.apk)"
 desired_caps = {
@@ -273,7 +278,6 @@ driver.execute_script(
 )
 ```
 Sample Response:
-
 <VerifiedTag value="Verified" />
 
 ``` JSON

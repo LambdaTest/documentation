@@ -420,7 +420,7 @@ Any SCIM 2.0-compliant IDP works. Use these settings:
 | `active` | Yes | `true` = enabled, `false` = deactivated |
 | `name` | Yes | `givenName`, `familyName`, `formatted` |
 
-**Custom Attributes** (`LambdaTest` extension schema)
+**Custom Attributes** (TestMu AI Extension)
 
 These attributes are part of the `urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User` extension schema. To send them from your IDP, add this schema URN to your IDP's custom attribute configuration.
 
@@ -721,7 +721,7 @@ Once activated, you can turn it on or off with the **Enable SCIM Group Provision
 | `displayName` | Yes | Must be **unique** within your org |
 | `members` | No | Array of `{ "value": "<user_scim_id>" }` |
 
-**Custom Attributes** (`LambdaTest` extension schema)
+**Custom Attributes** (TestMu AI Extension)
 
 These attributes are part of the `urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:Group` extension schema. To send them from your IDP, add this schema URN to your IDP's custom attribute configuration.
 

@@ -2,6 +2,7 @@
 id: local-testing-puppeteer
 title: Run Local Tests Using Puppeteer
 hide_title: true
+toc_max_heading_level: 2
 sidebar_label:  Local Testing
 description: Learn how to perform local testing with Puppeteer across multiple browser versions on the TestMu AI platform.
 keywords:

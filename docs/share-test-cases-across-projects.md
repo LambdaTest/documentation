@@ -98,7 +98,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-17T12:00:00+05:30"
+    "dateModified": "2026-10-14T12:00:00+05:30"
   }) }}
 />
 
@@ -251,7 +251,7 @@ To move a single project's folder for a test case that is already shared, share 
 
 In the receiving project's **Test Cases** tab:
 
-- **Shared Incoming** in the folder panel lists every test case shared into the project, with its own count. It is a flat list with no folders, and you can filter it by source project.
+- **Shared Incoming** in the folder panel lists every test case shared into the project, with its own count. It is a flat list with no folders, and you can filter it by source project. Switch the **Project** filter to **Not Equals** to hide the test cases shared from the projects you select. See [Include or Exclude Values](/support/docs/manual-test-case-creation/#include-or-exclude-values).
 - **All Test Cases** also includes shared test cases, and they can be found by title and ID in search.
 - A folder includes the shared test cases added to it.
 

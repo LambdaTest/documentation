@@ -2,6 +2,7 @@
 id: test-manager
 title: "Test Manager | TestMu AI Documentation"
 hide_title: true
+toc_max_heading_level: 2
 sidebar_label: Overview
 description: Test Manager is TestMu AI's AI-native test management platform. Create, organize, execute, and report on manual and automated tests from one workspace.
 keywords:
@@ -58,63 +59,6 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 ></script>
 
 <script type="application/ld+json"
-  dangerouslySetInnerHTML={{ __html: JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": [
-      "Article",
-      "TechArticle"
-    ],
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": "https://www.testmuai.com/support/docs/test-manager/"
-    },
-    "headline": "Test Manager",
-    "description": "Test Manager is TestMu AI's AI-native test management platform. Create, organize, execute, and report on manual and automated tests from one workspace.",
-    "url": "https://www.testmuai.com/support/docs/test-manager/",
-    "image": {
-      "@type": "ImageObject",
-      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
-      "width": 1200,
-      "height": 630
-    },
-    "inLanguage": "en",
-    "articleSection": "Test Manager",
-    "keywords": [
-      "test manager",
-      "test management platform",
-      "test case management"
-    ],
-    "author": {
-      "@type": "Organization",
-      "@id": "https://www.testmuai.com/#organization",
-      "name": "TestMu AI",
-      "url": "https://www.testmuai.com/"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "@id": "https://www.testmuai.com/#organization",
-      "name": "TestMu AI",
-      "alternateName": [
-        "TestMuAI",
-        "TestMu",
-        "LambdaTest"
-      ],
-      "url": "https://www.testmuai.com/",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://www.testmuai.com/logo.png"
-      },
-      "sameAs": [
-        "https://www.linkedin.com/company/testmu-ai/",
-        "https://x.com/testmuai",
-        "https://www.youtube.com/@TestMuAI"
-      ]
-    },
-    "dateModified": "2026-09-09T21:31:00+05:30"
-  }) }}
-/>
-
-<script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
         "@context": "https://schema.org",
         "@type": "FAQPage",
@@ -162,7 +106,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 # Introduction to Test Manager
 ***
 
-Test Manager is <BrandName />'s AI-native test management platform for planning, creating, executing, and reporting on software tests. It gives QA teams a single workspace for manual and automated test cases, test runs, two-way sync with Jira and Azure DevOps, and release-readiness reporting, with AI that generates test cases from natural language.
+Test Manager is <BrandName />'s AI-native test management platform for planning, creating, executing, and reporting on software tests. It gives QA teams a single workspace to organize and track manual, automated, and End-to-End (E2E) testing, with test runs, two-way sync with Jira and Azure DevOps, release-readiness reporting, and AI that generates test cases from natural language.
 
 ## What you can do with Test Manager
 
@@ -277,4 +221,4 @@ Jira and Azure DevOps with two-way sync, plus marketplace apps for both. Linear 
 
 - [Test Case Repository](/support/docs/test-case-repository/) — organize and reuse test cases in the Test Manager repository.
 - [Sync Test Instance](/support/docs/sync-test-instance/) — keep test run instances in sync as your test cases evolve.
-- [Test Instance Audit Logs](/support/docs/test-instance-audit-logs/) — track changes to a test instance with audit logs.
+- [Test Instance Audit Logs](/support/docs/test-run-creation-and-management/) — track changes to a test instance with audit logs.

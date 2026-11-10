@@ -109,31 +109,31 @@ The HyperExecute Widgets enables you to get all the insights of the Jobs execute
 <div className="support_main">  
   <a href="/support/docs/hyperexecute-job-widgets/">
     <div className="support_inners">
-      <h3>Job Widgets</h3>
+      <h2>Job Widgets</h2>
       <p>Learn the insights of your triggered Jobs on HyperExecute Platform.</p>
     </div>
   </a>
   <a href="/support/docs/hyperexecute-stage-widgets/">
     <div className="support_inners">
-      <h3>Stage Widgets</h3>
+      <h2>Stage Widgets</h2>
       <p>Learn the insights of the Stages of your Jobs on HyperExecute Platform.</p>
     </div>
   </a>
   <a href="/support/docs/hyperexecute-task-widgets/">
     <div className="support_inners">
-      <h3>Task Widgets</h3>
+      <h2>Task Widgets</h2>
       <p>Learn the insights of the Tasks on HyperExecute Platform.</p>
     </div>
   </a>
   <a href="/support/docs/hyperexecute-test-widgets/">
     <div className="support_inners">
-      <h3>Test Widgets</h3>
+      <h2>Test Widgets</h2>
       <p>Learn the insights of your Tasks based on the defined parameters in the Tests.</p>
     </div>
   </a>
   <a href="/support/docs/hyperexecute-resource-widgets/">
   <div className="support_inners">
-    <h3>Resource Utilization Widgets</h3>
+    <h2>Resource Utilization Widgets</h2>
     <p>Learn about the HyperExecute Resource Utilization Widgets.</p>
   </div>
   </a>

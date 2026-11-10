@@ -6,7 +6,7 @@ ServiceNow is a cloud-based platform for IT service management and automating bu
 
 > ServiceNow Integration with TestMu AI is available for both freemium and premium plans.
 
-### Create an OAuth Application for TestMu AI in ServiceNow
+## Create an OAuth Application for TestMu AI in ServiceNow
 
 > Only an administrator of your ServiceNow instance can create the OAuth application required for integration.
 

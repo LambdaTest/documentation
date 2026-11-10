@@ -16,9 +16,9 @@
   }) }}
 />
 
-# SIM Support On Public Real Devices
+# SIM & eSIM Automation on Real Devices
 
-SIM & eSIM support enables testing of SMS-driven use cases on real mobile devices, such as **OTP verification** and **two-factor authentication** workflows. By automating SIM interactions, teams can validate SMS handling, **verify phone numbers**, and confirm secure onboarding processes without relying on physical test phones.
+SIM and eSIM automation on TestMu AI lets you test SMS-driven flows like OTP verification and two-factor authentication on real devices. Request SIM-enabled devices, retrieve phone numbers at runtime, and poll incoming SMS to validate secure onboarding without physical phones.
 
 **SMS-based authentication** is one of the most widely used security and identity verification methods. Automating these flows ensures consistent validation, reduces manual effort, and helps uncover edge cases early in the testing cycle.
 

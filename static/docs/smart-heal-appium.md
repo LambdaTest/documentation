@@ -1,8 +1,8 @@
-# AI-Powered Smart Heal for Automation Tests
+# Smart Heal in Automation
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-TestMu AI’s **Smart Heal** uses **AI-powered algorithms** to automatically detect and recover from locator failures during test execution. It intelligently detects missing elements, analyzes the UI in real time, and applies the closest valid match, keeping tests running smoothly despite UI changes. Both the **original and recovered locators** are logged for full visibility through the TestMu AI dashboard.
+Smart Heal on TestMu AI uses AI-powered algorithms to automatically detect and recover from locator failures during real device automation tests. It analyzes the UI in real time, applies the closest valid match, and logs both original and recovered locators.
 
 **Plus Plan Feature**
 This feature is available exclusively with the **Real Device Plus Automation Cloud** Plan.
@@ -41,7 +41,7 @@ To unlock this feature, purchase or upgrade to the required [plan](https://www.t
 
 Before enabling Smart Heal, ensure your app is uploaded to TestMu AI.
 
-1. Follow the [Upload Your Application](/support/docs/upload-apps-on-real-device-cloud/) guide.
+1. Follow the [Upload Your Application](/support/docs/application-setup-via-api/) guide.
 2. Once uploaded, **note the App ID** returned by the API or dashboard.
 3. Use this **App ID** in the `"app"` capability in your automation script.
 

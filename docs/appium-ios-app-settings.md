@@ -1,8 +1,9 @@
 ---
 id: appium-ios-app-settings
 title: iOS App Settings
+hide_title: true
 sidebar_label: iOS App Settings
-description: iOS App Settings are the permissions or preferences that can be enabled/disabled for an app through iOS settings.
+description: Use the lambda-ios-settings hook to toggle iOS app permissions and preferences during App Automation on TestMu AI real iOS devices.
 keywords:
   - appium
   - ios
@@ -16,9 +17,10 @@ url: https://www.testmuai.com/support/docs/appium-ios-app-settings/
 site_name: TestMu AI
 slug: appium-ios-app-settings/
 canonical: https://www.testmuai.com/support/docs/appium-ios-app-settings/
+toc_max_heading_level: 2
 ---
-import RealDeviceTag from '../src/component/realDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import RealDeviceTag from '@site/src/component/realDevice';
 import VerifiedTag from '@site/src/component/verifiedTag';
 
 
@@ -126,10 +128,16 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     "dateModified": "2026-09-09T19:10:37+05:30"
   }) }}
 />
-<RealDeviceTag value="Real Device" /> 
+
+<RealDeviceTag value="Real Device" />
+
+# iOS App Settings
+
+Changing iOS app settings on TestMu AI lets you toggle permissions and preferences like camera, location, and app resets during App Automation on real iOS devices, using the lambda-ios-settings hook to manipulate settings the public cloud otherwise blocks for security.
+
 **iOS App Settings** are the permissions or preferences that can be enabled/disabled for an app through iOS settings. Accessing the device settings is restricted on the iOS public cloud devices of <BrandName /> due to security constraints. However, in multiple cases, the native app must be tested for various permissions which can only be enabled and disabled with the settings app.
 
-This document will guide you on how to access and use iOS settings for **App Automation session.**
+Access and configure iOS device settings during an **App Automation session.**
 
 :::note
 This feature is supported only on iOS 14 and above devices.
@@ -284,7 +292,7 @@ options = {
 }
 ```
 
-The keys and values follow the same rules as the hook: setting **titles must match the app's iOS Settings page exactly** and be unique, sliders use a 0–1 decimal scale, and textfields and sliders are indexed (e.g. `Slider-1`, `TextField-2`).
+The keys and values follow the same rules as the hook: setting **titles must match the app's iOS Settings page exactly** and be unique, sliders use a 0-1 decimal scale, and textfields and sliders are indexed (e.g. `Slider-1`, `TextField-2`).
 
 ### Errors and validation
 
@@ -320,7 +328,7 @@ The keys and values follow the same rules as the hook: setting **titles must mat
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-      iOS App Settings
+        iOS App Settings
       </span>
     </li>
   </ul>

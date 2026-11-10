@@ -1,8 +1,9 @@
 ﻿---
 id: set-device-dark-mode
 title: Set Device Dark Mode
+hide_title: true
 sidebar_label: Set Dark Mode
-description: This documentation will help you change thed device level dark and light mode.
+description: Enable or disable device-level dark and light mode for automation testing on TestMu AI real and virtual mobile devices.
 keywords:
   - mobile app testing
   - realtime mobile testing on real devices
@@ -16,15 +17,16 @@ url: https://www.testmuai.com/support/docs/set-device-dark-mode/
 site_name: TestMu AI
 slug: set-device-dark-mode/
 canonical: https://www.testmuai.com/support/docs/set-device-dark-mode/
+toc_max_heading_level: 2
 ---
 
 import CodeBlock from '@theme/CodeBlock';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
-import RealDeviceTag from '../src/component/realDevice';
-import VirtualDeviceTag from '../src/component/virtualDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import RealDeviceTag from '@site/src/component/realDevice';
+import VirtualDeviceTag from '@site/src/component/virtualDevice';
 import VerifiedTag from '@site/src/component/verifiedTag';
 
 
@@ -45,7 +47,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Appium Inspector Integration on TestMu AI",
+          "name": "Set Device Dark Mode",
           "item": `${BRAND_URL}/support/docs/set-device-dark-mode/`
         }]
       })
@@ -139,7 +141,13 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     "dateModified": "2026-09-09T19:10:37+05:30"
   }) }}
 />
+
 <RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
+
+# Set Device Dark Mode
+
+Setting device dark mode on TestMu AI lets you enable or disable dark and light themes during automation testing on real and virtual devices, so you can validate UI rendering, text contrast, and theme switching across mobile and web apps.
+
 <BrandName /> now allows you to **enable or disable dark mode** for automation testing as well. This helps developers and testers validate UI behavior across light and dark themes, theme switching without manual intervention, and visual consistency for mobile apps and web applications.
 
 :::note Plus Plan Feature
@@ -182,10 +190,10 @@ To unlock this feature, purchase or upgrade to the required [plan](https://www.t
 
 You can enable the dark mode setting through `darkMode` capability before the session starts. This ensures the device starts in the dark   theme without additional steps during test execution.
 
-<VerifiedTag value="Verified" />
-
 <Tabs>
 <TabItem value="ios" label="iOS" default>
+
+<VerifiedTag value="Verified" />
 
 ```json
 {
@@ -201,6 +209,8 @@ You can enable the dark mode setting through `darkMode` capability before the se
 
 </TabItem>
 <TabItem value="android" label="Android">
+
+<VerifiedTag value="Verified" />
 
 ```json
 {
@@ -230,10 +240,10 @@ You can enable the dark mode setting through `darkMode` capability before the se
 
 To change dark mode settings during test execution, use the hook with the `updateDeviceSettings` action. The example below demonstrates this using **Python**.
 
-<VerifiedTag value="Verified" />
-
 <Tabs>
 <TabItem value="real-devices" label="Real Devices" default>
+
+<VerifiedTag value="Verified" />
 
 ```python
 driver.execute_script('lambda_executor: { 
@@ -246,6 +256,8 @@ driver.execute_script('lambda_executor: {
 
 </TabItem>
 <TabItem value="virtual-devices" label="Virtual Devices">
+
+<VerifiedTag value="Verified" />
 
 ```python
 driver.execute_script('lambdatest_executor: {

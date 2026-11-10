@@ -2,7 +2,7 @@
 id: appium-java-jbehave
 title: Appium With JBehave
 sidebar_label: JBehave
-description: Run your Appium automation scripts using Java JBehave on TestMu AI Real Device Cloud Platform of 3000+ real mobile devices.
+description: Run your Appium automation scripts using Java JBehave on TestMu AI Real Device Cloud Platform of 50,000+ real mobile devices.
 keywords:
   - appium
   - jbehave
@@ -66,7 +66,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       "@id": "https://www.testmuai.com/support/docs/appium-java-jbehave/"
     },
     "headline": "Appium With JBehave",
-    "description": "Run your Appium automation scripts using Java JBehave on TestMu AI Real Device Cloud Platform of 3000+ real mobile devices.",
+    "description": "Run your Appium automation scripts using Java JBehave on TestMu AI Real Device Cloud Platform of 50,000+ real mobile devices.",
     "url": "https://www.testmuai.com/support/docs/appium-java-jbehave/",
     "image": {
       "@type": "ImageObject",
@@ -178,7 +178,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       "@context": "https://schema.org",
       "@type": "HowTo",
       "name": "Try our Sample Repository",
-      "description": "Run your Appium automation scripts using Java JBehave on TestMu AI Real Device Cloud Platform of 3000+ real mobile devices.",
+      "description": "Run your Appium automation scripts using Java JBehave on TestMu AI Real Device Cloud Platform of 50,000+ real mobile devices.",
       "step": [
         {
           "@type": "HowToStep",

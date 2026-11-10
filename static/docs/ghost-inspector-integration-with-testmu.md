@@ -42,7 +42,7 @@ This integration between TestMu AI and Ghost Inspector enables you to automate t
 
 As a result, you’ll be able to expand your test coverage, analyze and extract insightful test reports, and enhance your team collaboration.
 
-# How To Integrate TestMu AI With Ghost Inspector?
+## How To Integrate TestMu AI With Ghost Inspector?
 
 * All the test suites will be reflected in the Ghost Inspector dashboard.
 

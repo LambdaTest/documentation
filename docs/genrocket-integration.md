@@ -3,7 +3,7 @@ id: genrocket-integration
 title: GenRocket Integration
 hide_title: true
 sidebar_label: GenRocket
-description: Integrate TestMu AI with GenRocket to perform desktop web, mobile web and native app testing across 5000+ real devices and 10,000+ browser/device combinations.
+description: Integrate TestMu AI with GenRocket to perform desktop web, mobile web and native app testing across 50,000+ real devices and 10,000+ browser/device combinations.
 keywords:
   - testmu ai integration with GenRocket
   - testmu ai and genrocket integration 
@@ -54,7 +54,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       "@id": "https://www.testmuai.com/support/docs/genrocket-integration/"
     },
     "headline": "GenRocket Integration",
-    "description": "Integrate TestMu AI with GenRocket to perform desktop web, mobile web and native app testing across 5000+ real devices and 10,000+ browser/device combinations.",
+    "description": "Integrate TestMu AI with GenRocket to perform desktop web, mobile web and native app testing across 50,000+ real devices and 10,000+ browser/device combinations.",
     "url": "https://www.testmuai.com/support/docs/genrocket-integration/",
     "image": {
       "@type": "ImageObject",

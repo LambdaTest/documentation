@@ -100,6 +100,8 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 Real device browser testing refers to the process of testing web applications and websites on real devices such as smartphones, tablets, and computers to ensure that the user interface and user experience are optimal across various device types, operating systems, and browser combinations. With <BrandName />’s real device cloud, you can test websites and web applications to ensure they perform seamlessly across 3000 + real mobile devices.
 
+For the basics, see our guide on [how to test on real devices](https://www.testmuai.com/blog/real-device-testing/).
+
 <div className="ytframe"> 
 <div className="youtube" data-embed="zzjTXzJkLtA" data-loading-attribute="eager">
   <div className="play-button"></div>

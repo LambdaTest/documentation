@@ -26,8 +26,6 @@
 
 **Step 3:** Provide the URL to test and select the device and configuration you want to test upon from our collection of android and iOS devices. Hit `Start` to launch your desired VM.
 
-**Step 4:** Once the desired VM is launched and operable, you will notice controller buttons on the left-side of the screen. Click the button with tools icon to open developer tools.
-
-**Step 5:** As you click on the **tools icon**, the developer tools would be launched for the webpage you are on, inside the virtual machine.
+**Step 4:** Once the desired VM is launched and operable, you will notice Chrome DevTools buttons on the right side of the screen. Click the button with the DevTools icon to open Developer Tools. As you click on the DevTools icon, the Developer Tools will be launched for the webpage you are on, inside the virtual machine.
 
 That was all from us about our native browser developer tools. If you still have any questions for us, please feel free to let us know. Our experts are always available on  chat to help you out with any roadblock regarding our product. Happy debugging!

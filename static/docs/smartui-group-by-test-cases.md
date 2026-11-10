@@ -26,7 +26,7 @@ It also covers how to get **one Automation / SmartUI build** with **multiple cap
 
 - **Audience:** QA Engineers and Developers running automated visual tests on TestMu AI.
 - **Prerequisites (recommended: Hooks):**
-  - **LambdaTest** username and access key: `LT_USERNAME`, `LT_ACCESS_KEY`.
+  - **TestMu AI** username and access key: `LT_USERNAME`, `LT_ACCESS_KEY`.
   - SmartUI project wired through **`smartUI.project`** in Java `LT:Options` (same string as **Smart UI Project Name** in the dashboard, e.g. `sample` or `new`).
   - **`smartui.takeScreenshot`** with a **`screenshotName`** per capture when you want multiple named screenshots in one run.
   - For **SmartUI CLI** static or exec workflows, a **`PROJECT_TOKEN`** from that project (often ends with `#` matching the project name).
@@ -231,4 +231,4 @@ Empty test groups will automatically hide if none of their screenshots match the
 - SmartUI SDK Documentation
 - SmartUI Selenium Java SDK
 - SmartUI CLI (`capture` / `exec`)
-- [LambdaTest Java Selenium sample (GitHub)](https://github.com/LambdaTest/java-selenium-sample)
+- [TestMu AI Java Selenium sample (GitHub)](https://github.com/LambdaTest/java-selenium-sample)

@@ -241,6 +241,8 @@ curl -X POST "https://api.example.com/users" \
 
 ## API Response Variables
 
+For importing a collection or specification instead of authoring requests individually, see [Bulk API Import](/support/docs/kaneai-bulk-api-import/). For JSONPath checks and JSON Schema validation, see [API Response Assertions](/support/docs/kaneai-api-response-assertions/).
+
 After a successful API call, the response is automatically stored as a **JSON variable**. You can reference it in subsequent steps using `{{variable_name}}` syntax.
 
 ### Accessing Response Data

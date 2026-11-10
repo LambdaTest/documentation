@@ -172,6 +172,14 @@ Once your apps are uploaded, you can easily search and filter them using the too
 
 <img loading="lazy" src={require('../assets/images/real-device-app-testing/APP_MANAGER_FILTER_SEARCH_BAR.png').default} className="doc_img"/>
 
+:::note
+
+- The app list on the dashboard is sorted by most recent use. When you run an automation test with a previously uploaded app, it moves to the top of the list for easier access.
+- If an older app appears at the top, it means the app was recently used in a test. It does not mean a new app was uploaded or triggered from your pipeline.
+- Apps that are not used for 2 months are removed from the dashboard. Each time you use an existing app in an automation test, its 2-month inactivity period restarts from that date.
+:::
+
+
 ---
 ## Version Control
 

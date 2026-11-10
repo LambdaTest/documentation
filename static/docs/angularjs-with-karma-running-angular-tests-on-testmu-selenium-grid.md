@@ -5,7 +5,7 @@
 Run AngularJS tests with Karma on the TestMu AI cloud grid. This guide covers setup, running a sample test, configuring capabilities, and testing locally hosted pages.
 
 **Deprecated Framework**
-AngularJS reached end-of-life in December 2021. Consider migrating to Angular with [Karma](/support/docs/karma-integration-with-testmu/) or [Playwright](/support/docs/playwright-testing/). This guide is maintained for existing users.
+AngularJS reached end-of-life in December 2021. Consider migrating to Angular with [Karma](/support/docs/javascript-with-selenium-running-javascript-automation-scripts-on-testmu-selenium-grid/?framework=karma) or [Playwright](/support/docs/playwright-testing/). This guide is maintained for existing users.
 
 **Sample repo**
 All the code used in this guide is available in the sample repository.

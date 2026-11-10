@@ -177,7 +177,7 @@ When two different applications interact with each other, server-to-server commu
 
 **Step 8:** Paste the **'Site Address'** and **'Personal API Token'** into the field provided at <BrandName /> & press the **'Install'** button. You are all set to experience one-click bug logging to share your issues directly from your <BrandName /> account to your project board on monday.com.
 
-<img loading="lazy" src={require('../assets/images/uploads/conn-1024x466.webp').default} alt="lambdatest monday integration" width="1024" height="466" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/uploads/conn-1024x466.webp').default} alt="TestMu AI monday integration" width="1024" height="466" className="doc_img"/>
 
 That's it! Go to **'Integrations'** again and you will be able to notice a **'green tick'** indicating that monday.com is successfully installed.
 

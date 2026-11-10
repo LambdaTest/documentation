@@ -19,8 +19,6 @@ Re-Run is not generally available yet and may not be enabled for your account. I
 3. Click the dropdown arrow on the **Re-Run** button, in the top-right of the test summary.
 4. Choose **Replay** or **Reproduce**.
 
-The **Re-runs** field in the test summary shows how many times the test has been re-run.
-
 ## Replay
 
 **Replay** runs the test again on the grid, against your application as it exists now. Unlike Reproduce, it does not use the captured data from the original run, so the result reflects the current state of your application and environment.
@@ -56,7 +54,7 @@ If the original test ran without this capability, **Reproduce** appears greyed o
 
 In this case, add the capability and run the test again. The new run is then eligible for Reproduce.
 
-`network.full.har` applies to web tests. Enabling it also populates the **Network** tab with a waterfall chart. See [HAR Log Viewer With Waterfall](/support/docs/har-log-viewer-with-waterfall/) for how to read it.
+`network.full.har` applies to web tests. Enabling it also populates the **Network** tab with a waterfall chart. See [HAR Log Viewer With Waterfall](/support/docs/debugging-options/#har-log-viewer) for how to read it.
 
 ## Choosing Between Replay and Reproduce
 
@@ -69,8 +67,12 @@ In this case, add the capability and run the test again. The new run is then eli
 
 If you are not sure which to use, start with **Replay**. Reach for **Reproduce** when a failure will not recur on a live run and you need the original conditions back.
 
+## View Run History
+
+The **Re-runs** field in the test summary shows how many times a test has been re-run. Open the run history from the summary to see every previous run with its status, configuration, and duration.
+
 ## Next Steps
 
 - [Explore the Automation Dashboard](/support/docs/inside-testmu-platform/)
-- [HAR Log Viewer With Waterfall](/support/docs/har-log-viewer-with-waterfall/)
+- [HAR Log Viewer With Waterfall](/support/docs/debugging-options/#har-log-viewer)
 - [Debugging Options](/support/docs/debugging-options/)

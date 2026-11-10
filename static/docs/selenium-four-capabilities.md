@@ -2,7 +2,7 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-In addition to the capabilities supported in [Selenium version 3](/support/docs/selenium-three-capabilities/), Selenium version 4 introduces the following new capabilities.
+In addition to the capabilities supported in [Selenium version 3](/support/docs/selenium-automation-capabilities/#selenium-3-capabilities-and-below), Selenium version 4 introduces the following new capabilities.
 
 ## Capabilities Reference
 

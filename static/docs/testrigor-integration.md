@@ -4,7 +4,7 @@
 
 testRigor is a Generative AI-based codeless test automation tool that helps companies empower manual testers to create test automation through executable specifications in plain English. This innovative system enables your team to easily build and maintain tests, while its AI Native features significantly reduce the effort required for test maintenance.
 
-TestMu AI integration with testRigor enables you to perform desktop web, mobile web and native app testing across 5000+ real devices and 10,000+ browser/device combinations.
+TestMu AI integration with testRigor enables you to perform desktop web, mobile web and native app testing across 50,000+ real devices and 10,000+ browser/device combinations.
 
 ## Prerequisites
 
@@ -45,3 +45,5 @@ In case, you wish to test locally or privately hosted websites, you can select t
 > The below test case demonstrates TestMu AI Selenium Automation's booking a demo functionality. First, it visits the TestMu AI Selenium Automation website, clicks on the "Book A Demo" button, enters the required fields and then presses the "Schedule Demo" button.
 
 3. Now visit the TestMu AI Automation Dashboard to view your test execution results.
+
+Moving your tests to KaneAI? The [testRigor to KaneAI migration guide](/support/docs/testrigor-to-kaneai-migration-guide/) shows how to collect your testRigor steps and data and re-create each test in natural language.

@@ -79,11 +79,18 @@ Your Ultimate Resource for Seamless Cross-Browser Testing Across Desktop and Mob
         Command Types
          Test Automation with CI/CD
 
-        Agent Assurance Platform &nbsp;
+        Agent Assurance &nbsp;
 
-        Conversational Agent Testing
-        Autonomous Agent Testing
+        Overview
+        Quickstart
+        Coding Agents &amp; Skills
         Rook Architecture
+
+        Agent Testing
+
+        Overview
+        Supported Agent Types
+        Test Your First Agent
         FAQs
 
         Real Time

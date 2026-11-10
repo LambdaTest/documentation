@@ -1,41 +1,12 @@
-# Run your TypeScript automation scripts with Playwright on TestMu AI
+# How to Run TypeScript Tests With Playwright on TestMu AI
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-{\n  let config = configName.split(\"@lambdatest\")[0];\n  let [browserName, browserVersion, platform] = config.split(\":\");\n  capabilities.browserName = browserName\n    ? browserName\n    : capabilities.browserName;\n  capabilities.browserVersion = browserVersion\n    ? browserVersion\n    : capabilities.browserVersion;\n  capabilities[\"LT:Options\"][\"platform\"] = platform\n    ? platform\n    : capabilities[\"LT:Options\"][\"platform\"];\n  capabilities[\"LT:Options\"][\"name\"] = testName;\n};\n\nconst getErrorMessage = (obj, keys) =>\n  keys.reduce(\n    (obj, key) => (typeof obj == \"object\" ? obj[key] : undefined),\n    obj\n  );\n\nconst test = base.test.extend({\n  page: async ({ page, playwright }, use, testInfo) => {\n    // Configure LambdaTest platform for cross-browser testing\n    let fileName = testInfo.file.split(path.sep).pop();\n    if (testInfo.project.name.match(/lambdatest/)) {\n      modifyCapabilities(\n        testInfo.project.name,\n        `${testInfo.title} - ${fileName}`\n      );\n\n      const browser = await chromium.connect({\n        wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(\n          JSON.stringify(capabilities)\n        )}`,\n      });\n\n      const ltPage = await browser.newPage(testInfo.project.use);\n      await use(ltPage);\n\n      const testStatus = {\n        action: \"setTestStatus\",\n        arguments: {\n          status: testInfo.status,\n          remark: getErrorMessage(testInfo, [\"error\", \"message\"]),\n        },\n      };\n      await ltPage.evaluate(() => {},\n      `lambdatest_action: ${JSON.stringify(testStatus)}`);\n      await ltPage.close();\n      await browser.close();\n    } else {\n      // Run tests in local in case of local config provided\n      await use(page);\n    }\n  },\n});\n\nexport default test;"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Code sample 4",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "JavaScript",
-        "text": "npm run test"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "The playwright-skill package includes",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "playwright-skill/\n\u251c\u2500\u2500 SKILL.md\n\u2514\u2500\u2500 reference/\n    \u251c\u2500\u2500 playbook.md\n    \u2514\u2500\u2500 advanced-patterns.md"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Install a Playwright Agent Skill using the command below",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "codeRepository": "https://github.com/LambdaTest/agent-skills",
-        "text": "# Clone the repo and copy the skill you need\ngit clone https://github.com/LambdaTest/agent-skills.git\ncp -r agent-skills/playwright-skill .claude/skills/\n\n# Or for Cursor / Copilot\ncp -r agent-skills/playwright-skill .cursor/skills/"
-      }
-    ],
-    "dateModified": "2026-09-09T19:13:32+05:30"
-  }) }}
-/>
-
-# TypeScript with Playwright: Running Your First Test
-
-Learn how to use Playwright with TypeScript to automate web application testing across real browsers and operating systems on TestMu AI cloud platform.
+Learn how to use Playwright with TypeScript to automate web application testing across 50+ real browsers and operating systems on the TestMu AI cloud platform. You connect Playwright to the grid through a CDP WebSocket endpoint, pass your credentials and a `capabilities` object, then view the results on the Automation Dashboard.
 
 ## Prerequisites
+
+Set up the following before you run the test so Playwright can authenticate and connect to the TestMu AI grid.
 
 1. You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
@@ -44,7 +15,7 @@ Download or clone the code sample for the Playwright TypeScript from the TestMu 
 
  View on GitHub
 
-```js
+```bash
 git clone https://github.com/LambdaTest/playwright-sample.git
 cd playwright-sample
 cd playwright-test-ts
@@ -52,7 +23,7 @@ cd playwright-test-ts
 
 2. Install the npm dependencies.
 
-```
+```bash
 npm install
 ```
 
@@ -62,9 +33,9 @@ npm install
 
 ## Run your Playwright tests with TypeScript
 
-Navigate to the `lambdatest-setup.ts` file in the `playwright-test-ts` directory.
+Navigate to the `lambdatest-setup.ts` file in the `playwright-test-ts` directory. This TypeScript fixture builds the capabilities object, connects Playwright to the grid, and reports the test status.
 
-```js
+```ts title="lambdatest-setup.ts"
 /**
  * Add the file in your test suite to run tests on LambdaTest.
  * Import `test` object from this file in the tests.
@@ -157,48 +128,10 @@ export default test;
 
 Pass the below command in the terminal to run the test.
 
-```js
+```bash
 npm run test
 ```
 
 ## View your test results
 
 Go to the [TestMu AI Web Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build) to see your Playwright TypeScript test results.
-
-## Using the Playwright Agent Skill with TestMu AI
-
-The [playwright-skill](https://github.com/LambdaTest/agent-skills/tree/main/playwright-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
-
-The playwright-skill package includes:
-
-```
-playwright-skill/
-├── SKILL.md
-└── reference/
-    ├── playbook.md
-    └── advanced-patterns.md
-```
-
-It provides structured guidance for:
-
-* Project structure and setup
-* Dependency configuration
-* Local execution
-* TestMu AI cloud execution
-* Debugging patterns
-* CI/CD integration
-
-### Installing Playwright Agent Skill
-
-Install a Playwright Agent Skill using the command below:
-
-```
-# Clone the repo and copy the skill you need
-git clone https://github.com/LambdaTest/agent-skills.git
-cp -r agent-skills/playwright-skill .claude/skills/
-
-# Or for Cursor / Copilot
-cp -r agent-skills/playwright-skill .cursor/skills/
-```
-
-**Note**: If you prefer installing all available framework skills instead of only playwright-skill, clone the repository directly into your tool's skills directory (for example, .claude/skills/, .cursor/skills/, .gemini/skills/, or .agent/skills/).

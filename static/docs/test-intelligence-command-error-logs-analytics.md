@@ -10,14 +10,14 @@ TestMu AI provides you with the Command Logs Analytics feature to analyze your f
 
 ## How does the Command Error Logs Analytics work?
 
-#### Selenium Automation Tests
+### Selenium Automation Tests
 Command Logs Analytics uses the WebDriver command logs to analyze your failed commands or steps. The WebDriver commands logs are the steps which are executed by the test script during the test execution. To know more about the WebDriver command logs, you can refer to the [W3C Command Logs](https://www.w3.org/TR/webdriver2/#endpoints).
 
 **Command Logs Analytics**
 To read more about the Command Logs Analytics, you can refer to the [documentation](/docs/analytics-modules-test-intelligence-command-logs-analytics/) here.
 
-#### Cypress Automation Tests
+### Cypress Automation Tests
 Command Logs Analytics uses the Cypress command logs to analyze your failed commands or steps. The Cypress command logs are the steps which are executed by the test script during the test execution. To know more about the Cypress command logs, you can refer to the [Cypress Command Logs](https://docs.cypress.io/api/table-of-contents#Commands).
 
-#### CDP Framework Tests (Puppeteer, Playwright, Taiko)
+### CDP Framework Tests (Puppeteer, Playwright, Taiko)
 Command Logs Analytics uses the CDP command logs to analyze your failed commands or steps. The CDP command logs are the steps which are executed by the test script during the test execution. To know more about the CDP command logs, you can refer to the [CDP Command Logs](https://chromedevtools.github.io/devtools-protocol/).

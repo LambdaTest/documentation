@@ -563,6 +563,8 @@ If you encounter issues not covered here:
 - [CLI Documentation](/support/docs/smartui-cli)
 - [CLI Upload](/support/docs/smartui-cli-upload)
 - [Environment Variables](/support/docs/smartui-cli-env-variables)
+- [Basic Authentication in SmartUI CLI](/support/docs/smartui-cli-basic-auth/)
+- [Custom Request Headers in SmartUI CLI](/support/docs/smartui-cli-request-headers/)
 - [Baseline Management](/support/docs/smartui-baseline-management)
 - [Running Your First Project](/support/docs/smartui-running-your-first-project)
 

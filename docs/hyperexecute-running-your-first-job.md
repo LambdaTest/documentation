@@ -102,7 +102,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     "dateModified": "2026-09-09T19:10:37+05:30"
   }) }}
 />
-This page outlines how you can run your first test execution job on HyperExecute.
+This page outlines how you can run your first End-to-End (E2E) testing execution job on HyperExecute.
 
 ## Before you start
 

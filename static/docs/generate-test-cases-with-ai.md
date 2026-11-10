@@ -2,7 +2,6 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-## What is the AI Test Case Generator?
 The **AI Test Case Generator** is an intelligent feature within TestMu AI Test Manager and KaneAI that allows users to convert various requirement formats (like text, PDFs, audio, videos, images, issues from Jira, Azure DevOps, and Linear, and more) into structured, contextual software test cases. It significantly accelerates the test case creation process while improving coverage and quality.
 
 This feature is designed to save time, improve test coverage, and streamline the test design process for both manual and automated testing workflows.
@@ -403,7 +402,7 @@ Precisely modify specific scenarios or test cases using `@` references.
 **Pro Tips for Effective Refinement**
 - **Use `@` references for precision**: Target specific scenarios (`@S1`) or test cases (`@S2.C3`) to ensure the AI modifies exactly what you intend
 - **Combine multiple actions**: Request several changes in one message: "Remove all Low priority test cases from @S1, add 2 boundary tests for the email field, and rename remaining test cases to include the module name"
-- **Provide updated context mid-session**: Upload revised specifications or link Jira/Azure DevOps/Linear issues at any point to help the AI identify coverage gaps and generate test cases aligned with the latest requirements
+- **Provide updated context mid-session**: Upload revised specifications or link Jira/Azure DevOps tickets at any point to help the AI identify coverage gaps and generate test cases aligned with the latest requirements
 - **Start broad, then refine**: First organize scenarios at a high level, then drill down to individual test cases
 
 #### Re-Generation Settings
@@ -449,6 +448,8 @@ Test cases generated in **BDD Scenarios** format are saved with the **Behaviour 
 #### Option 2: Create and Automate with KaneAI
 Select the desired test cases and click **Create and Automate** to save the test cases to your repository and submit them to KaneAI for automated authoring. Clicking this button opens the **Create and Automate Test Cases** dialog, where you configure automation settings before KaneAI begins authoring. The dialog displays the number of distinct test cases selected and how many are automation-ready.
 
+Test cases are sent to KaneAI in whichever format they were generated in. KaneAI reads manual steps and Gherkin scenarios directly, so no conversion happens either way. The same is true of the **Automate with KaneAI** action on an individual saved test case.
+
 The dialog is organized into three platform tabs — **Desktop Browser**, **Mobile Browser**, and **Mobile App**. Each tab contains three sections:
 
 **Test Settings**
@@ -465,8 +466,6 @@ Configure environment-level settings for your test run. All platforms support **
 
 The **Create and Automate** option requires KaneAI access. If you do not have KaneAI enabled on your account, use the **Create** option to save test cases manually.
 
-Test cases are sent to KaneAI in whichever format they were generated in. KaneAI reads manual steps and Gherkin scenarios directly, so no conversion happens either way. The same is true of the **Automate with KaneAI** action on an individual saved test case.
-
 **Experimental Feature**
 Create and Automate is currently an experimental feature. Review your test steps once the test cases have been created and automated.
 
@@ -482,10 +481,6 @@ Create and Automate is currently an experimental feature. Review your test steps
 | Regeneration removed refined scenarios | Regeneration replaces all current output. Use targeted conversational messages instead to preserve specific scenarios. |
 | Test cases generated as manual steps after turning on the Gherkin toggle | The toggle applies to test cases generated after it is switched on. Test cases already on screen keep the format they were generated in. Regenerate, or start a new session, to produce them as BDD scenarios. |
 | Some test cases are BDD and others are manual steps in the same session | This happens if the toggle was changed mid-session. Each test case keeps the format it was generated in. Regenerate to bring the whole session into one format. |
-
-## Video Walkthrough
-
-Watch the video below for a quick walkthrough of the AI Test Case Generator in action.
 
 ## Video Walkthrough
 
@@ -513,6 +508,10 @@ Your session context, including generated scenarios and conversation history, is
 
 Yes. After refining your test cases through the Conversation Layer, you can export or save them to your Test Manager project using the same export workflows available in the Test Case Generator.
 
+**Is the Conversation Layer available for all plans?**
+
+The Conversation Layer is available to all users with access to Test Manager Premium or KaneAI plans. Credit consumption applies based on your plan's AI credit allocation.
+
 **Can I switch a test case between Manual Test Steps and BDD Scenarios after it is generated?**
 
 Not from the generator. The **Gherkin Format** toggle sets the format for test cases generated after you change it; existing test cases keep the format they were generated in. To convert a whole session, regenerate with the toggle in the format you want. Once a test case is saved, you can change its template in Test Manager, but the existing content is not rewritten into the new format.
@@ -528,7 +527,3 @@ Yes. KaneAI reads the `Given` / `When` / `Then` steps directly, so BDD test case
 **Why does the AI not generate `Scenario Outline:` or `Examples:` tables?**
 
 Test Manager's BDD editor has no interface for parameterised tables, so a scenario written that way could not be edited after saving. The AI writes a separate `Scenario:` for each data set instead.
-
-**Is the Conversation Layer available for all plans?**
-
-The Conversation Layer is available to all users with access to Test Manager Premium or KaneAI plans. Credit consumption applies based on your plan's AI credit allocation.

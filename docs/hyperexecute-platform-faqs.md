@@ -103,19 +103,19 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 ***
 
-#### 1. **What OS does HyperExecute provide to execute tests?**
+## 1. **What OS does HyperExecute provide to execute tests?**
 
   HyperExecute provides the latest Windows, MacOS and Linux based virtual machines to run your tests. HyperExecute supports multiple versions of Windows, Linux and MacOS.
 
 ***
 
-#### 2. **What browsers are available on HyperExecute to run cross browsers tests?**
+## 2. **What browsers are available on HyperExecute to run cross browsers tests?**
 
   HyperExecute provides all the versions of Chrome, Firefox, Edge, Opera, and Safari (Mac only) available to run on the latest windows, MacOS and linux versions.
 
 ***
 
-#### 3. What is the current configuration of the Virtual Machines?
+## 3. What is the current configuration of the Virtual Machines?
 
 Our Virtual Machines are currently configured with **4vCPU** and **16GB RAM**.
 
@@ -123,55 +123,55 @@ This will result in improved availability and a decrease in preemptions. Further
 
 ***
 
-#### 4. **Is HyperExecute available as an on-prem tool?**
+## 4. **Is HyperExecute available as an on-prem tool?**
 
   Yes, HyperExecute is available as a dedicated cloud and on-prem mode option on Azure, AWS and GCP.
 
 ***
 
-#### 5. **What analytics does HyperExecute provide for test execution?**
+## 5. **What analytics does HyperExecute provide for test execution?**
 
   HyperExecute provides fine-grained analytics over test steps, jobs, browser trends, consistently failing tests and error categorizations, and a lot more in the analytics dashboard. In addition to this, it provides a detailed downloadable _html_ report for every job triggered. This report can be downloaded by the CLI after the job is completed or via the reports API.
 
 ***
 
-#### 6. **Which logs does HyperExecute provide for Selenium tests?**
+## 6. **Which logs does HyperExecute provide for Selenium tests?**
 
   Video recording, screenshots, command logs, network logs, selenium node logs, browser logs and a lot more are available for every single end-to-end test run over the platform.
 
 ***
 
-#### 7. **Can I access the file system while running my tests?**
+## 7. **Can I access the file system while running my tests?**
 
   Yes, with HyperExecute you get access to all the underlying virtual machines to completely customize the testing environment. Generating or reading files for your test case is very convenient with HyperExecute.
 
 ***
 
-#### 8. **Do I have access to the underlying OS while running tests?**
+## 8. **Do I have access to the underlying OS while running tests?**
 
   Yes, with HyperExecute, you get access to all the underlying virtual machines to completely customize the testing environment. Some good use cases of this are changing registry settings, downloading files, starting processes and more. 
 
 ***
 
-#### 9. **Can I customize the testing environment?**
+## 9. **Can I customize the testing environment?**
 
   Yes, with HyperExecute, you can completely customize the test environment using pre and post steps in the YAML. For enterprise accounts, HyperExecute provides the ability to define custom virtual machine images for all the OS for deeper level customizations to the testing environments. Enterprise customers can create their own customized virtual machine images over HyperExecute base images as per their use case.
 
 ***
 
-#### 10. **Can I create custom virtual machine images for my testing?**
+## 10. **Can I create custom virtual machine images for my testing?**
 
   Yes. For enterprise accounts, HyperExecute provides the ability to define custom virtual machine images for every OS to allow deeper level customizations to the testing environments. Enterprise customers can create their own customized virtual machine images over HyperExecute base images as per their use cases.
 
 ***
 
-#### 11. **Can I integrate my reporting tool with HyperExecute?**
+## 11. **Can I integrate my reporting tool with HyperExecute?**
 
   Yes. It’s very easy to integrate HyperExecute with your reporting tool by hitting their APIs in the post-steps using the YAML. HyperExecute is also bringing more integrations with popular reporting tools. You can request new integrations by emailing us at hyperexecute@testmuai.com.
 
 ***
 
-#### 12. **Do HyperExecute VMs have basic command line tools installed?**
+## 12. **Do HyperExecute VMs have basic command line tools installed?**
 
   HyperExecute virtual machines come preinstalled with a variety of open source utilities and language runtimes to ensure that they are ready to use the testing environment.
 

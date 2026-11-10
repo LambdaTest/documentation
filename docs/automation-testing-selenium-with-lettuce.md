@@ -212,7 +212,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
 Run Lettuce tests on the TestMu AI cloud grid. This guide covers setup, running a sample test, configuring capabilities, and testing locally hosted pages.
 
 :::warning Deprecated Framework
-Lettuce has not been updated since 2016 and only supports Python 2. Consider migrating to [Behave](/support/docs/behave-with-selenium-running-behave-automation-scripts-on-testmu-selenium-grid/) or [PyTest](/support/docs/pytest-with-selenium-running-pytest-automation-script-on-testmu-selenium-grid/). This guide is maintained for existing users.
+Lettuce has not been updated since 2016 and only supports Python 2. Consider migrating to [Behave](/support/docs/python-with-selenium-running-python-automation-scripts-on-testmu-selenium-grid/?framework=behave) or [PyTest](/support/docs/python-with-selenium-running-python-automation-scripts-on-testmu-selenium-grid/?framework=pytest). This guide is maintained for existing users.
 :::
 
 :::tip Sample repo

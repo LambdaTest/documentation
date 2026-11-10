@@ -1,8 +1,8 @@
 ---
 id: accessibility-android-rule-meaningful-sequence
-title: Meaningful Sequence
+title: Meaningful Sequence (Android)
 sidebar_label: Meaningful Sequence
-description: Rule-level Accessibility guidance for Meaningful Sequence on Android.
+description: "Check that Android content is announced in an order matching its visual layout, so TalkBack users don't hear the screen in a confusing sequence."
 slug: accessibility-android-rule-meaningful-sequence/
 ---
 import { BRAND_URL } from '@site/src/component/BrandName';
@@ -43,7 +43,7 @@ import { BRAND_URL } from '@site/src/component/BrandName';
       "@id": "https://www.testmuai.com/support/docs/accessibility-android-rule-meaningful-sequence/"
     },
     "headline": "Meaningful Sequence",
-    "description": "Rule-level Accessibility guidance for Meaningful Sequence on Android.",
+    "description": "Check that Android content is announced in an order matching its visual layout, so TalkBack users don't hear the screen in a confusing sequence.",
     "url": "https://www.testmuai.com/support/docs/accessibility-android-rule-meaningful-sequence/",
     "image": {
       "@type": "ImageObject",

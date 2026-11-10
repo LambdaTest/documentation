@@ -194,5 +194,3 @@ try {
 ```
 
 4. After that, you can run your test.
-
-To generate Playwright tests with AI coding assistants, see [Run Tests With Agent Skills](/support/docs/playwright-agent-skills/).

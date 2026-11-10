@@ -83,7 +83,8 @@ Each scan has an action menu (3-dots icon) with the following options:
 
 **Visual UI:**
 * View History (SmartUI builds)
-* Edit Scan Config (recurrence, time)
+* Edit Scan Config (name, settings, URLs, schedule)
+* Clone Scan
 * Stop Recurring Scan
 * Delete Scan
 

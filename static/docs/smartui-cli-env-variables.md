@@ -84,7 +84,7 @@ $env:CURRENT_BRANCH="Required branch"
 
 In case you are accessing your network using corporate proxies, set the proxies in the environment variables as follows
 
-#### HTTP_PROXY:
+### HTTP_PROXY:
 
 ```bash
 export HTTP_PROXY="http://<username>:<password>@<domain.com>:<port>/"
@@ -98,7 +98,7 @@ set HTTP_PROXY="http://<username>:<password>@<domain.com>:<port>"
 $env:HTTP_PROXY="http://<username>:<password>@<domain.com>:<port>/"
 ```
 
-#### HTTPS_PROXY:
+### HTTPS_PROXY:
 
 ```bash
 export HTTPS_PROXY="https://<username>:<password>@<domain.com>:<port>"

@@ -102,7 +102,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 # Getting Started With TestMu AI Browser Cloud
 ***
 
-TestMu AI is a scalable browser designed for AI agents to handle scraping, testing, and automation, without the overhead of managing infrastructure.
+TestMu AI is a scalable browser designed for AI agents to handle scraping, End-to-End (E2E) testing, and automation, without the overhead of managing infrastructure.
 
 Find all the guides, resources, and examples you need to build on <BrandName /> Browser Cloud.
 

@@ -1,16 +1,17 @@
 ---
 id: local-testing-playwright
-title: Run Local Tests Using Playwright
+title: How to Test Locally Hosted Pages With Playwright on TestMu AI
 hide_title: true
-sidebar_label:  Local Testing
-description: Learn how to perform local testing with Playwright across multiple browser versions on the TestMu AI platform.
+toc_max_heading_level: 2
+sidebar_label: "Local Testing"
+description: Test locally hosted and privately hosted web pages with Playwright on TestMu AI using the TestMu AI Tunnel across real browsers and operating systems.
 keywords:
-  - local testing
+  - local testing playwright
   - testmu ai tunnel features
   - local testing for playwright
-  - local cross browser testing
-  - local testing playwright
-  
+  - playwright local cross browser testing
+  - test locally hosted website playwright
+
 url: https://www.testmuai.com/support/docs/local-testing-using-playwright/
 site_name: TestMu AI
 slug: local-testing-using-playwright/
@@ -54,8 +55,8 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       "@type": "WebPage",
       "@id": "https://www.testmuai.com/support/docs/local-testing-using-playwright/"
     },
-    "headline": "Run Local Tests Using Playwright",
-    "description": "Learn how to perform local testing with Playwright across multiple browser versions on the TestMu AI platform.",
+    "headline": "How to Test Locally Hosted Pages With Playwright on TestMu AI",
+    "description": "Test locally hosted and privately hosted web pages with Playwright on TestMu AI using the TestMu AI Tunnel across real browsers and operating systems.",
     "url": "https://www.testmuai.com/support/docs/local-testing-using-playwright/",
     "image": {
       "@type": "ImageObject",
@@ -64,11 +65,12 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       "height": 630
     },
     "inLanguage": "en",
-    "articleSection": "Documentation",
+    "articleSection": "Web Automation",
     "keywords": [
-      "local testing",
+      "local testing playwright",
       "testmu ai tunnel features",
-      "local testing for playwright"
+      "local testing for playwright",
+      "playwright local cross browser testing"
     ],
     "proficiencyLevel": "Beginner",
     "author": {
@@ -100,67 +102,73 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     "hasPart": [
       {
         "@type": "SoftwareSourceCode",
-        "name": "Playwright Testing Of Locally Hosted Websites",
+        "name": "Install npm dependencies",
         "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
+        "programmingLanguage": "Shell",
         "text": "npm install"
       },
       {
         "@type": "SoftwareSourceCode",
-        "name": "Playwright Testing Of Locally Hosted Websites",
+        "name": "Set credentials on Windows",
         "codeSampleType": "code snippet",
         "programmingLanguage": "JavaScript",
         "text": "set LT_USERNAME=\"YOUR_LAMBDATEST_USERNAME\"\nset LT_ACCESS_KEY=\"YOUR_LAMBDATEST_ACCESS_KEY\""
       },
       {
         "@type": "SoftwareSourceCode",
-        "name": "Playwright Testing Of Locally Hosted Websites",
+        "name": "Set credentials on macOS or Linux",
         "codeSampleType": "code snippet",
         "programmingLanguage": "JavaScript",
         "text": "export LT_USERNAME=\"YOUR_LAMBDATEST_USERNAME\"\nexport LT_ACCESS_KEY=\"YOUR_LAMBDATEST_ACCESS_KEY\""
       },
       {
         "@type": "SoftwareSourceCode",
-        "name": "Code sample 4",
+        "name": "Start the TestMu AI Tunnel",
         "codeSampleType": "code snippet",
-        "programmingLanguage": "JavaScript",
+        "programmingLanguage": "Shell",
         "text": "./LT --user {user's login email} --key {user's access key} --tunnelName {user's tunnel name}"
       },
       {
         "@type": "SoftwareSourceCode",
-        "name": "Code sample 5",
+        "name": "Add the tunnel capability",
         "codeSampleType": "code snippet",
         "programmingLanguage": "JavaScript",
-        "text": "const { chromium } = require('playwright')\nconst { expect } = require('@playwright/test');\n\n(async () => {\n  const capabilities = {\n    'browserName': 'Chrome', // Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`\n    'browserVersion': 'latest',\n    'LT:Options': {\n      'platform': 'Windows 10',\n      'build': 'Playwright Sample Build',\n      'name': 'Playwright Sample Test',\n      'user': process.env.LT_USERNAME,\n      'accessKey': process.env.LT_ACCESS_KEY,\n      'tunnel': false, // Add tunnel configuration if testing locally hosted webpage\n      'tunnelName': '' // Optional\n    }\n  }"
+        "text": "const { chromium } = require('playwright')\nconst { expect } = require('@playwright/test');\n\n(async () => {\n  const capabilities = {\n    'browserName': 'Chrome', // Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`\n    'browserVersion': 'latest',\n    'LT:Options': {\n      'platform': 'Windows 10',\n      'build': 'Playwright Sample Build',\n      'name': 'Playwright Sample Test',\n      'user': process.env.LT_USERNAME,\n      'accessKey': process.env.LT_ACCESS_KEY,\n      'tunnel': true, // Add tunnel configuration if testing a locally hosted webpage\n      'tunnelName': '' // Optional\n    }\n  }\n})()"
       }
     ],
-    "dateModified": "2026-09-09T19:13:32+05:30"
+    "dateModified": "2026-09-27T00:00:00+05:30"
   }) }}
 />
 
-# Local Testing Using Playwright
-* * *
+# How to Test Locally Hosted Pages With Playwright on TestMu AI
+***
 
-<BrandName /> tunnel feature lets you test private server URLs, locally hosted web apps, and websites on real browsers and operating systems. On <BrandName />, you can test plain HTML, CSS, PHP, Python, and other similar web files saved locally. When connecting to corporate firewalls or proxy settings, no restrictions apply to the new <BrandName /> tunnel binary. To establish a secure and unique tunnel connection between your system and <BrandName /> cloud servers, the <BrandName /> tunnel utilizes various protocols like Web Sockets, HTTPS, SSH(Secure Shell), etc.
+The <BrandName /> Tunnel lets you test private server URLs, locally hosted web apps, and websites on real browsers and operating systems. On <BrandName />, you can test plain HTML, CSS, PHP, Python, and other similar web files saved locally. When connecting through corporate firewalls or proxy settings, no restrictions apply to the <BrandName /> Tunnel binary. To establish a secure and unique tunnel connection between your system and the <BrandName /> cloud servers, the <BrandName /> Tunnel uses protocols such as Web Sockets, HTTPS, and SSH (Secure Shell).
 
-Learn how to perform local testing using Playwright across real browsers and operating systems.
+This guide walks you through running Playwright tests against locally hosted pages across real browsers and operating systems.
 
 ## Playwright Testing Of Locally Hosted Websites
 ***
 
-You can run Playwright testing of locally hosted websites and web apps via <BrandName /> tunnel binary.
+You can run Playwright tests against locally hosted websites and web apps by routing traffic through the <BrandName /> Tunnel binary.
 
-1. Clone the <BrandName />-Playwright repository on your system.
+:::tip Sample repo
+
+Clone the <BrandName /> Playwright sample repository used in this document to follow along with the same files shown here. <a href="https://github.com/LambdaTest/playwright-sample/tree/main/playwright-test-js" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="TestMu AI Playwright sample repository on GitHub" className="doc_img"/> View on GitHub</a>
+
+:::
+
+1. Clone the <BrandName /> Playwright repository on your system.
 
 2. Install the npm dependencies.
 
 <VerifiedTag value="Verified" />
 
-```
+```bash
 npm install
 ```
 
-3. In order to run your Playwright tests, you will need to set your <BrandName /> username and access key in the environment variables.
+3. To run your Playwright tests, set your <BrandName /> username and access key in the environment variables. Click the **Access Key** button at the top-right of the Automation Dashboard to find both values.
 
 **Windows**
 
@@ -180,7 +188,7 @@ export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
 export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 ```
 
-4. To establish a tunnel connection between your local device and <BrandName />, download the binary file based on your OS.
+4. To establish a tunnel connection between your local device and <BrandName />, download the binary file for your OS.
 
 - Windows **[64 Bit](https://downloads.lambdatest.com/tunnel/v3/windows/64bit/LT_Windows.zip) | [32 Bit](https://downloads.lambdatest.com/tunnel/v3/windows/32bit/LT_Windows.zip)**
 - macOS **[64 Bit](https://downloads.lambdatest.com/tunnel/v3/mac/64bit/LT_Mac.zip) | [32 Bit](https://downloads.lambdatest.com/tunnel/v3/mac/32bit/LT_Mac.zip)**
@@ -188,19 +196,17 @@ export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 
 5. Extract the downloaded binary file.
 
-6. Navigate to the directory or folder where you extracted the binary file in the Command Prompt.
+6. In the command prompt, navigate to the directory where you extracted the binary file.
 
-7. Run the below command in the terminal.
+7. Run the command below in the terminal to start the tunnel.
 
 <VerifiedTag value="Verified" />
 
-```js
+```bash
 ./LT --user {user's login email} --key {user's access key} --tunnelName {user's tunnel name}
 ```
 
-8. In desired capability, add the capability `tunnel: true`.
-
-If multiple tunnels are running, you can add `tunnel` and `tunnel ID` capabilities.
+8. In your desired capabilities, add the capability `tunnel: true`. If multiple tunnels are running, add both the `tunnel` and `tunnelName` capabilities to target the correct one.
 
 <VerifiedTag value="Verified" />
 
@@ -218,14 +224,14 @@ const { expect } = require('@playwright/test');
       'name': 'Playwright Sample Test',
       'user': process.env.LT_USERNAME,
       'accessKey': process.env.LT_ACCESS_KEY,
-      'tunnel': false, // Add tunnel configuration if testing locally hosted webpage
+      'tunnel': true, // Add tunnel configuration if testing a locally hosted webpage
       'tunnelName': '' // Optional
     }
   }
- ``` 
+})()
+```
 
-You can view test reports for your local tests on the <BrandName /> automation dashboard.
-
+Once the test runs, you can view the reports for your local tests on the <BrandName /> Automation Dashboard.
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

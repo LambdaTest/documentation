@@ -138,19 +138,19 @@ To set-up and use OneLogin & <BrandName /> Single Sign-on (SSO) feature:
 
 6. Log in to the [OneLogin Dashboard](https://app.onelogin.com/login). 
 
-<img loading="lazy" src={require('../assets/images/uploads/12cdf52a-e33f-41b1-ac1a-31171a542b1f.webp').default} alt="lambdatest onlogin integration"  className="doc_img" width="943" height="494"/>
+<img loading="lazy" src={require('../assets/images/uploads/12cdf52a-e33f-41b1-ac1a-31171a542b1f.webp').default} alt="TestMu AI onlogin integration"  className="doc_img" width="943" height="494"/>
 7. Go to Applications 
 
-<img loading="lazy" src={require('../assets/images/uploads/8d4b7e47-e9c1-454d-9df2-e9c127965aa9.webp').default} alt="lambdatest onlogin integration"  className="doc_img" width="943" height="460"/>
+<img loading="lazy" src={require('../assets/images/uploads/8d4b7e47-e9c1-454d-9df2-e9c127965aa9.webp').default} alt="TestMu AI onlogin integration"  className="doc_img" width="943" height="460"/>
 8. Add a new Application, by clicking on Add App. 
 
-<img loading="lazy" src={require('../assets/images/uploads/9face4b3-94c8-4e53-a03b-0b74c3cfb0c2.webp').default} alt="lambdatest onlogin integration"  className="doc_img" width="943" height="492"/>
+<img loading="lazy" src={require('../assets/images/uploads/9face4b3-94c8-4e53-a03b-0b74c3cfb0c2.webp').default} alt="TestMu AI onlogin integration"  className="doc_img" width="943" height="492"/>
 9. Search for SAML Test Connector and select **Add SAML Test Connector (Advanced)** 
 
-<img loading="lazy" src={require('../assets/images/uploads/4f1de915-1d55-4169-a90a-ea1f00e46862.webp').default} alt="lambdatest onlogin integration"  className="doc_img" width="942" height="488"/>
+<img loading="lazy" src={require('../assets/images/uploads/4f1de915-1d55-4169-a90a-ea1f00e46862.webp').default} alt="TestMu AI onlogin integration"  className="doc_img" width="942" height="488"/>
 10. In the window that appears, choose a suitable name for your app, and **save**. 
 
-<img loading="lazy" src={require('../assets/images/uploads/d9b4d2bc-600c-4093-b76b-04050227732f.webp').default} alt="lambdatest onlogin integration"  className="doc_img" width="943" height="493"/>
+<img loading="lazy" src={require('../assets/images/uploads/d9b4d2bc-600c-4093-b76b-04050227732f.webp').default} alt="TestMu AI onlogin integration"  className="doc_img" width="943" height="493"/>
 
 11. Click on configurations tab in the sidebar and fill the details as per the details copied from <BrandName /> in step 4.
     <img loading="lazy" src={require('../assets/images/sso/img_12.png').default} alt="okta integration" width="944" height="487" className="doc_img"/>

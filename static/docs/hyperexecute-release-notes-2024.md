@@ -420,7 +420,7 @@ Test recordings often capture all user interactions, including potentially sensi
 
 - **Improved Compliance:** This feature can help you adhere to stricter data security regulations and best practices.
 
-📕 Check the documentation - [Playwright Capabilities](/support/docs/capabilities-for-playwright/) to learn more about it.
+📕 Check the documentation - [Playwright Capabilities](/support/docs/playwright-test-execution-setup/) to learn more about it.
 
 ## Version 2.3.0
 

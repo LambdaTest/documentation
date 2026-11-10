@@ -4,6 +4,8 @@
 
 Real device app testing is the process of testing a mobile application to ensure that their functionality and usability is not comprised when installed across multiple Android and iOS devices. With TestMu AI, you can test mobile applications manually to ensure they perform seamlessly across 3000 + real mobile devices.
 
+For the basics, see our guide on [how to test on real devices](https://www.testmuai.com/blog/real-device-testing/).
+
 **Step 1:** Login to your TestMu AI account. Go to **App Testing** under **Real Device** from the left sidebar.
 
 **Step 2**: Choose the OS version of your choice. ( Android or iOS )

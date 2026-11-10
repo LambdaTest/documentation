@@ -127,5 +127,6 @@ The **HyperExecute YAML** file serves as the foundational component for test exe
 | [cacheTestURL](/support/docs/deep-dive-into-hyperexecute-yaml/#cachetesturl) | Boolean |It enables users to cache static test files. |
 | [project](/support/docs/deep-dive-into-hyperexecute-yaml/#project) | String | Segregate data at a project/repo level |
 | [slackChannel](/support/docs/deep-dive-into-hyperexecute-yaml/#slackchannel) | String | Allows you to receive notifications of your Job updates directly in your preferred Slack channel. |
+| [callbackURL](/support/docs/deep-dive-into-hyperexecute-yaml/#callbackurl) | String | An HTTPS URL that receives one `POST` with the job status and test counts when the job finishes. |
 | [afterEachScenario](/support/docs/deep-dive-into-hyperexecute-yaml/#aftereachscenario) | List of Strings | Allows you to trigger your define tasks after each test scenario. |
 | [syncStart](/support/docs/deep-dive-into-hyperexecute-yaml/#syncstart) | Map | Ensures all VMs are ready before starting parallel tasks.|

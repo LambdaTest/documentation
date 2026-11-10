@@ -102,7 +102,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-09T20:21:05+05:30"
+    "dateModified": "2026-09-30T12:00:00+05:30"
   }) }}
 />
 
@@ -125,6 +125,8 @@ This model is the same across Desktop Web, Mobile Web, and Mobile App authoring,
 ### Setting up
 
 The device or browser is being brought up and your application is being installed or loaded. This happens when you start a session and again after you use [Reset Session](#resume-and-reset-session). It is transient — nothing is interactive while it lasts, and the session moves on automatically once the environment is ready.
+
+If you selected a variable environment before starting the session, the session is locked to it from this point. Every `{{environment.X}}` variable resolves from that environment until the session ends. See [Select an Environment for an Authoring Session](/support/docs/kane-ai-using-variables/#select-an-environment-for-an-authoring-session).
 
 ### Authoring Steps
 
@@ -469,8 +471,8 @@ While the session is in Authoring Steps, interacting directly with your applicat
 |---|---|
 | Web browser on desktop | Supported |
 | Mobile app on Android | Supported |
-| Mobile app on iOS | Supported in portrait; not supported in landscape |
-| Mobile browser | Not supported |
+| Mobile app on iOS | Supported |
+| Mobile browser | Supported |
 
 On platforms where capture is not supported, build the test with natural language instructions and slash commands. For gesture-level detail, limitations, and use cases, see [Manual Interaction](/support/docs/kaneai-manual-interaction/).
 
@@ -494,7 +496,6 @@ On platforms where capture is not supported, build the test with natural languag
 - Individual steps inside a conditional block, While loop, or generative instruction cannot be run on their own — the block runs as a whole. Modules are the exception.
 - A generative instruction is not addressable internally until it has run once.
 - The cursor is read-only while the session is Running.
-- Direct interaction is not captured on mobile browser sessions, or on iOS in landscape.
 - Editing, duplicating, deleting, and multi-select are available only while the session is Paused.
 
 ## FAQ
@@ -545,4 +546,5 @@ Reset Session reinstalls the application, so it comes up fresh. Steps that had a
 - [Code Generation](/support/docs/kane-ai-automation-code-generation/)
 - [Rename Steps](/support/docs/kaneai-rename-instructions/)
 - [Advanced Settings](/support/docs/kaneai-advanced-settings/)
+- [Variables and Environments](/support/docs/kane-ai-using-variables/)
 - [Error Handling](/support/docs/error-handling-kaneai/)

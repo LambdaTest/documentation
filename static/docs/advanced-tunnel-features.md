@@ -4,7 +4,7 @@
 
 **TestMu AI Tunnel** feature allows you to test your **private server URLs** or **locally hosted web-apps** or **websites** on **3000+** real browsers through TestMu AI. However, sometimes corporate firewalls and proxy settings may have restricted you to leverage the TestMu AI Tunnel binary. Not anymore though, as we’ve come up with a new binary for TestMu AI Tunnel. TestMu AI Tunnel follows various protocols such as **Web Socket, TCP** etc. to help you establish a secure and unique tunnel connection between your system and TestMu AI cloud servers.
 
-You can download the **TestMu AI Tunnel binary** that will help you establish a secure connection through corporate firewalls between your computer and [LambdaTest](https://www.testmuai.com/) cloud servers for a testing locally hosted website or web-applications. You can test plain **HTML, CSS, PHP, Python** or other similar web files saved on your local system, over combinations of operating systems, browsers, and screen resolutions that are available on TestMu AI.
+You can download the **TestMu AI Tunnel binary** that will help you establish a secure connection through corporate firewalls between your computer and [TestMu AI](https://www.testmuai.com/) cloud servers for a testing locally hosted website or web-applications. You can test plain **HTML, CSS, PHP, Python** or other similar web files saved on your local system, over combinations of operating systems, browsers, and screen resolutions that are available on TestMu AI.
 
 | Download Links                                                                     |
 | ---------------------------------------------------------------------------------- |
@@ -125,7 +125,7 @@ LT  --user <username> --key <accessKey> –allowHosts google.com,apple.com,amazo
 ```
 
 **Explanation:**
-When this flag is used only requests for provided domains will be routed via tunnel and resolved from the user's network. Requests for domains other than mentioned will be resolved from LambdaTest’s network.
+When this flag is used only requests for provided domains will be routed via tunnel and resolved from the user's network. Requests for domains other than mentioned will be resolved from TestMu AI’s network.
 
 ## Tunnel Arguments
 You can find all the arguments for TestMu AI Tunnel by running the below command in your command line:

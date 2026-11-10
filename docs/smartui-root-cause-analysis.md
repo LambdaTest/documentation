@@ -99,7 +99,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-09T19:10:37+05:30"
+    "dateModified": "2026-10-27T14:00:00+05:30"
   }) }}
 />
 
@@ -109,7 +109,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       "@context": "https://schema.org",
       "@type": "HowTo",
       "name": "How to Use Root Cause Analysis",
-      "description": "Before you begin, please ensure the build was generated using a TestMu AI CLI (exec) command.",
+      "description": "Before you begin, make sure the build was generated with the TestMu AI CLI (exec) command, or with Appium hooks on a real device with smartUI.captureDom set to true.",
       "step": [
         {
           "@type": "HowToStep",
@@ -168,7 +168,10 @@ Visual testing often tells you that something is wrong but not what caused it. S
 ### Prerequisites
 
 :::info
-Before you begin, please ensure the build was generated using a **<BrandName /> CLI (exec)** command.
+Smart RCA needs element data on both the baseline and the comparison screenshot. You get it in one of two ways:
+
+- **Web:** the build was generated with the **<BrandName /> CLI (exec)** command.
+- **Native apps on real devices:** the build was generated with [Appium hooks](/support/docs/smartui-appium-hooks/) and the `smartUI.captureDom` capability. See [Smart RCA for Native Apps on Real Devices](#smart-rca-for-native-apps-on-real-devices).
 :::
 
 ### Step 1: Activate RCA Mode
@@ -209,6 +212,85 @@ Once an element is selected, the RCA panel opens on the right sidebar. It displa
 | **Tag Transforms** | Structural changes, such as a `<div>` becoming an `<article>`. |
 | **Text Modifications** | A word-by-word diff of any edited content. |
 | **Layout Shifts** | Details on how the layout was affected, using CSS diffs for properties like `display`, `transform`, `margin`, etc. |
+
+## Smart RCA for Native Apps on Real Devices <NewTag value="Beta" color="#000" bgColor="#ffec02" />
+
+Smart RCA also works for native Android and iOS apps tested with SmartUI Appium hooks on real devices. When you turn it on, every `smartui.takeScreenshot` call also saves the app's element tree (the Appium page source) next to the screenshot. SmartUI then compares the two trees and shows which element changed, and how its position, size or text changed.
+
+### Turn It On
+
+Add `smartUI.captureDom` to the capabilities you already use for [SmartUI with Appium hooks](/support/docs/smartui-appium-hooks/). Your test code does not change.
+
+```javascript
+let capabilities = {
+  platformName: "android",
+  "lt:options": {
+    deviceName: "Galaxy S24",
+    platformVersion: "14",
+    isRealMobile: true,
+    app: "lt://APP_ID",
+    visual: true,
+    "smartUI.project": "<Your Project Name>",
+    //highlight-next-line
+    "smartUI.captureDom": true, // Save the element tree with each screenshot for Smart RCA
+  },
+};
+
+// Take screenshots the same way as before
+await driver.execute("smartui.takeScreenshot=<Name of your screenshot>");
+```
+
+Then run your test twice:
+
+1. Run once to create the baseline. The baseline must be captured with `smartUI.captureDom` set to `true`.
+2. Run again after the app changes, with the same screenshot names.
+3. Open the comparison in SmartUI and click the **RCA** icon.
+
+:::note
+Baselines captured before you turned on `smartUI.captureDom` have no element data, so the RCA panel stays empty for them. Run the baseline again with the capability on, approve it, and then compare.
+:::
+
+### What the RCA Panel Shows for Native Apps
+
+Native apps have no HTML or CSS, so the panel shows a smaller set of details than it does for web pages.
+
+In the example below, an iOS build removed the `Fourth line (new)` label. The panel shows the element's path in the baseline, `No Such Element Found` for the comparison, its type and text, `visible` and `inViewport` changing from `true` to `false`, and its bounding box shrinking to `0 × 0`.
+
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/RCA/RCAnativeApp.png').default} alt="Smart RCA panel for an iOS app showing a removed text element" width="1180" height="430" className='doc_img'/>
+
+| Category | What you see |
+|---|---|
+| **Element path** | The element's locator in the baseline and in the comparison. When an element has a `resource-id` (Android) or `name` (iOS), the path uses it. Otherwise it is a positional path from the screen root. |
+| **Bounding box** | The element's position and size before and after the change, in screenshot pixels. |
+| **Text** | Changes to the element's text, or to its content description or label when it has no text. |
+| **State** | Changes to checkboxes, switches and text fields: checked, value and enabled. |
+
+SmartUI captures these element types and properties:
+
+| Platform | Source | What is captured |
+|---|---|---|
+| Android | UiAutomator2 page source | Visible elements with a non-empty box: class, `resource-id`, bounds, `text` or `content-desc`, checked, enabled, focused and selected. |
+| iOS | XCUITest page source | Visible elements with a non-empty box: element type, `name`, frame (scaled to screenshot pixels), `label` or `value`, enabled and selected. |
+
+Password and secure text fields are never captured: their text and value are left out of the element data.
+
+### Limitations
+
+- **Native screens only.** The element tree is saved only when the app is in the `NATIVE_APP` context. A hybrid app screen open in a `WEBVIEW` context, and mobile browser sessions, take the screenshot as usual with no element data.
+- **No styles.** The Appium page source has no colours, fonts or images, so Smart RCA cannot explain a colour, font size or image change on a native app. The pixel comparison still flags those changes.
+- **Tree size.** SmartUI reads up to 128 levels and 5,000 elements per screen. On iOS, XCUITest itself stops at about 62 levels, so very deeply nested elements may not appear.
+- **Full page screenshots.** With `fullPage: true`, SmartUI captures the element tree for each scrolled part and joins the parts to match the stitched screenshot. If it cannot join them, it keeps the element tree of the first screen.
+- **Capture time.** Saving the element tree adds a second or two to each screenshot. If it fails or takes longer than 30 seconds, the screenshot is still saved, without element data.
+- **Not for uploads.** Smart RCA is not available for Figma, PDF or uploaded image builds.
+
+### Troubleshooting
+
+| Problem | What to check |
+|---|---|
+| The RCA panel is empty | Both the baseline and the comparison must be captured with `smartUI.captureDom: true`. Run the baseline again with the capability on. |
+| No element is highlighted on a hybrid app screen | The app was in a `WEBVIEW` context when the screenshot was taken. Switch to `NATIVE_APP` before `smartui.takeScreenshot`. |
+| A colour or font change has no RCA details | Expected: native page source has no style data. Use the pixel diff for these changes. |
+| A moved element shows as removed and added | Give the element a stable `resource-id` (Android) or accessibility identifier (iOS) so SmartUI can match it across builds. |
 
 ## Key Advantages of Smart RCA
 

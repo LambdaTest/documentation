@@ -22,17 +22,17 @@ After downloading the Tunnel App, also known as the Underpass, you need to run i
 
 ## Launching Underpass and the secure Tunnel
 
-#### Launching Underpass on Linux
+### Launching Underpass on Linux
 
 Make sure you’ve given the permissions to the Underpass executable file through the command highlighted in the above note. If you have, you can run the application by either double clicking it or by running the below command in terminal:
 
 `./UnderPass.AppImage`
 
-#### Launching Underpass on Windows
+### Launching Underpass on Windows
 
 Once Underpass is downloaded and installed, simply launch Underpass through the start menu or a shortcut.
 
-#### Launching Underpass on MacOS
+### Launching Underpass on MacOS
 
 Once Underpass is downloaded and installed, simply launch Underpass through the Launchpad (Applications page).
 
@@ -73,6 +73,33 @@ With Underpass application, you can easily access a local folder or directory in
 Now, when you launch the tunnel and run a Real time test over TestMu AI, you will find the files located under the local folder whose path was specified by you under the advanced configurations.
 
 Note: You need to specify `local-folder.lambdatest.com` as the testing URL in the real time testing.
+
+### Choosing A Connection Mode
+
+Under the advanced configurations, the **Connection Mode** dropdown sets how the tunnel connects to our cloud servers. Keep it on **Auto** unless your network blocks some protocols.
+
+| Connection Mode | When to use it |
+|-----------------|----------------|
+| Auto | Detects the connection mode for you. Recommended. |
+| SSH (22) | SSH on port 22. |
+| SSH (443) | SSH on port 443, for networks that allow only HTTPS ports. |
+| SSH (WSS) | SSH over a WebSocket connection. |
+| WebSocket | WebSocket only. |
+| TCP | TCP only, for networks that allow direct TCP connections. |
+
+### Exposing A Database
+
+Turn on the **Expose Database** toggle under the advanced configurations to reach a database or another internal service on your network through the tunnel. Then fill in:
+
+- **Database Type**: a name for the service, such as `mysql`, `sql` or `oracle`. Use letters, numbers, `-` and `_`, up to 25 characters. Using `oracle` turns on Oracle TNS redirect handling.
+- **Database Host**: the host name or IP address of the database, as reachable from your machine, such as `localhost` or `10.0.0.12`. Write IPv6 addresses in brackets, such as `[::1]`. Do not add `http://` or a port here.
+- **Database Port**: the port the database listens on, such as `3306` for MySQL, `1433` for SQL Server or `1521` for Oracle.
+
+All three fields are required once the toggle is on.
+
+Exposing a database needs the **TCP** connection mode or one of the **SSH** modes. When you turn the toggle on while the connection mode is **Auto** or **WebSocket**, Underpass switches it to **TCP** for you.
+
+When you run tests through this tunnel on HyperExecute, the test machines get two environment variables for the exposed database, named after the Database Type, for example `MYSQL_PROXY_HOST` and `MYSQL_PROXY_PORT`. Point your tests at these values to connect to the database. For more, see the [`--expose` flag](/support/docs/deep-dive-into-hyperexecute-yaml/#tunnelopts).
 
 ## Monitoring Tunnel Logs For Troubleshooting
 

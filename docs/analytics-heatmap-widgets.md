@@ -150,7 +150,7 @@ import NewTag from '../src/component/newTag';
   ]) }}
 />
 
-Heatmap widgets in LambdaTest Insights provide a powerful way to visualize complex data relationships and identify patterns across multiple dimensions. By representing data density and relationships through color intensity, heatmaps help you quickly spot trends, anomalies, and correlations in your test execution data.
+Heatmap widgets in TestMu AI Insights provide a powerful way to visualize complex data relationships and identify patterns across multiple dimensions. By representing data density and relationships through color intensity, heatmaps help you quickly spot trends, anomalies, and correlations in your test execution data.
 
 ## What is a Heatmap Widget?
 

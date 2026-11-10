@@ -434,18 +434,18 @@ runtime:
 ### Q: What is test discovery in HyperExecute, and how does it help?
 [Test discovery](/support/docs/deep-dive-into-hyperexecute-yaml/#testdiscovery) is the process of pre-identifying the tests (classes, scenarios, or feature files) to be executed.
 
-##### Why Use Test Discovery?
+#### Why Use Test Discovery?
 - **Selective Execution →** Run only the tests you need.
 - **Flexibility →** Filter by file paths, tags, or custom logic.
 - **Pre-Execution Preview →** Know exactly which tests will run.
 
-##### Discovery Methods
+#### Discovery Methods
 | Type        | Description                                                | Use Case                                |
 | ----------- | ---------------------------------------------------------- | --------------------------------------- |
 | `raw`       | Runs a shell command to list tests.                        | Simple, filename/class-based filtering. |
 | `automatic` | Uses HyperExecute backend tools (`snooper`) for discovery. | Tag or scenario-based filtering.        |
 
-##### Examples
+#### Examples
 
 Automatic Discovery (Tag-based)
 
@@ -472,7 +472,7 @@ testDiscovery:
   command: grep 'public class' src/test/java/hyperexecute/*.java | awk '{print $3}'
 ```
 
-##### Discovery Modes
+#### Discovery Modes
 - [local](/support/docs/deep-dive-into-hyperexecute-yaml/#testdiscovery:~:text=mode%3A%20remote-,mode%3A%20local,-Purpose%3A%20Test) → Runs discovery on your machine (useful for small/simple projects).
 - [remote](/support/docs/deep-dive-into-hyperexecute-yaml/#testdiscovery:~:text=locally%2C%20limiting%20visibility.-,mode%3A%20remote,-NEW) → Runs discovery on HyperExecute VM (recommended for large projects).
 

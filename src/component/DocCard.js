@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './DocCard.module.css';
 
 const DocCard = ({ heading, link, description }) => {
   const cardStyle = {
@@ -21,9 +22,9 @@ const DocCard = ({ heading, link, description }) => {
   };
 
   return (
-    <div style={cardStyle}>
+    <div className={styles.docCard} style={cardStyle}>
       <a href={link}>
-        <h3>{heading}</h3>
+        <h2>{heading}</h2>
       </a>
       {description && <p style={descStyle}>{description}</p>}
     </div>

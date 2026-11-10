@@ -3,7 +3,7 @@ id: docker-tunnel-extension
 title: TestMu AI Docker Tunnel Extension For Local Testing
 hide_title: true
 sidebar_label: Docker Tunnel Extension
-description: TestMu AI Docker Tunnel Extension lets you test locally hosted web apps across 5000+ real devices and 10,000+ browser/device combinations, no CLI needed.
+description: TestMu AI Docker Tunnel Extension lets you test locally hosted web apps across 50,000+ real devices and 10,000+ browser/device combinations, no CLI needed.
 keywords:
   - testmu ai tunnel extension for docker
   - testmu ai docker tunnel
@@ -55,7 +55,7 @@ import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
       "@id": "https://www.testmuai.com/support/docs/docker-tunnel-extension/"
     },
     "headline": "TestMu AI Docker Tunnel Extension For Local Testing",
-    "description": "TestMu AI Docker Tunnel Extension lets you test locally hosted web apps across 5000+ real devices and 10,000+ browser/device combinations, no CLI needed.",
+    "description": "TestMu AI Docker Tunnel Extension lets you test locally hosted web apps across 50,000+ real devices and 10,000+ browser/device combinations, no CLI needed.",
     "url": "https://www.testmuai.com/support/docs/docker-tunnel-extension/",
     "image": {
       "@type": "ImageObject",
@@ -118,7 +118,7 @@ import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 
 1. [Install the Docker Desktop](https://www.docker.com/products/docker-desktop) based on your operating system.
 
-2. A <BrandName /> account. Don't have an account, <a href="https://www.testmuai.com/register/" onClick={CookieTrackingSignup}>sign up on LambdaTest</a>. 
+2. A <BrandName /> account. Don't have an account, <a href="https://www.testmuai.com/register/" onClick={CookieTrackingSignup}>sign up on TestMu AI</a>. 
 
 ## Setting up the <BrandName /> Docker Tunnel Extension
 ---

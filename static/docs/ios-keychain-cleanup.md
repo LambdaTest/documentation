@@ -2,8 +2,7 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-Apple’s [Keychain](https://developer.apple.com/documentation/security/keychain_services) offers a secure system for apps to store sensitive information like passwords, certificates, authentication tokens, and other small data pieces.
-TestMu AI now offers enhanced Keychain management on real iOS devices, enabling you to test app flows that rely on secure storage and Keychain-specific use cases more effectively.
+iOS Keychain cleanup on TestMu AI automatically clears all Keychain entries after each real-device session, preventing login details and tokens from carrying over between runs. It also preserves keychain-access-groups entitlements during app resigning, keeping secure-storage flows working correctly after resigning.
 
 ## Keychain Cleanup After Sessions
 

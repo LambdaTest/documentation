@@ -13,12 +13,13 @@ slug: apple-pay-auto/
 canonical: https://www.testmuai.com/support/docs/apple-pay-auto/
 site_name: TestMu AI
 url: https://www.testmuai.com/support/docs/apple-pay-auto/
+toc_max_heading_level: 2
 ---
 import CodeBlock from '@theme/CodeBlock';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import RealDeviceTag from '../src/component/realDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import RealDeviceTag from '@site/src/component/realDevice';
 import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
@@ -138,7 +139,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
           "@type": "HowToStep",
           "position": 2,
           "name": "Step 2: Add Desired Capabilities",
-          "text": "To enable Apple Pay automation, include the following capability in your automation session as highlighted in the Capabilities: {`desired_caps = { \"deviceName\": \"iPhone 16\", \"platformName\": \"iOS\", \"platformVersion\": \"18\", \"isRealMobile\": True, \"app\": \"YOURAPPID\", \"build\": \"Sample Build\", \"name\": \"Sample Test\", // highlight-next-line \"applePay\": true, // highlight-next-line \"applePayCardType\": [\"visa\", \"master\"] }`} You must add the generated APPURL** to the app capability in the config file. You can generate capabilities for your test requirements with the help of our inbuilt Capabilities Generator tool. For more details, please refer to our guide on Desired Capabilities in Appium.",
+          "text": "To enable Apple Pay automation, include the following capability in your automation session as highlighted in the Capabilities: {`desired_caps = { \"deviceName\": \"iPhone 16\", \"platformName\": \"iOS\", \"platformVersion\": \"18\", \"isRealMobile\": True, \"app\": \"YOURAPPID\", \"build\": \"Sample Build\", \"name\": \"Sample Test\", // highlight-next-line \"applePay\": true, // highlight-next-line \"applePayCardType\": [\"amex\", \"visa\", \"master\", \"discover\"] }`} You must add the generated APPURL** to the app capability in the config file. You can generate capabilities for your test requirements with the help of our inbuilt Capabilities Generator tool. For more details, please refer to our guide on Desired Capabilities in Appium.",
           "url": "https://www.testmuai.com/support/docs/apple-pay-auto/#step-2-add-desired-capabilities"
         },
         {
@@ -167,8 +168,13 @@ import VerifiedTag from '@site/src/component/verifiedTag';
   ]) }}
 />
 
+<RealDeviceTag value="Real Device" />
+
 # Apple Pay Automation on Real Devices
-<RealDeviceTag value="Real Device" /> 
+
+
+Automating Apple Pay on TestMu AI validates end-to-end payment flows on real iOS devices. Provision Wallet with sandboxed test cards, inject payment details, confirm the payment sheet, and enter the device passcode to verify checkout without relying on production cards.
+
 **Apple Pay** is Apple’s secure digital wallet and payment system that enables purchases, one-click checkouts, and adds an extra layer of protection for financial transactions. In real-world apps and websites, Apple Pay is widely used for simplifying checkout experiences, reducing friction, and improving user trust.
 
 For **testing payment flows**, validating Apple Pay becomes critical. Automation of Apple Pay ensures you can reliably test end-to-end purchase scenarios, confirm that payment sheets open correctly, details are pre-filled, and transactions are processed securely, without relying on production cards.
@@ -182,7 +188,7 @@ To unlock this feature, purchase or upgrade to the required [plan](https://www.t
 :::
 
 :::info Automating with Playwright?
-This guide covers the **Appium** flow. Apple Pay is also supported for **Playwright** tests on real iOS devices (Safari, Node.js) over the CDP endpoint. See [Apple Pay Automation in the Playwright iOS guide](/support/docs/playwright-ios-device/#apple-pay-automation).
+Apple Pay is also supported for **Playwright** tests on real iOS devices (Safari, Node.js) over the CDP endpoint. See [Apple Pay Automation in the Playwright iOS guide](/support/docs/playwright-ios-device/#apple-pay-automation).
 :::
 
 ---
@@ -225,7 +231,7 @@ The `applePayCardType` array follows a **priority order**. The order you provide
 
 ### Step 1: Upload Your App to <BrandName />
 
-1. **Uploading Your App** – Follow the detailed steps in our [Upload Your Application](/support/docs/application-setup-via-api/) guide.
+1. **Uploading Your App** - Follow the detailed steps in our [Upload Your Application](/support/docs/application-setup-via-api/#upload-via-the-rest-api) guide.
 2. Once uploaded, **note the App ID** returned by the API or dashboard.
 3. Use this **App ID** in the `"app"` capability in your automation script.
 
@@ -238,7 +244,6 @@ To enable Apple Pay automation, include the following capability in your automat
 <Tabs>
 
   <TabItem value="ios" label="iOS">
-
     <VerifiedTag value="Verified" />
 
     <CodeBlock className="language-java">
@@ -253,7 +258,7 @@ To enable Apple Pay automation, include the following capability in your automat
     // highlight-next-line
     "applePay": true,
     // highlight-next-line
-    "applePayCardType": ["visa", "master"]
+    "applePayCardType": ["amex", "visa", "master", "discover"]
 }`}
     </CodeBlock>
   </TabItem>
@@ -278,7 +283,6 @@ Before confirming the Apple Pay payment, you can optionally update the shipping 
 
 <Tabs>
   <TabItem value="python" label="Python">
-
     <VerifiedTag value="Verified" />
 
     <CodeBlock className="language-python">
@@ -309,7 +313,6 @@ Before confirming the Apple Pay payment, you can optionally update the shipping 
     </CodeBlock>
   </TabItem>
   <TabItem value="java" label="Java">
-
     <VerifiedTag value="Verified" />
 
     <CodeBlock className="language-java">
@@ -344,7 +347,6 @@ driver.executeScript("applePayDetails", applePayDetailsUpdate);`}
     </CodeBlock>
   </TabItem>
   <TabItem value="javascript" label="JavaScript">
-
     <VerifiedTag value="Verified" />
 
     <CodeBlock className="language-javascript">

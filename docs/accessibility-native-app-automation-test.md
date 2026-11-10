@@ -103,8 +103,8 @@ import { BRAND_URL } from '@site/src/component/BrandName';
 
 Native App Automation uses **Appium** with the **`lambda-accessibility-scan`** hook to generate accessibility results during **Android** or **iOS** test runs on the TestMu AI grid.
 
-:::warning
-Scans on real devices are **hook driven only**. The `accessibility.autoscan` capability used in web automation is **not supported on real devices**, so a full app flow cannot be scanned automatically. Call `lambda-accessibility-scan` at every screen you want covered. See [Scan Configurations via Capabilities](/support/docs/accessibility-automation-scan-configurations/).
+:::note
+There are two ways to trigger scans on a real device. Call `lambda-accessibility-scan` at each screen you want covered, as described below, or set `accessibility.autoScan` to `true` and have every screen your test reaches scanned automatically. See [AutoScan for Mobile App Accessibility](/support/docs/accessibility-mobile-autoscan/) and [Scan Configurations via Capabilities](/support/docs/accessibility-automation-scan-configurations/).
 :::
 
 ## When to use this
@@ -138,7 +138,7 @@ driver.executeScript("lambda-accessibility-scan");
 
 1. Upload the app and configure the Appium session.
 2. Enable Accessibility in the session capabilities.
-3. Trigger `lambda-accessibility-scan` at important checkpoints.
+3. Trigger `lambda-accessibility-scan` at important checkpoints, or enable [AutoScan](/support/docs/accessibility-mobile-autoscan/) to scan every screen the test reaches.
 4. Review the report in the dashboard.
 
 ## Product boundary
@@ -151,8 +151,11 @@ Accessibility scanning supports **native** Android and iOS apps only. **Hybrid a
 
 ## Related docs
 
+- [AutoScan for Mobile App Accessibility](/support/docs/accessibility-mobile-autoscan/)
 - [Scan Configurations via Capabilities (Automation)](/support/docs/accessibility-automation-scan-configurations/)
+- [Rule and Category Exclusion for Mobile App Accessibility](/support/docs/accessibility-mobile-rule-exclusion/)
 - [Appium TestNG](/support/docs/accessibility-appium-testng/)
 - [Appium WebdriverIO](/support/docs/accessibility-appium-webdriverio/)
 - [Accessibility App Scanner (Overview)](/support/docs/accessibility-app-scanner/)
 - [Tag Support for Accessibility Scans](/support/docs/accessibility-tag-support/)
+- [Screen Reader Automation (Overview)](/support/docs/accessibility-screen-reader-automation/)

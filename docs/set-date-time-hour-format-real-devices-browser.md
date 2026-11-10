@@ -109,92 +109,90 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 />
 
 
-Testing applications often requires validation across different date, time, and format scenarios. <BrandName /> now supports dynamic configuration of **date, time, 12/24-hour format**, and **automatic time toggle** on real **iOS (14+)** and **Android (10+)** devices, both in **manual** sessions and via **Appium automation hooks**.
+Websites often behave differently depending on the device clock, from AM/PM logic and countdown timers to locale-specific date formats and scheduled banners. While running a real-time browser session on a real device, <BrandName /> lets you override the **date, time, 12/24-hour format**, and the **automatic time sync** toggle on real **iOS (14+)** and **Android (10+)** hardware, so you can reproduce these conditions on demand.
 
-This enables use cases like testing scheduled alerts, AM/PM behaviors, time-bound features, and regional formatting validations.
+This makes it easy to reproduce time-bound web flows, verify regional formatting, and exercise clock-dependent UI without waiting for the real calendar to move.
 
 ---
 
-## Access Date & Time Settings on <BrandName /> Real Devices
+## Open Date & Time Settings During a Browser Session
 
-**Step 1:** Log into your <BrandName /> dashboard and navigate to **Real Devices** > **App Testing**.
+**Step 1:** Sign in to your <BrandName /> dashboard, go to **Real Time Testing**, and open the **Browser Testing** tab.
 
-**Step 2:** Select your desired app and a supported device (iOS 14+ or Android 10+), then click **Start** to launch your session.
+**Step 2:** Pick a supported real device (iOS 14+ or Android 10+) along with the browser and OS version you want to test, then click **Start** to launch the live session.
 
-**Step 3:** Once the session starts, open the **iOS Settings** or **Android Settings** tab in the left sidebar, based on the device platform.
+**Step 3:** After the device boots, open the **iOS Settings** or **Android Settings** panel from the left sidebar, depending on the platform you launched.
 
-**Step 4:** Click on **Set Date and Time** to open the configuration modal. 
+**Step 4:** Select **Set Date and Time** to bring up the configuration modal.
 
 <img loading="lazy" src={require('../assets/images/real-device-app-testing/set-date-and-time-pic1.png').default} className="doc_img"/>
 
-**Step 5:**  In the **modal**, configure the **date**, **time**, and **time format** as needed, then click **Update** to apply the changes to the device.
+**Step 5:** Adjust the **date**, **time**, and **hour format** in the modal, then click **Update** to push the changes to the live device.
 
 <img loading="lazy" src={require('../assets/images/real-device-app-testing/set-date-and-time-pic-last.png').default} className="doc_img"/>
 
 :::note
-On Android devices, certain models, particularly those from **Motorola, Xiaomi, Oppo, and other Chinese OEMs**, do not support custom date and time configuration. On such devices, the modal will display a **Not Supported** message.
+A few Android models, mainly those from **Motorola, Xiaomi, Oppo, and other Chinese OEMs**, don't allow the clock to be changed. On those devices the modal shows a **Not Supported** message instead of the editable fields.
 :::
 
 
 ---
 
-## Date & Time Configuration Options
+## What You Can Configure
 
 <img loading="lazy" src={require('../assets/images/real-device-app-testing/set-date-and-time-pic2.png').default} className="doc_img"/>
 
-The modal includes four options to simulate various datetime-related behaviors:
+The modal exposes four controls for simulating different date and time scenarios:
 
 ### 1. Set Date and Time Automatically
-- **Toggle ON:** Syncs the device with network time.
-- **Toggle OFF:** Unlocks manual controls for custom configuration.
-- Disabling this is mandatory to manually edit date or time.
+- **Enabled:** the device keeps its clock in sync with network time.
+- **Disabled:** the manual fields unlock so you can enter your own values.
+- You must switch this off before editing the date or time by hand.
 
 <img loading="lazy" src={require('../assets/images/real-device-app-testing/set-date-and-time-pic4.png').default} className="doc_img"/>
 
 
 ### 2. Date
-- Opens a calendar picker with selectable dates up to **7 days ahead**.
-- Selecting a date updates the system date on the device.
-- Past dates and dates beyond 7 days are **grayed out** and unselectable.
-- An **Apply** button appears only when a valid date is selected.
+- A calendar picker lets you jump to any day within the next **7 days**.
+- Your choice immediately becomes the device's system date.
+- Any day in the past, or more than a week ahead, is **greyed out** and can't be picked.
+- The **Apply** button activates only once a valid date is chosen.
 
 <img loading="lazy" src={require('../assets/images/real-device-app-testing/set-date-and-time-pic3.png').default} className="doc_img"/>
 
 
 ### 3. Time
-- Allows custom time entry in `HH:MM:SS` format.
-- Picker adjusts based on selected hour-format (12 or 24-hour).
-- Supports both **manual typing** and **arrow key navigation** for time input.
+- Enter a precise value in `HH:MM:SS` format.
+- The picker follows whichever hour format (12- or 24-hour) you've selected.
+- You can type the value directly or step through it with the arrow keys.
 
 ### 4. Time Format (12/24 Hour)
-- Choose between **12-hour** (AM/PM toggle) and **24-hour** formats.
-- 12-hour format shows AM/PM option in time picker.
-- 24-hour format disables AM/PM selection automatically.
+- Switch between **12-hour** (with AM/PM) and **24-hour** display.
+- Choosing 12-hour reveals the AM/PM control in the time picker.
+- Choosing 24-hour hides the AM/PM control automatically.
 
 <img loading="lazy" src={require('../assets/images/real-device-app-testing/set-date-and-time-pic-5.png').default} className="doc_img"/>
 
 
-## Supported Platforms: 
+## Platform Support
 
-| Platform | Configuration Methods       | OS Versions Supported |
-| -------- | --------------------------- | --------------------- |
-| iOS      | Manual + Appium Executor    | iOS 14 and above      |
-| Android  | Manual + Appium Executor    | Android 10 and above  |
+| Platform | Availability             | OS Versions Supported |
+| -------- | ------------------------ | --------------------- |
+| iOS      | Real-time browser session | iOS 14 and above      |
+| Android  | Real-time browser session | Android 10 and above  |
 
 :::warning
-Custom date and time configuration is not supported on certain Android device models, particularly those from **Motorola, Xiaomi, Oppo, and other Chinese OEMs**. On these devices, the modal will display a **Not Supported** message during manual sessions, and the Appium hook will return the following error during automation:
-
-`Custom date and time hook is not supported on this device. Please try on another device_id.`
+Custom date and time changes aren't available on certain Android models, particularly those from **Motorola, Xiaomi, Oppo, and other Chinese OEMs**. On these devices the modal will display a **Not Supported** message during the session.
 :::
 
 ---
 
-## Use Cases: 
+## When to Use It
 
-- Test scheduled notifications and alerts
-- Validate time-sensitive app flows
-- Check 12/24-hour format compatibility
-- Simulate future or custom dates
-- Debug calendar and time-based modules
-- Verify auto/manual time toggle behavior
-- Test date/time edge cases (e.g., midnight, EOM)
+- Reproduce scheduled banners, promos, or countdown timers on a website
+- Verify time-sensitive web flows such as booking or checkout windows
+- Confirm 12- and 24-hour formats render correctly
+- Preview how pages look on a future or backdated day
+- Debug calendar widgets and time-based components
+- Confirm behaviour when auto time sync is toggled on or off
+- Cover edge cases like midnight rollover or end-of-month dates

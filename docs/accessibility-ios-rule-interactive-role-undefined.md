@@ -1,8 +1,8 @@
 ---
 id: accessibility-ios-rule-interactive-role-undefined
-title: Interactive Role Undefined
+title: Interactive Role Undefined (iOS)
 sidebar_label: Interactive Role Undefined
-description: Rule-level Accessibility guidance for Interactive Role Undefined on iOS.
+description: "Find custom tappable iOS views that expose no accessibility role, so VoiceOver can announce what they are and how to interact with them."
 slug: accessibility-ios-rule-interactive-role-undefined/
 ---
 import { BRAND_URL } from '@site/src/component/BrandName';
@@ -43,7 +43,7 @@ import { BRAND_URL } from '@site/src/component/BrandName';
       "@id": "https://www.testmuai.com/support/docs/accessibility-ios-rule-interactive-role-undefined/"
     },
     "headline": "Interactive Role Undefined",
-    "description": "Rule-level Accessibility guidance for Interactive Role Undefined on iOS.",
+    "description": "Find custom tappable iOS views that expose no accessibility role, so VoiceOver can announce what they are and how to interact with them.",
     "url": "https://www.testmuai.com/support/docs/accessibility-ios-rule-interactive-role-undefined/",
     "image": {
       "@type": "ImageObject",

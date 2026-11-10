@@ -22,6 +22,7 @@ canonical: https://www.testmuai.com/support/docs/agent-assurance-overview/
 ---
 import VerifiedTag from '@site/src/component/verifiedTag';
 import { BRAND_URL } from '@site/src/component/BrandName';
+import ThemedImage from '@theme/ThemedImage';
 
 
 <script type="application/ld+json"
@@ -101,13 +102,15 @@ import { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-22"
+    "dateModified": "2026-10-13"
   }) }}
 />
 
 # What is TestMu AI Agent Assurance
 
-TestMu AI Agent Assurance helps teams gather evidence about whether an AI agent they own is ready to ship. It is white-box testing for agents that *act*: they call tools, write files, hit APIs, and change external state.
+<ThemedImage sources={{light: require('../assets/images/rook/rook-mascot-light.gif').default, dark: require('../assets/images/rook/rook-mascot-dark.gif').default}} alt="Rook, the chess-piece mascot" width="160" height="160" className="no-zoom" style={{float: 'right', margin: '0 0 1rem 1.5rem'}} />
+
+TestMu AI Agent Assurance helps teams gather evidence about whether an AI agent they own is ready to ship. It brings End-to-End (E2E) testing to agents that *act*—white-box testing that follows them as they call tools, write files, hit APIs, and change external state.
 
 Agent Assurance does not grade the agent on what it says it did. An agent's own reply is the weakest available signal, because an agent can produce a confident, well-written summary of work it never completed. Agent Assurance goes inside the system and verifies the actual effects: the recorded tool calls, the command output and exit status, the files that changed, the artifacts that were produced, and read-only checks against the target's real state. How much it can observe depends on the access and the profile you give it; where no stronger evidence is available, a criterion is reported as **Unable to Verify** rather than passed on the agent's word.
 
@@ -121,11 +124,15 @@ Agent Assurance uses the <code>rook</code> CLI for authoring and execution, with
 
 You install only the <code>rook</code> CLI. You do not need the source repository, a dedicated development environment, Docker, or your own model API key.
 
-:::caution Pre-alpha
-Commands and stored file formats can change. Test against a disposable or staging target and review the target and write warning before every run.
+:::caution Before your first run
+Commands and stored file formats can still change between releases. Test against a disposable or staging target and review the target and write warning before every run.
 :::
 
-<img loading="lazy" src={require('../assets/images/rook/rook-terminal-home.png').default} alt="Rook terminal home showing the Agent Assurance workflow" width="1111" height="911" className="doc_img"/>
+Launch `rook` from your agent workspace to open the interactive terminal UI (TUI). Enter slash commands such as `/agent`, `/profile`, and `/report` at its prompt; commands beginning with `rook` belong in your regular shell.
+
+<img loading="lazy" src={require('../assets/images/rook/guides/rook-tui-get-started.png').default} alt="Rook 0.1.11 interactive startup with the pixel rook mascot and ROOK banner, the Explore, Generate, Run, and Report journey, Get Started commands, and the project chooser after sign-in" width="2200" height="1287" className="doc_img"/>
+
+This TUI capture shows a signed-in session in a new workspace, before an agent has been explored. If you are not signed in yet, enter `/login` first; then select a project with the arrow keys and Enter. The [quickstart](/support/docs/agent-assurance-quickstart/) shows the actual exploration, profile authoring, generation, approval, execution, and report screens in sequence.
 
 ## Agent Assurance and Agent Testing {#conversation-testing-and-autonomous-testing}
 
@@ -220,7 +227,7 @@ Always read coverage together with pass rate. A high pass rate with low verifica
 
 Rook can collect text, JSON, local files, and downloadable links. This supports agents that produce PDFs, images, CSV files, Markdown, reports, or archives.
 
-Current pre-alpha limits include:
+Current limits include:
 
 - Text and URL inputs can be passed in the scenario goal. Native file, image, and pull-request attachment delivery is not yet implemented.
 - Rook can record image dimensions and file evidence, but it cannot judge image pixels. Visual correctness may be **Unable to Verify**.
@@ -548,15 +555,15 @@ The [combined UI walkthrough](/support/docs/rook-web-ui/#choose-your-ui) shows b
 
 ### Local UI: Start With Your Workspace {#local-ui-example}
 
-The local landing page lists agents from the selected project on this machine. Click an agent to review its definitions and results. This populated triage workspace has five features, two scenarios, and one run; a new workspace starts without these records.
+The local landing page lists agents from the selected project on this machine. Click an agent to review its definitions and results. This saved CommerceCare demo has nine features, twelve scenarios, and three runs; a new workspace starts without these records. See the [local UI rollout note](/support/docs/rook-web-ui/#earlier-local-ui) if your public CLI still has the earlier viewer.
 
-<img loading="lazy" src={require('../assets/images/rook/rook-local-agents.png').default} alt="Local Rook landing page listing the triage-service agent and its feature, scenario, and run counts" width="1440" height="400" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/rook-local-agents.png').default} alt="Local Rook Agents page listing CommerceCare and its feature, scenario, and run counts" width="1440" height="900" className="doc_img"/>
 
 ### Hosted Web UI: Start With Your Team's Project {#hosted-ui-example}
 
-The hosted landing page starts with shared **Projects**. Open a project, then an agent, to reach Summary, Versions, Features, Scenarios, Runs, and Insights. The screenshot shows the documentation test project, not a project created automatically at installation.
+The hosted landing page starts with shared **Projects**. Open a project, then an agent, to reach Summary, Versions, Profiles, Features, Scenarios, and Runs. Insights is not currently available. The screenshot shows the documentation test project, not a project created automatically at installation.
 
-<img loading="lazy" src={require('../assets/images/rook/rook-web-projects.png').default} alt="Hosted Projects page showing the documentation test project's agent and run counts" width="1440" height="224" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/rook-web-projects.png').default} alt="Hosted project entry showing the documentation test project's agent and run counts" width="1158" height="75" className="doc_img"/>
 
 ## Next Steps
 

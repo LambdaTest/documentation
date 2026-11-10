@@ -8,7 +8,7 @@ TestMu AI Docker Tunnel Extension allows you to perform cross browser testing of
 
 1. [Install the Docker Desktop](https://www.docker.com/products/docker-desktop) based on your operating system.
 
-2. A TestMu AI account. Don't have an account, sign up on LambdaTest.
+2. A TestMu AI account. Don't have an account, sign up on TestMu AI.
 
 ## Setting up the TestMu AI Docker Tunnel Extension
 

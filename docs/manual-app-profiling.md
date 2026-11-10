@@ -114,6 +114,10 @@ You can enable App Profiling from the App Live session toolbar before starting y
 
 :::note Beta Feature
 Manual App Profiling is currently in **Beta**. To use this feature, get it enabled for your organization by reaching out to our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24x7 Chat Support**</span> or mailing us at [support@testmuai.com](mailto:support@testmuai.com).
+The disk read and disk write metrics in Advanced App Profiling are being rolled out gradually. Once Advanced App Profiling is enabled for your organization, contact support to enable these metrics.
+
+- **iOS:** Disk read and disk write metrics are available by default.
+- **Android:** Your app must be debuggable (`debuggable="true"`) to enable these metrics.
 :::
 
 ## Getting Started

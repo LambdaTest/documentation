@@ -13,35 +13,51 @@ The Upload and Download Files feature allows you to manage files directly within
 
 ## Steps to Upload or Download the Files
 
-**Step 1 :** Log in to the [Web Browser Testing](https://www.testmuai.com/login/?redirectTo=https://app.lambdatest.com/console/realtime/browser/desktop) dashboard.
+**Step 1 :** Log in to the [Web Browser Testing](https://app.lambdatest.com/console/realtime/browser/desktop) dashboard from the **Real Time → Web Browser Testing** section.
 
 **Step 2 :** Select your required OS and relevant browser, and device from the listing to launch your test session.
 
 **Step 3 :** Click on Files and Media from the toolbar.
 
-**Step 4 :** Click **Uploads / Downloads** button Upload or Downlaod the file.
+**Step 4 :** Click **Uploads / Downloads** button to upload or download the file.
 
-**Step 1 :** Log in to the [Virtual Mobile](https://www.testmuai.com/login/?redirectTo=https://app.lambdatest.com/console/realtime/browser/mobile) dashboard from the **Web Browser Testing** section.
+**Step 1 :** Log in to the [Virtual Mobile](https://app.lambdatest.com/console/realtime/browser/mobile) dashboard from the **Real Time → Web Browser Testing** section.
 
 **Step 2 :** Select your required OS and relevant browser, and device from the listing to launch your test session.
 
 **Step 3 :** Click on Files and Media from the toolbar.
 
-**Step 4 :** Click **Uploads / Downloads** button Upload or Downlaod the file.
+**Step 4 :** Click **Uploads / Downloads** button to upload or download the file.
 
-**Step 1 :** Log in to the [Virtual Mobile](https://www.testmuai.com/login/?redirectTo=https://app.lambdatest.com/console/realtime/app) dashboard from the **App Testing** section.
+**Step 1 :** Log in to the [Virtual Mobile](https://app.lambdatest.com/console/realtime/app) dashboard from the **Real Time → App Testing** section.
 
 **Step 2 :** Select your OS and the required device, upload your app and then launch your test session.
 
 **Step 3 :** Click on Files and Media from the toolbar.
 
-**Step 4 :** Click **Uploads / Downloads** button Upload or Downlaod the file.
+**Step 4 :** Click **Uploads / Downloads** button to upload or download the file.
+
+**Step 1 :** Log in to the [Virtual Mobile](https://app.lambdatest.com/console/realtime/browser/mobile) dashboard from the **Real Time → Web Browser Testing** section.
+
+**Step 2 :** Select your required ChromeOS and relevant browser, and device from the listing to launch your test session.
+
+**Step 3 :** Click on Files and Media from the toolbar.
+
+**Step 4 :** Click **Uploads / Downloads** button to upload or download the file.
+
+**Step 1 :** Log in to the [Virtual Mobile](https://app.lambdatest.com/console/realtime/app) dashboard from the **Real Time → App Testing** section.
+
+**Step 2 :** Select your ChromeOS and the required device, upload your app and then launch your test session.
+
+**Step 3 :** Click on Files and Media from the toolbar.
+
+**Step 4 :** Click **Uploads / Downloads** button to upload or download the file.
 
 ## Supported Platform Compatibility
 
 - **Supported Versions :** Android 7 and above.
 
-#### File Upload Path
+### File Upload Path
 - **Android 10 and above :** Uploaded files will be accessible through the file picker in the "Downloads" folder.
 - **Below Android 10 :** Files will be uploaded to the "Downloads" folder due to the absence of a "Documents" folder.
 
@@ -49,7 +65,7 @@ The Upload and Download Files feature allows you to manage files directly within
 - **Upcoming Support :** iOS 18 support is planned for a future release.
 - **Upload Location :** Files can be accessed from the "Downloads" section in the Files app.
 
-#### Browser-Specific Download Locations:
+### Browser-Specific Download Locations:
 - **Firefox :** Files are saved in the "Firefox" folder.
 - **Chromium Browsers (e.g., Chrome, Edge) :** Files are stored in the "Chromium" folder.
 - **Safari :** Files are downloaded to the "Downloads" folder.

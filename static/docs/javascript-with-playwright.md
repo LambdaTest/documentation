@@ -1,14 +1,16 @@
-# JavaScript and TypeScript with Playwright
+# How to Run Playwright Tests With JavaScript on TestMu AI
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-Run Playwright tests written in plain JavaScript, with Jest, or in TypeScript across real browsers and operating systems on the TestMu AI cloud platform. The connection to the grid is the same whichever you use: you connect Playwright over a CDP WebSocket. This guide covers the shared steps once, then gives you the setup for each in the tabs below.
+Run your Playwright tests on the TestMu AI cloud grid to reach 50+ real desktop browsers and operating systems without maintaining local infrastructure. The connection is identical whichever framework you use: connect Playwright over a CDP WebSocket and pass a capabilities object, then pick your framework below.
 
 ## Prerequisites
 
-1. A TestMu AI **Username** and **Access Key**. Get them from your TestMu AI Profile. Don't have an account? Sign up for free.
+Before running any framework below, you need a TestMu AI account, your credentials, Node.js and npm, and the Playwright sample repository.
+
+1. A TestMu AI **Username** and **Access Key**. Get them from your TestMu AI Profile section. Don't have an account? Sign up for free.
 2. [Node.js](https://nodejs.org/en/) and npm installed.
-3. Clone the sample repository (each option lives in its own subdirectory):
+3. Clone the sample repository. Each framework option lives in its own subdirectory:
 
 **Sample repo**
  View on GitHub
@@ -18,9 +20,11 @@ git clone https://github.com/LambdaTest/playwright-sample.git
 cd playwright-sample
 ```
 
-## Set your credentials
+You can find your Username and Access Key on the TestMu AI Automation Dashboard by clicking the **Access Key** button at the top-right.
 
-Set your Username and Access Key as environment variables. Pick your operating system:
+## Set Your Credentials
+
+Every framework authenticates the same way: your Username and Access Key are read from environment variables. Set them once. Pick your operating system:
 
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
 export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
@@ -28,17 +32,23 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
   {`set LT_USERNAME=${ YOUR_LAMBDATEST_USERNAME()}
 set LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
 
-## How the test connects
+## How the Sample Test Works
 
-Each option builds a `capabilities` object (browser, version, platform, and your `LT:Options`) and connects Playwright to the grid at `wss://cdp.lambdatest.com/playwright`:
+Every framework below builds a `capabilities` object (browser, version, platform, and your `LT:Options`) and connects Playwright to the grid at `wss://cdp.lambdatest.com/playwright`:
 
 ```js
 wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(JSON.stringify(capabilities))}`
 ```
 
-What changes between them is only the setup file that holds this connection. Pick yours below.
+What changes between them is only the setup file that holds this connection: a Playwright test fixture, a runner config, or a Cucumber.js world. That is what each tab covers.
 
-## Set Up and Run Your Tests
+Use the [Capabilities Generator](https://www.testmuai.com/capabilities-generator/) to build a capabilities block for any [supported browser, version, and OS combination](/support/docs/playwright-bundled-browser-support/).
+
+## Run a Test with Playwright Using JavaScript
+
+By default this page uses Playwright's own test runner (`@playwright/test`). Move into the matching subdirectory of the cloned repo, edit the setup file that holds the grid connection, install dependencies, then run. Prefer Jest or Cucumber.js? See [Run a Test with Jest or Cucumber.js](#run-a-test-with-jest-or-cucumberjs).
+
+The JavaScript path connects to the grid through a Playwright Test fixture in `lambdatest-setup.js`, which patches the capabilities per project and reports test status.
 
 1. Go to the sample directory and install dependencies:
 
@@ -131,6 +141,12 @@ exports.test = base.test.extend({
 npm run test
 ```
 
+## Run a Test with Jest or Cucumber.js
+
+Prefer Jest or Cucumber.js as your test runner? Pick your framework below.
+
+Jest connects through `jest-playwright.config.js`, which defines a `connectOptions` endpoint per browser (Chromium, Firefox, WebKit), each with its own capabilities.
+
 1. Go to the sample directory and install dependencies:
 
 ```bash
@@ -138,7 +154,7 @@ cd playwright-jest-js
 npm install
 ```
 
-2. `jest-playwright.config.js` defines a `connectOptions` endpoint per browser (Chromium, Firefox, WebKit), each with its own capabilities:
+2. Open `jest-playwright.config.js` in the `playwright-jest-js` directory and provide your TestMu AI Username and Access Key. Each browser gets its own capabilities and `wsEndpoint`:
 
 ```js title="jest-playwright.config.js"
 const cp = require('child_process');
@@ -164,7 +180,7 @@ const caps_chromium = {
 };
 
 const caps_firefox = {
-  'browserName': 'pw-firefox',
+  'browserName': 'pw-firefox', // Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`
   'browserVersion': 'latest',
   'LT:Options': {
     'platform': 'Windows 10',
@@ -175,14 +191,14 @@ const caps_firefox = {
     'network': true,
     'video': true,
     'console': true,
-    'tunnel': false,
-    'tunnelName': '',
-    'geoLocation': '',
+    'tunnel': false, // Add tunnel configuration if testing locally hosted webpage
+    'tunnelName': '', // Optional
+    'geoLocation': '', // country code can be fetched from https://www.lambdatest.com/capabilities-generator/
   }
 };
 
 const caps_webkit = {
-  'browserName': 'pw-webkit',
+  'browserName': 'pw-webkit', // Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`
   'browserVersion': 'latest',
   'LT:Options': {
     'platform': 'Windows 10',
@@ -193,9 +209,9 @@ const caps_webkit = {
     'network': true,
     'video': true,
     'console': true,
-    'tunnel': false,
-    'tunnelName': '',
-    'geoLocation': '',
+    'tunnel': false, // Add tunnel configuration if testing locally hosted webpage
+    'tunnelName': '', // Optional
+    'geoLocation': '', // country code can be fetched from https://www.lambdatest.com/capabilities-generator/
   }
 };
 
@@ -221,104 +237,60 @@ module.exports = {
 npm run test
 ```
 
-1. Go to the sample directory and install dependencies:
+Cucumber.js runs BDD scenarios written in Gherkin. The grid connection lives in a `setup.js` file, where a Cucumber `Before` hook builds the capabilities object and connects Playwright to the grid.
+
+1. Move into the Cucumber.js sample directory inside the cloned repo and install dependencies:
 
 ```bash
-cd playwright-test-ts
+cd playwright-cucumber-js
 npm install
 ```
 
-2. The grid connection lives in `lambdatest-setup.ts` (the TypeScript version of the fixture):
+2. In your `setup.js` file, specify your TestMu AI Username and Access Key, then add the `browserName`, `browserVersion`, and `platform`:
 
-```ts title="lambdatest-setup.ts"
-/**
- * Add the file in your test suite to run tests on LambdaTest.
- * Import `test` object from this file in the tests.
- */
+```js title="setup.js"
+const { setWorldConstructor, World, Before, After} = require("@cucumber/cucumber");
+const { chromium } = require('playwright')
 
-import * as base from "@playwright/test";
-import path from "path";
-import { chromium } from "playwright";
+class CustomWorld extends World{
+  async setTestStatus(status, remark) {
+    await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: 'setTestStatus', arguments: { status, remark } })}`)
+  }
+}
 
-// LambdaTest capabilities
-const capabilities = {
-  browserName: "Chrome", // Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`
-  browserVersion: "latest",
-  "LT:Options": {
-    platform: "Windows 10",
-    build: "Playwright TypeScript Build",
-    name: "Playwright TypeScript Test",
-    user: process.env.LT_USERNAME,
-    accessKey: process.env.LT_ACCESS_KEY,
-    network: true,
-    video: true,
-    console: true,
-    tunnel: false, // Add tunnel configuration if testing locally hosted webpage
-    tunnelName: "", // Optional
-    geoLocation: '', // country code can be fetched from https://www.lambdatest.com/capabilities-generator/
-  },
-};
-
-// Patching the capabilities dynamically according to the project name.
-const modifyCapabilities = (configName, testName) => {
-  let config = configName.split("@lambdatest")[0];
-  let [browserName, browserVersion, platform] = config.split(":");
-  capabilities.browserName = browserName
-    ? browserName
-    : capabilities.browserName;
-  capabilities.browserVersion = browserVersion
-    ? browserVersion
-    : capabilities.browserVersion;
-  capabilities["LT:Options"]["platform"] = platform
-    ? platform
-    : capabilities["LT:Options"]["platform"];
-  capabilities["LT:Options"]["name"] = testName;
-};
-
-const getErrorMessage = (obj, keys) =>
-  keys.reduce(
-    (obj, key) => (typeof obj == "object" ? obj[key] : undefined),
-    obj
-  );
-
-const test = base.test.extend({
-  page: async ({ page, playwright }, use, testInfo) => {
-    // Configure LambdaTest platform for cross-browser testing
-    let fileName = testInfo.file.split(path.sep).pop();
-    if (testInfo.project.name.match(/lambdatest/)) {
-      modifyCapabilities(
-        testInfo.project.name,
-        `${testInfo.title} - ${fileName}`
-      );
-
-      const browser = await chromium.connect({
-        wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(
-          JSON.stringify(capabilities)
-        )}`,
-      });
-
-      const ltPage = await browser.newPage(testInfo.project.use);
-      await use(ltPage);
-
-      const testStatus = {
-        action: "setTestStatus",
-        arguments: {
-          status: testInfo.status,
-          remark: getErrorMessage(testInfo, ["error", "message"]),
-        },
-      };
-      await ltPage.evaluate(() => {},
-      `lambdatest_action: ${JSON.stringify(testStatus)}`);
-      await ltPage.close();
-      await browser.close();
-    } else {
-      // Run tests in local in case of local config provided
-      await use(page);
+Before(async (scenario) => {
+  const capabilities = {
+    'browserName': 'Chrome', // Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`
+    'browserVersion': 'latest',
+    'LT:Options': {
+      'platform': 'Windows 10',
+      'build': 'Playwright Sample Build with Cucumber Runner',
+      'name': scenario.pickle.name,
+      'user': process.env.LT_USERNAME,
+      'accessKey': process.env.LT_ACCESS_KEY,
+      'network': true,
+      'video': true,
+      'console': true,
+      'tunnel': false, // Add tunnel configuration if testing locally hosted webpage
+      'tunnelName': '' // Optional
     }
-  },
-});
+  }
 
-export default test;
+  // Create page and browser globals to be used in the scenarios
+  global.browser = await chromium.connect({
+    wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(JSON.stringify(capabilities))}`
+  })
+
+  const context = await global.browser.newContext();
+
+  global.page = await context.newPage();
+})
+
+After(async () => {
+  await global.browser.close()
+})
+
+setWorldConstructor(CustomWorld);
 ```
 
 3. Run the test:
@@ -327,6 +299,84 @@ export default test;
 npm run test
 ```
 
-## View your test results
+Visit the TestMu AI Automation Dashboard to view the results of your executed test with the Cucumber.js test runner.
 
-Go to the [TestMu AI Web Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build) to see your Playwright test results.
+**Migrating an Existing Cucumber.js Suite to TestMu AI**
+
+If you already have a Cucumber.js suite running locally, wire it to the grid with these steps.
+
+1. In your `setup.js` file, add `Before` and `After` code blocks for setting up and closing the remote browsers:
+
+```js title="setup.js"
+Before(async (scenario) => {
+  const capabilities = {
+    'browserName': 'Chrome', // Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`
+    'browserVersion': 'latest',
+    'LT:Options': {
+      'platform': 'Windows 10',
+      'build': 'Playwright Sample Build with Cucumber Runner',
+      'name': scenario.pickle.name,
+      'user': process.env.LT_USERNAME,
+      'accessKey': process.env.LT_ACCESS_KEY,
+      'network': true,
+      'video': true,
+      'console': true,
+      'tunnel': false, // Add tunnel configuration if testing locally hosted webpage
+      'tunnelName': '' // Optional
+    }
+  }
+
+  // Create page and browser globals to be used in the scenarios
+  global.browser = await chromium.connect({
+    wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(JSON.stringify(capabilities))}`
+  })
+
+  const context = await global.browser.newContext();
+
+  global.page = await context.newPage();
+})
+
+After(async () => {
+  await global.browser.close()
+})
+
+setWorldConstructor(CustomWorld);
+```
+
+2. In the `CustomWorld` class, create a `setTestStatus` function that marks your test passed or failed on the TestMu AI platform:
+
+```js title="setup.js"
+class CustomWorld extends World{
+  async setTestStatus(status, remark) {
+    await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: 'setTestStatus', arguments: { status, remark } })}`)
+  }
+}
+```
+
+3. After any assertions in your script, mark the test status as passed as shown below:
+
+```js
+try {
+    assert.equal(title,
+        "How to use HyperExecute for scalable and reliable web automation testing | TestMu AI",
+        "Page title does not match");
+
+    await this.setTestStatus("passed", "Title matched");
+  } catch (e) {
+    await this.setTestStatus("failed", e);
+    throw(e);
+  }
+```
+
+4. Run your test.
+
+## View Your Results
+
+Go to the [TestMu AI Web Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build) to see your Playwright test results, including video, network logs, and command-by-command execution.
+
+## Related Playwright Guides
+
+Continue with these related guides:
+
+- [How to build a capabilities block with the Capabilities Generator](https://www.testmuai.com/capabilities-generator/)
+- [How to sign up for a free TestMu AI account](https://www.testmuai.com/register/)

@@ -1,8 +1,8 @@
 ---
 id: accessibility-android-rule-unique-option-names
-title: Unique Option Names
+title: Unique Option Names (Android)
 sidebar_label: Unique Option Names
-description: Rule-level Accessibility guidance for Unique Option Names on Android.
+description: "Find options in an Android selection group, like radio buttons or tabs, that share an accessible name so TalkBack users can tell them apart."
 slug: accessibility-android-rule-unique-option-names/
 ---
 import { BRAND_URL } from '@site/src/component/BrandName';
@@ -43,7 +43,7 @@ import { BRAND_URL } from '@site/src/component/BrandName';
       "@id": "https://www.testmuai.com/support/docs/accessibility-android-rule-unique-option-names/"
     },
     "headline": "Unique Option Names",
-    "description": "Rule-level Accessibility guidance for Unique Option Names on Android.",
+    "description": "Find options in an Android selection group, like radio buttons or tabs, that share an accessible name so TalkBack users can tell them apart.",
     "url": "https://www.testmuai.com/support/docs/accessibility-android-rule-unique-option-names/",
     "image": {
       "@type": "ImageObject",

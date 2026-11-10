@@ -158,7 +158,7 @@ import NewTag from '../src/component/newTag';
   ]) }}
 />
 
-Bar and Line chart widgets in LambdaTest Insights enable you to visualize test data trends, comparisons, and patterns. Bar charts are ideal for comparing values across categories, while line charts excel at showing trends and changes over time.
+Bar and Line chart widgets in TestMu AI Insights enable you to visualize test data trends, comparisons, and patterns. Bar charts are ideal for comparing values across categories, while line charts excel at showing trends and changes over time.
 
 ## What are Bar and Line Chart Widgets?
 

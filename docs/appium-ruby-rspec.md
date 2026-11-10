@@ -2,7 +2,7 @@
 id: appium-ruby-rspec
 title:  Appium with Rspec
 sidebar_label: Rspec
-description: Now you can run your Appium automation scripts using Rspec on TestMu AI Real Device Cloud Platform of 3000+ real mobile devices.
+description: Now you can run your Appium automation scripts using Rspec on TestMu AI Real Device Cloud Platform of 50,000+ real mobile devices.
 keywords:
   - appium
   - Rspec
@@ -65,7 +65,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       "@id": "https://www.testmuai.com/support/docs/appium-ruby-rspec/"
     },
     "headline": "Appium with Rspec",
-    "description": "Now you can run your Appium automation scripts using Rspec on TestMu AI Real Device Cloud Platform of 3000+ real mobile devices.",
+    "description": "Now you can run your Appium automation scripts using Rspec on TestMu AI Real Device Cloud Platform of 50,000+ real mobile devices.",
     "url": "https://www.testmuai.com/support/docs/appium-ruby-rspec/",
     "image": {
       "@type": "ImageObject",
@@ -184,7 +184,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       "@context": "https://schema.org",
       "@type": "HowTo",
       "name": "Try our Sample Repository",
-      "description": "Now you can run your Appium automation scripts using Rspec on TestMu AI Real Device Cloud Platform of 3000+ real mobile devices.",
+      "description": "Now you can run your Appium automation scripts using Rspec on TestMu AI Real Device Cloud Platform of 50,000+ real mobile devices.",
       "step": [
         {
           "@type": "HowToStep",

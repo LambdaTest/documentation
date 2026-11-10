@@ -89,15 +89,18 @@ Access additional functions for your build:
    Browse older builds with complete stats for quick comparison.
 
 2. **Edit Scan Config**
-   Modify scan settings such as **schedule** and **viewports**.
+   Open the scan in a full-page editor and change its name, browsers, viewports, URLs, advanced configurations and schedule. See [Edit and Clone Scans](/support/docs/web-scanner-edit-clone-scans/#edit-a-scan).
 
-3. **Run Scan Now**
+3. **Clone Scan**
+   Create a copy of the scan with the same URLs, settings and schedule. See [Edit and Clone Scans](/support/docs/web-scanner-edit-clone-scans/#clone-a-scan).
+
+4. **Run Scan Now**
    Run a new scan on demand and create a new build for comparison.
 
-4. **Delete Scan**
+5. **Delete Scan**
    Remove a scan from the dashboard.
 
-5. **Stop Recurring Scan**
+6. **Stop Recurring Scan**
    Halt any scheduled recurring scans instantly.
 
 **Access your SmartUI Dashboard**:

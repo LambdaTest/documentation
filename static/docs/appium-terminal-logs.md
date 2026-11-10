@@ -2,7 +2,7 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-TestMu AI lets you attach **your own terminal logs** (Appium server logs, test-runner output, or CI logs) to any app automation session through a single REST API. Once uploaded, you can view or download them directly from the TestMu AI Automation dashboard under **Logs › Terminal**.
+TestMu AI lets you attach your terminal logs (Appium server output, test-runner, or CI logs) to any app automation session through a single REST API, then view or download them from the dashboard under Logs › Terminal beside native logs.
 
 This keeps your own diagnostic logs next to the session they belong to, so you can correlate them with the session's native logs (Appium, device, network, crash) in one place, without jumping between your CI system, local files, and the dashboard.
 

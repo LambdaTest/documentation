@@ -105,7 +105,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 You can leverage these environment variables to define your proxy settings. If these proxy environment variables are set then the tunnel will automatically detect them. You can switch command-line flags through an environment variable or <b>.lt.yaml</b>==$0 file with the <BrandName /> tunnel.
 To configure the <b>.lt.yaml</b>, you can refer to the section [Leverage .lt.yaml file](/docs/advanced-tunnel-features/#leverage-ltyaml-file) of the documentation [Advanced <BrandName /> Tunnel Features](/docs/advanced-tunnel-features/).
 
-### What are Environment Variables?
+## What are Environment Variables?
 
 ---
 

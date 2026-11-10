@@ -102,11 +102,11 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 />
 
 
-### Introduction to Groups Insights
+## Introduction to Groups Insights
 
 <BrandName /> Analytics Modules provide comprehensive insights into your test groups, helping you understand the performance of your test groups and the distribution of your test cases across different groups. This helps you identify the test groups that are performing well and the ones that need improvement. You can also track the execution time of your test groups and the number of test cases executed in each group.
 
-### Usage by Groups
+## Usage by Groups
 
 <img loading="lazy" src={require('../assets/images/analytics/atx-usage-by-groups.webp').default} alt="cmd" width="800" height="400" className="doc_img"/>
 

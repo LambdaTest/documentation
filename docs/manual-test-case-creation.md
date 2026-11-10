@@ -1,7 +1,7 @@
 ---
 id: manual-test-case-creation
 title: Create & Manage Test Cases
-sidebar_label: Create & Manage Test Cases
+sidebar_label: Create Test Cases Manually
 description: Learn efficient manual test case creation with TestMu AI's Test Manager, streamlining testing processes and enhancing test execution.
 keywords:
   - test case creation
@@ -94,7 +94,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-24T12:00:00+05:30"
+    "dateModified": "2026-10-14T12:00:00+05:30"
   }) }}
 />
 
@@ -124,6 +124,93 @@ After test case is created you will be redirected to a screen listing all the te
  By default test cases having no parent folder are stored under **Untitled** folder. 
 :::
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/manual_test_case_creation/new_test_case.png').default} alt=" " className="doc_img"/>
+
+***
+
+## Filter Test Cases
+
+Search by test case ID or title, and use the filters beside the search bar to narrow the list:
+
+- **Status** and **Tags**.
+- Under **More**: **Automation Status**, **Created At**, **Created By**, **Requirement**, **Defects**, **Priority**, **Type**, **PR Status**, and the custom fields linked to the project.
+
+Filters apply to the folder you are viewing, together with any search text. The **Archived** view and the **Shared Incoming** view offer the same filters, and Shared Incoming adds a **Project** filter for the source project.
+
+#### Filter by Requirement or Defects
+
+The **Requirement** and **Defects** filters separate what a test case validates from what testing found. Each one can show test cases by status, by tracker, or by specific issue keys:
+
+| Filter | Status options | What it checks |
+|---|---|---|
+| **Requirement** | **Link status**: Any, Linked, or Not linked | Issues linked on the test case |
+| **Defects** | **Defect status**: Any, Has defects, or No defects | Issues raised or linked on the test case's instances and steps |
+
+To narrow either filter further, use **Tracker** to pick one of the trackers with linked issues in the project, or search for and select specific issue keys. A test case that has only defects counts as **Not linked**.
+
+To find test cases with no requirement:
+
+1. Open **More** and select **Requirement**.
+2. Set **Link status** to **Not linked**, and click **Apply**.
+
+<img loading="lazy" src={require('../assets/images/test-manager/filters/requirement-filter-not-linked.png').default} alt="Requirement filter with Link status set to Not linked" className="doc_img"/>
+
+The list shows the matching test cases and how many they are out of the total.
+
+<img loading="lazy" src={require('../assets/images/test-manager/filters/requirement-filter-results.png').default} alt="Test case list filtered to test cases with no linked requirement, with the matching count" className="doc_img"/>
+
+:::info
+Requirements and defects are currently in slow rollout. To get early access, raise a request to our support team. Until they are enabled for your organization, you see a single **Issues** filter.
+:::
+
+#### Include or Exclude Values
+
+Each filter that lists values has two modes, which you switch next to the filter's search box:
+
+- **Equals** (default): shows test cases that have any of the selected values.
+- **Not Equals**: hides test cases that have any of the selected values.
+
+To exclude values:
+
+1. Open a filter, for example **Tags**.
+2. Select **Not Equals** next to the filter's search box.
+3. Select the values to leave out.
+
+<img loading="lazy" src={require('../assets/images/test-manager/filters/tags-filter-dropdown.png').default} alt="Tags filter set to Not Equals on the Test Cases list" className="doc_img"/>
+
+Switching between **Equals** and **Not Equals** keeps the values you selected. Selecting **Not Equals** without choosing any value does not change the list.
+
+#### Test Cases With No Value Are Kept
+
+**Not Equals** hides only the test cases that hold a selected value. Test cases with no value for that field stay in the list.
+
+For example, say a custom field **Layer** has the values API, UI, and E2E, and older test cases were never given a layer. Excluding API and UI shows the E2E test cases **and** the test cases with no layer. Selecting E2E under **Equals** would show only the E2E test cases.
+
+Fields that every test case has, such as **Status**, are never empty. Excluding every value of such a field leaves no test cases.
+
+#### Fields With Multiple Values
+
+**Tags** and multi select custom fields can hold several values on one test case. Under **Not Equals**, a test case is hidden if it has **any** of the excluded values. Excluding the tag `iOS` hides a test case tagged `iOS` and `Android`, and keeps a test case tagged only `Android` as well as test cases with no tags.
+
+#### Combining Filters
+
+- Within one filter, **Equals** matches test cases that have any of the selected values, and **Not Equals** hides test cases that have any of them.
+- Across filters, a test case has to match every filter. Each filter can be in its own mode, for example **Priority** Equals High together with **Tags** Not Equals `flaky`.
+- The folder you are viewing and the search text narrow the result further.
+
+#### Fields That Support Not Equals
+
+| Supports Not Equals | Does not support Not Equals |
+|---|---|
+| Status, Tags, Automation Status, Created By, Requirement, Defects, Priority, Type, PR Status, Project (in Shared Incoming) | Created At, which filters by date range |
+| Custom fields of type **Dropdown (Single Select)**, **Dropdown (Multi Select)**, and **User** | Custom fields of type **String**, **Textarea**, **Number**, **URL**, **Date**, and **Boolean (Checkbox)** |
+
+#### Share a Filtered View
+
+Your filters, including the **Not Equals** mode, are saved in the page URL. Reload the page, bookmark it, or share the link, and the same filtered list opens. Select **Clear current filters and sorting** to reset the list.
+
+#### Act on Filtered Test Cases
+
+When you select all test cases in a filtered list, bulk actions such as updating fields, moving, exporting, archiving, and deleting apply to exactly the test cases the filters show. Test cases hidden by a **Not Equals** filter are left untouched.
 
 ***
 
@@ -170,8 +257,10 @@ The Test Manager offers a comprehensive Steps section with a rich text editor an
 
 To know more about how to use Modules refer the [Modules doc](/support/docs/create-modules/).
 
+**5. Use Variables, Parameters, and Secrets:** Type `{{` in a step to insert a variable or secret, or `${` to insert a parameter. To learn more, see [Variables, Parameters, and Secrets in Manual Test Cases and Modules](/support/docs/test-manager-variables-parameters-secrets/).
+
 :::note
-In the Classic experience, modules that contain KaneAI instructions, such as variable steps, If-Else blocks, or While Loops, run only in KaneAI test cases. Selecting one in the **Add Module** dialog leaves **Add in step** disabled. See [Importing Modules into Test Cases](/support/docs/modules-in-manual-testcases/).
+In the Classic experience, modules that contain If-Else blocks or While Loops run only in KaneAI test cases. Selecting one in the **Add Module** dialog leaves **Add in step** disabled. Modules that use variables, parameters, or secrets can be added. See [Importing Modules into Test Cases](/support/docs/create-modules/).
 :::
 
 #### Add New Step:
@@ -199,6 +288,8 @@ To save the changes made in the Test Case click on the `Save Changes` button OR 
 
 A saved test case can be handed to **KaneAI** for automated authoring. Open the test case and click **Automate with KaneAI** in the **Automate** section of the test case detail. This opens a KaneAI session pre-filled with the test case's steps, where you author the automated test and then execute it.
 
+If the test case uses environment variables, choose the environment in the **Environment** field before you start testing. The environment cannot be changed once the session starts. See [Choose an Environment When Automating With KaneAI](/support/docs/test-manager-variables-parameters-secrets/#choose-an-environment-when-automating-with-kaneai).
+
 This works for both test case templates:
 
 | Template | What KaneAI receives |
@@ -209,6 +300,8 @@ This works for both test case templates:
 :::note
 The action requires KaneAI access, and the test case must have content — a test case with no steps or no scenarios cannot be automated.
 :::
+
+***
 
 ### Test Case Runs Section
 
@@ -231,7 +324,10 @@ The action requires KaneAI access, and the test case must have content — a tes
 
 ### Issues section
 
-This section lists the issues linked with the Test Case. You can link issues from Jira, Azure DevOps, and Linear. For more information, refer to [Link Jira Issues](/support/docs/link-jira-issues-with-test-manager/), [Link Azure DevOps Issues](/support/docs/link-ado-issues-with-test-manager/), or [Link Linear Issues](/support/docs/link-linear-issues-with-test-manager/).
+This section lists the issues associated with the Test Case, on two tabs:
+
+- **Requirements**: the Jira, Azure DevOps, and Linear issues linked on the test case, which describe what it validates. For more information, refer to [Link Jira Issues](/support/docs/link-jira-issues-with-test-manager/), [Link Azure DevOps Issues](/support/docs/link-ado-issues-with-test-manager/), or [Link Linear Issues](/support/docs/link-linear-issues-with-test-manager/).
+- **Defects**: the issues raised or linked on the test case's instances and steps during test runs. This list is read-only. For more information, refer to [Track Bugs and Issues in Test Runs](/support/docs/track-issues-in-test-runs/).
 
 ***
 

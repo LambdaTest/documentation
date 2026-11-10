@@ -107,56 +107,56 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     "dateModified": "2026-09-09T19:10:37+05:30"
   }) }}
 />
-SmartUI is a visual testing tool that helps in identifying visual regressions in web applications. It uses advanced image comparison techniques to detect differences between baseline images and those captured during subsequent test runs.
+SmartUI is a visual testing tool that helps in identifying visual regressions in web applications, plugging into your End-to-End (E2E) testing across Selenium, Cypress, and Playwright to catch visual changes automatically. It uses advanced image comparison techniques to detect differences between baseline images and those captured during subsequent test runs.
 
 You can perform following Visual Regression tests using SmartUI:
 
 <div className="support_main">  
       <a href="/support/docs/smartui-selenium-java-sdk/">
     <div className="support_inners">
-      <h3>SDK</h3>
+      <h2>SDK</h2>
       <p>Perform Visual UI Testing using CLI.</p>
     </div>
   </a>
   <a href="/support/docs/selenium-visual-regression/">
     <div className="support_inners">
-      <h3>Lambda Hooks</h3>
+      <h2>Lambda Hooks</h2>
       <p>Perform Visual UI Testing using Hooks.</p>
     </div>
   </a>
     <a href="/support/docs/smartui-cli-figma/">
     <div className="support_inners">
-      <h3>Figma Designs</h3>
+      <h2>Figma Designs</h2>
       <p>Perform Visual UI testing of Figma Designs using SmartUI</p>
     </div>
   </a>
     <a href="/support/docs/smartui-pdf-comparison/">
     <div className="support_inners">
-      <h3>PDFs</h3>
+      <h2>PDFs</h2>
       <p>Perform Visual UI testing of PDFs using SmartUI.</p>
     </div>
   </a>
   <a href="/support/docs/smartui-upload-api-v2/">
     <div className="support_inners">
-      <h3>Upload through API</h3>
+      <h2>Upload through API</h2>
       <p>Upload Screenshots through API for Visual UI Testing</p>
     </div>
   </a>
   <a href="/support/docs/smartui-cli-upload/">
     <div className="support_inners">
-      <h3>Upload through CLI</h3>
+      <h2>Upload through CLI</h2>
       <p>Upload Screenshots through CLI for Visual UI Testing</p>
     </div>
   </a>
   <a href="/support/docs/smart-ui-storybook/">
     <div className="support_inners">
-      <h3>Storybook</h3>
+      <h2>Storybook</h2>
       <p>Perform Visual UI Testing using Storybook on SmartUI.</p>
     </div>
   </a>
     <a href="/support/docs/smartui-git-branching-strategy/">
     <div className="support_inners">
-      <h3>Git Baseline Branching</h3>
+      <h2>Git Baseline Branching</h2>
       <p>Learn how to execute SmartUI CLI with Git Commits.</p>
     </div>
   </a>

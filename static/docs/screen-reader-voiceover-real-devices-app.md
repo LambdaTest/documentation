@@ -69,8 +69,8 @@ Below is a list of VoiceOver keyboard shortcuts, using `Control+Option` on macOS
 | Open the Item Chooser                                | Control+Option+I                                     | Ctrl+Alt+I                                           |
 | Change the label of the selected item                | Control+Option+Slash                                 | Ctrl+Alt+Slash                                       |
 | Swipe up or down                                     | Control+Option+Up Arrow / Control+Option+Down Arrow | Ctrl+Alt+Up Arrow / Ctrl+Alt+Down Arrow             |
-| Turn the rotor left or right                         | Control+Option+Command+Left Arrow / Right Arrow     | Ctrl+Alt+Command+Left Arrow / Right Arrow           |
-| Adjust the setting specified by the rotor            | Control+Option+Command+Up Arrow / Down Arrow        | Ctrl+Alt+Command+Up Arrow / Down Arrow              |
+| Turn the rotor left or right                         | Control+Option+Command+Left Arrow / Right Arrow     | Ctrl+Alt+Left Arrow / Right Arrow           |
+| Adjust the setting specified by the rotor            | Control+Option+Command+Up Arrow / Down Arrow        | Ctrl+Alt+Up Arrow / Down Arrow              |
 | Return to the previous screen                        | Option+Esc                                          | Windows+Esc+EscEsc                                  |
 
 By incorporating **VoiceOver** keyboard navigation into your accessibility testing workflow, you can identify usability barriers early, ensuring compliance with WCAG standards and delivering an **inclusive digital experience for all users**.

@@ -1,8 +1,8 @@
 ---
 id: accessibility-ios-rule-non-accessible-interaction
-title: Non-accessible Interaction
+title: Non-accessible Interaction (iOS)
 sidebar_label: Non-accessible Interaction
-description: Rule-level Accessibility guidance for Non-accessible Interaction on iOS.
+description: "Flag iOS interactions available to touch but unreachable via VoiceOver, Switch Control, or Voice Control, so every action is accessible."
 slug: accessibility-ios-rule-non-accessible-interaction/
 ---
 import { BRAND_URL } from '@site/src/component/BrandName';
@@ -43,7 +43,7 @@ import { BRAND_URL } from '@site/src/component/BrandName';
       "@id": "https://www.testmuai.com/support/docs/accessibility-ios-rule-non-accessible-interaction/"
     },
     "headline": "Non-accessible Interaction",
-    "description": "Rule-level Accessibility guidance for Non-accessible Interaction on iOS.",
+    "description": "Flag iOS interactions available to touch but unreachable via VoiceOver, Switch Control, or Voice Control, so every action is accessible.",
     "url": "https://www.testmuai.com/support/docs/accessibility-ios-rule-non-accessible-interaction/",
     "image": {
       "@type": "ImageObject",

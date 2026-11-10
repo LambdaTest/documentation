@@ -68,3 +68,23 @@ Most native apps include their own file controls, such as an upload or attach bu
 - These files are also available as attachments in the test summary page for easy reference and download.
 
 The file upload and download functionality in Kane AI enhances test automation by providing easy access to necessary files. By following these steps, testers can efficiently manage files during their test sessions.
+
+## Save a session download as a reusable File
+
+If the website downloads a file during Web Agent authoring, you can save that downloaded item as a global File. Open the session's **Download** panel, choose the downloaded file, and save it to **Files** with a unique alias. The saved File then appears in **KaneAI** > **Variables** > **Files** and can be used by other test cases. A session download is not added to the global Files list until you save it there.
+
+## Create and use global Files
+
+You can also create a global File from a local file before authoring a test:
+
+1. Open **KaneAI** > **Variables** > **Files** and click **New File**.
+2. Choose a local file, enter an alias, and click **Create File**.
+3. In a Web Agent instruction, reference it as `{{file.alias}}`, such as `Upload {{file.profile_image}} to the form`.
+
+An alias can contain 1–64 lowercase letters, digits, and underscores. The names `register` and `resolve` are reserved. The global alias syntax is separate from the session `FILE_` variable syntax in the upload flow above. A global File becomes linked to a test case after a step that uses it is saved.
+
+While authoring, you can type **/Upload file** to choose an existing File or upload a new one from your computer. Select the File in the picker, add it to the test, and run the upload step.
+
+Open **Variables & secrets** > **Files** in the session to see available Files and download a local copy. The global Files list also lets you download or replace a File. Replacing its content can change the file type, so review tests that use the alias afterward.
+
+A test run can save its CSV or XLSX output as a reusable File. See [Test Run Output](/support/docs/kaneai-test-run-output/) for that workflow.

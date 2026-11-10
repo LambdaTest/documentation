@@ -37,6 +37,7 @@ Every stage is a separate command, so you can stop, review, and resume at any po
 | Execute | [`kane-cli testmd run`](/support/docs/kane-cli-testmd/), `kane-cli testrun run` | Author and replay the designed tests; every run seals an evidence pack |
 | Measure | [`kane-cli cover`](/support/docs/kane-cli-assurance-coverage/) | Two axes: what a pack **proved** vs what the design still **owes** |
 | Maintain | [`kane-cli maintain`](/support/docs/kane-cli-assurance-maintain/) | Reconcile the suite when a source document changes |
+| Share | [`kane-cli context sync`](/support/docs/kane-cli-assurance-sharing/) | Share the store with your team through a location, a GitHub repository, an S3-compatible bucket, or a folder, with `kane-cli context push`, `kane-cli context pull` and `kane-cli context clone` |
 
 ## The vocabulary
 
@@ -65,9 +66,10 @@ If you have a PRD and care about coverage accounting, start with assurance. If y
 
 The assurance commands work over a local store in your project directory, created on first `ingest`:
 
-- It is **append-only**: nothing is ever deleted or rewritten. Edits create new versions; mistakes are reverted with compensation records. `kane-cli context explain` can replay the full history of any node.
-- It is **yours and local**: sources, use-cases, designs, and review verdicts live in your project, not on a server. The extract and design agents run against the KaneAI service using your login, but the store they commit to is on your disk.
-- **Keep `.context/` out of git merges.** The store is single-writer and not git-mergeable — two branches appending records will corrupt it on the next read. Gitignore it; share by re-ingesting sources.
+- It is **append-only** in everyday use: no command that writes to it deletes or rewrites a record. Edits create new versions, and mistakes are reverted with compensation records. `kane-cli context explain` can replay the full history of any node. The one exception is a sync rebase, which replaces your records after the last shared one with the location's and reapplies your own on top, and every replaced record is kept in a backup.
+- It is **yours and local**: sources, use-cases, designs, and review verdicts live in your project. The extract and design agents run against the KaneAI service using your login and send it what they need to read, but the store they commit to is on your disk, and the store itself goes elsewhere only when you publish it to a location your team shares.
+- **Never merge `.context/` with git.** The store is single-writer, and two branches appending records will corrupt it on the next read. Kane CLI adds `.context/` to your `.gitignore` when it creates the store inside a git repository, and `KANE_CONTEXT_GITIGNORE=0` keeps it out.
+- **Share it through a location**: bind the store to a GitHub repository, an S3-compatible bucket, or a folder on a shared drive, then `kane-cli context push` publishes your records, `kane-cli context pull` takes your teammates', and `kane-cli context clone` gives a new teammate a store of their own. Nothing on a location is ever overwritten or deleted, and when two people change the same thing the disagreement is a decision you answer, never a silent overwrite. See [Sharing the context graph with your team](/support/docs/kane-cli-assurance-sharing/).
 - `kane-cli context fsck` verifies the whole store; `kane-cli context rebuild` regenerates the read caches from the verified records.
 
 ## What costs credits

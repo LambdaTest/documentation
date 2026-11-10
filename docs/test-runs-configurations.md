@@ -3,7 +3,7 @@ id: test-runs-configurations
 title: 'Configurations in KaneAI & Test Manager'
 hide_title: false
 sidebar_label: Configurations
-description: Learn how to create, manage, and apply reusable environment configurations for your test runs in LambdaTest Test Manager.
+description: Learn how to create, manage, and apply reusable environment configurations for your test runs in TestMu AI Test Manager.
 keywords:
   - testmu ai automation
   - kaneai
@@ -56,7 +56,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       "@id": "https://www.testmuai.com/support/docs/test-runs-configurations/"
     },
     "headline": "Configurations in KaneAI & Test Manager",
-    "description": "Learn how to create, manage, and apply reusable environment configurations for your test runs in LambdaTest Test Manager.",
+    "description": "Learn how to create, manage, and apply reusable environment configurations for your test runs in TestMu AI Test Manager.",
     "url": "https://www.testmuai.com/support/docs/test-runs-configurations/",
     "image": {
       "@type": "ImageObject",
@@ -97,7 +97,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-09T19:16:50+05:30"
+    "dateModified": "2026-10-14T12:00:00+05:30"
   }) }}
 />
 
@@ -133,7 +133,7 @@ The central dashboard displays all your configurations with the following featur
 | Feature | Description |
 |---------|-------------|
 | **Search Bar** | Find configurations by name |
-| **Filters** | Filter by OS, Browser, or Resolution |
+| **Filters** | Filter by OS, Browser, or Resolution. Switch a filter to **Not Equals** to hide the configurations with the selected values, for example to hide every Windows configuration |
 | **Configuration Details** | View name, last updated date, OS, browser, version, and resolution |
 | **Usage Count** | See how many test runs use each configuration |
 | **Actions Menu** | Access Edit and Delete options via the ⋮ menu |
@@ -221,7 +221,7 @@ The following options are available only for KaneAI-generated test runs:
 **Device Type: Private Cloud vs Public Cloud**
 
 For organizations with a private cloud real device plan, you can choose between:
-- **Public Cloud** - Shared pool of devices available to all LambdaTest users
+- **Public Cloud** - Shared pool of devices available to all TestMu AI users
 - **Private Cloud** - Dedicated device pool exclusive to your organization
 
 **Multi-Select Support**

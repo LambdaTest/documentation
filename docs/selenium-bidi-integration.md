@@ -1,7 +1,8 @@
 ---
 id: selenium-bidi-integration
 title: BiDi Testing with Selenium WebDriver on TestMu AI
-sidebar_label: Use Selenium BiDi Protocol
+sidebar_label: BiDi Testing
+toc_max_heading_level: 2
 description: Run BiDi tests with Selenium WebDriver on the cloud grid for event-driven, cross-browser automation.
 keywords:
   - selenium bidi protocol testing
@@ -117,14 +118,14 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         "name": "Step 3: Trigger the Tests",
         "codeSampleType": "code snippet",
         "programmingLanguage": "YAML",
-        "text": "  webSocketUrl: true"
+        "text": "webSocketUrl: true"
       },
       {
         "@type": "SoftwareSourceCode",
         "name": "Step 3: Trigger the Tests",
         "codeSampleType": "code snippet",
         "programmingLanguage": "Shell",
-        "text": "  npm run wdio"
+        "text": "npm run wdio"
       }
     ],
     "dateModified": "2026-09-09T19:10:37+05:30"
@@ -137,27 +138,27 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       "@context": "https://schema.org",
       "@type": "HowTo",
       "name": "Steps to Run Tests",
-      "description": "Set up and run BiDi tests using WebdriverIO on the cloud grid. Follow these steps to run tests on TestMu AI using WebdriverIO with BiDi Protocol: Install Node.js >= 12. Get your TestMu AI Username and Access Key.",
+      "description": "Set up and run BiDi tests using WebdriverIO on the cloud grid. Follow these steps to run tests on TestMu AI using WebdriverIO with BiDi Protocol.",
       "step": [
         {
           "@type": "HowToStep",
           "position": 1,
           "name": "Step 1: Set Up the Project",
-          "text": "You can use your own project to configure and test it. For demo purposes, we use the sample repository. Download or Clone the code sample for the Selenium WebdriverIO BiDi from the TestMu AI GitHub repository to run the tests. Install all the necessary dependencies of the project by running the following command:",
+          "text": "You can use your own project to configure and test it. For demo purposes, we use the sample repository. Download or Clone the code sample for the Selenium WebdriverIO BiDi from the TestMu AI GitHub repository to run the tests. Install all the necessary dependencies of the project by running npm install.",
           "url": "https://www.testmuai.com/support/docs/selenium-bidi-integration/#step-1-set-up-the-project"
         },
         {
           "@type": "HowToStep",
           "position": 2,
           "name": "Step 2: Set Up Your Credentials",
-          "text": "Create a .env file in the root folder of your project. Add your TestMu AI Username and Access Key in place of ` and `.",
+          "text": "Create a .env file in the root folder of your project. Add your TestMu AI Username and Access Key in place of the placeholder values.",
           "url": "https://www.testmuai.com/support/docs/selenium-bidi-integration/#step-2-set-up-your-credentials"
         },
         {
           "@type": "HowToStep",
           "position": 3,
           "name": "Step 3: Trigger the Tests",
-          "text": "Pass the webSocketUrl as true in the wdio.lambdatest.conf.js file to enable BiDi support. Run the following command in your terminal to trigger the tests on TestMu AI platform using the specified configuration. Home Support BiDi Testing with Selenium WebDriver on TestMu AI",
+          "text": "Pass the webSocketUrl as true in the wdio.lambdatest.conf.js file to enable BiDi support. Run the npm run wdio command in your terminal to trigger the tests on the TestMu AI platform using the specified configuration.",
           "url": "https://www.testmuai.com/support/docs/selenium-bidi-integration/#step-3-trigger-the-tests"
         }
       ]

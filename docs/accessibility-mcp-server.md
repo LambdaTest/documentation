@@ -134,6 +134,8 @@ Once your MCP client is connected, use natural language to interact with the Acc
 
 Your AI client will route the request to the appropriate capability and return the report or remediation guidance inline.
 
+To scan a public URL without an MCP client, paste it into the [website accessibility checker](https://www.testmuai.com/wcag-accessibility-checker/), which checks the page against WCAG 2.2, ADA, and Section 508.
+
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">

@@ -188,7 +188,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
 
 # Migrating From Sauce Labs To <BrandName />
 * * *
-<BrandName /> and Sauce Labs both offer the cloud-based Selenium Grid. Hence, you can easily migrate your existing Selenium test automation scripts (or suites) from Sauce Labs to <BrandName />.
+<BrandName /> and Sauce Labs both offer the cloud-based Selenium Grid. Hence, you can easily migrate your existing Selenium test automation scripts (or suites) from Sauce Labs to <BrandName />. To compare the two platforms on features and pricing before you move, see our [saucelabs alternative](https://www.testmuai.com/saucelabs-alternative/) page.
 
 
 <b>[Note: This guide covers the migration of tests running on the cloud grid that uses Selenium 4 and Selenium 3]</b>
@@ -549,3 +549,4 @@ Visit <BrandName /> Web Automation dashboard to view your test execution result.
 ## Related migration guides
 
 - [Migrate Appium Tests from Sauce Labs](/support/docs/migrate-appium-tests-from-sauce-labs/) — move your Appium mobile test suite from Sauce Labs to TestMu AI.
+- [Sauce Labs to KaneAI migration guide](/support/docs/saucelabs-to-kaneai-migration-guide/): bring test cases into Test Manager and re-create Sauce AI tests in KaneAI.

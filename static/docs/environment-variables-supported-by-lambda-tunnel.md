@@ -5,7 +5,7 @@
 You can leverage these environment variables to define your proxy settings. If these proxy environment variables are set then the tunnel will automatically detect them. You can switch command-line flags through an environment variable or .lt.yaml==$0 file with the TestMu AI tunnel.
 To configure the .lt.yaml, you can refer to the section [Leverage .lt.yaml file](/docs/advanced-tunnel-features/#leverage-ltyaml-file) of the documentation [Advanced TestMu AI Tunnel Features](/docs/advanced-tunnel-features/).
 
-### What are Environment Variables?
+## What are Environment Variables?
 
 Environment variables can be used in place of command-line flags. Each operating system has its compatibility in terms of environment variables. Command-line flags restrict environment variables from being bypassed. When available, the command-line flags always take priority.
 

@@ -216,7 +216,7 @@ Running Network Scanner:
 Network Scan Passed!
 ```
 
-#### IPs to be Whitelisted
+### IPs to be Whitelisted
 
 | FQDN | Protocol:Port | Reason |
 |------|---------------|--------|
@@ -507,7 +507,7 @@ The CLI can also print the codes below. Their causes are not documented yet. If 
 
 ## Related
 
-- [Kane CLI Error Codes](/support/docs/kane-cli-error-codes/)
+- [Kane CLI Error Codes](https://www.testmuai.com/docs/kane-cli-error-codes)
 - [KaneAI Errors](/support/docs/error-handling-kaneai/)
 - [Platform Error Messages](/support/docs/error-messages/)
 - [Tunnel Error Messages](/support/docs/troubleshooting-lambda-tunnel/#error-messages)

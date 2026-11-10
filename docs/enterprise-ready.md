@@ -202,7 +202,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 - Private tenant deployment for AI features (Azure OpenAI)
 
 **Resources:**
-- [Security & Trust Page](https://www.testmuai.com/trust/security#platform-security)
+- [Security & Trust Page](https://www.testmuai.com/trust/security/#platform-security)
 - [Secrets Management](/support/docs/hyperexecute-how-to-save-and-manage-secrets/)
 
 ---
@@ -290,7 +290,7 @@ TestMu AI supports regional data residency and tenant isolation for regulated de
 - [Test Data Generation Overview](/support/docs/test-data-generation/)
 - [KaneAI Datasets](/support/docs/kane-ai-using-datasets/)
 - [KaneAI Variables & Parameters](/support/docs/kaneai-variables-and-parameters/)
-- [Network Data Masking for Selenium](/support/docs/network-data-masking/)
+- [Network Data Masking for Selenium](/support/docs/selenium-mask-your-data/#network-data-masking)
 - [HyperExecute Lambda Masking](/support/docs/hyperexecute-release-notes-2024/#version-231)
 
 ---
@@ -410,7 +410,7 @@ TestMu AI supports regional data residency and tenant isolation for regulated de
 - Org-level secrets management
 - Priority support SLA
 
-**For pricing details**: [lambdatest.com/pricing](https://www.testmuai.com/pricing/)
+**For pricing details**: [testmuai.com/pricing](https://www.testmuai.com/pricing/)
 
 ---
 

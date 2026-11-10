@@ -146,19 +146,19 @@ Make sure you've installed the LT Browser, you will need to login to the LT Brow
 
 Once you click on the Performance Report button, a new tab of Performance Report would open up. You'll find all the performance statistics of the entered website and selected device. You can view:
 
-#### 1. Desktop Score And Mobile Score
+### 1. Desktop Score And Mobile Score
  
 Based on the performance of your website over different browsers, the desktop and mobile scores are generated. The score has three fields **Poor**, **Average**, and **Medium**.
 
 <img loading="lazy" src={require('../assets/images/performance-report/111-1024x398.webp').default} alt="Image"  className="doc_img" width="1024" height="598"/>
 
-#### 2. Performance Metrics
+### 2. Performance Metrics
  
 You can view the performance metrics of desktop and mobile by navigating to the desktop icon and mobile icon under the section Performance Metrics from the left.
 
 <img loading="lazy" src={require('../assets/images/performance-report/112-1024x541.webp').default} alt="Image"  className="doc_img" width="1024" height="541"/>
 
-#### 3. Runtime Settings
+### 3. Runtime Settings
  
 In runtime settings, you'll find the URL of the entered website, time, and date.
 

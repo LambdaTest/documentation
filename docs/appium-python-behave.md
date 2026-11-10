@@ -2,7 +2,7 @@
 id: appium-python-behave
 title: Appium with Behave
 sidebar_label: Behave
-description: Now you can run your Appium automation scripts using with Behave on TestMu AI Real Device Cloud Platform of 3000+ real mobile devices.
+description: Now you can run your Appium automation scripts using with Behave on TestMu AI Real Device Cloud Platform of 50,000+ real mobile devices.
 keywords:
   - appium
   - testmu ai python
@@ -67,7 +67,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       "@id": "https://www.testmuai.com/support/docs/appium-python-behave/"
     },
     "headline": "Appium with Behave",
-    "description": "Now you can run your Appium automation scripts using with Behave on TestMu AI Real Device Cloud Platform of 3000+ real mobile devices.",
+    "description": "Now you can run your Appium automation scripts using with Behave on TestMu AI Real Device Cloud Platform of 50,000+ real mobile devices.",
     "url": "https://www.testmuai.com/support/docs/appium-python-behave/",
     "image": {
       "@type": "ImageObject",
@@ -172,7 +172,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       "@context": "https://schema.org",
       "@type": "HowTo",
       "name": "Try our Sample Repository",
-      "description": "Now you can run your Appium automation scripts using with Behave on TestMu AI Real Device Cloud Platform of 3000+ real mobile devices.",
+      "description": "Now you can run your Appium automation scripts using with Behave on TestMu AI Real Device Cloud Platform of 50,000+ real mobile devices.",
       "step": [
         {
           "@type": "HowToStep",

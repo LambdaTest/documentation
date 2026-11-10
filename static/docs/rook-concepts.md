@@ -27,7 +27,7 @@ Rook represents autonomous agent testing with seven visible, file-backed concept
 
 ## Relationships
 
-The same concepts appear in two review surfaces. **`rook ui --local`** shows files in the current workspace and selected project, with features, scenarios, profiles, and runs grouped on the agent page. **`rook ui`** opens the hosted Web UI's synchronized projects, versions, and shared results. A local record need not exist upstream, and a hosted record need not be present on this machine. See [the UI comparison](/support/docs/rook-web-ui/#choose-your-ui).
+The same concepts appear in two review surfaces. **`rook ui --local`** shows files in the current workspace and selected project. Its redesigned agent view has Summary, Profiles, Features, Scenarios, and Runs tabs. **`rook ui`** opens the hosted Web UI's synchronized projects, versions, and shared results. A local record need not exist upstream, and a hosted record need not be present on this machine. See [the UI comparison and rollout note](/support/docs/rook-web-ui/#choose-your-ui).
 
 ```text
 Project
@@ -106,11 +106,11 @@ The `.testmuai/rook/` directory is the authoritative workspace record. Synchroni
 
 ### Local UI: See the Scenario Model {#local-ui-example}
 
-Run rook ui --local, open the agent, and choose a scenario. In this triage example, SC-002 belongs to feature F-002, has a goal and four criteria, and links to execution history. The definition and the result remain different records.
+Run rook ui --local, open the agent's **Scenarios** tab, and choose a scenario. In this CommerceCare demo, SC-006 belongs to feature F-002, has a goal and three criteria, and links to execution history. The definition and the result remain different records. See the [local UI rollout note](/support/docs/rook-web-ui/#earlier-local-ui) for older layouts.
 
 ### Hosted Web UI: The Synchronized Definition {#hosted-ui-example}
 
-Run rook ui and open **project → agent → Scenarios → SC-002**. The hosted page presents the synchronized definition. Follow a history entry to see what happened in a particular run; editing the current definition does not rewrite that run's snapshots.
+Run rook ui and open **project → agent → Scenarios → scenario ID**. This hosted capture shows SC-002 from the separate triage example. Follow a history entry to see what happened in a particular run; editing the current definition does not rewrite that run's snapshots.
 
 In this capture, History shows **0 pass** despite the corresponding result recording four passing criteria. See the [screenshot display notes](/support/docs/rook-web-ui/#screenshot-display-notes) before interpreting that count.
 
