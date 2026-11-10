@@ -1,14 +1,12 @@
-# Espresso JUnit XML Reports
+# How to Get Espresso JUnit XML Reports on TestMu AI
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-## Introduction
-
-JUnit reports provide a detailed summary of test execution, allowing you to better understand your test outcomes. This document aims to guide you through the process of retrieving JUnit reports for Espresso tests executed on the TestMu AI platform.
+Espresso JUnit XML reports on TestMu AI give a detailed summary of your test execution outcomes. Using the report APIs, you can fetch JUnit reports for non-shard Espresso builds and for shard builds, retrieving results per individual shard or collectively.
 
 ## Objective
 
-### By the end of this document, you should be able to:
+By the end of this document, you should be able to:
 
 1. Fetch JUnit reports for non-shard Espresso builds.
 

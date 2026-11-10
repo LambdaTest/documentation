@@ -174,9 +174,11 @@ For environment selection and authentication, start with [Web UI setup](#open-th
 
 The screenshot is limited to the documentation project's entry to avoid publishing unrelated project names.
 
-Each project entry shows its name, agent count, run count, user count, and last-accessed date when available. **Last Accessed** is not the time of the latest test result. Click the project name to open its [Agents page](#agents). Use pagination when the list spans multiple pages.
+Each project entry shows its name, agent count, run count, last-accessed date when available, and its creator's initials. **Last Accessed** is not the time of the latest test result. Click the project name to open its [Agents page](#agents). Use pagination when the list spans multiple pages.
 
-There is no project creation form or project search field on this Rook page. Create or select the project in the CLI, then synchronize its agent definitions. Before looking for it in the browser, check:
+Since 0.1.18, the page lists every project you can see, including projects with no agents yet. Use **Search Projects** to find a project by name, and **Owners** to show only the projects that the selected people created. A search or filter with no matches says so instead of showing the Get started view.
+
+There is no project creation form on this Rook page. Create or select the project in the CLI, then synchronize its agent definitions. Before looking for it in the browser, check:
 
 ```bash
 export ROOK_ENV=prod
@@ -202,16 +204,17 @@ Open **Projects → your project** to see its agent inventory. Use this page to 
 
 #### Read the Inventory {#agents-read-the-inventory}
 
-Use **Search agents** to find an agent by name or description. Clear the search before concluding that the project is empty. Each agent card shows:
+Use **Search Agents** to find an agent by name or description. Since 0.1.18, the **Status** filter selects agents by their last run's outcome (**Pass**, **Fail**, **Unable to Verify** or **No result**), and the **Profile** filter selects agents by invocation profile, including **No profile**. Clear the search and filters before concluding that the project is empty. Each agent row shows:
 
 | Field | What it tells you |
 |---|---|
-| **Agent** | Local agent ID, recorded version, description, and readiness or run-count labels. Click the ID to open Summary. |
-| **Tools** | Discovered tool count and how many can write. A write count describes capability, not operations performed by the last run. |
+| **Outcome mark** | The last run's outcome: ✕ when any result failed, otherwise **?** when any result was Unable to Verify, otherwise ✓ for a run that completed with every result passed. A partial run with only passes, or an agent with no run, has no mark. |
+| **Agent** | Local agent ID, recorded version, and readiness or run-count labels. Click the ID to open Summary. |
 | **Features** | Discovered behaviors. This is not a count of tested behaviors. |
 | **Scenarios** | Generated scenario definitions, including ones that have not run. |
-| **Pass rate** | Recent aggregate result context; verify the underlying run before making a release decision. |
-| **Last run** | Most recent recorded execution, or a readiness state such as **never run** or **discovered only**. |
+| **Last run** | A bar of the last run's results, failures first. Hover over or focus the bar to see how many passed, failed, were Unable to Verify, did not run, or were skipped. |
+
+Tools and pass rate are no longer shown on the row. Open the agent's Summary for its tools, and its runs for results.
 
 The example has five features and two scenarios, but only one run. Open **support-triage-agent** to see the agent's six tabs. Its Summary heading uses the display name **triage-service**; the card and breadcrumb use the local ID. Those labels refer to the same agent.
 

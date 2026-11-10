@@ -21,9 +21,29 @@ After test case is created you will be redirected to a screen listing all the te
 Search by test case ID or title, and use the filters beside the search bar to narrow the list:
 
 - **Status** and **Tags**.
-- Under **More**: **Automation Status**, **Created At**, **Created By**, **Issues**, **Priority**, **Type**, **PR Status**, and the custom fields linked to the project.
+- Under **More**: **Automation Status**, **Created At**, **Created By**, **Requirement**, **Defects**, **Priority**, **Type**, **PR Status**, and the custom fields linked to the project.
 
 Filters apply to the folder you are viewing, together with any search text. The **Archived** view and the **Shared Incoming** view offer the same filters, and Shared Incoming adds a **Project** filter for the source project.
+
+#### Filter by Requirement or Defects
+
+The **Requirement** and **Defects** filters separate what a test case validates from what testing found. Each one can show test cases by status, by tracker, or by specific issue keys:
+
+| Filter | Status options | What it checks |
+|---|---|---|
+| **Requirement** | **Link status**: Any, Linked, or Not linked | Issues linked on the test case |
+| **Defects** | **Defect status**: Any, Has defects, or No defects | Issues raised or linked on the test case's instances and steps |
+
+To narrow either filter further, use **Tracker** to pick one of the trackers with linked issues in the project, or search for and select specific issue keys. A test case that has only defects counts as **Not linked**.
+
+To find test cases with no requirement:
+
+1. Open **More** and select **Requirement**.
+2. Set **Link status** to **Not linked**, and click **Apply**.
+
+The list shows the matching test cases and how many they are out of the total.
+
+Requirements and defects are currently in slow rollout. To get early access, raise a request to our support team. Until they are enabled for your organization, you see a single **Issues** filter.
 
 #### Include or Exclude Values
 
@@ -62,7 +82,7 @@ Fields that every test case has, such as **Status**, are never empty. Excluding 
 
 | Supports Not Equals | Does not support Not Equals |
 |---|---|
-| Status, Tags, Automation Status, Created By, Issues, Priority, Type, PR Status, Project (in Shared Incoming) | Created At, which filters by date range |
+| Status, Tags, Automation Status, Created By, Requirement, Defects, Priority, Type, PR Status, Project (in Shared Incoming) | Created At, which filters by date range |
 | Custom fields of type **Dropdown (Single Select)**, **Dropdown (Multi Select)**, and **User** | Custom fields of type **String**, **Textarea**, **Number**, **URL**, **Date**, and **Boolean (Checkbox)** |
 
 #### Share a Filtered View
@@ -150,7 +170,10 @@ The action requires KaneAI access, and the test case must have content — a tes
 
 ### Issues section
 
-This section lists the issues linked with the Test Case. You can link issues from Jira, Azure DevOps, and Linear. For more information, refer to [Link Jira Issues](/support/docs/link-jira-issues-with-test-manager/), [Link Azure DevOps Issues](/support/docs/link-ado-issues-with-test-manager/), or [Link Linear Issues](/support/docs/link-linear-issues-with-test-manager/).
+This section lists the issues associated with the Test Case, on two tabs:
+
+- **Requirements**: the Jira, Azure DevOps, and Linear issues linked on the test case, which describe what it validates. For more information, refer to [Link Jira Issues](/support/docs/link-jira-issues-with-test-manager/), [Link Azure DevOps Issues](/support/docs/link-ado-issues-with-test-manager/), or [Link Linear Issues](/support/docs/link-linear-issues-with-test-manager/).
+- **Defects**: the issues raised or linked on the test case's instances and steps during test runs. This list is read-only. For more information, refer to [Track Bugs and Issues in Test Runs](/support/docs/track-issues-in-test-runs/).
 
 ### Version History
 

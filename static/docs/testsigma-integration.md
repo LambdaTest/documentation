@@ -6,6 +6,8 @@ Testsigma is an unified codeless automation testing platform, designed and built
 
 Testsigma now offers integration with TestMu AI to help you perform automated cross-browser testing taking advantage of the cloud-based [Selenium Grid](https://www.testmuai.com/blog/why-selenium-grid-is-ideal-for-automated-browser-testing/) on over 2000 real browsers. TestMu AI Selenium Grid integration to Testsigma will help you run your Selenium automation scripts from Testsigma instance to our cloud-based Selenium Grid very easily. Lets see how.
 
+Comparing Testsigma with KaneAI for AI test authoring? [KaneAI vs Testsigma](https://www.testmuai.com/kaneai-vs-testsigma/) sets the two side by side.
+
 ## How To Integrate TestMu AI With Testsigma
 
 To integrate your TestMu AI account with the Testsigma instance, go to the Plugins options in Settings and enable the TestMu AI environment under Test Lab category.
