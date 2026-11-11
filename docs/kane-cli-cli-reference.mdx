@@ -70,6 +70,8 @@ If a `{{name}}` in the objective has no value, kane-cli prints a warning and the
 | `--os-version <version>` | The device's OS version, for example `14` or `17.5`. On its own, it matches any device on that version | Config value |
 | `--app <path\|APPid>` | The app under test. A build (emulator `.apk`, simulator `.zip`, android `.apk` or `.aab`, ios `.ipa`) or an uploaded app id | Config value. Required for every mobile run |
 | `--no-stream` | On a real device, don't open the live view (a view-only picture of the device screen) for this run | At a terminal, the live view opens in its own window. It never opens for agents |
+| `--tunnel` | On a real device, route the device's traffic through your running LT tunnel, to reach a private or local backend. See [A Private or Local Backend](https://www.testmuai.com/docs/kane-cli-mobile-real-device#a-private-or-local-backend-lt-tunnel) | Off |
+| `--tunnel-name <name>` | On a real device, the LT tunnel to use, by its `--tunnelName`. Turns `--tunnel` on | Your one running tunnel |
 
 On the `desktop` target, the device flags and `--app` are ignored. See [Mobile Testing](https://www.testmuai.com/docs/kane-cli-mobile) for setup.
 
@@ -167,6 +169,7 @@ Each path you pass must be a `_test.md` file. To select a directory of tests, us
 | `--remote [backend]` | Dispatch the suite to the cloud grid instead of local Chrome or local devices (default backend: `hyper`). Needs `kane-cli plugin install remote-execution`. See [Remote Runs](https://www.testmuai.com/docs/kane-cli-remote-execution) | Off |
 | `--device-name <name>` | Device for the suite's mobile members: as `kane-cli devices list` prints it locally, or a grid catalog device with `--remote` | Member's `device_name:` |
 | `--os-version <version>` | OS version for the mobile members (`14`, `17.5`). On its own, it matches any device on that version | Member's `os_version:` |
+| `--tunnel` / `--tunnel-name <name>` | Real-device members route through your running LT tunnel. `--tunnel-name` turns it on. With `--remote`, start LT with `--env ht-prod` | Off |
 | `--username <user>` / `--access-key <key>` | Basic auth instead of OAuth | None |
 
 Adaptive healing is on by default; `--no-adaptive-heal` turns it off. The `--retry` and `--retry-count` flags are accepted but have no effect: they only print a notice. A local suite that contains an emulator or simulator member must use `--parallel 1`. Real-device members can run in parallel, up to the real devices your plan allows.

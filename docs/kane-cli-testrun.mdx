@@ -106,6 +106,7 @@ kane-cli testrun run --match '^tests/devices/' --parallel 2                     
 | `--remote [backend]` | Dispatch the suite to the cloud grid instead of local Chrome or local devices (default backend: `hyper`). Needs `kane-cli plugin install remote-execution`. See [Remote Runs on the Cloud Grid](https://www.testmuai.com/docs/kane-cli-remote-execution) | off |
 | `--device-name <name>` | Device for the suite's mobile members: as `kane-cli devices list` prints it locally, or a grid catalog device with `--remote` | member's `device_name:` |
 | `--os-version <version>` | OS version for the mobile members (`14`, `17.5`). Alone, it matches any device on that version | member's `os_version:` |
+| `--tunnel` / `--tunnel-name <name>` | Real-device members route through your running LT tunnel, to reach a private or local backend. `--tunnel-name` turns it on. With `--remote`, start LT with `--env ht-prod`. See [A Private or Local Backend](https://www.testmuai.com/docs/kane-cli-mobile-real-device#a-private-or-local-backend-lt-tunnel) | off |
 | `--username <user>` / `--access-key <key>` | Basic auth instead of OAuth | none |
 
 Each desktop worker gets its **own isolated Chrome** with a fresh temporary profile. Parallel members never share cookies, logins, or tabs, and they never touch your own browser profile.
