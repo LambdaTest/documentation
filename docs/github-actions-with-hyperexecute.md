@@ -93,7 +93,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
 
 GitHub Actions is a continuous integration and continuous delivery (CI/CD) platform that allows you to automate your build, test, and deployment pipeline. You can create workflows that build and test every pull request to your repository, or deploy merged pull requests to production.
 
-This document will show you how to integrate GitHub Actions Pipeline with HyperExecute to greatly shorten your test cycles.
+This document will show you how to integrate GitHub Actions Pipeline with HyperExecute to [greatly shorten your test cycles](https://www.testmuai.com/hyperexecute-github-actions/).
 
 ## How To Integrate GitHub Actions Pipeline with HyperExecute
 
