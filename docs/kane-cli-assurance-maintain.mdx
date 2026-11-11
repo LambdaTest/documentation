@@ -8,7 +8,7 @@ keywords: ['kane cli maintain', 'maintain reconcile', 'test suite maintenance', 
 
 import { KaneCliCta } from "/snippets/KaneCliCta.mdx";
 
-Products change, and tests should keep up. `kane-cli maintain` closes the [assurance loop](/docs/kane-cli-assurance/) with two commands:
+Products change, and tests should keep up. `kane-cli maintain` closes the [assurance loop](https://www.testmuai.com/docs/kane-cli-assurance) with two commands:
 
 - `maintain reconcile`: when a requirement document changes, it turns that one changed source into an honest, row-by-row update plan for your suite.
 - `maintain evolve`: re-designs a use-case whose design has gone stale.
@@ -52,9 +52,9 @@ Before anything runs, reconcile checks its inputs in this order. These checks as
 2. The file exists and is a regular file.
 3. It is a document type that can be ingested.
 4. The source id names a known source.
-5. That source isn't retired. Restore it first with [`kane-cli context revert`](/docs/kane-cli-assurance-context/#housekeeping).
+5. That source isn't retired. Restore it first with [`kane-cli context revert`](https://www.testmuai.com/docs/kane-cli-assurance-context#housekeeping).
 6. The file doesn't already back a **different** live source. This is the fork guard: it stops one document's history from silently splitting into another source's, and the error suggests the `--source-id` you probably meant.
-7. No live session is holding review work pinned to this source. This is the held-source guard: if such a session exists, reconcile refuses to move the head and names the session to finish first (`kane-cli context extract --resume <sid>`), so the head never moves under evidence that is still being reviewed. If a session file can't be read, the check fails **closed** (it refuses rather than assumes) and points you to the [`context sessions`](/docs/kane-cli-assurance-context/#sessions) list and clean commands, because an unreadable file can't prove there is no hold.
+7. No live session is holding review work pinned to this source. This is the held-source guard: if such a session exists, reconcile refuses to move the head and names the session to finish first (`kane-cli context extract --resume <sid>`), so the head never moves under evidence that is still being reviewed. If a session file can't be read, the check fails **closed** (it refuses rather than assumes) and points you to the [`context sessions`](https://www.testmuai.com/docs/kane-cli-assurance-context#sessions) list and clean commands, because an unreadable file can't prove there is no hold.
 
 Any failure exits `2` with a message naming the next command to run. In `--mode agent`, these failures arrive on the NDJSON stream (`error` + `done`), never on stderr alone.
 
@@ -87,9 +87,9 @@ Each card shows what changed (a compact diff), why it matched, its evidence cita
 
 The verdicts:
 
-- **approve** commits the change. An ADD creates the draft (and offers `design tests now`). A MODIFY creates the new version with a redirect from the old one (and offers `evolve the design now`). An ARCHIVE applies a non-destructive retire, which you can undo at any time with [`kane-cli context revert`](/docs/kane-cli-assurance-context/#housekeeping). Offers are rows you choose; they never run on their own, and a child design run asks its questions in this same session.
+- **approve** commits the change. An ADD creates the draft (and offers `design tests now`). A MODIFY creates the new version with a redirect from the old one (and offers `evolve the design now`). An ARCHIVE applies a non-destructive retire, which you can undo at any time with [`kane-cli context revert`](https://www.testmuai.com/docs/kane-cli-assurance-context#housekeeping). Offers are rows you choose; they never run on their own, and a child design run asks its questions in this same session.
 - **reject** drops the staged proposal and leaves **nothing behind**. Because nothing is remembered, a later reconcile may propose the same change again. This is deliberate.
-- **defer** parks the decision as **one durable gap**. It appears in [`cover gaps`](/docs/kane-cli-assurance-coverage/) with the reconcile command as its remedy, and it clears when a later verdict lands on the same change.
+- **defer** parks the decision as **one durable gap**. It appears in [`cover gaps`](https://www.testmuai.com/docs/kane-cli-assurance-coverage) with the reconcile command as its remedy, and it clears when a later verdict lands on the same change.
 - **✎ / typing is steering**: your words go to the agent, the remaining changes are finalized again, and revised cards are shown. Cards you already resolved never come back. ARCHIVE cards cannot be steered.
 
 <Note>
@@ -126,7 +126,7 @@ To walk the plan later, run `--apply <path>`, or `--apply` on its own:
 <a id="remote-sources" />
 ### Remote sources: `--from <url>`
 
-`--from` also accepts a remote source URL: a Jira issue or Confluence page, a public web page, or a Linear issue or document. These are the same URLs that [`context ingest`](/docs/kane-cli-assurance-sources/) takes.
+`--from` also accepts a remote source URL: a Jira issue or Confluence page, a public web page, or a Linear issue or document. These are the same URLs that [`context ingest`](https://www.testmuai.com/docs/kane-cli-assurance-sources) takes.
 
 Remote sources follow the same flow as files. Reconcile fetches the latest content through the provider, and the head moves if anything you would cite has changed. Everything downstream (the cards, `--plan` and `--apply`) works the same way.
 
@@ -164,11 +164,11 @@ A plan stored by an earlier kane-cli version is refused with a hint to recompute
 
 ### Headless modes
 
-`--mode agent|ci|override` uses the same ask-policy table as extract and design. See [Automation](/docs/kane-cli-assurance-automation/) for the full contract and reconcile's NDJSON stream. Three things are specific to reconcile:
+`--mode agent|ci|override` uses the same ask-policy table as extract and design. See [Automation](https://www.testmuai.com/docs/kane-cli-assurance-automation) for the full contract and reconcile's NDJSON stream. Three things are specific to reconcile:
 
 - **Headless runs don't stage.** The re-extract commits as it goes, and rows apply according to the mode. `override` and `ci` apply ADD and MODIFY rows automatically; `ci` stops when a run needs a person's judgement; `agent` streams typed events and pauses. The in-chat review is available only in a terminal.
 - **Archiving is never automatic.** No headless mode archives anything; ARCHIVE decisions wait for an interactive session.
-- **The `--mode agent` stream is pure NDJSON.** It opens with a minimal `run_start`, and nothing else prints on either output. The re-extract shares the same stream: its extract events appear between the `reconcile_*` events, each stamped `verb: "reconcile"`. See [Automation](/docs/kane-cli-assurance-automation/) for the event list.
+- **The `--mode agent` stream is pure NDJSON.** It opens with a minimal `run_start`, and nothing else prints on either output. The re-extract shares the same stream: its extract events appear between the `reconcile_*` events, each stamped `verb: "reconcile"`. See [Automation](https://www.testmuai.com/docs/kane-cli-assurance-automation) for the event list.
 
 A bare run without a terminal (no TTY) refuses with exit `2` and asks for an explicit `--mode`, or for `--plan` to preview.
 
@@ -194,7 +194,7 @@ Evolve re-designs the **parent use-case** of whatever you point it at: a test, a
 - `--from-stale` collects every use-case with stale designed entities. In a terminal it confirms them one at a time; with `--mode agent` it asks one question per use-case and runs nothing until all are answered.
 - In a terminal, evolve's output starts with an aligned diff report, marks its child design runs with progress-dot lines, and ends with the same session summary that every interactive session prints.
 - After a clean run, evolve reports the diff between the two design generations: what was superseded, what was created, what was **kept** unchanged, and which criteria's verifying tests moved. A re-design doesn't break what it didn't change.
-- Reconcile's MODIFY rows lead here automatically. Run evolve directly when a design went stale outside a reconcile (an older change, or a retired source). [`kane-cli cover gaps`](/docs/kane-cli-assurance-coverage/) lists stale designed entities in its ranked worklist.
+- Reconcile's MODIFY rows lead here automatically. Run evolve directly when a design went stale outside a reconcile (an older change, or a retired source). [`kane-cli cover gaps`](https://www.testmuai.com/docs/kane-cli-assurance-coverage) lists stale designed entities in its ranked worklist.
 
 <Note>
 Evolve runs a design, so, like extract, design and reconcile, it calls the KaneAI service and consumes credits.
@@ -218,7 +218,7 @@ kane-cli maintain evolve t-4 --mode agent --answer evolve:uc-3=1     # 1 = proce
 - A design session that pauses arrives as its own `session_paused`, and `done` carries its resume command. Resume it, then run evolve again to get the diff.
 - `--mode` accepts `interactive` and `agent` only (anything else refuses with `MODE_USAGE`). An answer to a question the run does not ask refuses with `ANSWER_USAGE`.
 
-The event table is in [Automation](/docs/kane-cli-assurance-automation/#evolves-stream).
+The event table is in [Automation](https://www.testmuai.com/docs/kane-cli-assurance-automation#evolves-stream).
 
 ## Exit codes
 
@@ -231,9 +231,9 @@ The event table is in [Automation](/docs/kane-cli-assurance-automation/#evolves-
 
 ## Next steps
 
-- [Requirement sources](/docs/kane-cli-assurance-sources/): every file type and remote URL reconcile accepts.
-- [Coverage](/docs/kane-cli-assurance-coverage/): `cover gaps --stage design` is the standing worklist between reconciles.
-- [Designing tests](/docs/kane-cli-assurance-design/): what an approved ADD row actually runs.
-- [Automation](/docs/kane-cli-assurance-automation/): reconcile in CI, and its NDJSON stream.
+- [Requirement sources](https://www.testmuai.com/docs/kane-cli-assurance-sources): every file type and remote URL reconcile accepts.
+- [Coverage](https://www.testmuai.com/docs/kane-cli-assurance-coverage): `cover gaps --stage design` is the standing worklist between reconciles.
+- [Designing tests](https://www.testmuai.com/docs/kane-cli-assurance-design): what an approved ADD row actually runs.
+- [Automation](https://www.testmuai.com/docs/kane-cli-assurance-automation): reconcile in CI, and its NDJSON stream.
 
 <KaneCliCta />

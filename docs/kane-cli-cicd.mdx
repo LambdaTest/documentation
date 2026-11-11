@@ -20,18 +20,18 @@ These patterns apply to every CI system. The platform recipes below differ only 
 - **Always pass `--headless`**. CI runners have no display.
 - **Always set `--timeout <seconds>`**, so a hung run cannot block the pipeline.
 - **Authenticate with `--username` and `--access-key`** from CI secrets. Do not call `kane-cli login` in CI: that flow opens a browser for OAuth and will not work on a runner.
-- **Provide a start URL**. A CI run cannot prompt for input. If the objective names no site, no `--url` flag is passed, and no `default_url` is configured, the run fails fast instead of waiting. The simplest fix is to start the objective with the site ("Go to https://… and …") or pass `--url <url>`. To start from the browser's current page on purpose, add `--allow-missing-url`. See [Default start URL](/docs/kane-cli-configuration/#default-start-url).
+- **Provide a start URL**. A CI run cannot prompt for input. If the objective names no site, no `--url` flag is passed, and no `default_url` is configured, the run fails fast instead of waiting. The simplest fix is to start the objective with the site ("Go to https://… and …") or pass `--url <url>`. To start from the browser's current page on purpose, add `--allow-missing-url`. See [Default start URL](https://www.testmuai.com/docs/kane-cli-configuration#default-start-url).
 - **Load test data with `--variables-file <path>`**. Commit the file to your repo without secret values, or generate it before the step, filling values from CI secrets. A `{{name}}` with no value does not change the exit code on its own. Kane CLI warns before the browser starts and then types the name as written. If a step fails because of that literal text, the job fails as usual. The warning is a `warning` line on stdout with `code: "unresolved_variables"`. If a missing value should block the pipeline, fail the step when that line appears.
-- **Project and folder are optional.** To file uploads under a specific Test Manager project or folder, set them in advance with `kane-cli config project <id>` and `kane-cli config folder <id>`. Find the IDs with `kane-cli projects list` and `kane-cli folders list`. If you skip this, Kane CLI picks a default project and folder on the first run and reports which ones it chose. See [Test Manager Integration](/docs/kane-cli-tms-integration/).
-- **Check the exit code**. In short: `0` passed, `1` failed, `2` error, `3` timeout or cancellation. The full mapping is in [Exit Codes](/docs/kane-cli-modes/#exit-codes).
-- **Archive the evidence pack.** Name a `kane-cli run` with `--name <name>`, and Kane CLI copies its sealed [evidence pack](/docs/kane-cli-evidence/) into `.testmuai/evidence/` in the workspace. `testmd run` and `testrun run` always write their pack there. Archive that folder as a CI artifact. Without `--name`, a single run keeps its pack only in its session folder under `~/.testmuai/kaneai/sessions/`, outside the workspace.
+- **Project and folder are optional.** To file uploads under a specific Test Manager project or folder, set them in advance with `kane-cli config project <id>` and `kane-cli config folder <id>`. Find the IDs with `kane-cli projects list` and `kane-cli folders list`. If you skip this, Kane CLI picks a default project and folder on the first run and reports which ones it chose. See [Test Manager Integration](https://www.testmuai.com/docs/kane-cli-tms-integration).
+- **Check the exit code**. In short: `0` passed, `1` failed, `2` error, `3` timeout or cancellation. The full mapping is in [Exit Codes](https://www.testmuai.com/docs/kane-cli-modes#exit-codes).
+- **Archive the evidence pack.** Name a `kane-cli run` with `--name <name>`, and Kane CLI copies its sealed [evidence pack](https://www.testmuai.com/docs/kane-cli-evidence) into `.testmuai/evidence/` in the workspace. `testmd run` and `testrun run` always write their pack there. Archive that folder as a CI artifact. Without `--name`, a single run keeps its pack only in its session folder under `~/.testmuai/kaneai/sessions/`, outside the workspace.
 - **Run whole suites with one command.** If your repo has committed `_test.md` tests, prefer one `testrun` invocation over a shell loop:
 
   ```bash
   kane-cli testrun run --tags smoke --parallel 4 --headless --on-failure fail-fast
   ```
 
-  The suite runs as one execution, with one exit code (`0` all passed, `1` any failure, `2` invalid plan, `3` cancelled) and one sealed [evidence pack](/docs/kane-cli-evidence/). Archive `.testmuai/evidence/*.evidence` as a CI artifact so anyone can open it in the viewer. See [Batch Runs (testrun)](/docs/kane-cli-testrun/).
+  The suite runs as one execution, with one exit code (`0` all passed, `1` any failure, `2` invalid plan, `3` cancelled) and one sealed [evidence pack](https://www.testmuai.com/docs/kane-cli-evidence). Archive `.testmuai/evidence/*.evidence` as a CI artifact so anyone can open it in the viewer. See [Batch Runs (testrun)](https://www.testmuai.com/docs/kane-cli-testrun).
 
 - **Run the suite on the cloud grid when your runner cannot.** `kane-cli testrun run … --remote` turns the suite into one HyperExecute job. The grid supplies Chrome on a macOS runner, or a virtual Android emulator or iOS simulator for mobile `_test.md` tests, so your runner needs no Chrome, Xcode, or Android Studio. `--parallel N` spreads the tests across N grid runners. The recordings and the evidence pack come back to your checkout, just as if the suite had run on your machine.
 
@@ -48,7 +48,7 @@ These patterns apply to every CI system. The platform recipes below differ only 
     --username "$LT_USERNAME" --access-key "$LT_ACCESS_KEY"
   ```
 
-  This requires a <BrandName /> plan with HyperExecute macOS runners. Web and mobile tests must go in separate runs. Choose devices with `kane-cli devices list --target emulator|simulator --remote`, and allow a timeout of about 10 minutes. See [Remote Runs](/docs/kane-cli-remote-execution/).
+  This requires a <BrandName /> plan with HyperExecute macOS runners. Web and mobile tests must go in separate runs. Choose devices with `kane-cli devices list --target emulator|simulator --remote`, and allow a timeout of about 10 minutes. See [Remote Runs](https://www.testmuai.com/docs/kane-cli-remote-execution).
 
 <Warning>
 **Chrome Requirement**
@@ -64,7 +64,7 @@ On slow or freshly started CI runners, Chrome can take a while to become reachab
 - `KANE_CLI_CDP_TIMEOUT_MS`: how long each launch attempt waits for Chrome to be ready. Default `30000`.
 - `KANE_CLI_CDP_RETRIES`: how many times to retry the launch after the first attempt. Default `2`.
 
-If Chrome is installed at a non-standard path in the image, set `KANE_CLI_CHROME_PATH`. See [Chrome environment variables](/docs/kane-cli-configuration/#chrome-environment-variables).
+If Chrome is installed at a non-standard path in the image, set `KANE_CLI_CHROME_PATH`. See [Chrome environment variables](https://www.testmuai.com/docs/kane-cli-configuration#chrome-environment-variables).
 
 ## Authentication in CI/CD
 
@@ -311,7 +311,7 @@ kane-cli run "Open the pricing page and verify the Pro plan is listed" \
     --variables-file ./tests/variables.json
 ```
 
-If your CI image cannot install Chrome, for example a minimal Node Alpine image, either run a whole suite on the grid with `kane-cli testrun run … --remote` (see [Remote Runs](/docs/kane-cli-remote-execution/)), or point a single run at a remote browser:
+If your CI image cannot install Chrome, for example a minimal Node Alpine image, either run a whole suite on the grid with `kane-cli testrun run … --remote` (see [Remote Runs](https://www.testmuai.com/docs/kane-cli-remote-execution)), or point a single run at a remote browser:
 
 ```bash
 kane-cli run "Open the pricing page and verify the Pro plan is listed" \
@@ -333,7 +333,7 @@ kane-cli run "Open the pricing page and verify the Pro plan is listed" \
 ## Running Multiple Tests
 
 <Tip>
-If your repo has committed `_test.md` tests, prefer one `testrun` invocation over a shell loop. The suite becomes one execution with one exit code and one sealed evidence pack. See [Batch Runs (testrun)](/docs/kane-cli-testrun/#using-testrun-in-ci).
+If your repo has committed `_test.md` tests, prefer one `testrun` invocation over a shell loop. The suite becomes one execution with one exit code and one sealed evidence pack. See [Batch Runs (testrun)](https://www.testmuai.com/docs/kane-cli-testrun#using-testrun-in-ci).
 </Tip>
 
 Run several tests and fail the pipeline if any fail:
@@ -401,20 +401,20 @@ kane-cli run "Log in as {{email}} with {{password}} and verify dashboard" \
 
 ## A shared context store in CI {#a-shared-context-store-in-ci}
 
-When your team [shares the context graph](/docs/kane-cli-assurance-sharing/) through a shared location, your pipeline can use the same store. Clone it once, pull before each run, and push the facts the run produced afterwards. The sync commands never call the agent and never spend credits. The run between them, `kane-cli context extract` below, is an ordinary extraction and consumes credits like any other.
+When your team [shares the context graph](https://www.testmuai.com/docs/kane-cli-assurance-sharing) through a shared location, your pipeline can use the same store. Clone it once, pull before each run, and push the facts the run produced afterwards. The sync commands never call the agent and never spend credits. The run between them, `kane-cli context extract` below, is an ordinary extraction and consumes credits like any other.
 
 - **Authenticate without a person.** The method depends on the location:
   - **GitHub over HTTPS**: set `KANE_SYNC_GIT_TOKEN` from a CI secret. Use a repository-scoped personal access token with Contents read and write, or a GitHub App installation token. A workflow's own `GITHUB_TOKEN` reaches only the workflow's repository, so a separate context repository needs its own token.
   - **GitHub over SSH**: an SSH deploy key on the context repository works without a token. Kane CLI never answers an SSH prompt, so the runner must have the key loaded and the host key already accepted (`ssh-keyscan github.com >> ~/.ssh/known_hosts`).
-  - For either GitHub option, repository rules must also allow the scratch reference that the connection check pushes under `refs/kane/probe/`. See [Three kinds of location](/docs/kane-cli-assurance-sharing/#locations).
+  - For either GitHub option, repository rules must also allow the scratch reference that the connection check pushes under `refs/kane/probe/`. See [Three kinds of location](https://www.testmuai.com/docs/kane-cli-assurance-sharing#locations).
   - **S3-compatible storage**: set `KANE_SYNC_S3_ACCESS_KEY_ID` and `KANE_SYNC_S3_SECRET_ACCESS_KEY`.
 
-  Kane CLI never writes these credentials to disk. See [Context sync environment variables](/docs/kane-cli-configuration/#context-sync-environment-variables).
+  Kane CLI never writes these credentials to disk. See [Context sync environment variables](https://www.testmuai.com/docs/kane-cli-configuration#context-sync-environment-variables).
 - **Use `--mode agent`** for structured output, and read the exit code:
   - `0`: done.
   - `3`: a person has to decide. The runner's store is behind or has diverged, or a rebase stopped on decisions.
   - `2`: a precondition failed. The location cannot be reached, keys are missing, or a rebase is still open.
-- **Do not answer decisions blindly.** When a rebase stops on a decision, the job stops too. Save the output of `kane-cli context sync status origin --json` as a build artifact. It reports what is waiting, but a later job cannot replay it on its own, because answers must go to the store that holds the open rebase. The follow-up job must run on the same persisted `.context/`, such as a workspace or cache that survives between jobs. There, a person or an agent answers with `kane-cli context sync origin --answer <id>=<choice>`. `keep-theirs` writes nothing, but it is still a choice: the local change stays in the backup. The full contract is in [Agents and CI](/docs/kane-cli-assurance-automation/#the-sync-verbs-on-the-stream).
+- **Do not answer decisions blindly.** When a rebase stops on a decision, the job stops too. Save the output of `kane-cli context sync status origin --json` as a build artifact. It reports what is waiting, but a later job cannot replay it on its own, because answers must go to the store that holds the open rebase. The follow-up job must run on the same persisted `.context/`, such as a workspace or cache that survives between jobs. There, a person or an agent answers with `kane-cli context sync origin --answer <id>=<choice>`. `keep-theirs` writes nothing, but it is still a choice: the local change stays in the backup. The full contract is in [Agents and CI](https://www.testmuai.com/docs/kane-cli-assurance-automation#the-sync-verbs-on-the-stream).
 - **Keep `.context/` out of version control.** The store is never merged with git. It is shared through the location instead.
 
 ```bash

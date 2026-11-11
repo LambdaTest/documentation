@@ -10,7 +10,7 @@ import { KaneCliCta } from "/snippets/KaneCliCta.mdx";
 
 A page can show a green success message while a request behind it returns a 500, the console fills with errors, or the main content takes four seconds to paint. These use cases assert on what the browser recorded during the run: network traffic, console output, storage, the clipboard, and timing.
 
-Kane CLI captures this data in the background on every run, so you add a DevTools check by writing one more sentence in the objective. You don't write code or open DevTools yourself. Each check can be an assertion that fails the run, an extraction that stores a value for later steps, or a condition that branches the flow. See [DevTools Checkpoints](/docs/kane-cli-checkpoint-devtools/) for every domain and what it can query.
+Kane CLI captures this data in the background on every run, so you add a DevTools check by writing one more sentence in the objective. You don't write code or open DevTools yourself. Each check can be an assertion that fails the run, an extraction that stores a value for later steps, or a condition that branches the flow. See [DevTools Checkpoints](https://www.testmuai.com/docs/kane-cli-checkpoint-devtools) for every domain and what it can query.
 
 ## Catch a failing request behind a green screen
 
@@ -27,10 +27,10 @@ The screen can report success while a request the page depends on has failed. Th
    kane-cli run "Go to https://your-app.com/product/headset, click 'Add to Cart', open the cart, assert the POST /api/cart returned HTTP status 201, assert no API calls returned 5xx status codes" --agent
    ```
 
-5. Read the summary. When an assertion fails, the failing step names the request and its status, and the step's network log is in the run's [Evidence Pack](/docs/kane-cli-evidence/).
+5. Read the summary. When an assertion fails, the failing step names the request and its status, and the step's network log is in the run's [Evidence Pack](https://www.testmuai.com/docs/kane-cli-evidence).
 
 <Tip>
-Put the network assertion right after the action that triggers the request. Kane CLI only queries traffic captured up to that point in the run. See [Network checkpoints](/docs/kane-cli-checkpoint-devtools-network/#planning-for-multi-step-tests).
+Put the network assertion right after the action that triggers the request. Kane CLI only queries traffic captured up to that point in the run. See [Network checkpoints](https://www.testmuai.com/docs/kane-cli-checkpoint-devtools-network#planning-for-multi-step-tests).
 </Tip>
 
 ## Fail the run on console errors
@@ -64,7 +64,7 @@ Many apps keep the session token, feature flags, and user preferences in localSt
 3. To check what login writes, add `assert auth_token exists in localStorage` after the sign-in step.
 4. Review the summary. Kane CLI reports the stored value it found next to the value you expected.
 
-See [localStorage checkpoints](/docs/kane-cli-checkpoint-devtools-localstorage/) for JSON values and extractions.
+See [localStorage checkpoints](https://www.testmuai.com/docs/kane-cli-checkpoint-devtools-localstorage) for JSON values and extractions.
 
 ## Verify what a Copy button copied
 
@@ -74,7 +74,7 @@ A Copy button that copies the wrong link or an empty string passes every visual 
 2. To reuse the copied value later in the flow, store it, for example `store the clipboard text as 'invoice_link'`, and then `open {{invoice_link}}`.
 3. Review the summary, which quotes the clipboard text Kane CLI found.
 
-See [Clipboard checkpoints](/docs/kane-cli-checkpoint-devtools-clipboard/) for HTML and image clipboard content.
+See [Clipboard checkpoints](https://www.testmuai.com/docs/kane-cli-checkpoint-devtools-clipboard) for HTML and image clipboard content.
 
 ## Gate on page load time
 
@@ -103,7 +103,7 @@ Heavy animation, parallax, and large images are where Core Web Vitals go wrong. 
 4. End with the gate, for example `confirm that LCP is under 4000 ms and CLS is below 0.1`.
 5. Add `--max-steps` to the command, because an objective with many separate extractions benefits from an explicit ceiling.
 
-In the recorded run, the page misses the budget and the run ends at the gate, which is the job of a performance budget. See [Performance checkpoints](/docs/kane-cli-checkpoint-devtools-performance/) for thresholds and the full metric list.
+In the recorded run, the page misses the budget and the run ends at the gate, which is the job of a performance budget. See [Performance checkpoints](https://www.testmuai.com/docs/kane-cli-checkpoint-devtools-performance) for thresholds and the full metric list.
 
 ## Time the API call behind a UI action
 
@@ -120,13 +120,13 @@ A payment that succeeds in four seconds is still a problem at checkout. In this 
 3. Add the time limit to the same objective, for example `confirm the POST /api/shop/pay response time is under 2000 ms`.
 4. Run it. Kane CLI reports the measured time next to the limit, and a slower call fails the run even when the payment succeeds.
 
-To time an endpoint without the UI, see [Latency and SLA gate testing](/docs/api-testing-with-kane-cli/#latency-and-sla-gate-testing) on the API Testing page.
+To time an endpoint without the UI, see [Latency and SLA gate testing](https://www.testmuai.com/docs/api-testing-with-kane-cli#latency-and-sla-gate-testing) on the API Testing page.
 
 ## Next steps
 
-- [DevTools Checkpoints](/docs/kane-cli-checkpoint-devtools/): every domain, with assertions, extractions, and conditions
-- [Security & Access Testing](/docs/kane-cli-security-access-testing/): cookie flags, token storage, and role checks
-- [Evidence](/docs/kane-cli-evidence/): the per-step console and network logs behind each verdict
-- [CI/CD & DevOps Testing](/docs/kane-cli-cicd-devops-testing/): run these checks on every deploy
+- [DevTools Checkpoints](https://www.testmuai.com/docs/kane-cli-checkpoint-devtools): every domain, with assertions, extractions, and conditions
+- [Security & Access Testing](https://www.testmuai.com/docs/kane-cli-security-access-testing): cookie flags, token storage, and role checks
+- [Evidence](https://www.testmuai.com/docs/kane-cli-evidence): the per-step console and network logs behind each verdict
+- [CI/CD & DevOps Testing](https://www.testmuai.com/docs/kane-cli-cicd-devops-testing): run these checks on every deploy
 
 <KaneCliCta />

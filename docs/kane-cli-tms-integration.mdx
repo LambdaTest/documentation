@@ -24,7 +24,7 @@ When a session ends, Kane CLI runs an upload pipeline that finalises the test ca
 
 At exit, a short progress indicator shows these stages: `convert` (preparing the metadata), `zip` (packaging the run directories), `presign` (requesting upload URLs), `upload` (sending the zip and metadata), and `finalize` (committing the test case in Test Manager). If code export is on, a `code_export` stage runs after `finalize`. If it is off, that stage is reported as skipped.
 
-The run's sealed [evidence pack](/docs/kane-cli-evidence/) is uploaded along with the run. The pack records who ran the test (user name and email) and the share link.
+The run's sealed [evidence pack](https://www.testmuai.com/docs/kane-cli-evidence) is uploaded along with the run. The pack records who ran the test (user name and email) and the share link.
 
 **Replayed `testmd` runs publish evidence too.** A pure replay skips the authoring upload pipeline, but Kane CLI still publishes its sealed pack to the test's own project. The dashboard therefore shows execution history for replayed runs as well. The same applies to `testrun` executions.
 
@@ -187,7 +187,7 @@ Every session leaves a directory on your machine that you can inspect later, whe
 └── code-export/         # (when code export is enabled) Generated code files
 ```
 
-`<session-id>` is a UUID generated when the session starts. Step logs, screenshots, and per-run console/network captures all live **inside the evidence pack**. See [Evidence Packs](/docs/kane-cli-evidence/#whats-inside-a-pack) for its structure.
+`<session-id>` is a UUID generated when the session starts. Step logs, screenshots, and per-run console/network captures all live **inside the evidence pack**. See [Evidence Packs](https://www.testmuai.com/docs/kane-cli-evidence#whats-inside-a-pack) for its structure.
 
 Use this directory to look back at a past run without opening Test Manager, to debug a session that failed to upload, or to hand the pack to a teammate.
 

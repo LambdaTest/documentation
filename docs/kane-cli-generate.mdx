@@ -15,7 +15,7 @@ A generation produces:
 - **Test Scenarios**: groups of related checks, such as "Login" or "Checkout".
 - **Test Cases**: the individual checks inside each scenario, each typed **Positive**, **Negative**, or **Edge**.
 
-You generate a set, review it, and **refine** it in plain language as often as you like. You can then **save** the functional cases as runnable `_test.md` files, which [`kane-cli testmd`](/docs/kane-cli-testmd-running/) can run and replay.
+You generate a set, review it, and **refine** it in plain language as often as you like. You can then **save** the functional cases as runnable `_test.md` files, which [`kane-cli testmd`](https://www.testmuai.com/docs/kane-cli-testmd-running) can run and replay.
 
 <Note>
 The CLI **takes a text description**, optionally with local files attached through [`--files`](#attaching-files-for-context), and writes local `_test.md` files. For the full picture of AI test-case generation, including issue-link inputs, dashboards, and pushing cases into Test Manager or automation, see the [AI test-case generation guide](/docs/generate-test-cases-with-ai/). See also [Limits and scope](#limits-and-scope).
@@ -65,7 +65,7 @@ From a script or a headless shell, `generate` runs **one turn per command, then 
 | `--files <paths>` | Comma-separated local files to attach as context (new generations and refines only). See [Attaching files for context](#attaching-files-for-context). |
 | `--project <id>` / `--folder <id>` | Test Manager project and folder. |
 | `--agent` | Emit structured NDJSON on stdout. Turns on automatically when the command runs non-interactively or is piped. |
-| `--username`, `--access-key` | Authentication, same as [`kane-cli run`](/docs/kane-cli-quickstart/). See [Authentication](/docs/kane-cli-authentication/). |
+| `--username`, `--access-key` | Authentication, same as [`kane-cli run`](https://www.testmuai.com/docs/kane-cli-quickstart). See [Authentication](https://www.testmuai.com/docs/kane-cli-authentication). |
 
 ## Attaching files for context
 
@@ -101,7 +101,7 @@ Unlike the one-turn command line, the TUI is a **live session**. Generated scena
 
 In the scenario browser, use `↑↓` to move, `↵` to open, `◂ ▸` for the previous or next sibling, `x` to remove a case, and `←` or `esc` to go back. **Non-functional cases** (Security, Performance, and so on) show a **gray `✓`** with a "won't be saved" note, because `/save` writes only functional cases. See [Saving is functional-only](#saving-is-functional-only).
 
-If generation asks a **clarifying question**, type your answer to continue. After `/save`, the files are ordinary `_test.md` tests under `.testmuai/tests/`. Run them with [`kane-cli testmd run`](/docs/kane-cli-testmd-running/).
+If generation asks a **clarifying question**, type your answer to continue. After `/save`, the files are ordinary `_test.md` tests under `.testmuai/tests/`. Run them with [`kane-cli testmd run`](https://www.testmuai.com/docs/kane-cli-testmd-running).
 
 ## How a result is shaped
 
@@ -118,7 +118,7 @@ Scenarios are sorted by importance. The full result is returned at the end of th
 
 `--save` writes **only test cases whose category is *Functional***, because only those translate into runnable `_test.md` tests. Non-functional cases (Security, Performance, and so on) are generated and shown, but they are **not** written to disk. If a request has no functional cases, `--save` writes nothing and tells you so.
 
-Saved files are ordinary `_test.md` tests in the standard format, the same as a hand-written test. Everything in [the testmd docs](/docs/kane-cli-testmd/) applies to them: you can run them, edit them, replay them from cache, and commit them to git.
+Saved files are ordinary `_test.md` tests in the standard format, the same as a hand-written test. Everything in [the testmd docs](https://www.testmuai.com/docs/kane-cli-testmd) applies to them: you can run them, edit them, replay them from cache, and commit them to git.
 
 The intended workflow is: **generate writes the test cases, then testmd runs them.**
 
@@ -130,8 +130,8 @@ The intended workflow is: **generate writes the test cases, then testmd runs the
 
 ## Next steps
 
-- [The generate workflow](/docs/kane-cli-generate-workflow/): the new → refine → save → run loop, worked examples, and exit codes.
-- [Running tests with testmd](/docs/kane-cli-testmd-running/): run and replay the `_test.md` files `--save` produces.
-- [Authentication](/docs/kane-cli-authentication/): logging in and choosing an environment.
+- [The generate workflow](https://www.testmuai.com/docs/kane-cli-generate-workflow): the new → refine → save → run loop, worked examples, and exit codes.
+- [Running tests with testmd](https://www.testmuai.com/docs/kane-cli-testmd-running): run and replay the `_test.md` files `--save` produces.
+- [Authentication](https://www.testmuai.com/docs/kane-cli-authentication): logging in and choosing an environment.
 
 <KaneCliCta />

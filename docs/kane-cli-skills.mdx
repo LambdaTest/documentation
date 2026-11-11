@@ -25,7 +25,7 @@ You can use Kane CLI by talking to your AI coding agent (Claude Code, Codex CLI,
 
 Install the skill once. From then on, whenever you ask for something that needs a browser, your agent checks that everything is ready, runs your request in a real browser, and shows you the result.
 
-Skills build on [Agent Mode](/docs/kane-cli-agent-mode/) (the `--agent` flag). The skill tells the agent to always pass `--agent`, read the NDJSON stream, and report a structured result back to you.
+Skills build on [Agent Mode](https://www.testmuai.com/docs/kane-cli-agent-mode) (the `--agent` flag). The skill tells the agent to always pass `--agent`, read the NDJSON stream, and report a structured result back to you.
 
 This page also covers what to expect on your first run, what gets saved on your machine, and how to watch runs live.
 
@@ -43,7 +43,7 @@ The quickest way to get started is one command. It installs the skill globally f
 npx @testmuai/kane-cli-skill
 ```
 
-The installer copies the skill folder to `~/.claude/skills/kane-cli/` (Claude Code), `~/.agents/skills/kane-cli/` (Codex CLI), and `~/.gemini/skills/kane-cli/` (Gemini CLI). Running it again replaces those folders with the current version, and `npx @testmuai/kane-cli-skill uninstall` removes them. The installer also creates the folder that holds your agent preferences. You need Kane CLI itself installed too (see [Installation](/docs/kane-cli-installation/)).
+The installer copies the skill folder to `~/.claude/skills/kane-cli/` (Claude Code), `~/.agents/skills/kane-cli/` (Codex CLI), and `~/.gemini/skills/kane-cli/` (Gemini CLI). Running it again replaces those folders with the current version, and `npx @testmuai/kane-cli-skill uninstall` removes them. The installer also creates the folder that holds your agent preferences. You need Kane CLI itself installed too (see [Installation](https://www.testmuai.com/docs/kane-cli-installation)).
 
 If Kane CLI is already installed, `kane-cli install skill` installs the skill too: it downloads the newest skill version that is compatible with your Kane CLI release into the same three folders. Restart your agent afterwards to load it.
 
@@ -54,7 +54,7 @@ check that the home page loads on my app
 ```
 
 <Note>
-The installer writes skill folders for Claude Code, Codex CLI, and Gemini CLI only. Cursor and GitHub Copilot read `AGENTS.md`, so from your repo root, run `curl -fsSL https://www.testmuai.com/kane-cli-agent/AGENTS.md >> AGENTS.md` once. Kiro uses the Kane CLI Power. See [AI Coding Agents](/docs/kane-cli-with-ai-coding-agents/).
+The installer writes skill folders for Claude Code, Codex CLI, and Gemini CLI only. Cursor and GitHub Copilot read `AGENTS.md`, so from your repo root, run `curl -fsSL https://www.testmuai.com/kane-cli-agent/AGENTS.md >> AGENTS.md` once. Kiro uses the Kane CLI Power. See [AI Coding Agents](https://www.testmuai.com/docs/kane-cli-with-ai-coding-agents).
 </Note>
 
 To install the skill by hand for a single agent, copy the skill folder from the Kane CLI repository. Clone the repository once:
@@ -223,7 +223,7 @@ You can safely delete the file. The agent then uses sensible defaults and treats
 
 ### Where Results Are Saved
 
-Every run is saved as a test case in a Test Manager project and folder (see [Test Manager Integration](/docs/kane-cli-tms-integration/)). The ready check always shows which project and folder. To use a different one, tell your agent "change project". The agent lists your projects, lets you pick one or create a new one, and saves your choice.
+Every run is saved as a test case in a Test Manager project and folder (see [Test Manager Integration](https://www.testmuai.com/docs/kane-cli-tms-integration)). The ready check always shows which project and folder. To use a different one, tell your agent "change project". The agent lists your projects, lets you pick one or create a new one, and saves your choice.
 
 This setting belongs to Kane CLI, not to the agent. A change applies to **every later Kane CLI session for your sign-in**: every project folder, every agent, and the terminal. Tests you already ran stay in their original project.
 
@@ -261,7 +261,7 @@ What to know:
 Other agents do not have a scriptable status bar, so the strip is available only in Claude Code. Everything else on this page works the same in every agent.
 
 <Tip>
-For more than one line, add the [Kane CLI plugin for Claude Code](/docs/kane-cli-claude-code-plugin/): a band above the prompt for every run, a result card in the chat with the evidence one click away, and a pane for steps, assurance and history.
+For more than one line, add the [Kane CLI plugin for Claude Code](https://www.testmuai.com/docs/kane-cli-claude-code-plugin): a band above the prompt for every run, a result card in the chat with the evidence one click away, and a pane for steps, assurance and history.
 </Tip>
 
 ---
@@ -278,7 +278,7 @@ kane-cli login \
   --access-key "YOUR_LT_ACCESS_KEY"
 ```
 
-Get credentials from the <BrandName /> [dashboard](https://accounts.lambdatest.com/dashboard) > **Credentials**. Verify with `kane-cli whoami`. See [Authentication](/docs/kane-cli-authentication/) for every sign-in method.
+Get credentials from the <BrandName /> [dashboard](https://accounts.lambdatest.com/dashboard) > **Credentials**. Verify with `kane-cli whoami`. See [Authentication](https://www.testmuai.com/docs/kane-cli-authentication) for every sign-in method.
 
 ---
 
@@ -297,13 +297,13 @@ When you ask your AI agent to test something on the web, the skill:
 
 ## What Leaves Your Machine
 
-Kane CLI uploads the same data whether you run it yourself or through an agent. By default, each run is saved to your <BrandName /> account as a Test Manager test case, with its screenshots and run details (see [Test Manager Integration](/docs/kane-cli-tms-integration/)). Evidence packs are sealed on your machine, and the evidence viewer reads them from your machine (see [Evidence Packs](/docs/kane-cli-evidence/)). The agent preferences file and the status strip stay on your machine.
+Kane CLI uploads the same data whether you run it yourself or through an agent. By default, each run is saved to your <BrandName /> account as a Test Manager test case, with its screenshots and run details (see [Test Manager Integration](https://www.testmuai.com/docs/kane-cli-tms-integration)). Evidence packs are sealed on your machine, and the evidence viewer reads them from your machine (see [Evidence Packs](https://www.testmuai.com/docs/kane-cli-evidence)). The agent preferences file and the status strip stay on your machine.
 
 ---
 
 ## Running With No Person Present
 
-In CI, or with a cloud agent that cannot ask you anything, the agent skips the tour and the questions, runs headless with default settings, and does not write the preferences file. It still stops and reports clearly if Kane CLI is not installed, you are not signed in, or you are out of credits. For pipelines, calling Kane CLI directly is usually simpler. See [CI/CD Integration](/docs/kane-cli-cicd/).
+In CI, or with a cloud agent that cannot ask you anything, the agent skips the tour and the questions, runs headless with default settings, and does not write the preferences file. It still stops and reports clearly if Kane CLI is not installed, you are not signed in, or you are out of credits. For pipelines, calling Kane CLI directly is usually simpler. See [CI/CD Integration](https://www.testmuai.com/docs/kane-cli-cicd).
 
 ---
 
@@ -323,10 +323,10 @@ Source files: [github.com/LambdaTest/kane-cli/tree/main/skill-installer/skills](
 
 ## Next Steps
 
-- [Quick Start](/docs/kane-cli-quickstart/): the same first run, typed by hand.
-- [Modes of Operation](/docs/kane-cli-modes/): objectives, flags and what a run does.
-- [Test.md](/docs/kane-cli-testmd/): keep a flow as a saved test that replays in seconds.
-- [Evidence Packs](/docs/kane-cli-evidence/): what every run captures and how to view it.
-- [AI Coding Agents](/docs/kane-cli-with-ai-coding-agents/): walkthroughs and patterns for using Kane CLI from any coding agent.
+- [Quick Start](https://www.testmuai.com/docs/kane-cli-quickstart): the same first run, typed by hand.
+- [Modes of Operation](https://www.testmuai.com/docs/kane-cli-modes): objectives, flags and what a run does.
+- [Test.md](https://www.testmuai.com/docs/kane-cli-testmd): keep a flow as a saved test that replays in seconds.
+- [Evidence Packs](https://www.testmuai.com/docs/kane-cli-evidence): what every run captures and how to view it.
+- [AI Coding Agents](https://www.testmuai.com/docs/kane-cli-with-ai-coding-agents): walkthroughs and patterns for using Kane CLI from any coding agent.
 
 <KaneCliCta />

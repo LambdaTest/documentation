@@ -8,7 +8,7 @@ keywords: ['kane cli context', 'context ingest', 'use-case extraction', 'require
 
 import { KaneCliCta } from "/snippets/KaneCliCta.mdx";
 
-`kane-cli context` builds a local knowledge store (`.context/` in your project directory) from your requirement documents, then uses an AI agent to extract **use-cases** from them. The store is content-addressed: every snapshot is identified by a hash of its bytes. This is the first stage of the [assurance lifecycle](/docs/kane-cli-assurance/): Source → Use-case → Scenario → AC → Test.
+`kane-cli context` builds a local knowledge store (`.context/` in your project directory) from your requirement documents, then uses an AI agent to extract **use-cases** from them. The store is content-addressed: every snapshot is identified by a hash of its bytes. This is the first stage of the [assurance lifecycle](https://www.testmuai.com/docs/kane-cli-assurance): Source → Use-case → Scenario → AC → Test.
 
 ```bash
 kane-cli context ingest ./prd-online-store.md   # snapshot a source, and extract it (one flow)
@@ -27,13 +27,13 @@ kane-cli context ingest <src...> [--as <id>] [--mode <mode>] [--plan] [--force] 
 `context ingest` saves a snapshot of one or more files in `.context/`, creating the store on first use, **and then extracts them**. What happens after the snapshot depends on where and how you run it:
 
 - **On a terminal**, the run continues straight into the interactive extract chat.
-- **`--mode agent`** extracts headless on the NDJSON stream. Each landed file emits one `ingested` event before extraction begins. See [Automation](/docs/kane-cli-assurance-automation/#the-ndjson-stream-mode-agent).
+- **`--mode agent`** extracts headless on the NDJSON stream. Each landed file emits one `ingested` event before extraction begins. See [Automation](https://www.testmuai.com/docs/kane-cli-assurance-automation#the-ndjson-stream-mode-agent).
 - **`--mode override`** also extracts headless, and accepts every default automatically.
 - **`--mode ci`**, or piped stdin with no `--mode`, **only lands the files**: they are snapshotted, nothing is extracted, the run exits `0`, and a guidance line on stderr tells you what to run next.
 
 `--plan`, `--force`, and `--trust` are passed through to the extraction, and they are refused in the land-only modes.
 
-A source is a file path or a remote URL: a Jira issue, a Confluence page, a Linear issue or document, or a public web page. See [Requirement Sources](/docs/kane-cli-assurance-sources/) for every accepted type.
+A source is a file path or a remote URL: a Jira issue, a Confluence page, a Linear issue or document, or a public web page. See [Requirement Sources](https://www.testmuai.com/docs/kane-cli-assurance-sources) for every accepted type.
 
 The confirmation you see (the receipt) depends on how you run the command. On a terminal it is a human-readable line (`landed prd (prd.md) — new source`). Under `ci` and piped runs it follows the byte-exact script format shown below. Under `--mode agent` nothing prints outside the stream: the `ingested` event is the receipt.
 
@@ -72,13 +72,13 @@ kane-cli context ingest https://linear.app/<workspace>/document/<slug>   # Linea
 kane-cli context ingest https://docs.example.com/guide                   # public web page
 ```
 
-Anything else is rejected with `UNSUPPORTED_MEDIA`, and an oversized file with `FILE_TOO_LARGE`. [Requirement Sources](/docs/kane-cli-assurance-sources/) documents every source type with its size cap, citation granularity, identity rules, and refusal codes.
+Anything else is rejected with `UNSUPPORTED_MEDIA`, and an oversized file with `FILE_TOO_LARGE`. [Requirement Sources](https://www.testmuai.com/docs/kane-cli-assurance-sources) documents every source type with its size cap, citation granularity, identity rules, and refusal codes.
 
 <Note>
 A Jira `ENG-42` and a Linear `ENG-42` both create the id `eng-42`. If a URL's id already belongs to a different kind of source, the ingest refuses and offers a way to recover, rather than silently replacing the existing source.
 </Note>
 
-If the new bytes are a **changed version of a source you have already extracted from**, use [`kane-cli maintain reconcile`](/docs/kane-cli-assurance-maintain/) instead of a plain re-ingest. It records the same head move *and* works out what the change means for your suite, in one step.
+If the new bytes are a **changed version of a source you have already extracted from**, use [`kane-cli maintain reconcile`](https://www.testmuai.com/docs/kane-cli-assurance-maintain) instead of a plain re-ingest. It records the same head move *and* works out what the change means for your suite, in one step.
 
 <a id="extract" />
 ## `context extract`: propose use-cases
@@ -90,7 +90,7 @@ kane-cli context extract --resume <sid> [--message "<text>"] [--answer <q>=<v> .
 
 `context extract` runs the extraction agent over **every ingested source whose current snapshot has not been extracted yet**. Snapshots that already have a committed extraction are skipped; pass `--force` to extract one again. Most of the time you start with `context ingest`, which lands your files and then runs exactly this step. Run `extract` on its own to sweep again, to target one source with `--source`, or to `--resume` a session.
 
-On a terminal, extraction runs as an **interactive chat**. Headless use is opt-in: a non-TTY run with no `--mode` exits `2` and asks you to pass `--mode agent|ci|override`. See [Automation](/docs/kane-cli-assurance-automation/) for how headless runs behave.
+On a terminal, extraction runs as an **interactive chat**. Headless use is opt-in: a non-TTY run with no `--mode` exits `2` and asks you to pass `--mode agent|ci|override`. See [Automation](https://www.testmuai.com/docs/kane-cli-assurance-automation) for how headless runs behave.
 
 Two rules apply when a run covers several sources:
 
@@ -99,12 +99,12 @@ Two rules apply when a run covers several sources:
 
 What the agent does:
 
-- **Proposes use-cases from each source.** Each use-case has a **detailed description** (flows, inputs, states, boundaries) and **`criteria[]`**: short, cited sketches of the promises in the source that matter for acceptance. Criteria are hints for [`kane-cli design`](/docs/kane-cli-assurance-design/), never test oracles.
+- **Proposes use-cases from each source.** Each use-case has a **detailed description** (flows, inputs, states, boundaries) and **`criteria[]`**: short, cited sketches of the promises in the source that matter for acceptance. Criteria are hints for [`kane-cli design`](https://www.testmuai.com/docs/kane-cli-assurance-design), never test oracles.
 - **Cites everything.** Every proposal must quote exact evidence from the source. Fabricated evidence is rejected before anything is written. Image evidence cites the image itself, because there is no text to quote.
 - **Asks when the source is ambiguous.** Conflicting requirements become clarifying questions, each with options, a recommended default, and a risk level.
 - **Checks what you already have.** Before proposing, the agent reads the existing graph without changing it. If you already committed a use-case, the new evidence is added to the existing node (shown as `≈ matches`) instead of creating a duplicate.
 
-Extraction stops at the use-case. Scenarios, ACs, and tests are created by the [design engine](/docs/kane-cli-assurance-design/), because each stage can only create its own kinds of item.
+Extraction stops at the use-case. Scenarios, ACs, and tests are created by the [design engine](https://www.testmuai.com/docs/kane-cli-assurance-design), because each stage can only create its own kinds of item.
 
 Flags:
 
@@ -113,11 +113,11 @@ Flags:
 | `--plan` | Stop after the proposal: print it (with `≈ matches` duplicate flags) and commit nothing |
 | `--force` | Extract sources again even if their current snapshot was already extracted |
 | `--source <id>` | Extract only this ingested source instead of the whole corpus |
-| `--mode <mode>` | How a headless run handles questions: `agent` \| `ci` \| `override`. See [Automation](/docs/kane-cli-assurance-automation/) |
+| `--mode <mode>` | How a headless run handles questions: `agent` \| `ci` \| `override`. See [Automation](https://www.testmuai.com/docs/kane-cli-assurance-automation) |
 | `--trust <dial>` | `auto` (the default: new items commit as `derived` and wait for review) \| `hold` (every new item is **held** for your review, and nothing commits until you decide; headless only, and `ci` refuses it). Hold works best one source at a time (`--source <id>`) |
 | `--resume <sid>` | Resume a paused session ([sessions](#sessions)) |
 | `--message "<text>"` | With `--resume`: answer the pending questions in plain words |
-| `--answer <q>=<v>` | With `--resume --mode agent`: answer a pending question by its id. See [Automation](/docs/kane-cli-assurance-automation/) |
+| `--answer <q>=<v>` | With `--resume --mode agent`: answer a pending question by its id. See [Automation](https://www.testmuai.com/docs/kane-cli-assurance-automation) |
 | `--with-source <ref>` | With `--resume`: land this file or URL **first** and set the pending questions aside. The agent reads the new source, then asks again only what is still open |
 
 ### The interactive session
@@ -142,7 +142,7 @@ A three-line status bar sits between the two zones and summarizes the session's 
 
 **Adding a source mid-session.** The **`@` key** (shown in the panel legend when available) opens the attach panel, which has one editor for a path or URL. When you submit, the whole question batch is set aside: nothing is answered and nothing is lost. The source lands and commits, the agent reads it, explains what it settled, and asks again only what is still open. Answers you already gave are pre-filled when it asks again. Only sources **you** provide can land. If the agent invents a path on its own, the ingest refuses (`INGEST_UNAUTHORIZED_REF`) and nothing lands. To do the same thing headless, run `--resume <sid> --with-source <path|url>`.
 
-**A new version of a known source.** If a landed source is a **new version of a source the graph already knows**, Kane CLI does not simply extract it again. Instead, the next check-in offers `review change(s) detected in <source>` as its first row. You can choose `later`, and the offer comes back at each check-in until you take it. Selecting it walks you through the held changes as review cards, the same review that [`maintain reconcile`](/docs/kane-cli-assurance-maintain/) runs. While a source is held for review, a reconcile cannot move its head until that review is done.
+**A new version of a known source.** If a landed source is a **new version of a source the graph already knows**, Kane CLI does not simply extract it again. Instead, the next check-in offers `review change(s) detected in <source>` as its first row. You can choose `later`, and the offer comes back at each check-in until you take it. Selecting it walks you through the held changes as review cards, the same review that [`maintain reconcile`](https://www.testmuai.com/docs/kane-cli-assurance-maintain) runs. While a source is held for review, a reconcile cannot move its head until that review is done.
 
 **Between turns**, the idle panel offers the actions for the current state. Typically these are `looks good — finish the session` (row 1), `design tests for a use-case…` (a picker that runs a design session and then returns to this one), `view the N drafts`, and `✎ tell me what to change`.
 
@@ -297,7 +297,7 @@ Undoes a record's effects by appending a compensation record: created items are 
 | `trusted` | confirmed by a person | approve or edit in review |
 | `archived` | rejected by a person | reject in review |
 
-Freshness is independent of trust. A node is `fresh`, `stale` (the source snapshot moved), `orphaned` (no live source provides evidence for it), or `superseded` (this version was replaced). A stale use-case is still trusted; it only needs to be checked again against the new snapshot, which is what [`kane-cli maintain reconcile`](/docs/kane-cli-assurance-maintain/#reconcile) does.
+Freshness is independent of trust. A node is `fresh`, `stale` (the source snapshot moved), `orphaned` (no live source provides evidence for it), or `superseded` (this version was replaced). A stale use-case is still trusted; it only needs to be checked again against the new snapshot, which is what [`kane-cli maintain reconcile`](https://www.testmuai.com/docs/kane-cli-assurance-maintain#reconcile) does.
 
 ## The store on disk
 
@@ -317,11 +317,11 @@ Freshness is independent of trust. A node is `fresh`, `stale` (the source snapsh
 └── signals.ndjson       # internal review bookkeeping (appears once recorded)
 ```
 
-Two rules from the [overview](/docs/kane-cli-assurance/#store) are worth repeating: the store has a **single writer**, and it is **never merged with git**.
+Two rules from the [overview](https://www.testmuai.com/docs/kane-cli-assurance#store) are worth repeating: the store has a **single writer**, and it is **never merged with git**.
 
 When Kane CLI creates the store inside a git repository, it adds `.context/` to your `.gitignore`. `kane-cli context ingest`, `kane-cli context clone` and `kane-cli context sync doctor --export` all do this, and say `added .context/ to .gitignore` once. If the line cannot be written, the store is still created and `warning: could not add .context/ to .gitignore: <reason>` explains why; add the line yourself in that case. Set `KANE_CONTEXT_GITIGNORE=0` to stop Kane CLI from adding it.
 
-To share the store with your team, bind it to a **location** (a GitHub repository, an S3-compatible bucket, or a folder on a shared drive) and use `kane-cli context push`, `kane-cli context pull`, `kane-cli context sync` and `kane-cli context clone`. See [Sharing the context graph with your team](/docs/kane-cli-assurance-sharing/). A teammate who pulls your records gets the same use-cases, cited lines, and review verdicts you committed, without ingesting anything again.
+To share the store with your team, bind it to a **location** (a GitHub repository, an S3-compatible bucket, or a folder on a shared drive) and use `kane-cli context push`, `kane-cli context pull`, `kane-cli context sync` and `kane-cli context clone`. See [Sharing the context graph with your team](https://www.testmuai.com/docs/kane-cli-assurance-sharing). A teammate who pulls your records gets the same use-cases, cited lines, and review verdicts you committed, without ingesting anything again.
 
 `.context/sync/` holds the files sharing adds: the location list (which contains no secrets), a backup and a receipt for every rebase, and the location's state for this machine.
 
@@ -331,11 +331,11 @@ Every extract and design run prints a `trace: <path>` line with the path to its 
 
 ## For agents and CI
 
-[Agents and CI](/docs/kane-cli-assurance-automation/) documents headless extraction (`--mode agent|ci|override`), the NDJSON event stream, exit codes, and how pausing and resuming work. A pipeline that works on a shared store clones it once, pulls before each run, and pushes after. The sync commands use the same stream; see [the sync verbs on the stream](/docs/kane-cli-assurance-automation/#the-sync-verbs-on-the-stream). For the CI setup, see [CI/CD](/docs/kane-cli-cicd/#a-shared-context-store-in-ci).
+[Agents and CI](https://www.testmuai.com/docs/kane-cli-assurance-automation) documents headless extraction (`--mode agent|ci|override`), the NDJSON event stream, exit codes, and how pausing and resuming work. A pipeline that works on a shared store clones it once, pulls before each run, and pushes after. The sync commands use the same stream; see [the sync verbs on the stream](https://www.testmuai.com/docs/kane-cli-assurance-automation#the-sync-verbs-on-the-stream). For the CI setup, see [CI/CD](https://www.testmuai.com/docs/kane-cli-cicd#a-shared-context-store-in-ci).
 
 ## Sharing a context store
 
-For location setup, sync, pull, push, clone, and recovering from a rebase, see [Sharing the context graph with your team](/docs/kane-cli-assurance-sharing/).
+For location setup, sync, pull, push, clone, and recovering from a rebase, see [Sharing the context graph with your team](https://www.testmuai.com/docs/kane-cli-assurance-sharing).
 
 ## Lifecycle automation contracts
 
@@ -345,10 +345,10 @@ For location setup, sync, pull, push, clone, and recovering from a rebase, see [
 
 ## Next steps
 
-- [Requirement sources](/docs/kane-cli-assurance-sources/): every accepted file type and remote URL.
-- [Designing tests](/docs/kane-cli-assurance-design/): turn a trusted use-case into ACs, scenarios, and runnable tests.
-- [Maintaining the suite](/docs/kane-cli-assurance-maintain/): what to do when a source changes.
-- [Sharing the context graph with your team](/docs/kane-cli-assurance-sharing/): one location for publishing, taking your teammates' records, and cloning, and what happens when two people change the same thing.
-- [Automation](/docs/kane-cli-assurance-automation/): how headless runs behave.
+- [Requirement sources](https://www.testmuai.com/docs/kane-cli-assurance-sources): every accepted file type and remote URL.
+- [Designing tests](https://www.testmuai.com/docs/kane-cli-assurance-design): turn a trusted use-case into ACs, scenarios, and runnable tests.
+- [Maintaining the suite](https://www.testmuai.com/docs/kane-cli-assurance-maintain): what to do when a source changes.
+- [Sharing the context graph with your team](https://www.testmuai.com/docs/kane-cli-assurance-sharing): one location for publishing, taking your teammates' records, and cloning, and what happens when two people change the same thing.
+- [Automation](https://www.testmuai.com/docs/kane-cli-assurance-automation): how headless runs behave.
 
 <KaneCliCta />

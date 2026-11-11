@@ -128,7 +128,7 @@ Validation failures (bad inputs, an unknown source, the fork guard) arrive on th
 
 `maintain evolve --mode agent` uses the same envelope with `verb: "evolve"`. Requires Kane CLI 0.8.21 or later.
 
-The first call states the blast radius (the scenario and test pairs the re-design would affect) and pauses on a question. The next call answers it with `--answer evolve:<use-case>=1` (proceed) or `--answer evolve:<use-case>=2` (decline); the words `proceed` and `decline` also work. See [Maintaining the suite](/docs/kane-cli-assurance-maintain/#evolve) for what evolve does.
+The first call states the blast radius (the scenario and test pairs the re-design would affect) and pauses on a question. The next call answers it with `--answer evolve:<use-case>=1` (proceed) or `--answer evolve:<use-case>=2` (decline); the words `proceed` and `decline` also work. See [Maintaining the suite](https://www.testmuai.com/docs/kane-cli-assurance-maintain#evolve) for what evolve does.
 
 | type | payload highlights |
 |---|---|
@@ -225,7 +225,7 @@ There is no auto-approve. These paths land **your** decisions faster; they never
 
 `kane-cli context sync`, `kane-cli context push`, `kane-cli context pull`, `kane-cli context clone` and the subcommands `kane-cli context sync add`, `kane-cli context sync list`, `kane-cli context sync remove`, `kane-cli context sync status` and `kane-cli context sync doctor` all take `--mode agent` and use the same strict envelope with `verb: "sync"`: stdout is NDJSON only, stderr stays empty, and `done` is last. None of them calls the agent or spends credits.
 
-`kane-cli context sync setup` is the one command that needs a terminal. Under `--mode agent` it answers `error{code: TTY_REQUIRED}` and names `kane-cli context sync add` and `kane-cli context clone` as the alternatives. What these commands do is described in [Sharing the context graph with your team](/docs/kane-cli-assurance-sharing/).
+`kane-cli context sync setup` is the one command that needs a terminal. Under `--mode agent` it answers `error{code: TTY_REQUIRED}` and names `kane-cli context sync add` and `kane-cli context clone` as the alternatives. What these commands do is described in [Sharing the context graph with your team](https://www.testmuai.com/docs/kane-cli-assurance-sharing).
 
 | type | payload highlights |
 |---|---|
@@ -281,7 +281,7 @@ $ kane-cli context sync origin --answer h3=keep-theirs --mode agent
 
 `kane-cli context name`, `kane-cli context retire` and `kane-cli context revert` also take `--mode agent`. On success the stream ends with `done`, preceded by a `warning{message}` event for each note the command has (`kane-cli context revert` sends one per note). Every refusal is typed.
 
-**In CI**: clone once, pull before the run, push after it, and stop the job on exit `3`. The maintained recipe is in [CI/CD recipes: A shared context store in CI](/docs/kane-cli-cicd/#a-shared-context-store-in-ci).
+**In CI**: clone once, pull before the run, push after it, and stop the job on exit `3`. The maintained recipe is in [CI/CD recipes: A shared context store in CI](https://www.testmuai.com/docs/kane-cli-cicd#a-shared-context-store-in-ci).
 
 ## Coverage on the stream
 
@@ -305,14 +305,14 @@ These read commands have structured forms:
 - `context explain --json`
 - `context view --json` (the full computed graph payload)
 - `context view --no-open --out graph.html` (renders without opening a browser)
-- `cover --json` and `cover gaps --json` (the nested coverage document; see [Coverage](/docs/kane-cli-assurance-coverage/))
+- `cover --json` and `cover gaps --json` (the nested coverage document; see [Coverage](https://www.testmuai.com/docs/kane-cli-assurance-coverage))
 - `kane-cli context sync status --json` (the relation, the open rebase id and its decisions), `kane-cli context sync list --json` and `kane-cli context sync doctor --json`
 
 ## Headless maintain
 
 - `maintain reconcile --from <file> --source-id <id> --plan` is a safe preview. It records the source change, stages every proposed row into a stored plan, and touches nothing else. It exits `0`. When the source actually changed, the plan path is the last stdout line; an unchanged source stores nothing.
 - `maintain reconcile … --mode override` (or `--mode ci`) applies the plan unattended. ADD and MODIFY rows apply, archiving never happens headless, and `ci` stops the moment a person's judgement is needed (the plan is stored; exit `2`).
-- Re-running the same reconcile command is idempotent: it resumes a pending plan, reports an applied one, and recomputes a superseded one ([details](/docs/kane-cli-assurance-maintain/#running-again)).
+- Re-running the same reconcile command is idempotent: it resumes a pending plan, reports an applied one, and recomputes a superseded one ([details](https://www.testmuai.com/docs/kane-cli-assurance-maintain#running-again)).
 - A bare headless run without an explicit `--mode` refuses with exit `2`. This is by design.
 
 ## A CI shape that works
@@ -334,11 +334,11 @@ kane-cli design tests --use-case uc-checkout --max 8 --mode ci
 kane-cli maintain reconcile --from ./docs/prd.md --source-id prd --plan
 ```
 
-Author and batch the resulting tests with the same CI patterns as any other test. See [testrun](/docs/kane-cli-testrun/) and the [CI/CD recipes](/docs/kane-cli-cicd/).
+Author and batch the resulting tests with the same CI patterns as any other test. See [testrun](https://www.testmuai.com/docs/kane-cli-testrun) and the [CI/CD recipes](https://www.testmuai.com/docs/kane-cli-cicd).
 
 ## Next steps
 
-- [The assurance overview](/docs/kane-cli-assurance/): where each command fits.
-- [Building the context graph](/docs/kane-cli-assurance-context/) · [Designing tests](/docs/kane-cli-assurance-design/) · [Maintaining the suite](/docs/kane-cli-assurance-maintain/).
+- [The assurance overview](https://www.testmuai.com/docs/kane-cli-assurance): where each command fits.
+- [Building the context graph](https://www.testmuai.com/docs/kane-cli-assurance-context) · [Designing tests](https://www.testmuai.com/docs/kane-cli-assurance-design) · [Maintaining the suite](https://www.testmuai.com/docs/kane-cli-assurance-maintain).
 
 <KaneCliCta />

@@ -8,7 +8,7 @@ keywords: ['kane cli sources', 'ingest jira', 'ingest confluence', 'ingest linea
 
 import { KaneCliCta } from "/snippets/KaneCliCta.mdx";
 
-A requirement source is any document Kane CLI saves as a snapshot in the [context graph](/docs/kane-cli-assurance-context/), so that use-cases can be extracted from it and cited back to it. You add sources with `kane-cli context ingest`. When a source changes later, [`maintain reconcile --from`](/docs/kane-cli-assurance-maintain/) accepts the same URLs.
+A requirement source is any document Kane CLI saves as a snapshot in the [context graph](https://www.testmuai.com/docs/kane-cli-assurance-context), so that use-cases can be extracted from it and cited back to it. You add sources with `kane-cli context ingest`. When a source changes later, [`maintain reconcile --from`](https://www.testmuai.com/docs/kane-cli-assurance-maintain) accepts the same URLs.
 
 Kane CLI accepts only the media types listed on this page. Anything else is rejected with `UNSUPPORTED_MEDIA`. Each type has its own size cap, and a larger file is refused with `FILE_TOO_LARGE`.
 
@@ -147,12 +147,12 @@ A Linear page stored in your graph as a **web** source stays a separate source. 
 
 ## Keeping a source current
 
-When a source document changes, use [`kane-cli maintain reconcile`](/docs/kane-cli-assurance-maintain/) instead of a plain re-ingest. Reconcile records the same new version and works out what the change means for your suite, in one step. It accepts the same remote URLs listed on this page.
+When a source document changes, use [`kane-cli maintain reconcile`](https://www.testmuai.com/docs/kane-cli-assurance-maintain) instead of a plain re-ingest. Reconcile records the same new version and works out what the change means for your suite, in one step. It accepts the same remote URLs listed on this page.
 
 ## Next steps
 
-- [Building the context graph](/docs/kane-cli-assurance-context/): ingest, extract, and review.
-- [Maintaining the suite](/docs/kane-cli-assurance-maintain/): what to do when a source changes.
-- [Designing tests](/docs/kane-cli-assurance-design/): turn a trusted use-case into runnable tests.
+- [Building the context graph](https://www.testmuai.com/docs/kane-cli-assurance-context): ingest, extract, and review.
+- [Maintaining the suite](https://www.testmuai.com/docs/kane-cli-assurance-maintain): what to do when a source changes.
+- [Designing tests](https://www.testmuai.com/docs/kane-cli-assurance-design): turn a trusted use-case into runnable tests.
 
 <KaneCliCta />

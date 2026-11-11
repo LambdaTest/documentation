@@ -15,12 +15,12 @@ The device can run in one of three places:
 
 | | Where the device runs | Host requirement | How |
 |---|---|---|---|
-| **Real device** | A real Android or iOS device in the **<BrandName /> cloud** | **Any machine**, no mobile tooling. Your account needs **KaneAI Max** (one real device) or **KaneAI credits + Real Device Plus Automation Cloud** | `kane-cli run … --target android\|ios`, `testmd run`, `testrun run` (local or `--remote`). See [Real Devices](/docs/kane-cli-mobile-real-device/) |
+| **Real device** | A real Android or iOS device in the **<BrandName /> cloud** | **Any machine**, no mobile tooling. Your account needs **KaneAI Max** (one real device) or **KaneAI credits + Real Device Plus Automation Cloud** | `kane-cli run … --target android\|ios`, `testmd run`, `testrun run` (local or `--remote`). See [Real Devices](https://www.testmuai.com/docs/kane-cli-mobile-real-device) |
 | **Local virtual device** | A simulator or emulator on your machine | **macOS on Apple Silicon (arm64)** with Xcode and/or Android Studio | `kane-cli run … --target emulator\|simulator`, `kane-cli testmd run`, `kane-cli testrun run` |
-| **Cloud grid virtual device** | A virtual device on a **HyperExecute macOS host** | **Any machine**: Linux, Windows, Intel or Apple Silicon Mac, no mobile tooling needed. Your TestMu AI plan must include HyperExecute with macOS runners | `kane-cli testrun run … --remote`. See [Remote Runs](/docs/kane-cli-remote-execution/) |
+| **Cloud grid virtual device** | A virtual device on a **HyperExecute macOS host** | **Any machine**: Linux, Windows, Intel or Apple Silicon Mac, no mobile tooling needed. Your TestMu AI plan must include HyperExecute with macOS runners | `kane-cli testrun run … --remote`. See [Remote Runs](https://www.testmuai.com/docs/kane-cli-remote-execution) |
 
 <Note>
-**Local emulator and simulator runs need macOS on Apple Silicon (arm64).** Intel Macs, Linux, and Windows cannot boot the simulator or emulator locally. On those hosts, use a [real device](/docs/kane-cli-mobile-real-device/), or run virtual-device suites on the cloud grid with `--remote`. The setup sections below are for the local virtual-device path. Real devices need no setup beyond `kane-cli login`.
+**Local emulator and simulator runs need macOS on Apple Silicon (arm64).** Intel Macs, Linux, and Windows cannot boot the simulator or emulator locally. On those hosts, use a [real device](https://www.testmuai.com/docs/kane-cli-mobile-real-device), or run virtual-device suites on the cloud grid with `--remote`. The setup sections below are for the local virtual-device path. Real devices need no setup beyond `kane-cli login`.
 </Note>
 
 ## What Mobile Means Here
@@ -241,7 +241,7 @@ On the `desktop` target, Kane CLI ignores the device flags and `--app`.
 
 In the interactive TUI, the first run offers a choice of Desktop, Emulator, or Simulator. You can switch targets with `/mobile` and `/desktop` until you send the first objective. After that, run `/new` before you switch. Run `/doctor` to check your mobile tooling and devices.
 
-For the full flag list, see the [CLI Reference](/docs/kane-cli-cli-reference/#kane-cli-run) and [Mobile Runs](/docs/kane-cli-modes/#mobile-runs). To save a default target, device, and app instead of passing flags every time, see [Configuration](/docs/kane-cli-configuration/#mobile-target). To set the target, app, and device inside a test file, see [Test.md](/docs/kane-cli-testmd/#mobile-target). To run a folder of mobile tests, see [Batch Runs](/docs/kane-cli-testrun/#mobile-members).
+For the full flag list, see the [CLI Reference](https://www.testmuai.com/docs/kane-cli-cli-reference#kane-cli-run) and [Mobile Runs](https://www.testmuai.com/docs/kane-cli-modes#mobile-runs). To save a default target, device, and app instead of passing flags every time, see [Configuration](https://www.testmuai.com/docs/kane-cli-configuration#mobile-target). To set the target, app, and device inside a test file, see [Test.md](https://www.testmuai.com/docs/kane-cli-testmd#mobile-target). To run a folder of mobile tests, see [Batch Runs](https://www.testmuai.com/docs/kane-cli-testrun#mobile-members).
 
 ## Running a Mobile Suite on the Cloud Grid
 
@@ -260,7 +260,7 @@ Three things differ from a local run:
 - **One job runs one platform.** Emulator members run on one Android version, and simulator members run on one HyperExecute pool.
 - **A local build is uploaded from your machine** before the job is sent, and the grid receives it as an `APP…` id.
 
-The prerequisites, the app rules, and what one job can hold are covered in [Remote Runs on the Cloud Grid](/docs/kane-cli-remote-execution/).
+The prerequisites, the app rules, and what one job can hold are covered in [Remote Runs on the Cloud Grid](https://www.testmuai.com/docs/kane-cli-remote-execution).
 
 ## Evidence for a Mobile Run
 
@@ -280,11 +280,11 @@ The result summary records the **device** in the run environment, such as the de
 
 ## Next Steps
 
-- [Real Devices](/docs/kane-cli-mobile-real-device/) to run on real Android and iOS devices from any machine
-- [Remote Runs on the Cloud Grid](/docs/kane-cli-remote-execution/) to run mobile suites from any machine
-- [CLI Reference](/docs/kane-cli-cli-reference/) for the full flag and command list
-- [Configuration](/docs/kane-cli-configuration/) to save a default target, device, and app
-- [Batch Runs](/docs/kane-cli-testrun/) to run a suite of mobile tests
-- [Troubleshooting](/docs/kane-cli-troubleshooting/) for wider setup and run problems
+- [Real Devices](https://www.testmuai.com/docs/kane-cli-mobile-real-device) to run on real Android and iOS devices from any machine
+- [Remote Runs on the Cloud Grid](https://www.testmuai.com/docs/kane-cli-remote-execution) to run mobile suites from any machine
+- [CLI Reference](https://www.testmuai.com/docs/kane-cli-cli-reference) for the full flag and command list
+- [Configuration](https://www.testmuai.com/docs/kane-cli-configuration) to save a default target, device, and app
+- [Batch Runs](https://www.testmuai.com/docs/kane-cli-testrun) to run a suite of mobile tests
+- [Troubleshooting](https://www.testmuai.com/docs/kane-cli-troubleshooting) for wider setup and run problems
 
 <KaneCliCta />

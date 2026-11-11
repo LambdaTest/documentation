@@ -9,12 +9,12 @@ keywords: ['kane cli remote', 'kane cli testrun remote', 'hyperexecute', 'cloud 
 import { KaneCliCta } from "/snippets/KaneCliCta.mdx";
 import { BrandName } from "/snippets/BrandName.mdx";
 
-`kane-cli testrun run --remote` sends a suite of `_test.md` files to <BrandName /> **HyperExecute** instead of running it on your machine. The grid sets up the runtime, runs every test in the suite (each one is a *member*), and streams the job back to your terminal. You get one job, one exit code, one sealed [evidence pack](/docs/kane-cli-evidence/), and the same recordings and evidence as a run on your own machine.
+`kane-cli testrun run --remote` sends a suite of `_test.md` files to <BrandName /> **HyperExecute** instead of running it on your machine. The grid sets up the runtime, runs every test in the suite (each one is a *member*), and streams the job back to your terminal. You get one job, one exit code, one sealed [evidence pack](https://www.testmuai.com/docs/kane-cli-evidence), and the same recordings and evidence as a run on your own machine.
 
 Remote runs cover every kind of test:
 
 - **Web suites** run in **Chrome on a HyperExecute macOS runner**. Your machine or CI runner needs no Chrome, the run is always headless, and `--parallel N` spreads the members across N grid runners.
-- **Mobile suites** (`target: emulator` or `target: simulator`) run on a **virtual Android emulator or iOS simulator on a HyperExecute macOS host**, so you can author and run mobile tests **from any machine**: Linux, Windows, Intel Macs, or a Mac without Xcode or Android Studio. The [macOS Apple Silicon requirement](/docs/kane-cli-mobile/) applies only to emulator and simulator runs on your own machine.
+- **Mobile suites** (`target: emulator` or `target: simulator`) run on a **virtual Android emulator or iOS simulator on a HyperExecute macOS host**, so you can author and run mobile tests **from any machine**: Linux, Windows, Intel Macs, or a Mac without Xcode or Android Studio. The [macOS Apple Silicon requirement](https://www.testmuai.com/docs/kane-cli-mobile) applies only to emulator and simulator runs on your own machine.
 - **Real-device suites** (`target: android` or `target: ios`) run on **real devices in the <BrandName /> cloud**, driven from a **HyperExecute Linux runner**. See [Real-Device Suites on the Grid](#real-device-suites-on-the-grid).
 
 ```bash
@@ -34,7 +34,7 @@ kane-cli testrun run --match '^tests/devices/' --remote --parallel 2            
 | You need | Why | How to check |
 |---|---|---|
 | A <BrandName /> plan that includes **HyperExecute**, with **macOS runner concurrency** for web, emulator, and simulator suites, or **Linux runner concurrency** for real-device suites | Every remote run is a HyperExecute job | Ask your account owner, or open the HyperExecute dashboard for your organisation |
-| For real-device suites: **KaneAI Max** (one real device) or **KaneAI credits + Real Device Plus Automation Cloud** | The devices come from your real-device plan | See [Real Devices: Plan Requirements](/docs/kane-cli-mobile-real-device/#plan-requirements) |
+| For real-device suites: **KaneAI Max** (one real device) or **KaneAI credits + Real Device Plus Automation Cloud** | The devices come from your real-device plan | See [Real Devices: Plan Requirements](https://www.testmuai.com/docs/kane-cli-mobile-real-device#plan-requirements) |
 | The `remote-execution` plugin | It owns the HyperExecute binary kane-cli dispatches with | `kane-cli plugin install remote-execution`, then `kane-cli plugin doctor remote-execution` |
 | A <BrandName /> **username and access key** | HyperExecute authenticates with basic auth. An OAuth profile is exchanged for them automatically; otherwise pass `--username` and `--access-key` | `kane-cli whoami` |
 | A project directory that **contains the tests** | The current directory is zipped and shipped as the job payload | Run from the repository root, or any parent of the tests |
@@ -44,7 +44,7 @@ The run uploads to the project and folder configured on your profile (`kane-cli 
 
 ## How a remote run works
 
-1. **Preflight, then remote preflight.** Kane CLI builds the normal `testrun` plan (one organisation, one project, see [Preflight](/docs/kane-cli-testrun/#preflight)). It then checks that the selection fits in **one grid job** (see [What one job can hold](#what-one-job-can-hold)) and, for mobile, looks up the device in the grid catalog. If anything is wrong, the run stops here with exit `2` and nothing is dispatched.
+1. **Preflight, then remote preflight.** Kane CLI builds the normal `testrun` plan (one organisation, one project, see [Preflight](https://www.testmuai.com/docs/kane-cli-testrun#preflight)). It then checks that the selection fits in **one grid job** (see [What one job can hold](#what-one-job-can-hold)) and, for mobile, looks up the device in the grid catalog. If anything is wrong, the run stops here with exit `2` and nothing is dispatched.
 2. **Payload.** Kane CLI zips the current directory, respecting `.gitignore`, and uploads it with a generated job definition. Dispatching leaves `.hyperexecute/`, `hyperexecute-cli.log`, and `.updatedhyperexecute.yaml` in that directory. They are not inputs, so add them to `.gitignore`.
 3. **On the grid** (a macOS runner, or a Linux runner for real-device suites), a setup step installs Kane CLI and logs in with your credentials and project. For mobile, it also installs the device tooling and boots the device. Then **each member runs as its own `kane-cli testmd run`**, headless, exactly as it would on your machine. A member with recordings replays them. A member without recordings is authored on the grid.
 4. **Back to you.** The job streams its progress and the dashboard link to your terminal. When it ends, the members' `output-<stem>/` recordings and the sealed evidence pack are downloaded into your project, and the pack is published to Test Manager. The suite summary and exit code match a local `testrun`.
@@ -104,7 +104,7 @@ Each row shows a device **name** and the **OS versions** available for it. Selec
 |---|---|
 | `--device-name "<name>"` | The name exactly as the catalog prints it (`"Pixel 7"`, `"iPhone 15"`). Validated before dispatch |
 | `--os-version <v>` | The OS version (`14`, `17.5`). On its own, it means any catalog device running that version |
-| `device_name:` or `os_version:` in a `_test.md` | Per-test defaults, used when the flags are absent. See [Mobile target](/docs/kane-cli-testmd/#mobile-target) |
+| `device_name:` or `os_version:` in a `_test.md` | Per-test defaults, used when the flags are absent. See [Mobile target](https://www.testmuai.com/docs/kane-cli-testmd#mobile-target) |
 
 Kane CLI resolves each test's device on your machine. It picks the device name and the OS version separately, each in this order:
 
@@ -130,7 +130,7 @@ The two platforms assign devices differently:
 
 `target: android` and `target: ios` tests run on real devices in the <BrandName /> cloud. The job runs on a **HyperExecute Linux runner**, and each member opens its own device session, so:
 
-- `--parallel N` runs N members at once, up to the real devices your plan allows. A session beyond that queues for up to 15 minutes (see [Plan Requirements](/docs/kane-cli-mobile-real-device/#plan-requirements)).
+- `--parallel N` runs N members at once, up to the real devices your plan allows. A session beyond that queues for up to 15 minutes (see [Plan Requirements](https://www.testmuai.com/docs/kane-cli-mobile-real-device#plan-requirements)).
 - Android and iOS real-device members can share one job.
 - A job cannot mix real-device members with web, emulator, or simulator members (`mobile_remote_mixed`).
 
@@ -163,7 +163,7 @@ Before you dispatch a real-device suite, check these rules:
 - **`--device-slug` is refused** for real devices.
 - **Adaptive heal is off** on real devices, so a failed replay step fails the test.
 
-For the TUI, live view, settings, and limits on real devices, see [Real Devices](/docs/kane-cli-mobile-real-device/).
+For the TUI, live view, settings, and limits on real devices, see [Real Devices](https://www.testmuai.com/docs/kane-cli-mobile-real-device).
 
 ## The app under test on the grid
 
@@ -208,7 +208,7 @@ Each reason comes with the paths that caused it, both in the terminal and in a `
 
 ## When a remote run fails
 
-- **A member failed or broke** (exit `1`): read it like any other failure. `output-<stem>/Result.md` names the failing step and reason, and the evidence pack has the screenshots and logs. See [Debugging from a Pack](/docs/kane-cli-evidence-debugging/).
+- **A member failed or broke** (exit `1`): read it like any other failure. `output-<stem>/Result.md` names the failing step and reason, and the evidence pack has the screenshots and logs. See [Debugging from a Pack](https://www.testmuai.com/docs/kane-cli-evidence-debugging).
 - **A member is `broken` with no steps** and nothing was published: Kane CLI on the grid refused to start. Open the job link and read the scenario stage log. For mobile, the usual cause is an `APP…` id that belongs to a different organisation than the account running the job.
 - **Nothing was dispatched** (exit `2`): the printed reason is one of the preflight codes above. Run `kane-cli plugin doctor remote-execution` to see whether the plugin, binary, or login is missing.
 
@@ -234,11 +234,11 @@ kane-cli testrun run --match '^tests/devices/' --remote --parallel 2 \
   --username "$LT_USERNAME" --access-key "$LT_ACCESS_KEY"
 ```
 
-Archive `.testmuai/evidence/*.evidence` as the build artifact. More pipeline shapes are in [CI/CD](/docs/kane-cli-cicd/).
+Archive `.testmuai/evidence/*.evidence` as the build artifact. More pipeline shapes are in [CI/CD](https://www.testmuai.com/docs/kane-cli-cicd).
 
 ## For agents: NDJSON events
 
-In agent or non-TTY mode, a remote run wraps the normal `testrun_*` stream in additional typed events (see [For agents](/docs/kane-cli-testrun/#for-agents-ndjson-events)):
+In agent or non-TTY mode, a remote run wraps the normal `testrun_*` stream in additional typed events (see [For agents](https://www.testmuai.com/docs/kane-cli-testrun#for-agents-ndjson-events)):
 
 | `type` | Payload | Notes |
 |---|---|---|
@@ -264,11 +264,11 @@ When you parse the stream of a dispatched run, keep reading after `testrun_done`
 
 ## Next Steps
 
-- [Batch Runs (testrun)](/docs/kane-cli-testrun/) for selection, preflight, flags and exit codes
-- [Mobile Testing](/docs/kane-cli-mobile/) for setup on your own machine, or skip it with `--remote`
-- [Real Devices](/docs/kane-cli-mobile-real-device/) for real Android and iOS devices, plans, live view and limits
-- [Writing test.md files](/docs/kane-cli-testmd/#mobile-target) for `target:`, `app:`, `device_name:` and `os_version:`
-- [Evidence Packs](/docs/kane-cli-evidence/) for what comes back and how to view it
-- [CI/CD](/docs/kane-cli-cicd/) for pipeline patterns, including runners with no Chrome
+- [Batch Runs (testrun)](https://www.testmuai.com/docs/kane-cli-testrun) for selection, preflight, flags and exit codes
+- [Mobile Testing](https://www.testmuai.com/docs/kane-cli-mobile) for setup on your own machine, or skip it with `--remote`
+- [Real Devices](https://www.testmuai.com/docs/kane-cli-mobile-real-device) for real Android and iOS devices, plans, live view and limits
+- [Writing test.md files](https://www.testmuai.com/docs/kane-cli-testmd#mobile-target) for `target:`, `app:`, `device_name:` and `os_version:`
+- [Evidence Packs](https://www.testmuai.com/docs/kane-cli-evidence) for what comes back and how to view it
+- [CI/CD](https://www.testmuai.com/docs/kane-cli-cicd) for pipeline patterns, including runners with no Chrome
 
 <KaneCliCta />

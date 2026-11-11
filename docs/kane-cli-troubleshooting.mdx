@@ -9,7 +9,7 @@ keywords: ['kane cli troubleshooting', 'kaneai errors', 'testmu ai', 'chrome fai
 import { BrandName } from "/snippets/BrandName.mdx";
 import { KaneCliCta } from "/snippets/KaneCliCta.mdx";
 
-This page lists common problems with Kane CLI, what causes them, and how to fix them. If you are new to the CLI, start with [Installation](/docs/kane-cli-installation/) and [Getting Started](/docs/kane-cli-getting-started/). For setup questions, see [Configuration](/docs/kane-cli-configuration/) and [Authentication](/docs/kane-cli-authentication/).
+This page lists common problems with Kane CLI, what causes them, and how to fix them. If you are new to the CLI, start with [Installation](https://www.testmuai.com/docs/kane-cli-installation) and [Getting Started](https://www.testmuai.com/docs/kane-cli-getting-started). For setup questions, see [Configuration](https://www.testmuai.com/docs/kane-cli-configuration) and [Authentication](https://www.testmuai.com/docs/kane-cli-authentication).
 
 ## Log Locations
 
@@ -21,7 +21,7 @@ Before diagnosing, know where to look:
 | Evidence pack (step logs, screenshots, console and network logs, failure records) | `~/.testmuai/kaneai/sessions/<session-id>/evidence/<execution_id>.evidence` |
 | All sessions | `~/.testmuai/kaneai/sessions/` |
 
-Run logs are stored only in the evidence pack. A `.evidence` file is a plain zip, so you can `unzip` it and read the logs directly, even without the viewer. See [Inside the pack](/docs/kane-cli-evidence-pack-structure/) for its layout.
+Run logs are stored only in the evidence pack. A `.evidence` file is a plain zip, so you can `unzip` it and read the logs directly, even without the viewer. See [Inside the pack](https://www.testmuai.com/docs/kane-cli-evidence-pack-structure) for its layout.
 
 In Agent Mode, the `run_end` event includes `session_dir`, the directory that holds the session log and the sealed evidence pack. The event also includes `run_dir`, a legacy per-run path. Step logs and screenshots are inside the evidence pack.
 
@@ -45,12 +45,12 @@ Kane CLI manages a Chrome process for you and connects to it over the Chrome Dev
    ```bash
    lsof -i :9222-9230
    ```
-3. Pick a different Chrome user-data directory, or quit the Chrome instance currently using it. See [Chrome Management](/docs/kane-cli-configuration/#chrome-management) for how Kane CLI chooses and configures the profile.
+3. Pick a different Chrome user-data directory, or quit the Chrome instance currently using it. See [Chrome Management](https://www.testmuai.com/docs/kane-cli-configuration#chrome-management) for how Kane CLI chooses and configures the profile.
 4. If you only need to connect to your own already-running Chrome, start it with `--remote-debugging-port=9222` and pass `--cdp-endpoint` to `kane-cli run`:
    ```bash
    kane-cli run "..." --cdp-endpoint http://127.0.0.1:9222
    ```
-5. On a slow runner, raise the readiness timeout with `KANE_CLI_CDP_TIMEOUT_MS` (milliseconds, default `30000`), the retry count with `KANE_CLI_CDP_RETRIES` (default `2`; `0` means a single attempt), or both. A missing or invalid binary fails immediately and is *not* retried, so retries help only when Chrome is temporarily slow to start. See [Chrome environment variables](/docs/kane-cli-configuration/#chrome-environment-variables).
+5. On a slow runner, raise the readiness timeout with `KANE_CLI_CDP_TIMEOUT_MS` (milliseconds, default `30000`), the retry count with `KANE_CLI_CDP_RETRIES` (default `2`; `0` means a single attempt), or both. A missing or invalid binary fails immediately and is *not* retried, so retries help only when Chrome is temporarily slow to start. See [Chrome environment variables](https://www.testmuai.com/docs/kane-cli-configuration#chrome-environment-variables).
 
 ### "CDP endpoint not reachable"
 
@@ -217,7 +217,7 @@ A run times out when it reaches its time limit. It ends with a max-steps error w
 
 ### "Variables not resolving": `{{key}}` appears literally
 
-A run **warns before it starts** when an authored step references a `{{name}}` that has no value. The warning lists each variable, the file waiting for its value (or `Not in any variables file`), and the step that uses it. The run then goes ahead and types the name as written. Read the warning first. It tells you whether to fill an existing key or add a new one, and in which file. See [Before a run](/docs/kane-cli-variables-and-context/#before-a-run-unresolved-variables).
+A run **warns before it starts** when an authored step references a `{{name}}` that has no value. The warning lists each variable, the file waiting for its value (or `Not in any variables file`), and the step that uses it. The run then goes ahead and types the name as written. Read the warning first. It tells you whether to fill an existing key or add a new one, and in which file. See [Before a run](https://www.testmuai.com/docs/kane-cli-variables-and-context#before-a-run-unresolved-variables).
 
 If a `{{my_var}}` placeholder appears **literally** in a browser action, one of three things is true:
 
@@ -229,7 +229,7 @@ If a `{{my_var}}` placeholder appears **literally** in a browser action, one of 
 
 **Fix:**
 1. **JSON syntax.** Variable files are JSON. A missing comma or unquoted key causes the file to be skipped silently.
-2. **File location.** Variable files must be in one of the directories Kane CLI scans. Confirm yours is in the right place. See [loading order](/docs/kane-cli-variables-and-context/#loading-order) for the exact precedence.
+2. **File location.** Variable files must be in one of the directories Kane CLI scans. Confirm yours is in the right place. See [loading order](https://www.testmuai.com/docs/kane-cli-variables-and-context#loading-order) for the exact precedence.
 3. **Inline test.** Bypass file loading entirely by passing the variable on the command line:
    ```bash
    kane-cli run "log in as {{user}}" \
@@ -251,7 +251,7 @@ If a `{{my_var}}` placeholder appears **literally** in a browser action, one of 
 If `kane-cli run` ends with exit status 2 and prints nothing to stdout or stderr after the first startup lines, one of two things is usually the cause:
 
 1. **Authentication or setup is missing.** This is the common case on a new machine. Run `kane-cli whoami`. If it reports "not configured", run `kane-cli login` again (or pass `--username` / `--access-key` in non-interactive environments). See also ["Authentication failed"](#authentication-failed-exit-code-2) above.
-2. **Kane CLI was installed with an unsupported package manager**, most often **pnpm**. pnpm stores packages in a nested `node_modules/.pnpm/` directory, and Kane CLI does not search that layout for its bundled `v16-runner` binary. The CLI stops before it can print a useful error. [Issue #24](https://github.com/LambdaTest/kane-cli/issues/24) tracks this limitation. To work around it, reinstall with one of the supported methods listed in [Install with pnpm or yarn](/docs/kane-cli-installation/#install-with-pnpm-or-yarn).
+2. **Kane CLI was installed with an unsupported package manager**, most often **pnpm**. pnpm stores packages in a nested `node_modules/.pnpm/` directory, and Kane CLI does not search that layout for its bundled `v16-runner` binary. The CLI stops before it can print a useful error. [Issue #24](https://github.com/LambdaTest/kane-cli/issues/24) tracks this limitation. To work around it, reinstall with one of the supported methods listed in [Install with pnpm or yarn](https://www.testmuai.com/docs/kane-cli-installation#install-with-pnpm-or-yarn).
 
 To see the underlying error instead of a silent exit, run the same command again with `KANE_DEV_MODE=1`:
 
@@ -272,7 +272,7 @@ In dev mode, setup failures and failures to find the runner print an explanation
 **Fix:**
 1. **Authentication.** Check `kane-cli whoami` and log in again if needed. The Test Manager upload needs a valid token (or basic auth) for the configured environment.
 2. **Network connectivity.** The upload connects to the <BrandName /> control plane and a cloud storage endpoint. Make sure a proxy or firewall is not blocking outbound HTTPS.
-3. **Project and folder.** If `kane-cli config show` reports an empty `project_id`, you do not need to do anything: Kane CLI picks a default project on the first run. To upload to a specific project or folder, set it with `kane-cli config project <id>` / `kane-cli config folder <id>` (use `kane-cli projects list` / `kane-cli folders list` to find IDs), or pick one in the TUI. If a configured project was deleted or renamed, Kane CLI detects it and picks a default instead. An invalid ID typed by mistake is handled the same way. See [Test Manager Integration](/docs/kane-cli-tms-integration/) for the full behavior.
+3. **Project and folder.** If `kane-cli config show` reports an empty `project_id`, you do not need to do anything: Kane CLI picks a default project on the first run. To upload to a specific project or folder, set it with `kane-cli config project <id>` / `kane-cli config folder <id>` (use `kane-cli projects list` / `kane-cli folders list` to find IDs), or pick one in the TUI. If a configured project was deleted or renamed, Kane CLI detects it and picks a default instead. An invalid ID typed by mistake is handled the same way. See [Test Manager Integration](https://www.testmuai.com/docs/kane-cli-tms-integration) for the full behavior.
 
 ---
 
@@ -364,13 +364,13 @@ There are two other triggers:
 
 If PNG screenshots are fine for you, no action is needed.
 
-For every cause, the step-by-step fixes, and how to verify, see [Install fails with "sharp: Please add node-addon-api"](/docs/kane-cli-troubleshooting-sharp/).
+For every cause, the step-by-step fixes, and how to verify, see [Install fails with "sharp: Please add node-addon-api"](https://www.testmuai.com/docs/kane-cli-troubleshooting-sharp).
 
 ---
 
 ## Mobile Issues
 
-Local mobile runs are supported on **macOS Apple Silicon (arm64) only**. On other hosts, run mobile suites on the cloud grid with `kane-cli testrun run --remote`. See [Running a Mobile Suite on the Cloud Grid](/docs/kane-cli-mobile/#running-a-mobile-suite-on-the-cloud-grid).
+Local mobile runs are supported on **macOS Apple Silicon (arm64) only**. On other hosts, run mobile suites on the cloud grid with `kane-cli testrun run --remote`. See [Running a Mobile Suite on the Cloud Grid](https://www.testmuai.com/docs/kane-cli-mobile#running-a-mobile-suite-on-the-cloud-grid).
 
 For any local mobile problem, start with `doctor`. It prints one line for each required check, with a fix for each one that fails. `doctor` checks one target at a time, so pass `--target`:
 
@@ -388,7 +388,7 @@ kane-cli devices list --target emulator
 
 The common setup failures for each platform, and their fixes, are listed on the mobile testing page:
 
-- [Mobile testing common failures](/docs/kane-cli-mobile/#common-failures)
+- [Mobile testing common failures](https://www.testmuai.com/docs/kane-cli-mobile#common-failures)
 
 ---
 
@@ -396,20 +396,20 @@ The common setup failures for each platform, and their fixes, are listed on the 
 
 Kane CLI checks the public npm registry for a newer release of `@testmuai/kane-cli` once every 24 hours. It caches the result locally, so the check never blocks you and fails silently. When a newer version exists, Kane CLI shows an "update available" notice with the current and latest versions and a severity label (`major`, `minor`, or `patch`).
 
-The notice is for your information only, and your current version keeps working. To upgrade, follow the steps in [Updates](/docs/kane-cli-installation/#update).
+The notice is for your information only, and your current version keeps working. To upgrade, follow the steps in [Updates](https://www.testmuai.com/docs/kane-cli-installation#update).
 
 ---
 
 ## Debugging a failed run with its evidence pack
 
-Every run seals an [evidence pack](/docs/kane-cli-evidence/) that holds everything you need to diagnose a failure. In short:
+Every run seals an [evidence pack](https://www.testmuai.com/docs/kane-cli-evidence) that holds everything you need to diagnose a failure. In short:
 
 1. Open the pack: accept the post-run "View evidence in browser?" offer, or run `kane-cli evidence serve <pack>` and open the printed `viewer` URL.
 2. Go to the failed step and read its **failure record**: the error and the page state at the moment of failure.
 3. Check the step's **console and network logs**. A 4xx/5xx response or a JS error there usually explains it.
 4. Compare the **annotated screenshot** (what the agent acted on) against what you expected.
 
-The full walkthrough is in [Evidence packs → Debugging a failed run from its pack](/docs/kane-cli-evidence-debugging/), and the pack's file layout is in [Inside the pack](/docs/kane-cli-evidence-pack-structure/). Run logs are stored only in the pack. A `.evidence` file is a plain zip, so you can `unzip` it and read the logs directly, even without the viewer. If a pack does not open in the viewer, run `kane-cli evidence validate <pack>`. A truncated or unsealed pack reports as invalid, but the session directory's `tui.log` still has the session narrative.
+The full walkthrough is in [Evidence packs → Debugging a failed run from its pack](https://www.testmuai.com/docs/kane-cli-evidence-debugging), and the pack's file layout is in [Inside the pack](https://www.testmuai.com/docs/kane-cli-evidence-pack-structure). Run logs are stored only in the pack. A `.evidence` file is a plain zip, so you can `unzip` it and read the logs directly, even without the viewer. If a pack does not open in the viewer, run `kane-cli evidence validate <pack>`. A truncated or unsealed pack reports as invalid, but the session directory's `tui.log` still has the session narrative.
 
 For batch runs, `testrun` members run silently by default. Set `KANE_TESTRUN_MEMBER_DEBUG=1` to send each member's output to stderr, prefixed with `[member]`.
 
@@ -421,7 +421,7 @@ There are three different situations. Tell them apart by the exit code and by wh
 - **Exit `1` with recordings and a pack.** The job ran and a member failed. Debug it like a failure on your own machine: `output-<stem>/Result.md` names the step and reason, and the pack has the screenshots and logs (next section).
 - **A member reported `broken` with no steps, and nothing was published.** Kane CLI on the grid refused before launching. Open the printed job link and read the scenario stage's log. For mobile members, the usual cause is an `APP…` id that belongs to a different organisation than the account running the job. Run `kane-cli apps list --target <kind>` for the active profile to see which app ids that account owns. The members' session logs are also under `~/.testmuai/kaneai/sessions/remote/<job-id>/`.
 
-Full reference: [Remote Runs](/docs/kane-cli-remote-execution/).
+Full reference: [Remote Runs](https://www.testmuai.com/docs/kane-cli-remote-execution).
 
 ---
 
@@ -436,7 +436,7 @@ Full reference: [Remote Runs](/docs/kane-cli-remote-execution/).
 | `org_mismatch` | The test belongs to a different organisation than the other members. | Check identities with `kane-cli testmd status <path>`. |
 | `project_mismatch` | The test belongs to a different project than the other members. | Same check; run project-by-project, or re-home the test. |
 
-Use `kane-cli testrun run --dry-run …` to see the full plan and every failing test without running anything. See [Batch runs with testrun](/docs/kane-cli-testrun/#preflight).
+Use `kane-cli testrun run --dry-run …` to see the full plan and every failing test without running anything. See [Batch runs with testrun](https://www.testmuai.com/docs/kane-cli-testrun#preflight).
 
 ---
 
@@ -451,7 +451,7 @@ error: This location needs Git 2.31 or newer.
 next: Install or update Git, then run setup again: https://git-scm.com/downloads
 ```
 
-Install Git from the link, or update it (`brew install git`, `apt-get install git`, or the Windows installer). Open a new terminal, check that `git --version` reports 2.31 or newer, and run the same command again. On a CI runner, add a Git install step before Kane CLI. Folder and S3-compatible locations do not need Git at all. See [Sharing the context graph](/docs/kane-cli-assurance-sharing/#locations).
+Install Git from the link, or update it (`brew install git`, `apt-get install git`, or the Windows installer). Open a new terminal, check that `git --version` reports 2.31 or newer, and run the same command again. On a CI runner, add a Git install step before Kane CLI. Folder and S3-compatible locations do not need Git at all. See [Sharing the context graph](https://www.testmuai.com/docs/kane-cli-assurance-sharing#locations).
 
 ## Context sync: a location cannot be reached or refuses you
 
@@ -501,14 +501,14 @@ To resolve it:
 3. Or close the rebase: `kane-cli context sync doctor --abort` keeps what was already reapplied and leaves the unanswered records in the backup. If the rebase was interrupted before it imported origin's records, the same command undoes it and puts the store back as it was. Once the import has landed, the rebase can only be finished (`SYNC_RESET_IMPORTED`): run `kane-cli context sync` or `kane-cli context pull` to finish it, then close it if you still want to. `kane-cli context sync doctor --export <dir>` rebuilds the store as it was before the rebase, as a separate store in `<dir>`.
 
 <Warning>
-Never delete files under `.context/` to get past the refusal. See [When two people changed the same thing](/docs/kane-cli-assurance-sharing/#rebase).
+Never delete files under `.context/` to get past the refusal. See [When two people changed the same thing](https://www.testmuai.com/docs/kane-cli-assurance-sharing#rebase).
 </Warning>
 
 ## Context sync: publication could not be confirmed
 
 A `kane-cli context push` to a GitHub location can lose the server's reply after the upload, for example through a dropped connection or a proxy timeout. Because the batch may have landed, Kane CLI does not guess. It refuses with `SYNC_PUBLICATION_UNKNOWN` (exit `2`). Your store is unchanged and nothing needs to be redone.
 
-Check connectivity and run the **same** command again. It reads the location first and reconciles what actually landed. A batch that arrived is recognised as already there and is never published twice, and a batch that did not arrive is published now. Do not run anything else until this command has finished. If a proxy rejects large uploads, `KANE_SYNC_GIT_HTTP_POST_BUFFER=33554432` raises Git's upload buffer for that command. For a very slow link, allow more time with `KANE_SYNC_GIT_TRANSFER_TIMEOUT_SECONDS`. See [Context sync environment variables](/docs/kane-cli-configuration/#context-sync-environment-variables).
+Check connectivity and run the **same** command again. It reads the location first and reconciles what actually landed. A batch that arrived is recognised as already there and is never published twice, and a batch that did not arrive is published now. Do not run anything else until this command has finished. If a proxy rejects large uploads, `KANE_SYNC_GIT_HTTP_POST_BUFFER=33554432` raises Git's upload buffer for that command. For a very slow link, allow more time with `KANE_SYNC_GIT_TRANSFER_TIMEOUT_SECONDS`. See [Context sync environment variables](https://www.testmuai.com/docs/kane-cli-configuration#context-sync-environment-variables).
 
 ---
 

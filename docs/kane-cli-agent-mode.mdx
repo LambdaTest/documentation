@@ -95,7 +95,7 @@ Kane CLI checks every `{{name}}` in the objective before the run starts. If a na
 {"type":"warning","code":"unresolved_variables","message":"2 variable(s) have no value — typed as written unless a step sets them first","suggested_file":".testmuai/variables/variables.json","variables":[{"name":"checkout_url","reason":"not_declared","used_by":[{"file":"objective","step":1}]},{"name":"login_password","reason":"value_missing","file":".testmuai/variables/variables.json","used_by":[{"file":"objective","step":1}]}]}
 ```
 
-`reason` is `value_missing`, `not_declared`, or `not_a_dataset_column`. The warning does not change the exit code. See [Unresolved variables](/docs/kane-cli-modes/#unresolved-variables) for what each reason means and which names are never checked.
+`reason` is `value_missing`, `not_declared`, or `not_a_dataset_column`. The warning does not change the exit code. See [Unresolved variables](https://www.testmuai.com/docs/kane-cli-modes#unresolved-variables) for what each reason means and which names are never checked.
 
 ---
 
@@ -139,8 +139,8 @@ Kane CLI checks every `{{name}}` in the objective before the run starts. If a na
 | `test_url` | Link to the test case in <BrandName /> Test Manager. Present when the upload succeeded |
 | `session_dir` | The session folder. The sealed evidence pack is in its `evidence/` subfolder |
 | `run_dir` | Legacy. The folder it names is no longer created: run logs and screenshots are in the evidence pack |
-| `result_code` | Optional machine classification of the result. See [Error Codes](/docs/kane-cli-error-codes/). With `--bug-detection`, a confirmed product bug arrives as `result_code` `740` with a `verdict` object |
-| `condition_results` | `--analyzer-only` runs only: `boolean[]`, one verdict per `--condition`, in order. See [Assertion controls and current-page analysis](/docs/kane-cli-modes/#assertion-controls-and-current-page-analysis) |
+| `result_code` | Optional machine classification of the result. See [Error Codes](https://www.testmuai.com/docs/kane-cli-error-codes). With `--bug-detection`, a confirmed product bug arrives as `result_code` `740` with a `verdict` object |
+| `condition_results` | `--analyzer-only` runs only: `boolean[]`, one verdict per `--condition`, in order. See [Assertion controls and current-page analysis](https://www.testmuai.com/docs/kane-cli-modes#assertion-controls-and-current-page-analysis) |
 
 ---
 
@@ -153,7 +153,7 @@ Kane CLI checks every `{{name}}` in the objective before the run starts. If a na
 | `2` | The run did not start, and no credits were used: sign-in, configuration, no start URL, Chrome, network, or an unknown subcommand. There may be no `run_end` line |
 | `3` | The run was canceled or hit `--timeout` |
 
-`testmd run`, `testrun run`, `generate`, and the assurance commands have their own exit codes. See [CLI Reference: Exit Codes](/docs/kane-cli-cli-reference/#exit-codes).
+`testmd run`, `testrun run`, `generate`, and the assurance commands have their own exit codes. See [CLI Reference: Exit Codes](https://www.testmuai.com/docs/kane-cli-cli-reference#exit-codes).
 
 ---
 
@@ -173,7 +173,7 @@ Every run seals an evidence pack: one `.evidence` file, a standard zip, that hol
 evidence: view locally with `kane-cli evidence serve <path-to-pack>`
 ```
 
-`kane-cli evidence serve` serves sealed packs from your machine to the hosted viewer and uploads nothing. See [Evidence Packs](/docs/kane-cli-evidence/) and [How to Debug a Failed Kane CLI Run](/docs/kane-cli-evidence-debugging/).
+`kane-cli evidence serve` serves sealed packs from your machine to the hosted viewer and uploads nothing. See [Evidence Packs](https://www.testmuai.com/docs/kane-cli-evidence) and [How to Debug a Failed Kane CLI Run](https://www.testmuai.com/docs/kane-cli-evidence-debugging).
 
 ---
 
@@ -214,7 +214,7 @@ Always check the process exit code too: an early refusal, an invalid plan, or a 
 
 Progress events are meant for live display. When you count completions, count only `done` and `failed`. Step indices can repeat, so keep track of which child agent and execution each event belongs to.
 
-`testrun run` prints its NDJSON stream when stdin is not a TTY, or when you pass `--agent`. See [Batch runs (testrun)](/docs/kane-cli-testrun/#for-agents-ndjson-events).
+`testrun run` prints its NDJSON stream when stdin is not a TTY, or when you pass `--agent`. See [Batch runs (testrun)](https://www.testmuai.com/docs/kane-cli-testrun#for-agents-ndjson-events).
 
 ---
 
@@ -257,11 +257,11 @@ To cancel:
 
 ## Next Steps
 
-- [Error Codes](/docs/kane-cli-error-codes/): Complete reference of `result_code` values and recommended actions
-- [Evidence Packs](/docs/kane-cli-evidence/): What every run captures and how to view it
-- [Parallel Execution](/docs/kane-cli-parallel-execution/): Run multiple tests concurrently
-- [Skills](/docs/kane-cli-skills/): Install the Kane CLI skill for Claude, Codex, or Gemini
-- [CLI Reference](/docs/kane-cli-cli-reference/): Full flag and command reference
+- [Error Codes](https://www.testmuai.com/docs/kane-cli-error-codes): Complete reference of `result_code` values and recommended actions
+- [Evidence Packs](https://www.testmuai.com/docs/kane-cli-evidence): What every run captures and how to view it
+- [Parallel Execution](https://www.testmuai.com/docs/kane-cli-parallel-execution): Run multiple tests concurrently
+- [Skills](https://www.testmuai.com/docs/kane-cli-skills): Install the Kane CLI skill for Claude, Codex, or Gemini
+- [CLI Reference](https://www.testmuai.com/docs/kane-cli-cli-reference): Full flag and command reference
 - [Skill parsing reference](https://github.com/LambdaTest/kane-cli/blob/main/skill-installer/skills/references/parsing.md): The NDJSON schema the Kane CLI skill follows
 
 <KaneCliCta />

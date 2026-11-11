@@ -10,7 +10,7 @@ import { KaneCliCta } from "/snippets/KaneCliCta.mdx";
 
 A browser check is most useful when it runs without anyone asking for it: on every pull request, before every deploy, and on a schedule against production. These use cases put Kane CLI into that loop, so a broken flow stops a merge or a deploy and the evidence for the failure is attached to the job.
 
-Every Kane CLI command returns a standard exit code, `0` passed, `1` failed, `2` an auth, setup, or parse error, and `3` a timeout or cancellation, so any CI system can act on the result. See [CI/CD Integration](/docs/kane-cli-cicd/) for GitHub Actions, GitLab CI, Jenkins, Bitbucket Pipelines, and Docker.
+Every Kane CLI command returns a standard exit code, `0` passed, `1` failed, `2` an auth, setup, or parse error, and `3` a timeout or cancellation, so any CI system can act on the result. See [CI/CD Integration](https://www.testmuai.com/docs/kane-cli-cicd) for GitHub Actions, GitLab CI, Jenkins, Bitbucket Pipelines, and Docker.
 
 ## Gate a deploy on browser flows
 
@@ -60,7 +60,7 @@ A deploy that passes unit tests can still ship a checkout that never loads. In t
 5. Open the uploaded evidence pack when a flow fails, to see the failing step's screenshot, console log, and network log.
 
 <Tip>
-For a shorter setup, use the official GitHub Action, `LambdaTest/kane-cli/integrations/github-action/kane-cli-browser-run@main`. It installs everything, runs an objective or a glob of `_test.md` files, uploads the evidence, and posts the verdict on the pull request. See [GitHub Actions](/docs/kane-cli-cicd/#platform-guides).
+For a shorter setup, use the official GitHub Action, `LambdaTest/kane-cli/integrations/github-action/kane-cli-browser-run@main`. It installs everything, runs an objective or a glob of `_test.md` files, uploads the evidence, and posts the verdict on the pull request. See [GitHub Actions](https://www.testmuai.com/docs/kane-cli-cicd#platform-guides).
 </Tip>
 
 ## Monitor production flows on a schedule
@@ -198,7 +198,7 @@ The cheapest place to catch a broken flow is on the machine that broke it. In th
 
 2. Add it to `package.json` as `"verify:create-project": "./verify.sh"`, so anyone on the team, or a coding agent, runs it the same way.
 3. Run it against your local server before you push. The script exits with Kane CLI's exit code, so a failure stops a pre-push hook.
-4. Tell your coding agent the rule once, for example *"Run npm run verify:create-project before you open a PR, and don't open it if the check fails."* See [AI Coding Agents](/docs/kane-cli-with-ai-coding-agents/#pre-commit-and-pre-pr-smoke-checks).
+4. Tell your coding agent the rule once, for example *"Run npm run verify:create-project before you open a PR, and don't open it if the check fails."* See [AI Coding Agents](https://www.testmuai.com/docs/kane-cli-with-ai-coding-agents#pre-commit-and-pre-pr-smoke-checks).
 5. Run the same script in CI, so the local result and the pipeline result come from one command.
 
 ## Run a suite in parallel with one exit code
@@ -211,7 +211,7 @@ Looping over test files in a shell script gives you many exit codes and many evi
 4. Preview the plan without running anything using `--dry-run`.
 5. Archive `.testmuai/evidence/*.evidence` as the job artifact, so anyone can open the run in the hosted viewer.
 
-See [Batch Runs](/docs/kane-cli-testrun/) for every flag.
+See [Batch Runs](https://www.testmuai.com/docs/kane-cli-testrun) for every flag.
 
 ## Move the suite to the cloud grid
 
@@ -222,13 +222,13 @@ A CI runner without Chrome, Xcode, or Android Studio can still run your browser 
 3. Run a mobile suite from a Linux runner by adding a grid device, for example `--remote --device-name "Pixel 7" --os-version 14`. List the devices the grid can provide with `kane-cli devices list --target emulator --remote`.
 4. Keep web and mobile tests in separate runs, and allow a timeout of about ten minutes for the first job.
 
-See [Remote Runs on the Cloud Grid](/docs/kane-cli-remote-execution/) for plan requirements and limits.
+See [Remote Runs on the Cloud Grid](https://www.testmuai.com/docs/kane-cli-remote-execution) for plan requirements and limits.
 
 ## Next steps
 
-- [CI/CD Integration](/docs/kane-cli-cicd/): platform guides for GitHub Actions, GitLab CI, Jenkins, Bitbucket, and Docker
-- [Regression & E2E Testing](/docs/kane-cli-regression-e2e-testing/): build the suite these pipelines run
-- [Evidence](/docs/kane-cli-evidence/): open and share the evidence pack from a failed job
-- [Exit Codes](/docs/kane-cli-modes/#exit-codes): the full mapping
+- [CI/CD Integration](https://www.testmuai.com/docs/kane-cli-cicd): platform guides for GitHub Actions, GitLab CI, Jenkins, Bitbucket, and Docker
+- [Regression & E2E Testing](https://www.testmuai.com/docs/kane-cli-regression-e2e-testing): build the suite these pipelines run
+- [Evidence](https://www.testmuai.com/docs/kane-cli-evidence): open and share the evidence pack from a failed job
+- [Exit Codes](https://www.testmuai.com/docs/kane-cli-modes#exit-codes): the full mapping
 
 <KaneCliCta />
