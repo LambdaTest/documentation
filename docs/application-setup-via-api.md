@@ -260,6 +260,35 @@ Upload a publicly hosted app with the `url` field for either a real or virtual d
 The upload time of your application can range from a few seconds to a minute, depending on the size of your application. Therefore, do not interrupt the cURL command request until you receive the response.
 :::
 
+### Run a test using the custom_id
+
+If you set a `custom_id` when you upload an app, you can use it in your test in place of the `lt://APP…` URL. You do not need to copy the app URL from the upload response into your test.
+
+**Step 1: Upload the app with a `custom_id`.**
+
+<div className="lambdatest__codeblock">
+<CodeBlock className="language-bash">
+{`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "appFile=@/Users/macuser/Downloads/proverbial_android.apk" -F "custom_id=Proverbial_1.0"`}
+</CodeBlock>
+</div>
+
+**Step 2: Read the app URL from the response.** The upload response is a **JSON** object. The app URL is returned in the `app_url` field, in the format `lt://APP123456789123456789`. {/* TODO(PM): confirm the exact name of the response field. */}
+
+**Step 3: Use the `custom_id` in your test.** Set the `app` capability to your `custom_id` instead of the app URL.
+
+```javascript
+"lt:options": {
+    "platformName": "Android",
+    "deviceName": "Galaxy A33 5G",
+    "platformVersion": "13",
+    "app": "Proverbial_1.0",
+    "isRealMobile": true,
+}
+```
+{/* TODO(PM): confirm that the app capability accepts a custom_id value, and whether the custom_id points to the latest upload of that app. */}
+
+Use the app URL from Step 2 if you want to pin a test to one specific upload.
+
 ### Fetch your Applications for Real Devices
 
 Retrieve a list of the apps you have uploaded for real devices, by platform.
