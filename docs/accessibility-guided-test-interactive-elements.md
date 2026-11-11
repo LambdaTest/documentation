@@ -98,3 +98,4 @@ With **Verify with AI** on, AI reads the name of each control and decides whethe
 - [Keyboard Guided Test](/support/docs/accessibility-guided-test-keyboard/)
 - [Images Guided Test](/support/docs/accessibility-guided-test-images/)
 - [Hover and Tooltips Guided Test](/support/docs/accessibility-guided-test-hover-tooltips/)
+- [Forms Guided Test](/support/docs/accessibility-guided-test-forms/)
