@@ -20,29 +20,6 @@ canonical: https://www.testmuai.com/support/docs/hyperexecute-winapp-integration
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Integration with Products",
-          "item": `${BRAND_URL}/support/docs/hyperexecute-winapp-integration/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -301,22 +278,3 @@ testRunnerCommand:  mvn `-Dplatname=win `-Dmaven.repo.local=m2_cache_dir `-Dtest
 
 You can now run your Excel tests on HyperExecute. Happy testing!
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-       Microsoft Excel
-      </span>
-    </li>
-  </ul>
-</nav>

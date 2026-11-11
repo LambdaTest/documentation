@@ -20,29 +20,6 @@ canonical: https://www.testmu.ai/support/docs/run-oxygen-automation-scripts-on-t
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "TestMu AI",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Oxygen TestMu AI Integration",
-          "item": `${BRAND_URL}/support/docs/ranorex-integration-with-lambdatest/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -138,16 +115,3 @@ You can also Capture Browser Console, Capture Network Logs, Take Screenshots, an
 
 Kudos! That is all you need to do for integrating your Oxygen framework with <BrandName /> Selenium Grid. Now, as you run the test, it would be executed over the Selenium Grid offered by <BrandName />, which would enable you to ensure a sturdy cross browser compatible web-application.
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href={BRAND_URL}>Home</a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="/support/docs/">Support</a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">Oxygen <BrandName /> Integration</span>
-    </li>
-  </ul>
-</nav>

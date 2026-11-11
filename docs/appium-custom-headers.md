@@ -269,22 +269,3 @@ X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions.
 X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions.
 ```
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-      CustomHeaders  
-      </span>
-    </li>
-  </ul>
-</nav>

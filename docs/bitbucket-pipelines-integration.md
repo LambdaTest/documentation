@@ -17,29 +17,6 @@ canonical: https://www.testmuai.com/support/docs/bitbucket-pipelines-integration
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "TestMu AI",
-          "item": "https://www.testmuai.com/"
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Bitbucket Pipelines Integration With TestMu AI",
-          "item": `${BRAND_URL}/support/docs/bitbucket-pipelines-integration-with-testmu/`
-        },{
-          "@type": "ListItem",
-          "position": 4,
-          "name": "Bitbucket Integration",
-          "item": `${BRAND_URL}/support/docs/bitbucket-integration/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -229,16 +206,3 @@ For running test in parallel, replace the run command from **single** to **paral
 
 **With:** npm run parallel
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href={BRAND_URL}>Home</a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="/support/docs/">Support</a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">Bitbucket Pipelines Integration</span>
-    </li>
-  </ul>
-</nav>

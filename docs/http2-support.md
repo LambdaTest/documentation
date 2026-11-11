@@ -112,22 +112,3 @@ With the tunnel running, any HTTP/2 traffic between your local development envir
 
 The inherent support for HTTP/2 in <BrandName /> Tunnel is a testament to <BrandName />'s commitment to providing developers and QA professionals with cutting-edge tools for web application testing. By automating the proxying of HTTP/2 traffic, <BrandName /> Tunnel ensures that users can effortlessly test their applications in environments that utilize the latest web protocols, leading to faster, more reliable web applications.
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href={BRAND_URL}>
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-        HTTP/2 Protocol
-      </span>
-    </li>
-  </ul>
-</nav>

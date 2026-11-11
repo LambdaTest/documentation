@@ -20,29 +20,6 @@ import CookieTrackingLogin, { CookieTrackingSignup } from '@site/src/component/C
 import VerifiedTag from '@site/src/component/verifiedTag';
 
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Generate Multiple Lighthouse Reports Using Lambda Hooks",
-          "item": `${BRAND_URL}/support/docs/generate-multiple-lighthouse-reports/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -255,22 +232,3 @@ Continue with these related guides:
 - [Lambda Hooks](/support/docs/lambda-hooks/)
 - [Selenium Automation Capabilities](/support/docs/selenium-automation-capabilities/)
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-        How to Generate Multiple Lighthouse Reports in Selenium
-      </span>
-    </li>
-  </ul>
-</nav>

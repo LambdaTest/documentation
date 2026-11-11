@@ -22,29 +22,6 @@ canonical: https://www.testmuai.com/support/docs/automated-screenshot-api-for-cr
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Automated Screenshot API For Cross Browser Testing",
-          "item": `${BRAND_URL}/support/docs/automated-screenshot-api-for-cross-browser-testing/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -576,22 +553,3 @@ Client URL: curl -X PUT "https://api.lambdatest.com/screenshots/v1/stop/TES10096
 
 > **Note:** This will terminate only a running test session. Providing a TestID of an already completed test session will provide you with a 404 error as the server response.
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-       Automated Screenshot API For Cross Browser Testing
-      </span>
-    </li>
-  </ul>
-</nav>

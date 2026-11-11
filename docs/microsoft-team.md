@@ -17,29 +17,6 @@ canonical: https://www.testmu.ai/support/docs/microsoft-teams-app/
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "TestMu AI",
-          "item": "https://www.testmuai.com/"
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": "https://www.testmuai.com/support/"
-        },{
-          "@type": "ListItem",
-          "position": 4,
-          "name": "Microsoft Teams App Integration",
-          "item": `${BRAND_URL}/support/docs/microsoft-teams-app/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -258,18 +235,3 @@ After few seconds, you’ll receive the confirmation message stating- *'You have
 
 > That’s all about <BrandName />+Microsoft Teams App integration. If you have any questions or require any further information, you can reach out to us at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat portal**</span> or drop us a mail at support@testmuai.com.
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href={BRAND_URL}>Home</a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="/support/docs/microsoft-teams-app/">Microsoft Teams App Integration</a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-        Microsoft Teams App Integration
-      </span>
-    </li>
-  </ul>
-</nav>

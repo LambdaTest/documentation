@@ -17,29 +17,6 @@ canonical: https://www.testmuai.com/support/docs/upload-custom-chrome-profile/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Upload Custom Chrome Profile",
-          "item": `${BRAND_URL}/support/docs/upload-custom-chrome-profile/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -202,22 +179,3 @@ Review these constraints before uploading your custom Chrome profile.
 
 * Ensure that you compress the exact profile folder. Compressing the parent folder or a subfolder causes the functionality to fail.
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-        Upload Custom Chrome Profile
-      </span>
-    </li>
-  </ul>
-</nav>

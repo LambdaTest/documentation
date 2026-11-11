@@ -23,29 +23,6 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "App Automation: Regular Expression",
-          "item": `${BRAND_URL}/support/docs/regular-expression-appium/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -148,22 +125,3 @@ Imagine you want to run a test on an iPhone. You don't need a specific model, ju
 You can pass both `deviceName` and `platformVersion` regex patterns together or use any one of them as per your requirements. This flexibility allows you to match specific devices, versions, or combinations based on your needs.
 :::
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-       Regular Expression
-      </span>
-    </li>
-  </ul>
-</nav>

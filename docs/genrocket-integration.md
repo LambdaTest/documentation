@@ -17,29 +17,6 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import CookieTrackingLogin, { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "GenRocket Integration",
-          "item": `${BRAND_URL}/support/docs/genrocket-integration/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -257,22 +234,3 @@ cp ******Profile.grp /home/ltuser/.genrocket
 
 To learn more about HyperExecute visit our [documentation](/support/docs/getting-started-with-hyperexecute/) or contact our support team from the in app support section.
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href={BRAND_URL}>
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-        GenRocket Integration
-      </span>
-    </li>
-  </ul>
-</nav>

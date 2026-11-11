@@ -21,29 +21,6 @@ canonical: https://www.testmuai.com/support/docs/jenkins-with-testmu/
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "TestMu AI",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Jenkins Plugin",
-          "item": `${BRAND_URL}/support/docs/jenkins-with-testmu/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -259,16 +236,3 @@ Kudos! You successfully executed your Selenium test suite using Jenkins with <Br
 - [Integrate TestMu AI With Jenkins Freestyle Project](/support/docs/integrating-testmu-with-jenkins-freestyle-project/)
 - [Integrating TestMu AI Report With Jenkins Pipeline](/support/docs/integrating-testmu-report-with-jenkins-pipeline/)
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href={BRAND_URL}>Home</a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_ self" href={`${BRAND_URL}/support/docs/`}>Support</a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">Jenkins Plugin</span>
-    </li>
-  </ul>
-</nav>

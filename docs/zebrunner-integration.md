@@ -18,29 +18,6 @@ canonical: https://www.testmu.ai/support/docs/zebrunner-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "TestMu AI",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Zebrunner Integration",
-          "item": `${BRAND_URL}/support/docs/zebrunner-integration/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -156,16 +133,3 @@ Not only this, but you can also confirm the test environment configuration, view
 >
 Kudos! Now you can deploy your code in a reliable & faster manner at scale, using <BrandName /> integration with Zebrunner, and perform automated cross browser testing with our cloud based online Selenium Grid. If you still have any questions, feel free to share them with us through our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24*7 Chat Portal**</span> or by mailing to us on [**support@testmuai.com**](mailto:support@testmuai.com). <br /> Happy testing!
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href={BRAND_URL}>Home</a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_ self" href={`${BRAND_URL}/support/docs/`}>Support</a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">Zebrunner Integration With <BrandName />’s Cloud Based Selenium Grid</span>
-    </li>
-  </ul>
-</nav> 

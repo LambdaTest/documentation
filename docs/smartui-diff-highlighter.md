@@ -19,29 +19,6 @@ canonical: https://www.testmuai.com/support/docs/smartui-diff-highlighter/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Diff Highlighter & Navigation",
-          "item": `${BRAND_URL}/support/docs/smartui-diff-highlighter/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -234,16 +211,3 @@ To use diff navigation and highlight, ensure the screenshot is compared with **S
 - [Layout Testing](/support/docs/smartui-layout-testing) — Compare layout structure (diff navigation for this mode coming later).
 - [View comparison and issues](/support/docs/smart-visual-testing#view-comparison-and-issues) — Basics of the comparison view.
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href={BRAND_URL}>Home</a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="/support/docs/">Support</a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">Diff Highlighter & Navigation</span>
-    </li>
-  </ul>
-</nav>

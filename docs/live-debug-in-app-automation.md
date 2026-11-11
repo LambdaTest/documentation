@@ -24,29 +24,6 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Live Debug Your App Automation Tests",
-          "item": `${BRAND_URL}/support/docs/live-debug-in-app-automation/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -141,22 +118,3 @@ With features like real-time navigation, detailed UI element inspection, and the
 
 >**Note:**  The extended UI inspector is designed for the specific app in the script and does not support inspecting multiple apps, as each script is intended for testing a single app for focused efficiency.
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-       Live Debug Your App Automation Tests
-      </span>
-    </li>
-  </ul>
-</nav>

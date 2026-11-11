@@ -16,28 +16,6 @@ slug: kane-cli-checkpoints/
 canonical: https://www.testmuai.com/support/docs/kane-cli-checkpoints/
 ---
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://www.testmuai.com"
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": "https://www.testmuai.com/support/docs/"
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Checkpoints",
-          "item": "https://www.testmuai.com/support/docs/kane-cli-checkpoints/"
-        }]
-      }) }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

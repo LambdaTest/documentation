@@ -18,29 +18,6 @@ canonical: https://www.testmu.ai/support/docs/testmu-grid-configuration/
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "TestMu AI",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Selenium Grid Configuration",
-          "item": `${BRAND_URL}/support/docs/lambdatest-grid-configuration`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -123,22 +100,3 @@ Review the current driver versions, HUB URI, port, and default settings for the 
 | Default Idle Timeout        | 120 seconds<br/>[Want to change Idle Timeout?](https://www.testmuai.com/capabilities-generator/)                |
 | Default Screen Resolution   | 1024x768<br/>[Want to change Resolution?](https://www.testmuai.com/capabilities-generator/)                     |
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href={BRAND_URL}>
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-        Selenium Grid Configuration
-      </span>
-    </li>
-  </ul>
-</nav>

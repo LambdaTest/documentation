@@ -24,29 +24,6 @@ canonical: https://www.testmu.ai/support/docs/plugins-and-extensions/
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "TestMu AI",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Plugin And Extensions",
-          "item": `${BRAND_URL}/support/docs/plugins-and-extensions/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -159,16 +136,3 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 **Got something to recommend?**  
 We would love to hear it. Drop the suggestion in the <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> for any plugin that you may want us to integrate with.
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href={BRAND_URL}>Home</a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_ self" href={`${BRAND_URL}/support/docs/`}>Support</a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">Plugin And Extensions</span>
-    </li>
-  </ul>
-</nav>

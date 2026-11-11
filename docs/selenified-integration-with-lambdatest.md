@@ -163,17 +163,4 @@ That is all you need to tweak to run your Selenified tests on <BrandName /> Sele
 [2]: https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com
 [3]: mailto:support%40lambdatest.com
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href={BRAND_URL}>Home</a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="/support/docs/testmu-running-your-first-selenium-test/">Automation Testing</a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">Selenified Integration With <BrandName /></span>
-    </li>
-  </ul>
-</nav>
   

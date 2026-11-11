@@ -189,22 +189,3 @@ View detailed analytics for your HyperExecute test runs.
 
 For details about HyperExecute Analytics, refer to our tutorial - [HyperExecute Analytics Modules](/support/docs/analytics-modules-hyperexecute/).
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-        Debugging Options for Automation Testing on TestMu AI
-      </span>
-    </li>
-  </ul>
-</nav>

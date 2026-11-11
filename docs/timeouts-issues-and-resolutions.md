@@ -18,29 +18,6 @@ canonical: https://www.testmu.ai/support/docs/timeouts-issues-and-resolutions/
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Timeouts - Errors and Resolutions",
-          "item": `${BRAND_URL}/support/docs/timeouts-issues-and-resolutions/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -180,22 +157,3 @@ If you work within an organization that has an active firewall setup to help emp
 
 Browse `https://hub.lambdatest.com/wd/hub/session` to validate whether your network has restricted access to TestMu AI. It should return some response. For example: **```{"status":404,"value":{"message":"method not allowed"}}```** If **no response** is received from TestMu AI, **you may need to whitelist this host from your URL firewall.**
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-        Timeouts - Errors and Resolutions
-      </span>
-    </li>
-  </ul>
-</nav>

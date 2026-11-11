@@ -26,29 +26,6 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-       "@type": "BreadcrumbList",
-       "itemListElement": [{
-         "@type": "ListItem",
-         "position": 1,
-         "name": "TestMu AI",
-         "item": BRAND_URL
-       },{
-         "@type": "ListItem",
-         "position": 2,
-         "name": "Support",
-         "item": `${BRAND_URL}/support/docs/`
-       },{
-         "@type": "ListItem",
-         "position": 3,
-         "name": "UI Testing with Maestro",
-         "item": `${BRAND_URL}/support/docs/hyperexecute-smart-ui-maestro/`
-       }]
-     })
-   }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -387,20 +364,3 @@ After the HyperExecute job is finished, all screenshots captured using the `take
 3.  Here, you can compare screenshots against the baseline, highlight differences, and approve or reject changes. You can use features like Smart Ignore to mask dynamic areas for more stable comparisons.
 
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">SmartUI App SDK</span>
-    </li>
-  </ul>
-</nav>

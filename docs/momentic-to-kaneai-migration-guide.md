@@ -27,29 +27,6 @@ import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Momentic to KaneAI migration",
-          "item": `${BRAND_URL}/support/docs/momentic-to-kaneai-migration-guide/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -392,25 +369,6 @@ The response returns links to the HyperExecute jobs. For apps on localhost or be
 - **Visual baselines.** Momentic `visualDiff` golden files do not move. A KaneAI Visual Comparison step captures a new baseline on its first run. <!-- Source: https://momentic.ai/docs/reference/commands/index, checked 2026-10-16 -->
 - **Emulators in KaneAI test runs.** Virtual Mobile configurations are for non-KaneAI test runs only. Use Kane CLI for emulator and simulator runs.
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-       Momentic To KaneAI Migration
-      </span>
-    </li>
-  </ul>
-</nav>
 
 ## Related migration guides
 

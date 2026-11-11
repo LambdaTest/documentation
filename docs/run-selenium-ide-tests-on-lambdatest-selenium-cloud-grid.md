@@ -23,34 +23,6 @@ canonical: https://www.testmu.ai/support/docs/run-selenium-ide-tests-on-testmu-s
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "TestMu AI",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Codeless Automation Tools",
-          "item": `${BRAND_URL}/support/docs/integrations-with-codeless-automation-tools/`
-        },{
-          "@type": "ListItem",
-          "position": 4,
-          "name": "Running Selenium IDE Tests",
-          "item": `${BRAND_URL}/support/docs/run-selenium-ide-tests-on-testmu-selenium-cloud-grid/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -290,16 +262,3 @@ selenium-side-runner --params "a='example-value' a.b='another example-value' a.b
 
 Congrats! We have successfully executed our Selenium IDE tests on <BrandName /> Selenium Cloud Grid, which allows you to perform live interactive and automated [cross browser testing](https://www.testmuai.com) on 3000+ real browsers and operating systems online.
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href={BRAND_URL}>Home</a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="/support/docs/">Support</a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">Running Selenium IDE Tests</span>
-    </li>
-  </ul>
-</nav>
