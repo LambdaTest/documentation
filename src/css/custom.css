@@ -3048,3 +3048,10 @@ h6[id]::before {
   font-size: 13px;
   font-weight: 700;
 }
+@media (prefers-reduced-motion: reduce) {
+  .onprem-steps__card,
+  .onprem-steps__card:hover {
+    transition: none;
+    transform: none;
+  }
+}

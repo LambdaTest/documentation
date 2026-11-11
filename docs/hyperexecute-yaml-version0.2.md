@@ -187,7 +187,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         "text": "---\nversion: 0.2\nrunson: win\n\nautosplit: true\nconcurrency: 2\n\npre:\n  # Skip execution of the tests in the pre step\n  - mvn dependency:resolve\n\nframework:\n  name: maven/testng\n  flags:\n    - \"-Dplatname=win\"\n  discoveryFlags: [\"-Dgroups=selenium-test\"]\n  runnerFlags: [\"-Dgroups=database\"]\n  discoveryType: method\n  discoveryMode: remote\n  workingDirectory: src/main\n  defaultReports: false\n  args:\n    region: ap\n    language: es\n    locale: es\n    mitmProxy: true\n\nretryOnFailure: true\nmaxRetries: 1\n\npost:\n  - ls target/surefire-reports/\n\nmergeArtifacts: true\nuploadArtefacts:\n - name: ExecutionSnapshots\n   path:\n    - target/surefire-reports/html/**"
       }
     ],
-    "dateModified": "2026-09-09T19:10:37+05:30"
+    "dateModified": "2026-11-11T14:00:00+05:30"
   }) }}
 />
 This version introduces several new features and improvements over Version 0.1. This documentation outlines the changes and provides guidance on when to use Version 0.2 instead of Version 0.1.
@@ -199,7 +199,7 @@ This version introduces several new features and improvements over Version 0.1. 
 :::
 
 :::info On-premise deployments
-On-prem, use `runson: linux` or `runson: win` and set `discoveryMode: remote`. See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/).
+On-prem, use `runson: linux` or `runson: win` and set `discoveryMode: remote`. See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/#step-4-prepare-your-yaml).
 :::
 
 ## Why to use HyperExecute YAML Version 0.2?

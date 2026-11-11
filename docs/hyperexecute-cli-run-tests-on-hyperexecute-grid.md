@@ -285,7 +285,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         "text": "  env | grep CI # Used to check if the CI variable is set to true or not\n  set CI=true # If it's not set to true, then use this command to set as true"
       }
     ],
-    "dateModified": "2026-09-09T19:10:37+05:30"
+    "dateModified": "2026-11-11T14:00:00+05:30"
   }) }}
 />
 `HyperExecute CLI` is a command line interface that is required to run your End-to-End (E2E) testing on HyperExecute. This page outlines all you need to know about the CLI and also explains about the different flags & functionalities supported by the HyperExecute CLI.
@@ -631,13 +631,13 @@ You can track the progress of your uploaded jobs with HyperExecute. However, thi
 ***
 
 ### `--onprem-host`
-Use this flag when your organization runs HyperExecute on-premise. It sends the job to your own deployment instead of the public cloud. Pass the host name only, with no `https://` and no path.
+Use this flag when your organization runs HyperExecute on-premise. It sends the job to your own deployment instead of the public cloud. Pass the host name only, with no `https://` and no path. Use the value your admin gives you.
 
 ```bash
 --onprem-host hyperexecute.example.com
 ```
 
-On your on-prem dashboard, **Help** > **Hyperexecute CLI** shows the full command with your host filled in. See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/).
+On your on-prem dashboard, **Help** > **Hyperexecute CLI** shows the full command for your deployment. See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/).
 
 ***
 
@@ -845,7 +845,7 @@ Add `--onprem-host` with the host name of your deployment. Your YAML must use `t
 ./hyperexecute --user <YOUR_USERNAME> --key <YOUR_ACCESS_KEY> --config RELATIVE_PATH_OF_YOUR_YAML_FILE --onprem-host <YOUR_ONPREM_HOST>
 ```
 
-You do not need to type it. On your on-prem dashboard, open **Help** > **Hyperexecute CLI**. The panel has the CLI downloads and a **Test execution command** with your username, access key and host already filled in.
+You do not need to type it. On your on-prem dashboard, open **Help** > **Hyperexecute CLI**. The panel has the CLI downloads and a **Test execution command** for your deployment. Replace any placeholder in it, such as the access key or YAML path, with your own value.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/on-prem/cli-command-panel.webp').default} alt="On-premise Hyperexecute CLI panel with download buttons and a ready-to-copy command that includes --onprem-host" className="doc_img"/>
 

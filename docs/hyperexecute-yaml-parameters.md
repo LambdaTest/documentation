@@ -71,14 +71,14 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-09T19:10:37+05:30"
+    "dateModified": "2026-11-11T14:00:00+05:30"
   }) }}
 />
 
 The **HyperExecute YAML** file serves as the foundational component for test execution within the HyperExecute Platform. The subsequent list enumerates the diverse configuration options supported by HyperExecute YAML, providing you with the flexibility to tailor test execution according to the specific requirements of your project.
 
 :::info On-premise deployments
-On-prem runs Linux and Windows only, so `mac` values do not apply, and `testDiscovery` must use `mode: remote`. See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/).
+On-prem runs Linux and Windows only, so `mac` values do not apply, and `testDiscovery` must use `mode: remote`. See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/#step-4-prepare-your-yaml).
 :::
 
 ## Mandatory Parameters

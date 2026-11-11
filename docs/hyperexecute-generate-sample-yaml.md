@@ -82,7 +82,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         "text": "---\nversion: 0.1\nrunson: linux\n\nautosplit: true\nconcurrency: 2\n\npre:\n  - mvn dependency:resolve\n\ntestDiscovery:\n  type: raw\n  mode: static\n  command: grep 'test name' xml/testng_linux.xml | awk '{print$2}' | sed 's/name=//g' | sed 's/>//g'\n\ntestRunnerCommand: mvn test -Dplatname=linux -Dmaven.repo.local=./.m2 dependency:resolve -DselectedTests=$test\n\nretryOnFailure: true\nmaxRetries: 1\n\njobLabel: [selenium-testng, linux, v1, autosplit]"
       }
     ],
-    "dateModified": "2026-09-09T19:10:37+05:30"
+    "dateModified": "2026-11-11T14:00:00+05:30"
   }) }}
 />
 You can also generate the HyperExecute YAML directly from the HyperExecute Portal. To accomplish this, follow the below mentioned steps:
@@ -102,7 +102,7 @@ You can also generate the HyperExecute YAML directly from the HyperExecute Porta
 > HyperExecute supports multiple languages and testing frameworks. See the comprehensive list & samples [here](/support/docs/hyperexecute-supported-languages-and-frameworks/).
 
 :::info On-premise deployments
-On your organization's own HyperExecute dashboard, open the generator from **Help** > **Generate YAML**. On-prem deployments run on Linux and Windows only, so set `runson` to a Linux or Windows value, such as `linux` or `win`. Do not use `mac` or `mac13`. See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/).
+On-prem deployments run on Linux and Windows only, so set `runson` to a Linux or Windows value, such as `linux` or `win`. Do not use `mac` or `mac13`. See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/#step-4-prepare-your-yaml).
 :::
 
 ## Sample HyperExecute YAML

@@ -75,7 +75,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-09T19:10:37+05:30"
+    "dateModified": "2026-11-11T14:00:00+05:30"
   }) }}
 />
 
@@ -171,10 +171,6 @@ Follow these steps to configure connected workflows in HyperExecute:
 You can link this workflow to other existing workflows within the same project or across other projects you own. Once this workflow completes successfully, it can automatically trigger the linked workflows, enabling seamless execution across stages. To set this up, simply select the projects and workflows you wish to trigger from the available list. This feature allows you to build automated, end-to-end workflow chains, ideal for orchestrating complex testing and deployment pipelines.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/test-chains/2.png').default} alt="Image" className="doc_img"/>
-
-:::info On-premise deployments
-On-prem, select both the target project (**Select Project**) and the target workflow (**Select Workflow**) before you click **Finish**. See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/).
-:::
 
 ## Conclusion
 HyperExecute’s Test Chain feature significantly enhances the automation of testing processes by creating logical dependencies between workflows. This feature allows for a more efficient, error-free testing pipeline that ensures quality software with minimal manual intervention.
