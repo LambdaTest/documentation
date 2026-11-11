@@ -26,16 +26,11 @@ For your mobile app test session, network throttling can be set up in advance by
 
 You can select desired Network setting & your session will start with that setting.
 
-### Honoring the Network setting
-If you want to honor the Network settings in the Authoring session too:
+### Applying the Network Profile
 
-- Click on the `Honor network profile configuration` toggle.
+KaneAI always honors the configured network throttling profile during authoring and test case execution. The **Honor network profile configuration** checkbox has been removed; no additional setting is required to apply the profile.
 
-This will apply network setting in the Authoring session too, allowing you to experience how your Application works under that particular Network setting.
-
- Recommended to use this setting only if its absolutely necessary, as this will hamper Authoring experience in low Network Bandwidth settings.
-
- Network setting will always be Honored while executing the Test Case & code generation, the Honoring option is applicable for Authoring mode only.
+Low-bandwidth profiles also affect your authoring session, so application actions may take longer. Select **No Throttling** when you do not need to simulate a restricted network connection.
 
 ## Changing Network Throttling setting mid session :
 To change Network Throttling setting in between the Authoring session:
@@ -44,7 +39,7 @@ To change Network Throttling setting in between the Authoring session:
 
 - Then select desired Network setting.
 
-A change in Network throttling setting is also condidered as a step in the Test Case.
+A change in the network throttling profile is recorded as a step in the test case. The selected profile applies during authoring and when that step executes in a test run.
 
 You can edit the Network Throttling setting at that particular step too. To do that:
 
@@ -59,7 +54,7 @@ Before you begin editing a test case , you can set up network throttling. This E
  And all Test Case executions, like Test Runs and code generation, are performed on the test case's latest saved version.
 
 ## Network Throttling in Test Runs
-While executing your Test Cases every Network Throttle step will be honoered. In addition to the Authoring & Editing mode, you can also select the Network setting to initialize your session with :
+During test case execution, KaneAI always honors the configured network throttling profile and every Network Throttle step. In addition to the Authoring & Editing mode, you can also select the Network setting to initialize your session with :
 
 - Click on `Advanced Configurations` present in the `Run with HyperExecute` section or `Schedule Test Runs` section while executing a Test Run.
 

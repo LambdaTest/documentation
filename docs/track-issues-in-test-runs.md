@@ -19,29 +19,6 @@ canonical: https://www.testmuai.com/support/docs/track-issues-in-test-runs/
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "TestMu AI",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Track Bugs and Issues in Test Runs",
-          "item": `${BRAND_URL}/support/docs/track-issues-in-test-runs/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -244,22 +221,3 @@ Linking an existing issue is available for **Jira**, **Azure DevOps**, and **Lin
 
 Mark as Bug can create tickets in several bug tracking tools, but only **Jira**, **Azure DevOps**, and **Linear** tickets are associated with, and visible in, Test Runs, Test Cases, and test instances. A bug raised in any other tracker is created successfully but does not appear in these views.
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href={BRAND_URL}>
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-       Track Bugs and Issues in Test Runs
-      </span>
-    </li>
-  </ul>
-</nav>

@@ -106,29 +106,6 @@ Resize your viewport according to your framework and take the screenshot. For ex
 2. **Firefox Limitation:** Firefox can only capture snapshots at DOM widths of `450px` or larger due to resizing limitations.
 3. **Chrome Resizing in Selenium:** In Selenium, Chrome’s viewport cannot be resized below `500px` due to a limitation in Selenium.
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "TestMu AI",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Smart Visual Testing",
-          "item": `${BRAND_URL}/support/docs/smartui-cli-responsive-dom/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

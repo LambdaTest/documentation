@@ -1,4 +1,4 @@
-# How to Run Your First Appium Test on TestMu AI
+# Getting Started: Run Appium Tests on TestMu AI
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
