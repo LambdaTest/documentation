@@ -154,7 +154,7 @@ This feature allows you to mark any bug in your UI during the session. You can m
 <img loading="lazy" src={require('../assets/images/real-time-testing/mobile-app/mark-bug.png').default} alt="Image" className="doc_img"/>
 
 ## IP Geolocation
-The IP Geolocation feature enables you to simulate website and mobile experiences from over 45 countries by using local IP addresses. This allows you to test localized features such as pricing, languages, and product offerings. With IP Geolocation enabled, you can verify that your app's traffic is coming from a specific country, allowing for comprehensive global testing.
+The IP Geolocation feature enables you to simulate website and mobile experiences from 180+ countries by using local IP addresses. This allows you to test localized features such as pricing, languages, and product offerings. With IP Geolocation enabled, you can verify that your app's traffic is coming from a specific country, allowing for comprehensive global testing.
 
 <img loading="lazy" src={require('../assets/images/real-time-testing/mobile-app/ip-geolocation.png').default} alt="Image" className="doc_img"/>
  

@@ -161,7 +161,7 @@ All screenshots and video recordings from test sessions are stored in the Galler
 
 ### IP Geolocation
 
-The **IP Geolocation** feature allows you to emulate website and mobile experiences from more than 45 countries using local IP addresses. This enables you to test localized elements like pricing, languages, and product offerings. With IP Geolocation activated, you can verify that your app's traffic is coming from a particular country, facilitating thorough global testing.
+The **IP Geolocation** feature allows you to emulate website and mobile experiences from 180+ countries using local IP addresses. This enables you to test localized elements like pricing, languages, and product offerings. With IP Geolocation activated, you can verify that your app's traffic is coming from a particular country, facilitating thorough global testing.
 
 <img loading="lazy" src={require('../assets/images/real-device-app-testing/ip-geolocation.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 
