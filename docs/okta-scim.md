@@ -177,7 +177,7 @@ Group Provisioning must be enabled for your org. Contact <span className="doc__l
 
 **Step 4:** Okta will immediately push the group and its members to <BrandName /> via SCIM.
 
-**Step 5:** In <BrandName />, go to **Settings** > **Organization Settings** > **SCIM Group Provisioning** to view the pushed groups and configure mappings.
+**Step 5:** In <BrandName />, go to **Settings** > **Organization Settings** > **Security** > **SCIM Provisioning** > **Groups** tab to view the pushed groups and configure mappings.
 
 ### Setting Roles on Okta Groups
 

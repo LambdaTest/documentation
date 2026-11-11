@@ -167,14 +167,14 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
           "@type": "HowToStep",
           "position": 2,
           "name": "Step 2: Configure Mapping Rules in TestMu AI",
-          "text": "In TestMu AI, go to Settings > Organization Settings > SCIM Group Provisioning > Mapping Rules tab. Click Add Mapping Rule to create a rule that determines how incoming groups are mapped. Configure the rule: Pattern: match group names by prefix, regex, or match all Target Entity Type: Team, Concurrency Group, or Sub-Organization Auto Approve: toggle ON to automatically approve matching groups Set a Match All \u2192 Team rule with auto-approve enabled to automatically map all incoming groups to teams without manual intervention.",
+          "text": "In TestMu AI, go to Settings > Organization Settings > Security > SCIM Provisioning > Rules tab. Click Add rule to create a rule that determines how incoming groups are mapped. Configure the rule: When the group name: starts with, matches regex, or is any group Map to: Team, Concurrency group, or Sub-organization Approve automatically: toggle ON to approve matching groups without review Set an is any group \u2192 Team rule with Approve automatically on to map all incoming groups to teams without manual intervention.",
           "url": "https://www.testmuai.com/support/docs/pingone-scim/#step-2-configure-mapping-rules-in-testmu-ai"
         },
         {
           "@type": "HowToStep",
           "position": 3,
           "name": "Step 3: Verify Groups in TestMu AI",
-          "text": "Once PingOne pushes the groups, go to SCIM Group Provisioning > SCIM Groups tab to see the synced groups. If you configured an auto-approve mapping rule, the groups will be automatically approved and members synced. Verify that the teams (or concurrency groups / sub-orgs) were created: Once the provisioning rule runs, group members will appear in the mapped entities.",
+          "text": "Once PingOne pushes the groups, go to SCIM Provisioning > Groups tab to see the synced groups. If you configured a rule with Approve automatically on, the groups will be automatically approved and members synced. Verify that the teams (or concurrency groups / sub-orgs) were created: Once the provisioning rule runs, group members will appear in the mapped entities.",
           "url": "https://www.testmuai.com/support/docs/pingone-scim/#step-3-verify-groups-in-testmu-ai"
         }
       ]
@@ -333,30 +333,30 @@ Select the groups you want to push and click **Save**.
 
 ### Step 2: Configure Mapping Rules in <BrandName />
 
-In <BrandName />, go to **Settings** > **Organization Settings** > **SCIM Group Provisioning** > **Mapping Rules** tab.
+In <BrandName />, go to **Settings** > **Organization Settings** > **Security** > **SCIM Provisioning** > **Rules** tab.
 
-Click **Add Mapping Rule** to create a rule that determines how incoming groups are mapped.
+Click **Add rule** to create a rule that determines how incoming groups are mapped.
 
-<img loading="lazy" src={require('../assets/images/lambdatest-scim/pingone/1.png').default} alt="Mapping rules tab in TestMu AI" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/lambdatest-scim/v2/rules-table.webp').default} alt="Rules tab in TestMu AI" className="doc_img"/>
 
 Configure the rule:
-- **Pattern**: match group names by prefix, regex, or match all
-- **Target Entity Type**: Team, Concurrency Group, or Sub-Organization
-- **Auto Approve**: toggle ON to automatically approve matching groups
+- **When the group name**: starts with, matches regex, or is any group
+- **Map to**: Team, Concurrency group, or Sub-organization. The entity is named after the group
+- **Approve automatically**: toggle ON to approve matching groups without review
 
-<img loading="lazy" src={require('../assets/images/lambdatest-scim/pingone/2.png').default} alt="Add mapping rule modal" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/lambdatest-scim/v2/rule-add.webp').default} alt="Add rule dialog" className="doc_img"/>
 
 :::tip
-Set a **Match All → Team** rule with auto-approve enabled to automatically map all incoming groups to teams without manual intervention.
+Set an **is any group → Team** rule with **Approve automatically** on to map all incoming groups to teams without manual intervention.
 :::
 
 ### Step 3: Verify Groups in <BrandName />
 
-Once PingOne pushes the groups, go to **SCIM Group Provisioning** > **SCIM Groups** tab to see the synced groups.
+Once PingOne pushes the groups, go to **SCIM Provisioning** > **Groups** tab to see the synced groups.
 
 <img loading="lazy" src={require('../assets/images/lambdatest-scim/pingone/21.png').default} alt="SCIM Groups synced from PingOne" className="doc_img"/>
 
-If you configured an auto-approve mapping rule, the groups will be automatically approved and members synced.
+If you configured a rule with **Approve automatically** on, the groups will be automatically approved and members synced. To add a group to more teams, click it and pick the teams on its **Mappings** tab. See [Mapping Groups](/support/docs/scim/#mapping-groups-to-lambdatest-entities).
 
 Verify that the teams (or concurrency groups / sub-orgs) were created:
 
