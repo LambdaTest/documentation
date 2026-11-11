@@ -78,7 +78,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 # KaneAI FAQs
 
-Answers to common questions about authoring and running tests with KaneAI.
+Answers to common questions about authoring and running tests with [KaneAI](https://www.testmuai.com/kane-ai/).
 
 ## General
 
