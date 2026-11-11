@@ -29,29 +29,6 @@ import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "ACCELQ to KaneAI migration",
-          "item": `${BRAND_URL}/support/docs/accelq-to-kaneai-migration-guide/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -290,25 +267,6 @@ For websites hosted locally or behind a firewall, KaneAI supports [tunneling](/s
 - **Requirement links.** If they are Jira issues, add the issue keys in a column and map it to **Link Jira**. <!-- Source: https://support.accelq.com/hc/en-us/articles/115010299068-Test-Suites-in-ACCELQ, checked 2026-10-16 -->
 - **Test Suites and schedules.** Rebuild them as KaneAI test runs.
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-       ACCELQ To KaneAI Migration
-      </span>
-    </li>
-  </ul>
-</nav>
 
 ## Related migration guides
 

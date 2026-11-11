@@ -20,28 +20,6 @@ canonical: https://www.testmuai.com/support/docs/kane-cli-exploration/
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://www.testmuai.com"
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": "https://www.testmuai.com/support/docs/"
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Exploration",
-          "item": "https://www.testmuai.com/support/docs/kane-cli-exploration/"
-        }]
-      }) }}
-></script>
 
 `kane-cli explore` sends an explorer through your app. It clicks, types and follows links the way a curious tester
 would, and builds a **map** of what it finds: the app's screens, the flows between them, and **findings**: things that

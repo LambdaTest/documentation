@@ -19,29 +19,6 @@ canonical: https://www.testmuai.com/support/docs/google-cloud-ci-integration/
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import VerifiedTag from '@site/src/component/verifiedTag';
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "TestMu AI",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Google Cloud CI Integration",
-          "item": `${BRAND_URL}/support/docs/google-cloud-ci-integration/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -296,17 +273,4 @@ Below is the screenshot of the above-executed local tests.
 >
 That's all! Ship your quality product faster using <BrandName /> and Google Cloud CI integration. In case you have any queries for us, feel free to drop them at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>24*7 Customer Chat Support</span> or you can also mail us at [support@testmuai.com](mailto:support@testmuai.com). Happy Testing!
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href={BRAND_URL}>Home</a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_ self" href={`${BRAND_URL}/support/docs/`}>Support</a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">Run Selenium Tests With Google Cloud CI</span>
-    </li>
-  </ul>
-</nav>
 
