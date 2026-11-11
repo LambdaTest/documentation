@@ -303,7 +303,7 @@ You can download the `HyperExecute CLI` for your OS from the links given below :
 | macOS | https://downloads.lambdatest.com/hyperexecute/darwin/hyperexecute |
 
 :::info On-premise and restricted networks
-On an on-premise deployment, download the CLI from your own dashboard: open **Help** > **Hyperexecute CLI** and pick **MacOS**, **Windows** or **Linux**. If your network blocks downloads, ask your admin for an internal copy of the binary. Verify any copy you receive with the steps below before you use it.
+On an on-premise deployment, download the CLI from your own dashboard: open **Help** > **Hyperexecute CLI** and pick **MacOS**, **Windows** or **Linux**. If your network blocks downloads, ask your admin for an internal copy of the binary. Verify any copy you receive with the steps below before you use it. See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/#step-3-install-and-configure-the-cli).
 :::
 
 ## Verifying the Authenticity of the CLI

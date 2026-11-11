@@ -164,11 +164,6 @@ Ready to experience the power of HyperExecute? Getting started is easy. We’ve 
 
      <a href="https://www.testmuai.com/support/docs/hyperexecute-running-your-first-job/#2-using-local-system" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/hyp.png').default} alt="Image" className="doc_img"/>Learn More</a>
   </TabItem>
-  <TabItem value="gitpod" label="Run on Gitpod">
-    Run your tests in a fully managed online development environment, without any local installations or configurations.
-
-    <a href="https://www.testmuai.com/support/docs/hyperexecute-running-your-first-job/#3-using-gitpod" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/hyp.png').default} alt="Image" className="doc_img"/>Learn More</a>
-  </TabItem>
 </Tabs>
 :::
 

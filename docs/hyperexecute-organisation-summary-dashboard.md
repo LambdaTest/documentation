@@ -159,7 +159,7 @@ To open it, go to **HyperExecute → [Projects](/support/docs/hyperexecute-proje
 <img loading="lazy" src={require('../assets/images/hyperexecute/features/org-summary/org-summary-overview.png').default} alt="HyperExecute Summary dialog showing organisation totals, job activity tiles, the job status donut and the failure reasons chart for the last 7 days" className="doc_img"/>
 
 :::info On-premise deployments
-The dashboard is the main organisation-wide view on-prem, because Intelligent Test Analytics is not available there (see [Private Cloud benefits](/support/docs/hyperexecute-private-cloud-benefits/)). Open it from **Projects** on your organization's own HyperExecute dashboard. See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/#step-8-review-results-and-rerun-failures).
+On-prem, open this dashboard with **View Summary** on the **Projects** page of your organization's own HyperExecute dashboard. Intelligent Test Analytics is not available on-prem (see [Private Cloud benefits](/support/docs/hyperexecute-private-cloud-benefits/)). See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/#step-8-review-results-and-rerun-failures).
 :::
 
 ## What the dashboard shows

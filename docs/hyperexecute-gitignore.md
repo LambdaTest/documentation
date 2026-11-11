@@ -91,7 +91,7 @@ When you trigger your job, [HyperExecute CLI](/support/docs/hyperexecute-cli-run
 If you want to ignore any un-necessary files during this process, you can use the `.hyperexecuteignore` file. The HyperExecuteIgnore file serves as a configuration file to specify files that should be excluded when HyperExecute prepares a zipped archive of your test scripts. This functionality is similar to the `.gitignore` file used in Git version control.
 
 :::info On-premise deployments
-The ignore files work the same way on-prem. The CLI builds the archive on your machine before it uploads it to the host you pass in `--onprem-host`. Keeping the archive small matters more when uploads pass through a corporate proxy. See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/#step-5-trigger-a-job-from-the-cli).
+The ignore files work the same way on-prem. The CLI builds the archive on your machine before it uploads it to the host you pass in `--onprem-host`. See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/#step-5-trigger-a-job-from-the-cli).
 :::
 
 ## Benefits
