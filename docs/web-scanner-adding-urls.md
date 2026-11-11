@@ -19,34 +19,6 @@ canonical: https://www.testmu.ai/support/docs/web-scanner-adding-urls/
 import CodeBlock from '@theme/CodeBlock';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Getting Started with Web Scanner",
-          "item": `${BRAND_URL}/support/docs/web-scanner-getting-started`
-        },{
-          "@type": "ListItem",
-          "position": 4,
-          "name": "Adding URLs for Web Scanner",
-          "item": `${BRAND_URL}/support/docs/web-scanner-adding-urls`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

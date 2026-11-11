@@ -17,29 +17,6 @@ canonical: https://www.testmuai.com/support/docs/hyperexecute-auto-split-strateg
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "HyperExecute Concepts",
-          "item": `${BRAND_URL}/support/docs/hyperexecute-auto-split-strategy/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -205,22 +182,3 @@ On subsequent runs, HyperExecute might prioritize the failing tests from the pre
 Automatic reordering is a behind-the-scenes feature that optimizes test execution. You don't need to specifically configure it; it might happen automatically as part of the autosplit process. It's like a hidden perk that can significantly improve your testing experience.
 :::
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-        Auto Split Strategy
-      </span>
-    </li>
-  </ul>
-</nav>

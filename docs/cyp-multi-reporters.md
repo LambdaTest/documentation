@@ -220,22 +220,3 @@ The reports are grouped on the basis of your session_id with a designated _brows
 
 <img loading="lazy" src={require('../assets/images/cypress-doc/multi.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href={BRAND_URL}>
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-        Multi Reporters Support
-      </span>
-    </li>
-  </ul>
-</nav>

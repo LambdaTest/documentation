@@ -31,29 +31,6 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "How to run automation tests on HyperExecute using Karate framework",
-          "item": `${BRAND_URL}/support/docs/hyperexecute-karate-testing/`
-        }]
-      })
-    }}
-></script>
 Karate is a popular open-source test automation framework that combines API test-automation, mocks, performance testing, and even UI testing into a single framework. It allows writing expressive tests in a simple Gherkin syntax, while leveraging Java for extensibility.
 
 <script type="application/ld+json"

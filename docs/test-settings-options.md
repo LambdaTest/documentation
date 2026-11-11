@@ -558,20 +558,3 @@ let capabilities = {
 
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/Ignore-Colors-Sample.png').default} alt="Image" className="doc_img"/>
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link"> Test Settings Options </span>
-    </li>
-  </ul>
-</nav>

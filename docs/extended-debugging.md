@@ -601,22 +601,3 @@ When using Extended Debugging Options on TestMu AI, consider the following best 
 
 By using these Extended Debugging Options, you can create test scenarios that validate your application's behavior under diverse real-world conditions, ensuring a reliable user experience.
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-        Extended Debugging Options for Selenium Testing
-      </span>
-    </li>
-  </ul>
-</nav>

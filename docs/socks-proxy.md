@@ -115,22 +115,3 @@ To use <BrandName /> Tunnel with a SOCKS5 proxy, follow the steps outlined below
 
 The SOCKS5 proxy support in <BrandName /> Tunnel is an essential feature for users who require secure, encrypted traffic transmission and the ability to bypass network restrictions during the testing process. By leveraging this feature, developers and QA professionals can ensure that their web applications are thoroughly tested in environments that closely mimic real-world scenarios.
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href={BRAND_URL}>
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-        Socks5 Proxy Tunnel
-      </span>
-    </li>
-  </ul>
-</nav>

@@ -509,23 +509,4 @@ Continue with the guides below to generate, configure, and scale your Cypress ru
 - [Reference the Cypress CLI commands](/support/docs/cypress-cli-commands/) for the full lambdatest-cypress command and flag list.
 - [Check the supported browsers and OS](/support/docs/supported-browsers-and-os/) to see the versions and platforms you can target.
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href={BRAND_URL}>
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-        Run Your First Cypress Test
-      </span>
-    </li>
-  </ul>
-</nav>
 

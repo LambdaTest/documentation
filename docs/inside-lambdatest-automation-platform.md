@@ -19,29 +19,6 @@ canonical: https://www.testmuai.com/support/docs/inside-testmu-platform/
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Explore the Automation Dashboard",
-          "item": `${BRAND_URL}/support/docs/inside-testmu-platform/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -179,22 +156,3 @@ Now that you know how to read the dashboard, explore more ways to manage and deb
 - [Debug your tests](/support/docs/debugging-options/) - enable extended logging for deeper analysis
 - [Group tests with tags](/support/docs/group-tests-using-custom-tags/) - organize tests using custom tags
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-        Explore the Automation Dashboard
-      </span>
-    </li>
-  </ul>
-</nav>

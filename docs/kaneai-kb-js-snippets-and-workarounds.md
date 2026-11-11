@@ -19,29 +19,6 @@ slug: kaneai-kb-js-snippets-and-workarounds/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://www.testmuai.com"
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": "https://www.testmuai.com/support/docs/"
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "JS Snippets & Workarounds",
-          "item": "https://www.testmuai.com/support/docs/kaneai-kb-js-snippets-and-workarounds/"
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

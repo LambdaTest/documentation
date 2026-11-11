@@ -20,29 +20,6 @@ canonical: https://www.testmuai.com/support/docs/aws-codepipeline-with-hyperexec
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "TestMu AI",
-          "item": "https://www.testmuai.com/"
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": "https://www.testmuai.com/support/"
-        },{
-          "@type": "ListItem",
-          "position": 4,
-          "name": "AWS CodePipeline Integration with HyperExecute",
-          "item": `${BRAND_URL}/support/docs/aws-codepipeline-with-hyperexecute/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

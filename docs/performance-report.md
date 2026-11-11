@@ -18,29 +18,6 @@ canonical: https://www.testmu.ai/support/docs/performance-report/
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "TestMu AI",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Performance Report",
-          "item": `${BRAND_URL}/support/docs/performance-report/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -166,22 +143,3 @@ In runtime settings, you'll find the URL of the entered website, time, and date.
 
 That is all about the LT browser Performance Report. Don't forget to share you experience or questions with us. You can drop us an email through [support@testmuai.com](mailto:support@testmuai.com) or you could wave us a hello over our <span className="doc__lt" onClick={() => window.openLTChatWidget()}> **24/7 chat support** </span>. Happy testing!
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href={BRAND_URL}>
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-        Performance Report
-      </span>
-    </li>
-  </ul>
-</nav>

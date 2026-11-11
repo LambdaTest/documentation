@@ -19,29 +19,6 @@ canonical: https://www.testmu.ai/support/docs/tosca-integration-with-hyperexecut
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Tosca Integration with HyperExecute",
-          "item": `${BRAND_URL}/support/docs/tosca-integration-with-hyperexecute/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -135,22 +112,3 @@ HyperExecute seamlessly integrates with Tosca, providing a Just-in-Time Tosca En
 
 > This is currently in the **Beta** version of the **Project** section in HyperExecute. To enable it for your organization, please contact our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or our [Customer Support](mailto:support@testmuai.com) team.
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-       HyperExecute Integration With Tosca
-      </span>
-    </li>
-  </ul>
-</nav>

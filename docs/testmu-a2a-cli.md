@@ -22,29 +22,6 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "TestMu A2A CLI",
-          "item": `${BRAND_URL}/support/docs/testmu-a2a-cli/`
-        }]
-      })
-    }}
-></script>
 ---
 
 The TestMu A2A CLI lets you test chat agents and phone agents directly from your terminal. You can run quick one-off tests, build scenario-driven test suites, perform adversarial security assessments, and integrate everything into your CI/CD pipeline.

@@ -19,29 +19,6 @@ canonical: https://www.testmuai.com/support/docs/cerberus-integration/
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "TestMu AI",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Cerberus <BrandName /> Integration",
-          "item": `${BRAND_URL}/support/docs/cerberus-integration/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -161,16 +138,3 @@ Once the test is complete, you can view the result of the test on <BrandName />,
 
 > Congrats! You have successfully executed your Cerberus test case on the <BrandName /> platform, which provides you 10,000+ browser/device combinations to perform cross-browser testing. If you have any doubt or face any issues, please feel free to contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span>, or you can also mail us at [support@testmuai.com](mailto:support@testmuai.com). Happy Testing!! 🙂
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href={BRAND_URL}>Home</a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="/support/docs/">Support</a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">Cerberus <BrandName /> Integration</span>
-    </li>
-  </ul>
-</nav>

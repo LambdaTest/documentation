@@ -158,22 +158,3 @@ echo "$XCUITTestExecution"
 
 8. Along with this, you need to update the `{FilePathWithNameAndExtension}` with the path where your app and test suite is in local. 
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href={BRAND_URL}>
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-        <BrandName /> XCode Plugin
-      </span>
-    </li>
-  </ul>
-</nav>
