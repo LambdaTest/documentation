@@ -46,49 +46,6 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
 
-<script type="application/ld+json"
-
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-
-       "@context": "https://schema.org",
-
-        "@type": "BreadcrumbList",
-
-        "itemListElement": [{
-
-          "@type": "ListItem",
-
-          "position": 1,
-
-          "name": "Home",
-
-          "item": BRAND_URL
-
-        },{
-
-          "@type": "ListItem",
-
-          "position": 2,
-
-          "name": "Support",
-
-          "item": `${BRAND_URL}/support/docs/`
-
-        },{
-
-          "@type": "ListItem",
-
-          "position": 3,
-          "name": "Run Appium Tests on TestMu AI: Getting Started",
-          "item": `${BRAND_URL}/support/docs/getting-started-with-appium-testing/`
-
-        }]
-
-      })
-
-    }}
-
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -384,45 +341,9 @@ We support all languages and frameworks that are compatible with Selenium, so in
 
 
 
-<nav aria-label="breadcrumbs">
-
-  <ul className="breadcrumbs">
-
-    <li className="breadcrumbs__item">
-
-      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
-
-        Home
-
-      </a>
-
-    </li>
-
-    <li className="breadcrumbs__item">
-
-      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
-
-        Support
-
-      </a>
-
-    </li>
-
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-
-      <span className="breadcrumbs__link">
-        Run Appium Tests on TestMu AI: Getting Started
-      </span>
-
-    </li>
-
-  </ul>
-
 ## Related app automation guides
 
 - [App Automation Dashboard](/support/docs/app-automation-dashboard/) — navigate build and session results for your app automation runs.
 - [Mute Test Scenarios](/support/docs/mute-test-scenarios/) — keep a known-broken or flaky test out of the build verdict while it keeps running and reporting.
 - [Flutter Supported Capabilities](/support/docs/flutter-supported-capabilities/) — capabilities supported for automating Flutter apps on TestMu AI.
 - [Manual App Profiling](/support/docs/manual-app-profiling/) — capture performance profiles while manually testing your app.
-
-</nav>

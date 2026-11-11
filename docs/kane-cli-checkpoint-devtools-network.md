@@ -17,28 +17,6 @@ canonical: https://www.testmuai.com/support/docs/kane-cli-checkpoint-devtools-ne
 ---
 import VerifiedTag from '@site/src/component/verifiedTag';
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://www.testmuai.com"
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": "https://www.testmuai.com/support/docs/"
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Network Assertions",
-          "item": "https://www.testmuai.com/support/docs/kane-cli-checkpoint-devtools-network/"
-        }]
-      }) }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

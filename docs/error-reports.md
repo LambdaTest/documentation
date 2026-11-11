@@ -22,29 +22,6 @@ canonical: https://www.testmuai.com/support/docs/error-reports/
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "TestMu AI",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Error Report",
-          "item": `${BRAND_URL}/support/docs/error-reports/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -133,22 +110,3 @@ Upon clicking the Error Report button, your Error Report will be generated.
 >
 That's all!. In case you come across any doubts, feel free to reach out through our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>Customer Chat Support</span> or you can also drop a mail to [support@testmuai.com](mailto:support@testmuai.com).<br />Happy testing!
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href={BRAND_URL}>
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-        Error Report
-      </span>
-    </li>
-  </ul>
-</nav>

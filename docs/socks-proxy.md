@@ -19,29 +19,6 @@ canonical: https://www.testmuai.com/support/docs/socks5-proxy-support/
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import VerifiedTag from '@site/src/component/verifiedTag';
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "SOCKS5 Proxy Support in TestMu AI Tunnel",
-          "item": `${BRAND_URL}/support/docs/socks5-proxy-support/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -142,22 +119,3 @@ To use <BrandName /> Tunnel with a SOCKS5 proxy, follow the steps outlined below
 
 The SOCKS5 proxy support in <BrandName /> Tunnel is an essential feature for users who require secure, encrypted traffic transmission and the ability to bypass network restrictions during the testing process. By leveraging this feature, developers and QA professionals can ensure that their web applications are thoroughly tested in environments that closely mimic real-world scenarios.
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href={BRAND_URL}>
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-        Socks5 Proxy Tunnel
-      </span>
-    </li>
-  </ul>
-</nav>
