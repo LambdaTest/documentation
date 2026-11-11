@@ -137,7 +137,7 @@ It empowers you to streamline bug reporting within the testing environment itsel
  
 
 ## IP Geolocation
-This transcends basic location selection. It allows you to spoof the IP address of your emulated device, simulating various geographical locations across over 45 countries. This enables you to test geo-restricted features, localized content delivery, and the overall user experience for a global audience.
+This transcends basic location selection. It allows you to spoof the IP address of your emulated device, simulating various geographical locations across 180+ countries. This enables you to test geo-restricted features, localized content delivery, and the overall user experience for a global audience.
   
 <img loading="lazy" src={require('../assets/videos/real-time/chromeos-app/ip-location.png').default} style={{ height: '350px' }} className="doc_img"/>
 

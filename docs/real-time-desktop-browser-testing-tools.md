@@ -114,7 +114,7 @@ The Scaling feature allows you to adjust the display scale of your web applicati
 <img loading="lazy" src={require('../assets/images/real-time-testing/web-browser/scaling.png').default} alt="Image" className="doc_img"/>
 
 ## IP Geolocation
-Simulate website and mobile experiences from over 45 countries using local IP addresses.
+Simulate website and mobile experiences from 180+ countries using local IP addresses.
 - **Why Use IP Geolocation? :** Test localized features such as language preferences, currency, regional product offerings, and content visibility based on a specific location.
 - **How to Enable? :** Use the IP Geolocation feature to verify that your app's traffic originates from a specific country, providing a comprehensive global testing approach.
 
