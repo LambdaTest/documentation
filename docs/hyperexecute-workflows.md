@@ -72,7 +72,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-11-11T14:00:00+05:30"
+    "dateModified": "2026-09-09T19:10:37+05:30"
   }) }}
 />
 Workflows give you the speed, reliability, and platform‑native orchestration of HyperExecute on a schedule. Think of Workflows as a lightweight, cloud-native alternative and companion to CI/CD, with all the functionalities of HyperExecute such as reporting, RCA etc.
@@ -128,11 +128,7 @@ You can choose from three trigger options:
 
 - **Once**: The workflow runs automatically as soon as it is created. No manual execution needed.
 - **Later**: Schedule the workflow to run at a specific date and time.
-- **Every**: Set up recurring execution. Set **Run Every** to a number and a unit:
-  - **Minutes**, **Hours** or **Days**, then a **During time frame** start and end time. For example, every 2 hours between 8:00 am and 6:00 pm.
-  - **Days of week**, then a **Start at** time and the days under **When to Run**. For example, every Monday, Wednesday and Friday at 9:00 am.
-
-<img loading="lazy" src={require('../assets/images/hyperexecute/on-prem/workflow-step2-every-interval.webp').default} alt="Schedule step with Every selected, Run Every set to 15 minutes, a time frame and the Workflow ends on date" className="doc_img"/>
+- **Every**: Set up recurring execution by selecting specific days of the week (Mon–Sun) and a time. For example, you can schedule a workflow to run every Monday, Wednesday, and Friday at 9:00 AM.
 
 :::note
 The schedule is set in your **local timezone** and stored internally in UTC. This ensures workflows trigger at the correct time regardless of where team members are located.
