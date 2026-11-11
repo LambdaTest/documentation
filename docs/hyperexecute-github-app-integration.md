@@ -110,7 +110,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         "text": "https://{{private_accounts_base_url}}/org-settings/hyperexecute/git-integration"
       }
     ],
-    "dateModified": "2026-09-09T19:10:37+05:30"
+    "dateModified": "2026-11-11T14:00:00+05:30"
   }) }}
 />
 > This is currently in the **Beta** version.

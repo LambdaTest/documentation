@@ -77,7 +77,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-09T19:10:37+05:30"
+    "dateModified": "2026-11-11T14:00:00+05:30"
   }) }}
 />
 
@@ -93,7 +93,7 @@ If you are encountering any error which is properly not detailed, it is recommen
 
 
 :::info On-premise deployments
-Pass [`--onprem-host`](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/#--onprem-host) on every run and use the credentials from your own dashboard. For `ERR:HTTP:HOST`, the message shows the URL the CLI tried to reach. Run `--scan` to see which host fails. The public hosts in [IPs to be whitelisted](#ips-to-be-whitelisted) are for SaaS. On-prem, the CLI must reach your deployment host. See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/).
+On-prem, pass [`--onprem-host`](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/#--onprem-host) on every run and use the credentials from your own dashboard. The hosts in [IPs to be whitelisted](#ips-to-be-whitelisted) are for SaaS. See [Troubleshooting](/support/docs/hyperexecute-on-premise-user-guide/#troubleshooting) in the On-Premise User Guide.
 :::
 
 ## Symbolic Link Error

@@ -72,14 +72,10 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-09T19:10:37+05:30"
+    "dateModified": "2026-11-11T14:00:00+05:30"
   }) }}
 />
 Workflows give you the speed, reliability, and platform‑native orchestration of HyperExecute on a schedule. Think of Workflows as a lightweight, cloud-native alternative and companion to CI/CD, with all the functionalities of HyperExecute such as reporting, RCA etc.
-
-:::info On-premise deployments
-When you link workflows, select both **Select Project** and **Select Workflow** before you click **Finish**. See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/).
-:::
 
 ## Why Workflows
 - **Schedule-first orchestration:** Run regular suites by just connecting your Git repo, without wiring a CI pipeline.
@@ -230,10 +226,6 @@ Variables let you customize job runs without the need of creating multiple workf
 - Up to **100 variables per workflow**.
 - Up to **25 values per variable**.
 - Value length limit: **500 characters** (excluding commas/spaces).
-
-:::info On-premise deployments
-If you change only Workflow Variables while editing a workflow, check that the new values show after you save.
-:::
 
 ## FAQ
 - **Which repos are supported for Projects?** Currently **GitHub** and **Bitbucket**.

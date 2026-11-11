@@ -825,20 +825,20 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         "text": "execution:\n  syncStart: true"
       }
     ],
-    "dateModified": "2026-09-09T19:10:37+05:30"
+    "dateModified": "2026-11-11T14:00:00+05:30"
   }) }}
 />
 
 This document contains detailed explanations for all YAML flags, providing an in-depth understanding of each configuration parameter.
 
 :::info On-premise deployments
-The YAML format is the same on-premise. Keys that behave differently, such as [`runson`](#runson), [`testDiscovery`](#testdiscovery), [`sourcePayload`](#sourcepayload) and [`tunnel`](#tunnel), have their own on-prem note below. See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/).
+The YAML format is the same on-premise. Keys that behave differently, such as [`runson`](#runson) and [`testDiscovery`](#testdiscovery), have their own on-prem note below. See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/).
 :::
 
 ## Mandatory Parameters
 
 ### `version`
-The version of HyperExecute YAML being used to run the tests. Currently there are two supported versions are [0.1](/support/docs/hyperexecute-yaml-parameters/) and [0.2](/support/docs/hyperexecute-yaml-version0.2/). 
+The version of HyperExecute YAML being used to run the tests. There are two supported versions: [0.1](/support/docs/hyperexecute-yaml-parameters/) and [0.2](/support/docs/hyperexecute-yaml-version0.2/). 
 
 <VerifiedTag value="Verified" />
 
@@ -871,7 +871,7 @@ matrix:
 ***
 
 :::info On-premise deployments
-On-premise deployments run Linux and Windows only. Use `linux`, `win` or `win11`, and leave macOS values out of `runson` and `matrix.os`. Your admin maps Linux frameworks to queues for each environment. See [Environments and queues](/support/docs/hyperexecute-on-premise-user-guide/#environments-and-queues).
+On-premise deployments run Linux and Windows only. Use `linux` or `win`, and leave macOS values out of `runson` and `matrix.os`. Your admin maps Linux frameworks to queues for each environment. See [Environments and queues](/support/docs/hyperexecute-on-premise-user-guide/#environments-and-queues).
 :::
 
 ### `pre`
@@ -1021,7 +1021,7 @@ command: grep 'public class' src/test/java/hyperexecute/*.java | awk '{print$3}'
 ```
 
 :::tip
-- Test orchestration will happen with [`mode: local`](/support/docs/deep-dive-into-hyperexecute-yaml/#mode) only. On-premise deployments support `mode: remote` only.
+- Test orchestration will happen with [`mode: local`](/support/docs/deep-dive-into-hyperexecute-yaml/#mode) only.
 - 📕 Learn how to perform [dependent test discovery](/support/docs/hyperexecute-how-to-perform-dependent-test-based-discovery/).
 :::
 
@@ -1166,7 +1166,7 @@ matrix:
 In the above example linux combinations will run on a parallelism on 2, `windows` combinations will run on a parallelism on 1, and `mac` combinations will run on a parallelism defined of 3.
 
 :::info On-premise deployments
-On-premise deployments run Linux and Windows only, so `macParallelism` and `macTestRunnerCommand` do not apply.
+On-premise deployments run Linux and Windows only, so `macParallelism` and `macTestRunnerCommand` do not apply. See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/#step-4-prepare-your-yaml).
 :::
 
 ### `testRunnerCommand`
@@ -1258,7 +1258,7 @@ env:
 ```
 
 :::info On-premise deployments
-Your admin can limit which environment variables jobs may use. If you set one that is not allowed, the CLI shows a warning. Remove the variable or ask your admin to allow it. See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/).
+Your admin can limit which environment variables jobs may use. If you set one that is not allowed, the CLI shows a warning. Remove the variable or ask your admin to allow it. See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/#step-4-prepare-your-yaml).
 :::
 
 #### Special Character Encoding
@@ -1784,7 +1784,7 @@ sourcePayload:
 ***
 
 :::info On-premise deployments
-On-premise, Git access is set up by your admin, and the supported Git providers depend on your deployment (for example your own or a dedicated GitHub App). Ask your admin which providers and repositories you can use before you set `sourcePayload`.
+On-prem, the Git providers you can use depend on your deployment. Ask your admin before you set `sourcePayload`. See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/).
 :::
 
 ### `hostsOverride`
@@ -2719,10 +2719,6 @@ tunnel: true
 ```
 
 ***
-
-:::info On-premise deployments
-On-premise, test machines already run inside your network, so most teams do not need a tunnel.
-:::
 
 ### `tunnelOpts`
 The options to use when running the [tunnel](/support/docs/deep-dive-into-hyperexecute-yaml/#tunnel).

@@ -72,7 +72,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-09T19:10:37+05:30"
+    "dateModified": "2026-11-11T14:00:00+05:30"
   }) }}
 />
 
@@ -161,7 +161,7 @@ env:
 ```
 
 :::info On-premise deployments
-On-prem, open the Project from your organization's own dashboard. Only users with access to the Project can run jobs that use its secrets. See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/).
+On-prem, open the Project from your organization's own dashboard to manage its secrets. See [Add Project secrets](/support/docs/hyperexecute-on-premise-user-guide/#add-project-secrets).
 :::
 
 ## User-Level Secrets vs. Project-Level Secrets

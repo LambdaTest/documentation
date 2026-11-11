@@ -146,7 +146,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         "text": "runtime:\n  language: java\n  version: \"11\""
       }
     ],
-    "dateModified": "2026-09-09T19:10:37+05:30"
+    "dateModified": "2026-11-11T14:00:00+05:30"
   }) }}
 />
 
@@ -155,7 +155,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
 This document will help you debug your failed job if you are facing any errors in the pre-command stage.
 
 :::info On-premise deployments
-On-prem machines often cannot reach public registries such as npm, PyPI or Maven Central. Point your package manager at your internal registry (see [Registry error](#registry-error) and [SSL certificate error](#ssl-certificate-error)). See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/).
+If your deployment cannot reach public registries such as npm, PyPI or Maven Central, ask your admin for your internal registry, and see [Registry error](#registry-error) and [SSL certificate error](#ssl-certificate-error). See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/#troubleshooting).
 :::
 
 ## Lambda Error

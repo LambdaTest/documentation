@@ -127,7 +127,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         "text": "{\n  \"enabled\": false,\n  \"updatedBy\": \"<your-name-or-service-account>\"\n}"
       }
     ],
-    "dateModified": "2026-10-27T00:00:00+05:30"
+    "dateModified": "2026-11-11T14:00:00+05:30"
   }) }}
 />
 
@@ -181,7 +181,7 @@ Creating, editing, and deleting policies is **admin-only**. Developers can see w
 Policies are **API-first**, so you can create and maintain them from your automation (Harness, Jenkins, a Git-managed script) exactly like the rest of your pipeline. You can also manage them from the <BrandName /> dashboard under [Org Product Preferences](/support/docs/hyperexecute-org-product-preferences/).
 
 :::info On-premise deployments
-On-prem runs Linux and Windows only, so a `mac` command block is never used, and `default` should name `linux` or `win`. See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/).
+On-prem runs Linux and Windows only, so a `mac` command block is never used, and `default` should name `linux` or `win`. See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/#step-4-prepare-your-yaml).
 :::
 
 ## What a policy is
@@ -384,7 +384,7 @@ curl -u "<YOUR_USERNAME>:<YOUR_ACCESS_KEY>" \
 Run that list call first to confirm your credentials work. A `200` with a list (possibly empty) means you are set.
 
 :::info On-premise deployments
-On-prem, call the API on your own deployment host instead of `api.hyperexecute.cloud`, and use credentials from your organization's own dashboard.
+On-prem, ask your admin for your deployment's API base URL, and use credentials from your organization's own dashboard. See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/).
 :::
 
 ### Endpoints

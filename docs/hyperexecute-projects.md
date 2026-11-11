@@ -88,7 +88,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         "text": " project:\n    name: 'unique_project_name'"
       }
     ],
-    "dateModified": "2026-09-09T19:10:37+05:30"
+    "dateModified": "2026-11-11T14:00:00+05:30"
   }) }}
 />
 Projects serve as a centralized platform for organizing and managing test executions. By grouping similar tests, controlling access, and tracking progress, Projects streamline the testing process. You can configure [custom project](/support/docs/hyperexecute-projects/#setup-custom-project) and [workflow setups](/support/docs/hyperexecute-projects/#schedule-your-workflows), as well as [integrate Tosca, Tosca DEX, and JMeter tests](/support/docs/hyperexecute-projects/#setting-up-specialized-projects) for unified management. This enables efficient test script creation, automated execution scheduling, and valuable insights into test results.
@@ -98,7 +98,7 @@ Organisation admins on the enterprise plan can click **View Summary** at the top
 :::
 
 :::info On-premise deployments
-On-prem, open **Projects** from your organization's own HyperExecute dashboard, not the public one. Which Git providers you can connect depends on how your deployment is set up, so ask your admin. For example, the admin can register a GitHub App for your Git server. See [GitHub App integration](/support/docs/hyperexecute-github-app-integration/) and the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/).
+On-prem, open **Projects** from your organization's own HyperExecute dashboard. Which Git providers you can connect depends on your deployment, so ask your admin (see [GitHub App integration](/support/docs/hyperexecute-github-app-integration/)). See [Create a Project](/support/docs/hyperexecute-on-premise-user-guide/#step-2-create-a-project) in the On-Premise User Guide.
 :::
 
 ## Link Jobs to Projects Using YAML
@@ -168,18 +168,6 @@ Once the project is created, the project header displays key details including t
     <iframe loading="lazy" className="sl-demo" src="https://app.storylane.io/demo/nghrqs7qgczc?embed=inline"  name="sl-embed" allow="fullscreen" allowfullscreen></iframe>
   </div>
 </div>
-
-### Create a Project on an on-premise deployment
-
-On an on-premise deployment, the **Project Setup** form for a **Custom Project** has a single step:
-
-- The URL of the Git repository that holds your tests, and a Project name. Both are required. Jobs appear under the Project name.
-- **Branch Name**: the default branch. It defaults to `main`.
-- **YAML Path**: where the YAML lives in the repository. It defaults to `.lambdatest/hyperexecute.yaml`.
-- **PAT Token**: a Git token with read access, unless your admin has set up a [GitHub App](/support/docs/hyperexecute-github-app-integration/).
-- **Teams**: the teams that should see this Project.
-
-Your deployment may show more fields that your organization has added. Ask your admin what to enter in them. Click **Save** to create the Project.
 
 ## Schedule your Workflows
 Within each HyperExecute Project, you can set up one or more workflows. These workflows allow for scheduled execution of your tests, providing you with the flexibility to automate your testing process according to your development and release cycles. 
