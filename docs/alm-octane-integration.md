@@ -162,7 +162,7 @@ This script-based approach offers several advantages:
 
 ## Prerequisites
 
-- An active [<BrandName /> account](https://testmuai.com/register/)
+- An active [<BrandName /> account](https://www.testmuai.com/register/)
 - An ALM Octane instance with API access
 - ALM Octane credentials (Client ID and Client Secret)
 - Your test automation framework configured with ALM Octane SDK/API
