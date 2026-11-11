@@ -107,6 +107,13 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       },
       {
         "@type": "SoftwareSourceCode",
+        "name": "To mark the status of a test case, use the lambda-testCase-status hook",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "// To mark the open test case as passed or failed\n((JavascriptExecutor) driver).executeScript(\"lambda-testCase-status=passed\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
         "name": "Annotation Start",
         "codeSampleType": "code snippet",
         "programmingLanguage": "Java",
@@ -120,7 +127,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         "text": "driver.execute_script(\"lambdatest_executor: {\\\"action\\\": \\\"stepcontext\\\", \\\"arguments\\\": {\\\"data\\\": \\\"\\\"}}\");"
       }
     ],
-    "dateModified": "2026-09-09T19:10:37+05:30"
+    "dateModified": "2026-11-11T12:00:00+05:30"
   }) }}
 />
 
@@ -224,7 +231,11 @@ Arguments | Example
 
 <BrandName /> has introduced a LambdaHook to help automation engineers differentiate between multiple test cases within a single Appium session. This feature aims to improve debugging capabilities, making it easier to identify which test cases may be causing errors or taking longer to execute.
 
-### Adding LambdaHooks
+:::info
+The test case hooks (`lambda-testCase-start`, `lambda-testCase-end` and `lambda-testCase-status`) are supported for App Automation on both **Real Devices** and **Virtual Devices**. They are not supported for web automation sessions.
+:::
+
+### Adding Lambda Hooks
 
 You can use LambdaHooks to start and end a test case within a single Appium session. 
 
@@ -249,6 +260,91 @@ To end a test case, use the `lambda-testCase-end` hook:
 // To end a test case
 ((JavascriptExecutor) driver).executeScript("lambda-testCase-end=find Name");
 ```
+
+### Marking the Status of a Test Case
+
+By default, <BrandName /> derives the status of each test case from its commands: if any command executed between `lambda-testCase-start` and `lambda-testCase-end` fails, the test case is marked **Failed**. This is not always the real result. A command may fail and then pass on a retry, or a command may be expected to fail as part of a negative check (for example, verifying that an element is not displayed).
+
+Use the `lambda-testCase-status` hook to send the real result from your framework. The status you send overrides the derived status of the test case in [Test Case Insights](/support/docs/analytics-test-case-insights/).
+
+#### Test Case Status
+
+Call `lambda-testCase-status` after `lambda-testCase-start` and before `lambda-testCase-end`:
+
+```java
+// To mark the open test case as passed or failed
+((JavascriptExecutor) driver).executeScript("lambda-testCase-status=passed");
+```
+
+To store a remark with the status, pass the status as JSON. The `remark` is optional and is limited to `255` bytes; longer remarks are truncated.
+
+```java
+((JavascriptExecutor) driver).executeScript("lambda-testCase-status={\"status\":\"passed\",\"remark\":\"404 on first attempt, retry succeeded\"}");
+```
+
+| Argument | Description |
+|----------|-------------|
+| `status` | `passed` or `failed`. The value is case-insensitive. Any other value, such as `skipped`, is ignored. |
+| `remark` | Optional. Any text explaining the status, limited to `255` bytes. Supported only in the JSON form. |
+
+#### Example
+
+The following examples mark each test case with the result your framework reports, so a retry that passed or an expected failure does not mark the test case as failed.
+
+<Tabs className="docs__val" groupId="language">
+<TabItem value="java" label="Java" default>
+
+```java
+for (TestCase tc : suite) {
+    driver.executeScript("lambda-testCase-start=" + tc.getName());
+    boolean passed = tc.run(); // your framework handles retries and negative checks
+    driver.executeScript("lambda-testCase-status=" + (passed ? "passed" : "failed"));
+    driver.executeScript("lambda-testCase-end=" + tc.getName());
+}
+```
+
+</TabItem>
+<TabItem value="python" label="Python">
+
+```python
+driver.execute_script(f"lambda-testCase-start={name}")
+# ... test steps ...
+driver.execute_script("lambda-testCase-status=passed")
+driver.execute_script(f"lambda-testCase-end={name}")
+```
+
+</TabItem>
+<TabItem value="cucumber" label="Cucumber (Java)">
+
+```java
+@After
+public void markTestCase(Scenario scenario) {
+    String status = scenario.isFailed() ? "failed" : "passed";
+    ((JavascriptExecutor) driver).executeScript("lambda-testCase-status=" + status);
+    ((JavascriptExecutor) driver).executeScript("lambda-testCase-end=" + scenario.getName());
+}
+```
+
+</TabItem>
+</Tabs>
+
+#### How the Final Status is Decided
+
+| Scenario | Final status of the test case |
+|----------|-------------------------------|
+| No `lambda-testCase-status` call | Derived from commands: **Failed** if any command failed, otherwise **Passed**. This is the same behavior as before. |
+| `lambda-testCase-status` called once | The status you sent, even if it differs from the derived status. For example, `failed` marks the test case as **Failed** even when every command passed. |
+| `lambda-testCase-status` called more than once | The last valid status you sent. |
+| Invalid or empty value (for example, `skipped`) | The call is ignored and the test case keeps its previous status. If no valid status was sent, the derived status is used. |
+| Called before any `lambda-testCase-start`, or after `lambda-testCase-end` and before the next start | The call is ignored, because no test case is open. No test case is changed. |
+| Test case started but never ended | The test case is still recorded with the status you sent. |
+| JSON without a `status`, or malformed JSON | The call is ignored. If no valid status was sent, the derived status is used. |
+
+Each call returns a message to your script stating whether the status was set or why it was ignored (for example, `no active test case` or an invalid status). Ignored calls never fail the session and appear in the command logs as warnings, not errors.
+
+:::note
+`lambda-testCase-status` only sets the status of a test case. It does not change the session status, which you continue to set with `lambda-status` or `setTestStatus`. A session marked **Passed** can still contain test cases marked **Failed**, and the other way around.
+:::
 
 ### Labeling and Filtering Command Logs
 

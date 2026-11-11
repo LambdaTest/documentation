@@ -1883,6 +1883,31 @@ module.exports = {
                 label: "Hover and Tooltips",
                 id: "accessibility-guided-test-hover-tooltips",
               },
+              {
+                type: "doc",
+                label: "Layout",
+                id: "accessibility-guided-test-layout",
+              },
+              {
+                type: "doc",
+                label: "Forms",
+                id: "accessibility-guided-test-forms",
+              },
+              {
+                type: "doc",
+                label: "Tables",
+                id: "accessibility-guided-test-tables",
+              },
+              {
+                type: "doc",
+                label: "Modals",
+                id: "accessibility-guided-test-modals",
+              },
+              {
+                type: "doc",
+                label: "Responsiveness",
+                id: "accessibility-guided-test-responsiveness",
+              },
             ],
           },
           {
@@ -3224,6 +3249,7 @@ module.exports = {
               "device-passcode-appautomation",
               "certificate-injection-appautomation",
               "set-device-dark-mode",
+              "gesture-navigation-appautomation",
               "smart-heal-appium",
               "apple-pay-auto",
               "button-text-click",
