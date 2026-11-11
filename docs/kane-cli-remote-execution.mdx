@@ -163,7 +163,9 @@ Before you dispatch a real-device suite, check these rules:
 - **`--device-slug` is refused** for real devices.
 - **Adaptive heal is off** on real devices, so a failed replay step fails the test.
 
-For the TUI, live view, settings, and limits on real devices, see [Real Devices](https://www.testmuai.com/docs/kane-cli-mobile-real-device).
+If the app talks to a backend on `localhost` or your private network, pass `--tunnel-name <name>` (or `--tunnel`) and start LT on your machine with `--env ht-prod`, which the grid needs. With a name, HyperExecute checks the tunnel before the job starts. If the cloud refuses the tunnel, agents get a `remote_error` with code `tunnel_refused` and the steps to check. See [A Private or Local Backend](https://www.testmuai.com/docs/kane-cli-mobile-real-device#a-private-or-local-backend-lt-tunnel).
+
+For the TUI, live view, settings, tunnel, and limits on real devices, see [Real Devices](https://www.testmuai.com/docs/kane-cli-mobile-real-device).
 
 ## The app under test on the grid
 
