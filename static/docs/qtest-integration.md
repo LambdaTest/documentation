@@ -4,6 +4,8 @@
 
 qTest is a comprehensive test management tool designed for Project Management, Bug Tracking, and Test Management. It embraces a centralized test management approach, facilitating seamless communication and accelerating task development across QA teams and stakeholders. With qTest Launch, you can run your automated tests on a variety of devices and real devices provided by TestMu AI.
 
+Considering a move off qTest? See [qTest alternatives](https://www.testmuai.com/blog/qtest-alternatives/).
+
 ## Prerequisites
 
 1. qTest Host

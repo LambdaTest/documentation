@@ -15,29 +15,6 @@ canonical: https://www.testmuai.com/support/docs/qtest-integration/
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import VerifiedTag from '@site/src/component/verifiedTag';
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "TestMu AI",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "qTest Integration",
-          "item": `${BRAND_URL}/support/docs/qtest-integration/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -111,6 +88,8 @@ import VerifiedTag from '@site/src/component/verifiedTag';
 ***
 qTest is a comprehensive test management tool designed for Project Management, Bug Tracking, and Test Management. It embraces a centralized test management approach, facilitating seamless communication and accelerating task development across QA teams and stakeholders. With qTest Launch, you can run your automated tests on a variety of devices and real devices provided by <BrandName />.
 
+Considering a move off qTest? See [qTest alternatives](https://www.testmuai.com/blog/qtest-alternatives/).
+
 ## Prerequisites
 
 1. qTest Host 
@@ -146,16 +125,3 @@ qTest is a comprehensive test management tool designed for Project Management, B
   For example to run Junit Automated tests, you can refer the following github repository: [automate-junit-qtest](https://github.com/LambdaTest/automate-junit-qtest/tree/main) and its readme file for more information.
 
   
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href={BRAND_URL}>Home</a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_ self" href={`${BRAND_URL}/support/docs/`}>Support</a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">qTest Integration With <BrandName /></span>
-    </li>
-  </ul>
-</nav> 

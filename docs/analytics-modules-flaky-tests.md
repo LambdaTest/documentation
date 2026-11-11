@@ -14,29 +14,6 @@ canonical: https://www.testmuai.com/support/docs/analytics-modules-test-intellig
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Test Overview",
-          "item": `${BRAND_URL}/support/docs/analytics-modules-test-intelligence-flaky-test-analytics/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -92,7 +69,9 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     "dateModified": "2026-07-03T19:09:57+05:30"
   }) }}
 />
-The best way to analyze your flaky tests is to use Test Intelligence. Test Intelligence is a machine learning-based algorithm that helps you identify flaky tests and get insights on the flaky tests that are causing your test runs to fail. By observing the historical test runs, Test Intelligence can identify the flaky tests and provide you with the insights to help you fix them.
+
+Test Intelligence is a machine learning-based algorithm that finds the [flaky tests](https://www.testmuai.com/learning-hub/flaky-test/) in your test suite by observing your historical test runs on TestMu AI. It checks each test's last 10 runs and marks it as flaky when its flake rate goes above 20%. Flaky Test Analytics then shows how flakiness is trending, how severe it is, and which test groups it hits, so you can decide which tests to fix first.
+
 
 <div className="ytframe">
 <div className="youtube" data-embed="h_A4KRo2V8Q" data-loading-attribute="eager">

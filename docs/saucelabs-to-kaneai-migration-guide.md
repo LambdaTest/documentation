@@ -27,29 +27,6 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 import VerifiedTag from '@site/src/component/verifiedTag';
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Sauce Labs to KaneAI migration",
-          "item": `${BRAND_URL}/support/docs/saucelabs-to-kaneai-migration-guide/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -276,7 +253,7 @@ In a KaneAI session, you add steps in natural language, with slash commands or b
 - **A test case in Test Manager.** Open it and click **Automate with KaneAI** in its **Automate** section. KaneAI opens a session pre-filled with the steps, where you author and run the test. The action works on one test case at a time. It works with the Manual Test Steps and Behaviour Driven Development templates, and the test case must have steps or scenarios. See [Automate with KaneAI](/support/docs/manual-test-case-creation/#automate-with-kaneai).
 - **Generated test cases.** In the AI Test Case Generator, **Create and Automate** saves the selected test cases and sends them to KaneAI. It is experimental, so review the authored steps.
 - **A Sauce AI test case.** Create a [KaneAI browser test](/support/docs/author-your-first-desktop-browser-test/) or [app test](/support/docs/author-your-first-mobile-app-test/). Write the objective in natural language from the prompts and step intents you saved.
-- **A recorded or manual flow.** [Manual Interaction](/support/docs/kaneai-manual-interaction/) records the clicks, typing and navigation you perform in a KaneAI session as steps. It works on desktop web, Android apps and iOS apps in portrait, not mobile browsers. Write checks as instructions, because interactions cannot record assertions.
+- **A recorded or manual flow.** [Manual Interaction](/support/docs/kaneai-manual-interaction/) records the clicks, typing and navigation you perform in a KaneAI session as steps. It works on desktop web, mobile browsers, Android apps and iOS apps. Write checks as instructions, because interactions cannot record assertions.
 
 Then reuse what you can:
 
@@ -326,25 +303,6 @@ When you author a KaneAI web test, select the tunnel under **Advanced Settings**
 - **Cypress and WebdriverIO code export.** KaneAI does not generate Cypress or WebdriverIO code. Keep those suites as scripts on the <BrandName /> cloud.
 - **Other products.** This guide does not cover Sauce Labs Error Reporting or Mobile App Distribution. <!-- Source: https://docs.saucelabs.com/llms.txt, checked 2026-10-16 -->
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-       Sauce Labs To KaneAI Migration
-      </span>
-    </li>
-  </ul>
-</nav>
 
 ## Related migration guides
 

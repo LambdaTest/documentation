@@ -26,29 +26,6 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "TestMu AI",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Axosoft Integration",
-          "item": `${BRAND_URL}/support/docs/axosoft-integration/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -118,7 +95,7 @@ Axosoft is a versatile project management tool designed for Agile teams and orga
 </div>
 </div>
 
-Axosoft Integration with <BrandName /> streamlines the software development team's project management and testing processes. With a simple one-click integration, you can seamlessly create and manage issues during [cross browser testing](https://www.testmuai.com/online-browser-testing/). This integration enables you to push annotated issues to specific projects, assign them to team members, set priorities, and attach relevant screenshots during test sessions. The created issues are automatically reflected in your Axosoft workspace, complete with test session details and annotated screenshots, facilitating efficient issue tracking and resolution within your project management environment.
+Axosoft Integration with <BrandName /> streamlines the software development team's project management and testing processes. With a simple one-click integration, you can seamlessly create and manage issues during [cross browser testing](https://www.testmuai.com/cross-browser-testing/). This integration enables you to push annotated issues to specific projects, assign them to team members, set priorities, and attach relevant screenshots during test sessions. The created issues are automatically reflected in your Axosoft workspace, complete with test session details and annotated screenshots, facilitating efficient issue tracking and resolution within your project management environment.
 
 Axosoft Integration with <BrandName />, like all of the integrations to 3rd party applications, is available for freemium and premium plans.
 
@@ -222,22 +199,3 @@ You can work with one integration at a time. So if you want to integrate into a 
 > That was all you need to know for <BrandName /> + axosoft Integration. Increase your productivity with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always available on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**chat**</span> to help you out with any roadblock regarding our product. Happy testing!
 
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href={BRAND_URL}>
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-        Axosoft Integration
-      </span>
-    </li>
-  </ul>
-</nav>

@@ -1,6 +1,6 @@
 ---
 id: getting-started-with-appium-testing
-title: How to Run Your First Appium Test on TestMu AI
+title: "Run Appium Tests on TestMu AI: Getting Started"
 hide_title: true
 toc_max_heading_level: 2
 sidebar_label: "Run First Test"
@@ -25,29 +25,6 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import VerifiedTag from '@site/src/component/verifiedTag';
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "How to Run Your First Appium Test on TestMu AI",
-          "item": `${BRAND_URL}/support/docs/getting-started-with-appium-testing/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -60,7 +37,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       "@type": "WebPage",
       "@id": "https://www.testmuai.com/support/docs/getting-started-with-appium-testing/"
     },
-    "headline": "How to Run Your First Appium Test on TestMu AI",
+    "headline": "Run Appium Tests on TestMu AI: Getting Started",
     "description": "Getting Started with Appium Testing on TestMu AI Upload, Script, Execute, View - Run your automation scripts seamlessly on 50,000+ real browsers and operating systems.",
     "url": "https://www.testmuai.com/support/docs/getting-started-with-appium-testing/",
     "image": {
@@ -102,7 +79,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
   }) }}
 />
 
-# How to Run Your First Appium Test on TestMu AI
+# Getting Started: Run Appium Tests on TestMu AI
 ---
 
 Running your first Appium test on TestMu AI executes native and hybrid mobile app End-to-End (E2E) testing on real Android and iOS devices. Clone a sample project, set credentials, upload your app, configure desired capabilities, and view detailed results on the dashboard.
@@ -436,22 +413,3 @@ Continue with these related guides:
 - [Upload apps to the real device cloud](/support/docs/application-setup-via-api/)
 - [App Automation Dashboard](/support/docs/app-automation-dashboard/)
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-        How to Run Your First Appium Test on TestMu AI
-      </span>
-    </li>
-  </ul>
-</nav>

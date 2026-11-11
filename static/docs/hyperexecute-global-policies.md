@@ -6,8 +6,7 @@ Every HyperExecute job is configured by a [YAML file](/support/docs/deep-dive-in
 
 **Global Policies** let an organization admin define a rule once and have it govern every HyperExecute job across the projects they choose. The rule is applied when a job is submitted, so no developer has to touch their YAML.
 
-**BETA**
-Global Policies is currently in BETA. Phase 1 supports seven YAML parameters, listed in [Supported parameters and modes](#supported-parameters-and-modes). More parameters and policy modes will follow.
+Global Policies support seven YAML parameters, listed in [Supported parameters and modes](#supported-parameters-and-modes). More parameters and policy modes will follow.
 
 Creating, editing, and deleting policies is **admin-only**. Developers can see which policies acted on their jobs, but cannot change them.
 

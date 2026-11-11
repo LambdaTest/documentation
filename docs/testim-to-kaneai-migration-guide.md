@@ -26,29 +26,6 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 import VerifiedTag from '@site/src/component/verifiedTag';
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Testim to KaneAI migration",
-          "item": `${BRAND_URL}/support/docs/testim-to-kaneai-migration-guide/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -266,7 +243,7 @@ KaneAI does not run Testim steps, so you re-create each flow in a KaneAI session
 
 - **From a test case.** Open a saved test case and click **Automate with KaneAI** in its **Automate** section. A KaneAI session opens with the test case's steps filled in, where you author and run the test. [This action](/support/docs/manual-test-case-creation/#automate-with-kaneai) works on one test case at a time, and the test case must have steps or scenarios.
 - **From the generator.** **Create and Automate** saves the generated test cases you select and sends them to KaneAI for automated authoring. It is an experimental feature, so review the steps afterwards.
-- **From scratch.** Start a [browser test](/support/docs/author-your-first-desktop-browser-test/) or an [app test](/support/docs/author-your-first-mobile-app-test/) and write each step in natural language. [Manual Interaction](/support/docs/kaneai-manual-interaction/) also records your clicks, typing, scrolls and navigation as steps. It cannot record hover actions or checks, and it does not capture mobile browsers. Write those as instructions.
+- **From scratch.** Start a [browser test](/support/docs/author-your-first-desktop-browser-test/) or an [app test](/support/docs/author-your-first-mobile-app-test/) and write each step in natural language. [Manual Interaction](/support/docs/kaneai-manual-interaction/) also records your clicks, typing, scrolls and navigation as steps, including in mobile browsers. It cannot record hover actions or checks. Write those as instructions.
 
 Re-create Testim features with their KaneAI counterparts:
 
@@ -307,25 +284,6 @@ To run from CI tools such as GitHub Actions or Jenkins, copy the Test Run ID fro
 - **CLI steps.** Testim CLI actions run Node.js scripts in your CLI environment. <!-- Source: https://docs.tricentis.com/testim/content/advanced-editing/validations/add-cli-validations-and-actions.htm, checked 2026-10-16 --> KaneAI runs JavaScript in the current testing environment, so re-create those checks with API, database or JavaScript steps.
 - **Emulators and simulators.** Virtual Mobile configurations are available for non-KaneAI test runs only, so KaneAI test runs use real devices.
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-       Testim To KaneAI Migration
-      </span>
-    </li>
-  </ul>
-</nav>
 
 ## Related migration guides
 

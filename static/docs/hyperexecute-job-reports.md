@@ -6,6 +6,8 @@ HyperExecute Job Reports are designed to offer deep insights into the performanc
 
 If you want to learn how to **generate** and **download** detailed reports, including **multiple reports**, please refer to the [HyperExecute Reports documentation](/support/docs/hyperexecute-reports/) page.
 
+To track job counts and trends across runs, see the [HyperExecute job widgets](/support/docs/hyperexecute-job-widgets/).
+
 ## Extent Report
 The [Extent Report](/support/docs/extent-report/) is a robust reporting framework commonly used with Java TestNG, and Selenium tests. It provides a feature-rich environment to explore test results, offering:
 

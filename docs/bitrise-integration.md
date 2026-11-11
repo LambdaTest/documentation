@@ -19,29 +19,6 @@ canonical: https://www.testmuai.com/support/docs/bitrise-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Running Appium Tests In Bitrise CI",
-          "item": `${BRAND_URL}/support/docs/bitrise-integration/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -105,7 +82,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 Bitrise offers a mobile CI/CD platform as a service (PaaS) to accelerate the automation of your software development projects. It provides different mobile-first features like exhaustive mobile stack coverage, store code anywhere in cloud or on-premise, and zero hardware setup that make building, testing, and deploying faster and easier.
 
-Using <BrandName /> with Bitrise, you can effortlessly perform [Appium testing](https://www.testmuai.com/appium-mobile-testing/) of your mobile apps on an [online device farm](https://www.testmuai.com/online-device-farm/) of 50,000+ real devices and OS versions.
+Using <BrandName /> with Bitrise, you can effortlessly perform [Appium mobile testing](https://www.testmuai.com/appium-mobile-testing/) of your mobile apps on an [online device farm](https://www.testmuai.com/online-device-farm/) of 50,000+ real devices and OS versions.
 
 ## Prerequisites
 ***

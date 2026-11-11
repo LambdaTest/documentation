@@ -17,29 +17,6 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Deep Dive into HyperExecute YAML",
-          "item": `${BRAND_URL}/support/docs/hyperexecute-yaml-parameters/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -231,22 +208,3 @@ On-prem runs Linux and Windows only, so `mac` values do not apply, and `testDisc
 | [afterEachScenario](/support/docs/deep-dive-into-hyperexecute-yaml/#aftereachscenario) | List of Strings | Allows you to trigger your define tasks after each test scenario. |
 | [syncStart](/support/docs/deep-dive-into-hyperexecute-yaml/#syncstart) | Map | Ensures all VMs are ready before starting parallel tasks.|
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-      Deep Dive into HyperExecute YAML
-      </span>
-    </li>
-  </ul>
-</nav>

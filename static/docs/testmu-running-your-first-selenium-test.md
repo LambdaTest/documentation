@@ -46,6 +46,12 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
   {`$env:LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
 $env:LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
+Your tests connect to the TestMu AI grid at the following hub URL:
+
+```
+https://{username}:{accessKey}@hub.lambdatest.com/wd/hub
+```
+
 ## Step 4: Configure Your Test Capabilities
 
 Define which browser, version, and OS your test runs on.

@@ -19,16 +19,6 @@ canonical: https://www.testmuai.com/support/docs/agent-assurance-results-and-evi
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import VerifiedTag from '@site/src/component/verifiedTag';
 
-<script type="application/ld+json"
-  dangerouslySetInnerHTML={{ __html: JSON.stringify({
-    "@context": "https://schema.org", "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": BRAND_URL },
-      { "@type": "ListItem", "position": 2, "name": "Support", "item": `${BRAND_URL}/support/docs/` },
-      { "@type": "ListItem", "position": 3, "name": "Results and Evidence", "item": `${BRAND_URL}/support/docs/agent-assurance-results-and-evidence/` }
-    ]
-  }) }}
-/>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -170,13 +160,17 @@ On a run's scenario result, filter **Acceptance criteria** by **All**, **Pass**,
 
 Since 0.1.16, the result also shows the scenario as it was when the run used it: its feature, class, category, criteria, timeout, multi-turn setting, input and output, and an adversarial scenario's attack intent. The icon next to the title opens the scenario's page, and the feature opens as it was for that run.
 
+Since 0.1.17, a failed result shows a **Why it failed** card, and an unverifiable one shows **Why it couldn't be verified**, in place of the earlier Summary box. The run's page has a collapsible **Failure analysis** section with one card per failure cluster; each card lists the scenarios affected and links to their results. A run made with `--rca` shows each cluster's cause, remedy and files. Without `--rca`, the card says how to get them. The section appears once the run has finished.
+
+Since 0.1.18, the section is headed **Failure clusters analysis** and lists clusters in order: CL-01, CL-02, and so on. A passing result that an attack compromised gets a **Why it was compromised** card with the attack's evidence. An unverifiable result that is in no cluster still shows **Why it couldn't be verified**, with a sentence that says what to do. On a result's card, **See this cluster on the run page** opens that cluster on the run's page. When a remedy contains code blocks, its copy button copies only the code.
+
 <img loading="lazy" src={require('../assets/images/rook/rook-local-result.png').default} alt="Local CommerceCare result with one failed response criterion and two unverifiable tool or state criteria" width="1440" height="900" className="doc_img"/>
 
 This view can show evidence before upload, including a local `--test` run. The redesigned viewer refreshes when workspace records change. The CommerceCare example separates an unmet response requirement from missing tool/state evidence; the hosted triage example below is a different run. An absent verdict or file means it was not recorded or is unavailable; do not turn that absence into a pass. See [local navigation and files](/support/docs/rook-web-ui/#local-results).
 
 ### In the Hosted Web UI
 
-Open the scenario **from its run**. Read the criterion cards and filter by outcome, then select **Request**, **Response**, **Verdict**, or **Artefacts** in the **Evidence** panel to open its drawer. Close the drawer to return to the criteria. Cards show expected, achieved, evidence, and confidence where available. The scenario catalog instead shows the current definition and history. Since 0.1.16, the result also shows the scenario as it was for that run, with its attack intent where it has one. The icon next to the title opens that version of the scenario, or says it no longer exists, and the feature opens as it was for that run.
+Open the scenario **from its run**. Read the criterion cards and filter by outcome, then select **Request**, **Response**, **Verdict**, or **Artefacts** in the **Evidence** panel to open its drawer. Close the drawer to return to the criteria. Cards show expected, achieved, evidence, and confidence where available. The scenario catalog instead shows the current definition and history. Since 0.1.16, the result also shows the scenario as it was for that run, with its attack intent where it has one. The icon next to the title opens that version of the scenario, or says it no longer exists, and the feature opens as it was for that run. Since 0.1.17, the run's page and its failed or unverifiable results also show the run's failure analysis, as in the Local UI.
 
 Passing criterion cards start collapsed. Click a card or **Expand all** to read its assessment. The screenshot shows the saved verdict in the evidence drawer; close the drawer to return to the cards.
 

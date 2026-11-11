@@ -18,29 +18,6 @@ canonical: https://www.testmuai.com/support/docs/scroll-sync/
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "TestMu AI",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Scroll Sync",
-          "item": `${BRAND_URL}/support/docs/scroll-sync/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -129,22 +106,3 @@ With now Scroll sync enabled you can compare your web-pages side by side.
 >
 That is all about the Scroll Sync in LT Browser. Don't forget to share you experience or questions with us. You can drop us an email through [support@testmuai.com](mailto:support@testmuai.com) or you could wave us a hello over our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24*7 Customer Chat Support**</span>. <br />Happy testing!
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href={BRAND_URL}>
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-        Scroll Sync
-      </span>
-    </li>
-  </ul>
-</nav>

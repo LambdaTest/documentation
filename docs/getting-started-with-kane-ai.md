@@ -21,29 +21,6 @@ import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Getting Started With KaneAI on TestMu AI",
-          "item": `${BRAND_URL}/support/docs/getting-started-with-kane-ai`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -272,6 +249,6 @@ Ready to go further with KaneAI? These guides cover common authoring and workflo
 - [Create Pull Requests from KaneAI Test Cases](/support/docs/kaneai-create-pr/) — turn KaneAI test cases into pull requests in your repository.
 - [Scroll Until Element for Mobile Authoring](/support/docs/kaneai-scroll-until-mobile/) — scroll until a target element is visible when authoring mobile tests.
 - [Error handling in KaneAI](/support/docs/error-handling-kaneai/) — handle failures and recover gracefully within a KaneAI test.
-- [Kane CLI modes](/support/docs/kane-cli-modes/) — the execution modes available in the Kane CLI.
+- [Kane CLI modes](https://www.testmuai.com/docs/kane-cli-modes) — the execution modes available in the Kane CLI.
 - [Finding and interacting with elements](/support/docs/kaneai-kb-finding-and-interacting-with-elements/) — describe elements so KaneAI can locate them reliably.
 - [Mobile app testing patterns](/support/docs/kaneai-kb-mobile-app-testing-patterns/) — common patterns for authoring mobile app tests with KaneAI.

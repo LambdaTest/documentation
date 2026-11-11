@@ -1,6 +1,6 @@
 ---
 id: flutter-supported-capabilities
-title: Flutter Supported Capabilities
+title: Flutter Supported Capabilities on TestMu AI
 sidebar_label: Supported Capabilities
 description: Now you can run your Flutter framework on TestMu AI online grid of 3000+ real desktop browsers and real operating systems with its supported capabilities.
 keywords:
@@ -15,6 +15,7 @@ url: https://www.testmuai.com/support/docs/flutter-supported-capabilities/
 site_name: TestMu AI
 slug: flutter-supported-capabilities/
 canonical: https://www.testmuai.com/support/docs/flutter-supported-capabilities/
+toc_max_heading_level: 2
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -22,29 +23,6 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Espresso Supported Capabilities",
-          "item": `${BRAND_URL}/support/docs/flutter-supported-capabilities/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -57,7 +35,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       "@type": "WebPage",
       "@id": "https://www.testmuai.com/support/docs/flutter-supported-capabilities/"
     },
-    "headline": "Flutter Supported Capabilities",
+    "headline": "Flutter Supported Capabilities on TestMu AI",
     "description": "Now you can run your Flutter framework on TestMu AI online grid of 3000+ real desktop browsers and real operating systems with its supported capabilities.",
     "url": "https://www.testmuai.com/support/docs/flutter-supported-capabilities/",
     "image": {
@@ -103,7 +81,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
-This document provide details about the features and capabilities supported for Espresso Framework on <BrandName />.
+Flutter supported capabilities on TestMu AI let you configure Flutter mobile app tests on real Android devices, controlling the app, test suite, device, video, timeouts, device logs, build name, permissions, geolocation, GPS coordinates, and Bluetooth for reliable end-to-end automation runs.
 
 | Capability Name | Data Type | Description |
 |------|-----------|-------------|

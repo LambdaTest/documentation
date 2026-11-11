@@ -19,29 +19,6 @@ import VerifiedTag from '@site/src/component/verifiedTag';
 import { BRAND_URL } from '@site/src/component/BrandName';
 
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Rook CLI Reference",
-          "item": `${BRAND_URL}/support/docs/agent-assurance-command-reference/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -863,7 +840,7 @@ The shell form is <code>rook run</code> with the same options.
 | <code>--name &lt;name&gt;</code> | Give the run a readable label. |
 | <code>--phases &lt;names&gt;</code> | Run only a contiguous selection of <code>prepare</code>, <code>open</code>, <code>execute</code>, <code>close</code>, <code>collect</code>, and <code>judge</code>. |
 | <code>--skip &lt;names&gt;</code> | Run everything except the named phases. Cannot be combined with <code>--phases</code>. |
-| <code>--concurrency &lt;n&gt;</code> | Run 1 to 8 scenarios at once. An explicit value overrides the planner. |
+| <code>--concurrency &lt;n&gt;</code> | Run 1 to 8 scenarios at once. An explicit value overrides the planner. Since 0.1.17, your plan's scenarios-at-a-time limit caps it. |
 | <code>--test</code> | Run the current tree without placing the result on the shared project timeline. |
 | <code>--run &lt;id&gt;</code> | Continue that same run in place with the phases selected by <code>--phases</code>. |
 | <code>--resume &lt;id&gt;</code> | Carry compatible completed work forward from an earlier run. |
@@ -1240,7 +1217,7 @@ In the TUI, choosing **update now** at the startup notice or typing <code>/updat
 
 If you previously chose “never ask again” in the TUI update notice, run <code>/update auto</code> to re-enable automatic notices.
 
-The latest public release checked on October 28, 2026 is [0.1.16](https://github.com/LambdaTest/rook/releases/tag/v0.1.16). Use the installed command's help for version-specific options. If an npm 0.1.1 or 0.1.2 install cannot update, follow the [public-registry repair command](/support/docs/rook-installation/#repair-an-npm-011-or-012-installation). Windows users can follow [PowerShell setup and upgrades](/support/docs/rook-installation/#windows).
+The latest public release checked on November 9, 2026 is [0.1.18](https://github.com/LambdaTest/rook/releases/tag/v0.1.18). Use the installed command's help for version-specific options. If an npm 0.1.1 or 0.1.2 install cannot update, follow the [public-registry repair command](/support/docs/rook-installation/#repair-an-npm-011-or-012-installation). Windows users can follow [PowerShell setup and upgrades](/support/docs/rook-installation/#windows).
 
 ## Export Diagnostic Logs {#export}
 

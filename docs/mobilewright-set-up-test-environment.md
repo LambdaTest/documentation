@@ -20,29 +20,6 @@ import RealDeviceTag from '../src/component/realDevice';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Set Up Your Mobilewright Test Environment",
-          "item": `${BRAND_URL}/support/docs/mobilewright-set-up-test-environment/`
-        }]
-      })
-    }}
-></script>
 
 # Set Up Your Mobilewright Test Environment
 

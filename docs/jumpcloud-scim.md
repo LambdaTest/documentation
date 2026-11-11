@@ -16,29 +16,6 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "TestMu AI",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Scim",
-          "item": `${BRAND_URL}/support/docs/jumpcloud-scim/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -185,7 +162,7 @@ Group Provisioning must be enabled for your org. Contact <span className="doc__l
 
 **Step 3:** Click **Activate** to start pushing group membership via SCIM.
 
-**Step 4:** In <BrandName />, go to **Settings** > **Organization Settings** > **SCIM Group Provisioning** to view the synced groups and configure mappings.
+**Step 4:** In <BrandName />, go to **Settings** > **Organization Settings** > **Security** > **SCIM Provisioning** > **Groups** tab to view the synced groups and configure mappings.
 
 ### What Happens After Provisioning
 

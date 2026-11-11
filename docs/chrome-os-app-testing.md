@@ -3,7 +3,7 @@ id: chrome-os-app-testing
 title: ChromeOS App Testing
 hide_title: false
 sidebar_label: ChromeOS App Testing
-description: TestMu AI provides a powerful solution for testing apps designed for Chromebooks by offering live interactive testing capabilities, and device emulation for responsive design testing.
+description: Upload your app and test it live on a virtual ChromeOS device in TestMu AI, with device controls, screenshots, session recording, IP geolocation and network throttling.
 keywords:
     - ChromeOS
     - ChromeOS App
@@ -21,29 +21,6 @@ canonical: https://www.testmuai.com/support/docs/chrome-os-app-testing/
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "TestMu AI",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "ChromeOS App Testing",
-          "item": `${BRAND_URL}/support/docs/chrome-os-app-testing/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -57,7 +34,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       "@id": "https://www.testmuai.com/support/docs/chrome-os-app-testing/"
     },
     "headline": "ChromeOS App Testing",
-    "description": "TestMu AI provides a powerful solution for testing apps designed for Chromebooks by offering live interactive testing capabilities, and device emulation for responsive design testing.",
+    "description": "Upload your app and test it live on a virtual ChromeOS device in TestMu AI, with device controls, screenshots, session recording, IP geolocation and network throttling.",
     "url": "https://www.testmuai.com/support/docs/chrome-os-app-testing/",
     "image": {
       "@type": "ImageObject",
@@ -160,7 +137,7 @@ It empowers you to streamline bug reporting within the testing environment itsel
  
 
 ## IP Geolocation
-This transcends basic location selection. It allows you to spoof the IP address of your emulated device, simulating various geographical locations across over 45 countries. This enables you to test geo-restricted features, localized content delivery, and the overall user experience for a global audience.
+This transcends basic location selection. It allows you to spoof the IP address of your emulated device, simulating various geographical locations across 180+ countries. This enables you to test geo-restricted features, localized content delivery, and the overall user experience for a global audience.
   
 <img loading="lazy" src={require('../assets/videos/real-time/chromeos-app/ip-location.png').default} style={{ height: '350px' }} className="doc_img"/>
 

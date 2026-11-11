@@ -21,29 +21,6 @@ canonical: https://www.testmuai.com/support/docs/insights-dashboard/
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "TestMu AI",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Insights Dashboard",
-          "item": `${BRAND_URL}/support/docs/insights-dashboard/`
-        }]
-      })
-    }}
-></script>
 
 # Insights Dashboard
 
@@ -145,32 +122,22 @@ Step-level execution tracking in reports is currently in slow rollout. To get ea
 
 ### Traceability Reports
 
-Traceability reports provide end-to-end visibility into how your test cases align with business requirements and defects.
+Traceability reports provide end-to-end visibility into how your test cases align with business requirements and defects. Each requirement is followed through the test cases linked to it, their executions, and the defects those executions found.
 
-The Traceability reports show the Issues based test-execution report allowing you to see the Issues coverage in tests:
+:::info
+Requirements and defects are currently in slow rollout. To get early access, raise a request to our support team. Until they are enabled for your organization, the report lists every linked issue together.
+:::
 
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/Reports/traciability-report.png').default} alt="Reports Overview" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/Reports/traceability-requirements-defects.png').default} alt="Traceability report with the Requirement and Defects columns" className="doc_img"/>
 
-The report data can be filtered using Test, Issue, and Run metadata.
+The report lists these columns: **Requirement**, **Test Case**, **Status**, **Configuration**, **Test Run**, **Defects**, **Executed By**, and **Executed At**.
 
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/Reports/traciablity-filters.png').default} alt="Reports Overview" className="doc_img"/>
+- **Requirement**: every issue linked on a test case, whatever its type and tracker, with the test cases linked to it listed under it. Defects are not listed as requirements.
+- **Defects**: the defects each execution found, with where each one was raised, on a step or on the test instance.
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href={BRAND_URL}>
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-        Insights Dashboard
-      </span>
-    </li>
-  </ul>
-</nav>
+A requirement that is linked only to a test run, and not to a test case, does not appear in the report.
+
+Search the report by **Requirement ID**, **Test Case Name**, or **Test Case ID**, and filter it by **Executed By**, **Status**, **Test Runs**, and **Defect ID**. The CSV export includes the requirements and the defects. New data may take around 5 minutes to appear in the report.
+
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/Reports/traceability-filters.png').default} alt="Traceability report filters with the Defect ID filter open" className="doc_img"/>
+

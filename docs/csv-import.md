@@ -19,29 +19,6 @@ canonical: https://www.testmuai.com/support/docs/csv-import/
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "TestMu AI",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Import Test Cases form CSV",
-          "item": `${BRAND_URL}/support/docs/csv-import/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -263,22 +240,3 @@ All the usual actions apply to these versions — compare, view an older version
 | Nothing to import | Every row is either already up to date or skipped. | Review the skipped rows report or revisit your field mapping, then try again. |
 | The import stopped partway | A system error interrupted the import. | Rows already applied stay applied, with their versions. Import the same file again to finish — the applied rows show as *Already up to date*. |
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href={BRAND_URL}>
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-        CSV Import
-      </span>
-    </li>
-  </ul>
-</nav>

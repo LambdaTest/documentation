@@ -82,6 +82,8 @@ Open any app and go to the **Distribution Page** tab. Here you can
   - **Public** - anyone with the link can download.
   - **Authenticated** - only testers in the app's sharing list can download from the link received in their email.
 
+Every distribution page also shows a **QR code**. Testers scan it with their phone to open the page and tap **Download** — no need to type or copy a URL.
+
 ### Sharing Settings
 
 Open any app and go to the **Sharing** tab. Here you can:
@@ -101,6 +103,22 @@ You can also send notifications manually:
 1. Open the build row in App Manager.
 2. Click the **Share** icon.
 3. Click **Notify Testers**.
+
+### Share a Specific Build
+
+Sometimes you want to hand a tester one exact build — a release candidate or a hotfix — instead of the whole distribution page. The **Distribute** action gives every build its own page and link.
+
+**Step 1:** In **App Manager**, open the build's actions menu (the **⋯** icon on its row) and click **Distribute**.
+
+**Step 2:** The build's own distribution page opens in a new tab at a per-build URL of the form `https://app-management.lambdatest.com/app-dist/app//build/`.
+
+This page shows only that build — its version, build number, release notes, a **QR code** to scan, and a **Download** button — with no "Previous Versions" list. Share the link or the QR code, and the tester always lands on exactly the build you picked.
+
+**Distribute** is available only when the app's **Distribution Page** is enabled (see [Distribution Page Settings](#distribution-page-settings)). When the page is turned off, the action is disabled and shows the reason "Distribution not enabled".
+
+**Build numbers**
+
+Version labels across App Distribution include the **build number** — for example `1.5.4 (7)`, where `7` is the build number. This lets testers and QA tell two uploads of the same version apart, both on the dashboard and on the distribution page.
 
 ## Test on Real Devices
 

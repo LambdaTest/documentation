@@ -18,29 +18,6 @@ canonical: https://www.testmuai.com/support/docs/hyperexecute-how-to-get-my-user
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Integrations",
-          "item": `${BRAND_URL}/support/docs/hyperexecute-how-to-get-my-username-and-access-key/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -126,23 +103,3 @@ You can directly copy your Username and Access Key using shortcut key button.
 :::info On-premise deployments
 On-prem, click **Credentials** in the left sidebar of your organization's own HyperExecute dashboard and copy **Username** and **Access Key**. Keys from the public cloud do not work on-prem. See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/).
 :::
-
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-       HyperExecute General FAQs
-      </span>
-    </li>
-  </ul>
-</nav>

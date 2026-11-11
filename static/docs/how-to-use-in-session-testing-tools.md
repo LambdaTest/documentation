@@ -38,7 +38,7 @@ However, if your preferred location is not showing, you can specify the exact lo
 
 ### Network Throttling
 
-With TestMu AI�s **Network Throttling**, you can test mobile applications across a range of network conditions, including offline, as well as specific network profiles like 3G, 3G+, 4G LTE, 4G Advanced and even custom network profile with its extensive real mobile device cloud.
+With TestMu AI's **Network Throttling**, you can test mobile applications across a range of network conditions, including offline, as well as specific network profiles like 3G, 3G+, 4G LTE, 4G Advanced and even custom network profile with its extensive real mobile device cloud.
 
 You can simulate these network environments using either pre-defined profiles or by creating custom network profiles to suit your needs.
 
@@ -84,11 +84,11 @@ With the zoom in-out slider, you can zoom in and out in your real device as per 
 
 ### Chrome DevTools
 
-TestMu AI�s real device browser testing offers in-built developer tools to help QA debug their websites and web applications.
+TestMu AI's real device browser testing offers in-built developer tools to help QA debug their websites and web applications.
 
 ### Safari Web Inspector
 
-TestMu AI�s real device browser testing offers in-built **Safari Web Inspector**, an open-source web development tool to simplify optimizing, prototyping, and debugging web applications for iOS and OS X.
+TestMu AI's real device browser testing offers in-built **Safari Web Inspector**, an open-source web development tool to simplify optimizing, prototyping, and debugging web applications for iOS and OS X.
 
 ### Test Manager
 

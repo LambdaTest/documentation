@@ -120,11 +120,11 @@ The target profile must reach the deployed service through its cluster DNS or a 
 
 ## Build a Reviewed-Suite Image
 
-Download the [Dockerfile](pathname:///support/resources/rook/Dockerfile) and save it as `ci/rook.Dockerfile`. Build from the reviewed **agent repository root** after adding `ci/rook-ci.sh` and the committed workspace definitions.
+Download the [Dockerfile](pathname:///support/resources/rook/rook.Dockerfile) and save it as `ci/rook.Dockerfile`. Build from the reviewed **agent repository root** after adding `ci/rook-ci.sh` and the committed workspace definitions.
 
 ```dockerfile
 FROM debian:bookworm-slim
-ARG ROOK_VERSION=0.1.16
+ARG ROOK_VERSION=0.1.18
 RUN apt-get update && apt-get install -y --no-install-recommends \
     bash ca-certificates curl jq tar gzip git \
     && curl -fsSL https://raw.githubusercontent.com/LambdaTest/rook/main/install.sh \

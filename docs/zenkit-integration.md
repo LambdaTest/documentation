@@ -26,31 +26,6 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "TestMu AI",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Zenkit Integration",
-          "item": `${BRAND_URL}/support/docs/zenkit-integration/`
-        }]
-      })
-    }}
-> 
-
-</script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -120,7 +95,7 @@ Zenkit is a SaaS tool that helps teams collaborate on projects and build databas
 </div>
 </div>
 
-<BrandName />'s integration with Zenkit provides a seamless solution for tracking and managing bugs and issues encountered during [cross-browser testing](https://www.testmuai.com/online-browser-testing/). With this integration, developers can effortlessly log bugs directly from the <BrandName /> platform to their Zenkit instance, eliminating the need to maintain tasks and issues manually.
+<BrandName />'s integration with Zenkit provides a seamless solution for tracking and managing bugs and issues encountered during [cross-browser testing](https://www.testmuai.com/cross-browser-testing/). With this integration, developers can effortlessly log bugs directly from the <BrandName /> platform to their Zenkit instance, eliminating the need to maintain tasks and issues manually.
 
 ## Integrating Zenkit With <BrandName />
 ***
@@ -194,22 +169,3 @@ Upon clicking, a cloud-based virtual machine will fire up, running real browsers
 > That was all you need to know for <BrandName /> + Zenkit Integration. Increase your productivity with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always available on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**chat**</span> to help you out with any roadblock regarding our product. Happy testing!
 
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href={BRAND_URL}>
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-        Zenkit Integration
-      </span>
-    </li>
-  </ul>
-</nav>

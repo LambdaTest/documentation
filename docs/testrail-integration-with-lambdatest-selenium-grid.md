@@ -16,29 +16,6 @@ canonical: https://www.testmuai.com/support/docs/testrail-integration-with-testm
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import VerifiedTag from '@site/src/component/verifiedTag';
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "TestMu AI",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "TestRail Integration",
-          "item": `${BRAND_URL}/support/docs/testrail-integration-with-testmu-selenium-grid/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -255,16 +232,3 @@ Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
 
 Kudos! Now you can deploy your code in a reliable & faster manner at scale, using <BrandName /> integration with TestRail, for automated cross browser testing with Selenium Grid. Happy Testing!
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href={BRAND_URL}>Home</a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_ self" href={`${BRAND_URL}/support/docs/`}>Support</a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">TestRail Integration With <BrandName /> Selenium Grid</span>
-    </li>
-  </ul>
-</nav> 

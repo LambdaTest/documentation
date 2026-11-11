@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1720 520" width="1720" height="520" role="img" aria-label="How kane-cli explore works">
+<defs>
+<filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.08"/></filter>
+<marker id="head" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#6b7280"/></marker>
+</defs>
+<rect x="1" y="1" width="1718" height="518" rx="12" fill="#f8f9fb" stroke="#e5e7eb"/>
+<g filter="url(#shadow)"><rect x="40" y="50" width="360" height="150" rx="10" fill="#ffffff" stroke="#e5e7eb"/></g>
+<path d="M 40 60 A 10 10 0 0 1 50 50 L 390 50 A 10 10 0 0 1 400 60 L 400 54 L 40 54 Z" fill="#1e4fa8"/>
+<text x="64" y="94" font-family="Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="17" font-weight="700" letter-spacing="0.6" fill="#1f2937">YOUR APP</text>
+<line x1="64" y1="112" x2="376" y2="112" stroke="#d1d5db" stroke-dasharray="4 4"/>
+<text x="64" y="144" font-family="'SFMono-Regular', Menlo, Consolas, monospace" font-size="17" fill="#1e4fa8">staging.example.com</text>
+<text x="64" y="174" font-family="Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="18" fill="#374151">or localhost, through an LT tunnel</text>
+<g filter="url(#shadow)"><rect x="460" y="50" width="360" height="150" rx="10" fill="#ffffff" stroke="#e5e7eb"/></g>
+<path d="M 460 60 A 10 10 0 0 1 470 50 L 810 50 A 10 10 0 0 1 820 60 L 820 54 L 460 54 Z" fill="#f0773a"/>
+<text x="484" y="94" font-family="Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="17" font-weight="700" letter-spacing="0.6" fill="#1f2937">EXPLORER</text>
+<line x1="484" y1="112" x2="796" y2="112" stroke="#d1d5db" stroke-dasharray="4 4"/>
+<text x="484" y="144" font-family="Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="18" fill="#374151">Runs on HyperExecute</text>
+<text x="484" y="174" font-family="Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="18" fill="#374151">Clicks, types and follows links</text>
+<g filter="url(#shadow)"><rect x="880" y="50" width="360" height="150" rx="10" fill="#ffffff" stroke="#e5e7eb"/></g>
+<path d="M 880 60 A 10 10 0 0 1 890 50 L 1230 50 A 10 10 0 0 1 1240 60 L 1240 54 L 880 54 Z" fill="#f0773a"/>
+<text x="904" y="94" font-family="Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="17" font-weight="700" letter-spacing="0.6" fill="#1f2937">MAP</text>
+<line x1="904" y1="112" x2="1216" y2="112" stroke="#d1d5db" stroke-dasharray="4 4"/>
+<text x="904" y="144" font-family="Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="18" fill="#374151">Screens · flows · findings</text>
+<text x="904" y="174" font-family="'SFMono-Regular', Menlo, Consolas, monospace" font-size="17" fill="#1e4fa8">kane-cli explore view</text>
+<g filter="url(#shadow)"><rect x="460" y="320" width="360" height="150" rx="10" fill="#ffffff" stroke="#e5e7eb"/></g>
+<path d="M 460 330 A 10 10 0 0 1 470 320 L 810 320 A 10 10 0 0 1 820 330 L 820 324 L 460 324 Z" fill="#f0773a"/>
+<text x="484" y="364" font-family="Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="17" font-weight="700" letter-spacing="0.6" fill="#1f2937">DESIGN JOBS</text>
+<line x1="484" y1="382" x2="796" y2="382" stroke="#d1d5db" stroke-dasharray="4 4"/>
+<text x="484" y="414" font-family="Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="18" fill="#374151">When a run ends, and during</text>
+<text x="484" y="444" font-family="Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="18" fill="#374151">long runs</text>
+<g filter="url(#shadow)"><rect x="880" y="320" width="360" height="150" rx="10" fill="#ffffff" stroke="#e5e7eb"/></g>
+<path d="M 880 330 A 10 10 0 0 1 890 320 L 1230 320 A 10 10 0 0 1 1240 330 L 1240 324 L 880 324 Z" fill="#f0773a"/>
+<text x="904" y="364" font-family="Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="17" font-weight="700" letter-spacing="0.6" fill="#1f2937">TEST MANAGER PROJECT</text>
+<line x1="904" y1="382" x2="1216" y2="382" stroke="#d1d5db" stroke-dasharray="4 4"/>
+<text x="904" y="414" font-family="Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="18" fill="#374151">Use-cases · scenarios · tests</text>
+<text x="904" y="444" font-family="Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="18" fill="#374151">A case for each scenario</text>
+<g filter="url(#shadow)"><rect x="1300" y="320" width="360" height="150" rx="10" fill="#ffffff" stroke="#e5e7eb"/></g>
+<path d="M 1300 330 A 10 10 0 0 1 1310 320 L 1650 320 A 10 10 0 0 1 1660 330 L 1660 324 L 1300 324 Z" fill="#1e4fa8"/>
+<text x="1324" y="364" font-family="Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="17" font-weight="700" letter-spacing="0.6" fill="#1f2937">YOUR FOLDER</text>
+<line x1="1324" y1="382" x2="1636" y2="382" stroke="#d1d5db" stroke-dasharray="4 4"/>
+<text x="1324" y="414" font-family="'SFMono-Regular', Menlo, Consolas, monospace" font-size="17" fill="#1e4fa8">kane-cli context pull</text>
+<text x="1324" y="444" font-family="Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="18" fill="#374151">Run them like any designed test</text>
+<line x1="406" y1="125.0" x2="450" y2="125.0" stroke="#6b7280" stroke-width="2.5" marker-end="url(#head)"/>
+<line x1="826" y1="125.0" x2="870" y2="125.0" stroke="#6b7280" stroke-width="2.5" marker-end="url(#head)"/>
+<line x1="640.0" y1="206" x2="640.0" y2="310" stroke="#6b7280" stroke-width="2.5" marker-end="url(#head)"/>
+<text x="656.0" y="266.0" font-family="Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" fill="#6b7280" text-anchor="start">while it explores</text>
+<line x1="826" y1="395.0" x2="870" y2="395.0" stroke="#6b7280" stroke-width="2.5" marker-end="url(#head)"/>
+<line x1="1246" y1="395.0" x2="1290" y2="395.0" stroke="#6b7280" stroke-width="2.5" marker-end="url(#head)"/>
+</svg>

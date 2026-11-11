@@ -21,29 +21,6 @@ canonical: https://www.testmuai.com/support/docs/chrome-os-web-browser-testing/
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "TestMu AI",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "ChromeOS (Chromebook) Web Browser Testing",
-          "item": `${BRAND_URL}/support/docs/chrome-os-web-browser-testing/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -153,7 +130,7 @@ You can also share that bug, save the image to the gallery or download that scre
 </video>
  
 ## IP Geolocation
-The IP Geolocation feature enables you to simulate website and mobile experiences from over 45 countries by using local IP addresses. This allows you to test localized features such as pricing, languages, and product offerings. With IP Geolocation enabled, you can verify that your app's traffic is coming from a specific country, allowing for comprehensive global testing.
+The IP Geolocation feature enables you to simulate website and mobile experiences from 180+ countries by using local IP addresses. This allows you to test localized features such as pricing, languages, and product offerings. With IP Geolocation enabled, you can verify that your app's traffic is coming from a specific country, allowing for comprehensive global testing.
  
 <img loading="lazy" src={require('../assets/videos/real-time/chromeos/ip.png').default} style={{ height: '350px' }} className="doc_img"/>
 

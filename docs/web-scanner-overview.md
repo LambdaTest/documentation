@@ -21,29 +21,6 @@ import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Web Scanner Overview",
-          "item": `${BRAND_URL}/support/docs/web-scanner-overview`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -149,6 +126,17 @@ Accessibility scans audit your pages against WCAG 2.x standards, surfacing viola
 * Deep scan reports with severity filters
 * Smart filters for recurring violations
 * Exportable reports
+
+### 3. Performance Scan
+
+Performance scans run Google Lighthouse on every URL and report the performance score and Core Web Vitals, so you can see which pages load slowly and why.
+
+**Key Features:**
+* Lighthouse score, LCP, TBT and CLS for every URL, on a fixed desktop or mobile setup
+* A scan summary with the most common Lighthouse findings across all URLs
+* A per-URL report with metrics, a load filmstrip, audits and the network log
+
+See [Starting a Performance Scan](/support/docs/web-scanner-performance-scan/).
 
 ## Ideal Users
 

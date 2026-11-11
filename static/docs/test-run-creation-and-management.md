@@ -230,7 +230,7 @@ Execute your manual test instances directly on TestMu AI Cloud, no local setup o
 Running test instances on TestMu AI Cloud gives you access to a wide range of real browsers, devices, and OS combinations, without maintaining local infrastructure. It ensures consistent, reliable test execution across environments.
 
 **Track bugs during execution**
-Bugs raised or linked while executing an instance are surfaced under that Test Case instance. To link Jira or Azure DevOps tickets at the instance and step level, see [Track Bugs and Issues in Test Runs](/support/docs/track-issues-in-test-runs/).
+Bugs raised or linked while executing an instance are surfaced under that Test Case instance. To link Jira, Azure DevOps, or Linear tickets at the instance and step level, see [Track Bugs and Issues in Test Runs](/support/docs/track-issues-in-test-runs/).
 
 ## 7. Test Run Options
 

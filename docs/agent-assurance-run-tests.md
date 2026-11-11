@@ -19,16 +19,6 @@ canonical: https://www.testmuai.com/support/docs/agent-assurance-run-tests/
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import VerifiedTag from '@site/src/component/verifiedTag';
 
-<script type="application/ld+json"
-  dangerouslySetInnerHTML={{ __html: JSON.stringify({
-    "@context": "https://schema.org", "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": BRAND_URL },
-      { "@type": "ListItem", "position": 2, "name": "Support", "item": `${BRAND_URL}/support/docs/` },
-      { "@type": "ListItem", "position": 3, "name": "Run Tests", "item": `${BRAND_URL}/support/docs/agent-assurance-run-tests/` }
-    ]
-  }) }}
-/>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -129,6 +119,8 @@ Without `--only`, a run selects at most two scenarios per attack pattern. The ot
 A partially observable scenario still runs when it can establish useful evidence. Individual criteria that cannot be checked become **Unable to Verify**.
 
 The default concurrency is `1` unless the profile or plan selects another value. An explicit `--concurrency` accepts 1–8 and overrides that choice.
+
+Since 0.1.17, your Agent Assurance plan also caps how many scenarios run at a time. When `--concurrency` asks for more, Rook runs at the plan's limit and says so, for example "Your Agent Assurance plan runs up to 2 scenarios at a time. Running 2 at a time, not 6." A resumed run that the limit caps records the capped value in its `run.yaml`.
 
 ## Select Scenarios Precisely
 
