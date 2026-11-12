@@ -76,10 +76,14 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-09T19:10:37+05:30"
+    "dateModified": "2026-11-11T14:00:00+05:30"
   }) }}
 />
 This page outlines how you can run your first End-to-End (E2E) testing execution job on HyperExecute.
+
+:::info On-premise deployments
+On-prem, use [2. Using Local System](#2-using-local-system). Use the access key from your organization's own dashboard, and add `--onprem-host` to the CLI command. See [Trigger a job from the CLI](/support/docs/hyperexecute-on-premise-user-guide/#step-5-trigger-a-job-from-the-cli).
+:::
 
 ## Before you start
 

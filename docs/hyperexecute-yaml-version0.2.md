@@ -187,7 +187,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         "text": "---\nversion: 0.2\nrunson: win\n\nautosplit: true\nconcurrency: 2\n\npre:\n  # Skip execution of the tests in the pre step\n  - mvn dependency:resolve\n\nframework:\n  name: maven/testng\n  flags:\n    - \"-Dplatname=win\"\n  discoveryFlags: [\"-Dgroups=selenium-test\"]\n  runnerFlags: [\"-Dgroups=database\"]\n  discoveryType: method\n  discoveryMode: remote\n  workingDirectory: src/main\n  defaultReports: false\n  args:\n    region: ap\n    language: es\n    locale: es\n    mitmProxy: true\n\nretryOnFailure: true\nmaxRetries: 1\n\npost:\n  - ls target/surefire-reports/\n\nmergeArtifacts: true\nuploadArtefacts:\n - name: ExecutionSnapshots\n   path:\n    - target/surefire-reports/html/**"
       }
     ],
-    "dateModified": "2026-09-09T19:10:37+05:30"
+    "dateModified": "2026-11-11T14:00:00+05:30"
   }) }}
 />
 This version introduces several new features and improvements over Version 0.1. This documentation outlines the changes and provides guidance on when to use Version 0.2 instead of Version 0.1.
@@ -196,6 +196,10 @@ This version introduces several new features and improvements over Version 0.1. 
 - Currently supported frameworks are **maven/testng**, **maven/junit4**, **maven/junit5**, **maven/spock**, **gradle/testng**, **gradle/junit4**, **gradle/junit5**, **gradle/spock**, **wdio/mocha**, and **wdio/jasmine** framework.
 - Version 0.2 supports all the fields available in Version 0.1, except for [`testDiscovery`](/support/docs/deep-dive-into-hyperexecute-yaml/#testdiscovery) and [`testRunnerCommand`](/support/docs/deep-dive-into-hyperexecute-yaml/#testrunnercommand)
 - The new [`framework`](/support/docs/hyperexecute-yaml-version0.2/#framework) flag has been introduced to configure the test framework.
+:::
+
+:::info On-premise deployments
+On-prem, use `runson: linux` or `runson: win` and set `discoveryMode: remote`. See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/#step-4-prepare-your-yaml).
 :::
 
 ## Why to use HyperExecute YAML Version 0.2?
@@ -212,17 +216,17 @@ The ```framework``` field in HyperExecute YAML Version 0.2 allows you to configu
 |:---|:--|:---|:---|
 | [name](#name) | String | Yes | You need to specify which testing framework you are using in your repo.|
 | [flags](#flags) | Array | No | Command line flags to pass to the custom runner for both test discovery and execution.|
-| [discoveryFlags](#discoveryFlags) | Array | No | Command line flags to pass to the custom runner for test discovery only.|
-| [runnerFlags](#runnerFlags) | Array | No | Command line flags to pass to the custom runner for test execution only. |
-| [discoveryType](#discoveryType) | String | No | Specifies the type of test discovery to use. Supported values are "method" and "class". The default is "method".|
-| [discoveryMode](#discoveryMode) | String | No | Specifies where the test discovery runs. Supported values are "local" and "remote".|
-| [workingDirectory](#workingDirectory) | String | No | Specifies the working directory where all discovery and execution commands will be executed.|
-| [defaultReports](#defaultReports) | Boolean | No | Specifies whether to create default reports for the specified framework.|
+| [discoveryFlags](#discoveryflags) | Array | No | Command line flags to pass to the custom runner for test discovery only.|
+| [runnerFlags](#runnerflags) | Array | No | Command line flags to pass to the custom runner for test execution only. |
+| [discoveryType](#discoverytype) | String | No | Specifies the type of test discovery to use. Supported values are "method" and "class". The default is "method".|
+| [discoveryMode](#discoverymode) | String | No | Specifies where the test discovery runs. Supported values are "local" and "remote".|
+| [workingDirectory](#workingdirectory) | String | No | Specifies the working directory where all discovery and execution commands will be executed.|
+| [defaultReports](#defaultreports) | Boolean | No | Specifies whether to create default reports for the specified framework.|
 | [region](#region) | String | No | Specifies in which region you want to spin your appium tests.|
 | [artifacts](#artifacts) | Boolean | No | Specifies whether to generate artifacts or not |
 | [language](#language) | String | No | Specifies the device’s system language for the test session. This determines the language in which your app’s UI and strings will be displayed. |
 | [locale](#locale) | String | No | Defines the regional format settings such as date, time, currency, and number conventions. |
-| [mitmProxy](#mitmProxy) | Boolean | No | Capture network logs directly from emulator sessions using MITM. |
+| [mitmProxy](#mitmproxy) | Boolean | No | Capture network logs directly from emulator sessions using MITM. |
 
 ### `name`
 Specifies the testing framework used in your repository.

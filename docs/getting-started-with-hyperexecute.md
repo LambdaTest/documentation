@@ -104,7 +104,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         "text": "# Clone the repo and copy the skill you need\ngit clone https://github.com/LambdaTest/agent-skills.git\ncp -r agent-skills/hyperexecute-skill .claude/skills/\n\n# Or for Cursor / Copilot\ncp -r agent-skills/hyperexecute-skill .cursor/skills/"
       }
     ],
-    "dateModified": "2026-09-09T19:10:37+05:30"
+    "dateModified": "2026-11-11T14:00:00+05:30"
   }) }}
 />
 Welcome to HyperExecute, **an AI-Native Test Orchestration Cloud Platform**, designed to accelerate your End-to-End (E2E) testing, enabling test automation teams worldwide to achieve an accelerated time to market by providing **JIT (Just-in-time) testing infrastructure**.
@@ -118,6 +118,10 @@ If you want to learn more about HyperExecute and how it can enable your team, th
 <!-- > Let's understand the [HyperExecute Dashboard](/support/docs/hyperexecute-guided-walkthrough/) together. -->
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/getting_started/hyperexecute.png').default} alt="Image"  className="doc_img"/>
+
+:::info On-premise teams start here
+If your organization runs HyperExecute on-premise, start with the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/). It covers your own dashboard, the `--onprem-host` CLI flag and the main differences from the public cloud.
+:::
 
 ## What is HyperExecute?
 
@@ -159,11 +163,6 @@ Ready to experience the power of HyperExecute? Getting started is easy. We’ve 
      Run tests from your own machine using the HyperExecute CLI with sample project and preset configuration file. 
 
      <a href="https://www.testmuai.com/support/docs/hyperexecute-running-your-first-job/#2-using-local-system" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/hyp.png').default} alt="Image" className="doc_img"/>Learn More</a>
-  </TabItem>
-  <TabItem value="gitpod" label="Run on Gitpod">
-    Run your tests in a fully managed online development environment, without any local installations or configurations.
-
-    <a href="https://www.testmuai.com/support/docs/hyperexecute-running-your-first-job/#3-using-gitpod" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/hyp.png').default} alt="Image" className="doc_img"/>Learn More</a>
   </TabItem>
 </Tabs>
 :::

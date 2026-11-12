@@ -130,13 +130,17 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         "text": "\n```bash\n./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE --vars \"email=xyz@abc.com,abc@xyz.com,def@wxy.com\""
       }
     ],
-    "dateModified": "2026-09-24T12:00:00+05:30"
+    "dateModified": "2026-11-11T14:00:00+05:30"
   }) }}
 />
 
 # Receive Job Reports and Artifacts via Email
 
 Downloading Job Reports and Artifacts manually from the HyperExecute UI can be a time-consuming and repetitive task. To address this pain point, HyperExecute now provides the convenience of receiving Job Reports and Artifacts directly to your specified email addresses. This eliminates the need for manual downloads, allowing you to access critical job information instantly and effortlessly. Embrace the efficiency of automated delivery and spend less time navigating the UI and more time focusing on your development tasks.
+
+:::info On-premise deployments
+On-prem, email reports work only if your deployment is set up to send email. Ask your admin. See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/#step-8-review-results-and-rerun-failures).
+:::
 
 ## YAML Configuration
 

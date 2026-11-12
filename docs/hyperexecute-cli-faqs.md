@@ -72,13 +72,17 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-09T19:10:37+05:30"
+    "dateModified": "2026-11-11T14:00:00+05:30"
   }) }}
 />
 
 # HyperExecute CLI FAQs
 
 ***
+
+:::info On-premise deployments
+On-prem, download the CLI from **Help** > **Hyperexecute CLI** on your own dashboard and add `--onprem-host` to every command. Tests run on Linux and Windows only. See [Install and configure the CLI](/support/docs/hyperexecute-on-premise-user-guide/#step-3-install-and-configure-the-cli).
+:::
 
 ## 1. **Can HyperExecute CLI download test artifacts generated during execution?**
 

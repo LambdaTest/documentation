@@ -88,13 +88,17 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         "text": " project:\n    name: 'unique_project_name'"
       }
     ],
-    "dateModified": "2026-09-09T19:10:37+05:30"
+    "dateModified": "2026-11-11T14:00:00+05:30"
   }) }}
 />
-Projects serve as a centralized platform for organizing and managing test executions. By grouping similar tests, controlling access, and tracking progress, Projects streamline the testing process. You can configure [custom project](/support/docs/hyperexecute-projects/#setup-your-project) and [workflow setups](/support/docs/hyperexecute-projects/#schedule-your-workflows), as well as [integrate Tosca, Tosca DEX, and JMeter tests](/support/docs/hyperexecute-projects/#setting-up-specialized-projects) for unified management. This enables efficient test script creation, automated execution scheduling, and valuable insights into test results.
+Projects serve as a centralized platform for organizing and managing test executions. By grouping similar tests, controlling access, and tracking progress, Projects streamline the testing process. You can configure [custom project](/support/docs/hyperexecute-projects/#setup-custom-project) and [workflow setups](/support/docs/hyperexecute-projects/#schedule-your-workflows), as well as [integrate Tosca, Tosca DEX, and JMeter tests](/support/docs/hyperexecute-projects/#setting-up-specialized-projects) for unified management. This enables efficient test script creation, automated execution scheduling, and valuable insights into test results.
 
 :::tip Org-wide health check
 Organisation admins on the enterprise plan can click **View Summary** at the top of the project list to open the [Organisation Summary Dashboard](/support/docs/hyperexecute-organisation-summary-dashboard/). It shows KPI tiles, a job status donut and a failure-reason breakdown across every project in your organisation, with a PDF export.
+:::
+
+:::info On-premise deployments
+On-prem, open **Projects** from your organization's own HyperExecute dashboard. Which Git providers you can connect depends on your deployment, so ask your admin (see [GitHub App integration](/support/docs/hyperexecute-github-app-integration/)). See [Create a Project](/support/docs/hyperexecute-on-premise-user-guide/#step-2-create-a-project) in the On-Premise User Guide.
 :::
 
 ## Link Jobs to Projects Using YAML

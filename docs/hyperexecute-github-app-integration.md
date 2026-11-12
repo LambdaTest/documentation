@@ -110,7 +110,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         "text": "https://{{private_accounts_base_url}}/org-settings/hyperexecute/git-integration"
       }
     ],
-    "dateModified": "2026-09-09T19:10:37+05:30"
+    "dateModified": "2026-11-11T14:00:00+05:30"
   }) }}
 />
 > This is currently in the **Beta** version.
@@ -123,6 +123,10 @@ This integration supports three onboarding paths:
 - **<BrandName />'s Marketplace GitHub App** (Public Cloud)
 - **Your Existing GitHub App** (On-Prem / Private Cloud)
 - **Private GitHub App Dedicated to Your Organization** (On-Prem / Air-Gapped)
+
+:::info On-premise deployments
+On-prem, which Git providers and GitHub App setup you can use depends on your deployment, so ask your admin which approach applies. For GitHub Enterprise Server, also read [Multi-Tenant GitHub Support](#multi-tenant-github-support). See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/#step-2-create-a-project).
+:::
 
 ## How It Works
 1. Install a GitHub App using one of the three supported approaches. <br />

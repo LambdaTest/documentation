@@ -71,13 +71,17 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-09T19:10:37+05:30"
+    "dateModified": "2026-11-11T14:00:00+05:30"
   }) }}
 />
 
 # How to Access and Change Org Product Preferences in HyperExecute
 
 In this detailed documentation, learn how you can access and change organization product preferences as per your requirements. 
+
+:::info On-premise deployments
+On-prem, open org preferences from your organization's own HyperExecute dashboard. See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/).
+:::
 
 Now, to access your organization product preferences, follow the below mentioned steps:
 
@@ -102,4 +106,3 @@ Now, to access your organization product preferences, follow the below mentioned
 :::tip Session Expiry
 To configure automatic session expiry for your organization, navigate to **Organization Settings → Security → Session Expiry**. You can set the duration for session expiration from predefined options (default: 30 days). Admins can also allow team members to customize their own session expiry settings. Learn more in [Settings and Security](/support/docs/settings-and-security/).
 :::
-

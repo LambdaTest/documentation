@@ -78,7 +78,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-09T19:10:37+05:30"
+    "dateModified": "2026-11-11T14:00:00+05:30"
   }) }}
 />
 
@@ -86,6 +86,10 @@ import VerifiedTag from '@site/src/component/verifiedTag';
 ***
 
 To provide you with a secure [cross-browser testing](https://www.testmuai.com) environment on-cloud, we recommend integrating <BrandName /> Authentication Credentials in your test scripts. This would allow our cloud servers to establish a secure connection between your local system and [HyperExecute](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/). This document will help you understand how to set up HyperExecute environment variable for your respective operating system. This set up would also help authenticate your colleague's test cases when executed against an individual account.
+
+:::info On-premise deployments
+Copy `LT_USERNAME` and `LT_ACCESS_KEY` from **Credentials** on your organization's own dashboard, and add `--onprem-host` to the CLI command. See [Copy your username and access key](/support/docs/hyperexecute-on-premise-user-guide/#copy-your-username-and-access-key).
+:::
 
 ## Where to find <BrandName /> Authentication Credentials?
 ***
