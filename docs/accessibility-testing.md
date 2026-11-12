@@ -1,6 +1,6 @@
 ---
 id: accessibility-testing
-title: Getting Started with Accessibility Testing
+title: Getting Started with TestMu AI Accessibility
 sidebar_label: Getting Started
 description: Overview of TestMu AI Accessibility Testing across web, mobile apps, reports, checklists, and integrated product surfaces. Includes quick setup to get your first report.
 slug: accessibility-testing/
@@ -19,7 +19,7 @@ import { BRAND_URL } from '@site/src/component/BrandName';
       "@type": "WebPage",
       "@id": "https://www.testmuai.com/support/docs/accessibility-testing/"
     },
-    "headline": "Getting Started with Accessibility Testing",
+    "headline": "Getting Started with TestMu AI Accessibility",
     "description": "Overview of TestMu AI Accessibility Testing across web, mobile apps, reports, checklists, and integrated product surfaces. Includes quick setup to get your first report.",
     "url": "https://www.testmuai.com/support/docs/accessibility-testing/",
     "image": {
@@ -61,14 +61,14 @@ import { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
-# Getting Started with Accessibility Testing
+# Getting Started with TestMu AI Accessibility
 
 TestMu AI Accessibility Testing helps teams find, understand, and fix accessibility issues across websites, web apps, and mobile apps, and plugs into your End-to-End (E2E) testing to catch them during automated runs.
 
 ## What Accessibility Testing covers
 
 - **Manual Testing (DevTools)** -- browser-based scanning and assisted testing for websites and web apps.
-- **Automation** -- automated accessibility checks in supported test frameworks (Selenium, Cypress, Playwright, and more).
+- **Automation** -- [automated accessibility testing](https://www.testmuai.com/accessibility-automation/) in supported test frameworks (Selenium, Cypress, Playwright, and more).
 - **Test Scheduling** -- recurring site scans driven by sitemaps, crawlers, or manual URL lists inside the Accessibility product (not the same doc set as the standalone Web Scanner product).
 - **Web Scanner** -- the separate **Web Scanner** product in the docs sidebar, where you add URLs and run accessibility scans on that surface. Use Accessibility **Test Scheduling** when your workflow is native to Accessibility scheduling, not Web Scanner.
 - **Mobile App Testing** -- manual and automated accessibility testing for native Android and iOS apps, including KaneAI-authored flows.
