@@ -128,7 +128,7 @@ This integration supports three onboarding paths:
 1. Install a GitHub App using one of the three supported approaches. <br />
 2. Complete the post-installation registration within the <BrandName /> platform. <br />
 3. HyperExecute saves the app details (App ID and Installation ID) for your organization. <br />
-4. For a GitHub App that you manage (Approach 2 or 3), add the app's private key as an org-level secret. See [Add the private key as an org-level secret](#add-the-private-key-as-an-org-level-secret). <br />
+4. For your own GitHub App (Approach 2), add the app's private key as an org-level secret. See [Add the private key as an org-level secret](#add-the-private-key-as-an-org-level-secret). <br />
 
 Once setup is complete, all HyperExecute Project and Workflow Git operations use short-lived installation tokens instead of PAT tokens. The PAT-based flow is used only as a fallback when no GitHub App is configured.
 
@@ -181,7 +181,9 @@ The redirect URL includes an `installation_id` parameter required for configurat
    - Navigate to **GitHub App → Installations → Installation URL**
    - Example URL format: `https://github.com/settings/installations/{installation_id}`
 
-2. Navigate to the <BrandName /> setup page:
+2. Note the **App ID** from the GitHub App's settings page. You need it for the secret name later. It is not the Installation ID.
+
+3. Navigate to the <BrandName /> setup page:
 
 <VerifiedTag value="Verified" />
 
@@ -189,7 +191,7 @@ The redirect URL includes an `installation_id` parameter required for configurat
    https://{{accounts_base_url}}/org-settings/hyperexecute/git-integration
 ```
 
-3. Manually enter:
+4. Manually enter:
    - `installation_id`
    - Additional app details as required
 
@@ -263,12 +265,13 @@ Credentials are **fully isolated** between tenants, tokens and keys from one Git
 ### What You Can Do
 
 - Connect to **multiple GitHub instances** (e.g., GitHub.com + GitHub Enterprise Server)
-- Have **multiple GitHub Apps** on the same tenant, one for each GitHub organization
-- Each <BrandName /> org can have **one GitHub App per (tenant + GitHub org name)** combination
+- Have **multiple GitHub Apps** on the same tenant, for different GitHub organizations
 
-Using a separate GitHub App for each GitHub organization limits the impact if one app's private key leaks: that key can reach only the repositories of its own organization. Give each app access only to the repositories HyperExecute needs.
+**Rule:** each <BrandName /> org can register **one GitHub App per (tenant + GitHub org name)** combination. HyperExecute looks up the private key by tenant, GitHub organization and App ID, so every GitHub organization needs its own org-level secret, named with that organization.
 
-To set this up, install and register each app (Approach 2 or 3), then add one org-level secret per app, named as shown in [Secret name](#secret-name).
+**Recommendation:** use a separate GitHub App for each GitHub organization. If one app's private key leaks, it can reach only the repositories of its own organization. Give each app access only to the repositories HyperExecute needs.
+
+To set this up with your own GitHub Apps (Approach 2), install and register each app, then add one org-level secret for each GitHub organization, named as shown in [Secret name](#secret-name).
 
 ### Setup for Non-Default Tenants
 
@@ -276,17 +279,17 @@ For GitHub Enterprise Server or any tenant other than `github.com`:
 
 1. Follow [Approach 2](#approach-2-your-existing-github-app-on-prem) or [Approach 3](#approach-3-private-github-app-on-prem-dedicated-app) to install the GitHub App on your enterprise instance.
 
-2. Add the GitHub App's private key as an **org-level secret**, as described in [Add the private key as an org-level secret](#add-the-private-key-as-an-org-level-secret). For example, an app with App ID `1234567` for the `my-org` organization on a GitHub Enterprise Server at `ghes.yourcompany.com` uses `github_app_private_key_ghes.yourcompany.com_my-org_1234567`.
+2. For your own GitHub App (Approach 2), add its private key as an **org-level secret**, as described in [Add the private key as an org-level secret](#add-the-private-key-as-an-org-level-secret). For example, an app with App ID `1234567` for the `my-org` organization on a GitHub Enterprise Server at `ghes.yourcompany.com` uses `github_app_private_key_ghes.yourcompany.com_my-org_1234567`.
 
 3. Complete the registration on the <BrandName /> setup page. The tenant is recorded automatically based on the GitHub App's origin.
 
 :::note
-If you use the Marketplace GitHub App (Approach 1) on `github.com`, the platform manages the key, so you do not create a secret. If you use your own GitHub App on `github.com` (Approach 2 or 3), add the secret as described below.
+If you use the Marketplace GitHub App (Approach 1) on `github.com`, the platform manages the key, so you do not create a secret. If you use your own GitHub App on `github.com` (Approach 2), add the secret as described below.
 :::
 
 ## Add the private key as an org-level secret
 
-For a GitHub App that you manage (Approach 2 or 3), HyperExecute needs the app's private key to generate installation tokens. Store it as an [org-level secret](/support/docs/hyperexecute-how-to-save-and-manage-secrets/#org-level-secrets).
+For your own GitHub App (Approach 2), HyperExecute needs the app's private key to generate installation tokens. Store it as an [org-level secret](/support/docs/hyperexecute-how-to-save-and-manage-secrets/#org-level-secrets).
 
 ### Secret name {#secret-name}
 
