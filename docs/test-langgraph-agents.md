@@ -96,7 +96,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-07-24T18:09:27+05:30"
+    "dateModified": "2026-11-12T13:50:45+05:30"
   }) }}
 />
 
@@ -114,7 +114,7 @@ A LangGraph agent is a graph with state on the thread, so a few behaviours drive
 - **Human-in-the-loop interrupts.** Interrupts pause the graph mid-run, and a harness that does not resume reads the pause as a hang.
 - **Tool-call branches.** Tool calls and their failure branches are where these agents actually break, so weight scenarios there.
 - **Deployment shape.** Self-hosted, LangGraph Platform, and custom servers each change the endpoint shape.
-- **No voice or phone surface.** Voice metrics and personas do not apply.
+- **No voice or phone surface.** Voice and phone metrics do not apply.
 
 Chat testing covers text conversations against a deployed graph, whether streaming or non-streaming. Upload the graph definition and supporting docs to generate scenarios, then create the endpoint profile using the deployment's REST endpoint, with a fresh thread per scenario. It scores reasoning, tool call correctness, grounding, and safety, and runs in CI on every commit. See [chat agent testing](/support/docs/chat-agent/) for the full setup.
 

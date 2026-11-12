@@ -97,13 +97,11 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-04T12:50:18+05:30"
+    "dateModified": "2026-11-12T13:50:45+05:30"
   }) }}
 />
 
 The TestMu AI Agent Testing Platform tests an image agent by submitting prompts or images and scoring the returned output against the prompt and any criteria you define. Each image gets a Quality Score from 0 to 100, plus a breakdown of what matched and what did not. It covers image generation, content moderation, and photo validation.
-
-You upload images by file or URL, define what a correct image looks like, and the platform scores them. A single run analyzes up to 50 images, which suits regression testing after a model update.
 
 ## How to Run Your First Image Analyzer Test
 
@@ -143,7 +141,7 @@ Every active criterion is checked on each analysis and returns a Pass, Fail, or 
 
 **Step 4: Read the analysis.** Open an analysis from the **Image Analysis** tab to see its Quality Score and the reasons behind it.
 
-- Use the score band to decide whether the image is usable: 90 to 100 is excellent, 80 to 89 good, 60 to 79 fair, and 0 to 59 poor.
+- Use the [score band](#metrics) to decide whether the image is usable.
 - Read **Discrepancies** first. They list what is missing or wrong compared with the prompt, which tells you what to fix in your model or prompt. **Matches** confirm what the image already gets right.
 - If you added custom criteria, check each one's result. A **Partial** result means the image meets some but not all of the rule.
 - Bookmark analyses you want to compare later, such as a baseline from before a model change.

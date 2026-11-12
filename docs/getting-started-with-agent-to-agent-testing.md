@@ -3,7 +3,7 @@ id: getting-started-with-agent-testing-platform
 title: Getting Started With TestMu AI Agent Testing
 hide_title: false
 sidebar_label: What is Agent Testing
-description: Get started with TestMu AI Agent Testing to validate chat, voice, phone, and image AI agents against standardized quality metrics before you ship.
+description: Get started with TestMu AI Agent Testing to validate chat, voice, video, phone, IVR, and image AI agents against standardized quality metrics before you ship.
 keywords:
  - ai agent testing platform
  - agent testing
@@ -58,7 +58,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       "@id": "https://www.testmuai.com/support/docs/getting-started-with-agent-testing-platform/"
     },
     "headline": "Getting Started With TestMu AI Agent Testing",
-    "description": "Get started with TestMu AI Agent Testing to validate chat, voice, phone, and image AI agents against standardized quality metrics before you ship.",
+    "description": "Get started with TestMu AI Agent Testing to validate chat, voice, video, phone, IVR, and image AI agents against standardized quality metrics before you ship.",
     "url": "https://www.testmuai.com/support/docs/getting-started-with-agent-testing-platform/",
     "image": {
       "@type": "ImageObject",
@@ -99,7 +99,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-04T12:50:18+05:30"
+    "dateModified": "2026-11-12T13:50:45+05:30"
   }) }}
 />
 
@@ -107,9 +107,9 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 ***
 
-TestMu AI [Agent Testing](https://www.testmuai.com/agent-testing/) Platform provides End-to-End (E2E) testing of AI agents, validating them the way real users interact with them. It deploys 15+ autonomous AI testing agents to evaluate any chat, voice, phone, or image agent against standardized quality metrics, then returns a Green, Yellow, or Red production readiness verdict before and after you deploy.
+TestMu AI [Agent Testing](https://www.testmuai.com/agent-testing/) Platform provides End-to-End (E2E) testing of AI agents, validating them the way real users interact with them. It deploys 15+ autonomous AI testing agents to evaluate any chat, voice, video, phone, IVR, or image agent against standardized quality metrics, then returns a Green, Yellow, or Red production readiness verdict before and after you deploy.
 
-It is the first platform to test chat, voice, phone, and image agents in one place. Connecting an agent takes three inputs and no SDK: upload the documents that describe it, define its intended behavior, and point the platform at its endpoint or phone number.
+It tests all of these agent types in one place. Connecting an agent takes three inputs and no SDK: upload the documents that describe it, define its intended behavior, and point the platform at its endpoint, phone number, or a web URL for a video agent.
 
 <div style={{ width: "50%", aspectRatio: "16 / 9", margin: "20px auto", borderRadius: "8px", overflow: "hidden" }}>
   <iframe
@@ -187,17 +187,17 @@ Go deeper into the workflow and metrics for your specific agent type.
     <div style={{fontWeight:700,marginBottom:'6px',color:'var(--ifm-heading-color)'}}>Chat Agent Testing</div>
     <div style={{fontSize:'14px',color:'var(--ifm-color-emphasis-700)',lineHeight:1.5}}>How multi-turn chat conversations are simulated and scored.</div>
   </a>
+  <a href="/support/docs/voice-agent/" style={{flex:'1 1 260px',minWidth:'240px',border:'1px solid #e2e8f0',borderRadius:'12px',padding:'20px 22px',textDecoration:'none',color:'inherit',display:'block'}}>
+    <div style={{fontWeight:700,marginBottom:'6px',color:'var(--ifm-heading-color)'}}>Voice Agent Testing</div>
+    <div style={{fontSize:'14px',color:'var(--ifm-color-emphasis-700)',lineHeight:1.5}}>Spoken conversations, transcribed and scored on the same metrics as chat.</div>
+  </a>
+  <a href="/support/docs/video-agent/" style={{flex:'1 1 260px',minWidth:'240px',border:'1px solid #e2e8f0',borderRadius:'12px',padding:'20px 22px',textDecoration:'none',color:'inherit',display:'block'}}>
+    <div style={{fontWeight:700,marginBottom:'6px',color:'var(--ifm-heading-color)'}}>Video Agent Testing</div>
+    <div style={{fontSize:'14px',color:'var(--ifm-color-emphasis-700)',lineHeight:1.5}}>A simulated candidate joins your agent's live session, records it, and grades it.</div>
+  </a>
   <a href="/support/docs/phone-agent/" style={{flex:'1 1 260px',minWidth:'240px',border:'1px solid #e2e8f0',borderRadius:'12px',padding:'20px 22px',textDecoration:'none',color:'inherit',display:'block'}}>
     <div style={{fontWeight:700,marginBottom:'6px',color:'var(--ifm-heading-color)'}}>Phone Agent Testing</div>
-    <div style={{fontSize:'14px',color:'var(--ifm-color-emphasis-700)',lineHeight:1.5}}>Real calls, voice and noise simulation, and the two phone directions.</div>
-  </a>
-  <a href="/support/docs/inbound-phone-agent/" style={{flex:'1 1 260px',minWidth:'240px',border:'1px solid #e2e8f0',borderRadius:'12px',padding:'20px 22px',textDecoration:'none',color:'inherit',display:'block'}}>
-    <div style={{fontWeight:700,marginBottom:'6px',color:'var(--ifm-heading-color)'}}>Inbound Phone Agent Testing</div>
-    <div style={{fontSize:'14px',color:'var(--ifm-color-emphasis-700)',lineHeight:1.5}}>The full workflow for an agent that answers calls.</div>
-  </a>
-  <a href="/support/docs/outbound-phone-agent/" style={{flex:'1 1 260px',minWidth:'240px',border:'1px solid #e2e8f0',borderRadius:'12px',padding:'20px 22px',textDecoration:'none',color:'inherit',display:'block'}}>
-    <div style={{fontWeight:700,marginBottom:'6px',color:'var(--ifm-heading-color)'}}>Outbound Phone Agent Testing</div>
-    <div style={{fontSize:'14px',color:'var(--ifm-color-emphasis-700)',lineHeight:1.5}}>The workflow for an agent that places calls.</div>
+    <div style={{fontSize:'14px',color:'var(--ifm-color-emphasis-700)',lineHeight:1.5}}>Inbound and outbound phone agents, tested with live calls or production recordings.</div>
   </a>
   <a href="/support/docs/image-analyzer/" style={{flex:'1 1 260px',minWidth:'240px',border:'1px solid #e2e8f0',borderRadius:'12px',padding:'20px 22px',textDecoration:'none',color:'inherit',display:'block'}}>
     <div style={{fontWeight:700,marginBottom:'6px',color:'var(--ifm-heading-color)'}}>Image Analyzer Testing</div>

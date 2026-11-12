@@ -19,6 +19,10 @@ canonical: https://www.testmuai.com/support/docs/outbound-phone-agent/
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
+<head>
+  <meta name="robots" content="noindex, nofollow" />
+</head>
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -198,7 +202,7 @@ Aside from the differences above, outbound testing is identical to inbound. Phon
 
 For the full detail on each, see [inbound phone agent testing](/support/docs/inbound-phone-agent/).
 
-[Custom metrics](/support/docs/phone-agent/#custom-metrics) work the same way for outbound agents. [Performance testing](/support/docs/phone-agent/#performance-testing) places calls to your agent, so it applies to agents that answer calls.
+[Custom metrics](/support/docs/agent-features-and-metrics/#custom-metrics) work the same way for outbound agents. [Performance testing](/support/docs/phone-agent/#performance-testing) places calls to your agent, so it applies to agents that answer calls.
 
 ## Metrics
 

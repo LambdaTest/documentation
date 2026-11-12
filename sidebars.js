@@ -1132,9 +1132,15 @@ module.exports = {
           { type: "doc", label: "Voice Agent Testing", id: "voice-agent" },
           { type: "doc", label: "Video Agent Testing", id: "video-agent" },
           { type: "doc", label: "Phone Agent Testing", id: "phone-agent" },
-          { type: "doc", label: "Inbound Phone Agent Testing", id: "inbound-phone-agent" },
-          { type: "doc", label: "Outbound Phone Agent Testing", id: "outbound-phone-agent" },
           { type: "doc", label: "Image Analyzer Testing", id: "image-analyzer" },
+        ],
+      },
+      {
+        type: "category",
+        label: "Features",
+        collapsed: true,
+        items: [
+          { type: "doc", label: "Performance Testing (Inbound)", id: "phone-agent-performance-testing" },
         ],
       },
       {

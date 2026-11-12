@@ -1400,6 +1400,19 @@ a.lt_primary {
   text-decoration: none;
 }
 
+/* Anchor jumps: Docusaurus offsets headings by the default --ifm-navbar-height
+   (60px + 0.5rem = 68px), but our custom navbar is 100px tall. Without this, a
+   heading reached from "On this page" lands behind the navbar, and on short
+   sections the TOC highlights the next heading instead of the one clicked. */
+h1.anchor,
+h2.anchor,
+h3.anchor,
+h4.anchor,
+h5.anchor,
+h6.anchor {
+  scroll-margin-top: calc(100px + 0.5rem);
+}
+
 /* Remove Infima's ul-level left border — only our li-level track bar should show */
 .table-of-contents__left-border,
 ul.table-of-contents,
@@ -2134,12 +2147,12 @@ h6[id]::before {
 }
 
 @media screen and (max-width: 1279px) {
-  .kane_cli_cta_content{
+  .kane_cli_cta_content {
     width: 100% !important;
-    
-    p {
-      max-width: 100% !important;
-    }
+  }
+
+  .kane_cli_cta_content p {
+    max-width: 100% !important;
   }
 }
 

@@ -97,7 +97,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-07-24T18:03:55+05:30"
+    "dateModified": "2026-11-12T13:50:45+05:30"
   }) }}
 />
 
@@ -111,7 +111,7 @@ To connect one, you need a Bland account with a published Conversational Pathway
 
 A Bland agent is a node-based pathway that serves every channel, so a few behaviours are worth building dedicated scenarios around:
 
-- **Pathways are graphs.** Pathways are graphs, not prompts. Unexpected phrasing breaks condition matching and strands the caller on a node.
+- **Pathways are graphs.** Unexpected phrasing breaks condition matching and strands the caller on a node.
 - **Dynamic variables.** Dynamic variables use double-curly syntax, and webhook node results are referenced downstream.
 - **Voicemail detection.** Voicemail detection is imperfect, so the human-speaks-first path needs its own scenario.
 - **Warm transfer proxy.** Warm transfer requires the proxy on the same Twilio account.

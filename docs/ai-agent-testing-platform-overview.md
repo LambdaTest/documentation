@@ -97,7 +97,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-04T12:50:18+05:30"
+    "dateModified": "2026-11-12T13:50:45+05:30"
   }) }}
 />
 
@@ -107,9 +107,14 @@ TestMu AI Agent Testing scores every agent conversation across a set of quality 
 
 ---
 
-Every completed conversation, voice or chat, is scored by the evaluation engine across a set of quality dimensions. Each dimension is scored on a normalized 0.0 to 1.0 scale, with configurable pass/fail thresholds per project.
+Every completed conversation is scored by the evaluation engine across a set of quality dimensions, with configurable pass/fail thresholds per project. The exact set of metrics depends on the agent type.
 
-The exact set of metrics depends on the agent type. Chat and voice agents are scored across 9 quality metrics, and phone agents across 30+ call metrics.
+| Agent type | What is scored |
+|---|---|
+| [Chat](/support/docs/chat-agent/) and [voice](/support/docs/voice-agent/) | 9 quality metrics, each scored from 0 to 100%. |
+| [Phone caller](/support/docs/phone-agent/) (inbound or outbound) | 42 metrics in six groups: is it fast, does it sound good, does it hold a good conversation, does it get the facts right, does it get the job done, and is it safe. See [Phone Caller Agent Metrics](/support/docs/agent-features-and-metrics/#phone-agent-metrics). |
+| [Video](/support/docs/video-agent/) | Pass or fail against the criteria you define, plus pillar scores from 0 to 10 for conversation flow, question handling, response quality, and avatar presentation. Only your agent is scored. |
+| [Image analyzer](/support/docs/image-analyzer/) | A quality score from 0 to 100 against the source prompt, plus custom criteria such as brand guidelines and technical specs. |
 
 Commonly scored dimensions include the following.
 
@@ -126,9 +131,18 @@ Commonly scored dimensions include the following.
 
 ---
 
-Each project can define custom minimum thresholds per dimension. A regulated deployment might require a Compliance score of at least 0.95 and a Data Privacy score of at least 0.98, while a consumer chatbot might prioritize Conversation Flow and User Satisfaction at a lower floor.
+Each project can set a minimum score threshold, from 0 to 100%, for each metric and choose which metrics to evaluate. A regulated deployment might require a Compliance score of at least 95% and a Data Privacy score of at least 98%, while a consumer chatbot might prioritize Conversation Flow and User Satisfaction at a lower floor. Chat agents set thresholds on the **Configs** tab, under **Metric Thresholds**, and phone caller agents in **Metric Config**.
 
-Threshold profiles are version-controlled and can differ across environments such as development, staging, and production. A conversation passes a dimension when its score meets or exceeds the threshold you set for it.
+Threshold profiles are version-controlled and can differ across environments such as development, staging, and production. Scheduled runs use the active threshold configuration. A conversation passes a dimension when its score meets or exceeds the threshold you set for it.
+
+## Add Custom Metrics
+
+---
+
+Custom metrics grade rules specific to your business, such as asking for a PIN before changing an address, alongside the built-in metrics. You choose whether each one counts toward the pass or fail result.
+
+- **Chat agents:** define them on the **Configs** tab, under **Custom Metrics**, and apply them to all or selected scenarios. **Suggest examples** drafts metrics from your scenarios. Grades appear under **Validation Criteria** with an explanation, the evidence turns, and a Pass/Fail override.
+- **Phone caller agents:** each metric is a Yes/No check or a 0 to 100 rating. A project holds up to 50, and up to 20 can be attached to one scenario. See [Custom Metrics](/support/docs/agent-features-and-metrics/#custom-metrics).
 
 ## Read the Go-Live Readiness Verdict
 
@@ -136,13 +150,13 @@ Threshold profiles are version-controlled and can differ across environments suc
 
 The Go-Live Assessment aggregates results across all evaluated scenarios and dimensions into a three-tier production readiness verdict.
 
-| Verdict | Meaning |
-|---------|-------------|
-| 🟢 **Green** | All critical thresholds met. The agent behaves consistently across tested scenarios. Cleared for production. |
-| 🟡 **Yellow** | Most thresholds met; one or more secondary metrics fall below target. Conditional approval with identified risk areas to monitor. |
-| 🔴 **Red** | One or more critical thresholds not met. Specific failure categories are surfaced for remediation before production. |
+| Verdict | Overall score | Meaning |
+|---------|---------------|-------------|
+| 🟢 **Green** | 80 or more | All critical thresholds met. The agent behaves consistently across tested scenarios. Cleared for production. |
+| 🟡 **Yellow** | 65 to 79 | Most thresholds met; one or more secondary metrics fall below target. Conditional approval with identified risk areas to monitor. |
+| 🔴 **Red** | Below 65 | One or more critical thresholds not met. Specific failure categories are surfaced for remediation before production. |
 
-Each verdict carries an overall aggregate score and a confidence level, plus a pass/fail breakdown across the behavioral test categories.
+Each verdict carries an overall score from 0 to 100 and a confidence level. The assessment also shows Functional, Quality, Risk, and Operational scores, blockers, action items, AI insights, and scenario coverage.
 
 ### Confidence Levels
 
@@ -171,6 +185,8 @@ Generated scenarios are organized across sixteen behavioral categories, so a run
 | Error Handling | Consistency | Security |
 | Compliance & Governance | Data Privacy | Performance |
 | Recovery Mechanisms | | |
+
+Chat scenarios can also be filtered by type: Happy Path, Negative, Edge Case, Red Team, and Integration.
 
 The Go-Live verdict reports pass/fail rates per category, so a Yellow or Red result points at the specific category to fix.
 

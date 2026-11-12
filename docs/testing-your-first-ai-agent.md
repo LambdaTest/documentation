@@ -98,7 +98,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-11-02T12:00:00+05:30"
+    "dateModified": "2026-11-12T13:50:45+05:30"
   }) }}
 />
 
@@ -126,8 +126,8 @@ Follow these seven steps in the dashboard. Each step builds on the previous one.
 
 - **Agent Name** (required).
 - **Description** (optional).
-- **Agent Type** (required): Chat Agent, Voice Agent, IVR Agent, Phone Caller Agent, Image Analyzer, or Video Agent. This walkthrough uses **Chat Agent**.
-- **Evaluation Mode** (required for Chat Agent): select **Pre-production testing**, which uploads requirements, generates test scenarios, and simulates conversations against your agent.
+- **Agent Type** (required): Chat Agent, Voice Agent, Video Agent, Phone Caller Agent (inbound or outbound), IVR Agent, or Image Analyzer. This walkthrough uses **Chat Agent**.
+- **Evaluation Mode** (required for Chat Agent): select **Pre-production testing**, which uploads requirements, generates test scenarios, and simulates conversations against your agent. To grade real production transcripts instead, see [Grade Production Chat Transcripts](/support/docs/chat-agent/#grade-production-chat-transcripts).
 
 Click **Create New Agent** to confirm.
 
@@ -169,8 +169,8 @@ Click **Generate Scenarios**.
 
 **Step 6: Run the evaluation.** Run a suite to open the **Run Suite** dialog, then add your agent's API request.
 
-1. Enter your agent's request as a cURL command.
-2. Click **Parse and Evaluate**. To run it later, click **Schedule Run Evaluation** instead.
+1. Enter your agent's request as a cURL command. If it contains a token, cookie, or API key, use the **Move to vault** banner to keep that credential in the credentials vault instead of in plaintext. Vault values resolve only at run time.
+2. Click **Parse and Evaluate**. To run it on a schedule instead, click **Schedule Run Evaluation**.
 3. In the **Confirm Request Details** dialog, check the **URL**, **Method**, **Headers**, and **Body**.
 4. Click **Run Evaluation**.
 
@@ -182,7 +182,8 @@ For the API URL format and authentication, see how to [connect a chat agent over
 
 - Start with the scenarios that failed or scored lowest. On the **Turns** tab, read the conversation to find the point where your agent went wrong.
 - Use **Areas for Improvement** and **Recommendations** to decide what to fix in your agent, and **Validation Criteria** to see which of the scenario's criteria it missed. If a criterion is wrong rather than the agent, edit the scenario as in Step 5.
-- After you change your agent, click **Re-run** to run the same scenarios again. Each run is listed separately with its score and time, so you can compare before and after.
+- After you change your agent, click **Re-run** to run the same scenarios again. Each run is listed separately with its score and time, and re-runs are tagged in the suite results list, so you can compare before and after.
+- To stop a suite that is still running, abort it from the results banner.
 
 See the [chat agent metrics](/support/docs/chat-agent/#metrics) for what each score measures.
 
@@ -197,4 +198,6 @@ If you are testing a voice bot, the platform generates audio for each test case 
 ---
 
 - See how to [connect a chat agent over its API](/support/docs/chat-agent-api-integration/) for the API URL and authentication used in step 6.
+- See the [chat agent guide](/support/docs/chat-agent/) for red teaming, custom metrics, Data Validation, and scheduled runs.
 - See how to [test agents from the terminal](/support/docs/agent-testing-cli/) with the A2A CLI.
+- To test another agent type, see [voice agents](/support/docs/voice-agent/), [phone agents](/support/docs/phone-agent/), [video agents](/support/docs/video-agent/), or the [image analyzer](/support/docs/image-analyzer/).

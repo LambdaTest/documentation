@@ -95,7 +95,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-04T12:50:18+05:30"
+    "dateModified": "2026-11-12T13:50:45+05:30"
   }) }}
 />
 
@@ -107,11 +107,11 @@ Common questions about TestMu AI Agent Testing, grouped by plans, setup, securit
 
 ### Availability for Small Teams and Startups
 
-Yes. The Pay-As-You-Go tier starts at $0 with no monthly commitment, and you pay only for the credits you consume at $0.01 each. The Starter and Growth plans suit small and mid-size teams, while Scale and Enterprise add SLAs and compliance documentation for high-volume organizations.
+Yes. Small teams can start on the Pay-As-You-Go tier, described below. The Starter and Growth plans suit small and mid-size teams, while Scale and Enterprise add SLAs and compliance documentation for high-volume organizations.
 
 ### Free Trial and the Free Tier
 
-The Pay-As-You-Go tier is effectively a permanent free tier. There is no time limit and no commitment. You pay only for the credits you use at $0.01 each.
+The Pay-As-You-Go tier is effectively a permanent free tier. There is no time limit and no monthly commitment. You pay only for the credits you use.
 
 ### How Agent Testing Differs From LambdaTest Browser Testing
 
@@ -125,9 +125,13 @@ The platform uses a hybrid stack that combines third-party large language models
 
 ---
 
+### Agent Types You Can Test
+
+Agent Testing covers [chat](/support/docs/chat-agent/), [voice](/support/docs/voice-agent/), [video](/support/docs/video-agent/), [phone caller](/support/docs/phone-agent/) (inbound or outbound), IVR, and [image analyzer](/support/docs/image-analyzer/) agents. You choose the type under **Agent Type** when you create the agent. To test autonomous agents that take real actions through tools, APIs, and files, use [Agent Assurance](/support/docs/agent-assurance-overview/), a separate product that runs from the rook CLI.
+
 ### Connecting an Agent Without Code Changes
 
-No changes to your agent are required. The agent needs an accessible endpoint, which is an HTTP API, a voice endpoint, or a phone number. There is no SDK to install, and the platform interacts with the agent through the same interface production users use.
+No changes to your agent are required. The agent needs an accessible endpoint: an HTTP API, a voice endpoint, a phone number or SIP trunk, or, for a video agent, a web URL that a person could join. There is no SDK to install, and the platform interacts with the agent through the same interface production users use.
 
 ### Testing an Agent Behind a Firewall
 
@@ -143,11 +147,14 @@ A typical chat or voice evaluation runs to completion in under 2 hours for most 
 
 ### Testing Against a Production or Staging Agent
 
-Running against a production agent is technically possible, but evaluating against staging is the recommended practice. To assess real production behavior, upload recorded production calls and use post-production recording analysis.
+Running against a production agent is technically possible, but evaluating against staging is the recommended practice. To assess real production behavior, grade what production already recorded:
+
+- **Phone caller agents:** upload production call recordings in [Post Analysis](/support/docs/phone-agent/#analyze-production-calls-post-analysis). They are scored on the same metrics as live test calls.
+- **Chat agents:** create the agent in Post mode and bulk upload production transcripts as .txt or .json files. They are graded against your own requirement documents, and replies that are out of scope or break a policy, such as a refund limit, fail even when the overall score is high.
 
 ### How Phone Testing Places Real Calls
 
-The platform dials real phone numbers. For an inbound agent, it calls the agent's actual number as a real caller would, then drives the conversation with a simulated caller. SIP endpoint simulation is also available for teams that prefer to test through SIP without routing over the PSTN.
+The platform places real calls. For an inbound agent, it calls the agent's actual number as a real caller would, then drives the conversation with a simulated caller. For an outbound agent, your agent calls a number the platform reserves from an outbound number pool, and the platform answers. Inbound agents reachable over a SIP trunk, rather than a phone number, can be tested over SIP. See [Phone Agent Testing](/support/docs/phone-agent/).
 
 ## Security and Data Handling
 
@@ -181,6 +188,10 @@ Every verdict is backed by evidence, the specific conversation transcripts that 
 
 Review the failing scenario transcript. If the assessment does not match expert human judgment, refine the agent prompt or add custom validation criteria that define the expected behavior more precisely. Tuning the criteria to your agent's context improves accuracy over time.
 
+### Grading Your Own Business Rules
+
+Add custom metrics: checks you write for rules specific to your business, such as asking for a PIN before changing an address, graded alongside the built-in metrics. Chat and phone caller agents define them on the **Configs** tab, under **Custom Metrics**, and you choose whether each one counts toward the pass or fail result. See [Custom Metrics](/support/docs/agent-features-and-metrics/#custom-metrics).
+
 ### Comparing Results Across Model Versions
 
 Yes. The dashboard shows metric score deltas between test runs and tracks trends over time, so you can confirm whether a model update improved or regressed quality.
@@ -189,9 +200,16 @@ Yes. The dashboard shows metric score deltas between test runs and tracks trends
 
 ---
 
+### Red Team Testing for Adversarial Attacks
+
+Yes. Red Team scenarios attack your agent on purpose.
+
+- **Chat agents:** a live adversarial attacker, not a single opening probe, runs seven attack types: business logic, hallucination, hijacking, prompt injection, technical injection, overreliance, and off-topic. The attacker and the grader are separate, so the score is not influenced by how hard the attacker pushed. A run that cannot be judged is reported as inconclusive, not passed.
+- **Phone caller agents:** red team scenarios are generated from the agent's own prompt. The platform finds the rules the agent must follow and attacks them, prioritizing rules not yet covered, and refreshes its targets when the prompt changes. Findings appear in the Red Team section of the suite **Insights** page, each linked to its moment in the call recording.
+
 ### Multilingual Requirement Analysis and Multi-Language Testing
 
-Yes. The platform supports AI-enabled multilingual requirement analysis, so teams can extract and analyze requirements from documents written in multiple languages. It generates test scenarios that account for multilingual support requirements and supports testing AI agents that handle multiple languages across interactions.
+Yes. The platform supports AI-enabled multilingual requirement analysis, so teams can extract and analyze requirements from documents written in multiple languages. It generates test scenarios that account for multilingual support requirements and supports testing AI agents that handle multiple languages across interactions. Phone caller scenarios can run in languages including Japanese and Portuguese.
 
 Key capabilities include:
 
@@ -224,6 +242,8 @@ The three native connectors are:
 - **GitHub** for repository content extraction, README retrieval, and file access, including private repositories via secure tunnels.
 - **JIRA** for ticket retrieval, project information access, and issue tracking, including private JIRA instances via secure tunnels.
 - **Confluence** for page content import, documentation retrieval, and knowledge base integration, including private Confluence instances via secure tunnels.
+
+For phone caller agents, you can also import up to five Jira tickets into the agent prompt, each shown as its own tab.
 
 ## Related TestMu AI Guides
 
