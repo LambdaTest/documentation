@@ -61,7 +61,7 @@ slug: accessibility-automation/
 
 # Accessibility Automation (Overview)
 
-Accessibility Automation lets teams run accessibility checks as part of automated web test execution.
+Accessibility Automation lets teams run accessibility checks as part of automated web test execution. For supported frameworks, CI/CD setup, and code samples in one place, see [automated accessibility testing with TestMu AI](https://www.testmuai.com/accessibility-automation/).
 
 This overview introduces the Accessibility Automation workflow and supported execution model for running checks alongside automated web tests. You will see how framework-based runs relate to DevTools, Web Scanner, and Test Scheduling, and what to expect from grid execution, settings, and reporting.
 
