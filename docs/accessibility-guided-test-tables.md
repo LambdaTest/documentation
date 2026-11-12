@@ -68,7 +68,7 @@ The <BrandName /> Accessibility Toolkit is installed. See [Install Toolkit](/sup
 | Data table contains nested tables | 1.3.1 (A) | Moderate |
 | Layout table uses data-table markup | 1.3.1 (A) | Serious |
 | Layout table is announced as a table | 1.3.1 (A) | Moderate |
-| Data table has no header cells | 1.3.1 (A) | Critical / Serious |
+| Data table has no header cells | 1.3.1 (A) | Critical |
 | Header cell lacks scope in a two-way table | 1.3.1 (A) | Serious |
 | Complex table cells are not associated with their headers | 1.3.1 (A) | Serious |
 | Header cells do not describe their data | 2.4.6 (AA) | Moderate |
