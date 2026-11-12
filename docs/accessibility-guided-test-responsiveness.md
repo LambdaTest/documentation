@@ -79,6 +79,8 @@ Use this test on any page that people open on a phone or zoom in on, and on page
 | A full-screen overlay blocks the page in one orientation | 1.3.4 (AA) | Serious |
 | Reviewer reports content or functionality lost in one orientation | 1.3.4 (AA) | Moderate |
 
+The three **Reviewer reports content or functionality lost** rules are not measured. They are raised only when you answer that content or functionality was lost in that state. All other rules come from the measurements.
+
 The report includes only the rules that fall within the WCAG version and level you set in [DevTools Settings](/support/docs/accessibility-devtools-settings/#wcag-version). WCAG 2.0 does not include success criteria 1.4.10 and 1.3.4.
 
 ## States the test emulates
@@ -87,8 +89,10 @@ The report includes only the rules that fall within the WCAG version and level y
 |---|---|---|
 | 200% zoom | 640 px wide | 1280 px desktop layout |
 | 400% zoom reflow | 320 px wide | 1280 px desktop layout |
-| Phone in portrait | 412 by 915 | Phone in landscape |
-| Phone in landscape | 915 by 412 | Phone in portrait |
+| Phone in portrait | 412 by 915 | A control view at the same width in landscape |
+| Phone in landscape | 915 by 412 | A control view at the same width in portrait |
+
+The test measures each state about 450 ms after it applies the state. Content that loads later, such as lazy-loaded images or sections, is not measured.
 
 ## Run the test
 
@@ -106,15 +110,19 @@ Do not resize the window or touch the page while the states are emulated.
 
 ### Let the test emulate each state
 
-**Zoom and reflow.** The test checks the page at 640 px and at 320 px against the 1280 px desktop layout. It flags text that is cut off, controls that overlap, and content pushed out of reach, in each case only when the problem was not already there on the desktop layout. At 320 px it also checks whether the page needs horizontal scrolling.
+**Zoom and reflow.** The test checks the page at 640 px and at 320 px against the 1280 px desktop layout. It flags text that is cut off, controls that overlap, and content pushed out of reach. If the same problem is already there on the desktop layout, the row is dropped and not reported, so an element that is clipped on purpose at desktop width is not flagged at the narrower widths. At 320 px it also checks whether the page needs horizontal scrolling.
 
-**Orientation.** The test checks the page on an emulated phone in portrait and landscape. It flags an element that is available in one orientation only, and a full-screen overlay that blocks the page in one orientation, such as a "rotate your device" message. Extra measurements at matching widths make sure that an element which only reflowed at a narrower width is not flagged.
+**Orientation.** The test checks the page on an emulated phone in portrait and landscape. It flags an element that is available in one orientation only, and a full-screen overlay that blocks the page in one orientation, such as a "rotate your device" message. Each orientation is compared with a control view at the same width in the opposite orientation, not with the other full orientation, so an element that only reflowed because the width changed is not flagged.
 
 If the page cannot be emulated, for example because another DevTools window holds the tab, the test offers to try again, continue, or skip the step.
 
 ### Confirm the flagged elements
 
-Each flagged element appears as a row with its answer filled in from the measurements. A navigation that collapses into a menu, or content that only moves, produces no row. On long pages the measurement is capped so the test stays fast, and each row says when a cap applied.
+Each flagged element appears as a row with its answer filled in from the measurements. A navigation that collapses into a menu, or content that only moves, produces no row. On long pages the measurement is capped so the test stays fast, and each row says when a cap applied:
+
+- The first 150 key elements, such as headings, links, controls, and labels, are measured in each state.
+- The first 80 interactive elements are checked for overlap.
+- Each check lists at most 10 rows.
 
 {/* IMAGE PLACEHOLDER: Flagged elements for one emulated state with its screenshot
 <img loading="lazy" src={require('/assets/images/accessibility-testing/guided-tests/responsiveness-flagged.png').default} alt="Flagged elements in the Responsiveness guided test" className="doc_img" width="1360" height="768" />
@@ -126,13 +134,20 @@ For each state, confirm whether all content is readable and every control usable
 
 ### Finish the test
 
-Finish the test to generate the report. Each finding opens the report's Image View on the screenshot of the state it was measured in, with the element's box drawn in that state. Your progress is saved, so you can close the panel and continue later.
+Finish the test to generate the report. Each finding opens in a pane with three tabs:
+
+- **Element Details** shows the element the finding is about.
+- **How to fix** explains how to fix the issue for that rule.
+- **Image View** shows the screenshot of the state the element was measured in, with the element's box drawn in that state.
+
+Your progress is saved, so you can close the panel and continue later.
 
 ## Product boundary
 
 - The states are fixed, so there are no elements to add by hand.
 - The states are emulated in the browser. The test does not run on real devices.
-- On long pages the measurement is capped, so elements beyond the cap are not measured.
+- On long pages the measurement is capped at 150 key elements and 80 interactive elements, so elements beyond the cap are not measured.
+- Content that loads more than about 450 ms after a state is applied is not measured.
 
 ## Related docs
 

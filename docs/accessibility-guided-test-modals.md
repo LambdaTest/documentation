@@ -87,12 +87,25 @@ Open **Assisted Tests** in Accessibility DevTools and select **Modals**. See [St
 
 ### Pick the modal
 
-There are two ways to pick a modal:
+First, say how the modal opens:
 
-- **The modal has a launcher.** Click the launcher on the page and let the test open the modal, so that it can see where focus goes.
-- **The modal opens another way**, for example a session-timeout dialog. Open it yourself, and then pick it on the page or in the DOM tree.
+- **The modal has a launcher.** Pick the launcher and let the test open the modal, so that it can see where focus goes.
+- **The modal opens another way**, for example a session-timeout dialog. Open it yourself, and then pick the open modal.
 
-If you pick an element inside a modal that you opened, the test moves the pick to the dialog that contains it, and the panel tells you so. When a page has no dialog markup, the test picks the largest new overlay and asks you to confirm that it is the modal before it runs any checks.
+There are two equivalent ways to pick an element:
+
+- **Select using mouse.** Click the element on the page with the crosshair picker.
+- **DOM Selector.** Expand the DOM tree in the panel and select the element there.
+
+If you pick an element inside a modal that you opened, the test moves the pick to the dialog that contains it, and the panel tells you so.
+
+When the page has no dialog markup, the test picks the largest new overlay and shows a confirmation screen before it runs any checks. The screen shows the overlay's accessible name and asks whether this is the modal:
+
+- Select **Yes** and then **Yes, run the checks** to run the checks on that overlay.
+- Select **No** and then **Next question** to go on without checking it.
+- Select **Highlight all on the page** to see the overlay highlighted on the page before you answer.
+
+If the test cannot find an overlay after the launcher runs, it shows **Could not detect the modal**. Select **Try again** to run the launcher again, or **Skip this modal** to go on without it.
 
 :::note
 The page must have focus for a pick to register. If you were last working in the DevTools panel and your click on the page is not picked up, click once on an empty part of the page, and then click the element again.
@@ -110,9 +123,19 @@ The test never activates a control that could have side effects, such as Accept,
 
 ### Confirm the results
 
+For each modal, the test asks seven questions:
+
+1. Does focus move into the modal when it opens?
+2. Does Tab keep focus inside the modal?
+3. Which elements did Tab reach outside the modal?
+4. Does Escape close the modal?
+5. Do the close controls work?
+6. Does focus return to the trigger when the modal closes?
+7. Is there another modal to test?
+
 Each answer is filled in from the checks. When a measurement is not conclusive, the answer is left blank and the row says why. You can change any answer.
 
-For focus, the test lists every element that Tab reached outside the modal, and says for each one whether the dialog or its backdrop hides it fully, partly, or not at all.
+For the third question, the test lists every element that Tab reached outside the modal, and says for each one whether the dialog or its backdrop hides it fully, partly, or not at all.
 
 If the checks cannot run, for example because another DevTools window holds the tab, the questions are shown blank and you answer from what you see. The markup checks still run.
 
@@ -122,11 +145,19 @@ If the checks cannot run, for example because another DevTools window holds the 
 
 ### Test another modal
 
-After each modal, the test asks if there is another modal to test, so one run can cover every modal on the page.
+The last question asks if there is another modal to test. Answer **Yes** to go back to the Pick step for the next modal. The answers for the modals you already tested are kept, and the findings for every modal go into one report, so one run can cover every modal on the page.
 
 ### Finish the test
 
-Finish the test to generate the report. The report's Image View shows the dialog as it was during the checks, not the closed page. Your progress is saved, so you can close the panel and continue later.
+Finish the test to generate the report. Each finding opens in a pane with three tabs:
+
+- **Element Details** shows the element the finding is about.
+- **How to fix** explains how to fix the issue for that rule.
+- **Image View** shows the dialog as it was during the checks, not the closed page.
+
+### Resume a test
+
+Your progress is saved, so you can close the panel and continue later. If you leave in the middle of a test, the next time you open the Modals test it shows **Resume your Modals test?**. Select **Resume** to continue where you left off, or **Start over** to begin a new test.
 
 ## Product boundary
 
