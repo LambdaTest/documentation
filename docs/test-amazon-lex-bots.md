@@ -74,7 +74,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-07-24T18:03:55+05:30"
+    "dateModified": "2026-11-12T13:50:45+05:30"
   }) }}
 />
 
@@ -91,7 +91,7 @@ Lex handles text and speech from intents, slots, and fulfilment Lambdas, so a fe
 - **Slot filling.** Slot filling is the main failure surface, so partial input, corrections, and out-of-order answers all need scenarios.
 - **Intent confidence thresholds.** Intent confidence thresholds decide the fallback path, which makes borderline utterances worth testing deliberately.
 - **Fulfilment Lambdas.** Fulfilment Lambdas sit outside the bot, so a Lambda error surfaces as a bot failure.
-- **Aliases and versions.** Aliases and versions matter. Testing the draft version does not test what is live.
+- **Aliases and versions.** Testing the draft version does not test what is live.
 - **No telephony of its own.** Lex has no telephony of its own, so there is no phone section on this page.
 
 ## How do phone calls reach a Lex bot for testing?

@@ -88,11 +88,11 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         "text": "avatar faces  x  personas  x  test profiles  x  iterations  =  sessions"
       }
     ],
-    "dateModified": "2026-08-17T20:21:06+05:30"
+    "dateModified": "2026-11-12T13:50:45+05:30"
   }) }}
 />
 
-The TestMu AI Agent Testing Platform tests video agents that talk to people on camera, whether an AI interviewer, an onboarding assistant, or a triage front desk, with no code changes to the agent. A simulated candidate with a real face and a real voice joins your agent's session, holds an actual conversation, records it, and scores what your agent did against criteria you write.
+The TestMu AI Agent Testing Platform tests video agents that talk to people on camera, whether an AI interviewer, an onboarding assistant, or a triage front desk, with no code changes to the agent. A simulated candidate with a rendered face and voice joins your agent's session, holds an actual conversation, records it, and scores what your agent did against criteria you write.
 
 The only requirement is a web URL that a person could join with a camera and a microphone. There is no phone number to dial and no SDK to install. TestMu AI generates scenarios from a description you provide, replays them as full conversations, and returns a recording you can watch, a transcript you can read, and a verdict you can trace to the exact moment that earned it.
 
@@ -100,7 +100,7 @@ The only requirement is a web URL that a person could join with a camera and a m
 
 ---
 
-You can test anything reachable at a web URL that a person could join with a camera and a microphone. If you can send a colleague a link and they can join the conversation in a browser, TestMu AI can test it.
+If you can send a colleague a link and they can join the conversation in a browser, TestMu AI can test it.
 
 | Target | Supported | Notes |
 |---|---|---|
@@ -115,7 +115,7 @@ You can test anything reachable at a web URL that a person could join with a cam
 
 Before you create a video agent, make sure you have the following in place.
 
-- **A joinable URL for the agent you want to test.** A staging URL is ideal. Every test is a real conversation with whatever is behind that link, so point it at an environment you are comfortable exercising.
+- **A joinable URL for the agent you want to test.** A staging URL is ideal. See the warning below.
 - **Video agent testing enabled for your organization.** This is switched on per organization. If you do not see the option when creating an agent, ask your administrator.
 - **A clear definition of what "working" means.** This is the part worth thinking about, because it is what makes results useful rather than decorative. The [success criteria](#success-criteria-decide-the-verdict) section covers it in depth.
 
@@ -463,7 +463,7 @@ Most failed runs trace back to an unreachable URL, a thin scenario, or a criteri
 
 **Why it happens.** This points to a problem on the TestMu AI side, such as the candidate's video stream dropping mid-session.
 
-**Fix.** Report it. Inconclusive runs are kept out of your pass rate, and this is a TestMu AI bug to fix.
+**Fix.** Report it. See [Session Status Values](#session-status-values).
 
 ## Frequently Asked Questions
 
@@ -475,7 +475,7 @@ Common questions about how video agent testing behaves and what it touches.
 
 ---
 
-Only if you point it at production. Every session is a real conversation with whatever is behind the URL you supply. Use a staging URL where you can.
+Only if you point it at production. See [What You Need Before You Start](#what-you-need-before-you-start).
 
 ### Whether You Need to Change Your Agent
 
@@ -487,7 +487,7 @@ No. TestMu AI joins the way a person would, so you do not add an SDK or modify y
 
 ---
 
-Yes, provided the agent is reachable at a joinable web URL. Where your platform exposes its own recording and transcript, TestMu AI uses them for richer results.
+Yes, provided the agent is reachable at a joinable web URL. See [What You Can Test](#what-you-can-test-with-video-agent-testing).
 
 ### How Long Recordings Are Kept
 

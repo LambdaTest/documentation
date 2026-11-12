@@ -74,7 +74,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-07-24T18:03:55+05:30"
+    "dateModified": "2026-11-12T13:50:45+05:30"
   }) }}
 />
 
@@ -107,7 +107,7 @@ Click **Create New Agent** to confirm.
 
 <img loading="lazy" src={require('../assets/images/agent-to-agent/ivr-agent-prompt-tab-specification.webp').default} alt="Prompt tab with a telephone banking IVR specification, file upload and Jira import" width="1917" height="940"  className="doc_img"/>
 
-**Step 3: Review the IVR System Map.** Open the **IVR System Map** tab to see every menu, branch, and dead-end the platform mapped for your IVR.
+**Step 3: Review the IVR System Map.** Open the **IVR System Map** tab to see every menu, branch, and dead-end the platform mapped for your IVR. For a large IVR menu, the map takes about a minute to build.
 
 - **Summary cards:** **Menus**, **Decision points**, **Deepest path (levels)**, **Reachable paths**, and **Dead-ends found**.
 - **Node types:** Start, Menu, Decision, Input, Self-service, Agent transfer, End call, and Error / reprompt.
@@ -133,17 +133,21 @@ Click **Create New Agent** to confirm.
 **Step 6: Review the call results.** Open a call from the list to see whether it passed and why.
 
 - Check how each call ended first. A call marked **dispatch-failed** never connected, so it has no score to review.
-- For a connected call that failed, play it on the **Recording** tab alongside the transcript to find the menu step where it went wrong. The usual causes are a digit that didn't register, a speech fallback that never triggered, a drop on timeout, or an unreachable transfer target. See [why Twilio IVR tests fail](#why-do-twilio-ivr-tests-fail).
+- For a connected call that failed, play it on the **Recording** tab alongside the transcript to find the menu step where it went wrong, then compare it with [why Twilio IVR tests fail](#why-do-twilio-ivr-tests-fail).
 - On the **Validation Results** tab, check which of the scenario's success criteria the call met or missed.
 - If a call failed but the flow looks right, check the **MOS** badge. A call's pass or fail can be based on the metrics, on the mean opinion score of the call audio, or on both.
 
 <img loading="lazy" src={require('../assets/images/agent-to-agent/ivr-call-result-recording-transcript.webp').default} alt="IVR call result showing pass status, score, MOS, call recording waveform, call summary and transcript" width="1906" height="945"  className="doc_img"/>
 
+**Get an email when a run fails.** On the **Integrations** page, enable email alerts for failed runs and select the recipients. You get one email per run, listing the failed scenarios, any red team attacks that succeeded, and a link to the results.
+
 ## How do you test every branch of a Twilio IVR?
 
 ---
 
-Because an IVR is a decision tree, coverage is measured in branches, not intents. Upload the flow export or menu map, or paste your IVR specification into the **Prompt** tab, and TestMu AI generates a scenario for each path a caller can take, then dials the provisioned number and walks them: DTMF entry, speech input fallback, timeout and retry behaviour, and transfer to a queue or a representative. See [phone agent testing](/support/docs/phone-agent/) for the full setup.
+Because an IVR is a decision tree, coverage is measured in branches, not intents. Upload the flow export or menu map, or paste your IVR specification into the **Prompt** tab, and TestMu AI generates a scenario for each path a caller can take, then dials the provisioned number and walks them: DTMF entry, speech input fallback, timeout and retry behaviour, and transfer to a queue or a representative.
+
+If your IVR test cases already live in Cyara, upload a Cyara XML export instead. Every test case becomes a callable IVR scenario, with its prompts, keypad steps, shared blocks, dial number, and test data carried across, and the flow renders in Workflow View, ready to run. Workflow View also shows menu options the call didn't take as dashed "not taken" branches.
 
 ## What makes testing a scripted IVR different?
 
