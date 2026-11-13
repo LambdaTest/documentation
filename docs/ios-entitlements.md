@@ -98,6 +98,8 @@ Once you toggle the iOS Entitlements option, your application's certificates wil
 
 <img loading="lazy" src={require('../assets/images/entitlements/1.webp').default} alt="monday integration" width="626" height="439" className="doc_img"/>
 
+Re-signed builds can lose universal link handoff; see [how to test universal links on real iPhones](https://www.testmuai.com/blog/test-universal-links-ios/).
+
 
 ## Disabling Re-Signing In App Automation
 ***
