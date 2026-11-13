@@ -76,7 +76,7 @@ For the definition and evidence used by an older run, follow **Runs**, rather th
 
 ### Local Runs {#local-runs}
 
-Open **Runs** to compare recorded executions by version, result distribution, pass percentage, credits, and duration. This local list shows the latest 20 runs and reports when older runs are omitted; that is not proof that the older files were deleted.
+Open **Runs** to compare recorded executions by version, result distribution, pass percentage, credits, and duration. This local list shows the latest 20 runs and reports when older runs are omitted; that is not proof that the older files were deleted. Since 0.1.20, runs made with --test are listed only under **Test runs**, which also shows its latest 20.
 
 Click a run to inspect its narrative, outcome counts, scenario rows, and metadata. **View plan** opens the recorded selection plan. In the **Profile** row, the profile name opens the run's saved configuration; the adjacent link opens the current profile under **Profiles**. These can differ.
 
@@ -143,7 +143,7 @@ rook ui
 
 Replace the placeholders with your own IDs and approve only reviewed operations. Project definitions remain local until sync. A normal run then records results against the synchronized version. Use rook runs sync to retry outstanding uploads after a connection problem.
 
-Runs created with --test intentionally do not appear on the shared timeline. Review them with rook ui --local instead.
+Runs created with --test intentionally do not appear on the shared timeline. Since 0.1.20, if the agent has been synchronized, its **Runs** tab lists them under **Test runs** with their totals only. Review their results and evidence with rook ui --local.
 
 ## Follow the Review Workflow
 
@@ -399,7 +399,7 @@ Use pagination when more runs are available. To compare two executions, open eac
 If you already ran it locally, check:
 
 1. The browser and CLI use the same account, organization, project, and environment.
-2. The run was not created with --test; test-mode runs intentionally stay off the shared timeline.
+2. The run was not created with --test; test-mode runs intentionally stay off the shared timeline. Since 0.1.20, select **Test runs** above the list to see them; their detail stays on the machine that ran them.
 3. Uploads completed. Use rook runs sync to retry outstanding normal-run uploads, then reload the page.
 
 Use rook ui --local for on-disk evidence. See [Web UI setup and troubleshooting](/support/docs/rook-web-ui/) for the complete environment checklist.

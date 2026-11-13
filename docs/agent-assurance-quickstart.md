@@ -342,7 +342,7 @@ While Rook runs, the scenario row shows its current phase. This capture is in **
 
 Wait for completion before opening the report. Press Esc only if you intend to interrupt; stopping Rook does not undo actions already performed by the target.
 
-A normal run needs a synchronized agent version. <code>--test</code> is for an intentionally local, unsynchronized experiment; it does not add a run to the shared timeline. On a plan without Rook cloud, <code>/sync</code> is refused with <code>upgrade_plan</code> and the run goes on this machine only, as <code>--test</code> does; review it with <code>rook ui --local</code>.
+A normal run needs a synchronized agent version. <code>--test</code> is for an unsynchronized experiment that keeps its evidence on this machine; it does not add a run to the shared timeline. Since 0.1.20, if the agent was synchronized before, the hosted **Runs** page lists the run's totals under **Test runs**. On a plan without Rook cloud, <code>/sync</code> is refused with <code>upgrade_plan</code> and the run goes on this machine only, as <code>--test</code> does; review it with <code>rook ui --local</code>.
 
 ### 6. Open the results
 
