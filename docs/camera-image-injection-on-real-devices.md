@@ -14,6 +14,8 @@ keywords:
   - app testing appium
   - app testing
   - real devices
+  - mobile browser image injection
+  - web camera injection
 url: https://www.testmuai.com/support/docs/camera-image-injection-on-real-devices/
 site_name: TestMu AI
 slug: camera-image-injection-on-real-devices/
@@ -198,3 +200,68 @@ This feature helps you inject any video or image which you want your app to clic
 The clicked image is black because the **Cameras** of <BrandName /> Real Devices are taped for security reasons. Thus we inject image through **Sensor Instrumentation**.
 
 :::
+
+## Image Injection in Real Device Browser Testing
+
+You can also inject an image into **web pages** that open the device camera, such as KYC selfie and ID capture steps, document scanners, and QR scanners. The web page sees your uploaded image as a camera named **LambdaTest Injected Camera**, instead of the real device camera. This works in [Browser Testing on real devices](/support/docs/browser-testing-on-real-devices/), and in App Testing for web pages inside Android apps.
+
+:::note Enablement Required
+Image injection for mobile browsers and in-app web pages is enabled per organization. If the **Media Injection** option does not appear in a browser session, the feature is not yet switched on for your account.
+
+To unlock this feature, please contact your <BrandName /> support representative, reach out to our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**[24×7 Chat Support]**</span>, or email us at **support@testmuai.com**.
+:::
+
+### Supported browsers and surfaces
+
+| Platform | Browser or surface | Minimum version | Notes |
+|---|---|---|---|
+| Android | **Chrome** | - | |
+| Android | **Web pages inside native apps** (KYC SDKs, hybrid apps) | - | Use App Testing and enable **Image Injection** for the app, as described in the [previous section](#image-and-video-injection-in-real-device-app-testing). |
+| iOS | **Safari** | iOS 16 | No setup needed. |
+| iOS | **Chrome** | iOS 17, Chrome 115 | Needs Chrome's **Web Inspector** setting. See [iOS Chrome setup](#ios-chrome-turn-on-web-inspector). |
+
+:::warning note
+- Available on **real devices only**. Other Android browsers, web pages inside iOS apps, and virtual devices are not supported.
+- **Images only.** Video injection is not supported for browsers or in-app web pages.
+:::
+
+### Steps to inject an image
+
+**Step 1:** Start a session. Use **Real Devices** > **Browser Testing** on Android Chrome, iOS Safari, or iOS Chrome. For a web page inside an Android app, use **Real Devices** > **App Testing**.
+
+**Step 2:** Go to **Device Controls** in the toolbar, select **Media Injection**, and upload or pick an image.
+
+{/* IMAGE PLACEHOLDER: Media Injection drawer in a Browser Testing session on a real device
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/media-injection/browser-media-injection.png').default} alt="Media Injection in real device browser testing" className="doc_img" width="1366" height="629"/>
+*/}
+
+**Step 3:** Open the camera on the web page. If the camera was already open before you uploaded the image, reload the page or reopen the camera step.
+
+**Step 4:** To change the image, upload another one. The camera picture changes live, without a page reload. New pages and new tabs keep showing the latest image.
+
+### iOS Chrome: turn on Web Inspector
+
+Chrome on iOS allows image injection only when Chrome's own **Web Inspector** setting is on. The setting is off by default.
+
+- **Public devices:** <BrandName /> turns the setting on automatically between sessions. You don't need to do anything.
+- **Private (dedicated) devices:** turn it on once. In Chrome, go to **⋯** > **Settings** > **Content Settings** > **Web Inspector** and turn it **On**. Then close and reopen Chrome. The setting stays on for later sessions.
+
+### What to expect
+
+- **Image fit:** the whole image is shown, not cropped, in the page's orientation. Empty space is padded. For face or liveness steps, use a tightly cropped portrait image so the face fills the frame.
+- **Permission prompt:** the camera permission prompt usually does not appear while injection is on.
+- **Android in-app web pages:** until the first image is uploaded, the page shows the real camera. The first upload switches it to the image live.
+
+### Troubleshooting
+
+| Issue | Cause | Fix |
+|---|---|---|
+| The page still shows the real camera | The camera was opened before the image was uploaded. | Reload the page or reopen the camera step. |
+| Upload fails on iOS Chrome | Chrome's Web Inspector setting is off (private devices). | [Turn on Web Inspector](#ios-chrome-turn-on-web-inspector). |
+| Injected image disappears, or upload fails on iOS | Safari DevTools is open in the session. | Close DevTools, then upload the image again. |
+| Upload fails on iOS | No browser tab is open. | Open a tab, then upload. |
+| Web pages inside an Android app show the real camera | The app was uploaded before this feature was released. | Upload the app again. |
+
+On iOS, a failed upload currently shows a generic error message. Use the table above to find the cause.
+
+For automated tests on mobile browsers, see [Camera Image Injection](/support/docs/camera-image-injection/#image-injection-on-mobile-browsers-and-in-app-web-pages).
