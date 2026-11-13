@@ -86,6 +86,8 @@ Since 0.1.17, a failed result shows a **Why it failed** card, and an unverifiabl
 
 Since 0.1.18, the section is headed **Failure clusters analysis** and lists clusters in order: CL-01, CL-02, and so on. A passing result that an attack compromised gets a **Why it was compromised** card with the attack's evidence. An unverifiable result that is in no cluster still shows **Why it couldn't be verified**, with a sentence that says what to do. On a result's card, **See this cluster on the run page** opens that cluster on the run's page. When a remedy contains code blocks, its copy button copies only the code.
 
+Since 0.1.20, a run explains its failed and compromised clusters unless it was made with `--no-rca`, so their cards show a cause and remedy without `--rca`. When a cluster has no cause, the local page gives the `rook report` command that explains it; the hosted page no longer shows a hint.
+
 This view can show evidence before upload, including a local `--test` run. The redesigned viewer refreshes when workspace records change. The CommerceCare example separates an unmet response requirement from missing tool/state evidence; the hosted triage example below is a different run. An absent verdict or file means it was not recorded or is unavailable; do not turn that absence into a pass. See [local navigation and files](/support/docs/rook-web-ui/#local-results).
 
 ### In the Hosted Web UI
@@ -196,7 +198,7 @@ sync publishes project definitions; runs sync reconciles finished runs with outs
 
 Before calling a change a regression, compare scenario definitions, profile revisions, selected phases, and coverage. Repeat unchanged cases when investigating nondeterminism.
 
-Use rook report &lt;run-id&gt; --rca or rook run --rca for failure-cluster investigation. RCA spends credits and provides an evidence-grounded hypothesis—not a verified fix. Reproduce the issue before changing the agent.
+Since 0.1.20, rook run explains its failed and compromised clusters by default; --no-rca skips that. Use rook report &lt;run-id&gt; --rca to explain a saved run, including its **Unable to Verify** results. RCA spends credits and provides an evidence-grounded hypothesis—not a verified fix. Reproduce the issue before changing the agent.
 
 ## Share Evidence Safely
 
