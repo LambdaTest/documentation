@@ -192,6 +192,8 @@ Ready-to-run examples to get you started fast.
   </div>
 </div>
 
+Prefer a walkthrough? Read the [step-by-step Gemini Computer Use guide](https://www.testmuai.com/blog/gemini-computer-use-cloud-browser/).
+
 ## Resources
 ***
 
