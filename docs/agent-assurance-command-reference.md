@@ -101,7 +101,7 @@ Using Claude Code or another coding assistant? Describe your goal in chat with t
 login → project → explore → agent → profile add → generate → scenarios → sync → run → ui
 ```
 
-Follow the [tested quickstart](/support/docs/agent-assurance-quickstart/) for a runnable sample. A normal timeline run needs sync first; `run --test` deliberately stays local.
+Follow the [tested quickstart](/support/docs/agent-assurance-quickstart/) for a runnable sample. A normal timeline run needs sync first; `run --test` deliberately stays off the timeline and keeps its evidence local.
 
 ## Discover Syntax From the CLI
 
@@ -194,7 +194,7 @@ The guide covers this sequence:
 login → project → explore → agent → generate → profile → sync → run
 ~~~
 
-A normal timeline run requires an upstream project version, so the guide puts <code>sync</code> before <code>run</code>. In a new project, synchronize the reviewed tree before the first normal run; use <code>run --test</code> only when the draft run should stay local.
+A normal timeline run requires an upstream project version, so the guide puts <code>sync</code> before <code>run</code>. In a new project, synchronize the reviewed tree before the first normal run; use <code>run --test</code> only when the draft run should stay off the shared timeline.
 
 The guide also lists the commands that spend credits (<code>explore</code>, <code>generate</code>, <code>profile add</code>, <code>profile fix</code>, <code>run</code>, <code>ask</code>, and <code>report --rca</code>), where local files live, what leaves the machine, and how to inspect status at any point. It reads command metadata and state; it does not invoke the target or spend credits.
 
@@ -843,7 +843,8 @@ The shell form is <code>rook run</code> with the same options.
 | <code>--test</code> | Run the current tree without placing the result on the shared project timeline. |
 | <code>--run &lt;id&gt;</code> | Continue that same run in place with the phases selected by <code>--phases</code>. |
 | <code>--resume &lt;id&gt;</code> | Carry compatible completed work forward from an earlier run. |
-| <code>--rca</code> | Explain failure clusters and what to change; this spends additional credits. |
+| <code>--rca</code> | Also explain **Unable to Verify** results. Since 0.1.20, a run explains its failure clusters and what to change by default; this spends additional credits. |
+| <code>--no-rca</code> | Since 0.1.20, don't explain why the failures failed, and spend no credits on it. |
 | <code>--allow &lt;rule&gt;</code> | Pre-authorize one exact tool rule for this launch. Repeatable. |
 | <code>--json</code> | Return a JSON outcome on stdout; progress goes to stderr. |
 | <code>--verbose</code> | Show tool activity and credits as work happens. |
@@ -971,7 +972,7 @@ Inspect the report's <code>clusters</code> and any files under the run's <code>r
 
 Preserve **Pass**, **Fail**, and **Unable to Verify** as recorded. RCA does not turn an unverifiable result into a pass or establish that a proposed fix works. A previously explained, matching agent version may reuse its explanation; a changed or unknown version can require fresh paid analysis. Do not repeatedly request RCA to probe compatibility.
 
-To include RCA with a new, already approved scenario run, add <code>--rca</code> to that run's explicit selection. Unlike report-only analysis, that also invokes the target. See [run selection](#run) before approving it.
+Since 0.1.20, a new scenario run includes RCA for its failed and compromised clusters by default. Add <code>--no-rca</code> to that run's explicit selection to skip it, or <code>--rca</code> to also explain **Unable to Verify** results. Unlike report-only analysis, a run also invokes the target. See [run selection](#run) before approving it.
 
 #### Automation and Hosted Review {#rook-report-automation-and-hosted-review}
 
@@ -1216,7 +1217,7 @@ In the TUI, choosing **update now** at the startup notice or typing <code>/updat
 
 If you previously chose “never ask again” in the TUI update notice, run <code>/update auto</code> to re-enable automatic notices.
 
-The latest public release checked on November 9, 2026 is [0.1.18](https://github.com/LambdaTest/rook/releases/tag/v0.1.18). Use the installed command's help for version-specific options. If an npm 0.1.1 or 0.1.2 install cannot update, follow the [public-registry repair command](/support/docs/rook-installation/#repair-an-npm-011-or-012-installation). Windows users can follow [PowerShell setup and upgrades](/support/docs/rook-installation/#windows).
+The latest public release checked on November 13, 2026 is [0.1.20](https://github.com/LambdaTest/rook/releases/tag/v0.1.20). Use the installed command's help for version-specific options. If an npm 0.1.1 or 0.1.2 install cannot update, follow the [public-registry repair command](/support/docs/rook-installation/#repair-an-npm-011-or-012-installation). Windows users can follow [PowerShell setup and upgrades](/support/docs/rook-installation/#windows).
 
 ## Export Diagnostic Logs {#export}
 

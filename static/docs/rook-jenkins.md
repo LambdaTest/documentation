@@ -91,7 +91,7 @@ Unable to Verify remains its own verdict even when it blocks a release. The publ
 
 ## Add the Jenkinsfile
 
-Commit this at your repository root beside the reviewed definitions and `ci/rook-ci.sh`. [Download the Jenkinsfile](/support/resources/rook/Jenkinsfile).
+Commit this at your repository root beside the reviewed definitions and `ci/rook-ci.sh`. [Download the Jenkinsfile](/support/resources/rook/Jenkinsfile.groovy) and save it as `Jenkinsfile`.
 
 ```groovy
 pipeline {
@@ -128,7 +128,7 @@ export ROOK_HOME="$job_temp/home"
 export ROOK_RUN_NAME="jenkins-$BUILD_NUMBER"
 curl -fsSL https://raw.githubusercontent.com/LambdaTest/rook/main/install.sh \
 -o "$job_temp/install-rook.sh"
-bash "$job_temp/install-rook.sh" --version 0.1.18 --dir "$job_temp/bin"
+bash "$job_temp/install-rook.sh" --version 0.1.20 --dir "$job_temp/bin"
 export PATH="$job_temp/bin:$PATH"
 bash ci/rook-ci.sh
 '''
