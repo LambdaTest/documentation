@@ -166,6 +166,8 @@ Once you toggle the `Disable App Resigning` option, your application's certifica
 
 <img loading="lazy" src={require('../assets/images/entitlements/disableappresign.png').default} alt="monday integration" width="626" height="439" className="doc_img"/>
 
+Re-signed builds can lose universal link handoff; see [how to test universal links on real iPhones](https://www.testmuai.com/blog/test-universal-links-ios/).
+
 
 ## Disabling Re-Signing In App Automation
 ***
