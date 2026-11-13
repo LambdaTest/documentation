@@ -103,12 +103,8 @@ import VerifiedTag from '@site/src/component/verifiedTag';
 
 Customize your testing experience on <BrandName /> by selecting the appropriate Appium version for your tests on real devices. <BrandName /> offers flexibility in choosing the Appium version to meet your testing requirements. By default, the suitable Appium version is selected based on the operating system (OS) when running tests. However, you can explicitly specify the  version using the `appiumVersion` capability in your test scripts.
 
-:::info
-- We also provide Support for Appium 3.5.2 on following versions
-  - **Android Devices:** 13, 15, 16
-  - **iOS Devices:** 16, 17, 18, 26
-:::
-
+## Appium Version Configuration for Real Devices
+---
 
 ## Appium Version Configuration for Real Devices
 To configure the Appium version for your tests on <BrandName />, use the `appiumVersion` capability in your test scripts. Below is a table of supported Appium versions for different platforms:
@@ -117,7 +113,7 @@ To configure the Appium version for your tests on <BrandName />, use the `appium
 |-------------------|--------------------|-----------------|----------------|
 | Android (All) | 1.21.0, 1.22.0, 1.22.3, 2.0.0, 2.1.3, 2.2.1, 2.3.0, 2.4.1, 2.5.4, 2.6.0, 2.10.3, 2.11.2, 2.11.4, 2.12.1, 3.0.2, 3.5.2 | 2.2.1 | 2.3.0 |
 | iOS (12, 13, 14) | 1.22.3, 2.0.0, 2.1.3, 2.2.1 | 2.2.1 | 2.2.1 |
-| iOS (15, 16, 17, 18) | 1.22.3, 2.0.0, 2.1.3, 2.2.1, 2.3.0, 2.4.1, 2.5.4, 2.6.0, 2.10.3, 2.11.2, 2.11.4, 2.12.1, 3.0.2, 3.5.2 | 2.2.1 | 2.3.0 |
+| iOS (15, 16, 17, 18, 26, 27) | 1.22.3, 2.0.0, 2.1.3, 2.2.1, 2.3.0, 2.4.1, 2.5.4, 2.6.0, 2.10.3, 2.11.2, 2.11.4, 2.12.1, 3.0.2, 3.5.2 | 2.2.1 | 2.3.0 |
 | fireos | 1.21.0, 1.22.0, 1.22.3, 2.0.0, 2.1.3, 2.2.1, 2.3.0 | 2.2.1 | 2.3.0 |
 | tvos | 1.22.3, 2.2.1 | 1.22.3 | 1.22.3 |
 
