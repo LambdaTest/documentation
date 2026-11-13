@@ -4785,6 +4785,11 @@ module.exports = {
       },
       {
         type: "doc",
+        label: "Scoped API Tokens",
+        id: "scoped-api-tokens",
+      },
+      {
+        type: "doc",
         label: "Tunnel Security",
         id: "tunnel-security",
       },
