@@ -2987,7 +2987,6 @@ module.exports = {
           { type: "doc", id: "migrate-playwright-tests" },
           { type: "doc", id: "playwright-test-execution-setup" },
           { type: "doc", id: "playwright-bundled-browser-support" },
-          { type: "doc", id: "playwright-caps" },
         ],
       },
       {
