@@ -311,5 +311,5 @@ Utilize the parameters to run your test cases with different data sets and input
 
 ## Video Explanation
 <video class="right-side" width="100%" controls id="vid">
-<source src= {require('../assets/images/kane-ai/features/parameters/output.mp4').default} type="video/mp4" />
+<source src= {require('../assets/images/kane-ai/features/parameters/kaneai-using-parameters-walkthrough.mp4').default} type="video/mp4" />
 </video>
