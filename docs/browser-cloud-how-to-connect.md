@@ -79,14 +79,14 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "name": "What you need to get started",
         "codeSampleType": "code snippet",
         "programmingLanguage": "Shell",
-        "text": "npm install @testmuai/testmu-cloud"
+        "text": "npm install @testmuai/browser-cloud"
       },
       {
         "@type": "SoftwareSourceCode",
         "name": "Initialize the Client",
         "codeSampleType": "code snippet",
         "programmingLanguage": "TypeScript",
-        "text": "import { Browser } from '@testmuai/testmu-cloud';\nconst client = new Browser();"
+        "text": "import { Browser } from '@testmuai/browser-cloud';\nconst client = new Browser();"
       }
     ],
     "dateModified": "2026-03-26T15:05:31+05:30"
@@ -112,7 +112,7 @@ profiles, files, extensions, and tunnels directly from your Node.js application.
 - Install the SDK:
 
 ```bash
-npm install @testmuai/testmu-cloud
+npm install @testmuai/browser-cloud
 ```
 
 ### Initialize the Client
@@ -123,7 +123,7 @@ upload files, load extensions, and open tunnels - all through a single client
 instance.
 
 ```typescript
-import { Browser } from '@testmuai/testmu-cloud';
+import { Browser } from '@testmuai/browser-cloud';
 const client = new Browser();
 ```
 
