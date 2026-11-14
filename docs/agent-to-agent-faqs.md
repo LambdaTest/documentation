@@ -104,7 +104,7 @@ The platform uses a hybrid stack that combines third-party large language models
 
 ### Agent Types You Can Test
 
-Agent Testing covers [chat](/support/docs/chat-agent/), [voice](/support/docs/voice-agent/), [video](/support/docs/video-agent/), [phone caller](/support/docs/phone-agent/) (inbound or outbound), IVR, and [image analyzer](/support/docs/image-analyzer/) agents. You choose the type under **Agent Type** when you create the agent. To test autonomous agents that take real actions through tools, APIs, and files, use [Agent Assurance](/support/docs/agent-assurance-overview/), a separate product that runs from the rook CLI.
+Agent Testing covers [chat](/support/docs/chat-agent/), [voice](/support/docs/voice-agent/), [video](/support/docs/video-agent/), [phone caller](/support/docs/phone-agent/) (inbound or outbound), [IVR](/support/docs/ivr-agent/), and [image analyzer](/support/docs/image-analyzer/) agents. You choose the type under **Agent Type** when you create the agent. To test autonomous agents that take real actions through tools, APIs, and files, use [Agent Assurance](/support/docs/agent-assurance-overview/), a separate product that runs from the rook CLI.
 
 ### Connecting an Agent Without Code Changes
 
@@ -116,7 +116,7 @@ Yes. Use the HyperExecute secure tunnel, and the agent does not need a public-fa
 
 ### Scenarios Generated From a Requirements Document
 
-The platform generates 60 to 100+ scenarios per workflow by default. You can increase that by adding more persona types, expanding focus areas, or adding scenarios manually.
+By default, the platform sets the scenario count automatically from the complexity of your documents. To change it, choose 25, 50, 100, or 200 scenarios, or enter a custom count, when you generate them.
 
 ### How Long a Full Evaluation Takes
 

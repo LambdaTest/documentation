@@ -248,7 +248,7 @@ To connect your agent, provide the following. No code changes or infrastructure 
 | **Additional Headers** | Optional | Any extra headers your agent requires, such as a session token, API version, workspace ID, or custom tracking header. Provide as many as needed. |
 | **Request Body Format** | Optional | If your agent expects a different body structure (field names, extra fields), provide it and TestMu AI matches it exactly. |
 
-If your agent needs a login or a session before it accepts messages, configure an endpoint profile with **Suite Setup**, **Scenario Setup**, and **Chat** phases. See the [endpoint profile options](/support/docs/chat-agent/#what-the-chat-agent-workflow-includes).
+If your agent needs a login or a session before it accepts messages, configure an endpoint profile with **Suite Setup**, **Scenario Setup**, and **Chat** phases. See the [endpoint profile options](/support/docs/chat-agent/#chat-agent-testing-features).
 
 ## How the Platform Runs a Chat Evaluation
 

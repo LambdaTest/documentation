@@ -95,7 +95,7 @@ This page lists what each Agent Testing agent type supports and how its results 
 | **Video** | Conversational video agents | A simulated participant joins your agent's session from its web URL | [Video agent testing](/support/docs/video-agent/) |
 | **Phone Caller Inbound** | Phone agents that answer calls | A real call to your agent's phone number or SIP trunk | [Inbound phone agents](/support/docs/phone-agent/#inbound-phone-agents) |
 | **Phone Caller Outbound** | Phone agents that place calls | Your agent calls a number reserved from an outbound pool | [Outbound phone agents](/support/docs/phone-agent/#outbound-phone-agents) |
-| **IVR** | Scripted IVR menus | A real call that navigates the menu with speech and keypad tones | [Twilio IVR testing](/support/docs/test-twilio-ivr/) |
+| **IVR** | Scripted IVR menus | A real call that navigates the menu with speech and keypad tones | [IVR agent testing](/support/docs/ivr-agent/) |
 | **Image Analyzer** | AI-generated images | Images uploaded or linked with the prompt that generated them | [Image analyzer testing](/support/docs/image-analyzer/) |
 
 Chat agents run in **Pre mode** (scenario suites) or **Post mode** (grading uploaded production transcripts). Phone caller agents switch between **Pre Analysis** (live test calls) and **Post Analysis** (uploaded call recordings).
@@ -108,7 +108,6 @@ Chat agents run in **Pre mode** (scenario suites) or **Post mode** (grading uplo
 |---|:-:|:-:|:-:|:-:|:-:|
 | Workflow-based generation from documents | ✅ | ✅ | ❌ | ❌ | ❌ |
 | AI scenario generation | ✅ | ✅ | ✅ (up to 20) | ✅ (up to 7) | ❌ |
-| Manual scenario creation | ✅ | ✅ | ✅ | ✅ | ❌ |
 | Personas and validation criteria | ✅ | ✅ | ✅ | ✅ | ❌ |
 | Test suites and test profiles | ✅ | ✅ | ✅ | ✅ | ❌ |
 | Endpoint profiles and credentials vault | ✅ | ✅ | ❌ | ❌ | ❌ |
@@ -138,7 +137,7 @@ These features work the same way on every agent type marked for them in [Feature
 
 ### Scenarios, Personas, and Validation Criteria
 
-- **Scenario generation.** Generate scenarios with AI from your agent prompt and context, or create one manually with a title, description, persona, and instructions. AI writes the validation criteria from your description, and you can edit generated scenarios and criteria afterwards.
+- **Scenario generation.** AI generates scenarios from your agent prompt and context, each with its own validation criteria, and you can edit scenarios and criteria afterwards.
 - **Scenario types.** Happy Path, Negative, Edge Case, and Red Team. Chat adds Integration, and you can filter chat scenarios by all five types.
 - **Personas.** Pick from the pre-built persona library or create your own, then assign personas to scenarios.
 - **Validation criteria.** Pass or fail checks per scenario, such as "Agent must mention the return policy". Each criterion returns Pass, Fail, or Unable to Verify, with evidence and a High, Medium, or Low confidence level, and results roll up into a compliance percentage.
@@ -159,7 +158,7 @@ Chat agents face a live adversarial attacker across seven attack types. Phone ca
 
 ### Go-Live Assessment
 
-The Go-Live assessment rolls all your test results into a production readiness verdict for chat, voice, and phone caller agents.
+The Go-Live assessment rolls all your test results into a production readiness verdict for chat, voice, phone caller, and IVR agents.
 
 | Verdict | Score | Meaning |
 |---|---|---|
@@ -249,10 +248,12 @@ Inbound and outbound phone agents are covered in full on [Phone Agent Testing](/
 ---
 
 - **Cyara import.** Upload a Cyara XML export, and every test case becomes a callable IVR scenario, with its prompts, keypad steps, shared blocks, dial number, and test data.
-- **Workflow View.** See the IVR flow as a map, with menu options the call did not take shown as dashed "not taken" branches. The call-flow map builds in about a minute for a large menu.
+- **IVR System Map.** See every menu, branch, and dead-end in the IVR as a map, with menu options that calls did not take shown as dashed "not taken" branches. The map builds in about a minute for a large menu.
 - **Email alerts** for failed runs. See [Insights and Notifications](#insights-and-notifications).
+- **Performance testing** with concurrent calls, from the **Performance Testing** tab.
+- **Insights, Go-Live assessment, and scheduled runs** work as described in [Shared Features](#shared-features).
 
-See [Twilio IVR testing](/support/docs/test-twilio-ivr/) for a full walkthrough.
+See [IVR agent testing](/support/docs/ivr-agent/) for a full walkthrough.
 
 ## Image Analyzer Features
 

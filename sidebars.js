@@ -1130,8 +1130,9 @@ module.exports = {
         items: [
           { type: "doc", label: "Chat Agent Testing", id: "chat-agent" },
           { type: "doc", label: "Voice Agent Testing", id: "voice-agent" },
-          { type: "doc", label: "Video Agent Testing", id: "video-agent" },
           { type: "doc", label: "Phone Agent Testing", id: "phone-agent" },
+          { type: "doc", label: "IVR Agent Testing", id: "ivr-agent" },
+          { type: "doc", label: "Video Agent Testing", id: "video-agent" },
           { type: "doc", label: "Image Analyzer Testing", id: "image-analyzer" },
         ],
       },

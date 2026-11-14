@@ -176,6 +176,10 @@ Go deeper into the workflow and metrics for your specific agent type.
     <div style={{fontWeight:700,marginBottom:'6px',color:'var(--ifm-heading-color)'}}>Phone Agent Testing</div>
     <div style={{fontSize:'14px',color:'var(--ifm-color-emphasis-700)',lineHeight:1.5}}>Inbound and outbound phone agents, tested with live calls or production recordings.</div>
   </a>
+  <a href="/support/docs/ivr-agent/" style={{flex:'1 1 260px',minWidth:'240px',border:'1px solid #e2e8f0',borderRadius:'12px',padding:'20px 22px',textDecoration:'none',color:'inherit',display:'block'}}>
+    <div style={{fontWeight:700,marginBottom:'6px',color:'var(--ifm-heading-color)'}}>IVR Agent Testing</div>
+    <div style={{fontSize:'14px',color:'var(--ifm-color-emphasis-700)',lineHeight:1.5}}>Scripted phone menus, mapped and walked branch by branch with keypad tones and speech.</div>
+  </a>
   <a href="/support/docs/image-analyzer/" style={{flex:'1 1 260px',minWidth:'240px',border:'1px solid #e2e8f0',borderRadius:'12px',padding:'20px 22px',textDecoration:'none',color:'inherit',display:'block'}}>
     <div style={{fontWeight:700,marginBottom:'6px',color:'var(--ifm-heading-color)'}}>Image Analyzer Testing</div>
     <div style={{fontSize:'14px',color:'var(--ifm-color-emphasis-700)',lineHeight:1.5}}>Score generated images against a prompt, brand rules, and technical specs.</div>

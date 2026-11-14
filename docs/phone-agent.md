@@ -93,6 +93,8 @@ A phone agent is an AI voice agent that talks to people over the telephone netwo
 - **Real-time speech.** The simulated caller speaks and listens in real time, with the voice, accent, and background noise you choose. Pauses, interruptions, and silences are measured the way a caller experiences them.
 - **IVR handling.** Keypad tones (DTMF) are detected and shown in the transcript, so you can test menu navigation.
 
+If your phone line is a scripted IVR menu that only accepts set keypad or spoken options, test it as an [IVR agent](/support/docs/ivr-agent/) instead.
+
 ## Inbound vs. Outbound
 
 ---
@@ -116,7 +118,7 @@ These features apply to inbound and outbound agents, and the walkthroughs below 
 - **Caller voices.** Choose from 200+ voices across providers, with different accents and speech speeds, and preview a voice before you pick it.
 - **Background noise.** Add one of 15 presets, such as café, street, call center, or poor cellular connection, to test your agent in realistic conditions.
 - **Call timing.** **Turn Wait Time** (0.5 to 5 seconds) is how long the caller waits after your agent stops speaking before it replies. Raise it if your agent pauses between sentences, so the caller doesn't cut in. **End call if silent for** (30 to 180 seconds) ends a call that goes quiet, and a maximum call duration (60 to 1800 seconds) stops runaway calls. You can also choose whether the caller or your agent speaks first.
-- **Scenario types.** When you generate scenarios, choose **Happy Path** for normal flows, **Negative** for errors and invalid inputs, **Edge Case** for boundary values and unusual conditions, or **Red Team** for security attacks and adversarial inputs. You can also create a scenario manually with a name, a description, and the expected output. Scenario languages include Japanese and Portuguese.
+- **Scenario types.** When you generate scenarios, choose **Happy Path** for normal flows, **Negative** for errors and invalid inputs, **Edge Case** for boundary values and unusual conditions, or **Red Team** for security attacks and adversarial inputs. Scenario languages include Japanese and Portuguese.
 - **Red teaming.** Red team scenarios are generated from your agent's own prompt. The platform identifies the rules your agent must follow, attacks those rules, and prioritizes rules not yet covered, and the target list refreshes when the prompt changes. Findings appear in the Red Team section of the suite's **Insights** page, and each one links to the moment in the call recording.
 - **Pronunciation assessment.** Set an accent on the agent and switch the check on per scenario to see mispronounced words on the finished call.
 - **Personas.** A persona sets the type of caller the simulated caller plays. Choose an available persona or create your own.
@@ -288,6 +290,6 @@ For what each metric measures, its default targets, and how to set up custom met
 
 - See how to [load test an inbound phone agent](/support/docs/phone-agent-performance-testing/) with concurrent calls.
 - See how to [run phone agent tests from the terminal](/support/docs/agent-testing-cli/) with the CLI.
-- See how to [test a Twilio IVR](/support/docs/test-twilio-ivr/).
+- See how to [test a scripted IVR menu](/support/docs/ivr-agent/), including [Twilio IVRs](/support/docs/test-twilio-ivr/).
 - See how to connect [ElevenLabs](/support/docs/test-elevenlabs-agents/#elevenlabs-integration), [Retell](/support/docs/test-retell-agents/#retell-integration), [Vapi](/support/docs/test-vapi-agents/#vapi-integration), or [Salesforce Agentforce](/support/docs/test-agentforce-agents/#agentforce-integration) agents for tool call validation.
 - See how the platform [runs an evaluation end to end](/support/docs/architecture-and-how-evaluation-works/).
