@@ -92,23 +92,9 @@ Phone testing runs in two modes, both scored with the same 42 metrics.
 
 **Live test calls.** The platform places a real call and drives the conversation with a simulated caller. During the call it tracks duration in real time, produces a speaker-identified transcript, and detects DTMF tones for menu navigation.
 
-**Recording analysis.** Upload batches of recorded production calls (MP3 or WAV) and the platform scores them with the same metrics, so you can monitor real production quality without placing new calls.
+If your phone line is a scripted IVR menu that only accepts set keypad or spoken options, test it as an [IVR agent](/support/docs/ivr-agent/) instead.
 
-**Voice and noise simulation.** To match production conditions, the platform simulates the voice and acoustic environment per scenario:
-
-- **Voice profiles:** 200+ voices across providers, with accents and speech speeds.
-- **Background noise:** 15 presets such as café, street, call center, and poor cellular connection.
-- **Response timing:** a configurable delay from 0.5 to 5.0 seconds, and a maximum call duration from 60 to 1800 seconds.
-
-**Shared capabilities.** Phone agents also support test suites, agent profiles, a Green, Yellow, or Red go-live assessment, and cron-based scheduled runs. See the [inbound](/support/docs/inbound-phone-agent/) and [outbound](/support/docs/outbound-phone-agent/) guides for the direction-specific workflow.
-
-**Custom metrics.** Define plain-language checks for your own business rules, such as whether the agent asked for a PIN before changing an address. Each check is graded on every call of the scenarios you attach it to. See [Custom Metrics](#custom-metrics).
-
-**Voice platform integrations.** If your agent runs on ElevenLabs, Retell, or Vapi, connect it in the **Integrations** tab to import its prompt and tool catalog and to see which tools it actually called on each test call. See the integration setup for [ElevenLabs](/support/docs/test-elevenlabs-agents/#elevenlabs-integration), [Retell](/support/docs/test-retell-agents/#retell-integration), or [Vapi](/support/docs/test-vapi-agents/#vapi-integration). For Salesforce Agentforce voice agents, see the [Agentforce integration](/support/docs/test-agentforce-agents/#agentforce-integration).
-
-**Performance testing.** Hold a target number of concurrent calls to your agent for a set period and measure load delivery, reliability, and response latency under load. See [Performance Testing](#performance-testing).
-
-## Metrics
+## Inbound vs. Outbound
 
 ---
 
@@ -498,7 +484,20 @@ These safeguards apply to every custom metric.
 
 Performance testing on the TestMu AI Agent Testing Platform measures how an AI phone agent behaves when it handles many calls at the same time. You run a performance test on a phone suite: TestMu AI uses the suite's scenarios to place real phone calls to your agent, holds a target number of concurrent calls for a set period, and reports on load delivery, reliability, and responsiveness. The run page shows the test's current phase live. Because the test places calls to your agent, it applies to agents that answer calls.
 
-### When to Use Performance Testing
+- **Pre Analysis and Post Analysis.** Phone testing runs in two modes, which you switch with the analysis dropdown. Pre Analysis places live test calls, and Post Analysis scores recordings of your production calls. See [Analyze Production Calls](#analyze-production-calls-post-analysis).
+- **Caller voices.** Choose from 200+ voices across providers, with different accents and speech speeds, and preview a voice before you pick it.
+- **Background noise.** Add one of 15 presets, such as café, street, call center, or poor cellular connection, to test your agent in realistic conditions.
+- **Call timing.** **Turn Wait Time** (0.5 to 5 seconds) is how long the caller waits after your agent stops speaking before it replies. Raise it if your agent pauses between sentences, so the caller doesn't cut in. **End call if silent for** (30 to 180 seconds) ends a call that goes quiet, and a maximum call duration (60 to 1800 seconds) stops runaway calls. You can also choose whether the caller or your agent speaks first.
+- **Scenario types.** When you generate scenarios, choose **Happy Path** for normal flows, **Negative** for errors and invalid inputs, **Edge Case** for boundary values and unusual conditions, or **Red Team** for security attacks and adversarial inputs. Scenario languages include Japanese and Portuguese.
+- **Red teaming.** Red team scenarios are generated from your agent's own prompt. The platform identifies the rules your agent must follow, attacks those rules, and prioritizes rules not yet covered, and the target list refreshes when the prompt changes. Findings appear in the Red Team section of the suite's **Insights** page, and each one links to the moment in the call recording.
+- **Pronunciation assessment.** Set an accent on the agent and switch the check on per scenario to see mispronounced words on the finished call.
+- **Personas.** A persona sets the type of caller the simulated caller plays. Choose an available persona or create your own.
+- **Validation criteria.** Each scenario lists the outcomes a call must reach, such as "agent confirms the new appointment date". Every call is checked against them on the **Validation Results** tab.
+- **Test profiles.** A test profile holds the data a call runs with, such as a customer ID or a caller name, so you can run data-driven calls.
+- **Agent profiles.** For inbound tests, an agent profile is a reusable caller persona with a name, phone number, voice, and background noise, kept in a library for your whole organization. Each profile can be switched between active and inactive.
+- **Live call monitoring.** Follow each call's status and duration while it runs, and end a call in progress.
+- **Recordings and transcripts.** Every call produces a recording and a speaker-identified transcript. Keypad tones (DTMF) appear in the transcript, so you can test IVR menu navigation. Click anywhere on the waveform to jump to that moment, or drag to scrub.
+- **Voice platform integrations.** If your agent runs on ElevenLabs, Retell, or Vapi, connect it on the **Integrations** tab to import its prompt and tool catalog, and see whether your agent called each expected tool on every test call. See the setup for [ElevenLabs](/support/docs/test-elevenlabs-agents/#elevenlabs-integration), [Retell](/support/docs/test-retell-agents/#retell-integration), or [Vapi](/support/docs/test-vapi-agents/#vapi-integration). Salesforce Agentforce voice agents connect the same way: the prompt syncs, you pick Agentforce tools in the scenario editor, and the tool calls made on each call are verified. See the [Agentforce integration](/support/docs/test-agentforce-agents/#agentforce-integration).
 
 Choose the test that matches what you want to check.
 
@@ -699,7 +698,8 @@ Calls placed during a performance test are charged as follows.
 
 ---
 
-- See how to [test an inbound phone agent](/support/docs/inbound-phone-agent/) step by step.
-- See how to [test an outbound phone agent](/support/docs/outbound-phone-agent/) step by step.
+- See how to [load test an inbound phone agent](/support/docs/phone-agent-performance-testing/) with concurrent calls.
+- See how to [run phone agent tests from the terminal](/support/docs/agent-testing-cli/) with the CLI.
+- See how to [test a scripted IVR menu](/support/docs/ivr-agent/), including [Twilio IVRs](/support/docs/test-twilio-ivr/).
 - See how to connect [ElevenLabs](/support/docs/test-elevenlabs-agents/#elevenlabs-integration), [Retell](/support/docs/test-retell-agents/#retell-integration), [Vapi](/support/docs/test-vapi-agents/#vapi-integration), or [Salesforce Agentforce](/support/docs/test-agentforce-agents/#agentforce-integration) agents for tool call validation.
 - See how the platform [runs an evaluation end to end](/support/docs/architecture-and-how-evaluation-works/).
