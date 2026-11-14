@@ -202,7 +202,7 @@ The guide also lists the commands that spend credits (<code>explore</code>, <cod
 
 Use <code>/help</code> to list the current command surface or inspect one command in full.
 
-<img loading="lazy" src={require('../assets/images/rook/commands/rook-command-help.png').default} alt="Rook help command help" width="2200" height="2121" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/commands/rook-command-help.webp').default} alt="Rook help command help" width="1100" height="1060" className="doc_img"/>
 
 #### Syntax {#help-syntax}
 
