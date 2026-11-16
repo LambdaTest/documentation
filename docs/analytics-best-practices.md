@@ -131,10 +131,10 @@ Continuous improvement ensures dashboards remain relevant and actionable. Sharin
 ## 5. Troubleshooting and Error Analysis
 
 - **Utilize Error Insights:** Use error-focused widgets and templates to quickly identify, analyze, and resolve test failures. Track error trends across browsers, OS, and devices.
-- **Monitor Test Health:** Use health snapshot and status ratio widgets to assess test reliability and flakiness. Prioritize fixing frequently failing or flaky tests.
+- **Monitor Test Health:** Use stability snapshot and status ratio widgets to assess test reliability and flakiness. Prioritize fixing frequently failing or flaky tests.
 
 **Use Case:**
-A QA engineer sees a sudden increase in test failures. By using error insights and health snapshot widgets, they quickly pinpoint a new browser version as the cause and coordinate a fix.
+A QA engineer sees a sudden increase in test failures. By using error insights and stability snapshot widgets, they quickly pinpoint a new browser version as the cause and coordinate a fix.
 
 **How it helps:**
 Rapid error identification and analysis reduce downtime, improve test reliability, and speed up the feedback loop for development teams.

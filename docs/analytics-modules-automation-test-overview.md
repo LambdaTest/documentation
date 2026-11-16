@@ -77,11 +77,11 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 />
 The Test Overview module in <BrandName /> Analytics is a powerful tool that provides you with a comprehensive view of your test performance across various dimensions. By leveraging this module, you can gain valuable insights into test flakiness, total tests run, and test categorization by status and platform.
 
-## Test Health Snapshot
+## Test Stability Snapshot
 
 <img loading="lazy" src={require('../assets/images/analytics/test-overview-1.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
-The Test Health Snapshot widget enables you to quickly assess the flakiness or inconsistency of your tests executed on the <BrandName /> platform. This widget displays the count of unique test names and their consistency in test status over a specified duration.
+The Test Stability Snapshot widget enables you to quickly assess the flakiness or inconsistency of your tests executed on the <BrandName /> platform. This widget displays the count of unique test names and their consistency in test status over a specified duration.
 
 ### How It Works
 - The widget calculates the total number of unique test names executed on the platform.
@@ -91,11 +91,11 @@ The Test Health Snapshot widget enables you to quickly assess the flakiness or i
 ### Value Proposition
 By identifying inconsistent tests, you can focus your efforts on stabilizing your test suite, reducing flaky tests, and improving overall test reliability. This widget helps you prioritize your test maintenance tasks and ensures a more robust testing process.
 
-## Build Health Snapshot
+## Build Stability Snapshot
 
 <img loading="lazy" src={require('../assets/images/analytics/test-overview-2.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
-The Build Health Snapshot widget provides an overview of the performance and consistency of your builds created on the <BrandName /> platform. It displays the count of unique build names and their consistency in build status over a specified duration.
+The Build Stability Snapshot widget provides an overview of the performance and consistency of your builds created on the <BrandName /> platform. It displays the count of unique build names and their consistency in build status over a specified duration.
 
 ### How It Works
 - The widget calculates the total number of unique build names created on the platform.
