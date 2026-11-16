@@ -147,9 +147,10 @@ Selenium 4 and OpenTelemetry support lets you view the tracing of requests and e
 ---
 Use analytics widgets to track test health, trends, browser distribution, and error insights.
 
-### Test Case Health Snapshot 
+### Test Stability Snapshot
+---
 
-The Test Case Health Snapshot widget allows you to quickly analyze the flakiness of the tests executed on the platform. Track the performance of the tests by viewing the count of tests that are consistently passing or failing.
+The Test Stability Snapshot widget allows you to quickly analyze the flakiness of the tests executed on the platform. Track the performance of the tests by viewing the count of tests that are consistently passing or failing.
 
 ### Test Summary
 
