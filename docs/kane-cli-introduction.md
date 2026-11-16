@@ -93,7 +93,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
 
 - **Run tests from any terminal or IDE**: no test scripts, no selectors, no framework boilerplate
 - **Test the web and native mobile apps**: the default target is the desktop browser, and on macOS Apple Silicon you can point the same objective at an Android Emulator or iOS Simulator. See [Mobile Testing](/support/docs/kane-cli-mobile/)
-- **Integrate into CI/CD pipelines**: headless mode with structured JSON output and standard exit codes
+- **Integrate into CI/CD pipelines**: headless mode with structured JSON output and standard exit codes for [CLI testing](https://www.testmuai.com/cli-testing/)
 - **Use as a skill in AI coding agents**: Claude Code, Codex CLI, and Gemini CLI can invoke Kane CLI directly to test and verify UIs on your behalf
 
 <VerifiedTag value="Verified" />
