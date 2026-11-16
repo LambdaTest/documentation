@@ -1139,6 +1139,14 @@ module.exports = {
       },
       {
         type: "category",
+        label: "Features",
+        collapsed: true,
+        items: [
+          { type: "doc", label: "Performance Testing (Inbound)", id: "phone-agent-performance-testing" },
+        ],
+      },
+      {
+        type: "category",
         label: "Getting Started",
         collapsed: true,
         items: [
