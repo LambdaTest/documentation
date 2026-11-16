@@ -111,7 +111,7 @@ By using the Tests Summary Report, QA testers can gain valuable insights into th
 The following are the widgets added to this dashboard:
 
 - **Test Summary**: Displays the total number of tests, their statuses, and distribution.
-- **Test Case Health Snapshot**: Shows the health of test cases based on their pass, fail, or error statuses.
+- **Test Cases Stability Snapshot**: Shows the health of test cases based on their pass, fail, or error statuses.
 - **Test Browser**: Visualizes the distribution of tests across different browsers.
 - **Test OS**: Presents the distribution of tests across different operating systems.
 - **Test Device Coverage (Only App Automation)**: Illustrates the device coverage for app automation tests.
@@ -140,7 +140,7 @@ The following are the widgets added to this dashboard:
 - **Error Stats**: Shows statistics related to errors in test statues.
 - **Test Status Ratio**: Displays the ratio of error statuses in tests.
 - **Test Summary**: Provides a summary of tests with errors.
-- **Test Case Health Snapshot**: Displays the health of test cases with errors.
+- **Test Cases Stability Snapshot**: Displays the health of test cases with errors.
 - **Test Browser**: Visualizes the distribution of errors across different browsers.
 - **Test OS**: Illustrates the distribution of errors across different operating systems.
 
@@ -157,7 +157,7 @@ The following are the use cases for the template:
 
 The Resource Consumption and Concurrency usage template is designed to help QA testers monitor resource utilization effectively, analyze concurrency trends, and plan resource allocation. This template enables better resource management, ensuring optimal usage of available testing resources procured or to be planned for your upcoming budgets.
 
-The template includes widgets that visualize concurrency trends, test summaries, test case health snapshots, and test distribution across browsers and operating systems. These widgets provide a comprehensive view of resource consumption and parallel thread usage, helping testers make informed decisions about resource availability trends.
+The template includes widgets that visualize concurrency trends, test summaries, test case stability snapshots, and test distribution across browsers and operating systems. These widgets provide a comprehensive view of resource consumption and parallel thread usage, helping testers make informed decisions about resource availability trends.
 
 With the Resource Consumption and Concurrency usage template, QA testers can optimize their testing process by effectively managing resources and ensuring that critical releases have sufficient resources allocated. This leads to a more efficient testing process, cost savings, and improved product quality.
 
@@ -165,7 +165,7 @@ The following are the widgets added to this dashboard:
 
 - **Concurrency Trends:** Visualizes trends in resource consumption and parallel thread usage.
 - **Test Summary:** Displays the total number of tests and their distribution.
-- **Test Case Health Snapshot:** Shows the health of test cases based on their pass, fail, or error statuses.
+- **Test Cases Stability Snapshot:** Shows the health of test cases based on their pass, fail, or error statuses.
 - **Test Browser:** Presents the distribution of tests across different browsers.
 - **Test OS:** Illustrates the distribution of tests across different operating systems.
 
@@ -181,7 +181,7 @@ The following are the use cases for the template:
 
 The All Trends Report template is designed to enable QA Managers and testers to monitor and analyze trends in test performance, error statistics, and resource usage regularly. This template provides valuable insights to drive continuous improvement in the testing process.
 
-This template features widgets that display test summaries, test case health snapshots, test distribution across browsers and operating systems, test trends, error statistics, and concurrency trends. These widgets work together to provide a holistic view of the testing process, allowing QA managers and testers to identify patterns and trends easily.
+This template features widgets that display test summaries, test case stability snapshots, test distribution across browsers and operating systems, test trends, error statistics, and concurrency trends. These widgets work together to provide a holistic view of the testing process, allowing QA managers and testers to identify patterns and trends easily.
 
 By using the All Trends Report, QA testers can gain a better understanding of their testing process's overall performance and identify areas for improvement. These insights help drive continuous improvement, resulting in more efficient testing processes, quicker error resolutions and save time in preparing these reports.
 
@@ -189,7 +189,7 @@ The following are the widgets added to this dashboard:
 
 - **Concurrency Trends:** Visualizes trends in resource consumption and parallel thread usage.
 - **Test Summary:** Displays the total number of tests and their distribution.
-- **Test Case Health Snapshot:** Shows the health of test cases based on their pass, fail, or error statuses.
+- **Test Cases Stability Snapshot:** Shows the health of test cases based on their pass, fail, or error statuses.
 - **Test Browser:** Presents the distribution of tests across different browsers.
 - **Test OS:** Illustrates the distribution of tests across different operating systems.
 
@@ -209,7 +209,7 @@ With a collection of carefully selected widgets that display key metrics pertain
 
 The following are the widgets added to this dashboard:
 
-- **Test Case Health Snapshot**: Review the overall health of your test cases, enabling you to identify areas that require further attention or improvement.
+- **Test Cases Stability Snapshot**: Review the overall health of your test cases, enabling you to identify areas that require further attention or improvement.
 - **Test Browser**: Analyze the distribution of test executions across different browsers, ensuring comprehensive coverage and addressing compatibility issues.
 - **Test OS**: Gain insights into the testing distribution across various operating systems, helping you prioritize efforts and achieve better compatibility.
 - **Test Device Coverage (Only App Automation)**: Monitor device-specific testing coverage for mobile applications, ensuring seamless functionality across a wide range of devices.
