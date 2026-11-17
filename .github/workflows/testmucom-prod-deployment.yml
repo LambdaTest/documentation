@@ -66,11 +66,49 @@ jobs:
             --paths "/support/*"
           sleep 90
 
-      - name: Cloudflare Invalidation
+      # Cloudflare purges go through the org's central cf-purge.yml in
+      # LambdatestIncPrivate/lambda-deployment-manager, which holds the only
+      # Cloudflare token. The direct API call this step used to make fails with code 7003 (no zone id), and the step stayed green because curl ignored the reply.
+      # Needs the LT_USER_ACCESS_TOKEN_APP_ID variable and the
+      # LT_USER_ACCESS_TOKEN_PRIVATE_KEY secret; a failed purge fails the run.
+      - name: Mint a token for the central Cloudflare purge
+        id: cf-purge-token
+        uses: actions/create-github-app-token@fee1f7d63c2ff003460e3d139729b119787bc349 # v2.2.2
+        with:
+          app-id: ${{ vars.LT_USER_ACCESS_TOKEN_APP_ID }}
+          private-key: ${{ secrets.LT_USER_ACCESS_TOKEN_PRIVATE_KEY }}
+          owner: LambdatestIncPrivate
+          repositories: lambda-deployment-manager
+          permission-actions: write
+
+      - name: Purge Cloudflare (lambda-deployment-manager cf-purge.yml)
+        timeout-minutes: 10
+        env:
+          GH_TOKEN: ${{ steps.cf-purge-token.outputs.token }}
+          CF_ZONE: testmuai.com
+          CF_PREFIXES: www.testmuai.com/support/
+          CALLER: documentation-${{ github.run_id }}-${{ github.run_attempt }}-testmucom
         run: |
-          curl -X POST "https://api.cloudflare.com/client/v4/zones/${{ secrets.CLOUDFLARE_ZONE_ID }}/purge_cache" \
-            -H "X-Auth-Email: ${{ secrets.CF_ACCOUNT }}" \
-            -H "X-Auth-Key: ${{ secrets.CF_API_SECRET }}" \
-            -H "Content-Type: application/json" \
-            --data '{"hosts":["${{ secrets.PROD_WEBSITE_URL }}"] }'
-          sleep 60
+          set -euo pipefail
+          REPO=LambdatestIncPrivate/lambda-deployment-manager
+          SINCE=$(date -u -d '5 minutes ago' +%Y-%m-%dT%H:%M:%SZ)
+          gh workflow run cf-purge.yml --repo "$REPO" --ref main \
+            -f zone="$CF_ZONE" -f prefixes="$CF_PREFIXES" -f caller="$CALLER"
+          # A dispatch returns no run id; cf-purge.yml names its run "cf-purge · <caller> · <zone>".
+          RUN_ID=''
+          for _ in $(seq 1 24); do
+            sleep 5
+            RUN_ID=$(gh run list --repo "$REPO" --workflow cf-purge.yml --event workflow_dispatch \
+              --created ">=$SINCE" --limit 100 --json databaseId,displayTitle \
+              --jq "[.[] | select(.displayTitle | contains(\" · $CALLER · \"))][0].databaseId // empty")
+            [ -n "$RUN_ID" ] && break
+          done
+          if [ -z "$RUN_ID" ]; then
+            echo "::error::No cf-purge.yml run for $CALLER appeared within 2 minutes."
+            exit 1
+          fi
+          RUN_URL="https://github.com/$REPO/actions/runs/$RUN_ID"
+          echo "Central purge: $RUN_URL"
+          # Cloudflare's reply is in the central run's log, not here.
+          gh run watch "$RUN_ID" --repo "$REPO" --exit-status > /dev/null ||
+            { echo "::error::Cloudflare purge did not succeed: $RUN_URL"; exit 1; }
