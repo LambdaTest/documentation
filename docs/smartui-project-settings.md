@@ -111,7 +111,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "name": "Code sample 4",
         "codeSampleType": "code snippet",
         "programmingLanguage": "Markdown",
-        "text": "[![This project is using Lambda test for visual regression testing.](https://smartui.lambdatest.com/static/media/LTBadge.64a05e73.svg)](https://lambdatest.com)"
+        "text": "[![This project is using Lambda test for visual regression testing.](https://smartui.lambdatest.com/static/media/LTBadge.64a05e73.svg)](https://www.testmuai.com/)"
       }
     ],
     "dateModified": "2026-09-09T19:10:37+05:30"
@@ -428,7 +428,7 @@ Show the world that you are using <BrandName /> for your visual regression testi
 
 **Badge Code:**
 ```markdown
-[![This project is using Lambda test for visual regression testing.](https://smartui.lambdatest.com/static/media/LTBadge.64a05e73.svg)](https://lambdatest.com)
+[![This project is using Lambda test for visual regression testing.](https://smartui.lambdatest.com/static/media/LTBadge.64a05e73.svg)](https://www.testmuai.com/)
 ```
 
 **Use Case**: Add to your README or documentation to showcase your testing setup.
