@@ -213,7 +213,7 @@ Parameters are visible to everyone in your organization, and the import doesn't 
 ## Define Parameters in a Web or App Agent Test
 - Navigate to the specific web agent test URL and configure the test to accept input parameters.
 
-<img loading="lazy" src={require('../assets/images/kane-ai/features/parameters/kaneai-web-agent-authoring-test-form.jpg').default} alt="KaneAI Web Agent authoring session with a test form containing Name, Age, and Phone Number fields" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/kane-ai/features/parameters/kaneai-web-agent-authoring-test-form.webp').default} alt="KaneAI Web Agent authoring session with a test form containing Name, Age, and Phone Number fields" className="doc_img"/>
 
 ## Create a parameter in a test
 
@@ -222,12 +222,12 @@ Parameters are visible to everyone in your organization, and the import doesn't 
 3. Enter the parameter's **Name** and **Seed value**.
 4. Click **Create Parameter** to save.
 
-<img loading="lazy" src={require('../assets/images/kane-ai/features/parameters/kaneai-create-phonenumber-parameter.jpg').default} alt="Create Parameter dialog with the name phonenumber and seed value 123456789" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/kane-ai/features/parameters/kaneai-create-phonenumber-parameter.webp').default} alt="Create Parameter dialog with the name phonenumber and seed value 123456789" className="doc_img"/>
 
 ## Reference the parameter in test step
 Reference any parameter using **dollar-curly braces syntax** (e.g.,`${phonenumber}`). Enter the name in its designated input field.
 
-<img loading="lazy" src={require('../assets/images/kane-ai/features/parameters/kaneai-parameter-seed-value-indicator.jpg').default} alt="The phonenumber parameter has a dashed border, with a message that it will use its seed value and an Edit option" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/kane-ai/features/parameters/kaneai-parameter-seed-value-indicator.webp').default} alt="The phonenumber parameter has a dashed border, with a message that it will use its seed value and an Edit option" className="doc_img"/>
 
 ### Set or change the value while authoring
 
@@ -244,7 +244,7 @@ You can also change the value in an existing step:
 
 Saving a new value replaces row 1 for that parameter in the test case's Default Dataset. It does not change the global Seed Value or another test case's value.
 
-<img loading="lazy" src={require('../assets/images/kane-ai/features/parameters/kaneai-edit-phonenumber-parameter-value.jpg').default} alt="Parameter Value dialog setting phonenumber to 9876543210 for this test case, with Seed, Cancel, and Save controls" className="doc_img" style={{width: '50%'}}/>
+<img loading="lazy" src={require('../assets/images/kane-ai/features/parameters/kaneai-edit-phonenumber-parameter-value.webp').default} alt="Parameter Value dialog setting phonenumber to 9876543210 for this test case, with Seed, Cancel, and Save controls" className="doc_img" style={{width: '50%'}}/>
 
 To run the same test case with further values, add rows to a Dataset and select it for the run. See [Using Datasets](/support/docs/kane-ai-using-datasets/).
 
