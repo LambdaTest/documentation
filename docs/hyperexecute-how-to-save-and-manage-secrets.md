@@ -139,15 +139,11 @@ HyperExecute supports secrets at multiple levels:
 Secrets are stored as `key:value` pairs where **values** are encrypted and not visible to anyone. They can only be [updated](/support/docs/hyperexecute-how-to-save-and-manage-secrets/#update-your-existing-secrets) with a new value.
 :::
 
-### Which secret is used when names match {#secret-precedence}
+<a id="secret-precedence"></a>
 
-If the same key name exists at more than one level, the job uses the first match in this order:
-
-1. **User-level** secret
-2. **Project-level** secret of the project the job is linked to in its YAML
-3. **Org-level** secret
-
-For example, if `DB_PASSWORD` exists as a user-level secret and as an org-level secret, the job gets the user-level value. To use the org-level value, delete the user-level secret or give the two secrets different key names.
+:::info On-premise deployments
+If the same key name exists at more than one level, a job uses the **user-level** secret first, then the **project-level** secret of the project in its YAML, then the **org-level** secret. To use a lower level's value, delete the higher-level secret or use different key names.
+:::
 
 ## Create a New Secret
 
@@ -255,7 +251,7 @@ In the above sample YAML file:
 
 Org-level secrets are organization-wide secrets that are shared across all projects and users within the organization. They are managed by organization admins and are useful for storing shared credentials like API keys, access tokens, or service account credentials that the entire team needs access to.
 
-To add one, open **Organization Settings** > **Org Product Preferences** > **HyperExecute** > **Org secrets**, click **Add Secrets**, and enter the **Key**, **Value** and **Expires At** date. A user-level or project-level secret with the same key name takes priority. See [Which secret is used when names match](#secret-precedence).
+On-premise, an org admin adds one in **Organization Settings** > **Org Product Preferences** > **HyperExecute** > **Org secrets** with **Add Secrets** (**Key**, **Value** and **Expires At**). A user-level or project-level secret with the same key name is used first. See [which secret is used](#secret-precedence).
 
 :::note
 Org-level secrets are an **enterprise-only** feature. Contact your account team or <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> to enable this for your organization.

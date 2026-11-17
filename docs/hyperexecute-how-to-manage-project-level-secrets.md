@@ -169,7 +169,7 @@ env:
 | **Team Collaboration** | Limited (not ideal for shared projects) | Designed for team collaboration |
 | **Management Location** | Managed in user’s Secret Manager | Managed inside the project UI |
 | **Access Control** | Controlled by user account permissions | Controlled by project permissions |
-| **Same key name at both levels** | Used first | Used if no user-level secret has that name. See [Which secret is used when names match](/support/docs/hyperexecute-how-to-save-and-manage-secrets/#secret-precedence) |
+| **Same key name at both levels (on-premise)** | Used first | Used if no user-level secret has that name. See [which secret is used](/support/docs/hyperexecute-how-to-save-and-manage-secrets/#secret-precedence) |
 
 ## Why Use Project-Level Secrets?
 - **Centralized Management :** Keep all secrets related to a test framework or application in one place: the project.
