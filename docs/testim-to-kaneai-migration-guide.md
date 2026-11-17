@@ -117,7 +117,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
 
 # Migrating From Testim To KaneAI
 * * *
-This guide covers your Testim migration to KaneAI: what Testim can export, where it goes on <BrandName />, and how to re-create and run tests.
+This guide covers your Testim migration to KaneAI: what Testim can export, where it goes on <BrandName />, and how to re-create and run tests. Still choosing a tool? See our [Testim alternatives](https://www.testmuai.com/testim-alternative/) comparison.
 
 <b>[Note: KaneAI does not import or convert Testim tests. You export what Testim's docs say it can export and run the exported Playwright code on <BrandName />. You then bring test cases into Test Manager and re-create each flow in KaneAI in natural language.]</b>
 
