@@ -128,6 +128,8 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <BrandName /> Test Manager supports one-click migration from qTest, allowing you to import your entire test library — including projects, test cases, folder structures, custom fields, attachments, and linked Jira requirements — directly into Test Manager without manual data entry.
 
+Still comparing tools before you move? See our guide to [qTest alternatives](https://www.testmuai.com/blog/qtest-alternatives/).
+
 
 ## Key Benefits
 
