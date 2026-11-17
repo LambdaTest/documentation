@@ -72,7 +72,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-09T19:10:37+05:30"
+    "dateModified": "2026-11-17T11:00:00+05:30"
   }) }}
 />
 
@@ -124,7 +124,7 @@ Project-level secrets are bound to a specific HyperExecute project instead of a 
 ## How to Add Project Level Secrets?
 ### Step 1: Create a Project
 
-To begin, create a new project on the <BrandName /> platform. Follow the instructions to [Create a Project](/support/docs/hyperexecute-projects/#setup-your-project)
+To begin, create a new project on the <BrandName /> platform. Follow the instructions to [Create a Project](/support/docs/hyperexecute-projects/#setup-custom-project)
 
 ### Step 2: Add Secrets to the Project
 Once your project is created:
@@ -169,6 +169,7 @@ env:
 | **Team Collaboration** | Limited (not ideal for shared projects) | Designed for team collaboration |
 | **Management Location** | Managed in user’s Secret Manager | Managed inside the project UI |
 | **Access Control** | Controlled by user account permissions | Controlled by project permissions |
+| **Same key name at both levels** | Used first | Used if no user-level secret has that name. See [Which secret is used when names match](/support/docs/hyperexecute-how-to-save-and-manage-secrets/#secret-precedence) |
 
 ## Why Use Project-Level Secrets?
 - **Centralized Management :** Keep all secrets related to a test framework or application in one place: the project.

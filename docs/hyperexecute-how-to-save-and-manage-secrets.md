@@ -143,13 +143,11 @@ Secrets are stored as `key:value` pairs where **values** are encrypted and not v
 
 If the same key name exists at more than one level, the job uses the first match in this order:
 
-1. **User-level** secret of the account that starts the job
-2. **Project-level** secret of the project the job is linked to
+1. **User-level** secret
+2. **Project-level** secret of the project the job is linked to in its YAML
 3. **Org-level** secret
 
 For example, if `DB_PASSWORD` exists as a user-level secret and as an org-level secret, the job gets the user-level value. To use the org-level value, delete the user-level secret or give the two secrets different key names.
-
-The same order applies to project-level and org-level secrets: a project-level secret is used before an org-level secret with the same key name.
 
 ## Create a New Secret
 
