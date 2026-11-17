@@ -83,7 +83,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         "text": "version: 0.1\nenv:\n  MyKey1: ${{.secrets.token}}\n \nrunson: win\ntestDiscovery:\n  type: raw\n  mode: remote\n  args:\n    featureFilePath: ${Path}\n     \ntestRunnerCommand: npm run --username abc --password ${{.secrets.SecretKey2}}"
       }
     ],
-    "dateModified": "2026-09-09T19:10:37+05:30"
+    "dateModified": "2026-11-17T11:00:00+05:30"
   }) }}
 />
 
@@ -138,6 +138,18 @@ HyperExecute supports secrets at multiple levels:
 :::info
 Secrets are stored as `key:value` pairs where **values** are encrypted and not visible to anyone. They can only be [updated](/support/docs/hyperexecute-how-to-save-and-manage-secrets/#update-your-existing-secrets) with a new value.
 :::
+
+### Which secret is used when names match {#secret-precedence}
+
+If the same key name exists at more than one level, the job uses the first match in this order:
+
+1. **User-level** secret of the account that starts the job
+2. **Project-level** secret of the project the job is linked to
+3. **Org-level** secret
+
+For example, if `DB_PASSWORD` exists as a user-level secret and as an org-level secret, the job gets the user-level value. To use the org-level value, delete the user-level secret or give the two secrets different key names.
+
+The same order applies to project-level and org-level secrets: a project-level secret is used before an org-level secret with the same key name.
 
 ## Create a New Secret
 
@@ -245,6 +257,8 @@ In the above sample YAML file:
 
 Org-level secrets are organization-wide secrets that are shared across all projects and users within the organization. They are managed by organization admins and are useful for storing shared credentials like API keys, access tokens, or service account credentials that the entire team needs access to.
 
+To add one, open **Organization Settings** > **Org Product Preferences** > **HyperExecute** > **Org secrets**, click **Add Secrets**, and enter the **Key**, **Value** and **Expires At** date. A user-level or project-level secret with the same key name takes priority. See [Which secret is used when names match](#secret-precedence).
+
 :::note
 Org-level secrets are an **enterprise-only** feature. Contact your account team or <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> to enable this for your organization.
 :::
@@ -266,7 +280,7 @@ Project-level secrets are bound to a specific HyperExecute project instead of a 
 ## How to Add Project Level Secrets?
 ### Step 1: Create a Project
 
-To begin, create a new project on the <BrandName /> platform. Follow the instructions to [Create a Project](/support/docs/hyperexecute-projects/#setup-your-project)
+To begin, create a new project on the <BrandName /> platform. Follow the instructions to [Create a Project](/support/docs/hyperexecute-projects/#setup-custom-project)
 
 ### Step 2: Add Secrets to the Project
 Once your project is created:
