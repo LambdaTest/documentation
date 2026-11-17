@@ -80,7 +80,7 @@ The <BrandName /> Group Management will help you in creating the different Group
 ## How to Create a New Group?
 ***
 
-**Step 1:** Login to your [LambdaTest](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard) account and navigate to Profile icon on the top-right. Click on ***Organization Settings***.
+**Step 1:** Login to your [<BrandName />](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard) account and navigate to Profile icon on the top-right. Click on ***Organization Settings***.
 
 <img loading="lazy" src={require('../assets/images/group-management/step-1.png').default} alt="Navigate to Organization Settings"  className="doc_img"/>
 

@@ -213,7 +213,7 @@ A progress bar shows real-time migration status. You can navigate away at any ti
 | Called / shared test cases | Expanded inline into the calling test case's steps |
 | qTest ID (e.g. `TC-15`) | Stored as the test case's external ID and added as a tag |
 | Custom fields | Org-level custom fields, created automatically if absent (see field type mapping below) |
-| Attachments (test case and step level) | Downloaded from qTest and stored in LambdaTest |
+| Attachments (test case and step level) | Downloaded from qTest and stored in <BrandName /> |
 | Jira requirement links | Linked issues on migrated test cases (requires Jira integration in <BrandName />) |
 | Required-field flags | Preserved on created custom fields |
 
