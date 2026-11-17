@@ -2,7 +2,7 @@
 id: button-text-click
 title: Button Click By Text (OCR)
 sidebar_label: Button Click By Text
-description: Click a button by its visible text or icon description using OCR on LambdaTest Real Device Cloud. Works across Android & iOS real and virtual devices when native locators are unavailable.
+description: Click a button by its visible text or icon description using OCR on TestMu AI Real Device Cloud. Works across Android & iOS real and virtual devices when native locators are unavailable.
 keywords:
   - button click by text
   - OCR button click

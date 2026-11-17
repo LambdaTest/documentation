@@ -340,7 +340,7 @@ test_cases_per_scenario: 5       # Optional: test cases per scenario (1-20, defa
 | `configuration_name` | *(Recommended)* The name of the KaneAI Web configuration to run tests against, exactly as it appears in Test Manager (for example, `"Chrome on Windows"`). Matching is case-insensitive. |
 | `configuration_id` | *(Legacy)* The numeric ID of the target testing environment. Still supported for existing repositories, but `configuration_name` takes precedence when both are set. |
 | `test_url` | The base URL of your application under test (your staging or testing environment URL) |
-| `tunnel_name` | *(Optional)* The name of the LambdaTest tunnel to use for testing. Set this when the same tunnel is reused across all PRs. Can be overridden per PR using the `--tunnel` flag in the trigger comment. |
+| `tunnel_name` | *(Optional)* The name of the <BrandName /> tunnel to use for testing. Set this when the same tunnel is reused across all PRs. Can be overridden per PR using the `--tunnel` flag in the trigger comment. |
 | `scenario_limit` | *(Optional)* Caps how many test scenarios KaneAI generates for a PR. Accepts a value between **1 and 20**. Can be overridden per PR using the `--max-scenarios` flag. |
 | `test_cases_per_scenario` | *(Optional)* Caps how many test cases are generated within each scenario. Accepts a value between **1 and 20**, and defaults to **10** when not set. Can be overridden per PR using the `--max-test-cases` flag. |
 
@@ -455,7 +455,7 @@ You can extend any trigger command with optional parameters to customize test ex
 | Parameter | Description |
 |-----------|-------------|
 | `--url <test_url>` | Overrides the `test_url` set in `.lambdatest/config.yaml` for this PR. Useful for ephemeral preview environments where the deployment URL changes per PR. |
-| `--tunnel <tunnel_name>` | Routes test traffic through a named LambdaTest tunnel. Required when testing against a locally hosted or privately accessible environment that is not publicly reachable. |
+| `--tunnel <tunnel_name>` | Routes test traffic through a named <BrandName /> tunnel. Required when testing against a locally hosted or privately accessible environment that is not publicly reachable. |
 | `--config <name>` | Overrides the configuration for this run. Pass the configuration name as shown in Test Manager, wrapping multi-word names in double quotes (for example, `--config "Chrome on Windows"`). A purely numeric value is treated as a legacy configuration ID. |
 | `--max-scenarios <N>` | Overrides `scenario_limit` for this run. Accepts a value between **1 and 20**. |
 | `--max-test-cases <N>` | Overrides `test_cases_per_scenario` for this run. Accepts a value between **1 and 20**. |
@@ -478,11 +478,11 @@ If `--max-scenarios` or `--max-test-cases` is given a value outside the supporte
 
 ### Setting Up Tunnel Testing
 
-When your application runs on a local machine, private network, or staging environment not accessible from the internet, use the `--tunnel` flag to route test traffic through a secure LambdaTest tunnel.
+When your application runs on a local machine, private network, or staging environment not accessible from the internet, use the `--tunnel` flag to route test traffic through a secure <BrandName /> tunnel.
 
 **Before triggering the workflow with `--tunnel`:**
 
-1. Start a LambdaTest tunnel on the machine that can reach your application. The tunnel must be active at the time the workflow is triggered.
+1. Start a <BrandName /> tunnel on the machine that can reach your application. The tunnel must be active at the time the workflow is triggered.
 2. Note the tunnel name you assigned when starting the tunnel.
 3. Pass that exact tunnel name as the `--tunnel` value in your PR comment.
 
