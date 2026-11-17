@@ -213,31 +213,46 @@ Parameters are visible to everyone in your organization, and the import doesn't 
 ## Define Parameters in a Web or App Agent Test
 - Navigate to the specific web agent test URL and configure the test to accept input parameters.
 
-<img loading="lazy" src={require('../assets/images/kane-ai/features/parameters/1.png').default} alt="Image" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/kane-ai/features/parameters/kaneai-web-agent-authoring-test-form.webp').default} alt="KaneAI Web Agent authoring session with a test form containing Name, Age, and Phone Number fields" className="doc_img"/>
 
 ## Create a parameter in a test
-- Confirm that parameters are already defined in the system. To add a new parameter, use one of the following methods to define the parameter:
-  - Type a **`slash (/)`** and select the Parameter option.
-  - Click the Plus icon and choose the Parameter icon.
 
-Click **Create Parameter** to save.
+1. Type `/` in the authoring input.
+2. Select **Create Parameter** to open the pop-up.
+3. Enter the parameter's **Name** and **Seed value**.
+4. Click **Create Parameter** to save.
 
-<img loading="lazy" src={require('../assets/images/kane-ai/features/parameters/3.png').default} alt="Image" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/kane-ai/features/parameters/kaneai-create-phonenumber-parameter.webp').default} alt="Create Parameter dialog with the name phonenumber and seed value 123456789" className="doc_img"/>
 
 ## Reference the parameter in test step
-Reference any parameter using **dollar-curly braces syntax** (e.g.,`${phone_number}`). Enter the name in its designated input field.
+Reference any parameter using **dollar-curly braces syntax** (e.g.,`${phonenumber}`). Enter the name in its designated input field.
 
-<img loading="lazy" src={require('../assets/images/kane-ai/features/parameters/4.png').default} alt="Image" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/kane-ai/features/parameters/kaneai-parameter-seed-value-indicator.webp').default} alt="The phonenumber parameter has a dashed border, with a message that it will use its seed value and an Edit option" className="doc_img"/>
 
 ### Set or change the value while authoring
 
-When you insert a parameter into a test step, you can enter the value to use for that test case. You can also pause the authoring session, click the parameter in the step, and update it in the **Parameter Value** dialog. Enter **New value for this test case** and click **Save**. This replaces row 1 for that parameter in the test case's Default Dataset; it does not change the global Seed Value or another test case's value.
+When you use a parameter for the first time in an authoring session, KaneAI uses the **Seed Value** you defined when creating the parameter.
 
-<img loading="lazy" src={require('../assets/images/kane-ai/features/data-driven-testing/parameter-value-dialog.png').default} alt="Parameter Value dialog for editing the value used by one test case" className="doc_img"/>
+- **Dashed border:** The parameter appears with a dashed border while it is using the Seed Value and you have not explicitly set a value for this test case.
+- **Edit the value:** Click the parameter or the **Edit** option beside the Seed Value message to enter a different value for this test case.
+
+You can also change the value in an existing step:
+
+1. Pause the authoring session.
+2. Click the parameter in the step to open the **Parameter Value** dialog.
+3. Enter **New value for this test case** and click **Save**.
+
+Saving a new value replaces row 1 for that parameter in the test case's Default Dataset. It does not change the global Seed Value or another test case's value.
+
+<img loading="lazy" src={require('../assets/images/kane-ai/features/parameters/kaneai-edit-phonenumber-parameter-value.webp').default} alt="Parameter Value dialog setting phonenumber to 9876543210 for this test case, with Seed, Cancel, and Save controls" className="doc_img" style={{width: '50%'}}/>
 
 To run the same test case with further values, add rows to a Dataset and select it for the run. See [Using Datasets](/support/docs/kane-ai-using-datasets/).
 
 ## From a Manual Interaction step
+
+:::note Availability
+Converting selected text in a Manual Interaction step into a Parameter is supported only in **Classic Experience**. This feature is not available in **New Experience**.
+:::
 
 You can also convert a hard-coded value in a Manual Interaction step into a Parameter directly, without deleting or re-recording the step. This flow is available on both **Desktop** and **Mobile App** sessions, and works while the session is **Paused**, where step editing is available.
 
@@ -296,5 +311,5 @@ Utilize the parameters to run your test cases with different data sets and input
 
 ## Video Explanation
 <video class="right-side" width="100%" controls id="vid">
-<source src= {require('../assets/images/kane-ai/features/parameters/output.mp4').default} type="video/mp4" />
+<source src= {require('../assets/images/kane-ai/features/parameters/kaneai-using-parameters-walkthrough.mp4').default} type="video/mp4" />
 </video>
