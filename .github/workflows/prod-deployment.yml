@@ -66,49 +66,25 @@ jobs:
           aws cloudfront create-invalidation --distribution-id EEMGB6PM4ZZ7A  --paths "/support/*"
           sleep 90
           
-      # Cloudflare purges go through the org's central cf-purge.yml in
-      # LambdatestIncPrivate/lambda-deployment-manager, which holds the only
-      # Cloudflare token. The Global API Key this step used to send has been refused since Oct 2026 (code 10000), and the step stayed green because curl ignored the reply.
-      # Needs the LT_USER_ACCESS_TOKEN_APP_ID variable and the
-      # LT_USER_ACCESS_TOKEN_PRIVATE_KEY secret; a failed purge fails the run.
-      - name: Mint a token for the central Cloudflare purge
-        id: cf-purge-token
-        uses: actions/create-github-app-token@fee1f7d63c2ff003460e3d139729b119787bc349 # v2.2.2
-        with:
-          app-id: ${{ vars.LT_USER_ACCESS_TOKEN_APP_ID }}
-          private-key: ${{ secrets.LT_USER_ACCESS_TOKEN_PRIVATE_KEY }}
-          owner: LambdatestIncPrivate
-          repositories: lambda-deployment-manager
-          permission-actions: write
-
-      - name: Purge Cloudflare (lambda-deployment-manager cf-purge.yml)
-        timeout-minutes: 10
+      # Cloudflare has refused the Global API Key (X-Auth-Email/X-Auth-Key) since Oct 2026.
+      # Purge with an API token that has Cache Purge permission on the zone,
+      # and fail the run unless Cloudflare reports success: curl alone ignores
+      # the reply, which is how a failing purge stayed green.
+      - name: Cloudflare Invalidation
         env:
-          GH_TOKEN: ${{ steps.cf-purge-token.outputs.token }}
-          CF_ZONE: lambdatest.com
-          CF_PREFIXES: www.lambdatest.com/support/
-          CALLER: documentation-${{ github.run_id }}-${{ github.run_attempt }}-lt-docs
+          CLOUDFLARE_ZONE_ID: ${{ secrets.CLOUDFLARE_ZONE_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          PROD_WEBSITE_URL: ${{ secrets.PROD_WEBSITE_URL }}
         run: |
           set -euo pipefail
-          REPO=LambdatestIncPrivate/lambda-deployment-manager
-          SINCE=$(date -u -d '5 minutes ago' +%Y-%m-%dT%H:%M:%SZ)
-          gh workflow run cf-purge.yml --repo "$REPO" --ref main \
-            -f zone="$CF_ZONE" -f prefixes="$CF_PREFIXES" -f caller="$CALLER"
-          # A dispatch returns no run id; cf-purge.yml names its run "cf-purge · <caller> · <zone>".
-          RUN_ID=''
-          for _ in $(seq 1 24); do
-            sleep 5
-            RUN_ID=$(gh run list --repo "$REPO" --workflow cf-purge.yml --event workflow_dispatch \
-              --created ">=$SINCE" --limit 100 --json databaseId,displayTitle \
-              --jq "[.[] | select(.displayTitle | contains(\" · $CALLER · \"))][0].databaseId // empty")
-            [ -n "$RUN_ID" ] && break
+          for name in CLOUDFLARE_ZONE_ID CLOUDFLARE_API_TOKEN PROD_WEBSITE_URL; do
+            [ -n "${!name}" ] || { echo "::error::The $name secret is not set for this workflow."; exit 1; }
           done
-          if [ -z "$RUN_ID" ]; then
-            echo "::error::No cf-purge.yml run for $CALLER appeared within 2 minutes."
-            exit 1
-          fi
-          RUN_URL="https://github.com/$REPO/actions/runs/$RUN_ID"
-          echo "Central purge: $RUN_URL"
-          # Cloudflare's reply is in the central run's log, not here.
-          gh run watch "$RUN_ID" --repo "$REPO" --exit-status > /dev/null ||
-            { echo "::error::Cloudflare purge did not succeed: $RUN_URL"; exit 1; }
+          RESPONSE=$(curl -sS -X POST "https://api.cloudflare.com/client/v4/zones/$CLOUDFLARE_ZONE_ID/purge_cache" \
+            -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" \
+            -H "Content-Type: application/json" \
+            --data "$(jq -cn --arg host "$PROD_WEBSITE_URL" '{hosts: [$host]}')")
+          echo "$RESPONSE"
+          jq -e '.success == true' <<<"$RESPONSE" > /dev/null ||
+            { echo "::error::Cloudflare did not purge the cache (reply above)."; exit 1; }
+          sleep 60
