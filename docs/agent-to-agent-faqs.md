@@ -90,7 +90,7 @@ Yes. Small teams can start on the Pay-As-You-Go tier, described below. The Start
 
 The Pay-As-You-Go tier is effectively a permanent free tier. There is no time limit and no monthly commitment. You pay only for the credits you use.
 
-### How Agent Testing Differs From LambdaTest Browser Testing
+### How Agent Testing Differs From <BrandName /> Browser Testing
 
 TestMu AI historically focused on browser and device testing. Agent Testing is a distinct product for AI agent quality evaluation, and it does not test browser UIs. The shared infrastructure, such as HyperExecute and the enterprise security stack, is the connection point between them.
 
