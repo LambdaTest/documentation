@@ -143,8 +143,8 @@ You can also let AI CoPilot build a custom widget for you — describe the insig
 
 Before creating a custom widget, ensure you have:
 
-1. An active LambdaTest account with access to Insights
-2. Executed tests on the LambdaTest platform to generate data
+1. An active <BrandName /> account with access to Insights
+2. Executed tests on the <BrandName /> platform to generate data
 3. Access to the Custom Widgets feature
 
 ## Common Steps for Creating Custom Widgets
@@ -153,7 +153,7 @@ The following steps are common to all custom widget types. After completing thes
 
 ### Step 1: Navigate to Insights
 
-1. Log in to your <a href="https://www.testmuai.com/login/" onClick={CookieTrackingLogin}>LambdaTest account</a>.
+1. Log in to your <a href="https://www.testmuai.com/login/" onClick={CookieTrackingLogin}><BrandName /> account</a>.
 2. Navigate to the **Insights** section from the left sidebar or visit [https://analytics.lambdatest.com/](https://analytics.lambdatest.com/).
 3. Click on the **Dashboards** tab.
 
