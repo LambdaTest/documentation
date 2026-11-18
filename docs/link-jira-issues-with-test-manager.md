@@ -15,29 +15,6 @@ canonical: https://www.testmuai.com/support/docs/link-jira-issues-with-test-mana
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "TestMu AI",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Link Jira Issues with Test Manager",
-          "item": `${BRAND_URL}/support/docs/link-jira-issues-with-test-manager/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -117,45 +94,52 @@ Test Manager enhances its functionality by seamlessly linking test cases with Ji
 
 4. Select your Jira instance site, click on **Select Site & Proceed**, then select your preferred project and click **Integrate Projects & Install**.
 
+### Requirements and defects
+
+Where you link a Jira issue decides what it is in Test Manager:
+
+| Where the issue is linked | What it becomes | What it tells you |
+|---|---|---|
+| Test case or test run | Requirement | What the test validates |
+| Test instance or step in a test run | Defect | What testing found |
+
+The issue type in Jira does not change this. A Jira bug linked on a test case is a requirement, because the test checks that bug, and a sub-task linked on a step is a defect. To change the role of a link, unlink the issue and link it in the right place.
+
+Issues you linked before this change were given a role automatically, using the same rule.
+
+:::info
+Requirements and defects are currently in slow rollout. To get early access, raise a request to our support team. Until they are enabled for your organization, linked issues appear in a single list.
+:::
+
 ### Linking Jira Issues in Test Manager
 
-Once the integration is complete, follow these steps to link issues with your test cases or test runs:
+Once the integration is complete, follow these steps to link a requirement to your test cases or test runs:
 
-1. Head to the issues section in Test Manager, click on **Link Issue** and go to Jira.
-> Note: Issue linking is supported at the Test Case, Test Run, Test Case instance, and step level. To link issues, go to the Issues tab within a Test Case or a Test Run. For linking at the instance and step level within a Test Run, see [Track Bugs and Issues in Test Runs](/support/docs/test-run-creation-and-management/).
+1. Open the **Issues** tab of a test case and click **Link requirement**. On a test run, open its **Issues** tab and click **Link requirement to run**.
+> Note: To link a defect on a test instance or a step, see [Track Bugs and Issues in Test Runs](/support/docs/track-issues-in-test-runs/).
 
-<img loading="lazy" src={require('../assets/images/ado-linking-test-manager/4.png').default} alt="Link Azure DevOps Issue" className="doc_img" width="1366" height="629"/>
+<img loading="lazy" src={require('../assets/images/test-manager/requirements-defects/test-case-link-requirement.png').default} alt="Issues tab of a test case with the Link requirement action" className="doc_img"/>
 
-2. Enter the Jira Issue ID or URL in the input field and click on **Link Issue**.
+2. Select **Jira**, enter the Jira issue key or URL, and click **Link requirement**.
 
-<img loading="lazy" src={require('../assets/images/ado-linking-test-manager/Jira-linkIssue-enterId.png').default} alt="Link Azure DevOps Issue" className="doc_img" width="1366" height="629"/>
+<img loading="lazy" src={require('../assets/images/test-manager/requirements-defects/link-requirement-jira.png').default} alt="Link requirement dialog with Jira selected and an issue key entered" className="doc_img"/>
 
-3. The Jira issue from your integrated Jira Project is successfully linked and listed. You can view the Issue summary, ID, type, status, priority, and creator.
+3. The Jira issue from your integrated Jira Project is linked and listed under **Requirements**. You can view the Issue summary, ID, type, status, priority, and creator.
 
-<img loading="lazy" src={require('../assets/images/ado-linking-test-manager/Jira-Issue-Listed.png').default} alt="Link Azure DevOps Issue" className="doc_img" width="1366" height="629"/>
+<img loading="lazy" src={require('../assets/images/test-manager/requirements-defects/jira-requirement-listed.png').default} alt="Jira issue listed in the Requirements tab of a test case" className="doc_img"/>
 
-4. To **unlink an issue**, click on the unlink button located on the right side of the Jira Issue.
+4. To **unlink an issue**, hover over the Jira issue and click **Unlink requirement** on the right side of its row.
 
-<img loading="lazy" src={require('../assets/images/ado-linking-test-manager/Jira-Unlink-Issue.png').default} alt="Link Azure DevOps Issue" className="doc_img" width="1366" height="629"/>
+<img loading="lazy" src={require('../assets/images/test-manager/requirements-defects/unlink-requirement-jira.png').default} alt="Unlink requirement action on a Jira issue in the Requirements tab" className="doc_img"/>
+
+### Issues on a test case
+
+The **Issues** tab of a test case has two tabs, each grouped by tracker. Use the search box and the **Status** and **Issue Type** filters to narrow a long list.
+
+- **Requirements**: the issues linked on this test case. You can link and unlink them here.
+- **Defects**: the defects raised or linked on this test case's instances and steps, across its test runs. Each one shows where it was raised, and **View in run** opens that run. This list is read-only, so you add and remove defects from the test run.
+
+A defect counts as open based on its status in Jira.
 
 
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href={BRAND_URL}>
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-       Link Jira Issues with Test Manager
-      </span>
-    </li>
-  </ul>
-</nav>

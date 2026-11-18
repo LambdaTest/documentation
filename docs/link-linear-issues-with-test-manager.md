@@ -17,29 +17,6 @@ canonical: https://www.testmuai.com/support/docs/link-linear-issues-with-test-ma
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "TestMu AI",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Link Linear Issues with Test Manager",
-          "item": `${BRAND_URL}/support/docs/link-linear-issues-with-test-manager/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -105,25 +82,51 @@ Test Manager connects your testing work to the issues your team already tracks i
 ### Before you begin
 
 - Integrate Linear with your <BrandName /> account. Follow the steps in [Linear App Integration](/support/docs/linear-app-integration/).
-- Until Linear is connected, it cannot be selected as a source in the **Link Issue** dialog. The dialog shows the connection state of each tracker.
+- Until Linear is connected, it cannot be selected as a source in the link dialog. The dialog shows the connection state of each tracker.
 - Searching and linking are limited to the Linear projects you selected during setup. Issues from any other project are not returned.
+
+### Requirements and defects
+
+Where you link a Linear issue decides what it is in Test Manager:
+
+| Where the issue is linked | What it becomes | What it tells you |
+|---|---|---|
+| Test case or test run | Requirement | What the test validates |
+| Test instance or step in a test run | Defect | What testing found |
+
+The issue's labels and type in Linear do not change this. A Linear issue labelled as a bug and linked on a test case is a requirement, because the test checks that bug. To change the role of a link, unlink the issue and link it in the right place.
+
+Issues you linked before this change were given a role automatically, using the same rule.
+
+:::info
+Requirements and defects are currently in slow rollout. To get early access, raise a request to our support team. Until they are enabled for your organization, linked issues appear in a single list.
+:::
 
 ### Linking Linear Issues in Test Manager
 
-Once the integration is complete, follow these steps to link issues with your test cases or test runs:
+Once the integration is complete, follow these steps to link a requirement to your test cases or test runs:
 
-1. Head to the issues section in Test Manager and click on **Link Issue**.
-> Note: Issue linking is supported at the Test Case, Test Run, Test Case instance, and step level. To link issues, go to the Issues tab within a Test Case or a Test Run. For linking at the instance and step level within a Test Run, see [Track Bugs and Issues in Test Runs](/support/docs/track-issues-in-test-runs/).
+1. Open the **Issues** tab of a test case and click **Link requirement**. On a test run, open its **Issues** tab and click **Link requirement to run**.
+> Note: To link a defect on a test instance or a step, see [Track Bugs and Issues in Test Runs](/support/docs/track-issues-in-test-runs/).
 
-<img loading="lazy" src={require('../assets/images/test-manager/linear/link-issue-dialog-linear.png').default} alt="issues-tab-with-link-issue-button" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/test-manager/requirements-defects/test-case-link-requirement.png').default} alt="Issues tab of a test case with the Link requirement action" className="doc_img"/>
 
-2. Select **Linear** as the source, enter the Linear issue ID or URL in the input field, and click on **Link Issue**.
+2. Select **Linear** as the source, enter the Linear issue key or URL in the input field, and click **Link requirement**.
 
-<img loading="lazy" src={require('../assets/images/test-manager/linear/enter-linear-issue-id.png').default} alt="link-issues-dialog-with-linear-selected-and-issue-id-entered" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/test-manager/requirements-defects/link-requirement-linear.png').default} alt="Link requirement dialog with Linear selected and an issue key entered" className="doc_img"/>
 
-3. The Linear issue from your integrated Linear project is successfully linked and listed.
+3. The Linear issue from your integrated Linear project is linked and listed under **Requirements**.
 
-<img loading="lazy" src={require('../assets/images/test-manager/linear/linear-issue-listed.png').default} alt="linked-linear-issue-listed" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/test-manager/requirements-defects/linear-requirement-listed.png').default} alt="Linear issues listed in the Requirements tab of a test case" className="doc_img"/>
+
+### Issues on a test case
+
+The **Issues** tab of a test case has two tabs, each grouped by tracker:
+
+- **Requirements**: the issues linked on this test case. You can link and unlink them here.
+- **Defects**: the defects raised or linked on this test case's instances and steps, across its test runs. Each one shows where it was raised, and **View in run** opens that run. This list is read-only, so you add and remove defects from the test run.
+
+A defect counts as open based on its status in Linear. A Linear issue in a **Canceled** status counts as an open defect.
 
 ### What a linked Linear issue shows
 
@@ -140,39 +143,20 @@ Linking is repeatable and many-to-many:
 
 ### Unlinking a Linear issue
 
-To **unlink an issue**, click on the unlink button located on the right side of the Linear issue.
+To **unlink an issue**, hover over the Linear issue and click **Unlink requirement** on the right side of its row.
 
 Unlinking removes the association in Test Manager only. The issue itself stays in Linear.
 
-<img loading="lazy" src={require('../assets/images/test-manager/linear/unlink-linear-issue.png').default} alt="unlink-linear-issue" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/test-manager/requirements-defects/unlink-requirement-linear.png').default} alt="Unlink requirement action on a Linear issue in the Requirements tab" className="doc_img"/>
 
 ### Behaviour in specific situations
 
 | Situation | What happens |
 |---|---|
-| Linear is not connected to your <BrandName /> account | Linear cannot be selected in the **Link Issue** dialog until you connect it |
+| Linear is not connected to your <BrandName /> account | Linear cannot be selected in the link dialog until you connect it |
 | The issue belongs to a Linear project you did not select during setup | It is not returned in results and cannot be linked |
 | Linear is temporarily unreachable | The issue is shown with the details last retrieved, along with a notice that they could not be refreshed. The next view retries |
 | The issue is archived in Linear | The issue is identified as archived and can still be linked |
 | The issue has been deleted in Linear | The issue is reported as unavailable and can be unlinked |
 | Linear is disconnected from your account | Linked Linear issues are no longer shown. They become visible again if you reconnect the same Linear workspace and projects |
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href={BRAND_URL}>
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-       Link Linear Issues with Test Manager
-      </span>
-    </li>
-  </ul>
-</nav>

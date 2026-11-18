@@ -14,29 +14,6 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import VerifiedTag from '@site/src/component/verifiedTag';
 
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Test Overview",
-          "item": `${BRAND_URL}/support/docs/analytics-test-case-insights/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -252,6 +229,19 @@ To end a test case, use the `lambda-testCase-end` hook:
 ((JavascriptExecutor) driver).executeScript("lambda-testCase-end={Your Test Case Name}");
 
 ```
+
+These hooks are supported for App Automation on both Real Devices and Virtual Devices.
+
+#### Test Case Status
+
+By default, a test case is marked **Failed** if any command between its start and end hooks fails. To report the real result from your framework instead, for example when a command passed on retry or was expected to fail, use the `lambda-testCase-status` hook before `lambda-testCase-end`:
+
+```java
+// To mark the open test case as passed or failed
+((JavascriptExecutor) driver).executeScript("lambda-testCase-status=passed");
+```
+
+The status you send overrides the derived status in the Test Case Insights widgets. If you never call the hook, the derived status is used as before. The hook does not change the session status.
 
 To know more about the hooks and how to use them, you can refer to the [LambdaHooks for Appium](/support/docs/appium-testmu-hooks/#differentiating-test-cases-in-single-session) documentation.
 

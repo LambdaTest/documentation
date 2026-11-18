@@ -17,15 +17,6 @@ canonical: https://www.testmuai.com/support/docs/kaneai-bulk-api-import/
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
-<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Home", "item": BRAND_URL },
-    { "@type": "ListItem", "position": 2, "name": "Support", "item": `${BRAND_URL}/support/docs/` },
-    { "@type": "ListItem", "position": 3, "name": "Bulk API Import in KaneAI", "item": `${BRAND_URL}/support/docs/kaneai-bulk-api-import/` }
-  ]
-}) }}></script>
 
 Bulk API Import brings existing API definitions into a KaneAI test without recreating each request. Select the requests you need, map their variables, and optionally add response-header assertions to every imported API.
 

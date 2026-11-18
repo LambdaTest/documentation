@@ -17,29 +17,6 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "testRigor Integration",
-          "item": `${BRAND_URL}/support/docs/testrigor-integration/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -179,7 +156,7 @@ In case, you wish to test locally or privately hosted websites, you can select t
  <img loading="lazy" src={require('../assets/images/testrigor-integration/results.png').default} alt="Integrating <BrandName /> With testRigor" width="1366" height="625" className="doc_img"/>
 
 :::info
-Moving your tests to KaneAI? The [testRigor to KaneAI migration guide](/support/docs/testrigor-to-kaneai-migration-guide/) shows how to collect your testRigor steps and data and re-create each test in natural language.
+Moving your tests to KaneAI? The [testRigor to KaneAI migration guide](/support/docs/testrigor-to-kaneai-migration-guide/) shows how to collect your testRigor steps and data and re-create each test in natural language. To weigh the two first, see [KaneAI vs testRigor](https://www.testmuai.com/kaneai-vs-testrigor/).
 :::
 
 

@@ -70,8 +70,15 @@ Step-level execution tracking in reports is currently in slow rollout. To get ea
 
 ### Traceability Reports
 
-Traceability reports provide end-to-end visibility into how your test cases align with business requirements and defects.
+Traceability reports provide end-to-end visibility into how your test cases align with business requirements and defects. Each requirement is followed through the test cases linked to it, their executions, and the defects those executions found.
 
-The Traceability reports show the Issues based test-execution report allowing you to see the Issues coverage in tests:
+Requirements and defects are currently in slow rollout. To get early access, raise a request to our support team. Until they are enabled for your organization, the report lists every linked issue together.
 
-The report data can be filtered using Test, Issue, and Run metadata.
+The report lists these columns: **Requirement**, **Test Case**, **Status**, **Configuration**, **Test Run**, **Defects**, **Executed By**, and **Executed At**.
+
+- **Requirement**: every issue linked on a test case, whatever its type and tracker, with the test cases linked to it listed under it. Defects are not listed as requirements.
+- **Defects**: the defects each execution found, with where each one was raised, on a step or on the test instance.
+
+A requirement that is linked only to a test run, and not to a test case, does not appear in the report.
+
+Search the report by **Requirement ID**, **Test Case Name**, or **Test Case ID**, and filter it by **Executed By**, **Status**, **Test Runs**, and **Defect ID**. The CSV export includes the requirements and the defects. New data may take around 5 minutes to appear in the report.

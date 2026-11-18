@@ -20,29 +20,6 @@ canonical: https://www.testmuai.com/support/docs/accessibility-guided-test-image
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Images Guided Test",
-          "item": `${BRAND_URL}/support/docs/accessibility-guided-test-images/`
-        }]
-      })
-    }}
-></script>
 
 # Images Guided Test
 
@@ -130,3 +107,4 @@ You can change any answer on the summary screen.
 - [Keyboard Guided Test](/support/docs/accessibility-guided-test-keyboard/)
 - [Interactive Elements Guided Test](/support/docs/accessibility-guided-test-interactive-elements/)
 - [Hover and Tooltips Guided Test](/support/docs/accessibility-guided-test-hover-tooltips/)
+- [Layout Guided Test](/support/docs/accessibility-guided-test-layout/)

@@ -19,28 +19,6 @@ canonical: https://www.testmuai.com/support/docs/kane-cli-assurance-sharing/
 import VerifiedTag from '@site/src/component/verifiedTag';
 
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://www.testmuai.com"
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": "https://www.testmuai.com/support/docs/"
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Sharing the context graph with your team",
-          "item": "https://www.testmuai.com/support/docs/kane-cli-assurance-sharing/"
-        }]
-      }) }}
-></script>
 
 `kane-cli context sync` shares your `.context/` store with your team through a **location**: a GitHub repository, an S3-compatible bucket, or a folder on a shared drive. Every person keeps their own store on their own machine, and the location holds the team's shared history. `kane-cli context push` publishes your new records, `kane-cli context pull` takes your teammates', and `kane-cli context clone` makes a new store from the location. Nothing on a location is ever overwritten or deleted, so a published record can never be un-published by mistake.
 

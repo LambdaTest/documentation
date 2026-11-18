@@ -1,4 +1,4 @@
-# How To Run Playwright Tests In Parallel
+# Run Playwright Tests in Parallel on TestMu AI
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 

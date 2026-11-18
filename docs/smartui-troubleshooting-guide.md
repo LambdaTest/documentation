@@ -27,29 +27,6 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import VerifiedTag from '@site/src/component/verifiedTag';
 
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "TestMu AI",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Troubleshooting Guide",
-          "item": `${BRAND_URL}/support/docs/smartui-troubleshooting-guide/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -1894,13 +1871,13 @@ If you encounter issues not covered in this guide:
    - Review [Configuration Options](/support/docs/smartui-sdk-config-options)
 
 2. **Search Existing Issues**:
-   - Check [<BrandName /> Support](https://www.testmuai.com/support/)
+   - Check [<BrandName /> Support](https://www.testmuai.com/support/docs/)
    - Review community forums
    - Search knowledge base
 
 3. **Contact Support**:
    - Email: support@testmuai.com
-   - [24/7 Chat Support](https://www.testmuai.com/support/)
+   - [24/7 Chat Support](https://www.testmuai.com/support/docs/)
    - Include error messages, logs, and configuration details
 
 4. **Provide Diagnostic Information**:

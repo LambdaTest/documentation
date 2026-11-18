@@ -22,29 +22,6 @@ canonical: https://www.testmuai.com/support/docs/analytics-bar-line-widgets/
 
 import NewTag from '../src/component/newTag';
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://www.testmuai.com"
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": "https://www.testmuai.com/support/docs/"
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Bar and Line Chart Widgets",
-          "item": "https://www.testmuai.com/support/docs/analytics-bar-line-widgets/"
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -514,4 +491,4 @@ After creating your bar or line chart widget:
 
 ## Support
 
-If you have any questions or need assistance with creating bar or line chart widgets, please reach out to our [24/7 customer support](mailto:support@testmuai.com) or visit our [Support Center](https://www.testmuai.com/support/).
+If you have any questions or need assistance with creating bar or line chart widgets, please reach out to our [24/7 customer support](mailto:support@testmuai.com) or visit our [Support Center](https://www.testmuai.com/support/docs/).

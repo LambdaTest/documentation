@@ -16,29 +16,6 @@ canonical: https://www.testmuai.com/support/docs/local-testing-for-macos/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Legacy Binary For macOS",
-          "item": `${BRAND_URL}/support/docs/local-testing-for-macos/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -232,7 +209,7 @@ Use the following arguments in your command line.
 | ARGUMENTS | EXAMPLES | DESCRIPTION |
 |---------|-------|-------------|
 | –proxy-host | abc.wonderproxy.com | Full hostname for the proxy you’d like to use. |
-| –key | 123asd123 | Helps LambdaTest to map a TCP with TLS 1.2 secure connection with the right user. |
+| –key | 123asd123 | Helps <BrandName /> to map a TCP with TLS 1.2 secure connection with the right user. |
 | –proxy-port | 12345 | The port declared by you for fetching the proxy. |
 | –proxy-pass | hijklmnop | WonderProxy password of the user. |
 | –proxy-user | abcdefg | WonderProxy username of the user. |

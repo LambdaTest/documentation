@@ -26,29 +26,6 @@ import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
 import VerifiedTag from '@site/src/component/verifiedTag';
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Getting Started With Visual Regression Testing Using Selenium On SmartUI",
-          "item": `${BRAND_URL}/support/docs/selenium-visual-regression/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -1394,8 +1371,8 @@ If you encounter issues not covered here:
 
 - Review [SmartUI Build Options](/support/docs/smart-ui-build-options) documentation
 - Check [Advanced Test Settings](/support/docs/test-settings-options/) for comparison options
-- Visit [<BrandName /> Support](https://www.testmuai.com/support/) for additional resources
-- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support/)
+- Visit [<BrandName /> Support](https://www.testmuai.com/support/docs/) for additional resources
+- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support/docs/)
 
 </TabItem>
 </Tabs>
@@ -1408,20 +1385,3 @@ If you encounter issues not covered here:
 - [Project Settings](/support/docs/smartui-project-settings)
 
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link"> Selenium Visual Regression </span>
-    </li>
-  </ul>
-</nav>

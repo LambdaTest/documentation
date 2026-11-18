@@ -18,29 +18,6 @@ import VerifiedTag from '@site/src/component/verifiedTag';
 import { BRAND_URL } from '@site/src/component/BrandName';
 
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Rook Workspace Files",
-          "item": `${BRAND_URL}/support/docs/rook-workspace-files/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -221,7 +198,7 @@ Inside the interactive TUI, enter `/sync` after reviewing the files. This actual
 
 Use `rook ui --local` from this workspace to browse its agents and runs, then open a run's scenario and choose **Request**, **Response**, **Verdict**, or **Artefacts** in the **Evidence** panel. The local UI reads saved records, including unsynchronized and test-mode evidence, but does not list every file in the directory tree above. Keep that tree intact when moving an approved evidence bundle. See the [earlier layout](/support/docs/rook-web-ui/#earlier-local-ui) if your CLI has the old files list.
 
-Use `rook ui` for the hosted Web UI's uploaded versions and run artifacts. Local edits are not visible there until synchronized, and `--test` runs stay local. Hosted IDs may differ from run-directory IDs; use the UI's links instead of constructing URLs. See the [local and hosted walkthrough](/support/docs/rook-web-ui/#choose-your-ui).
+Use `rook ui` for the hosted Web UI's uploaded versions and run artifacts. Local edits are not visible there until synchronized, and `--test` runs keep their evidence local. Since 0.1.20, a synchronized agent's `--test` runs are listed under **Test runs** with their totals only. Hosted IDs may differ from run-directory IDs; use the UI's links instead of constructing URLs. See the [local and hosted walkthrough](/support/docs/rook-web-ui/#choose-your-ui).
 
 ### Local UI: Browse the Scenario's Files {#local-ui-example}
 

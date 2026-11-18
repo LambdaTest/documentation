@@ -21,31 +21,8 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
 import VerifiedTag from '@site/src/component/verifiedTag';
-import { BRAND_URL } from '@site/src/component/BrandName';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Mismatch Thresholds for SmartUI Visual Regression Testing",
-          "item": `${BRAND_URL}/support/docs/smartui-mismatch-thresholds/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -180,7 +157,7 @@ You can set thresholds at three levels. When multiple levels are configured, the
 |---|---|---|---|
 | 1 (Highest) | **Screenshot** | Applies to a single screenshot | Pass options in the `smartuiSnapshot` call |
 | 2 | **Build** | Applies to all screenshots in a build | Set in your test capabilities (`LT:Options`) |
-| 3 (Lowest) | **Project** | Applies to all builds in a project | Configure in the [LambdaTest SmartUI Dashboard](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com) |
+| 3 (Lowest) | **Project** | Applies to all builds in a project | Configure in the [<BrandName /> SmartUI Dashboard](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com) |
 
 :::tip Backward Compatible
 If you do not configure build or screenshot-level thresholds, your existing project-level settings continue to apply. No changes are needed to your existing tests.

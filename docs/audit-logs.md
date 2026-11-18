@@ -20,29 +20,6 @@ canonical: https://www.testmuai.com/support/docs/audit-logs/
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Audit Logs",
-          "item": `${BRAND_URL}/support/docs/audit-logs/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -118,7 +95,7 @@ Audit logs can be used to:
 
 ## How to Access Audit Logs?
 
-**Step 1:** Go to the [LambdaTest](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard) Dashboard.
+**Step 1:** Go to the [<BrandName />](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard) Dashboard.
 
 **Step 2:** Click on Settings -> **Organization Settings** and navigate to the **Audit Logs** tab.
 

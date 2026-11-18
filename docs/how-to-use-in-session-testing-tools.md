@@ -17,29 +17,6 @@ canonical: https://www.testmuai.com/support/docs/how-to-use-in-session-testing-t
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "TestMu AI",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "How to use in-session testing tools?",
-          "item": `${BRAND_URL}/support/docs/how-to-use-in-session-testing-tools/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -142,7 +119,7 @@ All screenshots and video recordings from test sessions are stored in the Galler
 
 ### IP Geolocation
 
-The **IP Geolocation** feature allows you to emulate website and mobile experiences from more than 45 countries using local IP addresses. This enables you to test localized elements like pricing, languages, and product offerings. With IP Geolocation activated, you can verify that your app's traffic is coming from a particular country, facilitating thorough global testing.
+The **IP Geolocation** feature allows you to emulate website and mobile experiences from 180+ countries using local IP addresses. This enables you to test localized elements like pricing, languages, and product offerings. With IP Geolocation activated, you can verify that your app's traffic is coming from a particular country, facilitating thorough global testing.
 
 <img loading="lazy" src={require('../assets/images/real-device-browser-testing/ip-geolocation-browser-testing.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 
@@ -155,6 +132,12 @@ Check out our detailed support documentation to know more about the [IP Geolocat
 However, if your preferred location is not showing, you can specify the exact location by entering the lattitude and longitude of the location. 
 
 <img loading="lazy" src={require('../assets/images/real-device-browser-testing/gps-location-browser-testing.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
+
+<div className="ytframe"> 
+<div className="youtube" data-embed="Sy8dyJb3T6M" data-loading-attribute="eager">
+  <div className="play-button"></div>
+</div>
+</div>
 
 
 ### Network Throttling

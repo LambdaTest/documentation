@@ -19,29 +19,6 @@ canonical: https://www.testmuai.com/support/docs/one-click-migration-from-katalo
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "TestMu AI",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Migration from Katalon",
-          "item": `${BRAND_URL}/support/docs/one-click-migration-from-katalon/`
-        }]
-      })
-    }}
-></script>
 
 # Migration from Katalon
 
@@ -295,18 +272,5 @@ No. Commented-out steps are omitted, and operations handled by KaneAI are not im
 | **No automatic repair of unsupported steps** | Opting a case in excludes unsupported steps; it does not rewrite them. |
 | **Conversion differences** | Some supported operations are approximated. Review conversion notes and validate the resulting behavior. |
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href={BRAND_URL}>Home</a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>Support</a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">Migration from Katalon</span>
-    </li>
-  </ul>
-</nav>
 
 > _Have any feedback or request? Reach out to us via support@testmuai.com and we would be happy to hear from you._

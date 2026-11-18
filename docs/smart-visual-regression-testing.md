@@ -27,29 +27,6 @@ import SmartUIHooksSupportedLanguage from '../src/component/SupportedLanguages/S
 import SmartUISDKSupportedLanguage from '../src/component/SupportedLanguages/SmartUISDKSupportedLanguage';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "TestMu AI",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Smart Visual Testing",
-          "item": `${BRAND_URL}/support/docs/smart-visual-regression-testing/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -107,7 +84,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     "dateModified": "2026-09-09T19:10:37+05:30"
   }) }}
 />
-SmartUI is a visual testing tool that helps in identifying visual regressions in web applications, plugging into your End-to-End (E2E) testing across Selenium, Cypress, and Playwright to catch visual changes automatically. It uses advanced image comparison techniques to detect differences between baseline images and those captured during subsequent test runs.
+[SmartUI](https://www.testmuai.com/visual-testing-tool/) by TestMu AI is a visual testing tool: it captures screenshots of your UI and compares them against approved baselines to catch layout, color and font bugs that functional tests miss. It works on web pages, mobile apps, Figma designs and PDFs, plugs into your End-to-End (E2E) testing across Selenium, Cypress, and Playwright, and uses Visual AI to filter out pixel noise.
 
 You can perform following Visual Regression tests using SmartUI:
 

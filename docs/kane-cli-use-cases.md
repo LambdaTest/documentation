@@ -15,28 +15,6 @@ slug: kane-cli-use-cases/
 canonical: https://www.testmuai.com/support/docs/kane-cli-use-cases/
 ---
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://www.testmuai.com"
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": "https://www.testmuai.com/support/docs/"
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Use Cases",
-          "item": "https://www.testmuai.com/support/docs/kane-cli-use-cases/"
-        }]
-      }) }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -96,6 +74,8 @@ canonical: https://www.testmuai.com/support/docs/kane-cli-use-cases/
 />
 
 Kane CLI is a natural-language command line tool for testing. Instead of writing test scripts, you describe what you want to test in plain English inside a `kane-cli run "..."` command. Kane CLI opens a real browser session, performs the described navigation and API calls, evaluates your assertions, and prints a live step-by-step log together with a plain-language pass or fail summary. Every successful run can be saved as a structured, shareable test case inside KaneAI Test Manager for future reuse.
+
+Kane CLI can also explore an app for you: `kane-cli explore` maps its screens, the flows between them, and anything that looks broken, and saves tests designed from that map to your Test Manager project. To run your first exploration, see [Kane CLI Exploration](/support/docs/kane-cli-exploration/).
 
 The categories below group the most common scenarios you can cover with Kane CLI, each with the exact steps to follow. Every use case is a single command you can copy, adapt to your own endpoints, and drop straight into a CI pipeline.
 

@@ -2,7 +2,7 @@
 id: contacts-on-real-devices-browser
 title: Access your Contacts on Real Devices (Browser)
 sidebar_label: Contacts
-description: Now you can test your contacts in your app on TestMu AI Real Device Cloud Platform with 50,000+ real mobile devices.
+description: Use the built-in Contacts app and preloaded sample contacts during a real device browser session on TestMu AI to add, edit and delete contacts on Android and iOS.
 keywords:
   - image injection
   - app test automation
@@ -29,29 +29,6 @@ import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Access Contacts on Real Devices",
-          "item": `${BRAND_URL}/support/docs/contacts-on-real-devices-browser/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -65,7 +42,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       "@id": "https://www.testmuai.com/support/docs/contacts-on-real-devices-browser/"
     },
     "headline": "Access your Contacts on Real Devices (Browser)",
-    "description": "Now you can test your contacts in your app on TestMu AI Real Device Cloud Platform with 50,000+ real mobile devices.",
+    "description": "Use the built-in Contacts app and preloaded sample contacts during a real device browser session on TestMu AI to add, edit and delete contacts on Android and iOS.",
     "url": "https://www.testmuai.com/support/docs/contacts-on-real-devices-browser/",
     "image": {
       "@type": "ImageObject",

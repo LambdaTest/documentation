@@ -24,29 +24,6 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import VerifiedTag from '@site/src/component/verifiedTag';
 
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "TestMu AI",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Error Messages During Test Execution",
-          "item": `${BRAND_URL}/support/docs/error-messages/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -169,7 +146,7 @@ Find your error by what your test printed. The **W3C error code** is the string 
 | Product | Reference |
 |---|---|
 | HyperExecute CLI | [HyperExecute CLI Errors](/support/docs/hyperexecute-how-to-debug-job/#error-codes) |
-| Kane CLI | [Kane CLI Error Codes](/support/docs/kane-cli-error-codes/) |
+| Kane CLI | [Kane CLI Error Codes](https://www.testmuai.com/docs/kane-cli-error-codes) |
 | KaneAI | [KaneAI Errors](/support/docs/error-handling-kaneai/) |
 | Tunnel | [Tunnel Error Messages](/support/docs/troubleshooting-lambda-tunnel/#error-messages) |
 | SmartUI CLI | [SmartUI Error Message Reference](/support/docs/smartui-troubleshooting-guide/#error-message-reference) |
@@ -1071,22 +1048,3 @@ Continue with these related guides:
 - [Debugging Options](/support/docs/debugging-options/)
 - [Performance Tips](/support/docs/performance-tips/)
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href={BRAND_URL}>
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-        Error Messages
-      </span>
-    </li>
-  </ul>
-</nav>

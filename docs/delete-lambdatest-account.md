@@ -16,29 +16,6 @@ canonical: https://www.testmuai.com/support/docs/delete-testmu-account/
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "TestMu AI",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Delete LambdaTest Account",
-          "item": `${BRAND_URL}/support/docs/delete-testmu-account/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -173,22 +150,3 @@ As an admin, you can remove the members from an organization.
 >
 In case you have any questions or need any additional information regarding <BrandName /> account deletion, you can contact at our **<span className="doc__lt" onClick={() => window.openLTChatWidget()}>24/7 Chat Support</span>** or mail us at [**support@testmuai.com**](mailto:support@testmuai.com). 
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href={BRAND_URL}>
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-        Delete <BrandName /> Account
-      </span>
-    </li>
-  </ul>
-</nav>

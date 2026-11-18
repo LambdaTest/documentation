@@ -24,29 +24,6 @@ canonical: https://www.testmuai.com/support/docs/real-time-desktop-browser-testi
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
-<script type="application/ld+json"
-  dangerouslySetInnerHTML={{ __html: JSON.stringify({
-   "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [{
-      "@type": "ListItem",
-      "position": 1,
-      "name": "TestMu AI",
-      "item": BRAND_URL
-    },{
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Support",
-      "item": `${BRAND_URL}/support/docs/`
-    },{
-      "@type": "ListItem",
-      "position": 3,
-      "name": "Real Time Desktop Browser Testing",
-      "item": `${BRAND_URL}/support/docs/real-time-desktop-browser-testing-tools/`
-    }]
-  })
-}}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -137,7 +114,7 @@ The Scaling feature allows you to adjust the display scale of your web applicati
 <img loading="lazy" src={require('../assets/images/real-time-testing/web-browser/scaling.png').default} alt="Image" className="doc_img"/>
 
 ## IP Geolocation
-Simulate website and mobile experiences from over 45 countries using local IP addresses.
+Simulate website and mobile experiences from 180+ countries using local IP addresses.
 - **Why Use IP Geolocation? :** Test localized features such as language preferences, currency, regional product offerings, and content visibility based on a specific location.
 - **How to Enable? :** Use the IP Geolocation feature to verify that your app's traffic originates from a specific country, providing a comprehensive global testing approach.
 

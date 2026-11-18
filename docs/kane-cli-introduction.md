@@ -1,6 +1,7 @@
 ---
 id: kane-cli-introduction
-title: Kane CLI Documentation - Getting Started
+title: "Kane CLI Documentation: Install, Modes, Commands"
+hide_title: true
 sidebar_label: Introduction
 description: "Kane CLI is an AI-powered command-line tool that runs browser and native mobile app tests in plain English: from your terminal, IDE, or CI pipeline."
 keywords:
@@ -21,29 +22,6 @@ import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import VerifiedTag from '@site/src/component/verifiedTag';
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://www.testmuai.com"
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": "https://www.testmuai.com/support/docs/"
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Kane CLI",
-          "item": "https://www.testmuai.com/support/docs/kane-cli-introduction/"
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -112,11 +90,13 @@ import VerifiedTag from '@site/src/component/verifiedTag';
   }) }}
 />
 
+# Kane CLI Documentation - Getting Started
+
 **Kane CLI** `kane-cli` is an AI-powered test automation tool that runs from your terminal. Describe what you want to test in plain English: Kane CLI navigates, clicks elements, fills forms, extracts data, and validates outcomes in a real Chrome browser, or in a native mobile app on a virtual device.
 
 - **Run tests from any terminal or IDE**: no test scripts, no selectors, no framework boilerplate
 - **Test the web and native mobile apps**: the default target is the desktop browser, and on macOS Apple Silicon you can point the same objective at an Android Emulator or iOS Simulator. See [Mobile Testing](/support/docs/kane-cli-mobile/)
-- **Integrate into CI/CD pipelines**: headless mode with structured JSON output and standard exit codes
+- **Integrate into CI/CD pipelines**: headless mode with structured JSON output and standard exit codes for [CLI testing](https://www.testmuai.com/cli-testing/)
 - **Use as a skill in AI coding agents**: Claude Code, Codex CLI, and Gemini CLI can invoke Kane CLI directly to test and verify UIs on your behalf
 
 <VerifiedTag value="Verified" />

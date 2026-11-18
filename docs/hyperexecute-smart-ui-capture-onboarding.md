@@ -26,29 +26,6 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import VerifiedTag from '@site/src/component/verifiedTag';
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "TestMu AI",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "SmartUI Capture Onboarding with HyperExecute",
-          "item": `${BRAND_URL}/support/docs/hyperexecute-smart-ui-capture-onboarding/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -700,7 +677,7 @@ $env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 
 ### Set HyperExecute Credentials
 
-For HyperExecute, you'll need your LambdaTest username and access key.
+For HyperExecute, you'll need your <BrandName /> username and access key.
 
 <VerifiedTag value="Verified" />
 
@@ -732,7 +709,7 @@ $env:LT_ACCESS_KEY="${YOUR_LAMBDATEST_ACCESS_KEY}"
 </Tabs>
 
 :::info Getting Your Credentials
-- **Username and Access Key**: Available in your [LambdaTest Profile](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/details/profile)
+- **Username and Access Key**: Available in your [<BrandName /> Profile](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/details/profile)
 - **Project Token**: Available in your SmartUI project settings after creation
 :::
 
@@ -1785,7 +1762,7 @@ Now that you've set up SmartUI Capture with HyperExecute, explore these resource
 - [SmartUI Configuration Options](/support/docs/smartui-sdk-config-options/) - All configuration options
 - [HyperExecute YAML Reference](/support/docs/hyperexecute-yaml-version0.2/) - YAML configuration details
 - [SmartUI Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide/) - Common issues and solutions
-- [LambdaTest Support](https://www.testmuai.com/support/) - Get help from our support team
+- [<BrandName /> Support](https://www.testmuai.com/support/docs/) - Get help from our support team
 
 <nav aria-label='breadcrumbs'>
   <ul className='breadcrumbs'>

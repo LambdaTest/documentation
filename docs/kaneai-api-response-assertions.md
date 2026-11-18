@@ -17,15 +17,6 @@ canonical: https://www.testmuai.com/support/docs/kaneai-api-response-assertions/
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
-<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Home", "item": BRAND_URL },
-    { "@type": "ListItem", "position": 2, "name": "Support", "item": `${BRAND_URL}/support/docs/` },
-    { "@type": "ListItem", "position": 3, "name": "API Response Assertions in KaneAI", "item": `${BRAND_URL}/support/docs/kaneai-api-response-assertions/` }
-  ]
-}) }}></script>
 
 API response assertions verify the data returned by an API step. Use **JSONPath** to check specific values in a JSON response, or **Schema** to validate the response against a JSON Schema.
 

@@ -18,29 +18,6 @@ canonical: https://www.testmuai.com/support/docs/smartui-hooks-element-screensho
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import VerifiedTag from '@site/src/component/verifiedTag';
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "TestMu AI",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Take a Screenshot of a Specific Element on a Webpage (SmartUI Hooks)",
-          "item": `${BRAND_URL}/support/docs/smartui-hooks-element-screenshot/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -180,13 +157,13 @@ import VerifiedTag from '@site/src/component/verifiedTag';
 
 # Take a Screenshot of a Specific Element on a Webpage (SmartUI Hooks)
 
-Use this guide when you run automated web tests on LambdaTest and want SmartUI to capture a visual baseline for a specific part of the page, such as a component, card, table, or section, instead of the full browser window.
+Use this guide when you run automated web tests on <BrandName /> and want SmartUI to capture a visual baseline for a specific part of the page, such as a component, card, table, or section, instead of the full browser window.
 
 ## Before You Start
 
 Make sure you have:
 
-- A LambdaTest account with Web Automation access, such as Selenium on the LambdaTest Grid.
+- A <BrandName /> account with Web Automation access, such as Selenium on the <BrandName /> Grid.
 - SmartUI enabled for the session. Your SmartUI project and build must be configured on the test session.
 - A locator for the target element, such as a CSS selector, XPath, or HTML `id`. You can also pass an already-resolved element handle, see [Capture by Resolved Element Handle](#capture-by-resolved-element-handle-webelement).
 
@@ -384,7 +361,7 @@ for (const item of elements) {
 
 ## Step 5: Find the Screenshot in SmartUI
 
-1. Open SmartUI from your LambdaTest account.
+1. Open SmartUI from your <BrandName /> account.
 2. Select the project and build that match your test run.
 3. Locate the screenshot using the `screenshotName`.
 
@@ -392,7 +369,7 @@ for (const item of elements) {
 
 - **Use unique locators:** Your selector should match only one main element. If it matches multiple nodes, the capture may be inconsistent.
 - **Handle dynamic content carefully:** If the element contains content that changes every run, such as timers or ads, consider using ignore regions or layout comparison options if available in your SmartUI project.
-- **Watch for large elements:** If the captured image appears cut off for a very tall or wide component, contact LambdaTest support with the session ID and `screenshotName`.
+- **Watch for large elements:** If the captured image appears cut off for a very tall or wide component, contact <BrandName /> support with the session ID and `screenshotName`.
 
 ## Quick Reference
 

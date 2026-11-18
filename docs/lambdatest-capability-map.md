@@ -21,29 +21,6 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 import VerifiedTag from '@site/src/component/verifiedTag';
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "LambdaTest Capability Map",
-          "item": `${BRAND_URL}/support/docs/testmu-capability-map/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -255,7 +232,7 @@ To migrate your test suites from BrowserStack, checkout this guide on [Migrating
 
 Switching between cloud-based test execution platforms can involve configuration updates, capability adjustments, and integration alignment. A capability comparison makes this transition more seamless by helping teams understand feature availability, execution models, and tooling compatibility. 
 
-<BrandName /> can be adopted as an alternative to Sauce Labs for organizations looking to enhance performance, scale automation workloads efficiently, and streamline debugging and reporting within their CI/CD pipelines.
+<BrandName /> can be adopted as a [Sauce Labs alternative](https://www.testmuai.com/saucelabs-alternative/) for organizations looking to enhance performance, scale automation workloads efficiently, and streamline debugging and reporting within their CI/CD pipelines.
 
 
 
@@ -306,22 +283,3 @@ To generate capabilities use [<BrandName /> Capabilities Generator](https://www.
 
 
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href={BRAND_URL}>
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-        <BrandName /> Capability Map
-      </span>
-    </li>
-  </ul>
-</nav>

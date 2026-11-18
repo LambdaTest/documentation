@@ -23,29 +23,6 @@ import VerifiedTag from '@site/src/component/verifiedTag';
 # How to Run Playwright Tests With Agent Skills on TestMu AI
 ***
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "TestMu AI",
-          "item": "https://www.testmuai.com"
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": "https://www.testmuai.com/support/docs/"
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Playwright Agent Skills",
-          "item": "https://www.testmuai.com/support/docs/playwright-agent-skills/"
-        }]
-    })
-  }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -320,22 +297,3 @@ Continue with the guides below to run, scale, and configure Playwright tests on 
 - [Run Playwright tests with the TestMu AI SDK](/support/docs/playwright-testing/#run-tests-with-the-sdk) runs your existing suite with no code changes.
 - [Configure Playwright capabilities](/support/docs/playwright-test-execution-setup/) sets browser, OS, and cloud options for your runs.
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.testmuai.com">
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.testmuai.com/support/docs/">
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-        Playwright Agent Skills
-      </span>
-    </li>
-  </ul>
-</nav>

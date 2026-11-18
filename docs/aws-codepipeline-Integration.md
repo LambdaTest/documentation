@@ -20,29 +20,6 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import VerifiedTag from '@site/src/component/verifiedTag';
 
 ***
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "TestMu AI",
-          "item": "https://www.testmuai.com/"
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": "https://www.testmuai.com/support/"
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "AWS CodePipeline Integration",
-          "item": `${BRAND_URL}/support/docs/aws-codepipeline-integration-with-testmu/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -244,16 +221,3 @@ Finished in 15.406 seconds
 
 Kudos! Now, you can rapidly commit changes and validate them for UI/UX anomalies by executing automated cross browser testing using <BrandName /> Selenium Grid. Happy Testing! 🙂
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href={BRAND_URL}>Home</a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="/support/docs/">Support</a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">AWS CodePipeline Integration With <BrandName /></span>
-    </li>
-  </ul>
-</nav>

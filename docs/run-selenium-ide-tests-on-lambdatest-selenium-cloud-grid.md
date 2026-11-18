@@ -24,34 +24,6 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import VerifiedTag from '@site/src/component/verifiedTag';
 
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "TestMu AI",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Codeless Automation Tools",
-          "item": `${BRAND_URL}/support/docs/integrations-with-codeless-automation-tools/`
-        },{
-          "@type": "ListItem",
-          "position": 4,
-          "name": "Running Selenium IDE Tests",
-          "item": `${BRAND_URL}/support/docs/run-selenium-ide-tests-on-testmu-selenium-cloud-grid/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -209,7 +181,7 @@ For the demonstration of executing Selenium IDE tests on the <BrandName /> grid,
 
 * * *
 
-The parallel testing on the [Cloud Selenium Grid](https://www.testmuai.com/selenium-automation/) works only when the tests are executed using the SIDE Runner, and not the Selenium IDE. So we will enable the Parallel testing for Selenium IDE.
+The parallel testing on the [Cloud Selenium Grid](https://www.testmuai.com/selenium-grid-online/) works only when the tests are executed using the SIDE Runner, and not the Selenium IDE. So we will enable the Parallel testing for Selenium IDE.
 
 *   Right click on the test suite and go to Settings. <img loading="lazy" src={require('../assets/images/uploads/open-settings-in-Selenium-IDE.webp').default} alt="Test Suite Settings" width="898" height="422" className="doc_img"/>
 *   In the Settings window, tick the **Run in Parallel** checkbox. <img loading="lazy" src={require('../assets/images/uploads/enable-parallel-testing-in-Selenium-ide.webp').default} alt="Test Suite Properties" width="893" height="323" className="doc_img"/>
@@ -312,16 +284,3 @@ selenium-side-runner --params "a='example-value' a.b='another example-value' a.b
 
 Congrats! We have successfully executed our Selenium IDE tests on <BrandName /> Selenium Cloud Grid, which allows you to perform live interactive and automated [cross browser testing](https://www.testmuai.com) on 3000+ real browsers and operating systems online.
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href={BRAND_URL}>Home</a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="/support/docs/">Support</a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">Running Selenium IDE Tests</span>
-    </li>
-  </ul>
-</nav>

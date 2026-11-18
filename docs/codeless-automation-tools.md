@@ -21,29 +21,6 @@ canonical: https://www.testmuai.com/support/docs/integrations-with-codeless-auto
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "TestMu AI",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Codeless Automation Tools",
-          "item": `${BRAND_URL}/support/docs/integrations-with-codeless-automation-tools/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -166,16 +143,3 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 If your favorite Codeless automation tool is not in the above-mentioned, just give us a <span className="doc__lt" onClick={() => window.openLTChatWidget()}> **shout**</span> and we will have it ready shortly for you.
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href={BRAND_URL}>Home</a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="/support/docs/">Support</a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">Codeless Automation Tools</span>
-    </li>
-  </ul>
-</nav>

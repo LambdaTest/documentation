@@ -1,6 +1,7 @@
 import React from 'react';
 import DocItem from '@theme-original/DocItem';
 import Head from '@docusaurus/Head';
+import {DocTrailContext} from '@theme/DocBreadcrumbs';
 
 // Overrides the doc page <title> so it is NOT suffixed with siteConfig.title.
 // Docusaurus' useTitleFormatter always renders "<page> | <site>" and has no
@@ -15,9 +16,13 @@ import Head from '@docusaurus/Head';
 // "Hook useDoc is called outside the <DocProvider>".
 export default function DocItemWrapper(props) {
   const title = props.content?.metadata?.title;
+  // The breadcrumb trail (src/theme/DocBreadcrumbs) reads the doc's permalink and title from this context, for the
+  // same reason: no useDoc() in site code.
   return (
     <>
-      <DocItem {...props} />
+      <DocTrailContext.Provider value={props.content?.metadata || null}>
+        <DocItem {...props} />
+      </DocTrailContext.Provider>
       {title && (
         <Head>
           <title>{title}</title>

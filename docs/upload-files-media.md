@@ -26,29 +26,6 @@ import RealDeviceTag from '../src/component/realDevice';
 import VirtualDeviceTag from '../src/component/virtualDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Files and Media",
-          "item": `${BRAND_URL}/support/docs/upload-files-media/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -175,7 +152,7 @@ Everything else is identical; only these behaviors differ:
 
 ### Automation
 
-Pass the **`uploadMedia`** capability — an array of uploaded media IDs (maximum 5) — to make the files available in your session. The capability is identical for **app** and **browser** (web) automation. Refer to the documentation for [Uploading Files and Media on Real Devices](appium-upload-filemedia.md).
+Pass the **`uploadMedia`** capability — an array of uploaded media IDs (maximum 10) — to make the files available in your session. The capability is identical for **app** and **browser** (web) automation. Refer to the documentation for [Uploading Files and Media on Real Devices](appium-upload-filemedia.md).
 
 ---
 
@@ -188,7 +165,7 @@ The same formats and size limits apply to both **App** and **Browser** sessions:
 - **Documents**: XLS, XLSX, DOC, DOCX, PDF, CSV, TXT, CRT, CER, GED, GPX, XML, PBIX, ZIP, JSON (Max: 15 MB)  
 
 :::info
-You can upload up to **5 files per session**. Files uploaded to or downloaded on the device exist only for the duration of the session and are wiped when the device is recycled.
+You can pass up to **10 files per automation session** (5 per manual session). Files uploaded to or downloaded on the device exist only for the duration of the session and are wiped when the device is recycled.
 :::
 
 ---  

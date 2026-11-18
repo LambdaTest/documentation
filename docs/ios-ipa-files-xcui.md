@@ -1,7 +1,7 @@
 ---
 id: ios-ipa-files-xcui
-title: Creating iOS Applications
-sidebar_label: Creating iOS Applications
+title: How to Create iOS IPA Files on TestMu AI
+sidebar_label: "Creating iOS Applications"
 description: Effortlessly test iOS IPA files with XCUi on TestMu AI. Ensure your apps run smoothly on all iOS devices with comprehensive testing support.
 keywords:
   - xcuitest
@@ -18,6 +18,7 @@ url: https://www.testmuai.com/support/docs/ios-ipa-files-xcui/
 site_name: TestMu AI
 slug: ios-ipa-files-xcui/
 canonical: https://www.testmuai.com/support/docs/ios-ipa-files-xcui/
+toc_max_heading_level: 2
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -25,29 +26,6 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Creating iOS apps",
-          "item": `${BRAND_URL}/support/docs/ios-ipa-files-xcui/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -60,7 +38,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       "@type": "WebPage",
       "@id": "https://www.testmuai.com/support/docs/ios-ipa-files-xcui/"
     },
-    "headline": "Creating iOS Applications",
+    "headline": "How to Create iOS IPA Files on TestMu AI",
     "description": "Effortlessly test iOS IPA files with XCUi on TestMu AI. Ensure your apps run smoothly on all iOS devices with comprehensive testing support.",
     "url": "https://www.testmuai.com/support/docs/ios-ipa-files-xcui/",
     "image": {
@@ -140,7 +118,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   ]) }}
 />
 
-This document outlines the process of creating and testing iOS apps using Xcode. It covers two methods for creating.ipa files for testing: directly creating the.ipa file or creating an.app bundle and converting it into an.ipa file. The first method involves creating a.ipa file using various export methods, such as Ad Hoc, Enterprise, or Development. The second method involves creating an.app bundle and converting it into an.ipa file.
+Creating iOS IPA files for XCUITest on TestMu AI uses Xcode to archive and export your app. Build the .ipa through Ad Hoc, Enterprise, or Development export methods, or generate a .app bundle and convert it into an uploadable .ipa.
 
 ## Step 1: Create .ipa files for Testing
 
@@ -227,22 +205,3 @@ To match the version in your Xcode Target.
 This process will overwrite the **Build settings** at the Project Level to the given iOS version. While using this method, take note that the Targets can be out of sync with each other and the project settings, which will cause the tests to break. You would need to re-build the Project if you change the iOS version for one target output in order to keep all your targets in sync.
 :::
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-      XCUI Testing
-      </span>
-    </li>
-  </ul>
-</nav>

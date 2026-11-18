@@ -20,29 +20,6 @@ canonical: https://www.testmuai.com/support/docs/accessibility-guided-test-keybo
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Keyboard Guided Test",
-          "item": `${BRAND_URL}/support/docs/accessibility-guided-test-keyboard/`
-        }]
-      })
-    }}
-></script>
 
 # Keyboard Guided Test
 
@@ -107,6 +84,8 @@ The test compares each element with and without focus. It flags elements that sh
 
 The review screen shows each element with its passed and failed checks. You can mark any result as passed or failed before you finish the test.
 
+The Keyboard test does not save progress, because it walks the live page. Complete the test in one sitting.
+
 ## How AI helps
 
 With **Verify with AI** on:
@@ -126,4 +105,5 @@ You can change any AI answer on the review screen.
 - [Interactive Elements Guided Test](/support/docs/accessibility-guided-test-interactive-elements/)
 - [Images Guided Test](/support/docs/accessibility-guided-test-images/)
 - [Hover and Tooltips Guided Test](/support/docs/accessibility-guided-test-hover-tooltips/)
+- [Modals Guided Test](/support/docs/accessibility-guided-test-modals/)
 - [DevTools Settings](/support/docs/accessibility-devtools-settings/)

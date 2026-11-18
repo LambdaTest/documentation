@@ -16,29 +16,6 @@ canonical: https://www.testmuai.com/support/docs/testmo-integration/
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import VerifiedTag from '@site/src/component/verifiedTag';
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "TestMu AI",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "TestMo Integration",
-          "item": `${BRAND_URL}/support/docs/testmo-integration/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -174,7 +151,7 @@ TestMo also offers integration with <BrandName /> to help you perform automated 
 
 ### Pre-requisite
 
-- Create your account in [LambdaTest](https://www.testmuai.com/register/?redirectTo=https://accounts.lambdatest.com/dashboard) and [TestMo](https://manage.testmo.com/trial)
+- Create your account in [<BrandName />](https://www.testmuai.com/register/?redirectTo=https://accounts.lambdatest.com/dashboard) and [TestMo](https://manage.testmo.com/trial)
 
 ### Step 1: Build the Test Suite
 Firstly, you need to run the build command as per your desired framework. You can choose any test automation framework and programming language you are familiar with. Selenium is one of the most common one used with JavaScript/Node.js, Java, C#, Python, Ruby or PHP, and other languages

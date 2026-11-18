@@ -20,29 +20,6 @@ canonical: https://www.testmuai.com/support/docs/testmu-sso-google/
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "TestMu AI",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Google Custom Integration",
-          "item": `${BRAND_URL}/support/docs/testmu-sso-google/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -343,22 +320,3 @@ If you receive an "App not enabled" error, the SAML application hasn't been prop
 
 > **Integration Complete!** Your <BrandName /> organization is now successfully integrated with Google Workspace SSO. Your team can now access <BrandName /> using their Google Workspace credentials. If you encounter any issues or need assistance, our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**Support Team**</span> is here to help. You can also reach us at [support@testmuai.com](mailto:support@testmuai.com). Happy Testing!
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href={BRAND_URL}>
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-        Google Custom Integration
-      </span>
-    </li>
-  </ul>
-</nav>

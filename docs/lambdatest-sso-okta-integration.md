@@ -18,35 +18,6 @@ canonical: https://www.testmuai.com/support/docs/testmu-sso-okta-integration/
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
-<script
-  type="application/ld+json"
-  dangerouslySetInnerHTML={{
-    __html: JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "TestMu AI",
-          "item": "https://www.testmuai.com"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": "https://www.testmuai.com/support/docs/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "SSO Okta Integration",
-          "item": "https://www.testmuai.com/support/docs/testmu-sso-okta-integration/"
-        }
-      ]
-    })
-  }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -169,22 +140,3 @@ To enable <BrandName /> SSO through Okta integration:
 > That's all you need to know for Configuring <BrandName /> SSO Integration with Okta. In case you have any questions please feel free to reach out to us via the <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or email us over [support@testmuai.com](mailto:support@testmuai.com).
 
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href={BRAND_URL}>
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-        SSO Okta Integration
-      </span>
-    </li>
-  </ul>
-</nav>

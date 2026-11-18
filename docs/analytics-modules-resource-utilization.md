@@ -19,29 +19,6 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import CookieTrackingLogin from '@site/src/component/CookieTracking';
 
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Concurrency Usage Insights",
-          "item": `${BRAND_URL}/support/docs/analytics-modules-resource-utilization/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -323,22 +300,3 @@ John is a QA Manager, and his team runs more than 50,000 Jobs in a month across 
 John wants to know the duration of the tests kept in queue and the duration of tests put in running state. With the Concurrency Trends widgets he can easily track the duration and make a decision to optimize the <BrandName /> plan currently subscribed by his team. Using Custom Concurrency Trends, he can further drill down into which projects are consuming the most concurrency and schedule test runs more efficiently.
 :::
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-      Concurrency Usage Insights
-      </span>
-    </li>
-  </ul>
-</nav>

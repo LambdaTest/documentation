@@ -1,8 +1,8 @@
-# Why do we need KaneAI?
+# Why Use KaneAI? Use Cases and Benefits
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-KaneAI transforms the way teams approach test automation by bridging the gap between natural language requirements and executable test code. Built for modern development workflows, KaneAI empowers teams to plan, author, and evolve comprehensive test suites without the traditional barriers of complex scripting or framework expertise.
+[KaneAI](https://www.testmuai.com/kane-ai/) transforms the way teams approach test automation by bridging the gap between natural language requirements and executable test code. Built for modern development workflows, KaneAI empowers teams to plan, author, and evolve comprehensive test suites without the traditional barriers of complex scripting or framework expertise.
 
 ## Current Testing Scenario Challenge
 Traditional test automation often creates bottlenecks in development cycles. Teams face several persistent challenges:

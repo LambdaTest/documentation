@@ -181,7 +181,7 @@ Here is a screenshot of the TestMu AI web-application which is captured after lo
 
 ## How To Debug My Website In LT Browser?
 
-With LT Browser, not only can you evaluate how your [responsive web design](https://www.testmuai.com/blog/responsive-web-design-all-you-need-to-know/) might look over 50+ device viewports but you can also debug your web-application to figure out the root cause behind a browser or UI bug.
+With LT Browser, not only can you evaluate how your [responsive web design](https://www.testmuai.com/blog/responsive-css-design-all-you-need-to-know/) might look over 50+ device viewports but you can also debug your web-application to figure out the root cause behind a browser or UI bug.
 
 To debug your website, click on the highlighted button with the debug icon.
 

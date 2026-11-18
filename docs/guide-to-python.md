@@ -18,29 +18,6 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import VerifiedTag from '@site/src/component/verifiedTag';
 
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "TestMu AI",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Run Python Tests",
-          "item": `${BRAND_URL}/support/docs/run-python-tests-on-selenium-grid/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -113,7 +90,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
 # Quick Guide To Run Python Tests On <BrandName /> Selenium Grid
 * * *
 
-<BrandName /> Selenium Automation Grid is a cloud based scalable [Selenium testing](https://www.testmuai.com/selenium-automation/) platform which enables you to run your automation scripts on 3000+ different browsers and operating systems. You can leverage <BrandName /> Selenium grid to not only decrease the build time of Python automation scripts, but also increase your test coverage and check for more range of browsers for cross browser compatibility. This post will help you in getting started with configuring and running your Python based automation test scripts on <BrandName /> Selenium cloud platform.
+<BrandName /> Selenium Automation Grid is a cloud based scalable [Selenium testing](https://www.testmuai.com/selenium/) platform which enables you to run your automation scripts on 3000+ different browsers and operating systems. You can leverage <BrandName /> Selenium grid to not only decrease the build time of Python automation scripts, but also increase your test coverage and check for more range of browsers for cross browser compatibility. This post will help you in getting started with configuring and running your Python based automation test scripts on <BrandName /> Selenium cloud platform.
 
 ## Prerequisites
 ***
@@ -250,16 +227,3 @@ To use your choice of environment for the test you can leverage our Capability G
 
 > **Tear Down**: The tear down method helps <BrandName /> platform understand when the execution of a test is finished. It’s important to tear down each test or else it will give timeout errors.
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href={BRAND_URL}>Home</a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="/support/docs/">Support</a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">Guide To Run Python Tests on Selenium Grid</span>
-    </li>
-  </ul>
-</nav>
