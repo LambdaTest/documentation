@@ -68,7 +68,7 @@ The five local agent tabs are **Summary**, **Profiles**, **Features**, **Scenari
 
 <img loading="lazy" src={require('../assets/images/rook/rook-local-agents.png').default} alt="Redesigned local Agents page with search and a CommerceCare card showing nine features, twelve scenarios, and three runs" width="1440" height="900" className="doc_img"/>
 
-Search by agent name or ID, then click the agent card. It shows feature/scenario/run counts and available last-result context. Clear a search before concluding that the workspace has no agents. These counts describe the saved workspace, not coverage of every possible behavior.
+Search by agent name or ID, then click the agent card. It shows feature/scenario/run counts and available last-result context. Since 0.1.21, that context gives the last run's verified pass and assurance gap, for example `75% verified pass · 11.1% assurance gap`. Clear a search before concluding that the workspace has no agents. These counts describe the saved workspace, not coverage of every possible behavior.
 
 ### Local Agent Workspace {#local-agent}
 
@@ -106,17 +106,19 @@ For the definition and evidence used by an older run, follow **Runs**, rather th
 
 ### Local Runs {#local-runs}
 
-Open **Runs** to compare recorded executions by version, result distribution, pass percentage, credits, and duration. This local list shows the latest 20 runs and reports when older runs are omitted; that is not proof that the older files were deleted. Since 0.1.20, runs made with <code>--test</code> are listed only under **Test runs**, which also shows its latest 20.
+Open **Runs** to compare recorded executions by version, result distribution, **Verified pass**, **Assurance gap**, credits, and duration. Since 0.1.21, **Verified pass** replaces the pass percentage, and the ⓘ in each column heading explains it. This local list shows the latest 20 runs and reports when older runs are omitted; that is not proof that the older files were deleted. Since 0.1.20, runs made with <code>--test</code> are listed only under **Test runs**, which also shows its latest 20.
 
 <img loading="lazy" src={require('../assets/images/rook/rook-local-runs.png').default} alt="Local Runs tab showing three CommerceCare executions with failed and unverifiable outcomes" width="1440" height="900" className="doc_img"/>
 
-Click a run to inspect its narrative, outcome counts, scenario rows, and metadata. **View plan** opens the recorded selection plan. In the **Profile** row, the profile name opens the run's saved configuration; the adjacent link opens the current profile under **Profiles**. These can differ.
+Click a run to inspect its outcome counts, scenario rows, and metadata. Since 0.1.21, the summary line under the run's title is gone. **View plan** opens the recorded selection plan. In the **Profile** row, the profile name opens the run's saved configuration; the adjacent link opens the current profile under **Profiles**. These can differ.
 
 <img loading="lazy" src={require('../assets/images/rook/rook-local-run.png').default} alt="Local CommerceCare run details with narrative, mixed scenario outcomes, View plan, and profile metadata" width="1440" height="900" className="doc_img"/>
 
-When a run has coverage gaps, the run page lists them above the outcome tiles: attack patterns, scenarios, or categories with no runnable scenario, each with its reason. A gap is unverified, not passed.
+When a run has coverage gaps, the run page lists them in a **Coverage gaps** panel: attack patterns, scenarios, or categories with no runnable scenario, each with its reason. Since 0.1.21, the panel sits beside the results and starts collapsed; earlier versions list the gaps above the outcome tiles. A gap is unverified, not passed.
 
 <img loading="lazy" src={require('../assets/images/rook/rook-local-coverage-gaps.png').default} alt="Local triage-service run on Rook 0.1.11 with a Coverage gaps panel listing ten attack patterns with no generated scenario, above Scenarios, Passed, Failed, Skipped, and Unable to Verify tiles" width="1440" height="900" className="doc_img"/>
+
+Since 0.1.21, a failing row in the run's results has a **View failure** button. It opens a side panel with **Why it failed**, **How to fix**, and **Evidence** tabs, and a pager through the run's failures. The failure cluster cards and **Expand all** are gone from the run page. A link to `#CL-xx` still opens that cluster.
 
 This view includes runs available on disk, including local test-mode results. **completed** describes execution state, not a passing suite. Missing graded results are not a pass: check unfinished phases and `rook report <run-id> --json` before treating a result as complete.
 
@@ -282,7 +284,7 @@ Open **Projects → your project → your agent → Summary**. This page answers
 
 #### Check the Agent and Source Context {#agent-summary-check-the-agent-and-source-context}
 
-The heading identifies the agent and current version. **Description** summarizes its purpose; the counters show features, scenarios, tools, runs, and last pass rate when available.
+The heading identifies the agent and current version. **Description** summarizes its purpose; the counters show features, scenarios, tools, runs, and, when available, **last verified pass** and **assurance gap**, each with an ⓘ that explains it.
 
 **Context** lists the source materials used for discovery. A checkpoint digest identifies the recorded context; it does not prove that the target currently deployed matches that source. Use **View Full Spec** beneath Context to read the agent definition and **View findings** to inspect recorded discovery findings. If no findings artifact exists, the page says **No findings recorded**—that is not a clean bill of health.
 
@@ -457,11 +459,12 @@ Open **Projects → your project → your agent → Runs**. This is the shared e
 | **Run** | Click the human-readable name to open the run's details. |
 | **Agent version** | Identifies the version this execution used, which may differ from the current version. |
 | **Result** | Outcome distribution across passed, partial, failed, errored/unverifiable, and skipped results where recorded. Hover or focus the bar for its count summary. |
-| **Pass** | Aggregate pass percentage; cross-check the actual run counts if it disagrees with the result bar. |
+| **Verified pass** | Pass ÷ (Pass + Fail); **Unable to Verify** results count neither way. Cross-check the actual run counts if it disagrees with the result bar. |
+| **Assurance gap** | The share of the run's criteria the judge could not verify. Hover over the value to see its counts. A dash means it was not measured, not 0%. |
 | **Credits** | Recorded consumption, not an estimate for your next execution. |
 | **Duration** | Recorded run duration, not just the target agent's response latency. |
 
-Open the run to use **View plan**; the list does not have a Plan or Coverage column. The sample run took about 18 seconds overall, while its scenario result reports 87 ms of agent latency. Those values describe different parts of the workflow and should not be treated as interchangeable.
+Since 0.1.21, **Verified pass** replaces the **Pass** column and **Assurance gap** sits beside it; the ⓘ in each heading explains it. Open the run to use **View plan**; the list does not have a Plan or Coverage column. The sample run took about 18 seconds overall, while its scenario result reports 87 ms of agent latency. Those values describe different parts of the workflow and should not be treated as interchangeable.
 
 Use pagination when more runs are available. To compare two executions, open each run and check its version, profile revision, and scenario selection before interpreting a change in results. This page does not provide a side-by-side diff or a browser Run button.
 
@@ -488,7 +491,7 @@ Open **Projects → your project → your agent → Runs → run name**. This pa
 
 Read the run name and completion state, then the hosted run ID, agent version, concurrency, duration, and credits where supplied. Use the hosted ID when discussing the browser record with your team; it may differ from the local run directory ID.
 
-**completed** describes the run's execution state, not whether every test passed. Read the narrative, outcome tiles, and scenario rows. The example executed one scenario and passed it; the narrative explicitly warns that the test set is narrow. This does not establish full coverage of the five discovered features.
+**completed** describes the run's execution state, not whether every test passed. Read the outcome tiles and scenario rows. The example executed one scenario and passed it; in this capture, the summary line under the title warns that the test set is narrow. Since 0.1.21, the run page no longer shows that line. This does not establish full coverage of the five discovered features.
 
 #### Inspect the Plan {#run-details-inspect-the-plan}
 
@@ -510,7 +513,7 @@ The browser does not edit hooks or resume phases. If you intentionally stopped a
 
 The table shows scenario ID, title, and status. Click the **scenario ID** to open that run's [result and evidence](#results), including criterion decisions, compliance, and latency. These describe the recorded result, not the entire feature catalog.
 
-When available, additional panels show gaps, latency summaries, failures by tool, and adversarial analysis. A skipped-results section gives recorded skip reasons. Missing panels mean that analysis was not supplied; they are not proof that no problems exist. If an **Errored** outcome appears, inspect the result to distinguish execution problems from an inability to verify the response.
+When available, additional panels show gaps, latency summaries, failures by tool, and adversarial analysis. A skipped-results section gives recorded skip reasons. Since 0.1.21, **Coverage gaps** and **Skipped** are collapsible panels beside the results, and both start collapsed. A failing row has a **View failure** button that opens a side panel with **Why it failed**, **How to fix**, and **Evidence** tabs, and a pager through the run's failures. It replaces the failure cluster cards and **Expand all**; a link to `#CL-xx` still opens that cluster. Missing panels mean that analysis was not supplied; they are not proof that no problems exist. If an **Errored** outcome appears, inspect the result to distinguish execution problems from an inability to verify the response.
 
 For **No graded results in this run**, inspect the plan, run state, completed phases, and upload status. Do not interpret an empty results table as all tests passing.
 
@@ -583,7 +586,7 @@ The former Insights tab is not currently available. Use these existing views ins
 2. Use [Scenarios → Result → never run](#scenarios) to find generated tests without execution.
 3. Open a run's **Coverage gaps** panel for attack patterns and categories with no runnable scenario.
 4. Open a run and filter its result criteria to **Fail** or **Unable to Verify**. Read the evidence before changing the agent, hooks, or test expectations.
-5. Compare runs only after checking their scenario selection, agent version, profile revision, and target conditions. A changed pass percentage alone does not explain a regression.
+5. Compare runs only after checking their scenario selection, agent version, profile revision, and target conditions. A changed **Verified pass** alone does not explain a regression.
 
 The sample has one functional smoke test; it establishes neither a trend nor adversarial resilience. Local `--test` runs do not populate shared history.
 
