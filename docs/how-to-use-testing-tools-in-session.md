@@ -212,9 +212,9 @@ Under Device Control, you'll find multiple options to customize your device's se
 4. **Bluetooth**: Used to enable the bluetooth functionality during the session.
 5. **Fold Device**: Available on Samsung Galaxy foldable devices, this option lets you switch the device between its folded and unfolded states. 
 
-<img loading="lazy" src={require('../assets/images/real-device-app-testing/devicecontrolplusbluetooth.png').default} alt="add" width="1346" height="647" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/real-device-app-testing/device-control-plus-bluetooth.png').default} alt="add" width="1346" height="647" className="doc_img"/>
 
-<img loading="lazy" src={require('../assets/images/real-device-app-testing/devicecontrolfolddevice.png').default} alt="add" width="1346" height="647" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/real-device-app-testing/device-control-fold-device.png').default} alt="add" width="1346" height="647" className="doc_img"/>
 
 ### Settings
 

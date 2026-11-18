@@ -91,10 +91,7 @@ You can enable App Profiling from the App Live session toolbar before starting y
 
 :::note Beta Feature
 Manual App Profiling is currently in **Beta**. To use this feature, get it enabled for your organization by reaching out to our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24x7 Chat Support**</span> or mailing us at [support@testmuai.com](mailto:support@testmuai.com).
-The disk read and disk write metrics in Advanced App Profiling are being rolled out gradually. Once Advanced App Profiling is enabled for your organization, contact support to enable these metrics.
 
-- **iOS:** Disk read and disk write metrics are available by default.
-- **Android:** Your app must be debuggable (`debuggable="true"`) to enable these metrics.
 :::
 
 ## Getting Started
@@ -163,6 +160,14 @@ The Disk Usage metric provides insights into how much disk space is being utiliz
 
 - **System Disk (MB):** Indicates the total amount of disk space used by the entire system, including the operating system and other background processes, displayed in megabytes (MB).
 - **App Disk (MB):** Shows the disk space specifically consumed by your application (App Under Test) during the session, helping you track how much space your app is utilizing and whether it might cause storage-related issues.
+
+:::note
+The disk read and disk write metrics in Advanced App Profiling are being rolled out gradually. Once Advanced App Profiling is enabled for your organization, contact support to enable these metrics.
+
+- **iOS:** Disk read and disk write metrics are available by default.
+- **Android:** Your app must be debuggable (`debuggable="true"`) to enable these metrics.
+
+:::
 
 ### 4. Rendering (Frame Rate)
 Smooth rendering directly affects how responsive your app feels to users. Rendering performance is a typical performance issue that any app faces. It is measured at different stages in the app's lifecycle to ensure that users do not have a bad experience with the app.
