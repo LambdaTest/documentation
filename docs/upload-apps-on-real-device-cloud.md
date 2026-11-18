@@ -163,7 +163,7 @@ You can edit the information at any time and save the changes. If an app is no l
 
 :::note
 
-- Only the app owner (the user who uploaded the app to TestMu AI) can change its visibility settings. However, the app name can be changed by either the app owner or an organization admin.
+- Only the app owner (the user who uploaded the app to <BrandName />) can change its visibility settings. However, the app name can be changed by either the app owner or an organization admin.
 - Only organization admins have permission to delete applications uploaded by any member of the organization. Members with the User or Guest role can only delete their own uploaded applications.
 :::
 
