@@ -1078,7 +1078,7 @@ In the TUI, choosing **update now** at the startup notice or typing /update clos
 
 If you previously chose “never ask again” in the TUI update notice, run /update auto to re-enable automatic notices.
 
-The latest public release checked on November 13, 2026 is [0.1.20](https://github.com/LambdaTest/rook/releases/tag/v0.1.20). Use the installed command's help for version-specific options. If an npm 0.1.1 or 0.1.2 install cannot update, follow the [public-registry repair command](/support/docs/rook-installation/#repair-an-npm-011-or-012-installation). Windows users can follow [PowerShell setup and upgrades](/support/docs/rook-installation/#windows).
+The latest public release checked on November 18, 2026 is [0.1.21](https://github.com/LambdaTest/rook/releases/tag/v0.1.21). Use the installed command's help for version-specific options. If an npm 0.1.1 or 0.1.2 install cannot update, follow the [public-registry repair command](/support/docs/rook-installation/#repair-an-npm-011-or-012-installation). Windows users can follow [PowerShell setup and upgrades](/support/docs/rook-installation/#windows).
 
 ## Export Diagnostic Logs {#export}
 
