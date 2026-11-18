@@ -1,6 +1,7 @@
 ---
 id: kane-cli-introduction
-title: Kane CLI Documentation - Getting Started
+title: "Kane CLI Documentation: Install, Modes, Commands"
+hide_title: true
 sidebar_label: Introduction
 description: "Kane CLI is an AI-powered command-line tool that runs browser and native mobile app tests in plain English: from your terminal, IDE, or CI pipeline."
 keywords:
@@ -88,6 +89,8 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     "dateModified": "2026-08-12T13:15:00+05:30"
   }) }}
 />
+
+# Kane CLI Documentation - Getting Started
 
 **Kane CLI** `kane-cli` is an AI-powered test automation tool that runs from your terminal. Describe what you want to test in plain English: Kane CLI navigates, clicks elements, fills forms, extracts data, and validates outcomes in a real Chrome browser, or in a native mobile app on a virtual device.
 
