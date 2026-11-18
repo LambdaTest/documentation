@@ -2,7 +2,7 @@
 id: analytics-unique-instances-retry-detection
 title: Understanding Unique Test Instances and Retry Detection
 sidebar_label: Unique Instances & Retry Detection
-description: Discover how LambdaTest Analytics intelligently detects unique test instances and consolidates retry attempts for precision test reporting
+description: Discover how TestMu AI Analytics intelligently detects unique test instances and consolidates retry attempts for precision test reporting
 keywords:
   - analytics
   - unique instances

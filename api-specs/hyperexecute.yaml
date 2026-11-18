@@ -10,7 +10,7 @@ paths:
       tags:
         - Secrets
       summary: Create Secrets and store sensitive information in the vault.
-      description: This API allows you to securely [**create and save secrets**](https://www.lambdatest.com/support/docs/hyperexecute-how-to-save-and-manage-secrets/#create-a-new-secret) like API keys or sensitive data, ensuring they remain protected throughout your testing. Industry-standard algorithms encrypt each secret.
+      description: This API allows you to securely [**create and save secrets**](https://www.testmuai.com/support/docs/hyperexecute-how-to-save-and-manage-secrets/#create-a-new-secret) like API keys or sensitive data, ensuring they remain protected throughout your testing. Industry-standard algorithms encrypt each secret.
       requestBody:
         required: true
         content:
@@ -31,7 +31,7 @@ paths:
       tags:
         - Secrets
       summary: Retrieve all secrets stored in your account.
-      description: This API lets you fetch all the secrets associated with your [**username**](https://www.lambdatest.com/support/docs/hyperexecute-how-to-get-my-username-and-access-key/). You get a comprehensive list of your stored confidential information, making it easier to manage and verify your secrets.
+      description: This API lets you fetch all the secrets associated with your [**username**](https://www.testmuai.com/support/docs/hyperexecute-how-to-get-my-username-and-access-key/). You get a comprehensive list of your stored confidential information, making it easier to manage and verify your secrets.
       parameters:
       - name: username
         in: path
@@ -55,7 +55,7 @@ paths:
       tags:
         - Secrets
       summary: Delete specific secrets permanently from the vault.
-      description: This API permanently [**removes specified secrets**](https://www.lambdatest.com/support/docs/hyperexecute-how-to-save-and-manage-secrets/#delete-the-secrets) from the secure vault when they're no longer needed, helping maintain security and compliance with data retention policies.
+      description: This API permanently [**removes specified secrets**](https://www.testmuai.com/support/docs/hyperexecute-how-to-save-and-manage-secrets/#delete-the-secrets) from the secure vault when they're no longer needed, helping maintain security and compliance with data retention policies.
       requestBody:
         required: true
         content:
@@ -108,7 +108,7 @@ paths:
       tags:
         - Jobs
       summary: Check the status of a Job and its associated Tasks.
-      description: This API retrieve the [**status**](https://www.lambdatest.com/support/docs/hyperexecute-status/) of a specific [**Job**](https://www.lambdatest.com/support/docs/hyperexecute-guided-walkthrough/#jobs-page) by providing the `jobID`. It returns detailed information about each task's progress, including their completion status, execution times, and any errors encountered, giving you a full overview of the job lifecycle
+      description: This API retrieve the [**status**](https://www.testmuai.com/support/docs/hyperexecute-status/) of a specific [**Job**](https://www.testmuai.com/support/docs/hyperexecute-guided-walkthrough/#jobs-page) by providing the `jobID`. It returns detailed information about each task's progress, including their completion status, execution times, and any errors encountered, giving you a full overview of the job lifecycle
       parameters:
       - name: jobID
         in: path
@@ -132,7 +132,7 @@ paths:
       tags:
         - Jobs
       summary: Fetch Scenario details associated with your Job ID
-      description: This API retrieves scenario-level execution details for a given Job ID. A scenario in HyperExecute represents a logical stage or group of test cases executed within a [**Job**](https://www.lambdatest.com/support/docs/hyperexecute-guided-walkthrough/#jobs-page). Each job consists of multiple tasks, and each task may contain one or more scenarios.
+      description: This API retrieves scenario-level execution details for a given Job ID. A scenario in HyperExecute represents a logical stage or group of test cases executed within a [**Job**](https://www.testmuai.com/support/docs/hyperexecute-guided-walkthrough/#jobs-page). Each job consists of multiple tasks, and each task may contain one or more scenarios.
       parameters:
       - name: jobID
         in: path
@@ -238,7 +238,7 @@ paths:
       tags:
         - Jobs
       summary: View all stages executed within a specific task
-      description: This API allows you to track all the stages that were part of a particular [**Task**](https://www.lambdatest.com/support/docs/hyperexecute-status/#2-task-level-status). By sending a GET request with the `taskID`, you get a complete breakdown of each stage executed.
+      description: This API allows you to track all the stages that were part of a particular [**Task**](https://www.testmuai.com/support/docs/hyperexecute-status/#2-task-level-status). By sending a GET request with the `taskID`, you get a complete breakdown of each stage executed.
       parameters:
       - name: taskID
         in: path
@@ -284,7 +284,7 @@ paths:
       tags:
         - Jobs
       summary: Get detailed test results within a specific stage.
-      description: This API provides a deep dive into the tests conducted in a particular [**Stage**](https://www.lambdatest.com/support/docs/hyperexecute-status/#3-stage-level-status). By specifying the `stageID`, you receive information about each test, including success or failure, making it easier to pinpoint where things went right or wrong during execution.
+      description: This API provides a deep dive into the tests conducted in a particular [**Stage**](https://www.testmuai.com/support/docs/hyperexecute-status/#3-stage-level-status). By specifying the `stageID`, you receive information about each test, including success or failure, making it easier to pinpoint where things went right or wrong during execution.
       parameters:
       - name: stageID
         in: path
@@ -308,7 +308,7 @@ paths:
       tags:
         - Jobs
       summary: Get logs for a specific stage of a job.
-      description: This API provides access to the logs generated during a particular stage within a [**Job**](https://www.lambdatest.com/support/docs/hyperexecute-status/#1-job-level-status). The logs are essential for troubleshooting and understanding the events that took place during that [**Stage**](https://www.lambdatest.com/support/docs/hyperexecute-status/#3-stage-level-status), aiding in quick issue identification and resolution.
+      description: This API provides access to the logs generated during a particular stage within a [**Job**](https://www.testmuai.com/support/docs/hyperexecute-status/#1-job-level-status). The logs are essential for troubleshooting and understanding the events that took place during that [**Stage**](https://www.testmuai.com/support/docs/hyperexecute-status/#3-stage-level-status), aiding in quick issue identification and resolution.
       parameters:
       - name: stageID
         in: path
@@ -338,7 +338,7 @@ paths:
       tags:
         - Jobs
       summary: Abort an ongoing job execution immediately.
-      description: This API is used to abort a running [**Job**](https://www.lambdatest.com/support/docs/hyperexecute-status/#1-job-level-status) that is no longer required. You can immediately terminate all associated processes, conserving resources and preventing unnecessary execution.
+      description: This API is used to abort a running [**Job**](https://www.testmuai.com/support/docs/hyperexecute-status/#1-job-level-status) that is no longer required. You can immediately terminate all associated processes, conserving resources and preventing unnecessary execution.
       parameters:
       - name: number
         in: path
@@ -404,7 +404,7 @@ paths:
       tags:
         - Artifacts
       summary: Retrieve the metadata of all artifacts generated by a job.
-      description: This API fetches the metadata of all the [**artifacts**](https://www.lambdatest.com/support/docs/hyperexecute-artifacts/) that were produced during the execution of a Job. 
+      description: This API fetches the metadata of all the [**artifacts**](https://www.testmuai.com/support/docs/hyperexecute-artifacts/) that were produced during the execution of a Job. 
       parameters:
       - name: jobID
         in: path
@@ -428,7 +428,7 @@ paths:
       tags:
         - Artifacts
       summary: Download artifacts from a specific Job
-      description: This API allows you to download a bundle of all [**artifacts**](https://www.lambdatest.com/support/docs/hyperexecute-artifacts/) created during a job by providing the `jobID`. It’s ideal for archiving results or for conducting offline examination of logs and outputs to debug or verify test behavior.
+      description: This API allows you to download a bundle of all [**artifacts**](https://www.testmuai.com/support/docs/hyperexecute-artifacts/) created during a job by providing the `jobID`. It’s ideal for archiving results or for conducting offline examination of logs and outputs to debug or verify test behavior.
       parameters:
       - name: jobID
         in: path
