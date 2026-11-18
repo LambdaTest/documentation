@@ -74,7 +74,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-07-24T18:03:55+05:30"
+    "dateModified": "2026-11-12T13:50:45+05:30"
   }) }}
 />
 
@@ -86,7 +86,7 @@ To connect one, you need a running LiveKit agent (self-hosted or on LiveKit Clou
 
 ---
 
-LiveKit is infrastructure, so the unit under test is a room, not a hosted agent ID. That shapes how you connect and where failures sit:
+A few LiveKit specifics shape how you connect and where failures sit:
 
 - **Room, not an agent ID.** The unit under test is a room, so setup differs from every hosted platform.
 - **SIP REFER for transfers.** SIP REFER must be enabled on the trunk for transfers, and Twilio additionally needs PSTN transfer switched on.
@@ -99,7 +99,7 @@ LiveKit is infrastructure, so the unit under test is a room, not a hosted agent 
 ---
 
 - **Phone** covers inbound and outbound callers arriving over a SIP trunk: DTMF entry, SIP REFER transfers, voicemail handling, and carrier latency. Setup: [phone agent testing](/support/docs/phone-agent/).
-- **Voice** reaches the agent by joining a room directly rather than over a phone number, using WebRTC against the room. It isolates the speech pipeline, so STT and TTS accuracy, turn-taking, and interruption handling get tested without telephony noise. Setup: [voice agent testing](/support/docs/voice-agent/).
+- **Voice** reaches the agent by joining its room directly rather than over a phone number, through a voice endpoint profile that uses the WebRTC transport for LiveKit-hosted agents. Keep the profile's secrets in the vault rather than in plain text. It isolates the speech pipeline, so STT and TTS accuracy, turn-taking, and interruption handling get tested without telephony noise. Setup: [voice agent testing](/support/docs/voice-agent/).
 
 ## What breaks in a LiveKit call?
 

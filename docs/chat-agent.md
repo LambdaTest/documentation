@@ -75,7 +75,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-10-05T16:23:33+05:30"
+    "dateModified": "2026-11-12T13:50:45+05:30"
   }) }}
 />
 
@@ -104,7 +104,7 @@ Follow these seven steps in the dashboard. Each step builds on the previous one.
 - **Agent Type** (required): select **Chat Agent**.
 - **Evaluation Mode** (required):
   - **Pre-production testing:** upload requirements, generate test scenarios, and simulate conversations against your agent.
-  - **Post-production analysis:** upload requirements and production chat transcripts for a grounded evaluation.
+  - **Post-production analysis:** upload requirements and production chat transcripts for a grounded evaluation. See [Grade Production Chat Transcripts](#grade-production-chat-transcripts).
 
 Click **Create New Agent** to confirm. Steps 2 to 7 follow the **Pre-production testing** flow.
 
@@ -146,8 +146,8 @@ Click **Generate Scenarios**.
 
 **Step 6: Run the evaluation.** Run a suite to open the **Run Suite** dialog, then add your agent's API request.
 
-1. Enter your agent's request as a cURL command.
-2. Click **Parse and Evaluate**. To run it later, click **Schedule Run Evaluation** instead.
+1. Enter your agent's request as a cURL command. If it contains a token, cookie, or API key, use the **Move to vault** banner to keep that credential in the credentials vault instead of in plaintext. Vault values resolve only at run time.
+2. Click **Parse and Evaluate**. To run it on a schedule instead, click **Schedule Run Evaluation**.
 3. In the **Confirm Request Details** dialog, check the **URL**, **Method**, **Headers**, and **Body**.
 4. Click **Run Evaluation**.
 
@@ -159,74 +159,58 @@ For the API URL format and authentication, see how to [connect a chat agent over
 
 - Start with the scenarios that failed or scored lowest. On the **Turns** tab, read the conversation to find the point where your agent went wrong.
 - Use **Areas for Improvement** and **Recommendations** to decide what to fix in your agent, and **Validation Criteria** to see which of the scenario's criteria it missed. If a criterion is wrong rather than the agent, edit the scenario as in Step 5.
-- After you change your agent, click **Re-run** to run the same scenarios again. Each run is listed separately with its score and time, so you can compare before and after.
+- After you change your agent, click **Re-run** to run the same scenarios again. Each run is listed separately with its score and time, and re-runs are tagged in the suite results list, so you can compare before and after.
+- To stop a suite that is still running, abort it from the results banner.
 
 See [Metrics](#metrics) for what each score measures.
 
 <img loading="lazy" src={require('../assets/images/agent-to-agent/agent-evaluation-results-metrics-turns.webp').default} alt="Evaluation results for a scenario showing pass status, overall score, quality metrics and the conversation turns" width="1916" height="944"  className="doc_img"/>
 
+## Grade Production Chat Transcripts
+
+---
+
+To grade real conversations instead of simulated ones, create the agent with **Post-production analysis** as its evaluation mode. Bulk upload your production chat transcripts as .txt or .json files, along with your requirement documents.
+
+The transcripts are graded with the same engine as pre-production suites, using your requirements as the reference. When you click **Continue to Conversation Analysis**, the platform first analyzes your uploaded requirements. A banner shows while this runs, and you are prompted if no requirements are uploaded.
+
+Each conversation is judged against the scope and policies in your requirements, such as refund limits, return windows, verification, handoff, and disclosure. A reply that is out of scope or breaks a policy fails even when the conversation's overall score is high.
+
 ## How Chat Agent Testing Works
 
 ---
 
-The platform generates 60 to 100+ scenarios from your prompt and uploaded documents, then runs each one as a full conversation. Testing agents send multi-turn HTTP messages to your endpoint, read the reply from each response, and decide the next message based on the scenario goal and prior context.
+The platform generates scenarios from your uploaded sources, in the count you choose at generation, then runs each one as a full conversation. Testing agents send multi-turn HTTP messages to your endpoint, read the reply from each response, and decide the next message based on the scenario goal and prior context.
 
 A conversation ends when the goal is met, the maximum turn count is reached, or an unrecoverable error occurs. Each completed conversation is then scored. For the request and response mechanics, see how to [connect a chat agent over its API](/support/docs/chat-agent-api-integration/).
+
+Chat agents built on Gallup Intelligence are supported. The conversation is kept in a single thread, and table responses are evaluated.
 
 ## What Chat Testing Evaluates
 
 ---
 
-Every chat conversation is scored across the 9 chat and voice quality metrics, such as hallucination, bias, completeness, context awareness, response quality, and conversation flow. Each metric is scored on a 0.0 to 1.0 scale against the thresholds you set.
+Every conversation is scored on the 9 quality [metrics](#metrics), the scenario's validation criteria, and any custom metrics you apply.
 
 Scenarios are drawn from behavioral test categories, including intent recognition, context and memory, multi-turn reasoning, error handling, and compliance.
 
-## Read the Results
+Red teaming runs a live adversarial attacker against your agent, rather than a single opening probe. It covers seven attack types: business logic, hallucination, hijacking, prompt injection, technical injection, overreliance, and off-topic. The attacker and the grader are separate, so the score is not influenced by how hard the attacker pushed. A run that cannot be judged is reported as inconclusive, not passed.
+
+## Chat Agent Testing Features
 
 ---
 
-Each run produces per-metric scores with pass or fail badges, full transcripts for failing conversations annotated with the evidence that drove the score, and score deltas against previous runs. The scores roll up into a Green, Yellow, or Red go-live verdict.
+The steps above don't cover these features. [Data Validation](#data-validation) and [Metric Thresholds and Custom Metrics](#metric-thresholds-and-custom-metrics) have their own sections below.
 
-## What the Chat Agent Workflow Includes
-
----
-
-The chat agent workflow includes the following features.
-
-**Workflow-Based Test Generation.** Connect knowledge sources and auto-generate scenarios, with no manual scripting.
-
-- Upload knowledge base documents (PDF, text files).
-- Connect Confluence, JIRA, or GitHub as knowledge sources.
-- Generate test scenarios automatically from uploaded documents.
-- Watch generation progress stream live.
-
-**Scenario Management.** Build and manage the conversations you test, manually or with AI.
-
-- Create scenarios manually with title, description, and expected behavior, or generate them from knowledge sources.
-- Define custom pass/fail validation criteria per scenario.
-- Add special instructions, assign personas, and link test data profiles.
-
-**Test Suites.** Group related scenarios and track results over time, with run history and status filtering.
-
-**Endpoint Profiles.** Configure how the platform connects to your agent's API.
-
-- Import a Postman collection or configure endpoints manually via JSON.
-- Set up multi-phase execution: suite setup (login/auth), scenario setup (session creation), and chat.
-- Manage static, auto-generated, and extracted variables, with retry, caching, endpoint testing, and import/export.
-
-**Test Profiles.** Reusable key-value test data with typed fields, default profiles, and JSON import/export, injected at runtime for data-driven testing.
-
-**Data Validation.** Check the facts your agent states during a conversation, such as a price, an order status, or a delivery date, against your own system of record through read-only API lookups, with a Pass, Fail, or Cannot verify verdict per fact. See [Data Validation](#data-validation) for the setup.
-
-**Playground.** Interactively test your agent before a full run, with multi-turn chat, cURL connection testing, and request/response schema analysis.
-
-**Evaluation Execution.** Run evaluations at scale with metric selection, endpoint profile selection, HyperExecute integration with tunnel support for private agents, and real-time streaming over server-sent events.
-
-**Metric Threshold Configuration.** Set a minimum score (0.0 to 1.0) per metric, configure higher or lower is better, and save named threshold configurations.
-
-**Go-Live Assessment.** Get a Green, Yellow, or Red production readiness verdict with an overall score (0 to 100), confidence level, dimension scores, scenario coverage, risk assessment, and AI recommendations.
-
-**Scheduled Runs.** Automate regression coverage with cron-based scheduling, IANA timezones, pause and resume, and run history.
+- **Knowledge base.** Your uploaded and linked sources become the project's own isolated knowledge base, used as the ground truth for scenario generation, conversations, and evaluation.
+- **Healthcare knowledge packs.** Packs return UMLS vocabulary codes (ICD-10-CM, SNOMED CT, LOINC), and the **Turns** tab shows which pack lookups the simulator used on each turn.
+- **Scenario settings.** Link a test profile to a scenario to run it with specific test data, and give it its own maximum turns, which takes priority over the suite default.
+- **Endpoint profiles.** If your agent needs more than one request, such as a login or a new session before the chat, connect it with an endpoint profile instead of a single cURL command. Import a Postman collection or define it in JSON, then set up the suite setup, scenario setup, and chat phases. Variables can be static, generated, extracted with JSONPath, secret, or taken from a test profile, with retry, response caching, and timeouts. A credential in an imported collection triggers the **Move to vault** banner.
+- **Test profiles.** Reusable key-value test data with typed fields, a default profile, and JSON import and export, injected at run time for data-driven testing. See [Test Suites and Test Profiles](/support/docs/agent-features-and-metrics/#test-suites-and-test-profiles).
+- **Playground.** Test your agent interactively before a full run, with multi-turn chat, cURL connection testing, and request and response schema detection.
+- **HyperExecute and tunnels.** Evaluations run at scale on HyperExecute, with a tunnel for agents behind a firewall, and progress streams live during the run.
+- **Go-Live Assessment.** A Green, Yellow, or Red verdict on whether your agent is ready for production, with a confidence level, dimension scores, scenario coverage, risk assessment, and AI recommendations. See [Go-Live Assessment](/support/docs/agent-features-and-metrics/#go-live-assessment).
+- **Scheduled runs.** Besides **Schedule Run Evaluation** in Step 6, you can select **Schedule Run** from the dropdown next to a suite's **Run** button. Schedules run in your local time zone, and you stop one by deleting the scheduled run. See [Scheduled Runs](/support/docs/agent-features-and-metrics/#scheduled-runs).
 
 ## Metrics
 
@@ -247,6 +231,13 @@ Chat agents are evaluated on 9 quality metrics, each scored on a 0 to 100% scale
 | 9 | File Generation Accuracy | Accuracy of generated files against requirements, if applicable |
 
 Every evaluation result includes the overall score, per-metric scores with pass or fail badges, detailed analysis, the full multi-turn transcript, identified strengths, areas for improvement, actionable recommendations, and validation criteria results.
+
+### Metric Thresholds and Custom Metrics
+
+Both are set in the **Configs** tab, under the **Metric Thresholds** and **Custom Metrics** sub-tabs.
+
+- **Metric Thresholds:** set a minimum passing score (0 to 100%) for each metric, choose whether higher or lower is better, and save named configurations. Scheduled runs use the active configuration.
+- **Custom Metrics:** define project-specific checks and apply them to all scenarios or selected ones. **Suggest examples** drafts metrics from your scenarios. Grades appear under **Validation Criteria** with an explanation, the evidence turns, and a Pass/Fail override, and each custom metric can gate the overall score.
 
 ## Data Validation
 

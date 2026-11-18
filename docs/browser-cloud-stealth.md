@@ -119,9 +119,8 @@ detectable fingerprints that these systems check for:
 - Identical user-agent strings across all sessions
 - Inhuman interaction speeds - instant clicks, perfectly uniform typing
 
-Stealth mode in the TestMu AI Browser SDK removes or fakes these fingerprints, so
-the cloud browser is indistinguishable from a regular human user's Chrome
-session.
+Stealth mode in the TestMu AI Browser SDK removes or fakes these fingerprints. This is
+best-effort stealth that reduces bot detection; some sites may still detect automation.
 
 
 ## Enabling Stealth

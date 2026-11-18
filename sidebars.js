@@ -1135,11 +1135,18 @@ module.exports = {
         items: [
           { type: "doc", label: "Chat Agent Testing", id: "chat-agent" },
           { type: "doc", label: "Voice Agent Testing", id: "voice-agent" },
-          { type: "doc", label: "Video Agent Testing", id: "video-agent" },
           { type: "doc", label: "Phone Agent Testing", id: "phone-agent" },
-          { type: "doc", label: "Inbound Phone Agent Testing", id: "inbound-phone-agent" },
-          { type: "doc", label: "Outbound Phone Agent Testing", id: "outbound-phone-agent" },
+          { type: "doc", label: "IVR Agent Testing", id: "ivr-agent" },
+          { type: "doc", label: "Video Agent Testing", id: "video-agent" },
           { type: "doc", label: "Image Analyzer Testing", id: "image-analyzer" },
+        ],
+      },
+      {
+        type: "category",
+        label: "Features",
+        collapsed: true,
+        items: [
+          { type: "doc", label: "Performance Testing (Inbound)", id: "phone-agent-performance-testing" },
         ],
       },
       {
@@ -1894,6 +1901,31 @@ module.exports = {
                 type: "doc",
                 label: "Hover and Tooltips",
                 id: "accessibility-guided-test-hover-tooltips",
+              },
+              {
+                type: "doc",
+                label: "Layout",
+                id: "accessibility-guided-test-layout",
+              },
+              {
+                type: "doc",
+                label: "Forms",
+                id: "accessibility-guided-test-forms",
+              },
+              {
+                type: "doc",
+                label: "Tables",
+                id: "accessibility-guided-test-tables",
+              },
+              {
+                type: "doc",
+                label: "Modals",
+                id: "accessibility-guided-test-modals",
+              },
+              {
+                type: "doc",
+                label: "Responsiveness",
+                id: "accessibility-guided-test-responsiveness",
               },
             ],
           },
@@ -2961,7 +2993,6 @@ module.exports = {
           { type: "doc", id: "migrate-playwright-tests" },
           { type: "doc", id: "playwright-test-execution-setup" },
           { type: "doc", id: "playwright-bundled-browser-support" },
-          { type: "doc", id: "playwright-caps" },
         ],
       },
       {
@@ -3165,6 +3196,7 @@ module.exports = {
               "device-passcode-appautomation",
               "certificate-injection-appautomation",
               "set-device-dark-mode",
+              "gesture-navigation-appautomation",
               "smart-heal-appium",
               "apple-pay-auto",
               "button-text-click",

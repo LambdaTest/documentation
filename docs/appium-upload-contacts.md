@@ -206,7 +206,7 @@ desired_capabilities = {
 ```
 
 :::note
-- Each automation session permits a maximum of five file uploads.
+- Each automation session permits a maximum of 10 file uploads. Passing more than 10 media IDs in `uploadMedia` returns an error and the session does not start.
 - The contact file must be in vCard (`.vcf`) format.
 - Maximum file size is 5 MB with up to 100 contacts per file.
 :::

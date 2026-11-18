@@ -107,3 +107,4 @@ You can change any answer on the summary screen.
 - [Keyboard Guided Test](/support/docs/accessibility-guided-test-keyboard/)
 - [Interactive Elements Guided Test](/support/docs/accessibility-guided-test-interactive-elements/)
 - [Hover and Tooltips Guided Test](/support/docs/accessibility-guided-test-hover-tooltips/)
+- [Layout Guided Test](/support/docs/accessibility-guided-test-layout/)

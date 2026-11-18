@@ -106,9 +106,9 @@ function Section({ icon, title, tag, blurb, children, id }) {
 // Product lines in the order they appear below, used to build the ToC.
 // Keep this list in sync with the <Section> titles in the catalog.
 const SECTION_NAV = [
-  'Web Automation', 'App Automation', 'HyperExecute', 'Performance Testing', 'Insights',
-  'Browser Cloud', 'SmartUI', 'KaneAI', 'Kane CLI', 'Web Scanner', 'Agent Testing',
-  'Agent Assurance', 'Test Manager', 'Accessibility Testing', 'Real Time', 'Real Device',
+  'KaneAI', 'Kane CLI', 'Agent Testing', 'Agent Assurance', 'Test Manager', 'SmartUI',
+  'HyperExecute', 'Performance Testing', 'Accessibility Testing', 'Web Scanner',
+  'Web Automation', 'App Automation', 'Insights', 'Real Time', 'Real Device',
   'Integrations', 'Localhost Testing', 'Settings and Security', 'Other Docs',
 ];
 
@@ -198,70 +198,6 @@ export default function Home() {
         <div className="prodCatalog">
           <div className="prodCatalog_body">
 
-          <Section icon={{ light: 'automation-light-icon.svg', dark: 'automation-dark-icon.svg' }} title="Web Automation" blurb="Run automated browser tests at scale with Selenium, Cypress, Playwright, and more.">
-            <Card href="/support/docs/testmu-running-your-first-selenium-test/" title="Selenium Testing" desc="Run Selenium tests on cloud grid" />
-            <Card href="/support/docs/getting-started-with-cypress-testing/" title="Cypress Testing" desc="Run Cypress tests across browsers" />
-            <Card href="/support/docs/playwright-testing/" title="Playwright Testing" desc="Scale Playwright tests in parallel" />
-            <Card href="/support/docs/puppeteer-testing/" title="Puppeteer Testing" desc="Automate Chrome with Puppeteer online" />
-            <Card href="/support/docs/k6-browser-testing/" title="K6 Testing" desc="Browser performance testing with K6" />
-            <Card href="/support/docs/run-tests-with-chrome-devtools-protocol/" title="CDP Testing" desc="Automate via Chrome DevTools Protocol" />
-            <Card href="/support/docs/run-tests-with-webdriver-bidi/" title="BiDi Testing" desc="Cross-browser automation with WebDriver BiDi" />
-          </Section>
-
-          <Section icon={{ light: 'appAutomation-light-icon.svg', dark: 'appAutomation-dark-icon.svg' }} title="App Automation" blurb="Automate native and hybrid app tests with Appium, Espresso, XCUITest, and more.">
-            <Card href="/support/docs/getting-started-with-appium-testing/" title="Appium Testing" desc="Automate native apps with Appium" />
-            <Card href="/support/docs/getting-started-with-espresso-testing/" title="Espresso Testing" desc="Android UI testing with Espresso" />
-            <Card href="/support/docs/getting-started-with-xcuitest/" title="XCUI Testing" desc="iOS UI testing with XCUITest" />
-            <Card href="/support/docs/mobilewright-overview/" title="Mobilewright Testing" desc="Playwright-style tests on real devices" />
-            <Card href="/support/docs/getting-started-with-flutter-dart-android-automation/" title="Flutter Testing" desc="Automate Flutter apps on devices" />
-            <Card href="/support/docs/app-automation-on-emulators-simulators/" title="Virtual Devices" desc="Test on emulators and simulators" />
-          </Section>
-
-          <Section icon={{ light: 'hyp-light-icon.svg', dark: 'hyp-dark-icon.svg' }} title="HyperExecute" blurb="AI-native test orchestration that runs suites up to 70% faster than traditional grids.">
-            <Card href="/support/docs/getting-started-with-hyperexecute/" title="Getting Started" desc="Set up your first job" />
-            <Card href="/support/docs/key-features-of-hyperexecute/" title="Features" desc="Explore key HyperExecute capabilities" />
-            <Card href="/support/docs/hyperexecute-yaml-parameters/" title="HyperExecute YAML" desc="Configure runs with YAML parameters" />
-            <Card href="/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/" title="HyperExecute CLI" desc="Trigger jobs from the CLI" />
-            <Card href="/support/docs/hyperexecute-mcp-server/" title="HyperExecute MCP" desc="Run HyperExecute via MCP server" />
-            <Card href="/support/docs/hyperexecute-private-cloud-setup/" title="Private Cloud" desc="Deploy HyperExecute in private cloud" />
-          </Section>
-
-          <Section icon={{ light: 'performance-light-icon.svg', dark: 'performance-dark-icon.svg' }} title="Performance Testing" blurb="Run JMeter, Gatling and k6 load tests on scalable cloud infrastructure." tag="NEW">
-            <Card href="/support/docs/hyperexecute-performance-testing/" title="Getting Started" desc="Start load and performance testing" />
-            <Card href="/support/docs/hyperexecute-run-jmeter-tests/" title="JMeter Testing" desc="Run JMeter tests at scale" />
-            <Card href="/support/docs/hyperexecute-gattling-testing/" title="Gatling Testing" desc="Run Gatling load tests on cloud" />
-            <Card href="/support/docs/hyperexecute-k6-ui-testing/" title="k6 Testing" desc="Run k6 load tests at scale" />
-          </Section>
-
-          <Section icon={{ light: 'analytics-light-icon.svg', dark: 'analytics-dark-icon.svg' }} title="Insights" blurb="Track quality trends with dashboards, analytics, and AI-powered insights.">
-            <Card href="/support/docs/analytics-dashboard-templates/" title="Pre-built Dashboards" desc="Ready-made analytics dashboard templates" />
-            <Card href="/support/docs/analytics-create-dashboard/" title="Custom Dashboards" desc="Build your own analytics dashboards" />
-            <Card href="/support/docs/analytics-widgets/" title="Widgets" desc="Add widgets to track metrics" />
-            <Card href="/support/docs/analytics-dashboard-copilot/" title="Dashboard CoPilot AI" desc="Generate dashboards with AI assistance" />
-            <Card href="/support/docs/analytics-test-case-insights/" title="Test Case Insights" desc="Analyze test case performance trends" />
-            <Card href="/support/docs/analytics-build-comparison/" title="Build Insights" desc="Compare and analyze build results" />
-            <Card href="/support/docs/analytics-modules-test-intelligence-flaky-test-analytics/" title="Flaky Test Insights" desc="Detect and track flaky tests" />
-            <Card href="/support/docs/analytics-modules-test-intelligence-command-logs-analytics/" title="Command Logs Insights" desc="Analyze command logs across runs" />
-          </Section>
-
-          <Section icon={{ light: 'browserCloud-light-icon.svg', dark: 'browserCloud-dark-icon.svg' }} title="Browser Cloud" blurb="Cloud browser infrastructure purpose-built for AI agents." tag="NEW">
-            <Card href="/support/docs/what-is-browser-cloud/" title="What is Browser Cloud" desc="Cloud browsers built for agents" />
-            <Card href="/support/docs/launch-first-session/" title="Launch Session With SDK" desc="Start a session using SDK" />
-            <Card href="/support/docs/browser-cloud-skills/" title="Launch With Agent Skills" desc="Launch sessions with agent skills" />
-            <Card href="/support/docs/connect-to-session/" title="Connect to a Session" desc="Connect to a running session" />
-          </Section>
-
-          <Section icon={{ light: 'visual-light-icon.svg', dark: 'visual-dark-icon.svg' }} title="SmartUI" blurb="Catch visual regressions with pixel-perfect screenshot comparison.">
-            <Card href="/support/docs/smart-visual-regression-testing/" title="Getting Started" desc="Start visual regression testing fast" />
-            <Card href="/support/docs/smartui-selenium-js-sdk/" title="Explore SDKs" desc="Integrate SmartUI with your SDK" />
-            <Card href="/support/docs/smartui-cli/" title="CLI" desc="Run visual tests from CLI" />
-            <Card href="/support/docs/smartui-upload-api-v2/" title="Upload Screenshots" desc="Upload screenshots via the API" />
-            <Card href="/support/docs/smartui-pdf-comparison/" title="Smart PDF Comparison" desc="Compare PDFs for visual changes" />
-            <Card href="/support/docs/smart-ui-build-options/" title="Build Config and Options" desc="Configure builds and comparison settings" />
-            <Card href="/support/docs/test-settings-options/" title="Advance Comparison Options" desc="Fine-tune visual comparison settings" />
-            <Card href="/support/docs/html-dom-smartui-options/" title="Handling Dynamic Data" desc="Ignore dynamic content during comparison" />
-          </Section>
-
           <Section icon={{ light: 'kaneai-light-icon.svg', dark: 'kaneai-dark-icon.svg' }} title="KaneAI" blurb="Plan, author, and evolve tests end-to-end using natural language.">
             <Card href="/support/docs/getting-started-with-kane-ai/" title="Getting Started" desc="Create tests with natural language" />
             <Card href="/support/docs/author-your-first-desktop-browser-test/" title="Author Desktop Browser Test" desc="Author a desktop browser test" />
@@ -281,16 +217,6 @@ export default function Home() {
             <Card href="/docs/kane-cli-checkpoints" title="Checkpoints" desc="Add visual and data checkpoints" />
             <Card href="/docs/kane-cli-agent-mode" title="Agent Mode" desc="Run tests in agent mode" />
             <Card href="/docs/kane-cli-cli-reference" title="CLI Reference" desc="Full command-line reference guide" />
-          </Section>
-
-          <Section icon={{ light: 'webscanner-light-icon.svg', dark: 'webscanner-dark-icon.svg' }} title="Web Scanner" blurb="Automatically scan websites for visual and accessibility issues.">
-            <Card href="/support/docs/web-scanner-overview/" title="Overview" desc="Scan sites for UI issues" />
-            <Card href="/support/docs/web-scanner-getting-started/" title="Getting Started" desc="Set up your first scan" />
-            <Card href="/support/docs/web-scanner-visual-scan/" title="Visual UI Scans" desc="Catch visual UI regressions automatically" />
-            <Card href="/support/docs/web-scanner-accessibility-scan/" title="Accessibility Scans" desc="Scan pages for accessibility issues" />
-            <Card href="/support/docs/web-scanner-adding-urls/" title="Adding URLs" desc="Add URLs to your scans" />
-            <Card href="/support/docs/web-scanner-scheduling-options/" title="Scheduling Options" desc="Schedule scans to run automatically" />
-            <Card href="/support/docs/web-scanner-edit-clone-scans/" title="Edit and Clone Scans" desc="Change or copy an existing scan" />
           </Section>
 
           <Section icon={{ light: 'agentTesting-light-icon.svg', dark: 'agentTesting-dark-icon.svg' }} title="Agent Testing" blurb="Validate AI chat, voice, phone, image, and video agents end-to-end.">
@@ -320,6 +246,33 @@ export default function Home() {
             <Card href="/support/docs/link-jira-issues-with-test-manager/" title="Issue Tracker Integration" desc="Link issues to your tests" />
           </Section>
 
+          <Section icon={{ light: 'visual-light-icon.svg', dark: 'visual-dark-icon.svg' }} title="SmartUI" blurb="Catch visual regressions with pixel-perfect screenshot comparison.">
+            <Card href="/support/docs/smart-visual-regression-testing/" title="Getting Started" desc="Start visual regression testing fast" />
+            <Card href="/support/docs/smartui-selenium-js-sdk/" title="Explore SDKs" desc="Integrate SmartUI with your SDK" />
+            <Card href="/support/docs/smartui-cli/" title="CLI" desc="Run visual tests from CLI" />
+            <Card href="/support/docs/smartui-upload-api-v2/" title="Upload Screenshots" desc="Upload screenshots via the API" />
+            <Card href="/support/docs/smartui-pdf-comparison/" title="Smart PDF Comparison" desc="Compare PDFs for visual changes" />
+            <Card href="/support/docs/smart-ui-build-options/" title="Build Config and Options" desc="Configure builds and comparison settings" />
+            <Card href="/support/docs/test-settings-options/" title="Advance Comparison Options" desc="Fine-tune visual comparison settings" />
+            <Card href="/support/docs/html-dom-smartui-options/" title="Handling Dynamic Data" desc="Ignore dynamic content during comparison" />
+          </Section>
+
+          <Section icon={{ light: 'hyp-light-icon.svg', dark: 'hyp-dark-icon.svg' }} title="HyperExecute" blurb="AI-native test orchestration that runs suites up to 70% faster than traditional grids.">
+            <Card href="/support/docs/getting-started-with-hyperexecute/" title="Getting Started" desc="Set up your first job" />
+            <Card href="/support/docs/key-features-of-hyperexecute/" title="Features" desc="Explore key HyperExecute capabilities" />
+            <Card href="/support/docs/hyperexecute-yaml-parameters/" title="HyperExecute YAML" desc="Configure runs with YAML parameters" />
+            <Card href="/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/" title="HyperExecute CLI" desc="Trigger jobs from the CLI" />
+            <Card href="/support/docs/hyperexecute-mcp-server/" title="HyperExecute MCP" desc="Run HyperExecute via MCP server" />
+            <Card href="/support/docs/hyperexecute-private-cloud-setup/" title="Private Cloud" desc="Deploy HyperExecute in private cloud" />
+          </Section>
+
+          <Section icon={{ light: 'performance-light-icon.svg', dark: 'performance-dark-icon.svg' }} title="Performance Testing" blurb="Run JMeter, Gatling and k6 load tests on scalable cloud infrastructure." tag="NEW">
+            <Card href="/support/docs/hyperexecute-performance-testing/" title="Getting Started" desc="Start load and performance testing" />
+            <Card href="/support/docs/hyperexecute-run-jmeter-tests/" title="JMeter Testing" desc="Run JMeter tests at scale" />
+            <Card href="/support/docs/hyperexecute-gattling-testing/" title="Gatling Testing" desc="Run Gatling load tests on cloud" />
+            <Card href="/support/docs/hyperexecute-k6-ui-testing/" title="k6 Testing" desc="Run k6 load tests at scale" />
+          </Section>
+
           <Section icon={{ light: 'accessibility-light.svg', dark: 'accessibility-dark.svg' }} title="Accessibility Testing" blurb="Find, fix, and prevent accessibility issues across web and mobile apps.">
             <Card href="/support/docs/accessibility-testing/" title="Getting Started" desc="Start accessibility testing your sites" />
             <Card href="/support/docs/accessibility-devtools/" title="Accessibility DevTools" desc="Scan pages with DevTools extension" />
@@ -328,6 +281,47 @@ export default function Home() {
             <Card href="/support/docs/accessibility-app-scanner/" title="Native App Scanner" desc="Scan native apps for accessibility" />
             <Card href="/support/docs/accessibility-native-app-automation-test/" title="Native App Automation" desc="Automate native app accessibility checks" />
             <Card href="/support/docs/screen-reader-on-accessibility/" title="Screen Reader" desc="Test with real screen readers" />
+          </Section>
+
+          <Section icon={{ light: 'webscanner-light-icon.svg', dark: 'webscanner-dark-icon.svg' }} title="Web Scanner" blurb="Automatically scan websites for visual and accessibility issues.">
+            <Card href="/support/docs/web-scanner-overview/" title="Overview" desc="Scan sites for UI issues" />
+            <Card href="/support/docs/web-scanner-getting-started/" title="Getting Started" desc="Set up your first scan" />
+            <Card href="/support/docs/web-scanner-visual-scan/" title="Visual UI Scans" desc="Catch visual UI regressions automatically" />
+            <Card href="/support/docs/web-scanner-accessibility-scan/" title="Accessibility Scans" desc="Scan pages for accessibility issues" />
+            <Card href="/support/docs/web-scanner-adding-urls/" title="Adding URLs" desc="Add URLs to your scans" />
+            <Card href="/support/docs/web-scanner-scheduling-options/" title="Scheduling Options" desc="Schedule scans to run automatically" />
+            <Card href="/support/docs/web-scanner-edit-clone-scans/" title="Edit and Clone Scans" desc="Change or copy an existing scan" />
+          </Section>
+
+          <Section icon={{ light: 'automation-light-icon.svg', dark: 'automation-dark-icon.svg' }} title="Web Automation" blurb="Run automated browser tests at scale with Selenium, Cypress, Playwright, and more.">
+            <Card href="/support/docs/testmu-running-your-first-selenium-test/" title="Selenium Testing" desc="Run Selenium tests on cloud grid" />
+            <Card href="/support/docs/getting-started-with-cypress-testing/" title="Cypress Testing" desc="Run Cypress tests across browsers" />
+            <Card href="/support/docs/playwright-testing/" title="Playwright Testing" desc="Scale Playwright tests in parallel" />
+            <Card href="/support/docs/puppeteer-testing/" title="Puppeteer Testing" desc="Automate Chrome with Puppeteer online" />
+            <Card href="/support/docs/k6-browser-testing/" title="K6 Testing" desc="Browser performance testing with K6" />
+            <Card href="/support/docs/run-tests-with-chrome-devtools-protocol/" title="CDP Testing" desc="Automate via Chrome DevTools Protocol" />
+            <Card href="/support/docs/run-tests-with-webdriver-bidi/" title="BiDi Testing" desc="Cross-browser automation with WebDriver BiDi" />
+            <Card href="/support/docs/what-is-browser-cloud/" title="Browser Cloud" desc="Cloud browsers built for AI agents" />
+          </Section>
+
+          <Section icon={{ light: 'appAutomation-light-icon.svg', dark: 'appAutomation-dark-icon.svg' }} title="App Automation" blurb="Automate native and hybrid app tests with Appium, Espresso, XCUITest, and more.">
+            <Card href="/support/docs/getting-started-with-appium-testing/" title="Appium Testing" desc="Automate native apps with Appium" />
+            <Card href="/support/docs/getting-started-with-espresso-testing/" title="Espresso Testing" desc="Android UI testing with Espresso" />
+            <Card href="/support/docs/getting-started-with-xcuitest/" title="XCUI Testing" desc="iOS UI testing with XCUITest" />
+            <Card href="/support/docs/mobilewright-overview/" title="Mobilewright Testing" desc="Playwright-style tests on real devices" />
+            <Card href="/support/docs/getting-started-with-flutter-dart-android-automation/" title="Flutter Testing" desc="Automate Flutter apps on devices" />
+            <Card href="/support/docs/app-automation-on-emulators-simulators/" title="Virtual Devices" desc="Test on emulators and simulators" />
+          </Section>
+
+          <Section icon={{ light: 'analytics-light-icon.svg', dark: 'analytics-dark-icon.svg' }} title="Insights" blurb="Track quality trends with dashboards, analytics, and AI-powered insights.">
+            <Card href="/support/docs/analytics-dashboard-templates/" title="Pre-built Dashboards" desc="Ready-made analytics dashboard templates" />
+            <Card href="/support/docs/analytics-create-dashboard/" title="Custom Dashboards" desc="Build your own analytics dashboards" />
+            <Card href="/support/docs/analytics-widgets/" title="Widgets" desc="Add widgets to track metrics" />
+            <Card href="/support/docs/analytics-dashboard-copilot/" title="Dashboard CoPilot AI" desc="Generate dashboards with AI assistance" />
+            <Card href="/support/docs/analytics-test-case-insights/" title="Test Case Insights" desc="Analyze test case performance trends" />
+            <Card href="/support/docs/analytics-build-comparison/" title="Build Insights" desc="Compare and analyze build results" />
+            <Card href="/support/docs/analytics-modules-test-intelligence-flaky-test-analytics/" title="Flaky Test Insights" desc="Detect and track flaky tests" />
+            <Card href="/support/docs/analytics-modules-test-intelligence-command-logs-analytics/" title="Command Logs Insights" desc="Analyze command logs across runs" />
           </Section>
 
           <Section icon={{ light: 'Realtime-light-icon.svg', dark: 'Realtime-dark-icon.svg' }} title="Real Time" blurb="Live, interactive manual testing across real browsers and virtual devices.">

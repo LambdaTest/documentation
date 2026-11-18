@@ -3,7 +3,7 @@ id: kaneai-advanced-settings
 title: Advanced Settings in KaneAI Test Case
 hide_title: false
 sidebar_label: Advanced Settings
-description: Learn how to edit advanced settings for your KaneAI test cases from the test summary page across desktop web, mobile app, and mobile web platforms.
+description: Configure iOS app permissions during authoring and edit advanced settings for KaneAI test cases across desktop web, mobile app, and mobile web platforms.
 keywords:
   - kaneai advanced settings
   - edit advanced settings
@@ -13,6 +13,7 @@ keywords:
   - custom headers
   - timezone
   - resolution
+  - ios app permissions
   - version history
   - kaneai test summary
 url: https://www.testmuai.com/support/docs/kaneai-advanced-settings/
@@ -36,7 +37,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       "@id": "https://www.testmuai.com/support/docs/kaneai-advanced-settings/"
     },
     "headline": "Advanced Settings in KaneAI Test Case",
-    "description": "Learn how to edit advanced settings for your KaneAI test cases from the test summary page across desktop web, mobile app, and mobile web platforms.",
+    "description": "Configure iOS app permissions during authoring and edit advanced settings for KaneAI test cases across desktop web, mobile app, and mobile web platforms.",
     "url": "https://www.testmuai.com/support/docs/kaneai-advanced-settings/",
     "image": {
       "@type": "ImageObject",
@@ -77,7 +78,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-11-03"
+    "dateModified": "2026-11-12"
   }) }}
 />
 
@@ -124,7 +125,9 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 KaneAI allows you to edit the advanced settings of an existing test case directly from the **Test Summary** page. This gives you the flexibility to update configurations like network settings, resolution, timezone, Chrome options, and custom headers after a test has already been authored, without having to recreate it from scratch.
 
-This feature is supported across all platforms: **Desktop Web**, **Mobile App**, and **Mobile Web**.
+When authoring an iOS mobile app test, you can also configure [App Permissions](#ios-app-permissions) in **Advanced Settings** before starting the session.
+
+Editing advanced settings is supported across **Desktop Web**, **Mobile App**, and **Mobile Web**. Individual settings depend on the platform.
 
 ## Overview
 
@@ -193,6 +196,7 @@ For more details on mobile app capabilities like biometric authentication, image
 |---|---|---|
 | **Network Configuration** | Dropdown (Tunnel / Inactive) | Select tunnel or proxy |
 | **GPS Location** | Toggle + lat/long input | Mock GPS coordinates on real device |
+| **App Permissions** | Dropdowns per permission | Configure app permissions at session start for native iOS apps on real devices running iOS 16 or later. See [iOS App Permissions](#ios-app-permissions). |
 
 **Session settings:**
 
@@ -210,6 +214,42 @@ For more details on mobile app capabilities like biometric authentication, image
 | **Timezone** | Dropdown | Set timezone |
 | **Language** | Dropdown | Set language |
 
+#### iOS App Permissions
+
+Use **App Permissions** to configure access to location, camera, photos, and contacts for a native iOS app. This feature requires a **real device running iOS 16 or later**.
+
+1. Select your iOS app build and a supported real device for authoring.
+2. Open **Advanced Settings** and find **App Permissions**.
+3. Choose the permissions your test needs from the options below. Leave a permission at **No change** to preserve the app's normal permission behavior.
+4. Start the authoring session. KaneAI applies the selected permissions during session startup and relaunches the app after applying them.
+5. Author and save your test case. The saved permissions are reused in subsequent Test Runs and reruns.
+
+<img loading="lazy" src={require('../assets/images/kane-ai/features/edit-advanced-settings/ios-app-permissions.png').default} alt="App Permissions in KaneAI iOS Advanced Settings, showing Location, nested Precise Location, Camera, Photos, and Contacts" className="doc_img"/>
+
+| Permission | iOS 16–17 options | iOS 18 and later options |
+|---|---|---|
+| **Location** | Never, Ask next time, While using the app, Always | Never, Ask next time, While using the app, Always |
+| **Precise Location** | On, Off | On, Off |
+| **Camera** | On, Off | On, Off |
+| **Photos** | None, Selected photos, All photos | None, Limited access, Full access |
+| **Contacts** | On, Off | None, Limited access, Full access |
+
+All permissions also offer **No change**, which is the default. **Precise Location** is nested under **Location** and is available when you select a Location value other than **Never** or **No change**. For a test that needs an exact location while using the app, select **Location: While using the app** and **Precise Location: On**.
+
+**Location** controls whether the app can access location data. To choose the coordinates the device reports, configure [GPS Location](/support/docs/kaneai-gps-location/) separately. App Permissions also operate independently of **Auto-Accept Alerts** and **Auto-Dismiss Alerts**.
+
+For more details about iOS permissions and settings in App Automation, see [iOS App Settings](/support/docs/appium-ios-app-settings/).
+
+To change permissions for a saved test, open **Test Summary → Edit Test Steps → Advanced Settings**, update **App Permissions**, and [save a new version](#step-4-save-your-changes). Subsequent Test Runs use the updated saved configuration. Permissions cannot be overridden when creating or executing a Test Run, or changed during an active session.
+
+**Limitations and session behavior:**
+
+- **Supported platforms:** App Permissions are available only for native iOS apps on real devices running iOS 16 or later. Android apps, iOS mobile browsers, desktop browsers, iOS virtual devices, and iOS 15 or earlier are unsupported. Custom app preferences, such as an app's environment setting, are not supported through App Permissions.
+- **Startup time:** Applying permissions adds approximately one minute to session startup. Configuring multiple permissions can increase this delay.
+- **Permissions not applied:** If a permission cannot be applied, the session still starts and displays a warning identifying the affected permission. For example, a permission may be unavailable in iOS Settings until the app has requested it. Review the warning before continuing with steps that depend on that permission.
+- **iOS version compatibility:** Choose options supported by the device used for execution. For example, **Full access** for Photos and Contacts requires iOS 18 or later. If a test saved with these values runs on iOS 16 or 17, the unsupported permissions are shown as **Not Applied**.
+- **Reset Session:** Reinstalls the app and resets all permissions to **Not Asked**. Configured permissions are applied only at session start; resetting does not preserve the applied permission state.
+
 ### Android Web
 
 Android Web test cases share most settings with [Android App](#android-app), with the following differences:
@@ -223,6 +263,8 @@ iOS Web test cases share most settings with [iOS App](#ios-app), with the follow
 
 - **Custom Headers** is available (Toggle + multi-input, add up to 10 custom HTTP headers)
 - **Biometric Authentication**, **Image Injection**, and **Video Injection** are **not** available
+
+**App Permissions** are exclusive to native iOS app tests and are not available for iOS Web.
 
 ## How to Edit Advanced Settings
 
@@ -246,6 +288,7 @@ Update the settings as needed. For example, you can:
 - Toggle **Chrome Options** on or off and add command-line switches.
 - Enable **Custom Headers** and add HTTP headers for your test.
 - Change the **Environment** the test is authored against.
+- Update **App Permissions** for a native iOS app test on a supported real device.
 
 Settings that have been modified will display an **Edited** badge next to them.
 

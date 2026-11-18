@@ -85,7 +85,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 | [Test Rail Integration With <BrandName />](/docs/testrail-integration-with-testmu-selenium-grid/) |
 |:--------------------------------------------------------------------------------------------:|
 
-| [Calliope Integration With LambdaTest](https://github.com/LambdaTest/LambdaTest-Calliope-Integration/tree/master) |
+| [Calliope Integration With <BrandName />](https://github.com/LambdaTest/LambdaTest-Calliope-Integration/tree/master) |
 |:-----------------------------------------------------------------------------------------------------------------:|
 
 | [Zebrunner Integration With <BrandName />](/docs/zebrunner-integration/) |

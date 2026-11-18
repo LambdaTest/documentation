@@ -89,7 +89,8 @@ Useful run controls include:
 - --phases prepare,open,execute,close to stop before delayed evidence collection, then --run &lt;run-id&gt; --phases collect,judge to continue that run in place.
 - --skip to omit a phase suffix when a verdict or collected evidence is intentionally not needed yet.
 - --resume &lt;run-id&gt; to reuse compatible completed verdicts and judge surviving responses that were not graded.
-- --rca to explain failure clusters and recommend changes. RCA costs additional credits.
+- --rca to also explain **Unable to Verify** results. Since 0.1.20, a run explains its failure clusters and recommends changes by default. RCA costs additional credits.
+- --no-rca to skip that explanation and spend no credits on it.
 
 ## Evidence That Preserves Uncertainty
 

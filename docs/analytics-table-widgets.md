@@ -442,4 +442,4 @@ After creating your table widget:
 
 ## Support
 
-If you have any questions or need assistance with creating table widgets, please reach out to our [24/7 customer support](mailto:support@testmuai.com) or visit our [Support Center](https://www.testmuai.com/support/).
+If you have any questions or need assistance with creating table widgets, please reach out to our [24/7 customer support](mailto:support@testmuai.com) or visit our [Support Center](https://www.testmuai.com/support/docs/).

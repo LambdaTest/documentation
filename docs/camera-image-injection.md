@@ -3,7 +3,7 @@ id: camera-image-injection
 title: Camera Image Injection
 hide_title: true
 sidebar_label: Camera Image Injection
-description: Simulate camera input to test camera-based features like QR scanning and document capture without needing physical devices.
+description: Simulate camera input in apps and mobile browsers to test QR scanning, KYC selfie and document capture without needing physical devices.
 keywords:
   - image injection
   - app test automation
@@ -15,6 +15,8 @@ keywords:
   - app testing appium
   - app testing
   - real devices
+  - mobile browser image injection
+  - web camera injection
 url: https://www.testmuai.com/support/docs/camera-image-injection/
 site_name: TestMu AI
 slug: camera-image-injection/
@@ -306,3 +308,136 @@ You need to first add a logic to inject the uploaded image in the script. Therea
 > 📕 Check the [documentation for Camera Image Injection](/support/docs/camera-image-injection-on-real-devices/) feature in Manual App Testing on Real devices
 
 
+
+## Image Injection on Mobile Browsers and In-App Web Pages
+
+Image injection also works on **web pages** that open the device camera, such as KYC selfie and ID capture steps, document scanners, and QR scanners. The web page sees your uploaded image as a camera named **LambdaTest Injected Camera**, instead of the real device camera.
+
+You use the same media upload, the same `enableImageInjection` and `media` capabilities, and the same `lambda-image-injection` hook as native app image injection. No new capabilities or SDK are required.
+
+:::note Enablement Required
+Image injection for mobile browsers and in-app web pages is enabled per organization. If your web session with `enableImageInjection` is refused, the feature is not yet switched on for your account. Native app image injection is not affected either way.
+
+To unlock this feature, please contact your <BrandName /> support representative, reach out to our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**[24×7 Chat Support]**</span>, or email us at **support@testmuai.com**.
+:::
+
+### Supported browsers and surfaces
+
+| Platform | Browser or surface | Automation | Notes |
+|---|---|---|---|
+| Android | **Chrome** | ✅ Web Automation | Chrome is used when `browserName` is omitted. |
+| Android | **Web pages inside native apps** (KYC SDKs, hybrid apps) | ✅ App Automation | Use the native app image injection capabilities. |
+| iOS | **Safari** | ✅ Web Automation | No setup needed. |
+| iOS | **Chrome** | ❌ | iOS Chrome is not available for real device web automation. Use [manual Browser Testing](/support/docs/camera-image-injection-on-real-devices/#image-injection-in-real-device-browser-testing) instead. |
+| Android | Other browsers (Samsung Internet, Firefox, and others) | ❌ | The session is refused. |
+| iOS | Web pages inside iOS apps | ❌ | Not supported. |
+
+:::warning note
+- Available on **real devices only**. Virtual devices (emulators and simulators) are not supported.
+- **Images only.** Video `media` is not supported for browser sessions or in-app web pages. Video injection for native apps is unchanged.
+:::
+
+### Step 1: Upload the image
+
+Upload the image with the same cURL command as [Step 1 for app automation](#step-1-upload-image-to-testmu-ai). Note the `media_url` (for example `lt://MEDIA123456789123456789`) from the response.
+
+### Step 2: Add the capabilities
+
+| Capability | Type | Value | Description |
+|---|---|---|---|
+| `enableImageInjection` | Boolean | `true` | Required. Turns on image injection for the session. |
+| `media` | String | `lt://MEDIA...` | The image the camera shows from the start of the session. Images only. |
+| `browserName` | String | Android: `Chrome`, iOS: `Safari` | Optional. Any other browser is refused with `enableImageInjection capability is not supported with browserName "<name>"`. |
+
+<Tabs className="docs__val">
+
+<TabItem value="ios-safari" label="iOS Safari" default>
+
+  <div className="lambdatest__codeblock">
+  <CodeBlock className="language-python">
+  {`caps = {
+    "browserName": "Safari",
+    "platformName": "ios",
+    "lt:options": {
+        "isRealMobile": True,
+        "deviceName": "iPhone 15",
+        "platformVersion": "18",
+        "enableImageInjection": True,
+        "media": "lt://MEDIA123456789123456789",
+    },
+}`}
+  </CodeBlock>
+  </div>
+</TabItem>
+
+<TabItem value="android-chrome" label="Android Chrome">
+
+  <div className="lambdatest__codeblock">
+  <CodeBlock className="language-python">
+  {`caps = {
+    "browserName": "Chrome",
+    "platformName": "android",
+    "lt:options": {
+        "isRealMobile": True,
+        "deviceName": "Galaxy S24",
+        "platformVersion": "14",
+        "enableImageInjection": True,
+        "media": "lt://MEDIA123456789123456789",
+    },
+}`}
+  </CodeBlock>
+  </div>
+</TabItem>
+
+<TabItem value="android-in-app" label="Android in-app web page">
+
+  <div className="lambdatest__codeblock">
+  <CodeBlock className="language-python">
+  {`caps = {
+    "platformName": "android",
+    "lt:options": {
+        "isRealMobile": True,
+        "deviceName": "Galaxy S24",
+        "platformVersion": "14",
+        "app": "lt://APP123456789123456789",
+        "enableImageInjection": True,
+        "media": "lt://MEDIA123456789123456789",
+    },
+}`}
+  </CodeBlock>
+  </div>
+</TabItem>
+</Tabs>
+
+For web pages inside Android apps, use the same capabilities as native app image injection. Camera steps on web pages inside the app get the injected image too.
+
+### Step 3: Swap the image during the test
+
+Call the `lambda-image-injection` hook with another `media_url`. The new image replaces the camera picture on the open page live, without a page reload. For example, inject the front of an ID, then the back, then a selfie.
+
+<div className="lambdatest__codeblock">
+<CodeBlock className="language-python">
+{`driver.execute_script("lambda-image-injection=lt://MEDIA123456789123456789")`}
+</CodeBlock>
+</div>
+
+- The image persists across navigation and new pages. The camera always shows the **latest** injected image.
+- On **iOS Safari**, if no open page can take the image, the hook returns an error to your test instead of reporting success.
+- Each hook call appears in the session's command logs with the media ID and its result.
+
+### What to expect
+
+- **Image fit:** the whole image is shown, not cropped, in the page's orientation. Empty space is padded. For face or liveness steps, use a tightly cropped portrait image so the face fills the frame.
+- **Permission prompt:** the camera permission prompt usually does not appear while injection is on.
+- **Android in-app web pages:** until the first image is set, the page shows the real camera. The first injection switches it to the image live.
+- **iOS Safari, camera opened on page load:** on pages that open the camera as soon as they load, the real camera starts first and then switches to your image. The page shows the image, but the iPhone's camera-in-use indicator stays on.
+- **iOS Safari, Appium logs:** a short `execute` call appears in the logs every 2 seconds. It keeps the image on new pages and is expected.
+
+### Limitations
+
+| Limitation | What you see | Workaround |
+|---|---|---|
+| Android apps uploaded before this feature was released | Camera steps on web pages inside the app show the real camera. | Upload the app again. |
+| Espresso tests (app and test APK) | The run can crash at start if the app and test APK were uploaded at different times around the release. | Upload **both** the app and the test APK again. |
+| Camera inside a cross-site iframe | Not supported on Android Chrome. Not verified on iOS. | Open the camera step in the top-level page where possible. |
+| KYC SDKs with anti-injection checks | Some SDKs keep using the real camera or flag injected images. | Contact support with the SDK name and version. |

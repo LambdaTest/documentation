@@ -8,7 +8,7 @@ keywords:
   - TestMu AI Asana integration
   - How to integrate Asana with TestMu AI
   - bug management tools in TestMu AI
-url: https://testmuai.com/support/docs/asana-integration/
+url: https://www.testmuai.com/support/docs/asana-integration/
 site_name: TestMu AI
 slug: asana-integration/
 canonical: https://www.testmuai.com/support/docs/asana-integration/
@@ -26,11 +26,11 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     ],
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://testmuai.com/support/docs/asana-integration/"
+      "@id": "https://www.testmuai.com/support/docs/asana-integration/"
     },
     "headline": "Asana Integration For Easy Browser Testing",
     "description": "With TestMu AI - Asana integration, now you can mark your bug to Asana dashboard directly from TestMu AI while performing testing.",
-    "url": "https://testmuai.com/support/docs/asana-integration/",
+    "url": "https://www.testmuai.com/support/docs/asana-integration/",
     "image": {
       "@type": "ImageObject",
       "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",

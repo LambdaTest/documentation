@@ -86,7 +86,7 @@ Manual accessibility testing ensures that your website is fully accessible and c
 Ensuring accessibility with VoiceOver is essential for creating inclusive digital experiences that accommodate users with visual impairments. VoiceOver provides spoken feedback, allowing users to navigate, interact, and understand UI elements without relying on visual cues.
 
 :::note
-This feature is currently in **Beta**. Please reach out to our [Support](https://www.testmuai.com/support/) team for access.
+This feature is currently in **Beta**. Please reach out to our [Support](https://www.testmuai.com/support/docs/) team for access.
 :::
 
 

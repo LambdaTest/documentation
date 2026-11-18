@@ -80,14 +80,14 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         "name": "What you need to get started",
         "codeSampleType": "code snippet",
         "programmingLanguage": "Shell",
-        "text": "npm install @testmuai/testmu-cloud"
+        "text": "npm install @testmuai/browser-cloud"
       },
       {
         "@type": "SoftwareSourceCode",
         "name": "Initialize the Client",
         "codeSampleType": "code snippet",
         "programmingLanguage": "TypeScript",
-        "text": "import { Browser } from '@testmuai/testmu-cloud';\nconst client = new Browser();"
+        "text": "import { Browser } from '@testmuai/browser-cloud';\nconst client = new Browser();"
       }
     ],
     "dateModified": "2026-03-26T15:05:31+05:30"
@@ -115,7 +115,7 @@ profiles, files, extensions, and tunnels directly from your Node.js application.
 <VerifiedTag value="Verified" />
 
 ```bash
-npm install @testmuai/testmu-cloud
+npm install @testmuai/browser-cloud
 ```
 
 ### Initialize the Client
@@ -128,7 +128,7 @@ instance.
 <VerifiedTag value="Verified" />
 
 ```typescript
-import { Browser } from '@testmuai/testmu-cloud';
+import { Browser } from '@testmuai/browser-cloud';
 const client = new Browser();
 ```
 

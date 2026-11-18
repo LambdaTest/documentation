@@ -149,7 +149,7 @@ Rook clusters related failures first, then investigates each cause using the ver
 .testmuai/rook/projects/<project-id>/agents/<agent-id>/runs/<run-id>/remedies/
 ```
 
-RCA is off by default. It consumes additional credits, and its cost depends on the number of distinct failure clusters. A remedy is an evidence-grounded hypothesis, not a verified patch.
+Since 0.1.20, RCA is on by default: a run explains its failed and compromised clusters, and --rca also explains **Unable to Verify** results. Add --no-rca to skip it. RCA consumes additional credits, and its cost depends on the number of distinct failure clusters. A remedy is an evidence-grounded hypothesis, not a verified patch.
 
 ## Interrupt and Resume Safely
 

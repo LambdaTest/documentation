@@ -268,13 +268,11 @@ import { BRAND_URL } from '@site/src/component/BrandName';
         "text": "agent-testing-cli --project PROJECT_ID run \\\n  --workflow WORKFLOW_ID \\\n  --suite SUITE_ID \\\n  --yes"
       }
     ],
-    "dateModified": "2026-08-18T16:47:39+05:30"
+    "dateModified": "2026-11-12T13:50:45+05:30"
   }) }}
 />
 
 The TestMu AI Agent Testing CLI (`agent-testing-cli`) tests AI agents from a terminal, with no dashboard clicks. Use it to discover projects and test resources, run Chat and Phone Caller evaluations, retrieve results, and automate tests in a continuous integration and continuous delivery (CI/CD) pipeline.
-
-It runs the same commands on macOS, Linux, and Windows against Chat, Voice, and Phone Caller agents configured in TestMu. You can drive it with direct commands, machine-readable JSON output, or the interactive terminal user interface (TUI), and authenticate with environment variables so suites run without an interactive prompt.
 
 - **Run tests from a terminal or IDE:** Use the same commands on macOS, Linux, and Windows.
 - **Test different agent types:** Work with Chat, Voice, and Phone Caller agents that are configured in TestMu.
@@ -320,23 +318,13 @@ agent-testing-cli projects
   </TabItem>
 </Tabs>
 
-## Which Environments the CLI Supports
-
----
-
-The CLI runs in a system terminal or an integrated terminal in an IDE on:
-
-- macOS
-- Linux
-- Windows
-
 ## What the CLI Requires
 
 ---
 
 - Python 3.10 or newer
 - macOS, Linux, or Windows
-- A TestMu account with access to Agent-to-Agent Testing
+- A TestMu account with access to Agent Testing
 - At least one TestMu project with an agent and a test suite
 
 ## How to Choose a Usage Mode

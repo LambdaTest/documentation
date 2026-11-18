@@ -74,7 +74,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-07-24T18:03:55+05:30"
+    "dateModified": "2026-11-12T13:50:45+05:30"
   }) }}
 />
 
@@ -88,7 +88,7 @@ To connect one, you need a deployed Pipecat bot with a reachable transport, the 
 
 Pipecat is a hand-assembled, transport-agnostic pipeline, so a few behaviours are worth building dedicated scenarios around:
 
-- **No hosted dashboard or agent ID.** No hosted dashboard and no agent ID. Connection details come from the team's own deployment.
+- **No hosted dashboard or agent ID.** Connection details come from the team's own deployment.
 - **Provider-specific serializers.** Serializers are provider-specific, so a Twilio-serialized stream will not connect to a Telnyx endpoint.
 - **Developer-owned audio format.** Audio normalization, codec, and sample rate are the developer's responsibility, which makes format mismatch the most common first failure.
 - **In-pipeline interruption handling.** Interruption handling is built into the pipeline, so barge-in is a genuine test target rather than a vendor feature.
