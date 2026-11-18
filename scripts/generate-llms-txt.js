@@ -123,7 +123,7 @@ function main() {
   const pagePaths = [];
   const seen = new Set();
   for (const p of collectPages(docsJson.navigation, [])) {
-    if (/^https?:\/\//.test(p)) continue;
+    if (!/^docs\//.test(p)) continue;
     if (seen.has(p)) continue;
     seen.add(p);
     pagePaths.push(p);
@@ -145,7 +145,7 @@ function main() {
       (data.title || data.sidebarTitle || path.basename(pagePath)).trim()
     );
     const description = toAscii((data.description || '').trim());
-    const mdUrl = `${SITE_ORIGIN}/docs/${pagePath.replace(/^docs\//, '')}.md`;
+    const mdUrl = `${SITE_ORIGIN}/${pagePath}.md`;
     entries.push({ title, description, mdUrl });
   }
 
