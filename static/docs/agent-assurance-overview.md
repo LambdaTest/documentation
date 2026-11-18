@@ -108,7 +108,7 @@ The available evidence therefore depends on the profile you configure. A profile
 | **Fail** | At least one criterion was observed to fail. |
 | **Unable to Verify** | The available profile and evidence could not establish the result. It is not counted as a failure. |
 
-Always read coverage together with pass rate. A high pass rate with low verification coverage is not strong release evidence.
+Always read **Verified pass** together with **Assurance gap**. A high Verified pass with a large Assurance gap is not strong release evidence. See [Verified Pass and Assurance Gap](/support/docs/agent-assurance-results-and-evidence/#verified-pass-and-assurance-gap).
 
 ## Supported Outputs and Current Limits
 
