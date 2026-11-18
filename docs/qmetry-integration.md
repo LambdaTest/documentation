@@ -20,29 +20,6 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import VerifiedTag from '@site/src/component/verifiedTag';
 
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "TestMu AI",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "QMetry TestMu AI Integration",
-          "item": `${BRAND_URL}/support/docs/qmetry-integration/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -123,6 +100,9 @@ import VerifiedTag from '@site/src/component/verifiedTag';
 * * *
 QMetry is a codeless platform tailored for DevOps and Agile testing teams. It can be used to prepare and execute test scenarios on multiple platforms very easily. Not only that, but QMetry also allows you to record test cases in almost all major languages and frameworks, including the QMetry framework.
 <BrandName /> now integrates with the QMetry platform to help you execute cross-browser testing of your website, web app, or your mobile website, over 50,000+ real devices and 10,000+ browser/device combinations on its cloud-based selenium grid. This document is a comprehensive guide to help you understand how to integrate QMetry with your <BrandName /> account.
+
+Considering a move off QMetry? See [QMetry alternatives](https://www.testmuai.com/blog/qmetry-alternatives/).
+
 ## How To Setup Your <BrandName /> Account With QMetry?
 * * *
 Once you have your project set up in the QMetry app and test suite ready, you need to specify and activate your <BrandName /> account in the QMetry app to execute it over the <BrandName />'s cloud-based Selenium Grid. Below is the step by step guide to help you do just that:
@@ -208,16 +188,3 @@ To get started, create a [HyperExecute Project](/support/docs/hyperexecute-proje
 
 > Congrats! You have successfully integrated the QMetry app with your <BrandName /> account and ran your test cases over the <BrandName />'s cloud based Seleniunm Grid. If you come across any doubts or questions, reach out to us via our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or mail us at [support@testmuai.com](mailto:support@testmuai.com). Happy testing! 🙂
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href={BRAND_URL}>Home</a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="/support/docs/">Support</a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">QMetry <BrandName /> Integration</span>
-    </li>
-  </ul>
-</nav>

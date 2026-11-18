@@ -2,7 +2,7 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-KaneAI allows you to edit the advanced settings of an existing test case directly from the **Test Summary** page. This gives you the flexibility to update configurations like network settings, timezone, Chrome options, and custom headers after a test has already been authored, without having to recreate it from scratch.
+KaneAI allows you to edit the advanced settings of an existing test case directly from the **Test Summary** page. This gives you the flexibility to update configurations like network settings, resolution, timezone, Chrome options, and custom headers after a test has already been authored, without having to recreate it from scratch.
 
 This feature is supported across all platforms: **Desktop Web**, **Mobile App**, and **Mobile Web**.
 
@@ -22,10 +22,13 @@ The available settings vary depending on the platform of your test case. Refer t
 | Setting | Control Type | Description |
 |---|---|---|
 | **Network Configuration** | Dropdown (Tunnel / Inactive) | Select tunnel or proxy for accessing applications behind firewalls |
+| **Resolution** | Dropdown | Set the browser window size at 100% scaling: **1440 x 900 (Default)**, **1920 x 1080**, **1366 x 768**, or **1280 x 720** |
 | **Timezone** | Dropdown | Set the timezone where your tests will run |
 | **Chrome Options** | Toggle + multi-input | Add up to 10 Chrome browser command-line flags |
 | **Custom Headers** | Toggle + multi-input | Add up to 10 custom HTTP headers to inject in your test case |
 | **Environment** | Dropdown | Select the variable environment the test is authored against. See [Select an Environment for an Authoring Session](/support/docs/kane-ai-using-variables/#select-an-environment-for-an-authoring-session) |
+
+**Resolution** applies only to Desktop Web authoring and editing sessions. Test runs use the resolution specified in their execution configurations.
 
 ### Android App
 
@@ -52,7 +55,7 @@ The available settings vary depending on the platform of your test case. Refer t
 | **Video Injection** | Toggle | Inject video feed for live detection / face recognition |
 | **Device Orientation** | Dropdown (Auto) | Set device orientation for session |
 | **Capture Network Logs** | Toggle | Capture network logs for network assertions |
-| **Network Throttling** | Dropdown | Select throttling profile |
+| **Network Throttling** | Dropdown | Select a throttling profile, always honored during authoring and test case execution. See [Network Throttling](/support/docs/kaneai-network-throttling/). |
 | **Timezone** | Dropdown | Set timezone for test session |
 | **Language** | Dropdown | Set language for test session |
 
@@ -79,7 +82,7 @@ For more details on mobile app capabilities like biometric authentication, image
 | **Video Injection** | Toggle | Inject recorded video feed |
 | **Device Orientation** | Dropdown (Auto) | Set orientation |
 | **Capture Network Logs** | Toggle | Capture network logs |
-| **Network Throttling** | Dropdown | Select throttling profile |
+| **Network Throttling** | Dropdown | Select a throttling profile, always honored during authoring and test case execution. See [Network Throttling](/support/docs/kaneai-network-throttling/). |
 | **Timezone** | Dropdown | Set timezone |
 | **Language** | Dropdown | Set language |
 
@@ -112,6 +115,7 @@ Click on **Edit Test Steps** to open the advanced settings panel. You will see t
 Update the settings as needed. For example, you can:
 
 - Change the **Network Configuration** from `None` to `Geolocation` and select a region.
+- Choose the **Resolution** for a **Desktop Web** authoring or editing session.
 - Update the **Timezone** to a different zone.
 - Toggle **Chrome Options** on or off and add command-line switches.
 - Enable **Custom Headers** and add HTTP headers for your test.
@@ -134,6 +138,8 @@ The version comparison view shows a diff of what changed, for example, updated n
 
 ## Limitations
 
-- **Advanced settings only**: Only advanced settings (network configuration, timezone, Chrome options, custom headers, environment, and mobile session settings) can be edited from the test summary page. To change test steps, OS, browser, or device configurations, you need to open the playground.
+- **Advanced settings only**: Only advanced settings (network configuration, Desktop Web authoring resolution, timezone, Chrome options, custom headers, environment, and mobile session settings) can be edited from the test summary page. To change test steps, OS, browser, or device configurations, you need to open the playground.
 - **New version generated on every apply**: Applying updated settings always creates a new version of the test case with regenerated code. There is no way to update settings in-place without generating a new version.
 - **Version history diff for pre-rollout versions**: If you compare a version created after this feature was rolled out with a version created before it, the diff will have no advanced settings changes to display since the older version never tracked them. Similarly, if you open a pre-rollout version and click on advanced settings, only the latest settings are shown as the original settings were not recorded for that version.
+
+> _Have any feedback or request? Reach out to us via support@testmuai.com and we would be happy to hear from you._

@@ -27,29 +27,6 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import VerifiedTag from '@site/src/component/verifiedTag';
 
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Network Proxy Support in Flutter Apps",
-          "item": `${BRAND_URL}/support/docs/network-proxy-support-in-flutter-apps/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -386,5 +363,5 @@ Setting `network: true` on its own is not enough for Flutter apps. Without the c
 | Issue | Likely cause | What to do |
 |---|---|---|
 | Network tab is empty or shows only non-app traffic | Some requests are still made with a client that doesn't have the proxy configured | Search your code for `Dio()`, `http.get`, `http.post`, and `HttpClient()` and make sure they all use the proxy-aware client, or use `HttpOverrides.global` |
-| Requests fail with a handshake or certificate error after enabling the proxy | The app doesn't trust the certificate used for HTTPS inspection | Contact [TestMu AI support](https://www.testmuai.com/support/) for guidance on certificate handling for your app |
+| Requests fail with a handshake or certificate error after enabling the proxy | The app doesn't trust the certificate used for HTTPS inspection | Contact [TestMu AI support](https://www.testmuai.com/support/docs/) for guidance on certificate handling for your app |
 | `findProxyFromEnvironment` returns `DIRECT` | No proxy is configured on the device, for example when running locally | This is expected outside a <BrandName /> session with `network: true`. The app connects directly, so no change to your code is needed |

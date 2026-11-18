@@ -18,29 +18,6 @@ canonical: https://www.testmuai.com/support/docs/one-click-migration-from-qtest/
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "TestMu AI",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "One Click Migration from qTest",
-          "item": `${BRAND_URL}/support/docs/one-click-migration-from-qtest/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -151,6 +128,8 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <BrandName /> Test Manager supports one-click migration from qTest, allowing you to import your entire test library — including projects, test cases, folder structures, custom fields, attachments, and linked Jira requirements — directly into Test Manager without manual data entry.
 
+Still comparing tools before you move? See our guide to [qTest alternatives](https://www.testmuai.com/blog/qtest-alternatives/).
+
 
 ## Key Benefits
 
@@ -234,7 +213,7 @@ A progress bar shows real-time migration status. You can navigate away at any ti
 | Called / shared test cases | Expanded inline into the calling test case's steps |
 | qTest ID (e.g. `TC-15`) | Stored as the test case's external ID and added as a tag |
 | Custom fields | Org-level custom fields, created automatically if absent (see field type mapping below) |
-| Attachments (test case and step level) | Downloaded from qTest and stored in LambdaTest |
+| Attachments (test case and step level) | Downloaded from qTest and stored in <BrandName /> |
 | Jira requirement links | Linked issues on migrated test cases (requires Jira integration in <BrandName />) |
 | Required-field flags | Preserved on created custom fields |
 

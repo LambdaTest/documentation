@@ -17,29 +17,6 @@ canonical: https://www.testmuai.com/support/docs/hyperexecute-org-product-prefer
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Integrations",
-          "item": `${BRAND_URL}/support/docs/hyperexecute-org-product-preferences/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -126,22 +103,3 @@ Now, to access your organization product preferences, follow the below mentioned
 To configure automatic session expiry for your organization, navigate to **Organization Settings → Security → Session Expiry**. You can set the duration for session expiration from predefined options (default: 30 days). Admins can also allow team members to customize their own session expiry settings. Learn more in [Settings and Security](/support/docs/settings-and-security/).
 :::
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href={BRAND_URL}>
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-        Org Product Preferences
-      </span>
-    </li>
-  </ul>
-</nav>

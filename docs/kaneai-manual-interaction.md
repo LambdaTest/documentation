@@ -28,29 +28,6 @@ canonical: https://www.testmuai.com/support/docs/kaneai-manual-interaction/
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Manual Interaction in KaneAI",
-          "item": `${BRAND_URL}/support/docs/kaneai-manual-interaction/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -111,7 +88,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 ## Overview
 
-Manual Interaction is how KaneAI turns what you do directly on your application into test steps. Instead of describing an action in words, you perform it — click, type, scroll, navigate — and the agent records it as a structured step.
+Manual Interaction is how KaneAI turns what you do directly on your application into test steps. It supports desktop browsers, mobile browsers, and mobile apps. Instead of describing an action in words, you perform it — click, type, scroll, navigate — and the agent records it as a structured step.
 
 This is especially useful when you need to reach a very specific UI state, handle a complex flow, or work with elements that are difficult to describe in words.
 
@@ -125,8 +102,8 @@ For the full session model — the states, the cursor, and the run actions — s
 |---|---|
 | Web browser on desktop | Supported |
 | Mobile app on Android | Supported |
-| Mobile app on iOS | Supported in portrait; not supported in landscape |
-| Mobile browser | Not supported |
+| Mobile app on iOS | Supported |
+| Mobile browser | Supported; drag and drop and click and drag are not supported |
 
 On platforms where capture is not supported, build the test using natural language instructions and slash commands.
 
@@ -227,6 +204,12 @@ Editing a step that had already run and passed returns it to the **Queued** stat
 Double click, right click, and press-and-hold (long press) **are now supported** in Manual Interaction. See [Click Interactions](/support/docs/kane-ai-click-interactions/) for capture rules and platform support.
 :::
 
+### Mobile Browsers
+
+- **Drag and drop and click and drag:** Both gestures are unsupported through Manual Interaction on mobile browsers. You can author drag and drop using natural language. See [Drag and Drop](/support/docs/kane-ai-drag-drop/).
+
+- **iOS keyboard accessory toolbar:** Actions performed on the keyboard accessory toolbar are not supported. KaneAI still attempts to record these actions when you perform them, but the recorded actions will not work.
+
 ### Mobile Apps
 
 - **Two finger scroll:** Multi touch gestures are not captured during recording.
@@ -238,12 +221,6 @@ Double click, right click, and press-and-hold (long press) **are now supported**
 - **Mobile keyboard actions such as backspace:** Special keyboard keys and actions are not recorded accurately.
 
 - **System level popups:** Popups controlled by the operating system, such as permission dialogs, cannot be captured.
-
-### Platforms without capture
-
-- **Mobile browser:** Capture is not supported. Author these tests with natural language instructions and slash commands.
-
-- **iOS in landscape:** Capture is not supported. Rotate to portrait to record interactions.
 
 **Important Note on Text Input Behavior**
 
@@ -395,7 +372,7 @@ This use case applies when you need to navigate your app to a specific starting 
 
 Check the session state. Capture is active only in **Authoring Steps** — it stops in Paused and in Running. If the session is Paused, click **Resume**.
 
-If the session is already in Authoring Steps, check that your platform supports capture. Mobile browser sessions and iOS in landscape do not capture interactions.
+If the session is already in Authoring Steps, check the [Manual Interaction Limitations](#manual-interaction-limitations) for unsupported actions on your platform.
 
 ### I clicked on the application and nothing happened
 

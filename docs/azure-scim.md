@@ -16,29 +16,6 @@ import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 import VerifiedTag from '@site/src/component/verifiedTag';
 
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "TestMu AI",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Scim",
-          "item": `${BRAND_URL}/support/docs/scim/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -203,7 +180,7 @@ Group Provisioning must be enabled for your org. Contact <span className="doc__l
 
 **Step 5:** Start a provisioning cycle (or wait for the 40-minute auto sync).
 
-**Step 6:** In <BrandName />, go to **Settings** > **Organization Settings** > **SCIM Group Provisioning** to view the synced groups and configure mappings.
+**Step 6:** In <BrandName />, go to **Settings** > **Organization Settings** > **Security** > **SCIM Provisioning** > **Groups** tab to view the synced groups and configure mappings.
 
 ### Setting Roles on Azure AD Groups
 
@@ -240,22 +217,3 @@ This operation starts the initial synchronization cycle of all users in Scope in
 > That's all you need to know about <BrandName /> SCIM Auto User Provisioning with Azure AD.In case you have any questions please feel free to reach out to us via the <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or email us over [support@testmuai.com](mailto:support@testmuai.com).
 
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href={BRAND_URL}>
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-        Single Sign On
-      </span>
-    </li>
-  </ul>
-</nav>

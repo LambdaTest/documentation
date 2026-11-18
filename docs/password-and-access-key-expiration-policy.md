@@ -20,29 +20,6 @@ canonical: https://www.testmuai.com/support/docs/password-and-access-key-expirat
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Password and Access Key Expiration Policy",
-          "item": `${BRAND_URL}/support/docs/password-and-access-key-expiration-policy/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -115,7 +92,7 @@ Password expiration and access key expiration are important security features th
 
 By default, password expiration policy is set to **Never**. To change this, follow the below mentioned steps:
 
-**Step 1:** Go to the [LambdaTest](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard) Dashboard.
+**Step 1:** Go to the [<BrandName />](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard) Dashboard.
 
 **Step 2:** Click on the Settings -> **Organization Settings**, navigate to **Security** tab and click on the **Password Expiry** button
 
@@ -146,7 +123,7 @@ You will receive a mail 3 days before the expiration of your password to set a n
 
 By default, access key expiration policy is set to Never. To change this, follow the below mentioned steps:
 
-**Step 1:** Go to the [LambdaTest](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard) Dashboard.
+**Step 1:** Go to the [<BrandName />](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard) Dashboard.
 
 **Step 2:** Click on the Settings -> **Organization Settings**, navigate to **Security** tab and click on the **Access Key Expiry** button
 

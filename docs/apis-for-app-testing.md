@@ -25,29 +25,6 @@ import VirtualDeviceTag from '@site/src/component/virtualDevice';
 import VerifiedTag from '@site/src/component/verifiedTag';
 
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "How to Use App Testing APIs on TestMu AI",
-          "item": `${BRAND_URL}/support/docs/app-testing-apis/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -474,24 +451,43 @@ The shareable links are valid for a period of 7, 15, or 30 days, after which the
 
 :::
 
+## Fetching per-test session details of a build
+***
+
+To fetch every test session in an Espresso or XCUI build, along with its shard, status, retry count, and duration, run the below cURL command.
+
+<div className="lambdatest__codeblock">
+<CodeBlock className="language-bash">
+{`curl -u "${YOUR_LAMBDATEST_USERNAME()}:${YOUR_LAMBDATEST_ACCESS_KEY()}" -X GET "https://mobile-api.lambdatest.com/mobile-automation/api/v1/framework/builds/<build_id>?include_session=true&limit=100&offset=0"`}
+</CodeBlock>
+</div>
+
+| PARAMETER | DEFAULT | DESCRIPTION |
+|-----------|---------|-------------|
+| `include_session` | `false` | Set to `true` to include session details in the response. |
+| `latest_attempt_only` | `false` | Returns only the latest attempt for each test. |
+| `limit` | `500` | Number of sessions per page (1–500). |
+| `offset` | `0` | Number of sessions to skip. |
+
+-----
+
+The response contains the following:
+
+- `data.sessions[]`: One entry per session, with `test_id`, `shard_id`, `class_name`, `test_name`, `status`, `retry_count`, and `duration`.
+- `Meta.result_set`: Pagination details, with `count`, `limit`, `offset`, and `total`.
+
+To fetch the next page, increase `offset` by the `count` value from the previous response.
+
+| STATUS CODE | DESCRIPTION |
+|-------------|-------------|
+| `400` | One or more parameter values are invalid. |
+| `403` | The build belongs to another organization. |
+| `404` | The build was not found. |
+| `500` | The session lookup failed or exceeded the 5-second timeout. Retry with a smaller `limit`. |
+
+:::note
+`latest_attempt_only`, `limit`, and `offset` apply only when `include_session=true`.
+:::
+
 >That’s all! In case you have any questions or need any additional information, you could reach out at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24X7 Chat Support**</span> or mail us directly at support@testmuai.com.
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-        How to Use App Testing APIs on TestMu AI
-      </span>
-    </li>
-  </ul>
-</nav>

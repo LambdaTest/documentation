@@ -4,7 +4,63 @@
 
 The TestMu AI Agent Testing Platform tests a voice agent the same way it tests a chat agent, except the conversation happens as audio instead of text. It holds a spoken conversation with your agent, transcribes the responses, and scores the interaction across the same 9 quality metrics. It covers voice assistants and voice-enabled support agents.
 
-A voice agent uses the same setup as a chat agent: upload the documents that describe it, generate scenarios, and run an evaluation. The difference is the medium, audio rather than text.
+A voice agent uses a similar setup to a chat agent: describe the agent in a prompt, generate scenarios, and run an evaluation. The difference is the medium, audio rather than text.
+
+## How to Run Your First Voice Agent Test
+
+Follow these seven steps in the dashboard.
+
+**Step 1: Create the voice agent.** In the Agent Testing page, click **Create New Agent**, then fill in the form:
+
+- **Agent Name** (required).
+- **Description** (optional).
+- **Agent Type** (required): select **Voice Agent**.
+
+Click **Create New Agent** to confirm.
+
+**Step 2: Define the agent prompt.** Open the **Prompt** tab, which sits between **Scenarios** and **Test Profile**.
+
+- In **Agent-Under-Evaluation Prompt**, define the ideal behavior and role of your agent to guide conversations.
+- Optionally, under **Upload Files**, add PDF, MS Word, MS Excel, TXT, MD, MP3, WAV, M4A, PNG, JPG, or WEBP files. Multiple files are allowed, up to 5 MB each.
+- Click **Save Prompt**.
+
+**Step 3: Generate scenarios.** Open the **Scenarios** tab and click **Generate Scenarios**, then set:
+
+- **Number of Scenarios:** use the slider or type a number.
+- **Scenario Types:** leave all unchecked to generate normal scenarios, or select one or more types to generate those instead.
+  - **Happy Path:** normal flows and success scenarios.
+  - **Negative:** errors, invalid inputs, and failure paths.
+  - **Edge Case:** boundary values and unusual conditions.
+  - **Red Team:** security attacks and adversarial inputs.
+- **Select Languages for Scenarios:** for example English, Spanish, Portuguese, German, Swedish, Indonesian, or Filipino.
+
+Click **Generate Scenarios** to confirm.
+
+**Step 4: Create a suite.** Open the **Suites** tab and click **Create New Suite**.
+
+- Enter a **Suite Name**.
+- Use **Search scenario** and the checkboxes to select the scenarios to include.
+- For each selected scenario, choose one or more voices, a persona, and a test profile, and set the **Iterations**.
+- Check the footer, which shows how many calls will fire, then click **Create New Suite**.
+
+**Step 5: Set up an endpoint profile.** Open the **Endpoint Profiles** tab. Until you add one, it shows **No Endpoint Profiles Yet**.
+
+- Click **Create New Endpoint Profile**, or click **Import**.
+- Endpoint profiles define multi-step API flows for complex authentication scenarios: login, session creation, and chat endpoints, with variable extraction and injection.
+
+**Step 6: Run the suite.** On the **Suites** tab, click **Run** next to your suite. In the **Run Voice Suite** dialog:
+
+1. Under **Select Endpoint Profile**, choose the profile that connects to your voice agent. A badge shows the transport, for example **OPENAI REALTIME TRANSPORT**.
+2. Under **HyperExecute Tunnel**, you can select a tunnel to use for the evaluation.
+3. Click **Run Voice Test**.
+
+**Step 7: Read the results.** When the run finishes, open a scenario from the list to see its score and the reasons behind it.
+
+- Start with the scenarios that failed or scored lowest. On the **Turns** tab, read the transcribed conversation to find the point where your agent went wrong.
+- Use **Areas for Improvement** and **Recommendations** to decide what to fix in your agent, and **Validation Criteria** to see which of the scenario's success criteria it missed.
+- After you change your agent, click **Re-run** to run the same scenarios again. Each run is listed separately with its score and time, so you can compare before and after.
+
+See [Metrics](#metrics) for what each score measures.
 
 ## How Voice Agent Testing Works
 

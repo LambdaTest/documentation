@@ -20,29 +20,6 @@ canonical: https://www.testmuai.com/support/docs/test-voiceflow-agents/
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Test Voiceflow Agents",
-          "item": `${BRAND_URL}/support/docs/test-voiceflow-agents`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -97,7 +74,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-07-24T18:03:55+05:30"
+    "dateModified": "2026-11-12T13:50:45+05:30"
   }) }}
 />
 
@@ -109,7 +86,7 @@ To connect one, you need a Voiceflow account with a published agent, a Twilio or
 
 ---
 
-Voiceflow brings the logic while a telephony provider brings the number and audio, so a few behaviours are worth building dedicated scenarios around:
+A few Voiceflow behaviours are worth building dedicated scenarios around:
 
 - **Split phone stack.** Voiceflow brings the logic while the telephony provider brings the number, STT, and TTS, so phone failures split across two vendors.
 - **Provider-owned audio.** Latency and audio quality on phone runs reflect the provider's stack as much as the agent.

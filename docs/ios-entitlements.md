@@ -17,29 +17,6 @@ canonical: https://www.testmuai.com/support/docs/ios-entitlements/
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "iOS Entitlements",
-          "item": `${BRAND_URL}/support/docs/ios-entitlements`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -189,6 +166,8 @@ Once you toggle the `Disable App Resigning` option, your application's certifica
 
 <img loading="lazy" src={require('../assets/images/entitlements/disableappresign.png').default} alt="monday integration" width="626" height="439" className="doc_img"/>
 
+Re-signed builds can lose universal link handoff; see [how to test universal links on real iPhones](https://www.testmuai.com/blog/test-universal-links-ios/).
+
 
 ## Disabling Re-Signing In App Automation
 ***
@@ -207,25 +186,6 @@ KEY|VALUE|DESCRIPTION
 >
 If you still have any questions for us, please feel free to let us know via our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24X7 Chat Portal**</span> or mail us to support@testmuai.com
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href={BRAND_URL}>
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-        iOS Entitlements
-      </span>
-    </li>
-  </ul>
-</nav>
 
 
 

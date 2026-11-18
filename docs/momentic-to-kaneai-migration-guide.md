@@ -27,29 +27,6 @@ import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Momentic to KaneAI migration",
-          "item": `${BRAND_URL}/support/docs/momentic-to-kaneai-migration-guide/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -155,7 +132,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
 
 # Migrating From Momentic To KaneAI
 * * *
-This guide covers your Momentic migration to KaneAI: how to re-create your end-to-end tests and run them on <BrandName />. KaneAI is the <BrandName /> testing agent that authors web and mobile tests from natural language.
+This guide covers your Momentic migration to KaneAI: how to re-create your end-to-end tests and run them on <BrandName />. KaneAI is the <BrandName /> testing agent that authors web and mobile tests from natural language. For a side-by-side look at the two before you switch, see [KaneAI vs Momentic](https://www.testmuai.com/kaneai-vs-momentic/).
 
 
 <b>[Note: KaneAI does not import or convert Momentic tests. This guide follows a manual path. You keep your Momentic YAML files as the reference and run any Playwright code from Momentic on <BrandName />. Then you re-create each test in KaneAI in natural language.]</b>
@@ -191,10 +168,10 @@ You need:
 - A <BrandName /> account. Create one on the <a href="https://www.testmuai.com/register/" onClick={CookieTrackingSignup}><BrandName /> signup page</a>.
 - KaneAI access, which the **Automate with KaneAI** action requires.
 - Your <BrandName /> username and access key, from Account Settings > [Password & Security](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/security/username-accesskey).
-- For Kane CLI, Google Chrome, plus Node.js 18 or higher for an npm install ([Installing Kane CLI](/support/docs/kane-cli-installation/)).
+- For Kane CLI, Google Chrome, plus Node.js 18 or higher for an npm install ([Installing Kane CLI](https://www.testmuai.com/docs/kane-cli-installation)).
 - The Momentic CLI with an existing project config, signed in with `momentic login` or `MOMENTIC_API_KEY`. <!-- Source: https://momentic.ai/docs/cli-reference/momentic/commands/import, checked 2026-10-16 --> It requires Node.js 22.12.0 or later in the 22.x line, or 24.0.0 or later. If you have no project config, the Momentic onboarding wizard (`npx @momentic/wizard@latest`) creates one. <!-- Source: https://momentic.ai/docs/get-started/cloud-deprecation, checked 2026-10-16 -->
 - For Playwright code, a Momentic Enterprise contract. Enterprise customers can ask for a one-time eject at contract termination. <!-- Source: https://momentic.ai/docs/get-started/test-portability, checked 2026-10-16 -->
-- For KaneAI app tests, your app as an APK for Android or an IPA for iOS. KaneAI test runs put native apps on Real Devices. Kane CLI runs apps on the iOS Simulator or Android Emulator instead, so it takes a `.zip` simulator build or an `.apk`, not an `.ipa` ([Mobile Testing with Kane CLI](/support/docs/kane-cli-mobile/)).
+- For KaneAI app tests, your app as an APK for Android or an IPA for iOS. KaneAI test runs put native apps on Real Devices. Kane CLI runs apps on the iOS Simulator or Android Emulator instead, so it takes a `.zip` simulator build or an `.apk`, not an `.ipa` ([Mobile Testing with Kane CLI](https://www.testmuai.com/docs/kane-cli-mobile)).
 
 ## Step 1: Collect Your Momentic Test Files
 
@@ -281,7 +258,7 @@ A Momentic environment holds a base URL and variables. <!-- Source: https://mome
 
 ### Keep Tests in Your Repository With Kane CLI
 
-If your team keeps tests next to the code, [Kane CLI](/support/docs/kane-cli-testmd/) stores tests as `_test.md` Markdown files that you commit. Each `##` heading marks a step, and the agent reads the natural-language text under it. Kane CLI does not read Momentic YAML as a test, so you rewrite each step.
+If your team keeps tests next to the code, [Kane CLI](https://www.testmuai.com/docs/kane-cli-testmd) stores tests as `_test.md` Markdown files that you commit. Each `##` heading marks a step, and the agent reads the natural-language text under it. Kane CLI does not read Momentic YAML as a test, so you rewrite each step.
 
 <Tabs className="docs__val">
 
@@ -333,11 +310,11 @@ kane-cli login --oauth
 kane-cli testmd run checkout_test.md --agent
 ```
 
-The first run authors each step and saves a recording, and later runs replay from cache. Shared flows, such as a login, go in helper files pulled in with [`@import`](/support/docs/kane-cli-testmd-composition/).
+The first run authors each step and saves a recording, and later runs replay from cache. Shared flows, such as a login, go in helper files pulled in with [`@import`](https://www.testmuai.com/docs/kane-cli-testmd-composition).
 
-Kane CLI runs web tests in Chrome. It runs app tests on an Android Emulator or iOS Simulator, on macOS Apple Silicon or on the HyperExecute grid with `kane-cli testrun run --remote`. A remote run needs a <BrandName /> plan that includes HyperExecute, with macOS runner concurrency, and the `remote-execution` plugin. See [Remote runs on the cloud grid](/support/docs/kane-cli-remote-execution/).
+Kane CLI runs web tests in Chrome. It runs app tests on an Android Emulator or iOS Simulator, on macOS Apple Silicon or on the HyperExecute grid with `kane-cli testrun run --remote`. A remote run needs a <BrandName /> plan that includes HyperExecute, with macOS runner concurrency, and the `remote-execution` plugin. See [Remote runs on the cloud grid](https://www.testmuai.com/docs/kane-cli-remote-execution).
 
-In Kane CLI 0.6.1 or later, `kane-cli context ingest` also accepts `.yaml` and `.yml` files as requirement sources. `kane-cli context extract` then proposes use-cases that cite the file's lines, and it consumes credits. From Kane CLI 0.7.1, ingest in a terminal continues straight into extraction. This gives the agent context for new tests. It does not import the Momentic test. See [Requirement Sources](/support/docs/kane-cli-assurance-sources/).
+In Kane CLI 0.6.1 or later, `kane-cli context ingest` also accepts `.yaml` and `.yml` files as requirement sources. `kane-cli context extract` then proposes use-cases that cite the file's lines, and it consumes credits. From Kane CLI 0.7.1, ingest in a terminal continues straight into extraction. This gives the agent context for new tests. It does not import the Momentic test. See [Requirement Sources](https://www.testmuai.com/docs/kane-cli-assurance-sources).
 
 ### Generate Code
 
@@ -392,25 +369,6 @@ The response returns links to the HyperExecute jobs. For apps on localhost or be
 - **Visual baselines.** Momentic `visualDiff` golden files do not move. A KaneAI Visual Comparison step captures a new baseline on its first run. <!-- Source: https://momentic.ai/docs/reference/commands/index, checked 2026-10-16 -->
 - **Emulators in KaneAI test runs.** Virtual Mobile configurations are for non-KaneAI test runs only. Use Kane CLI for emulator and simulator runs.
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-       Momentic To KaneAI Migration
-      </span>
-    </li>
-  </ul>
-</nav>
 
 ## Related migration guides
 

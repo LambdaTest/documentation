@@ -21,29 +21,6 @@ import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "LambdaTest SSO",
-          "item": `${BRAND_URL}/support/docs/testmu-sso-pingidentity-integration/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -205,7 +182,7 @@ Log in to your Ping Identity account using admin credentials.
   <img loading="lazy" src={require('../assets/images/sso/ping-identity/4.png').default} alt="setup sso button" className="doc_img"/>
 
 ### Step 5: Configure Attribute Mappings
-- Copy following attribute from LambdaTest SSO setup.
+- Copy following attribute from <BrandName /> SSO setup.
    <img loading="lazy" src={require('../assets/images/sso/ping-identity/sso-attribute.png').default} alt="ping-integration-attribute-mapping" width="944" height="487" className="doc_img"/>
 - Go to the Attribute Mappings tab of the created application in PingIdentity.
 - Update the saml_object attribute value from user_ID to emailaddress.

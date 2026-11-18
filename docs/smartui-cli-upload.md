@@ -31,29 +31,6 @@ import VerifiedTag from '@site/src/component/verifiedTag';
 
 ---
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "TestMu AI",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Smart Visual Testing",
-          "item": `${BRAND_URL}/support/docs/smartui-cli-upload/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -226,7 +203,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     }
   ]) }}
 />
-With SmartUI CLI, you can seamlessly perform visual regression testing on the <BrandName /> platform using your command line, identifying Visual UI Regression bugs effortlessly. This guide will walk you through the process of uploading and comparing images using the SmartUI CLI.
+With SmartUI CLI, you can seamlessly perform visual regression testing on the <BrandName /> platform using your command line, identifying Visual UI Regression bugs effortlessly. This guide will walk you through the process of uploading and comparing images using the SmartUI CLI. Already using an open-source tool? See how to [upload BackstopJS screenshots to SmartUI](https://www.testmuai.com/blog/backstopjs-guide/) without rewriting your scenarios.
 
 ## Prerequisites for running SmartUI CLI
 

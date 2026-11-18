@@ -14,29 +14,6 @@ canonical: https://www.testmuai.com/support/docs/group-management/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "TestMu AI",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Group Management",
-          "item": `${BRAND_URL}/support/docs/group-management/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -103,7 +80,7 @@ The <BrandName /> Group Management will help you in creating the different Group
 ## How to Create a New Group?
 ***
 
-**Step 1:** Login to your [LambdaTest](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard) account and navigate to Profile icon on the top-right. Click on ***Organization Settings***.
+**Step 1:** Login to your [<BrandName />](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard) account and navigate to Profile icon on the top-right. Click on ***Organization Settings***.
 
 <img loading="lazy" src={require('../assets/images/group-management/step-1.png').default} alt="Navigate to Organization Settings"  className="doc_img"/>
 

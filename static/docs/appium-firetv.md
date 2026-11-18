@@ -5,7 +5,7 @@
 Running Fire TV tests on TestMu AI executes Appium automation for Amazon Fire TV apps on the real device cloud. Configure the required desired capabilities, connect to the hub, and run scripts to validate Fire TV app behaviour without hardware.
 
 **Plus Plan Feature**
-This feature is available exclusively with the **Real Device Plus Automation Cloud** Plan.
+This feature is available exclusively with the **Private Cloud** Plan.
 
 To unlock this feature, purchase or upgrade to the required [plan](https://www.testmuai.com/pricing/). If you need assistance, please contact your TestMu AI support representative, reach out to our **[24×7 Chat Support]**, or email us at **support@testmuai.com**.
 

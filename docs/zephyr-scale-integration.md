@@ -20,29 +20,6 @@ import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 import VerifiedTag from '@site/src/component/verifiedTag';
 
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "TestMu AI",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Zephyr Scale Integration",
-          "item": `${BRAND_URL}/support/docs/zephyr-scale-integration/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -132,6 +109,8 @@ import VerifiedTag from '@site/src/component/verifiedTag';
 Zephyr Scale is a test management platform that helps you plan, manage, and measure your tests inside Jira. It's designed from the ground up to support large test libraries and scaling teams.
 
 <BrandName /> offers integration with Zephyr Scale that lets you perform automated browser testing on a cloud-based grid of 50,000+ real devices and 10,000+ browser/device combinations. By integrating Zephyr Scale with <BrandName />, you can view test execution results directly from <BrandName /> platform to your Zephyr Scale instance.
+
+Considering a move off Zephyr? See [Zephyr alternatives](https://www.testmuai.com/zephyr-alternative/).
 
 ## Prerequisites
 ---

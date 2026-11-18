@@ -21,29 +21,6 @@ canonical: https://www.testmuai.com/support/docs/developer-tools/
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "TestMu AI",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Developer Tools",
-          "item": `${BRAND_URL}/support/docs/developer-tools/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -154,22 +131,3 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 That was all from us about our native browser developer tools. If you still have any questions for us, please feel free to let us know. Our experts are always available on <span onClick={() => window.openLTChatWidget()}> chat</span> to help you out with any roadblock regarding our product. Happy debugging!
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href={BRAND_URL}>
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-        Developer Tools
-      </span>
-    </li>
-  </ul>
-</nav>

@@ -15,29 +15,6 @@ canonical: https://www.testmuai.com/support/docs/app-testing-on-real-devices/
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "TestMu AI",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Getting Started with Real Device App Testing",
-          "item": `${BRAND_URL}/support/docs/app-testing-on-real-devices/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -99,6 +76,8 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 Real device app testing is the process of testing a mobile application to ensure that their functionality and usability is not comprised when installed across multiple Android and iOS devices. With <BrandName />, you can test mobile applications manually to ensure they perform seamlessly across 3000 + real mobile devices.
 
+For the basics, see our guide on [how to test on real devices](https://www.testmuai.com/blog/real-device-testing/).
+
 <div className="ytframe"> 
 <div className="youtube" data-embed="k-DgcPraWns" data-loading-attribute="eager">
   <div className="play-button"></div>
@@ -139,22 +118,3 @@ Check out our detailed [support documentation](/support/docs/testing-locally-hos
 
 **Step 7**: Click on **Start** to run your test session.
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href={BRAND_URL}>
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-        Real Device App Testing
-      </span>
-    </li>
-  </ul>
-</nav>

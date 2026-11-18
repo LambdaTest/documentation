@@ -15,29 +15,6 @@ canonical: https://www.testmuai.com/support/docs/browser-testing-on-real-devices
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "TestMu AI",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Native Mobile Browser Testing",
-          "item": `${BRAND_URL}/support/docs/browser-testing-on-real-devices/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -100,6 +77,8 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 Real device browser testing refers to the process of testing web applications and websites on real devices such as smartphones, tablets, and computers to ensure that the user interface and user experience are optimal across various device types, operating systems, and browser combinations. With <BrandName />’s real device cloud, you can test websites and web applications to ensure they perform seamlessly across 3000 + real mobile devices.
 
+For the basics, see our guide on [how to test on real devices](https://www.testmuai.com/blog/real-device-testing/).
+
 <div className="ytframe"> 
 <div className="youtube" data-embed="zzjTXzJkLtA" data-loading-attribute="eager">
   <div className="play-button"></div>
@@ -133,22 +112,3 @@ Check out our detailed [support documentation](/support/docs/testing-locally-hos
   </div>
 </div>
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href={BRAND_URL}>
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-        Real Device Browser Testing
-      </span>
-    </li>
-  </ul>
-</nav>

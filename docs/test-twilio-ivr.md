@@ -20,29 +20,6 @@ canonical: https://www.testmuai.com/support/docs/test-twilio-ivr/
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Test Twilio IVR",
-          "item": `${BRAND_URL}/support/docs/test-twilio-ivr`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -97,7 +74,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-07-24T18:03:55+05:30"
+    "dateModified": "2026-11-14T11:30:00+05:30"
   }) }}
 />
 
@@ -105,11 +82,22 @@ A Twilio IVR is a scripted flow built in Studio or TwiML, not a conversational A
 
 To connect one, you need a Twilio account with a published Studio flow or TwiML application, the provisioned number running it, the flow export or menu map, and a TestMu AI workspace with agent-testing permissions.
 
+## How do you run a Twilio IVR test?
+
+---
+
+Create an **IVR Agent** and follow the steps in [Test an IVR Agent](/support/docs/ivr-agent/#test-an-ivr-agent). Two of the steps take Twilio-specific input:
+
+- **IVR specification.** On the **Prompt** tab, add your Studio flow export or menu map, or paste your IVR specification, so the platform maps every branch of the flow.
+- **Phone number.** On the **Phone Numbers** tab, register the Twilio number provisioned to the flow. The platform dials this number in every test call.
+
 ## How do you test every branch of a Twilio IVR?
 
 ---
 
-Because an IVR is a decision tree, coverage is measured in branches, not intents. Upload the flow export or menu map and TestMu AI generates a scenario for each path a caller can take, then dials the provisioned number and walks them: DTMF entry, speech input fallback, timeout and retry behaviour, and transfer to a queue or a representative. See [phone agent testing](/support/docs/phone-agent/) for the full setup.
+Because an IVR is a decision tree, coverage is measured in branches, not intents. TestMu AI generates scenarios for the paths a caller can take, then dials the provisioned number and walks them: DTMF entry, speech input fallback, timeout and retry behaviour, and transfer to a queue or a representative. See [which paths to cover first](/support/docs/ivr-agent/#cover-every-branch).
+
+If your IVR test cases already live in Cyara, [import a Cyara XML export](/support/docs/ivr-agent/#ivr-agent-testing-features) instead of writing a specification.
 
 ## What makes testing a scripted IVR different?
 
@@ -131,3 +119,10 @@ An IVR matches on input rather than intent, so its failure modes are about input
 - Speech fallback never triggers
 - Call drops on timeout
 - Transfer target unreachable
+
+## Related TestMu AI Guides
+
+---
+
+- See how to [test an IVR agent](/support/docs/ivr-agent/), step by step.
+- See how to [test phone agents](/support/docs/phone-agent/) for conversational AI agents on a phone line.

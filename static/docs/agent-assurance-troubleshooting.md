@@ -285,7 +285,7 @@ A normal rook report &lt;run-id&gt; reads saved results; it does not automatical
 - **RCA output does not parse as JSON:** let the approved analysis finish, then use rook report &lt;run-id&gt; --json as a separate saved-report read. Do not request another paid analysis just to obtain JSON.
 - **The verdict did not change:** RCA proposes causes and remedies; it does not fix your agent or convert **Unable to Verify** to **Pass**. Validate an approved fix in a new, explicitly scoped run.
 
-Saved-report RCA is different from adding --rca to rook run: the latter also invokes the target for the selected scenarios.
+Saved-report RCA is different from RCA in rook run: a run also invokes the target for the selected scenarios. Since 0.1.20, a run explains its failures by default; add --no-rca to skip that.
 
 ### Browser viewer does not open
 
@@ -310,7 +310,7 @@ For missing hosted projects, runs, or inconsistent summary percentages, use the 
 
 The local UI reads the workspace and selected project on this machine; the hosted UI reads uploaded records. For a missing local run, confirm the original workspace and that its run directory is present. Opening a hosted record does not download it locally.
 
-For a missing hosted run, check `ROOK_ENV`, browser identity, and outstanding normal-run uploads with `rook runs sync`. A `--test` run deliberately stays local. Neither UI can recover evidence that was never written. See [how to navigate each UI](/support/docs/rook-web-ui/#choose-your-ui) before rerunning a target that may already have changed state.
+For a missing hosted run, check `ROOK_ENV`, browser identity, and outstanding normal-run uploads with `rook runs sync`. A `--test` run deliberately keeps its evidence local. Since 0.1.20, if the agent has been synchronized, its hosted **Runs** tab lists the run under **Test runs**, without its detail. Neither UI can recover evidence that was never written. See [how to navigate each UI](/support/docs/rook-web-ui/#choose-your-ui) before rerunning a target that may already have changed state.
 
 #### Local UI: Check What Was Written {#local-ui-example}
 

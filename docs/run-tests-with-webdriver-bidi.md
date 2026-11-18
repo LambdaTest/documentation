@@ -21,29 +21,6 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import VerifiedTag from '@site/src/component/verifiedTag';
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "TestMu AI",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Run Web Automation Tests With WebDriver BiDi",
-          "item": `${BRAND_URL}/support/docs/run-tests-with-webdriver-bidi/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -442,22 +419,3 @@ The [Browser Cloud agent skills](/support/docs/browser-cloud-skills/) are ready-
 - [How to run BiDi tests with the WebdriverIO sample project](/support/docs/selenium-bidi-integration/) for a ready-to-clone repository.
 - [How to run BiDi tests on HyperExecute](/support/docs/hyperexecute-bidi-testing/) to scale BiDi runs across a test matrix.
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-        Run Web Automation Tests With WebDriver BiDi
-      </span>
-    </li>
-  </ul>
-</nav>

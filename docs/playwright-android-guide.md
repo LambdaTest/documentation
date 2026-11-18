@@ -22,29 +22,6 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import VerifiedTag from '@site/src/component/verifiedTag';
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "TestMu AI",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Getting Started With Playwright Testing",
-          "item": `${BRAND_URL}/support/docs/playwright-testing/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -622,7 +599,7 @@ The screenshot below shows the Playwright build on the left and the build sessio
 Configure these capabilities in your `LT:Options` object to control how your Playwright Android tests run.
 
 :::tip
-Use the [Playwright Android Capability Generator](https://www.lambdatest.com/playwright-android-capability-generator/) to generate capabilities for your tests.
+Use the [Playwright Android Capability Generator](https://www.testmuai.com/playwright-android-capability-generator/) to generate capabilities for your tests.
 :::
 
 | Key             | Expected Values                | Description                                                                                                                                                                                        | Capability                                                                           |

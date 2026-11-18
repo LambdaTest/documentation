@@ -1,6 +1,6 @@
 ---
 id: parallel-playwright-test
-title: How To Run Playwright Tests In Parallel
+title: Run Playwright Tests in Parallel on TestMu AI
 hide_title: true
 sidebar_label: Parallel Testing
 description: Here you can learn how to run parallel tests with Playwright across multiple browser versions on the TestMu AI automation platform.
@@ -22,29 +22,6 @@ canonical: https://www.testmuai.com/support/docs/parallel-testing-with-playwrigh
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import VerifiedTag from '@site/src/component/verifiedTag';
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "TestMu AI",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Parallel Testing With Playwright",
-          "item": `${BRAND_URL}/support/docs/parallel-testing-with-playwright/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -57,7 +34,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       "@type": "WebPage",
       "@id": "https://www.testmuai.com/support/docs/parallel-testing-with-playwright/"
     },
-    "headline": "How To Run Playwright Tests In Parallel",
+    "headline": "Run Playwright Tests in Parallel on TestMu AI",
     "description": "Here you can learn how to run parallel tests with Playwright across multiple browser versions on the TestMu AI automation platform.",
     "url": "https://www.testmuai.com/support/docs/parallel-testing-with-playwright/",
     "image": {
@@ -252,22 +229,3 @@ The <BrandName /> Automation Dashboard is where you can see the results of your 
 
 
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href={BRAND_URL}>
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-        Parallel Testing With Playwright
-      </span>
-    </li>
-  </ul>
-</nav>

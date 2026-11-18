@@ -23,29 +23,6 @@ import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Screen Reader on Real Devices Browser",
-          "item": `${BRAND_URL}/support/docs/screen-reader-voiceover-real-devices-browser/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -109,7 +86,7 @@ Manual accessibility testing ensures that your website is fully accessible and c
 Ensuring accessibility with VoiceOver is essential for creating inclusive digital experiences that accommodate users with visual impairments. VoiceOver provides spoken feedback, allowing users to navigate, interact, and understand UI elements without relying on visual cues.
 
 :::note
-This feature is currently in **Beta**. Please reach out to our [Support](https://www.testmuai.com/support/) team for access.
+This feature is currently in **Beta**. Please reach out to our [Support](https://www.testmuai.com/support/docs/) team for access.
 :::
 
 

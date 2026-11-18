@@ -6,6 +6,61 @@ An inbound phone agent answers calls. To test one, the TestMu AI Agent Testing P
 
 Inbound testing runs in two modes: **pre-evaluation** with live simulated calls, and **post-evaluation** on recordings from real production calls.
 
+## How to Run Your First Phone Caller Inbound Agent Test
+
+Follow these seven steps in the dashboard.
+
+**Step 1: Create the inbound agent.** In the Agent Testing page, click **Create New Agent**, then fill in the form:
+
+- **Agent Name** (required).
+- **Description** (optional).
+- **Agent Type** (required): select **Phone Caller Agent**.
+- **Phone Call Type** (required): select **Inbound (Bot receives calls)**. The simulator acts as the caller and your bot answers the incoming calls.
+
+Click **Create New Agent** to confirm.
+
+**Step 2: Define the agent prompt.** Open the **Prompt** tab, which sits between **Scenarios** and **Integrations**.
+
+- In **Agent-Under-Evaluation Prompt**, define the ideal behavior and role of your agent to guide conversations.
+- Optionally, under **Upload Files**, add PDF, MS Word, MS Excel, TXT, MD, MP3, WAV, M4A, PNG, JPG, or WEBP files. Multiple files are allowed, up to 5 MB each.
+- Optionally, under **Import from Jira**, enter a Jira issue key or URL and click **Import** to load a ticket into the editor. This needs Jira to be connected first: click **Connect Jira** if it isn't.
+- Click **Save Prompt**.
+
+**Step 3: Generate scenarios.** Open the **Scenarios** tab and click **Generate Scenarios**, then set:
+
+- **Number of Scenarios:** use the slider or type a number.
+- **Scenario Types:** leave all unchecked to generate normal scenarios, or select one or more types to generate those instead.
+  - **Happy Path:** normal flows and success scenarios.
+  - **Negative:** errors, invalid inputs, and failure paths.
+  - **Edge Case:** boundary values and unusual conditions.
+  - **Red Team:** security attacks and adversarial inputs.
+- **Select Languages for Scenarios:** for example English, Spanish, Portuguese, German, Swedish, Indonesian, or Filipino.
+
+Click **Generate Scenarios** to confirm.
+
+**Step 4: Add your agent's phone number.** Open the **Phone Numbers** tab and register the number your agent answers on. You can select the country code and set a default number. The platform dials this number in every test call, and you pick it for each scenario when you create a suite.
+
+**Step 5: Create a suite.** Open the **Suites** tab and click **Create New Suite**.
+
+- Enter a **Suite Name**.
+- Optionally, select an **Agent Profile**. It applies only to scenarios that don't have a profile set on the **Scenarios** page, and a scenario-level profile overrides it.
+- Choose the **Region**. Inbound calls originate from that region's phone number, and the default is US.
+- Use **Search scenario** and the checkboxes to select the scenarios to run.
+- For each selected scenario, choose the phone number to call, one or more voices, a background noise (or **No Background Noise**), a persona, and a test profile, and set the **Iterations**.
+- Adjust **Turn Wait Time** (0.5 to 5 seconds) and **End call if silent for** (30 to 180 seconds) if needed.
+- Check the footer, which shows the number of calls and the parallel calls available, for example **2 calls · 5/5 available**, then click **Create New Suite**.
+
+**Step 6: Run the suite.** Click **Run** next to your suite. Every call in the suite is a real phone call to your agent, so the **Confirm Run** dialog lists each one before anything is dialed. Check that the number of calls and each call's voice and background noise are what you intended, then click the trigger button, such as **Trigger 2 calls**, to start.
+
+**Step 7: Review the call results.** Open a call from the list to see whether it passed and why.
+
+- Start with failed calls. On the **Analytics** tab, click a metric tile to see the reason behind its result. Times in the reason, such as "At 01:38", jump to that moment in the recording.
+- On the **Recording** tab, play the call or read the transcript around that moment to hear how your agent handled it.
+- On the **Validation Results** tab, check which of the scenario's success criteria the call met or missed.
+- If a call failed but its conversation metrics look fine, check the **MOS** badge. A call's pass or fail can be based on the metrics, on the mean opinion score of the call audio, or on both.
+
+For what each metric measures and its default targets, see the [phone agent metrics](/support/docs/phone-agent/#metrics).
+
 ## Pre-Evaluation: Live Test Calls
 
 In pre-evaluation, the platform simulates customers calling your voice agent, then evaluates the resulting conversations.
@@ -46,83 +101,14 @@ In post-evaluation, you upload recordings from real production calls and score t
 
 ## Metrics
 
-Phone agents are evaluated across 8 metric categories with 30+ individual metrics.
+Inbound calls are scored on the same 42 metrics as every phone agent, grouped under six questions: is it fast, does it sound good, does it hold a good conversation, does it get the facts right, does it get the job done, and is it safe. They range from Time to Connect and Average Latency to Mean opinion score, First call resolution, and PII protection.
 
-**A. Conversation Flow and Interaction Dynamics**
-
-| Metric | Unit | What it measures |
-|--------|------|------------------|
-| Average Latency | ms | Time to respond after the user stops speaking |
-| Words Per Minute | wpm | Agent speaking speed |
-| AI Talk Ratio | % | Share of call time the agent is speaking |
-| User Talk Ratio | % | Share of call time the user is speaking |
-| AI Interrupting User | % | How often the agent interrupts the user |
-| User Interrupting AI | % | How often the user interrupts the agent |
-
-**B. Accuracy and Effectiveness**
-
-| Metric | Unit | What it measures |
-|--------|------|------------------|
-| First Call Resolution | % | Whether the issue was resolved in a single call |
-| Intent Recognition Accuracy | % | How accurately the agent understood intent |
-| Task Completion Success Rate | % | Share of assigned tasks completed |
-| Instruction Following | % | Adherence to configured instructions |
-| Response Consistency | % | Consistency of responses to similar inputs |
-
-**C. User Experience and Satisfaction**
-
-| Metric | Unit | What it measures |
-|--------|------|------------------|
-| CSAT | % | Overall customer satisfaction score |
-| CSAT Reason | Text | Explanation for the satisfaction score |
-| User Sentiment | Text | Detected emotional sentiment from user speech |
-| Early Termination | % | Share of calls not terminated prematurely |
-
-**D. Business Operational Metrics**
-
-| Metric | Unit | What it measures |
-|--------|------|------------------|
-| Containment Rate | % | Issues resolved without human escalation |
-| AI to Human Handoff Rate | % | Frequency of escalation to a human agent |
-
-**E. Audio Voice Quality**
-
-| Metric | Unit | What it measures |
-|--------|------|------------------|
-| Average Pitch | Hz | Voice pitch (normal: 85 to 300 Hz) |
-| Voice Quality Index | 0 to 5 | Composite voice quality score |
-| Signal-to-Noise Ratio | % | Audio clarity versus background noise |
-
-**F. Speech-to-Text Evaluation**
-
-| Metric | Unit | What it measures |
-|--------|------|------------------|
-| STT Accuracy | % | Transcription accuracy |
-| STT Verdict | Pass/Fail | Overall transcription quality judgment |
-| STT Summary | Text | Detailed transcription quality notes |
-| Mismatch Examples | List | Instances where transcription differed from speech |
-
-**G. Validation Results**
-
-| Metric | Unit | What it measures |
-|--------|------|------------------|
-| Compliance | % | Compliance rate against custom validation criteria |
-| Pass/Fail/Unable to Verify | Count | Per-criterion validation breakdown |
-
-**H. Detected Issue Tags (automated).** Every recording is auto-scanned for: latency issues, hallucination in call flow, transcript issues, patchy audio, running in a loop, incorrect STT, interruption handling, number issues, background noise, no response, and blank or empty STT.
-
-**Threshold reference**
-
-| Metric | Excellent | Good | Poor |
-|--------|-----------|------|------|
-| Average Latency | at most 1000 ms | at most 2500 ms | over 2500 ms |
-| Words Per Minute | at least 160 (fast) | 131 to 160 | under 110 (slow) |
-| Voice Quality Index | at least 2.5 / 5 | n/a | under 2.5 / 5 |
-| Average Pitch | 85 to 300 Hz | n/a | under 85 or over 300 Hz |
+For what each metric measures, how it is produced, and its default targets and ratings, see the [phone agent metrics](/support/docs/phone-agent/#metrics).
 
 ## Related TestMu AI Guides
 
 - See the [phone agent testing overview](/support/docs/phone-agent/) for both testing modes.
+- See the [full list of phone agent metrics](/support/docs/phone-agent/#metrics) with their default targets and ratings.
 - See how to [test an outbound phone agent](/support/docs/outbound-phone-agent/).
 - See how to [run these tests from the terminal](/support/docs/agent-testing-cli/) with the A2A CLI.
 - See how to [grade your own business rules with custom metrics](/support/docs/phone-agent/#custom-metrics).

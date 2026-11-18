@@ -21,29 +21,6 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import VerifiedTag from '@site/src/component/verifiedTag';
 
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Katalon Integration",
-          "item": `${BRAND_URL}/support/docs/katalon-integration/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -144,7 +121,7 @@ By the end of this topic, you will know:
 
 ---
 
-Before you can start performing App automation using Katalon Studio with LambdaTest, you would need to follow these steps:
+Before you can start performing App automation using Katalon Studio with <BrandName />, you would need to follow these steps:
 
 - You will need a <BrandName /> username and access key. To obtain your access credentials, [purchase a plan](https://billing.lambdatest.com/billing/plans) or access the [automation dashboard](https://www.testmuai.com/login/?redirectTo=https://appautomation.lambdatest.com/).
 - [Katalon Studio](https://katalon.com/)
@@ -331,22 +308,3 @@ Once you have run your tests, you can view the test execution along with logs. Y
 - [Advanced Configuration for Capabilities](/support/docs/desired-capabilities-in-appium/)
 - [Automation Capabilities Generator](https://www.testmuai.com/capabilities-generator/)
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-      Java With Appium
-</span>
-    </li>
-  </ul>
-</nav>

@@ -25,29 +25,6 @@ import VerifiedTag from '@site/src/component/verifiedTag';
 
 ---
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "TestMu AI",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Smart Visual Testing",
-          "item": `${BRAND_URL}/support/docs/smartui-cli-figma-app/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -774,8 +751,8 @@ If you encounter issues not covered here:
 - Review the [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide/) for detailed solutions
 - Check [Figma CLI Documentation](/support/docs/smartui-cli-figma/) for basic Figma workflows
 - Check [Figma-Web CLI Documentation](/support/docs/smartui-cli-figma-web/) for web comparison workflows
-- Visit [TestMu AI Support](https://www.testmuai.com/support/) for additional resources
-- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support/)
+- Visit [TestMu AI Support](https://www.testmuai.com/support/docs/) for additional resources
+- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support/docs/)
 
 ## Additional Resources
 

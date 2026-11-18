@@ -1,12 +1,14 @@
-# Flutter Dart Testing On TestMu AI - iOS
+# How to Run Flutter Dart Tests on TestMu AI - iOS
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-Flutter, an open-source UI toolkit created by Google, is a popular choice among developers to build natively compiled applications for mobile, web, and desktop from a single codebase. With Dart as its programming language, Flutter enables fast development of beautiful apps with a highly productive, extensible and open-source set of features.
+Running your first Flutter Dart test on TestMu AI automates Flutter apps on real iOS devices in the cloud. Install the Flutter SDK, set credentials, upload the sample app and test suite, then execute and review results on the dashboard.
 
-In this guide, we will explore how to run Flutter Dart End-to-End (E2E) testing on an iOS device using the TestMu AI Real Device Cloud. By combining the capabilities of Flutter Dart and TestMu AI, you can ensure the proper functioning of your app across different devices and make your app more reliable and robust.
+## Flutter Dart Testing on iOS
 
-## Prerequisites for Getting Started
+In this section, we will explore how to run Flutter Dart End-to-End (E2E) testing on an iOS device using the TestMu AI Real Device Cloud. By combining the capabilities of Flutter Dart and TestMu AI, you can ensure the proper functioning of your app across different devices and make your app more reliable and robust.
+
+### Prerequisites for Getting Started
 
 1. Flutter SDK installed on your system
 2. You will need a TestMu AI username and access key. To obtain your access credentials, [purchase a plan](https://billing.lambdatest.com/billing/plans) or access the [automation dashboard](https://www.testmuai.com/login/?redirectTo=https://appautomation.lambdatest.com/).
@@ -14,9 +16,9 @@ In this guide, we will explore how to run Flutter Dart End-to-End (E2E) testing 
 
 If you do not have any **Flutter iOS** test suite (.zip), you can run your sample tests on TestMu AI by using our sample :link: [Flutter iOS](https://prod-mobile-artefacts.lambdatest.com/assets/docs/Flutter_iOS.zip).
 
-## Run Your First Test
+### Run Your First Test
 
-### Step 1: Upload Your Test Suite
+#### Step 1: Upload Your Test Suite
 
 Upload your **iOS** test suite (.zip file) to the TestMu AI servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format `Username:AccessKey` in the **cURL** command for authentication. Make sure to add the path of the **appFile** in the cURL request. Here is an example cURL request to upload your app using our REST API:
 
@@ -33,15 +35,15 @@ Upload your **iOS** test suite (.zip file) to the TestMu AI servers using our **
 
 Response of above cURL will be a **JSON** object containing the `App id` of the format - ``lt://APP123456789123456789123456789`` and will be used in the last step.
 
-### Step 2: Executing The Test
+#### Step 2: Executing The Test
 
-#### Basic Authentication
+##### Basic Authentication
 
-You will need base64 encoded authentication in order to execute your Espresso automation test suite. You need to enter your username:accesskey **[here](https://mixedanalytics.com/knowledge-base/api-connector-encode-credentials-to-base-64/)** in order and click on encode to generate the base64 authentication. Take note of the **base64** encoded authentication which needs to be added in the next step.
+You will need base64 encoded authentication in order to execute your Flutter automation test suite. You need to enter your username:accesskey **[here](https://mixedanalytics.com/knowledge-base/api-connector-encode-credentials-to-base-64/)** in order and click on encode to generate the base64 authentication. Take note of the **base64** encoded authentication which needs to be added in the next step.
 
 {`${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
 
-#### Execute Command
+##### Execute Command
 
 Once you have uploaded your test suite, you can execute your test by running the following command:
 
@@ -63,14 +65,14 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/f
 ```
 
 ```powershell
-curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/flutter/ios/build" --header "Content-Type: application/json" --header "Authorization: Basic <Enter the Auth here>" --data-raw "{\"testSuite\": \"lt://APP_ID\",\"device\" :  [\"Pixel 6-12\"], \"video\": true, \"deviceLog\": true, \"queueTimeout\" : \"9000\",\"idleTimeout\" : \"600\"\"network\": true,\"build\" : \"Flutter iOS\"}"
+curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/flutter/ios/build" --header "Content-Type: application/json" --header "Authorization: Basic <Enter the Auth here>" --data-raw "{\"testSuite\": \"lt://APP_ID\",\"device\" :  [\"iPhone 14-16\"], \"video\": true, \"deviceLog\": true, \"queueTimeout\" : \"9000\",\"idleTimeout\" : \"600\",\"network\": true,\"build\" : \"Flutter iOS\"}"
 ```
 
-### Step 3: View Test Execution
+#### Step 3: View Test Execution
 
 Once you have run your tests, you can view the test execution along with logs. You will be able to see the test cases passing or failing. You can view the same at [TestMu AI Automation](https://www.testmuai.com/login/?redirectTo=https://appautomation.lambdatest.com/builds).
 
-## Capabilities Supported
+### Capabilities Supported
 
 The following capabilities are supported:
 
@@ -89,12 +91,12 @@ The following capabilities are supported:
 
 Ensure that the latitude is between -90 and 90, and the longitude is between -180 and 180. Otherwise, an error will occur like "Invalid GPS location: Latitude must be between -90 and +90, Longitude must be between -180 and +180."
 
-## Running Tests in Parallel
+### Running Tests in Parallel on iOS
 
 You can run tests in parallel on multiple devices by passing the device name in comma separated format in the execute command as show below:
 
 ```bash
-curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/flutter/build' \
+curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/flutter/ios/build' \
 --header 'Authorization: Basic <Enter_Basic_Auth>' \
 --header 'Content-Type: application/json' \
 --data-raw '{
@@ -109,41 +111,3 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/f
 ```
 
 Do note that Flutter builds when run in parallel, result in separate builds being generated for each parallel run.
-
-## Using the Flutter Testing Agent Skill with TestMu AI
-
-The [flutter-testing-skill](https://github.com/LambdaTest/agent-skills/tree/main/flutter-testing-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
-
-The flutter-testing-skill package includes:
-
-```
-flutter-testing-skill/
-├── SKILL.md
-└── reference/
-    ├── playbook.md
-    └── advanced-patterns.md
-```
-
-It provides structured guidance for:
-
-* Project structure and setup
-* Dependency configuration
-* Local execution
-* TestMu AI cloud execution
-* Debugging patterns
-* CI/CD integration
-
-### Installing Flutter Testing Agent Skill
-
-Install a Flutter Testing Agent Skill using the command below:
-
-```
-# Clone the repo and copy the skill you need
-git clone https://github.com/LambdaTest/agent-skills.git
-cp -r agent-skills/flutter-testing-skill .claude/skills/
-
-# Or for Cursor / Copilot
-cp -r agent-skills/flutter-testing-skill .cursor/skills/
-```
-
-**Note**: If you prefer installing all available framework skills instead of only flutter-testing-skill, clone the repository directly into your tool's skills directory (for example, .claude/skills/, .cursor/skills/, .gemini/skills/, or .agent/skills/).

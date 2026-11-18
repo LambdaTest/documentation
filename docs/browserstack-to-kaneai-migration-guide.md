@@ -29,29 +29,6 @@ import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "BrowserStack to KaneAI migration",
-          "item": `${BRAND_URL}/support/docs/browserstack-to-kaneai-migration-guide/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -311,7 +288,7 @@ Open an imported test case and click **Automate with KaneAI** in its **Automate*
 
 On the KaneAI dashboard, click **Author Browser Test** or **Author App Test** and set up the session. Then describe each step in natural language. See [Author Your First Desktop Browser Test](/support/docs/author-your-first-desktop-browser-test/) and [Author Your First Mobile App Test](/support/docs/author-your-first-mobile-app-test/).
 
-[Manual Interaction](/support/docs/kaneai-manual-interaction/) records your clicks, typing, scrolling and navigation as steps. It works in desktop browsers, Android apps and iOS apps in portrait, but not in mobile browsers. It cannot record hovers or checks, so write verify and assert steps as instructions.
+[Manual Interaction](/support/docs/kaneai-manual-interaction/) records your clicks, typing, scrolling and navigation as steps. It works in desktop browsers, mobile browsers, Android apps and iOS apps. It cannot record hovers or checks, so write verify and assert steps as instructions.
 
 While you author, you can also use these features:
 
@@ -362,25 +339,6 @@ To start a test run from CI, such as GitHub Actions or Jenkins, copy its Test Ru
 - **AI healing.** Low Code Automation's element selection with AI healing is not exported. KaneAI-generated scripts that run on HyperExecute use [Auto-Heal](/support/docs/kaneai-auto-heal/) instead. <!-- Source: https://www.browserstack.com/docs/low-code-automation/advanced-use-cases/export-tests, checked 2026-10-16 -->
 - **Visual Validation, API and Open Email steps.** BrowserStack does not currently export them. Step 4 shows how to rebuild visual checks and API calls. <!-- Source: https://www.browserstack.com/docs/low-code-automation/advanced-use-cases/export-tests, checked 2026-10-16 -->
 - **Unsupported step types.** BrowserStack's sample .side response shows one as an `echo` command reading "This step type is currently not supported". Search your files for that text. <!-- Source: https://www.browserstack.com/docs/low-code-automation/advanced-use-cases/export-tests/get-tests-api, checked 2026-10-16 -->
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-       BrowserStack To KaneAI Migration
-      </span>
-    </li>
-  </ul>
-</nav>
 
 ## Related migration guides
 

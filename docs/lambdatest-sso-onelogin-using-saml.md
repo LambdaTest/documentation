@@ -19,29 +19,6 @@ canonical: https://www.testmuai.com/support/docs/testmu-sso-onelogin-using-saml/
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "TestMu AI",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "OneLogin Integration",
-          "item": `${BRAND_URL}/support/docs/testmu-sso-onelogin-using-saml/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -178,22 +155,3 @@ To set-up and use OneLogin & <BrandName /> Single Sign-on (SSO) feature:
 
 > That's it. Your enterprise's <BrandName /> SSO and OneLogin has been integrated successfully. If you face any challenge, or come across any issues, please feel free to contact our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**Support Team**</span>. You can even mail us at [support@testmuai.com](mailto:support@testmuai.com). Happy Testing!
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href={BRAND_URL}>
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-        OneLogin Integration
-      </span>
-    </li>
-  </ul>
-</nav>

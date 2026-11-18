@@ -17,29 +17,6 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "ACCELQ Integration",
-          "item": `${BRAND_URL}/support/docs/accelq-integration/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -105,7 +82,7 @@ ACCELQ is an AI Native Codeless automation testing and management platform. It e
 
 By integrating <BrandName /> with ACCELQ, you can perform web and mobile app automation on an online device farm of 50,000+ real devices and 10,000+ browser/device combinations, and accelerate your end-to-end digital testing efforts.
 
-[Comparing ACCELQ and <BrandName />? See the comparison](https://www.testmuai.com/accelq-alternative/).
+Comparing ACCELQ and <BrandName />? See our [ACCELQ alternatives](https://www.testmuai.com/accelq-alternative/) comparison.
 
 If you plan to move off ACCELQ, the [ACCELQ to KaneAI migration guide](/support/docs/accelq-to-kaneai-migration-guide/) shows how to keep these tests running while you re-create them in KaneAI.
 
@@ -157,25 +134,6 @@ If you plan to move off ACCELQ, the [ACCELQ to KaneAI migration guide](/support/
 5. Now click **Start Capture** and it will launch your test session on the selected device.
 
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href={BRAND_URL}>
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-        ACCELQ Integration
-      </span>
-    </li>
-  </ul>
-</nav>
 
 
 

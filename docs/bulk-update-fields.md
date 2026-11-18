@@ -17,29 +17,6 @@ canonical: https://www.testmuai.com/support/docs/bulk-update-fields/
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "TestMu AI",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Bulk Update Fields",
-          "item": `${BRAND_URL}/support/docs/bulk-update-fields/`
-        }]
-      })
-    }}
-></script>
 
 # Bulk Update System & Custom Fields
 
@@ -63,22 +40,3 @@ A notification will appear at the top right confirming the fields have been upda
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/bulk_field_update_res.jpeg').default} alt="Confirmation that the fields were updated" className="doc_img" width="1366" height="629"/>
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href={BRAND_URL}>
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-        Bulk Update Fields
-      </span>
-    </li>
-  </ul>
-</nav>

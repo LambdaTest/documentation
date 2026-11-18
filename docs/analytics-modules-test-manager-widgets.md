@@ -16,6 +16,8 @@ keywords:
  - Test Execution Burndown
  - Defects by Severity
  - Tester Assignment
+ - Test Case Execution Health
+ - Continuously Failing Test Cases
  - All time date range
 
 url: https://www.testmuai.com/support/docs/analytics-modules-test-manager-widgets/
@@ -28,29 +30,6 @@ import NewTag from '../src/component/newTag';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Test Overview",
-          "item": `${BRAND_URL}/support/docs/analytics-modules-test-manager-widgets/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -105,7 +84,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-10-15T12:00:00+05:30"
+    "dateModified": "2026-10-30T12:00:00+05:30"
   }) }}
 />
 <BrandName /> Test Manager Dashboard widgets provide comprehensive insights into your test automation or manual efforts. These widgets help you optimize your testing efforts by providing detailed insights into your test execution, test case insights, and more.
@@ -433,5 +412,25 @@ The Tester Assignment widget displays a horizontal stacked bar chart with one ba
 ### Value Proposition
 
 This widget lets you compare workload and execution progress across testers at a glance, making it easy to spot uneven assignment, identify testers who are behind, and rebalance effort to keep a release on track.
+
+## Test Case Execution Health {#continuously-failing-test-cases}
+
+The Test Case Execution Health widget (formerly **Continuously Failing Test Cases**) lists your Test Manager test cases with their recent runs and latest status. Turn on **Show Continuously Failing Test Cases only** to narrow the list to the test cases that keep failing, so you can fix them first.
+
+### How it works?
+
+* Each row shows the **Test case name**, with its test case ID and project below it, **Recent runs**, and **Last run at**, the time of its latest run in your time zone. The most recently run test cases are listed first.
+* **Recent runs** shows the latest 5 runs of the test case as colored dots, with the latest run on the right, and a badge with its latest status. Hover a dot to see when that run happened.
+* By default, every test case whose latest run falls in the dashboard date range is listed.
+* To list only continuously failing test cases, open **Configure Widget → Display Options** and select **Show Continuously Failing Test Cases only**. A test case is continuously failing when its latest **N** executed runs all failed and its latest run falls in the dashboard date range. Earlier runs outside the range still count towards the N.
+* **N** is the **Always Failing** setting in **Organization Settings → Org Product Preferences → Insights → Smart Tags** (5 runs by default). See [Smart tags for test cases](/support/docs/analytics-build-insights-test-cases/#smart-tags-for-test-cases).
+* Only **Passed** and **Failed** runs count towards N. Runs in any other status, such as **Error**, are skipped and do not break a streak, but they still appear in **Recent runs**. Runs that are **Not Started** or still in progress are not shown.
+* Click a row to open the runs counted for that test case. Switch from **Counted runs** to **All runs** to see every run of the test case in the dashboard date range (extended back to include all counted runs), with the counted runs tagged **Counted**.
+* Click the test case name to open the test case in Test Manager.
+* Apply filters from the three-dot menu to scope the widget to specific projects or test runs. Use **View all** to see the full list and **Export** it as CSV or PDF.
+
+### Value Proposition
+
+This widget shows how each test case has been running lately, and with the continuously failing option on, the tests that fail every time they run. You can separate broken tests from occasional failures, fix the most persistent problems first, and keep them from hiding new regressions.
 
 

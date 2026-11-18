@@ -7,29 +7,6 @@ slug: accessibility-automation/
 ---
 import { BRAND_URL } from '@site/src/component/BrandName';
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Accessibility Automation (Overview)",
-          "item": `${BRAND_URL}/support/docs/accessibility-automation/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -86,7 +63,7 @@ import { BRAND_URL } from '@site/src/component/BrandName';
 
 # Accessibility Automation (Overview)
 
-Accessibility Automation lets teams run accessibility checks as part of automated web test execution.
+Accessibility Automation lets teams run accessibility checks as part of automated web test execution. For supported frameworks, CI/CD setup, and code samples in one place, see [automated accessibility testing with TestMu AI](https://www.testmuai.com/accessibility-automation/).
 
 This overview introduces the Accessibility Automation workflow and supported execution model for running checks alongside automated web tests. You will see how framework-based runs relate to DevTools, Web Scanner, and Test Scheduling, and what to expect from grid execution, settings, and reporting.
 

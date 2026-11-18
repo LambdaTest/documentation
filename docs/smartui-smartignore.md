@@ -23,29 +23,6 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import VerifiedTag from '@site/src/component/verifiedTag';
 import { BRAND_URL } from '@site/src/component/BrandName';
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Smart Ignore",
-          "item": `${BRAND_URL}/support/docs/smartui-smartignore/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -198,6 +175,21 @@ const capabilities = {
 For full Hooks examples with Layout, Full Page, and Smart Ignore, see:
 - [Hooks: Layout + Full Page + Smart Ignore](/support/docs/smartui-hooks-layout-fullpage-smartignore/)
 
+### 4. Catching Subtle Color Changes with Color Sensitivity
+
+Smart Ignore uses a color difference threshold to decide whether a changed color is worth marking. You can choose the color difference algorithm and how strict it is in **Project Settings > Comparison > Color Sensitivity**.
+
+1. Open your project settings and go to **Comparison**.
+2. Under **Color Sensitivity**, pick an **Algorithm**: YIQ (default), CIEDE2000, CAM16-UCS or CAM02-UCS.
+3. Pick **Only obvious**, **Any color change** or **Custom**. A lower value marks smaller color differences.
+4. Click **Save Settings** and run a new build.
+
+In the example below, the **Pay Now** button changed to a slightly lighter green on an Android real device. With CIEDE2000 and **Any color change**, Smart Ignore marks the button:
+
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/smart-ignore/colour-sensitivity-result.webp').default} alt="Smart Ignore comparison on a Pixel 8 marking the Pay Now button after a subtle color change, mismatch 5.47 percent" width="768" height="272" className='doc_img'/>
+
+For every preset value and an example, see [Color Sensitivity in Project Settings](/support/docs/smartui-project-settings/).
+
 ## Use Cases of Smart Ignore
 
 ### Content Management Systems
@@ -308,6 +300,18 @@ When testing Smart Ignore, use per-screenshot mode to compare results with other
 2. Some differences may be actual content changes, not displacement
 3. Consider using Layout Comparison mode for layout-only testing
 4. Combine with `ignoreDOM` for specific elements
+
+</TabItem>
+<TabItem value='subtle-color-changes-not-marked' label='Subtle Color Changes Not Marked' >
+
+**Issue: Subtle Color Changes Not Marked**
+
+**Symptoms**: An element changed to a slightly different shade, but Smart Ignore shows no difference
+
+**Solutions**:
+1. In **Project Settings > Comparison > Color Sensitivity**, choose a perceptual algorithm such as CIEDE2000 and select **Any color change**, or a lower **Custom** value
+2. Save the settings and run a new build, since the setting applies to builds run after saving
+3. Turn on the **Smart Ignore** toggle so screenshot and build statuses follow Smart Ignore results
 
 </TabItem>
 <TabItem value='important-changes-hidden' label='Important Changes Hidden' >

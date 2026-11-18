@@ -25,29 +25,6 @@ canonical: https://www.testmuai.com/support/docs/hyperexecute-jobs-label-filter/
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Filter HyperExecute Jobs by Label",
-          "item": `${BRAND_URL}/support/docs/hyperexecute-jobs-label-filter/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -268,22 +245,3 @@ The chip on the filter bar shows the count, for example `Label 2`, in both AND a
 
 Yes. Each filter in the Jobs filter bar is independent. You can set **Label** to AND and **Status** to its usual OR between selected values at the same time, and the two filters are combined with AND across filters.
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-        Filter Jobs by Label (AND / OR)
-      </span>
-    </li>
-  </ul>
-</nav>

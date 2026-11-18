@@ -2,7 +2,7 @@
 id: smartui-hooks-layout-fullpage-smartignore
 title: SmartUI Hooks - Layout, Full Page, and Smart Ignore
 sidebar_label: Hooks Layout + Full Page
-description: SmartUI Hooks on LambdaTest covering layout comparison via screenshot hook options, Smart Ignore via smartUI.smartIgnore in LT:Options, and full-page capture.
+description: SmartUI Hooks on TestMu AI covering layout comparison via screenshot hook options, Smart Ignore via smartUI.smartIgnore in LT:Options, and full-page capture.
 keywords:
   - smartui hooks
   - layout testing hooks
@@ -21,29 +21,6 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import VerifiedTag from '@site/src/component/verifiedTag';
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "TestMu AI",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "SmartUI Hooks: Layout, Full-Page Screenshots, and Smart Ignore",
-          "item": `${BRAND_URL}/support/docs/smartui-hooks-layout-fullpage-smartignore/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -191,7 +168,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
 
 # SmartUI Hooks: Layout, Full-Page Screenshots, and Smart Ignore
 
-Use this page when you run **SmartUI Hooks** on LambdaTest (for example, Selenium `executeScript` without the `smartui exec` CLI wrapper) and need **layout** comparison, **full-page** capture, or **Smart Ignore**.
+Use this page when you run **SmartUI Hooks** on <BrandName /> (for example, Selenium `executeScript` without the `smartui exec` CLI wrapper) and need **layout** comparison, **full-page** capture, or **Smart Ignore**.
 
 ## How configuration is split
 

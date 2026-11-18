@@ -28,29 +28,6 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 import VerifiedTag from '@site/src/component/verifiedTag';
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "mabl to KaneAI migration",
-          "item": `${BRAND_URL}/support/docs/mabl-to-kaneai-migration-guide/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -170,7 +147,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
 
 # Migrating From mabl To KaneAI
 * * *
-This guide covers your mabl migration to KaneAI: what you can move to <BrandName />, and how.
+This guide covers your mabl migration to KaneAI: what you can move to <BrandName />, and how. For a side-by-side look at the two platforms before you switch, see [TestMu AI vs mabl](https://www.testmuai.com/testmu-vs-mabl/).
 
 <b>[Note: KaneAI does not import or convert mabl tests. This guide follows a manual path. Export code from mabl and run it on <BrandName />, import test cases from CSV, and re-create tests in KaneAI in natural language.]</b>
 
@@ -366,7 +343,7 @@ Open a saved test case and click **Automate with KaneAI** in the **Automate** se
 
 On the KaneAI dashboard, click **Author Browser Test** and write each step in natural language ([Author Your First Desktop Browser Test](/support/docs/author-your-first-desktop-browser-test/)). For mabl mobile tests, click **Author App Test**, select the **Android** or **iOS** tab and add your app ([Author Your First Mobile App Test](/support/docs/author-your-first-mobile-app-test/)).
 
-[Manual Interaction](/support/docs/kaneai-manual-interaction/) records your clicks, typing and scrolling as steps. It works in desktop web browsers, Android apps and iOS apps in portrait, but not in mobile browsers. Add verify or assert steps as written instructions.
+[Manual Interaction](/support/docs/kaneai-manual-interaction/) records your clicks, typing and scrolling as steps. It works in desktop web browsers, mobile browsers, Android apps and iOS apps. Add verify or assert steps as written instructions.
 
 ### Rebuild Flows, Variables and DataTables
 
@@ -433,25 +410,6 @@ For CI tools such as GitHub Actions or Jenkins, copy the Test Run ID from the te
 - **Code for other test types.** Playwright and Selenium IDE exports cover browser tests only. <!-- Source: https://docs.mabl.com/docs/mabl-cli/exporting-tests-from-the-cli.md, checked 2026-10-16 -->
 - **Run history and results.** <BrandName /> documents no importer for them. Before you leave mabl, export run artifacts with `mabl test-runs export {run-id} --types all`. This works for browser tests run in the mabl cloud. **Analytics > Coverage** can also download a CSV of passed and failed test totals by date, from the **Test run history** chart. <!-- Source: https://help.mabl.com/hc/en-us/articles/17781700176532-Exporting-test-run-artifacts, checked 2026-10-16 --> <!-- Sources: https://help.mabl.com/hc/en-us/articles/45825382610964-2026-02-02-Export-test-run-history-as-a-CSV, https://help.mabl.com/hc/en-us/articles/19083839661460-The-coverage-overview-dashboard, checked 2026-10-19 -->
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-       mabl To KaneAI Migration
-      </span>
-    </li>
-  </ul>
-</nav>
 
 ## Related migration guides
 

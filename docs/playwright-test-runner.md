@@ -20,29 +20,6 @@ canonical: https://www.testmuai.com/support/docs/playwright-test-runner/
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import VerifiedTag from '@site/src/component/verifiedTag';
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "TestMu AI",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Playwright Testing With Playwright Test",
-          "item": `${BRAND_URL}/support/docs/playwright-test-runner/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -343,22 +320,3 @@ Continue with the guides below to extend your Playwright setup on TestMu AI.
 - [Migrate existing Playwright tests to TestMu AI](/support/docs/migrate-existing-playwright-tests/) details the full migration path.
 - [Configure Playwright capabilities](/support/docs/playwright-test-execution-setup/) lists every capability you can set for a run.
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href={BRAND_URL}>
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-        Playwright Testing With Playwright Test
-      </span>
-    </li>
-  </ul>
-</nav>

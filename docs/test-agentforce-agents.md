@@ -20,29 +20,6 @@ canonical: https://www.testmuai.com/support/docs/test-agentforce-agents/
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Test Agentforce Agents",
-          "item": `${BRAND_URL}/support/docs/test-agentforce-agents`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -97,7 +74,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-10-27T14:23:05+05:30"
+    "dateModified": "2026-11-12T13:50:45+05:30"
   }) }}
 />
 
@@ -281,7 +258,7 @@ If the agent's actions change in Salesforce, sync again as described in [Check t
 
 ### Run the Suite
 
-Run the suite as you would for any other Phone Caller agent. See [inbound phone agent testing](/support/docs/inbound-phone-agent/) for scenarios, test suites, and live calls.
+Run the suite as you would for any other Phone Caller agent. See [inbound phone agent testing](/support/docs/phone-agent/#test-an-inbound-phone-agent-pre-analysis) for scenarios, test suites, and live calls.
 
 ### When Results Appear
 
@@ -460,6 +437,6 @@ If a query fails or returns nothing, use this table to find the cause.
 
 ---
 
-- See the [phone agent testing overview](/support/docs/phone-agent/) for live test calls, recording analysis, custom metrics, and performance testing.
-- See how to [test an inbound phone agent](/support/docs/inbound-phone-agent/) step by step.
+- See the [phone agent testing overview](/support/docs/phone-agent/) for live test calls, recording analysis, and performance testing.
+- See how to [test an inbound phone agent](/support/docs/phone-agent/#test-an-inbound-phone-agent-pre-analysis) step by step.
 - See how to connect [ElevenLabs](/support/docs/test-elevenlabs-agents/#elevenlabs-integration), [Retell](/support/docs/test-retell-agents/#retell-integration), or [Vapi](/support/docs/test-vapi-agents/#vapi-integration) agents for tool call validation.

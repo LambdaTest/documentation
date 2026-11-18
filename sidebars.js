@@ -417,6 +417,7 @@ module.exports = {
             items: [
               "hyperexecute-run-jmeter-tests",
               "hyperexecute-gattling-testing",
+              "hyperexecute-k6-ui-testing",
             ],
           },
           {
@@ -1129,11 +1130,18 @@ module.exports = {
         items: [
           { type: "doc", label: "Chat Agent Testing", id: "chat-agent" },
           { type: "doc", label: "Voice Agent Testing", id: "voice-agent" },
-          { type: "doc", label: "Video Agent Testing", id: "video-agent" },
           { type: "doc", label: "Phone Agent Testing", id: "phone-agent" },
-          { type: "doc", label: "Inbound Phone Agent Testing", id: "inbound-phone-agent" },
-          { type: "doc", label: "Outbound Phone Agent Testing", id: "outbound-phone-agent" },
+          { type: "doc", label: "IVR Agent Testing", id: "ivr-agent" },
+          { type: "doc", label: "Video Agent Testing", id: "video-agent" },
           { type: "doc", label: "Image Analyzer Testing", id: "image-analyzer" },
+        ],
+      },
+      {
+        type: "category",
+        label: "Features",
+        collapsed: true,
+        items: [
+          { type: "doc", label: "Performance Testing (Inbound)", id: "phone-agent-performance-testing" },
         ],
       },
       {
@@ -1344,7 +1352,7 @@ module.exports = {
         collapsed: true,
         label: "Test Manager",
         items: [
-          "kane-ai-test-plan",
+          "kaneai-quick-run",
           "kaneai-hyperexecute-test-run-execution",
           "kaneai-test-run-output",
           "kaneai-sequential-test-runs",
@@ -1768,6 +1776,7 @@ module.exports = {
           "siesta-integration",
           "testcomplete-integration",
           "testrigor-integration",
+          "e2e-integration-with-testmu",
           "localstack-integration-with-lambdatest",
           "genrocket-integration",
           "netlify-integration-with-lambdatest",
@@ -1887,6 +1896,31 @@ module.exports = {
                 type: "doc",
                 label: "Hover and Tooltips",
                 id: "accessibility-guided-test-hover-tooltips",
+              },
+              {
+                type: "doc",
+                label: "Layout",
+                id: "accessibility-guided-test-layout",
+              },
+              {
+                type: "doc",
+                label: "Forms",
+                id: "accessibility-guided-test-forms",
+              },
+              {
+                type: "doc",
+                label: "Tables",
+                id: "accessibility-guided-test-tables",
+              },
+              {
+                type: "doc",
+                label: "Modals",
+                id: "accessibility-guided-test-modals",
+              },
+              {
+                type: "doc",
+                label: "Responsiveness",
+                id: "accessibility-guided-test-responsiveness",
               },
             ],
           },
@@ -2024,6 +2058,11 @@ module.exports = {
                 type: "doc",
                 label: "Starting an Accessibility Scan",
                 id: "web-scanner-accessibility-scan",
+              },
+              {
+                type: "doc",
+                label: "Starting a Performance Scan",
+                id: "web-scanner-performance-scan",
               },
               {
                 type: "doc",
@@ -2949,7 +2988,6 @@ module.exports = {
           { type: "doc", id: "migrate-playwright-tests" },
           { type: "doc", id: "playwright-test-execution-setup" },
           { type: "doc", id: "playwright-bundled-browser-support" },
-          { type: "doc", id: "playwright-caps" },
         ],
       },
       {
@@ -3056,9 +3094,17 @@ module.exports = {
       },
     },
     [
-      "app-automation-app-sim",
-      "build-ios-app-for-simulator-testing",
-      "virtual-device-flutter-apps",
+      {
+        type: "category",
+        collapsed: false,
+        label: "Getting Started",
+        className: "menu-bold",
+        items: [
+          "app-automation-app-sim",
+          "build-ios-app-for-simulator-testing",
+          "virtual-device-flutter-apps",
+        ],
+      },
     ],
   ],
 
@@ -3087,6 +3133,7 @@ module.exports = {
             type: "category",
             collapsed: true,
             label: "Languages & Frameworks",
+            link: { type: "doc", id: "appium-languages-and-frameworks" },
             items: [
               "appium-java",
               "appium-nodejs",
@@ -3144,6 +3191,7 @@ module.exports = {
               "device-passcode-appautomation",
               "certificate-injection-appautomation",
               "set-device-dark-mode",
+              "gesture-navigation-appautomation",
               "smart-heal-appium",
               "apple-pay-auto",
               "button-text-click",
@@ -3156,7 +3204,7 @@ module.exports = {
             type: "category",
             collapsed: true,
             label: "Smart TV Automation",
-            items: ["appium-appletv", "appium-firetv", "appium-androidtv", "appium-rokutv"],
+            items: ["appium-appletv", "appium-firetv", "appium-androidtv"],
           },
           {
             type: "category",
@@ -3168,7 +3216,7 @@ module.exports = {
             type: "category",
             collapsed: true,
             label: "References",
-            items: ["appium-languages-and-frameworks", "migrate-appium-tests-from-browserstack-and-saucelabs", "migrate-appium-test-suites-from-sauce-labs", "appium-troubleshooting"],
+            items: ["migrate-appium-tests-from-browserstack-and-saucelabs", "migrate-appium-test-suites-from-sauce-labs", "appium-troubleshooting"],
           },
     ],
   ],
@@ -3183,68 +3231,27 @@ module.exports = {
     },
     [
       {
-        type: "doc",
-        label: "Getting Started with Espresso Testing",
-        id: "getting-started-with-espresso-testing",
-      },
-
-      {
         type: "category",
-        collapsed: true,
-        label: "Supported Capabilities",
-        link: {
-          type: "doc",
-          id: "espresso-supported-capabilities",
-        },
-        items: ["espresso-env-variables-settings"],
-      },
-      {
-        type: "doc",
-        label: "RegEx in Espresso",
-        id: "regular-expression-espresso",
-      },
-      {
-        type: "doc",
-        label: "Supported Locales",
-        id: "supported-locales-espresso",
-      },
-      {
-        type: "doc",
-        label: "Debug Espresso Tests",
-        id: "debug-espresso-tests",
-      },
-      {
-        type: "doc",
-        label: "Troubleshoot Espresso Tests",
-        id: "troubleshoot-espresso-tests",
-      },
-      {
-        type: "category",
-        collapsed: true,
-        label: "Speedup Espresso Tests",
+        collapsed: false,
+        label: "Getting Started",
         items: [
-          {
-            type: "doc",
-            label: "Sharding for Espresso",
-            id: "sharding-espresso",
-          },
-          "speedup-espresso",
+          "getting-started-with-espresso-testing",
+          "espresso-agent-skills",
+          "espresso-supported-capabilities",
+          "debug-espresso-tests",
         ],
       },
-      {
-        type: "doc",
-        label: "JUnit Report",
-        id: "espresso-junit-report",
-      },
-      {
-        type: "doc",
-        label: "MockWebServer & Localhost",
-        id: "espresso-mockwebserver-localhost",
-      },
+      "espresso-env-variables-settings",
+      "regular-expression-espresso",
+      "supported-locales-espresso",
+      "sharding-espresso",
+      "speedup-espresso",
+      "espresso-junit-report",
+      "espresso-mockwebserver-localhost",
     ],
   ],
 
-  XCUITestingSidebar: [
+ XCUITestingSidebar: [
     {
       type: 'link',
       label: 'Back',
@@ -3255,59 +3262,25 @@ module.exports = {
     },
     [
       {
-        type: "doc",
-        label: "Getting Started with XCUI Testing",
-        id: "getting-started-with-xcui-testing",
-      },
-      {
-        type: "doc",
-        label: "Supported Capabilities",
-        id: "xcui-supported-capabilities",
-      },
-      {
-        type: "doc",
-        label: "RegEx in XCUI",
-        id: "regular-expression-xcui",
-      },
-      {
-        type: "doc",
-        label: "Supported Locales",
-        id: "supported-locales-xcui",
-      },
-      {
-        type: "doc",
-        label: "Creating iOS Applications",
-        id: "ios-ipa-files-xcui",
-      },
-      {
         type: "category",
-        collapsed: true,
-        label: "Speedup XCUI Tests",
-        items: ["sharding-xcui", "speedup-xcui"],
+        collapsed: false,
+        label: "Getting Started",
+        className: "menu-bold",
+        items: [
+          "getting-started-with-xcui-testing",
+          "xcuitest-agent-skills",
+          "xcui-supported-capabilities",
+          "xcui-xml-report",
+          "xctestplan",
+        ],
       },
-      {
-        type: "doc",
-        label: "XCTestPlan",
-        id: "xctestplan",
-      },
-      {
-        type: "doc",
-        label: "Xml Report",
-        id: "xcui-xml-report",
-      },
-      {
-        type: "doc",
-        label: "XCResult",
-        id: "xcresult",
-      },
-      {
-        type: "doc",
-        label: "SmartUI Visual Regression",
-        id: "xcui-visual-regression",
-      },
+      { type: "doc", id: "regular-expression-xcui", className: "menu-bold" },
+      { type: "doc", id: "supported-locales-xcui", className: "menu-bold" },
+      { type: "doc", id: "ios-ipa-files-xcui", className: "menu-bold" },
+      { type: "doc", id: "sharding-xcui", className: "menu-bold" },
     ],
   ],
-
+  
   FlutterTestingSidebar: [
     {
       type: "link",
@@ -3319,24 +3292,17 @@ module.exports = {
     },
     [
       {
-        type: "doc",
-        label: "Getting Started with Flutter Integration Driver",
-        id: "appium-flutter-integration",
-      },
-      {
-        type: "doc",
-        label: "Getting Started with Flutter Android",
-        id: "getting-started-with-flutter-dart-android-automation",
-      },
-      {
-        type: "doc",
-        label: "Getting Started with Flutter iOS",
-        id: "getting-started-with-flutter-dart-ios-automation",
-      },
-      {
-        type: "doc",
-        label: "Flutter Supported Capabilities",
-        id: "flutter-supported-capabilities",
+        type: "category",
+        collapsed: false,
+        label: "Getting Started",
+        items: [
+          "test-flutter-apps",
+          "flutter-agent-skills",
+          "flutter-supported-capabilities",
+          "appium-flutter-integration",
+          "getting-started-with-flutter-dart-android-automation",
+          "getting-started-with-flutter-dart-ios-automation",
+        ],
       },
       {
         type: "doc",
@@ -4513,6 +4479,7 @@ module.exports = {
         items: [
           "web-scanner-visual-scan",
           "web-scanner-accessibility-scan",
+          "web-scanner-performance-scan",
           "web-scanner-adding-urls",
           "web-scanner-scheduling-options",
           "web-scanner-advanced-features",
@@ -5280,6 +5247,11 @@ module.exports = {
             id: "kane-cli-assurance-automation",
           },
         ],
+      },
+      {
+        type: "doc",
+        label: "Exploration",
+        id: "kane-cli-exploration",
       },
       {
         type: "category",

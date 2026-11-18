@@ -15,29 +15,6 @@ canonical: https://www.testmuai.com/support/docs/test-run-creation-and-managemen
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "TestMu AI",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Test Run Creation",
-          "item": `${BRAND_URL}/support/docs/test-run-creation-and-management/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -375,7 +352,7 @@ Running test instances on <BrandName /> Cloud gives you access to a wide range o
 :::
 
 :::note Track bugs during execution
-Bugs raised or linked while executing an instance are surfaced under that Test Case instance. To link Jira or Azure DevOps tickets at the instance and step level, see [Track Bugs and Issues in Test Runs](/support/docs/track-issues-in-test-runs/).
+Bugs raised or linked while executing an instance are surfaced under that Test Case instance. To link Jira, Azure DevOps, or Linear tickets at the instance and step level, see [Track Bugs and Issues in Test Runs](/support/docs/track-issues-in-test-runs/).
 :::
 
 ## 7. Test Run Options

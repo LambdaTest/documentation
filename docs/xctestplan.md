@@ -1,8 +1,8 @@
 ---
 id: xctestplan
-title: XCTestPlan
-sidebar_label: XCTestPlan
-description: Manage iOS, iPadOS, macOS, watchOS, and tvOS tests with XCTestPlan on TestMu AI. Learn how to upload apps, configure tests, and view execution logs efficiently.
+title: What Is XCTestPlan on TestMu AI
+sidebar_label: "Test Filters"
+description: Manage iOS, iPadOS, macOS, watchOS, and tvOS tests with XCTestPlan on TestMu AI. Upload apps, configure tests, and view execution logs efficiently.
 keywords:
   - XCUI test filters
   - app test automation
@@ -17,42 +17,20 @@ url: https://www.testmuai.com/support/docs/xctestplan/
 site_name: TestMu AI
 slug: xctestplan/
 canonical: https://www.testmuai.com/support/docs/xctestplan/
+toc_max_heading_level: 2
 ---
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import RealDeviceTag from '@site/src/component/realDevice';
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-import RealDeviceTag from '../src/component/realDevice';
 import CookieTrackingLogin from '@site/src/component/CookieTracking';
 import VerifiedTag from '@site/src/component/verifiedTag';
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Filters for XCUI Test",
-          "item": `${BRAND_URL}/support/docs/xctestplan/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -65,7 +43,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       "@type": "WebPage",
       "@id": "https://www.testmuai.com/support/docs/xctestplan/"
     },
-    "headline": "XCTestPlan",
+    "headline": "What Is XCTestPlan on TestMu AI",
     "description": "Manage iOS, iPadOS, macOS, watchOS, and tvOS tests with XCTestPlan on TestMu AI. Learn how to upload apps, configure tests, and view execution logs efficiently.",
     "url": "https://www.testmuai.com/support/docs/xctestplan/",
     "image": {
@@ -122,14 +100,14 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         "name": "Step 3: Executing The Test (Linux / MacOS)",
         "codeSampleType": "code snippet",
         "programmingLanguage": "YAML",
-        "text": "curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/xcui/build' \\\n--header 'Authorization: Basic BASIC_AUTH_TOKEN' \\\n--header 'Content-Type: application/json' \\\n--data-raw '{\n  \"app\" : \"lt://APP_ID\",\n  \"testSuite\": \"lt://TEST_SUITE_ID\",\n  \"xctestplan\" : \"lt://YOUR_XC_TEST_PLAN_ID\" #only when you want to use XCTestPlan\n  \"device\" :  [\"iPhone 11-14\"],\n  \"video\" : true,\n  \"queueTimeout\": 10800,\n  \"idleTimeout\": 150,\n  \"devicelog\": true,\n  \"network\": false,\n  \"build\" : \"Proverbial-XCUITest\"\n}'"
+        "text": "curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/xcui/build' \\\n--header 'Authorization: Basic BASIC_AUTH_TOKEN' \\\n--header 'Content-Type: application/json' \\\n--data-raw '{\n  \"app\" : \"lt://APP_ID\",\n  \"testSuite\": \"lt://TEST_SUITE_ID\",\n  \"xctestplan\" : \"lt://YOUR_XC_TEST_PLAN_ID\", #only when you want to use XCTestPlan\n  \"device\" :  [\"iPhone 11-14\"],\n  \"video\" : true,\n  \"queueTimeout\": 10800,\n  \"idleTimeout\": 150,\n  \"devicelog\": true,\n  \"network\": false,\n  \"build\" : \"Proverbial-XCUITest\"\n}'"
       },
       {
         "@type": "SoftwareSourceCode",
         "name": "Windows",
         "codeSampleType": "code snippet",
         "programmingLanguage": "YAML",
-        "text": "curl --location --request POST \"https://mobile-api.lambdatest.com/framework/v1/xcui/build\" \\\n--header \"Authorization: Basic BASIC_AUTH_TOKEN\" \\\n--header \"Content-Type: application/json\" \\\n--data-raw \"{\n  \"app\" : \"lt://APP_ID\",\n  \"testSuite\": \"lt://TEST_SUITE_ID\",\n  \"xctestplan\" : \"lt://YOUR_XC_TEST_PLAN_ID\" #only when you want to use XCTestPlan\n  \"device\" :  [\"iPhone 11-14\"],\n  \"video\" : true,\n  \"queueTimeout\": 10800,\n  \"idleTimeout\": 150,\n  \"devicelog\": true,\n  \"network\": false,\n  \"build\" : \"Proverbial-XCUITest\"\n}\""
+        "text": "curl --location --request POST \"https://mobile-api.lambdatest.com/framework/v1/xcui/build\" \\\n--header \"Authorization: Basic BASIC_AUTH_TOKEN\" \\\n--header \"Content-Type: application/json\" \\\n--data-raw \"{\n  \"app\" : \"lt://APP_ID\",\n  \"testSuite\": \"lt://TEST_SUITE_ID\",\n  \"xctestplan\" : \"lt://YOUR_XC_TEST_PLAN_ID\", #only when you want to use XCTestPlan\n  \"device\" :  [\"iPhone 11-14\"],\n  \"video\" : true,\n  \"queueTimeout\": 10800,\n  \"idleTimeout\": 150,\n  \"devicelog\": true,\n  \"network\": false,\n  \"build\" : \"Proverbial-XCUITest\"\n}\""
       }
     ],
     "dateModified": "2026-09-09T19:10:37+05:30"
@@ -148,21 +126,21 @@ import VerifiedTag from '@site/src/component/verifiedTag';
           "@type": "HowToStep",
           "position": 1,
           "name": "Step 1: Upload Your Application",
-          "text": "To begin testing, upload your iOS application (.ipa file) to TestMu AI's servers. You'll use our REST API for this process. Authentication : You'll need your TestMu AI Username and AccessKey. Combine them in the format Username:AccessKey. Uploading the App : Use cURL command to send a request to our API. The request should include the path to your application file (appFile). {curl -u \"${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESS_KEY()}\" --location --request POST 'https://manual-api.lambdatest.com/app/uploadFramework' --form 'appFile=@\"\"' --form 'type=\"xcuit-ios\"'} {curl -u \"${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESS_KEY()}\" -X POST \"https://manual-api.lambdatest.com/app/uploadFramework\" -F \"appFile=@\"\"\" -F \"type=\"xcuit-ios\"\"} Provide the path of your android application in the above URL in place of `` Response of above cURL will be a JSON object containing the App URL of the format - lt://APP123456789123456789 and will be used in the last step.",
+          "text": "To begin testing, upload your iOS application (.ipa file) to TestMu AI's servers. You'll use our REST API for this process. Authentication : You'll need your TestMu AI Username and AccessKey. Combine them in the format Username:AccessKey. Uploading the App : Use cURL command to send a request to our API. The request should include the path to your application file (appFile). {curl -u \"${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESS_KEY()}\" --location --request POST 'https://manual-api.lambdatest.com/app/uploadFramework' --form 'appFile=@\"\"' --form 'type=\"xcuit-ios\"'} {curl -u \"${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESS_KEY()}\" -X POST \"https://manual-api.lambdatest.com/app/uploadFramework\" -F \"appFile=@\"\"\" -F \"type=\"xcuit-ios\"\"} Provide the path of your iOS application in the above URL in place of `` Response of above cURL will be a JSON object containing the App URL of the format - lt://APP123456789123456789 and will be used in the last step.",
           "url": "https://www.testmuai.com/support/docs/xctestplan/#step-1-upload-your-application"
         },
         {
           "@type": "HowToStep",
           "position": 2,
           "name": "Step 2: Upload Your Test Suite and XCTestRun File",
-          "text": "Upload your iOS test suite (.ipa) file to TestMu AI servers using our REST API. The following sample cURL command shows how to upload a test suite: {curl -u \"${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESS_KEY()}\" --location --request POST 'https://manual-api.lambdatest.com/app/uploadFramework' --form 'appFile=@\"\"' --form 'type=\"xcuit-ios\"'} {curl -u \"${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESS_KEY()}\" --location --request POST \"https://manual-api.lambdatest.com/app/uploadFramework\" --form \"appFile=@\"\"\" --form \"type=\\\"xcuit-ios\\\"\"} Provide the path of your android application in the above URL in place of `` Response of above cURL will be a JSON object containing the App URL of the format - lt://APP123456789123456789 and will be used in the last step. This is a sample xctestplan file which is compatible with our sample application provided above. This will only be used for filtering tests using xctestplan. You can use the following capability in xcui/build api: \"xctestplan\" : \"lt://APP1234567891234567890\" and use the following curl to upload xctestplan file.",
+          "text": "Upload your iOS test suite (.ipa) file to TestMu AI servers using our REST API. The following sample cURL command shows how to upload a test suite: {curl -u \"${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESS_KEY()}\" --location --request POST 'https://manual-api.lambdatest.com/app/uploadFramework' --form 'appFile=@\"\"' --form 'type=\"xcuit-ios\"'} {curl -u \"${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESS_KEY()}\" --location --request POST \"https://manual-api.lambdatest.com/app/uploadFramework\" --form \"appFile=@\"\"\" --form \"type=\\\"xcuit-ios\\\"\"} Provide the path of your iOS test suite in the above URL in place of `` Response of above cURL will be a JSON object containing the App URL of the format - lt://APP123456789123456789 and will be used in the last step. This is a sample xctestplan file which is compatible with our sample application provided above. This will only be used for filtering tests using xctestplan. You can use the following capability in xcui/build api: \"xctestplan\" : \"lt://APP1234567891234567890\" and use the following curl to upload xctestplan file.",
           "url": "https://www.testmuai.com/support/docs/xctestplan/#step-2-upload-your-test-suite-and-xctestrun-file"
         },
         {
           "@type": "HowToStep",
           "position": 3,
           "name": "Step 3: Executing The Test",
-          "text": "You will need base64 encoded authentication in order to execute your Espresso automation test suite. Enter your username:accesskey\ufffdin Basic Authentication Header Generator to generate your auth token. Take note of the\ufffdbase64\ufffdencoded authentication which needs to be added in the next step. {${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESS_KEY()}} Once you have uploaded your app and test suite, you can execute your test by running the following command: Enter your BASICAUTHTOKEN, APPID (generated in the first step) and TESTSUITEID** (generated in the second step) in the below command.",
+          "text": "You will need base64 encoded authentication in order to execute your XCUITest automation test suite. Enter your username:accesskey in Basic Authentication Header Generator to generate your auth token. Take note of the base64 encoded authentication which needs to be added in the next step. {${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESS_KEY()}} Once you have uploaded your app and test suite, you can execute your test by running the following command: Enter your BASICAUTHTOKEN, APPID (generated in the first step) and TESTSUITEID** (generated in the second step) in the below command.",
           "url": "https://www.testmuai.com/support/docs/xctestplan/#step-3-executing-the-test"
         },
         {
@@ -176,7 +154,11 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     }
   ]) }}
 />
+
 <RealDeviceTag value="Real Device" />
+
+XCTestPlan on <BrandName /> manages how you run automated XCTest suites across iOS, iPadOS, macOS, watchOS, and tvOS apps. Create targeted test runs, upload your app and XCUI test IPA files, configure scenarios, and view execution logs for efficient testing.
+
 XCTestPlan is a feature within Xcode used for building iOS, iPadOS, macOS, watchOS, tvOS, and audioOS applications. XCTestPlan helps manage how you run automated tests written with the XCTest framework.
 
 XCTestPlan improves the organization and efficiency of running automated tests within Xcode. It allows you to create targeted test runs and manage various testing scenarios effectively.
@@ -227,7 +209,7 @@ To begin testing, upload your iOS application (.ipa file) to <BrandName />'s ser
 </Tabs>
 
 :::info
-- Provide the path of your android application in the above URL in place of `<PATH_OF_YOUR_iOS_APP>`
+- Provide the path of your iOS application in the above URL in place of `<PATH_OF_YOUR_iOS_APP>`
 - Response of above cURL will be a **JSON** object containing the `App URL` of the format - `lt://APP123456789123456789` and will be used in the last step.
 :::
 
@@ -263,7 +245,7 @@ Upload your iOS test suite (.ipa) file to <BrandName /> servers using our REST A
 </Tabs>
 
 :::info
-- Provide the path of your android application in the above URL in place of `<PATH_OF_YOUR_TEST_SUITE_APP>`
+- Provide the path of your iOS test suite in the above URL in place of `<PATH_OF_YOUR_TEST_SUITE_APP>`
 - Response of above cURL will be a **JSON** object containing the `App URL` of the format - `lt://APP123456789123456789` and will be used in the last step.
 :::
 
@@ -317,7 +299,7 @@ curl --location --request POST 'https://manual-api.lambdatest.com/app/xctestplan
 
 ## Step 3: Executing The Test
 
-- You will need **base64 encoded authentication** in order to execute your Espresso automation test suite. Enter your `username:accesskey` in **[Basic Authentication Header Generator](https://mixedanalytics.com/knowledge-base/api-connector-encode-credentials-to-base-64/)** to generate your auth token.
+- You will need **base64 encoded authentication** in order to execute your XCUITest automation test suite. Enter your `username:accesskey` in **[Basic Authentication Header Generator](https://mixedanalytics.com/knowledge-base/api-connector-encode-credentials-to-base-64/)** to generate your auth token.
 
 Take note of the base64 encoded authentication which needs to be added in the next step.
 
@@ -333,11 +315,11 @@ Take note of the base64 encoded authentication which needs to be added in the ne
  
 > Enter your **BASIC_AUTH_TOKEN**, **APP_ID** (generated in the first step) and **TEST_SUITE_ID** (generated in the second step) in the below command.
 
-<VerifiedTag value="Verified" />
-
 <Tabs className="docs__val">
 
 <TabItem value="bash" label="Linux / MacOS" default>
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/xcui/build' \
@@ -346,7 +328,7 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/x
 --data-raw '{
   "app" : "lt://APP_ID",
   "testSuite": "lt://TEST_SUITE_ID",
-  "xctestplan" : "lt://YOUR_XC_TEST_PLAN_ID" #only when you want to use XCTestPlan
+  "xctestplan" : "lt://YOUR_XC_TEST_PLAN_ID", #only when you want to use XCTestPlan
   "device" :  ["iPhone 11-14"],
   "video" : true,
   "queueTimeout": 10800,
@@ -361,6 +343,8 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/x
 
 <TabItem value="powershell" label="Windows" default>
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/xcui/build" \
 --header "Authorization: Basic BASIC_AUTH_TOKEN" \
@@ -368,7 +352,7 @@ curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/x
 --data-raw "{
   "app" : "lt://APP_ID",
   "testSuite": "lt://TEST_SUITE_ID",
-  "xctestplan" : "lt://YOUR_XC_TEST_PLAN_ID" #only when you want to use XCTestPlan
+  "xctestplan" : "lt://YOUR_XC_TEST_PLAN_ID", #only when you want to use XCTestPlan
   "device" :  ["iPhone 11-14"],
   "video" : true,
   "queueTimeout": 10800,
@@ -385,7 +369,7 @@ curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/x
 
 Once you have run your tests, you can view the test execution along with logs. You will be able to see the test cases passing or failing. You can view the same at <a href="https://www.testmuai.com/login/" onClick={CookieTrackingLogin}><BrandName /> Automation</a>.
 
-> **NOTE:** You cannot use XCTestPlan and [Filters](/support/docs/speedup-xcui/) simultaneously
+> **NOTE:** You cannot use XCTestPlan and [Filters](/support/docs/sharding-rd-hyperexec/#filters-for-xcui-tests) simultaneously
 
 :::tip
 To learn how to use XCTestPlan with sharding in XCUI, refer to the detailed guide in [Sharding for XCUI](/support/docs/sharding-rd-hyperexec/#xctestplan-in-sharding).

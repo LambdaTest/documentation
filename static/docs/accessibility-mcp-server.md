@@ -26,3 +26,5 @@ Once your MCP client is connected, use natural language to interact with the Acc
 - "Show me the accessibility violations on the homepage and how to fix them."
 
 Your AI client will route the request to the appropriate capability and return the report or remediation guidance inline.
+
+To scan a public URL without an MCP client, paste it into the [website accessibility checker](https://www.testmuai.com/wcag-accessibility-checker/), which checks the page against WCAG 2.2, ADA, and Section 508.

@@ -20,29 +20,6 @@ canonical: https://www.testmuai.com/support/docs/troubleshooting-lambda-tunnel/
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "TestMu AI",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Troubleshooting LambdaTest Tunnel",
-          "item": `${BRAND_URL}/support/docs/troubleshooting-lambda-tunnel/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -542,16 +519,3 @@ These messages do not come from the tunnel program. They appear in your test res
 | **What to do** | Look above it for the tunnel's own message, and find that message on this page. |
 | **Also seen as** | `LambdaTest Tunnel failed to stop within 60 seconds!` |
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href={BRAND_URL}>Home</a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_ self" href={`${BRAND_URL}/support/docs/`}>Support</a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">Troubleshooting <BrandName /> Tunnel</span>
-    </li>
-  </ul>
-</nav> 

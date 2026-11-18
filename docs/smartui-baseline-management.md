@@ -21,29 +21,6 @@ import CodeBlock from '@theme/CodeBlock';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import VerifiedTag from '@site/src/component/verifiedTag';
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "SmartUI Baseline Management",
-          "item": `${BRAND_URL}/support/docs/smartui-baseline-management/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -528,4 +505,4 @@ For detailed guidance on approval, reject, move, and merge functions across diff
 
 ### Getting Help
 
-If you encounter any issues with baseline management in SmartUI, please contact our support team at support@testmuai.com or use the [24/7 Chat Support](https://www.testmuai.com/support/).
+If you encounter any issues with baseline management in SmartUI, please contact our support team at support@testmuai.com or use the [24/7 Chat Support](https://www.testmuai.com/support/docs/).

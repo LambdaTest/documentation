@@ -1,9 +1,9 @@
 ---
 id: test-flutter-apps
-title: How to test flutter apps using Appium framework
+title: How to Test Flutter Apps on TestMu AI
 hide_title: true
-sidebar_label: Testing Flutter Apps
-description: Learn how to test flutter apps for Appium testing across 5000+ real Android and iOS devices.
+sidebar_label: "Run First Test"
+description: Learn how to test flutter apps for Appium testing across 50,000+ real Android and iOS devices.
 keywords:
 - how to test flutter apps
 - how to test flutter apps on android
@@ -14,34 +14,12 @@ url: https://www.testmuai.com/support/docs/testing-flutter-apps/
 site_name: TestMu AI
 slug: testing-flutter-apps/
 canonical: https://www.testmuai.com/support/docs/testing-flutter-apps/
+toc_max_heading_level: 2
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import VerifiedTag from '@site/src/component/verifiedTag';
 
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Testing Flutter Apps With Appium",
-          "item": `${BRAND_URL}/support/docs/testing-flutter-apps/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -55,7 +33,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       "@id": "https://www.testmuai.com/support/docs/testing-flutter-apps/"
     },
     "headline": "How to test flutter apps using Appium framework",
-    "description": "Learn how to test flutter apps for Appium testing across 5000+ real Android and iOS devices.",
+    "description": "Learn how to test flutter apps for Appium testing across 50,000+ real Android and iOS devices.",
     "url": "https://www.testmuai.com/support/docs/testing-flutter-apps/",
     "image": {
       "@type": "ImageObject",
@@ -160,12 +138,14 @@ import VerifiedTag from '@site/src/component/verifiedTag';
   }) }}
 />
 
-# Testing Flutter Apps With Appium
+# How to Test Flutter Apps on TestMu AI
 ***
+
+Testing Flutter apps on TestMu AI lets you run cross-platform automation with Appium's Flutter driver across 5000+ real Android and iOS devices. Upload your debug or profile build, add the required Flutter dependencies, then execute tests using a Dart codebase.
 
 Google's Flutter is an open-source tool for developing native mobile apps. It enables developers to create cross-platform apps for both Android and iOS using a single codebase and programming language.
 
-You can now test Flutter apps on the <BrandName /> <a href={`${BRAND_URL}/appium/`}>Appium testing</a> platform across 5000+ real Android and iOS devices. <BrandName /> supports Appium's Flutter driver that lets you test Flutter apps using the Appium framework. To test Flutter apps, you will need to upload apps on <BrandName /> cloud servers and then run your automated tests. 
+You can now test Flutter apps on the <BrandName /> <a href={`${BRAND_URL}/appium/`}>Appium testing</a> platform across 50,000+ real Android and iOS devices. <BrandName /> supports Appium's Flutter driver that lets you test Flutter apps using the Appium framework. To test Flutter apps, you will need to upload apps on <BrandName /> cloud servers and then run your automated tests. 
 
 ## Testing Apps Using Appium Flutter Driver
 ***
@@ -346,69 +326,3 @@ Below is a screenshot showing Appium test automation running with the Flutter In
 
 >In case you have any questions or need any additional information, you could reach out at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24X7 Chat Support**</span> or mail us directly at support@testmuai.com.
 
-
-
-## Using the Flutter Testing Agent Skill with TestMu AI
-***
-
-The [flutter-testing-skill](https://github.com/LambdaTest/agent-skills/tree/main/flutter-testing-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
-
-The flutter-testing-skill package includes:
-
-<VerifiedTag value="Verified" />
-
-```
-flutter-testing-skill/
-├── SKILL.md
-└── reference/
-    ├── playbook.md
-    └── advanced-patterns.md
-```
-
-It provides structured guidance for:
-
-* Project structure and setup
-* Dependency configuration
-* Local execution
-* TestMu AI cloud execution
-* Debugging patterns
-* CI/CD integration
-
-
-### Installing Flutter Testing Agent Skill
-***
-
-Install a Flutter Testing Agent Skill using the command below:
-
-<VerifiedTag value="Verified" />
-
-```
-# Clone the repo and copy the skill you need
-git clone https://github.com/LambdaTest/agent-skills.git
-cp -r agent-skills/flutter-testing-skill .claude/skills/
-
-# Or for Cursor / Copilot
-cp -r agent-skills/flutter-testing-skill .cursor/skills/
-```
-
-**Note**: If you prefer installing all available framework skills instead of only flutter-testing-skill, clone the repository directly into your tool's skills directory (for example, .claude/skills/, .cursor/skills/, .gemini/skills/, or .agent/skills/).
-
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-       Testing Flutter Apps With Appium
-      </span>
-    </li>
-  </ul>
-</nav>

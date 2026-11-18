@@ -17,29 +17,6 @@ canonical: https://www.testmuai.com/support/docs/how-to-use-testing-tools-in-ses
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "TestMu AI",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "How to use testing tools in-session?",
-          "item": `${BRAND_URL}/support/docs/how-to-use-testing-tools-in-session/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -161,7 +138,7 @@ All screenshots and video recordings from test sessions are stored in the Galler
 
 ### IP Geolocation
 
-The **IP Geolocation** feature allows you to emulate website and mobile experiences from more than 45 countries using local IP addresses. This enables you to test localized elements like pricing, languages, and product offerings. With IP Geolocation activated, you can verify that your app's traffic is coming from a particular country, facilitating thorough global testing.
+The **IP Geolocation** feature allows you to emulate website and mobile experiences from 180+ countries using local IP addresses. This enables you to test localized elements like pricing, languages, and product offerings. With IP Geolocation activated, you can verify that your app's traffic is coming from a particular country, facilitating thorough global testing.
 
 <img loading="lazy" src={require('../assets/images/real-device-app-testing/ip-geolocation.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 
@@ -183,6 +160,12 @@ With <BrandName />’s **Network Throttling**, you can test mobile applications 
 You can simulate these network environments using either pre-defined profiles or by creating custom network profiles to suit your needs.
 
 <img loading="lazy" src={require('../assets/images/real-device-app-testing/network-throttling-real-device.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
+
+<div className="ytframe"> 
+<div className="youtube" data-embed="7ForBAP-KSw" data-loading-attribute="eager">
+  <div className="play-button"></div>
+</div>
+</div>
 
 Check out our detailed support documentation to know more about the [Network Throttling](/support/docs/app-auto-network-throttling/) feature.
 
@@ -306,23 +289,4 @@ Unified **Test Manager** simplifies test authoring, management, triggering, and 
 > **Notes:** The max duration for running manual tests on <BrandName /> Real Device Cloud is 2 hours. In order to extend the duration, you can opt for our dedicated real device cloud.
 
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href={BRAND_URL}>
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-        Testing Tools
-      </span>
-    </li>
-  </ul>
-</nav>
 
