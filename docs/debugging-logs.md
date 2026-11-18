@@ -201,7 +201,7 @@ ltOptions.put("network", true);
 
 The captured requests and responses appear in the **Network** tab of your test session. The following diagram shows how network traffic flows through the proxy.
 
-<img loading="lazy" src={require('../assets/images/app-automation/networklogs.png').default} alt="Network tab showing captured requests and responses for a test session" className="doc_img doc_img_dimension" width="1280" height="1401"/>
+<img loading="lazy" src={require('../assets/images/app-automation/network-mitm.png').default} alt="Network tab showing captured requests and responses for a test session" className="doc_img doc_img_dimension" width="1280" height="1401"/>
 
 
 ### Role of the proxy certificate

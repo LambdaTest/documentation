@@ -125,7 +125,7 @@ To conclude, both Public Device Cloud and Private Device Cloud are useful for re
 
 :::note
 
-On Samsung public and private cloud devices, opening **Secure Folder → Settings → PIN** shows a black screen. This is expected behavior. Secure Folder is a protected system component managed by Samsung's security framework, and its PIN screen cannot be displayed or accessed during a remote session.
+On Samsung public and private cloud devices, opening Secure Folder → Settings → PIN displays a black screen. This is expected behavior, as Samsung hides this screen during active screen streaming for security reasons. Since streaming remains active throughout the remote session, the PIN screen appears black.
 :::
 
 

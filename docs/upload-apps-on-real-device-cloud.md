@@ -139,6 +139,11 @@ Once your app is uploaded, you can see various app details such as App Name, Ver
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/app-details.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
+:::note
+Apps unused for 30 days are automatically removed from the dashboard. Using an app in any test resets its 30 days inactivity period.
+
+:::
+
 ## App Settings
 
 You can customize the app settings based on your app requirements and testing scenarios.
@@ -158,8 +163,8 @@ You can edit the information at any time and save the changes. If an app is no l
 
 :::note
 
-- Only the app owner (the user who uploaded the app to <BrandName />) can change an app’s visibility. The app name can be changed by either the owner or an admin of the organization.
-- Organization admins have permission to delete applications uploaded by any member of the organization.
+- Only the app owner (the user who uploaded the app to TestMu AI) can change its visibility settings. However, the app name can be changed by either the app owner or an organization admin.
+- Only organization admins have permission to delete applications uploaded by any member of the organization. Members with the User or Guest role can only delete their own uploaded applications.
 :::
 
 <nav aria-label="breadcrumbs">

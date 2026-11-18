@@ -100,18 +100,23 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 # iOS Entitlements
 ***
-We support all ipa files generated from different Certificates & Profiles.
+Entitlements are permissions included in an iOS app's signature that give the app access to specific Apple services and system features, such as Push Notifications, App Groups, Keychain Sharing and Associated Domains (universal links). Each entitlement must be authorized by the provisioning profile the app is signed with. For the full list, see [Apple's entitlements documentation](https://developer.apple.com/documentation/bundleresources/entitlements).
 
-However, to install these apps on our devices, we resign your applications with our Resigning Certificate.
-
-This is true for all Certificates & Profiles except the applications generated using an Enterprise Account.
+We support all `.ipa` files, irrespective of the certificate and provisioning profile used to build them. To install these apps on our devices, we re-sign them with our wildcard provisioning profile. Apps built with an Enterprise account can be installed without re-signing.
 
 
 ## Re-signing iOS Apps
 
-Apple requires every app installed on a physical iPhone or iPad to be signed with a valid certificate and a provisioning profile that includes the target device. To run your app on LambdaTest real devices, the app is automatically re-signed with our LambdaTest certificate and provisioning profile during installation.
+Apple allows an app to be installed on a physical iPhone or iPad only if the app's provisioning profile includes that device's UDID. The UDIDs of LambdaTest cloud devices aren't part of your provisioning profile, so the app can't be installed unless we re-sign it with our wildcard provisioning profile.
 
-Re-signing is enabled by default and works with Development, Ad Hoc, App Store and Enterprise builds, so you can upload your `.ipa` as it is.
+Re-signing is enabled by default. Apps signed with an Enterprise certificate can be installed without re-signing.
+
+
+## Entitlements after re-signing
+
+A re-signed app can use only the entitlements that the signing provisioning profile supports. The entitlements listed under [Supported entitlements](#supported-entitlements) are retained. Others, such as Push Notifications or Associated Domains, may not be available during your test.
+
+This matters if your test covers features that depend on these entitlements, such as receiving push notifications or opening universal links. To test them, run your app with its original signature, as described in [Testing with your original signature](#testing-with-your-original-signature).
 
 
 ## Build types and re-signing
@@ -158,7 +163,7 @@ You can skip re-signing when iOS is already able to trust your app on the device
 If you use private devices (available under a separate paid plan), their UDIDs belong to your organization and don't change. Add them to your app's provisioning profile, and your build can install with your own signature:
 
 1. Get the UDIDs of your private devices from LambdaTest.
-2. Add these UDIDs to your Development or Ad Hoc provisioning profile in your Apple Developer account.
+2. Add these UDIDs to your Development or Ad Hoc provisioning profile in your Apple Developer account. See Apple's guide to [registering devices](https://developer.apple.com/help/account/devices/devices-overview/).
 3. Export a new `.ipa` with the updated provisioning profile and upload it.
 4. Turn off re-signing for your test.
 
@@ -166,7 +171,7 @@ This works well when login, deep links or push notifications must behave exactly
 
 ### Any device: use an Enterprise-signed build
 
-Apps signed through the **Apple Developer Enterprise Program** (In-House distribution) aren't limited to a device list. iOS accepts them on any device, public or private, so no re-signing is required and every entitlement stays intact. Upload your Enterprise build and turn off re-signing for your test.
+Apps signed through the [Apple Developer Enterprise Program](https://developer.apple.com/programs/enterprise/) (In-House distribution) aren't limited to a device list. iOS accepts them on any device, public or private, so no re-signing is required and every entitlement stays intact. Upload your Enterprise build and turn off re-signing for your test.
 
 :::Tip Choosing the right setup
 - **For general functional and UI testing:** Keep re-signing on and upload any build.
