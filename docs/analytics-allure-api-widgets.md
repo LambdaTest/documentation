@@ -155,6 +155,15 @@ className="doc_img"
 - Identify the test suites that require attention based on the test status.
 - Monitor the test suite health trends over time.
 
+## Allure Tests Stability
+
+The `Allure Tests Stability` widget lists the individual tests executed using the Allure report. For each test, it shows the latest status, the maximum, minimum and average duration, and the statuses of its recent runs. Select a test to open its details.
+
+### Use Cases of Allure Tests Stability Widget
+- Find the tests that fail or change status often across recent runs.
+- Compare the maximum, minimum and average duration of each test to spot slow or inconsistent tests.
+- Open a test's details to investigate its failures.
+
 ## Allure Test Status Ratio
 
 The `Allure Test Status Ratio` widget provides insights into the test status ratio for the test cases executed using the Allure report. This widget helps you to get an overview of the test status ratio and identify the test cases that require attention.
