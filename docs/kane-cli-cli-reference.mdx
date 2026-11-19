@@ -307,6 +307,28 @@ See [Configuration](https://www.testmuai.com/docs/kane-cli-configuration) for th
 
 ---
 
+### `kane-cli bugs`
+
+The application bugs failed tests hit, feedback that the next failure diagnosis reads, and your organisation's RCA categories.
+
+```bash
+kane-cli bugs list [<file>_test.md] [--testcase <id>] [--status <list>] [--category <name|id>] [--all-families] [--limit <n>]
+kane-cli bugs show BUG-12
+kane-cli bugs mark BUG-12 <real|not-real|rca-right|rca-wrong|done|not-a-bug|reopen>
+kane-cli bugs note BUG-12 "<text>"
+kane-cli bugs duplicate BUG-12 --of BUG-9
+kane-cli bugs retire <feedback-id>
+kane-cli bugs categories list [--source builtin|org] [--status active|inactive]
+kane-cli bugs categories show "<name or id>"
+kane-cli bugs categories add --name "<name>" --description "<what failures it covers>" [--inactive]
+kane-cli bugs categories edit "<name or id>" [--name <name>] [--description <text>] [--status active|inactive]
+kane-cli bugs categories remove "<name or id>" [--yes]
+```
+
+Every subcommand takes `--project <id>`, `--profile <name>`, `--env <name>`, `--username <user>`, `--access-key <key>` and `--agent` (one JSON line on stdout). Exit codes: `0` done, `1` any refusal. See [Bugs and RCA categories](https://www.testmuai.com/docs/kane-cli-bugs).
+
+---
+
 ### `kane-cli feedback`
 
 Submit feedback on a completed test run.

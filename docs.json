@@ -139,6 +139,7 @@
                   "docs/kane-cli-evidence-validate",
                   "docs/kane-cli-evidence-merge",
                   "docs/kane-cli-evidence-debugging",
+                  "docs/kane-cli-bugs",
                   "docs/kane-cli-evidence-format"
                 ]
               },

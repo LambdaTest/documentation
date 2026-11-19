@@ -122,7 +122,7 @@ A replay can fail if the site has changed: a button moved, the page is slower th
 
 - **Adaptive healing** is on by default. The runner retries smaller and smaller replay windows (up to three), then re-authors the authorable steps. Pass `--no-adaptive-heal` to turn it off. See [Replay policy and completion](#replay-policy-and-completion).
 
-Every failed replay is also **investigated automatically**. A failure record (the error, the page state at the moment of failure, and links into the step's console and network logs) is written into the run's [evidence pack](https://www.testmuai.com/docs/kane-cli-evidence-debugging), so you can see *why* the replay broke, not just that it did.
+Every failed replay is also **investigated automatically**. A failure record (the error, the page state at the moment of failure, and links into the step's console and network logs) is written into the run's [evidence pack](https://www.testmuai.com/docs/kane-cli-evidence-debugging), so you can see *why* the replay broke, not just that it did. The application bugs those diagnoses find are remembered across runs: see [Bugs and RCA categories](https://www.testmuai.com/docs/kane-cli-bugs).
 
 ### Replays don't need a project or folder
 
