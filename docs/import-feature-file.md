@@ -142,7 +142,7 @@ Click **Next** to prepare the preview.
 
 ### 3. Preview the import
 
-Test Manager validates the file and checks every scenario against the test cases already in the destination folder. Preparing a large file can take a few minutes; keep the tab open until it finishes.
+Test Manager reads the file and validates every scenario. Preparing a large file can take a few minutes; keep the tab open until it finishes.
 
 :::note
 Nothing is saved during the preview. If you leave the page at this point, no test cases are created.
@@ -156,7 +156,7 @@ The preview shows:
 
 <img loading="lazy" src={require('../assets/images/test-manager/test-cases/feature-file-import/preview-import.png').default} alt="Preview import step showing the import summary and the outcome of each scenario" className="doc_img"/>
 
-A skipped scenario does not stop the rest of the file from importing. To see why scenarios were skipped, click **Download Skipped Test Cases (CSV)**. The file lists each skipped scenario with the reason, so you can fix the `.feature` file and import it again. See [Why a scenario is skipped](#why-a-scenario-is-skipped).
+A skipped scenario does not stop the rest of the file from importing. To see why scenarios were skipped, click **Download Skipped Test Cases (CSV)**. The file lists each skipped scenario with the reason. If you fix the skipped scenarios before you start the import, upload the corrected file instead. If you fix them afterwards, import a file that contains only those scenarios, because importing the whole file again creates the other test cases a second time. See [Why a scenario is skipped](#why-a-scenario-is-skipped).
 
 ### 4. Import the test cases
 
@@ -166,15 +166,15 @@ When the import completes, you see how many test cases were created out of the s
 
 <img loading="lazy" src={require('../assets/images/test-manager/test-cases/feature-file-import/import-complete.png').default} alt="Completed import showing the number of test cases created and skipped" className="doc_img"/>
 
-## Re-importing a feature file
+## Importing the same file again
 
-When your `.feature` files change, you can import the same file again without creating duplicates.
+Every feature file import creates new test cases. The import doesn't compare scenarios with the test cases already in your project, and it never updates or removes existing test cases.
 
-- **Matching.** A scenario matches an existing test case when both have the same name in the destination folder. The comparison ignores letter case and leading or trailing spaces.
-- **Matched scenarios are skipped.** The existing test case is left unchanged. A feature file import never updates existing test cases, so only scenarios that are new to the folder are imported.
+- **Importing a file again creates new copies.** If you import the same `.feature` file twice, each scenario is created twice. Test Manager allows test cases with the same name, so these are not treated as duplicates.
+- **Scenarios with the same name in one file** are each imported as separate test cases.
 - **Nothing is deleted.** Removing a scenario from the file doesn't remove its test case from Test Manager.
-- **Renames create new test cases.** A renamed scenario doesn't match its old name, so it is imported as a new test case and the old one stays. The same applies to every scenario in a renamed Feature when the feature folder option is on, because they go into a new folder.
-- **Moved test cases don't match.** Matching only looks in the destination folder. If you moved a test case to another folder, its scenario is imported again as a new test case.
+
+To bring in only what changed, import a `.feature` file that contains just the new scenarios, or edit the existing test cases directly in Test Manager.
 
 :::tip
 To update existing test cases in bulk, with a new version recorded for each change, use [Import from CSV](/support/docs/csv-import/) with a match key.
@@ -182,16 +182,13 @@ To update existing test cases in bulk, with a new version recorded for each chan
 
 ## Why a scenario is skipped
 
-A scenario is skipped, and the rest of the file still imports, when:
+A scenario is skipped when it fails the same checks Test Manager applies whenever a test case is created. The rest of the file still imports. For example, a scenario is skipped when:
 
-- It has no name.
 - It has no steps.
 - Its name is longer than the test case title limit.
-- A test case with the same name already exists in the destination folder.
-- More than one test case in the destination folder has the same name.
-- A required field in the project has no default value, so the test case can't be created.
+- Its BDD scenario is larger than the size a test case can hold.
 
-If every scenario in the file would be skipped, the import can't start.
+The skipped test cases CSV, available from the preview and after the import, gives the exact reason for each skipped scenario.
 
 ## When the whole file can't be imported
 
@@ -210,6 +207,5 @@ Some problems stop the entire file from importing, because the file as a whole c
 | You can't add a second file | Each import takes exactly one file. | Remove the current file to upload a different one, or import the files one after another. |
 | The file has more scenarios than one import allows | Each import has the same test case limit as CSV import. | Split the file into smaller `.feature` files. |
 | Test cases went into **Untitled** | The import started from **All Test Cases** with the feature folder option off. | Move the test cases, or select a folder before importing next time. |
-| Scenarios you changed in the file were skipped | A test case with the same name already exists in the folder, and a feature file import doesn't update existing test cases. | Edit the test case in Test Manager, or use [Import from CSV](/support/docs/csv-import/) with a match key to update it. |
-| The same scenario was imported twice | The earlier test case was renamed or moved out of the destination folder, so the scenario didn't match it. | Keep imported test cases in the folder they were imported into when you plan to re-import the file. |
-| The import stopped partway | A system error interrupted the import. | Test cases already created stay. Import the same file again: those test cases are skipped and the rest are created. |
+| The same scenario appears twice in Test Manager | The file was imported more than once. Every import creates new test cases. | Delete or [archive](/support/docs/test-case-archive/) the extra copies. To add new scenarios later, import a file that contains only those scenarios. |
+| A scenario was skipped | It failed one of the checks Test Manager applies when creating a test case, such as the title length limit. | Download the skipped test cases CSV to see the reason, fix the scenario, and import a file with only the fixed scenarios. |
