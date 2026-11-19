@@ -389,7 +389,7 @@ driver.executeScript("mobile: alert", Map.of(
 
 For details on the **settings[respectSystemAlerts]** capability, see the [Appium XCUITest driver troubleshooting guide](https://appium.github.io/appium-xcuitest-driver/11.17/troubleshooting/#interact-with-dialogs-managed-by-comapplespringboard).
 
-### Using WebView commands with the [`updateLanguageLocale`](support/docs/list-of-supported-locales/#enabling-locales-and-language-via-hook) hook
+### Using WebView commands with the [`updateLanguageLocale`](/support/docs/list-of-supported-locales/#enabling-locales-and-language-via-hook) hook
 
 **Why it's needed:** The `lambda_executor: updateLanguageLocale` hook closes and relaunches the application for the changes to take effect, creating a new WebView context with a different process ID. However, Appium remains attached to the previous WebView context and its associated process ID because it does not automatically detect the application relaunch. As a result, subsequent WebView related commands may fail.
 
