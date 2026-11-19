@@ -2616,6 +2616,7 @@ module.exports = {
         className: "menu-bold",
         items: [
           "csv-import",
+          "import-feature-file",
           "one-click-migration-from-testrail",
           "one-click-migration-from-xray",
           "one-click-migration-from-zephyr-scale",
