@@ -156,6 +156,7 @@ Desired capabilities in Appium on TestMu AI are key-value pairs telling the Appi
 | autoAcceptAlerts | TYPE: BOOLEAN <br/> DEFAULT: True <br/> `autoAcceptAlerts=TRUE` <br/> OR <br/> `autoAcceptAlerts=FALSE` | Appium capability to Accept alerts/popups on iOS Devices. | Real &amp; Virtual|
 | noReset | TYPE: BOOLEAN <br/> DEFAULT: False <br/>`true` | Don't reset app state before this session. See [here](https://appium.readthedocs.io/en/stable/en/writing-running-appium/other/reset-strategies/) for more details.                                                                                                                               | Real &amp; Virtual|
 | iosLiveInteraction | TYPE: BOOLEAN <br/> DEFAULT: False <br/>`true` | This capability allows users to interact with the iOS device during an automation session for scenarios requiring manual interaction. For Virtual Devices, live interaction is supported by default in automation session. | Real|
+| devicePosture | TYPE: STRING <br/> DEFAULT: open <br/> `devicePosture = "closed"` | Sets the device posture for iOS foldable devices. <br/> Accepted values: `closed`, `open`, `book`. <br/> If not passed, device starts in `open` posture. | Virtual|
 ## Real User conditions
 | KEY | VALUES | CAPABILITY DESCRIPTION | SUPPORTED ON |
 |-----|--------| -----------------------|--------------|
