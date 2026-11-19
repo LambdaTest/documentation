@@ -17,7 +17,14 @@ site_name: TestMu AI
 slug: appium-testmu-hooks/
 canonical: https://www.testmuai.com/support/docs/appium-testmu-hooks/
 ---
+import CodeBlock from '@theme/CodeBlock';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
+import RealDeviceTag from '../src/component/realDevice';
+import VirtualDeviceTag from '../src/component/virtualDevice';
 
 
 
@@ -129,15 +136,6 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     "dateModified": "2026-11-11T12:00:00+05:30"
   }) }}
 />
-
-import CodeBlock from '@theme/CodeBlock';
-import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
-
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-import RealDeviceTag from '../src/component/realDevice';
-import VirtualDeviceTag from '../src/component/virtualDevice';
-
 
 <RealDeviceTag value="Real Device" /> 
 <VirtualDeviceTag value="Virtual Device" />
