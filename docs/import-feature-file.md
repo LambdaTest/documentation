@@ -85,7 +85,7 @@ Before anything is saved, a preview lists every scenario in the file and what wi
 
 ## Before you begin
 
-- **One file per import.** Each import takes a single `.feature` file of up to **10 MB**. To import several files, import them one after another.
+- **One file per import.** Each import takes a single `.feature` file of up to **10 MB** and up to **10,000 scenarios**. To import several files, import them one after another.
 - **Permissions.** You need permission to add test cases to the project.
 - **Choose the destination first.** Test cases go into the folder selected in the **Test Cases** repository when you start the import. To import somewhere else, select that folder before you start. See [Choose where the test cases go](#choose-where-the-test-cases-go).
 - **Need an example?** The import page has a **Sample Feature File** you can download. It shows the structure the import expects.
@@ -99,8 +99,8 @@ Each `Scenario`, `Scenario Outline` or `Example` in the file becomes one BDD tes
 | Scenario name, without leading or trailing spaces | **Title** |
 | Scenario tag line, `Scenario:` line, steps, data tables, doc strings and `Examples` | **Test steps**, as a BDD scenario, in their original order |
 | `Background` | Top of the BDD scenario, on every test case from that file |
-| Feature name and Feature description | **Description** |
-| Tags on the Feature, Rule and Scenario | **Tags**, without the `@` and without duplicates |
+| Feature name and description; Rule name and description, if the scenario is under a Rule | **Description** |
+| Tags on the Feature, Rule, Scenario and Examples | **Tags**, without the `@` and without duplicates |
 | Comments outside a scenario | Not imported |
 | Every other field | The same defaults as a new test case |
 
@@ -205,7 +205,7 @@ Some problems stop the entire file from importing, because the file as a whole c
 | The file is refused when you upload it | Only `.feature` files can be imported here. | To import a CSV, use [Import from CSV](/support/docs/csv-import/). |
 | The file is over the size limit | Each import accepts one file of up to 10 MB. | Split the file into smaller `.feature` files and import them separately. |
 | You can't add a second file | Each import takes exactly one file. | Remove the current file to upload a different one, or import the files one after another. |
-| The file has more scenarios than one import allows | Each import has the same test case limit as CSV import. | Split the file into smaller `.feature` files. |
+| The file has more scenarios than one import allows | Each file can have up to 10,000 scenarios. | Split the file into smaller `.feature` files and import them separately. |
 | Test cases went into **Untitled** | The import started from **All Test Cases** with the feature folder option off. | Move the test cases, or select a folder before importing next time. |
 | The same scenario appears twice in Test Manager | The file was imported more than once. Every import creates new test cases. | Delete or [archive](/support/docs/test-case-archive/) the extra copies. To add new scenarios later, import a file that contains only those scenarios. |
 | A scenario was skipped | It failed one of the checks Test Manager applies when creating a test case, such as the title length limit. | Download the skipped test cases CSV to see the reason, fix the scenario, and import a file with only the fixed scenarios. |
