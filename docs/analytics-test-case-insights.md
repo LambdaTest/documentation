@@ -334,9 +334,9 @@ Once, you have completed the configuration and start executing your tests on the
 
 ## Test Case Insights Widgets
 
-### Test Case Health Snapshot
+### Test Cases Stability Snapshot
 
-You can analyze the health of your test cases by using the `Test Case Health Snapshot` widget. The widget will display the total number of test cases success, failed. The widget will be displayed in card view and you can also view the details of the test cases by clicking on the `View Details` button.
+You can analyze the health of your test cases by using the `Test Cases Stability Snapshot` widget. The widget will display the total number of test cases success, failed. The widget will be displayed in card view and you can also view the details of the test cases by clicking on the `View Details` button.
 
 <img loading="lazy" src={require('../assets/images/analytics/test-case-health-snapshot.webp').default} alt="cmd" width="800" height="400" className="doc_img"/>
 
