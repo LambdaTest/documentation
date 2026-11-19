@@ -249,6 +249,40 @@ refused while a run is queued or running) frees it for a new exploration of any 
 command, but the use-cases and tests designed for the first site stay in the project, and a pull brings them along
 with the new site's.
 
+## An example: a demo store, six runs
+
+Here is what one exploration found in [automationexercise.com](https://automationexercise.com), a public demo store,
+run six times on HyperExecute on 24 October. The screenshots come from the Exploration view coming to Test Manager.
+
+**The map.** After the sixth run it held 15 screens in 4 areas of the app: Home and help, Brand products, Shop and
+cart, and Account. The explorer grouped the screens into those areas on its own, and tagged each screen Entry, New or
+Changed against the run before.
+
+<img loading="lazy" src="https://assets.testmuai.com/resources/images/uploads/2026/10/kane-cli-exploration-graph.webp" alt="Kane CLI Exploration map of automationexercise.com showing 15 screens grouped into Home and help, Brand products, Account, and Shop and cart areas" width="1600" height="831" />
+
+**The overview.** It sums the exploration up in one line: 2 flows broke, 20 high-severity findings need review, and
+the explorer is stuck at sign-in. It can't get past a login screen until you give it a sign-in: see
+[An app behind a login](#an-app-behind-a-login).
+
+<img loading="lazy" src="https://assets.testmuai.com/resources/images/uploads/2026/10/kane-cli-exploration-overview.webp" alt="Kane CLI Exploration overview for run 6 showing 15 screens, 21 flows, 64 findings, 0 bugs and 8 use cases written, with a Needs Attention list" width="1600" height="897" />
+
+**Flows and findings.** It recorded 21 flows: 14 worked end to end, 5 changed since the run before and wait for the
+next run to check them again, and 2 broke ("Contact support" and "Contact support or manage subscription" both stop at
+the Contact Us screen). It raised 64 findings: 20 high, 35 medium and 9 informational. The most common high one,
+"Buttons must have discernible text", was on all 15 screens, and "Form elements must have labels" was on 3. The Bugs
+count reads 0 because nobody had promoted a finding to a bug yet.
+
+<img loading="lazy" src="https://assets.testmuai.com/resources/images/uploads/2026/10/kane-cli-exploration-flows-findings.webp" alt="Kane CLI Exploration flow status with 14 verified, 5 changed and 2 broken flows next to a findings panel with 20 high, 35 medium and 9 info findings" width="1600" height="1032" />
+
+**Runs.** Every run adds to the same map. The first four ended before they reached a screen, so they show as Found
+nothing. Run 5 took 8 minutes and added 11 screens and 11 flows; run 6 took 5 minutes and added 4 more screens and 10
+more flows.
+
+<img loading="lazy" src="https://assets.testmuai.com/resources/images/uploads/2026/10/kane-cli-exploration-activity.webp" alt="Kane CLI Exploration activity table listing six HyperExecute runs with duration, new screens, new flows and new findings for each" width="1600" height="777" />
+
+**Tests.** From that map, its design jobs wrote 8 use-cases with 23 tests into the project, as the next section
+describes.
+
 ## The tests it designs
 
 While an exploration's **assurance context** is on (the default), **design jobs** (kane-cli calls them assurance
