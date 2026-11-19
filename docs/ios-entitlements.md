@@ -128,8 +128,6 @@ For setup steps and requirements, refer to [Keychain Access Groups support](/sup
 | Universal links (`https://` deep links) | The link opens in Safari rather than in your app |
 | Sign in with Apple, iCloud, Apple Pay | The feature fails or isn't offered |
 
-Deep links that use a custom URL scheme (for example `myapp://`) don't depend on entitlements and keep working after re-signing.
-
 
 ## Testing with your original signature
 
@@ -150,7 +148,8 @@ This works well when login, deep links or push notifications must behave exactly
 
 Apps signed through the [Apple Developer Enterprise Program](https://developer.apple.com/programs/enterprise/) (In-House distribution) aren't limited to a device list. iOS accepts them on any device, public or private, so no re-signing is required and every entitlement stays intact. Upload your Enterprise build and turn off re-signing for your test.
 
-:::Tip Choosing the right setup
+:::tip
+Choosing the right setup
 - **For general functional and UI testing:** Keep re-signing on and upload any build.
 - **For push notifications, universal links or in-app purchases:** Use your original signature, either with UDIDs on private devices or with an Enterprise build on any device.
 :::
@@ -171,7 +170,6 @@ Once you toggle the `Disable App Resigning` option, your application's certifica
 
 <img loading="lazy" src={require('../assets/images/entitlements/disableappresign.png').default} alt="monday integration" width="626" height="439" className="doc_img"/>
 
-Re-signed builds can lose universal link handoff; see [how to test universal links on real iPhones](https://www.testmuai.com/blog/test-universal-links-ios/).
 
 
 ## Disabling Re-Signing In App Automation
@@ -187,9 +185,9 @@ You can prevent re-signing your application with the "resignApp" capability. Upl
 
 KEY|VALUE|DESCRIPTION
 --|--|--
-| resignApp            | TYPE: BOOLEAN <br/> DEFAULT: True <br/> `resignApp = true` | 1. By default, if this capability is not passed, your app will be re-signed.<br/> 2. You can pass "false" as a capability to prevent your apps from being re-signed.<br/> 3. This is only for iOS-specific applications and devices |
->
-If you still have any questions for us, please feel free to let us know via our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24X7 Chat Portal**</span> or mail us to support@testmuai.com
+| resignApp            | TYPE: BOOLEAN <br/> DEFAULT: True <br/> `resignApp = true` | 1. By default, if this capability is not passed, your app will be re-signed.<br/> 2. You can pass "false" as a capability to prevent your apps from being re-signed.<br/> 3. This is only for iOS-specific applications and devices. |
+
+>If you still have any questions for us, please feel free to let us know via our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24X7 Chat Portal**</span> or mail us to support@testmuai.com
 
 
 

@@ -115,4 +115,5 @@ The Real-Time Testing dashboard provides an intuitive interface for managing you
 
 - Only the app owner (the user who uploaded the app to <BrandName />) can change its visibility settings. However, the app name can be changed by either the app owner or an organization admin.
 - Only organization admins have permission to delete applications uploaded by any member of the organization. Members with the User or Guest role can only delete their own uploaded applications.
+- Apps unused for 30 days are automatically removed from the dashboard. Using an app in any test resets its 30 days inactivity period.
 :::

@@ -482,6 +482,10 @@ The payload allows you to check the processing status for specific features. If 
 ```
 
 
+## Upload from Firebase
+Firebase is a platform developed by Google for creating mobile and web applications. <BrandName /> cloud platform provides you various methods to upload your files on a real device like from playstore and appstore. Firebase App Distribution is another way to upload and test your apps on real devices. To learn more, refer to [Test Apps Installed via Firebase App Distribution](/support/docs/install-apps-from-firebase/).
+
+
 
 ## Next Steps
 ---
