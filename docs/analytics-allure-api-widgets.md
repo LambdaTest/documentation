@@ -159,6 +159,15 @@ className="doc_img"
 
 The `Allure Tests Stability` widget lists the individual tests executed using the Allure report. For each test, it shows the latest status, the maximum, minimum and average duration, and the statuses of its recent runs. Select a test to open its details.
 
+<img
+loading="lazy"
+src={require('../assets/images/analytics/api-tests-stability.webp').default}
+alt="Allure Tests Stability widget"
+width="800"
+height="400"
+className="doc_img"
+/>
+
 ### Use Cases of Allure Tests Stability Widget
 - Find the tests that fail or change status often across recent runs.
 - Compare the maximum, minimum and average duration of each test to spot slow or inconsistent tests.
