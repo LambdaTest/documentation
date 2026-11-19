@@ -552,6 +552,40 @@ Multiple errors may occur based on the scenario. Understanding these errors will
 
 > **Note:** If the user had enabled any of the following capabilities in the previously installed app, they will remain available and functional in the upgraded app as well : `EnableScreenshotUnblock`,`EnableImageInjection`,`EnableVideoInjection`,`Network`,`AppProfiling`,`EnableWebContentsDebugging`,`EnableBiometricInjection`.This ensures that key testing features continue to work seamlessly after the app is updated, without requiring additional configuration.
 
+## Device Posture Hooks (iOS)
+---
+
+<VirtualDeviceTag value="Virtual Device" />
+
+You can change or read the fold position of iOS foldable devices during your automation session using the `setDevicePosture` and `getDevicePosture` hooks. This is useful for testing how your app responds to posture changes mid-session.
+
+### Set Device Posture
+
+Use `setDevicePosture` to change the fold position during the test. Accepted values: `closed`, `open`, `book`.
+
+**Python example:**
+
+```python
+driver.execute_script('lambda_executor: {"action":"setDevicePosture","arguments":{"posture":"open"}}')
+# → "posture set to open"
+```
+
+### Get Device Posture
+
+Use `getDevicePosture` to read the current fold position of the device.
+
+**Python example:**
+
+```python
+driver.execute_script('lambda_executor: {"action":"getDevicePosture"}')
+# → "open"
+```
+
+:::note
+- These hooks are supported on **virtual devices only**.
+- To set the initial posture at session start, use the `devicePosture` capability. See [Appium Capabilities](/support/docs/desired-capabilities-in-appium/) for details.
+:::
+
 ## Next Steps
 ---
 
