@@ -411,7 +411,7 @@ If you execute the `updateLanguageLocale` hook after running the WebView context
 
 1. Switch to the `NATIVE_APP` context.
 2. Call the `getContexts` command to retrieve the updated list of available contexts.
-3. Switch to the updated `WEBVIEW_*` context
+3. Switch to the updated `WEBVIEW_*` context.
 
 
 ---
