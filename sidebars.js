@@ -3248,6 +3248,7 @@ module.exports = {
       "sharding-espresso",
       "speedup-espresso",
       "espresso-junit-report",
+      "espresso-cucumber",
       "espresso-mockwebserver-localhost",
     ],
   ],
