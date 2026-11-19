@@ -177,9 +177,9 @@ All parameters are optional. If you set more than one filter, only the scenarios
 | Parameter | Type | Description | Example |
 |---|---|---|---|
 | `tags` | String | A Cucumber tag expression. Only the scenarios that match the expression run. | `"@smoke and not @wip"` |
-| `features` | Array of strings | The feature files or folders to run, relative to the test APK assets. Add `:<line>` to run the scenario at that line. | `["features/login.feature", "features/cart.feature:12"]` |
+| `features` | Array of strings | The feature files or folders to run, relative to the test APK assets. Add `:<line>` to run the scenario at that line, or several lines to run several scenarios, for example `features/cart.feature:3:8`. | `["features/login.feature", "features/cart.feature:12"]` |
 | `name` | String | A regular expression. Only the scenarios with a matching name run. | `"^Checkout"` |
-| `plugins` | Array of strings | The Cucumber reports to generate. Allowed values: `json`, `junit`, `html`. If you do not set `plugins`, no Cucumber report is generated. | `["json", "junit"]` |
+| `plugins` | Array of strings | Turns on the Cucumber reports. Allowed values: `json`, `junit`, `html`. Setting any one of them generates all three formats. If you do not set `plugins`, no Cucumber report is generated. | `["junit"]` |
 
 ### How scenarios run
 
@@ -220,6 +220,14 @@ Run the single scenario at a given line of a feature file:
 ```json
 "cucumberOptions": {
   "features": ["features/cart.feature:12"]
+}
+```
+
+Run several scenarios of one feature file by adding more than one line number:
+
+```json
+"cucumberOptions": {
+  "features": ["features/cart.feature:3:8"]
 }
 ```
 
@@ -272,6 +280,8 @@ framework:
 
 With `autosplit: true`, HyperExecute splits the selected scenarios across the devices.
 
+If you run the HyperExecute CLI with the `--download-report` flag, the Cucumber reports are downloaded with the job.
+
 ### Shard by tags
 
 Use the `tags` shard strategy to give each shard its own tag expressions.
@@ -309,9 +319,13 @@ A Cucumber suite supports only the `tags` shard strategy. You cannot use the `cl
 ## Download Cucumber Reports
 ---
 
-Set `plugins` in `cucumberOptions` to generate reports. You do not need to set a plugin path in your `@CucumberOptions` annotation. <BrandName /> sets the report path on the device and collects the files.
+Set `plugins` in `cucumberOptions` to generate reports. Any allowed value (`json`, `junit` or `html`) turns on all three formats. You do not need to set a plugin path in your `@CucumberOptions` annotation. <BrandName /> sets the report path on the device and collects the files.
 
 The report APIs are available after the build or the job has ended. Authenticate with your <BrandName /> username and access key.
+
+:::note
+For large builds, wait a few minutes after the build ends before you download the report. The results of each test are still uploading when the build ends, so a report fetched too early can show passed tests as `<skipped>`. Fetch the report again to get the complete version.
+:::
 
 **Base URL:** `https://mobile-api.lambdatest.com/mobile-automation/api/v1`
 
@@ -341,6 +355,8 @@ curl -u "YOUR_USERNAME:YOUR_ACCESS_KEY" \
   "https://mobile-api.lambdatest.com/mobile-automation/api/v1/sessions?build_id=<buildId>"
 ```
 
+The sessions API returns 10 tests by default. For a build with more than 10 scenarios, add the `limit` and `offset` parameters, for example `&limit=50&offset=0`.
+
 ### Reports of a HyperExecute job
 
 | Report | Endpoint |
@@ -357,7 +373,7 @@ curl -u "YOUR_USERNAME:YOUR_ACCESS_KEY" \
 ```
 
 :::tip
-Run the HyperExecute CLI with the `--verbose` flag to print the job ID and the shard IDs in the logs.
+The shard ID is the HyperExecute **task ID**, in the format `HYPL-<orgId>-...`. Run the HyperExecute CLI with the `--verbose` flag to print the job ID and each `Task id:` in the logs.
 :::
 
 ### JUnit XML format
@@ -371,6 +387,14 @@ The XML has the same format as the Cucumber `JUnitFormatter`: one `<testcase>` f
     <failure message="...">...</failure>
   </testcase>
 </testsuite>
+```
+
+A test with no Cucumber result, for example a test that was stopped or that crashed, has a `<skipped>` element and an empty `classname`:
+
+```xml
+<testcase classname="" name="..." time="0">
+  <skipped message="no Cucumber report for test <testId>"/>
+</testcase>
 ```
 
 ### ZIP layout
@@ -390,9 +414,10 @@ Open `index.html` in a browser to see the Cucumber HTML report of a scenario.
 | Status | Cause |
 |---|---|
 | `200` | The report is returned. |
+| `400` | The build ID is not a positive number (`build_id must be a positive number`). |
 | `401` | The username or access key is missing or incorrect. |
-| `403` | The build has not ended. Try again after it ends. |
-| `404` | The build ran without `plugins`, the build does not exist, the `test_id` is not in the build, or the `shard` is not in the job. |
+| `403` | The build has not ended (try again after it ends), the build belongs to another organization (`forbidden, user not allowed to modify this resource`), or the build is not an Espresso framework build. |
+| `404` | The build ran without `plugins`, the build does not exist, the `test_id` is not in the build, or the `shard` is not in the job (`shard id passed does not belong to passed build id`). |
 
 ## Supported Versions and Devices
 ---
@@ -454,9 +479,10 @@ In these cases the build status is `error` and the remark gives the cause.
 |---|---|
 | No scenario matches the filters (REST API) | `No tests found in the test suite. Please check your test suite or applied filters.` |
 | No scenario matches the filters (HyperExecute) | `No tests matched your filters. Please verify that your filters are correctly configured and that the test suite contains the expected tests.` |
+| No scenario matches the `tags` of one HyperExecute shard | Only that shard fails, with `No tests found in the test suite. Please check your test suite or applied filters.` The other shards still run. |
 | A feature or scenario name has a comma or `#`, with `singleRunnerInvocation: false` | `Cucumber test <Feature>#<Scenario> cannot run on its own because its feature or scenario name has a comma or a hash (#). Please rename it.` |
 | A feature or scenario name is too long | `Cucumber test <name> has a feature or scenario name longer than <n> characters, so its result cannot be stored. Please shorten the name.` |
-| Cucumber cannot start with the given options, for example an incorrect tag expression | `Cucumber could not start with the given cucumberOptions. Please check the tags expression, the feature paths and the name regular expression.` |
+| Cucumber cannot start with the given options, for example an incorrect tag expression | `Cucumber could not start with the given cucumberOptions. Please check the tags expression, the feature paths and the name regular expression. Cause: <cause>` The `Cause` suffix gives the Cucumber error, for example `Failed to parse cucumber.filter.tags ...`. |
 
 ## Limitations
 ---
