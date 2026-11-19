@@ -66,7 +66,25 @@ jobs:
           aws cloudfront create-invalidation --distribution-id EEMGB6PM4ZZ7A  --paths "/support/*"
           sleep 90
           
+      # Cloudflare has refused the Global API Key (X-Auth-Email/X-Auth-Key) since Oct 2026.
+      # Purge with an API token that has Cache Purge permission on the zone,
+      # and fail the run unless Cloudflare reports success: curl alone ignores
+      # the reply, which is how a failing purge stayed green.
       - name: Cloudflare Invalidation
+        env:
+          CLOUDFLARE_ZONE_ID: ${{ secrets.CLOUDFLARE_ZONE_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          PROD_WEBSITE_URL: ${{ secrets.PROD_WEBSITE_URL }}
         run: |
-          curl -X POST "https://api.cloudflare.com/client/v4/zones/${{ secrets.CLOUDFLARE_ZONE_ID }}/purge_cache" -H "X-Auth-Email: ${{ secrets.CF_ACCOUNT }}" -H "X-Auth-Key: ${{ secrets.CF_API_SECRET }}" -H "Content-Type: application/json" --data '{"hosts":["${{ secrets.PROD_WEBSITE_URL }}"] }'
+          set -euo pipefail
+          for name in CLOUDFLARE_ZONE_ID CLOUDFLARE_API_TOKEN PROD_WEBSITE_URL; do
+            [ -n "${!name}" ] || { echo "::error::The $name secret is not set for this workflow."; exit 1; }
+          done
+          RESPONSE=$(curl -sS -X POST "https://api.cloudflare.com/client/v4/zones/$CLOUDFLARE_ZONE_ID/purge_cache" \
+            -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" \
+            -H "Content-Type: application/json" \
+            --data "$(jq -cn --arg host "$PROD_WEBSITE_URL" '{hosts: [$host]}')")
+          echo "$RESPONSE"
+          jq -e '.success == true' <<<"$RESPONSE" > /dev/null ||
+            { echo "::error::Cloudflare did not purge the cache (reply above)."; exit 1; }
           sleep 60
