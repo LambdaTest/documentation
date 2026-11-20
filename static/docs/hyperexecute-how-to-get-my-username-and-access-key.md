@@ -4,6 +4,9 @@
 
 This page explains where you can find your LT Username and Access Key.
 
+**On-premise deployments**
+On-prem, click **Credentials** in the left sidebar of your organization's own HyperExecute dashboard and copy **Username** and **Access Key**. Use these keys, not the ones from the public cloud. See [Copy your username and access key](/support/docs/hyperexecute-on-premise-user-guide/#copy-your-username-and-access-key).
+
 **Step 1:** Go to the right side Profile dropdown and select **Account Settings**.
 
 **Step 2:** Under Account Settings, go to **Password & Security**

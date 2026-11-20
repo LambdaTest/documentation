@@ -18,6 +18,8 @@ When you upload an application that is generated through an Enterprise Account, 
 
 Once you toggle the iOS Entitlements option, your application's certificates will be preserved.
 
+Re-signed builds can lose universal link handoff; see [how to test universal links on real iPhones](https://www.testmuai.com/blog/test-universal-links-ios/).
+
 ## Disabling Re-Signing In App Automation
 
 **Note**

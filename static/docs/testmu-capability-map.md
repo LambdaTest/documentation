@@ -86,7 +86,7 @@ To migrate your test suites from BrowserStack, checkout this guide on [Migrating
 
 Switching between cloud-based test execution platforms can involve configuration updates, capability adjustments, and integration alignment. A capability comparison makes this transition more seamless by helping teams understand feature availability, execution models, and tooling compatibility.
 
-TestMu AI can be adopted as an alternative to Sauce Labs for organizations looking to enhance performance, scale automation workloads efficiently, and streamline debugging and reporting within their CI/CD pipelines.
+TestMu AI can be adopted as a [Sauce Labs alternative](https://www.testmuai.com/saucelabs-alternative/) for organizations looking to enhance performance, scale automation workloads efficiently, and streamline debugging and reporting within their CI/CD pipelines.
 
 Below are the capabilities of Sauce Labs and TestMu AI to help teams map Sauce Labs features to their TestMu AI equivalents.
 

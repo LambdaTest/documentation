@@ -58,6 +58,8 @@ Ready-to-run examples to get you started fast.
       Quick Actions
       Trigger browser tasks instantly. Scrape, screenshot, and PDF in one line.
 
+Prefer a walkthrough? Read the [step-by-step Gemini Computer Use guide](https://www.testmuai.com/blog/gemini-computer-use-cloud-browser/). To use Anthropic's native computer use toolset instead of text actions, follow the [Claude computer use API guide](https://www.testmuai.com/blog/claude-computer-use-api/).
+
 ## Resources
 
       📖 API Reference

@@ -7,19 +7,43 @@ Test Manager connects your testing work to the issues your team already tracks i
 ### Before you begin
 
 - Integrate Linear with your TestMu AI account. Follow the steps in [Linear App Integration](/support/docs/linear-app-integration/).
-- Until Linear is connected, it cannot be selected as a source in the **Link Issue** dialog. The dialog shows the connection state of each tracker.
+- Until Linear is connected, it cannot be selected as a source in the link dialog. The dialog shows the connection state of each tracker.
 - Searching and linking are limited to the Linear projects you selected during setup. Issues from any other project are not returned.
+
+### Requirements and defects
+
+Where you link a Linear issue decides what it is in Test Manager:
+
+| Where the issue is linked | What it becomes | What it tells you |
+|---|---|---|
+| Test case or test run | Requirement | What the test validates |
+| Test instance or step in a test run | Defect | What testing found |
+
+The issue's labels and type in Linear do not change this. A Linear issue labelled as a bug and linked on a test case is a requirement, because the test checks that bug. To change the role of a link, unlink the issue and link it in the right place.
+
+Issues you linked before this change were given a role automatically, using the same rule.
+
+Requirements and defects are currently in slow rollout. To get early access, raise a request to our support team. Until they are enabled for your organization, linked issues appear in a single list.
 
 ### Linking Linear Issues in Test Manager
 
-Once the integration is complete, follow these steps to link issues with your test cases or test runs:
+Once the integration is complete, follow these steps to link a requirement to your test cases or test runs:
 
-1. Head to the issues section in Test Manager and click on **Link Issue**.
-> Note: Issue linking is supported at the Test Case, Test Run, Test Case instance, and step level. To link issues, go to the Issues tab within a Test Case or a Test Run. For linking at the instance and step level within a Test Run, see [Track Bugs and Issues in Test Runs](/support/docs/track-issues-in-test-runs/).
+1. Open the **Issues** tab of a test case and click **Link requirement**. On a test run, open its **Issues** tab and click **Link requirement to run**.
+> Note: To link a defect on a test instance or a step, see [Track Bugs and Issues in Test Runs](/support/docs/track-issues-in-test-runs/).
 
-2. Select **Linear** as the source, enter the Linear issue ID or URL in the input field, and click on **Link Issue**.
+2. Select **Linear** as the source, enter the Linear issue key or URL in the input field, and click **Link requirement**.
 
-3. The Linear issue from your integrated Linear project is successfully linked and listed.
+3. The Linear issue from your integrated Linear project is linked and listed under **Requirements**.
+
+### Issues on a test case
+
+The **Issues** tab of a test case has two tabs, each grouped by tracker:
+
+- **Requirements**: the issues linked on this test case. You can link and unlink them here.
+- **Defects**: the defects raised or linked on this test case's instances and steps, across its test runs. Each one shows where it was raised, and **View in run** opens that run. This list is read-only, so you add and remove defects from the test run.
+
+A defect counts as open based on its status in Linear. A Linear issue in a **Canceled** status counts as an open defect.
 
 ### What a linked Linear issue shows
 
@@ -36,7 +60,7 @@ Linking is repeatable and many-to-many:
 
 ### Unlinking a Linear issue
 
-To **unlink an issue**, click on the unlink button located on the right side of the Linear issue.
+To **unlink an issue**, hover over the Linear issue and click **Unlink requirement** on the right side of its row.
 
 Unlinking removes the association in Test Manager only. The issue itself stays in Linear.
 
@@ -44,7 +68,7 @@ Unlinking removes the association in Test Manager only. The issue itself stays i
 
 | Situation | What happens |
 |---|---|
-| Linear is not connected to your TestMu AI account | Linear cannot be selected in the **Link Issue** dialog until you connect it |
+| Linear is not connected to your TestMu AI account | Linear cannot be selected in the link dialog until you connect it |
 | The issue belongs to a Linear project you did not select during setup | It is not returned in results and cannot be linked |
 | Linear is temporarily unreachable | The issue is shown with the details last retrieved, along with a notice that they could not be refreshed. The next view retries |
 | The issue is archived in Linear | The issue is identified as archived and can still be linked |

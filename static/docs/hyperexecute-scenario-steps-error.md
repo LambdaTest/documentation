@@ -26,13 +26,16 @@
         "text": "\n    \n        io.rest-assured<\/groupId>\n        rest-assured<\/artifactId>\n        4.5.0<\/version> \n        test<\/scope>\n    <\/dependency>\n<\/dependencies>"
       }
     ],
-    "dateModified": "2026-09-09T19:10:37+05:30"
+    "dateModified": "2026-11-11T14:00:00+05:30"
   }) }}
 />
 
 # How to Debug your Scenario Steps Errors
 
 This document will help you debug your failed job if you are facing any errors in the Scenario stage.
+
+**On-premise deployments**
+On-prem, use the username and access key from **Credentials** on your organization's own dashboard. See [Copy your username and access key](/support/docs/hyperexecute-on-premise-user-guide/#copy-your-username-and-access-key).
 
 ## Invalid Credentials
 

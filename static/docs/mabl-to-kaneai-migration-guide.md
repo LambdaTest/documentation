@@ -2,7 +2,7 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-This guide covers your mabl migration to KaneAI: what you can move to TestMu AI, and how.
+This guide covers your mabl migration to KaneAI: what you can move to TestMu AI, and how. For a side-by-side look at the two platforms before you switch, see [TestMu AI vs mabl](https://www.testmuai.com/testmu-vs-mabl/).
 
 [Note: KaneAI does not import or convert mabl tests. This guide follows a manual path. Export code from mabl and run it on TestMu AI, import test cases from CSV, and re-create tests in KaneAI in natural language.]
 
@@ -132,7 +132,7 @@ Open a saved test case and click **Automate with KaneAI** in the **Automate** se
 
 On the KaneAI dashboard, click **Author Browser Test** and write each step in natural language ([Author Your First Desktop Browser Test](/support/docs/author-your-first-desktop-browser-test/)). For mabl mobile tests, click **Author App Test**, select the **Android** or **iOS** tab and add your app ([Author Your First Mobile App Test](/support/docs/author-your-first-mobile-app-test/)).
 
-[Manual Interaction](/support/docs/kaneai-manual-interaction/) records your clicks, typing and scrolling as steps. It works in desktop web browsers, Android apps and iOS apps in portrait, but not in mobile browsers. Add verify or assert steps as written instructions.
+[Manual Interaction](/support/docs/kaneai-manual-interaction/) records your clicks, typing and scrolling as steps. It works in desktop web browsers, mobile browsers, Android apps and iOS apps. Add verify or assert steps as written instructions.
 
 ### Rebuild Flows, Variables and DataTables
 

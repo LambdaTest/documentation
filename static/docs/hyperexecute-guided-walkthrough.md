@@ -4,6 +4,9 @@
 
 This page gives you a guided walkthrough of all the things on the HyperExecute Dashboard and how you can get the most out of the platform once you have successfully [run your first sample Job](/support/docs/hyperexecute-running-your-first-job/). The dashboard is built to be **WCAG-compliant**, ensuring an accessible experience for all users.
 
+**On-premise deployments**
+On-prem, the **HyperExecute** menu has **Jobs** and **Projects**. Intelligent Test Analytics is not available (see [Private Cloud benefits](/support/docs/hyperexecute-private-cloud-benefits/)), so use job reports and the [Organisation Summary dashboard](/support/docs/hyperexecute-organisation-summary-dashboard/) for trends. See [Find your way around the dashboard](/support/docs/hyperexecute-on-premise-user-guide/#step-1-find-your-way-around-the-dashboard).
+
 ## Jobs Page
 
 All the tests on HyperExecute get executed as a Job. All the Jobs can be found on our [Jobs page](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute). Each [Job](/support/docs/hyperexecute-status/#1-job-level-status) has a [`Status`](/support/docs/hyperexecute-status/#3-stage-level-status), a unique `Job Number`, a set of [`Labels`](/support/docs/deep-dive-into-hyperexecute-yaml/#joblabel), info on number of [`Tasks`](/support/docs/hyperexecute-status/#2-task-level-status) executed as part of that Job, and a `Summary` section followed by the details of the `Job Duration` and who initiated the Job.

@@ -46,4 +46,4 @@ In case, you wish to test locally or privately hosted websites, you can select t
 
 3. Now visit the TestMu AI Automation Dashboard to view your test execution results.
 
-Moving your tests to KaneAI? The [testRigor to KaneAI migration guide](/support/docs/testrigor-to-kaneai-migration-guide/) shows how to collect your testRigor steps and data and re-create each test in natural language.
+Moving your tests to KaneAI? The [testRigor to KaneAI migration guide](/support/docs/testrigor-to-kaneai-migration-guide/) shows how to collect your testRigor steps and data and re-create each test in natural language. To weigh the two first, see [KaneAI vs testRigor](https://www.testmuai.com/kaneai-vs-testrigor/).

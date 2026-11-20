@@ -79,7 +79,7 @@ desiredCapabilities.setCapability("uploadMedia", ["lt://MEDIAfcdb39b9602d474f825
   "uploadMedia": ["lt://MEDIAf446d4170cd946aa9ec307d10cb679b9", "lt://MEDIA8d13e569b3e140c18e82b066022518bd"]
 }`}
 
-- Each automation session permits a maximum of five file uploads.
+- Each automation session permits a maximum of 10 file uploads. Passing more than 10 media IDs in `uploadMedia` returns an error and the session does not start.
 - The `uploadMedia` capability is set the same way for **app** and **browser (web)** automation.
 - In manual testing, iOS app needs to installed first to upload non-media files.
 - For non-media files, make sure your iOS app's Info.plist file includes the UIFileSharingEnabled and LSSupportsOpeningDocumentsInPlace keys set to true. This configuration is necessary to enable your app's folder accessibility within the Files app.

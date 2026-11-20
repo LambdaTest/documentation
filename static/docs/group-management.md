@@ -6,7 +6,7 @@ The TestMu AI Group Management will help you in creating the different Groups an
 
 ## How to Create a New Group?
 
-**Step 1:** Login to your [LambdaTest](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard) account and navigate to Profile icon on the top-right. Click on ***Organization Settings***.
+**Step 1:** Login to your [TestMu AI](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard) account and navigate to Profile icon on the top-right. Click on ***Organization Settings***.
 
 **Step 2:** Select the 'Groups' tab and click on '+ Create'.
 

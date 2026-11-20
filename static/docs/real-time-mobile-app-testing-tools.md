@@ -37,7 +37,7 @@ All screenshots and video recordings from test sessions are stored in the Galler
 This feature allows you to mark any bug in your UI during the session. You can mark the bug in your UI via different shapes, texts and of different colors. You can also configure different project management tools with your session to create a ticket for the same. You can also share that bug, save the image to the gallery or download that screenshot.
 
 ## IP Geolocation
-The IP Geolocation feature enables you to simulate website and mobile experiences from over 45 countries by using local IP addresses. This allows you to test localized features such as pricing, languages, and product offerings. With IP Geolocation enabled, you can verify that your app's traffic is coming from a specific country, allowing for comprehensive global testing.
+The IP Geolocation feature enables you to simulate website and mobile experiences from 180+ countries by using local IP addresses. This allows you to test localized features such as pricing, languages, and product offerings. With IP Geolocation enabled, you can verify that your app's traffic is coming from a specific country, allowing for comprehensive global testing.
 
 ## GPS Location
 GPS Geolocation testing allows you to simulate specific device locations using exact GPS coordinates to evaluate location-based app scenarios. You can enter your preferred location by entering the name of the location. However, if your preferred location is not showing, you can specify the exact location by entering the latitude and longitude of the location.

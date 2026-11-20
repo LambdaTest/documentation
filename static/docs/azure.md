@@ -73,7 +73,7 @@ Group Provisioning must be enabled for your org. Contact **24/7 chat support** t
 
 **Step 5:** Start a provisioning cycle (or wait for the 40-minute auto sync).
 
-**Step 6:** In TestMu AI, go to **Settings** > **Organization Settings** > **SCIM Group Provisioning** to view the synced groups and configure mappings.
+**Step 6:** In TestMu AI, go to **Settings** > **Organization Settings** > **Security** > **SCIM Provisioning** > **Groups** tab to view the synced groups and configure mappings.
 
 ### Setting Roles on Azure AD Groups
 

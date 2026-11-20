@@ -8,6 +8,9 @@ If the CLI printed an error code such as `ERR::HTTP::RESP`, look it up in [Error
 
 If you are encountering any error which is properly not detailed, it is recommend to use [**`verbose`**](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/#--verbose) mode in HyperExecute CLI command.
 
+**On-premise deployments**
+On-prem, pass [`--onprem-host`](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/#--onprem-host) on every run and use the credentials from your own dashboard. The hosts in [IPs to be whitelisted](#ips-to-be-whitelisted) are for SaaS. See [Troubleshooting](/support/docs/hyperexecute-on-premise-user-guide/#troubleshooting) in the On-Premise User Guide.
+
 ## Symbolic Link Error
 
 This error will mark your Job as a **Lambda Error**.
@@ -359,7 +362,7 @@ The CLI can also print the codes below. Their causes are not documented yet. If 
 
 ## Related
 
-- [Kane CLI Error Codes](/support/docs/kane-cli-error-codes/)
+- [Kane CLI Error Codes](https://www.testmuai.com/docs/kane-cli-error-codes)
 - [KaneAI Errors](/support/docs/error-handling-kaneai/)
 - [Platform Error Messages](/support/docs/error-messages/)
 - [Tunnel Error Messages](/support/docs/troubleshooting-lambda-tunnel/#error-messages)

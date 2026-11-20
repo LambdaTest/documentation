@@ -28,8 +28,8 @@ This document provide details about the features and capabilities supported for 
 | testRemarks   | Boolean | Set to `true` to surface failure remarks at the top of the dashboard when a test fails. Has no effect on passing tests. **Default**: `false`. |
 | retries   | Integer |Defines the number of times a test should automatically retry if it fails. Maximum allowed value: 5.|
 | region | String | Set the region for the test execution data center. Supported values: `US`, `EU`, `AP`. **Default:** Nearest data center. Example: `region: EU` |
-| networkProfile  | String | Set a predefined [network throttling](/support/docs/app-auto-network-throttling/) profile during test execution. Requires `network: true`. **Default:** `null`. Example: `networkProfile: 2g-gprs-good` |
-| uploadMedia | String | Upload media files to the device for testing. Provide the media URL generated after [uploading the file](/support/docs/upload-media/). **Default:** `null`. Example: `uploadMedia: lt://MEDIA123456789` |
+| networkProfile Real| String | Set a predefined [network throttling](/support/docs/app-auto-network-throttling/) profile during test execution. Requires `network: true`. **Default:** `null`. Example: `networkProfile: 2g-gprs-good` |
+| uploadMedia | String | Upload media files to the device for testing. Provide the media URL generated after [uploading the file](/support/docs/upload-media/). Accepts up to 10 media URLs per session. **Default:** `null`. Example: `uploadMedia: lt://MEDIA123456789` |
 
 Ensure that the latitude is between -90 and 90, and the longitude is between -180 and 180. Otherwise, an error will occur like "Invalid GPS location: Latitude must be between -90 and +90, Longitude must be between -180 and +180."
 

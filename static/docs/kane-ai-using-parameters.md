@@ -15,26 +15,96 @@ The **Seed Value** is defined with a global parameter in **KaneAI** > **Variable
 
 If a Dataset cell is empty, KaneAI uses the empty value; it does not fall back to the Seed Value.
 
+## Import parameters from a CSV
+
+When you have many parameters to create, such as the columns of a test data sheet, import them from a CSV file instead of creating them one at a time. Each column in the file becomes one parameter.
+
+### Prepare the CSV file
+
+Put each parameter's name in row 1 and its Seed Value in row 2:
+
+```csv
+user_name,email,city,plan
+John Doe,john.doe@example.com,Bengaluru,Pro
+```
+
+- Each import takes one `.csv` file, up to 5 MB and 500 columns. To import an Excel sheet, save it as CSV first.
+- Only rows 1 and 2 are read. A value in row 3 or below doesn't become a Seed Value, even if row 2 of that column is empty.
+- Parameter names can contain only letters, digits, and underscores. Names that don't follow this rule aren't corrected for you, so fix them in the file before you upload it.
+
+### Import the parameters
+
+1. Go to **KaneAI** > **Variables** > **Parameters**.
+2. Open the dropdown next to **Create new** and select **Import CSV**.
+3. Drag your file into the panel, or click **Browse CSV file**. To start from a template, click **Download Sample CSV**.
+
+4. Review the preview, which lists every column in the file and what will happen to it. You can search by name and filter by outcome. Nothing is created until you confirm, so you can still cancel, or go back and upload a corrected file.
+
+5. Click **Import Parameters**. The new parameters are added to the Parameters list, and a confirmation shows how many were imported.
+
+If every column already exists or is excluded, there is nothing to import and **Import Parameters** stays disabled.
+
+Imported parameters work the same way as parameters you create one at a time. To load the rest of the rows from your file as test data, see [Importing Data via CSV Files](/support/docs/kane-ai-using-datasets/#importing-data-via-csv-files).
+
+### What happens to each column
+
+| Preview outcome | When it applies | Result |
+|---|---|---|
+| **Will be imported** | The column has a valid new name and a Seed Value. | A new parameter is created. |
+| **Already exist & skipped** | A parameter with the same name already exists. Letter case is ignored, so `AGE` matches `age`. | The column is skipped. The existing parameter and its Seed Value don't change. |
+| **Excluded from import** | The column breaks one of the rules below. | No parameter is created. |
+
+A column is excluded from the import if:
+
+- Its name is empty, or contains spaces, symbols, or accented letters. Spaces before or after the name also count.
+- Its name repeats an earlier column in the file. Letter case is ignored, and the first column is the one imported.
+- Row 2 of the column is empty.
+- Its value in row 2 is longer than 255 characters.
+
+To include an excluded column, fix it in the CSV and upload the file again.
+
+### Import an updated file
+
+Each import is a one-time copy of the file, so later changes to the CSV don't update your parameters. When your sheet gains new columns, upload it again: columns you already imported are skipped, and only the new ones are created. To change the Seed Value of an existing parameter, edit it in the Parameters list.
+
+### Keep sensitive values out of the file
+
+Parameters are visible to everyone in your organization, and the import doesn't flag columns that look sensitive. Remove passwords, tokens, and similar values from the CSV, and store them as [Secrets](/support/docs/kane-ai-secrets/) instead.
+
 ## Define Parameters in a Web or App Agent Test
 - Navigate to the specific web agent test URL and configure the test to accept input parameters.
 
 ## Create a parameter in a test
-- Confirm that parameters are already defined in the system. To add a new parameter, use one of the following methods to define the parameter:
-  - Type a **`slash (/)`** and select the Parameter option.
-  - Click the Plus icon and choose the Parameter icon.
 
-Click **Create Parameter** to save.
+1. Type `/` in the authoring input.
+2. Select **Create Parameter** to open the pop-up.
+3. Enter the parameter's **Name** and **Seed value**.
+4. Click **Create Parameter** to save.
 
 ## Reference the parameter in test step
-Reference any parameter using **dollar-curly braces syntax** (e.g.,`${phone_number}`). Enter the name in its designated input field.
+Reference any parameter using **dollar-curly braces syntax** (e.g.,`${phonenumber}`). Enter the name in its designated input field.
 
 ### Set or change the value while authoring
 
-When you insert a parameter into a test step, you can enter the value to use for that test case. You can also pause the authoring session, click the parameter in the step, and update it in the **Parameter Value** dialog. Enter **New value for this test case** and click **Save**. This replaces row 1 for that parameter in the test case's Default Dataset; it does not change the global Seed Value or another test case's value.
+When you use a parameter for the first time in an authoring session, KaneAI uses the **Seed Value** you defined when creating the parameter.
+
+- **Dashed border:** The parameter appears with a dashed border while it is using the Seed Value and you have not explicitly set a value for this test case.
+- **Edit the value:** Click the parameter or the **Edit** option beside the Seed Value message to enter a different value for this test case.
+
+You can also change the value in an existing step:
+
+1. Pause the authoring session.
+2. Click the parameter in the step to open the **Parameter Value** dialog.
+3. Enter **New value for this test case** and click **Save**.
+
+Saving a new value replaces row 1 for that parameter in the test case's Default Dataset. It does not change the global Seed Value or another test case's value.
 
 To run the same test case with further values, add rows to a Dataset and select it for the run. See [Using Datasets](/support/docs/kane-ai-using-datasets/).
 
 ## From a Manual Interaction step
+
+**Availability**
+Converting selected text in a Manual Interaction step into a Parameter is supported only in **Classic Experience**. This feature is not available in **New Experience**.
 
 You can also convert a hard-coded value in a Manual Interaction step into a Parameter directly, without deleting or re-recording the step. This flow is available on both **Desktop** and **Mobile App** sessions, and works while the session is **Paused**, where step editing is available.
 

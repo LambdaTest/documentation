@@ -10,7 +10,7 @@ TestMo also offers integration with TestMu AI to help you perform automated cros
 
 ### Pre-requisite
 
-- Create your account in [LambdaTest](https://www.testmuai.com/register/?redirectTo=https://accounts.lambdatest.com/dashboard) and [TestMo](https://manage.testmo.com/trial)
+- Create your account in [TestMu AI](https://www.testmuai.com/register/?redirectTo=https://accounts.lambdatest.com/dashboard) and [TestMo](https://manage.testmo.com/trial)
 
 ### Step 1: Build the Test Suite
 Firstly, you need to run the build command as per your desired framework. You can choose any test automation framework and programming language you are familiar with. Selenium is one of the most common one used with JavaScript/Node.js, Java, C#, Python, Ruby or PHP, and other languages

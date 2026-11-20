@@ -10,7 +10,7 @@ TestMu AI offers integration with test reporting and test management tools, allo
 | [Test Rail Integration With TestMu AI](/docs/testrail-integration-with-testmu-selenium-grid/) |
 |:--------------------------------------------------------------------------------------------:|
 
-| [Calliope Integration With LambdaTest](https://github.com/LambdaTest/LambdaTest-Calliope-Integration/tree/master) |
+| [Calliope Integration With TestMu AI](https://github.com/LambdaTest/LambdaTest-Calliope-Integration/tree/master) |
 |:-----------------------------------------------------------------------------------------------------------------:|
 
 | [Zebrunner Integration With TestMu AI](/docs/zebrunner-integration/) |

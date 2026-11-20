@@ -110,7 +110,7 @@
         "text": "  env | grep CI # Used to check if the CI variable is set to true or not\n  set CI=true # If it's not set to true, then use this command to set as true"
       }
     ],
-    "dateModified": "2026-09-09T19:10:37+05:30"
+    "dateModified": "2026-11-11T14:00:00+05:30"
   }) }}
 />
 `HyperExecute CLI` is a command line interface that is required to run your End-to-End (E2E) testing on HyperExecute. This page outlines all you need to know about the CLI and also explains about the different flags & functionalities supported by the HyperExecute CLI.
@@ -126,6 +126,9 @@ You can download the `HyperExecute CLI` for your OS from the links given below :
 | Linux | https://downloads.lambdatest.com/hyperexecute/linux/hyperexecute |
 | Windows | https://downloads.lambdatest.com/hyperexecute/windows/hyperexecute.exe |
 | macOS | https://downloads.lambdatest.com/hyperexecute/darwin/hyperexecute |
+
+**On-premise and restricted networks**
+On an on-premise deployment, download the CLI from your own dashboard: open **Help** > **Hyperexecute CLI** and pick **MacOS**, **Windows** or **Linux**. If your network blocks downloads, ask your admin for an internal copy of the binary. Verify any copy you receive with the steps below before you use it. See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/#step-3-install-and-configure-the-cli).
 
 ## Verifying the Authenticity of the CLI
 To ensure the binary you’ve downloaded is genuine and has not been tampered with, you can verify its digital signature or code signing certificate. TestMu AI signs all official HyperExecute CLI releases for security and integrity assurance.
@@ -178,7 +181,7 @@ The various flags that are supported are listed below.
 | [-k, --key](#-k---key) | string | TestMu AI Access Key. |
 | [--labels](#--labels) | string | Incorporates the labels in your job. |
 | [--no-track](#--no-track) | NA | Stops updating the progress of the uplodaed jobs. |
---onprem-host
+| [--onprem-host](#--onprem-host) | string | Host name of your on-premise HyperExecute deployment. Sends the job there instead of the public cloud. |
 | [--preserve-payload](#--preserve-payload) | string | Preserves the job payload after its successful completion. |
 | [--runson](#--runson) | string | (comma-separated values of) OS on which the tests should run. |
 | [-s --scan](#-s---scan) | NA | Runs the network logs |
@@ -317,7 +320,7 @@ The secrets file contains highly sensitive information and must be strictly excl
 - Adding the relative path of the file (in which you have stored your secret data) to your [`.gitignore` or `.hyperexecuteignore`](/support/docs/hyperexecute-gitignore/) file. This prevents accidental inclusion of the file in your code repository.
 
 ### `-k, --key`
-The access key of your TestMu AI account. To find out how to retrieve your access key, visit [this page](/support/docs/hyperexecute-guided-walkthrough/#hyperexecute-dashboard).
+The access key of your TestMu AI account. To find out how to retrieve your access key, visit [this page](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/).
 
     {`--key ${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
 
@@ -334,6 +337,15 @@ You can track the progress of your uploaded jobs with HyperExecute. However, thi
 ```bash
 --no-track
 ```
+
+### `--onprem-host`
+Use this flag when your organization runs HyperExecute on-premise. It sends the job to your own deployment instead of the public cloud. Pass the host name only, with no `https://` and no path. Use the value your admin gives you.
+
+```bash
+--onprem-host hyperexecute.example.com
+```
+
+On your on-prem dashboard, **Help** > **Hyperexecute CLI** shows the full command for your deployment. See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/).
 
 ### `--preserve-payload`
 This flag allows you to preserve the job payload after the job is completed successfully.
@@ -460,6 +472,16 @@ wget https://downloads.lambdatest.com/hyperexecute/linux/hyperexecute
 chmod +x hyperexecute
 ./hyperexecute --user <lt_user> --key <lt_access_key> --config yaml/win/behave_hyperexecute_autosplit_sample.yaml
 ```
+
+### Trigger a job on an on-premise deployment
+
+Add `--onprem-host` with the host name of your deployment. Your YAML must use `testDiscovery` with `mode: remote`, because local discovery is not available on-premise.
+
+```bash
+./hyperexecute --user <YOUR_USERNAME> --key <YOUR_ACCESS_KEY> --config RELATIVE_PATH_OF_YOUR_YAML_FILE --onprem-host <YOUR_ONPREM_HOST>
+```
+
+You do not need to type it. On your on-prem dashboard, open **Help** > **Hyperexecute CLI**. The panel has the CLI downloads and a **Test execution command** for your deployment. Replace any placeholder in it, such as the access key or YAML path, with your own value.
 
 ## Running HyperExecute CLI in Quiet Mode
 

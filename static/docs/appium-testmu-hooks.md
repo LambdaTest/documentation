@@ -20,6 +20,13 @@
       },
       {
         "@type": "SoftwareSourceCode",
+        "name": "To mark the status of a test case, use the lambda-testCase-status hook",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "// To mark the open test case as passed or failed\n((JavascriptExecutor) driver).executeScript(\"lambda-testCase-status=passed\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
         "name": "Annotation Start",
         "codeSampleType": "code snippet",
         "programmingLanguage": "Java",
@@ -33,7 +40,7 @@
         "text": "driver.execute_script(\"lambdatest_executor: {\\\"action\\\": \\\"stepcontext\\\", \\\"arguments\\\": {\\\"data\\\": \\\"\\\"}}\");"
       }
     ],
-    "dateModified": "2026-09-09T19:10:37+05:30"
+    "dateModified": "2026-11-11T12:00:00+05:30"
   }) }}
 />
 
@@ -113,7 +120,9 @@ Arguments | Example
 
 TestMu AI has introduced a LambdaHook to help automation engineers differentiate between multiple test cases within a single Appium session. This feature aims to improve debugging capabilities, making it easier to identify which test cases may be causing errors or taking longer to execute.
 
-### Adding LambdaHooks
+The test case hooks (`lambda-testCase-start`, `lambda-testCase-end` and `lambda-testCase-status`) are supported for App Automation on both **Real Devices** and **Virtual Devices**. They are not supported for web automation sessions.
+
+### Adding Lambda Hooks
 
 You can use LambdaHooks to start and end a test case within a single Appium session.
 
@@ -134,6 +143,77 @@ To end a test case, use the `lambda-testCase-end` hook:
 // To end a test case
 ((JavascriptExecutor) driver).executeScript("lambda-testCase-end=find Name");
 ```
+
+### Marking the Status of a Test Case
+
+By default, TestMu AI derives the status of each test case from its commands: if any command executed between `lambda-testCase-start` and `lambda-testCase-end` fails, the test case is marked **Failed**. This is not always the real result. A command may fail and then pass on a retry, or a command may be expected to fail as part of a negative check (for example, verifying that an element is not displayed).
+
+Use the `lambda-testCase-status` hook to send the real result from your framework. The status you send overrides the derived status of the test case in [Test Case Insights](/support/docs/analytics-test-case-insights/).
+
+#### Test Case Status
+
+Call `lambda-testCase-status` after `lambda-testCase-start` and before `lambda-testCase-end`:
+
+```java
+// To mark the open test case as passed or failed
+((JavascriptExecutor) driver).executeScript("lambda-testCase-status=passed");
+```
+
+To store a remark with the status, pass the status as JSON. The `remark` is optional and is limited to `255` bytes; longer remarks are truncated.
+
+```java
+((JavascriptExecutor) driver).executeScript("lambda-testCase-status={\"status\":\"passed\",\"remark\":\"404 on first attempt, retry succeeded\"}");
+```
+
+| Argument | Description |
+|----------|-------------|
+| `status` | `passed` or `failed`. The value is case-insensitive. Any other value, such as `skipped`, is ignored. |
+| `remark` | Optional. Any text explaining the status, limited to `255` bytes. Supported only in the JSON form. |
+
+#### Example
+
+The following examples mark each test case with the result your framework reports, so a retry that passed or an expected failure does not mark the test case as failed.
+
+```java
+for (TestCase tc : suite) {
+driver.executeScript("lambda-testCase-start=" + tc.getName());
+boolean passed = tc.run(); // your framework handles retries and negative checks
+driver.executeScript("lambda-testCase-status=" + (passed ? "passed" : "failed"));
+driver.executeScript("lambda-testCase-end=" + tc.getName());
+}
+```
+
+```python
+driver.execute_script(f"lambda-testCase-start={name}")
+# ... test steps ...
+driver.execute_script("lambda-testCase-status=passed")
+driver.execute_script(f"lambda-testCase-end={name}")
+```
+
+```java
+@After
+public void markTestCase(Scenario scenario) {
+String status = scenario.isFailed() ? "failed" : "passed";
+((JavascriptExecutor) driver).executeScript("lambda-testCase-status=" + status);
+((JavascriptExecutor) driver).executeScript("lambda-testCase-end=" + scenario.getName());
+}
+```
+
+#### How the Final Status is Decided
+
+| Scenario | Final status of the test case |
+|----------|-------------------------------|
+| No `lambda-testCase-status` call | Derived from commands: **Failed** if any command failed, otherwise **Passed**. This is the same behavior as before. |
+| `lambda-testCase-status` called once | The status you sent, even if it differs from the derived status. For example, `failed` marks the test case as **Failed** even when every command passed. |
+| `lambda-testCase-status` called more than once | The last valid status you sent. |
+| Invalid or empty value (for example, `skipped`) | The call is ignored and the test case keeps its previous status. If no valid status was sent, the derived status is used. |
+| Called before any `lambda-testCase-start`, or after `lambda-testCase-end` and before the next start | The call is ignored, because no test case is open. No test case is changed. |
+| Test case started but never ended | The test case is still recorded with the status you sent. |
+| JSON without a `status`, or malformed JSON | The call is ignored. If no valid status was sent, the derived status is used. |
+
+Each call returns a message to your script stating whether the status was set or why it was ignored (for example, `no active test case` or an invalid status). Ignored calls never fail the session and appear in the command logs as warnings, not errors.
+
+`lambda-testCase-status` only sets the status of a test case. It does not change the session status, which you continue to set with `lambda-status` or `setTestStatus`. A session marked **Passed** can still contain test cases marked **Failed**, and the other way around.
 
 ### Labeling and Filtering Command Logs
 
@@ -185,3 +265,149 @@ driver.execute_script("lambdatest_executor: {\"action\": \"stepcontext\", \"argu
 ```
 
 **Mutual exclusivity:** Test case and Command Annotations cannot be used together in the same script. You can only use **one** of them per session.
+
+## Install and Uninstall App Hooks
+
+TestMu AI now allows you to install and uninstall apps in the middle of your automated tests. This means you don’t need to restart the session every time you want to switch apps, upgrade them, or clean up the device. TestMu AI enables you to install and uninstall applications during automation test execution by using commands that can be run through WebDriver's script execution functionality.
+
+### Install App
+
+You can install apps uploaded to the TestMu AI platform directly within your automation scripts using the `lambda-install-app` command followed by the app’s ID. This ID can be either the TestMu AI-generated ID or a custom ID assigned during upload.
+
+**Python example:**
+
+```python
+driver.execute_script("lambda-install-app=myApp")
+driver.execute_script("lambda-install-app=lt://APP100000000123456789123456789")
+driver.execute_script("lambda-install-app=filename=MyApp.apk")
+```
+
+You can also pass `filename=` to install the latest uploaded app with that File Name, as shown in App Manager. Installing by file name during a session is not available on iOS simulators. For details on how the app is selected, see [Use the File Name Instead of the App ID](/support/docs/test-setup-and-execution/#use-the-file-name-instead-of-the-app-id).
+
+**JavaScript example:**
+
+```javascript
+await browser.execute("lambda-install-app", {
+/* Change the App URL */
+appUrl: "lt://APP1234567890ABCDEF1234567890",
+/* Optional */
+retainData: true
+});
+```
+
+### Uninstall App
+
+You can uninstall apps during the execution of an automation test using the command `lambda-uninstall-app` followed by the app's package name (for Android apps) or bundle ID (for iOS apps).
+
+**Python example:**
+
+```python
+driver.execute_script("lambda-uninstall-app=com.myApp.beta")
+driver.execute_script("lambda-uninstall-app=com.apple.myApp")
+```
+
+**JavaScript example:**
+
+```javascript
+/* Change the App ID */
+const APP_ID = "com.lambdatest.proverbial";
+await browser.execute(`lambda-uninstall-app=${APP_ID}`);
+```
+
+### Test App Upgrades with Hooks
+
+Testing app upgrades is important because users often update to the latest version instead of reinstalling the app. To ensure existing user data is preserved and the app continues to function properly after an upgrade, you can use the following hooks:
+
+**Python example:**
+
+```python
+# Payload required to retain app data while uninstalling it
+data = {
+"appPackage": "sampleapp.android.app",
+"retainData": True
+}
+
+driver.execute_script("lambda-uninstall-app", data)
+
+# Payload required to reuse data of the old app while installing the new one
+data = {
+"appUrl": "lt://APPID",
+"retainData": True
+}
+driver.execute_script("lambda-install-app", data)
+```
+
+```python
+# Send the current app in background
+driver.background_app(-1)
+
+# Payload required while installing the new upgrade
+data = {
+"appUrl": "lt://APPID",
+"retainData": True
+}
+driver.execute_script("lambda-install-app", data)
+
+# Note : In case of enterprise app, user have to pass the below payload
+data = {
+"appUrl": "lt://APPID",
+"resignApp": False,
+"retainData": True
+}
+
+```
+
+### Validation Errors
+
+You might encounter some errors while using these features. The following are some common validation errors and their meaning:
+
+| Error Message                                  | Meaning                                                        |
+| --------------------------------------------------- | -------------------------------------------------------------- |
+| `No app_url has been provided for lambda-install-app. Please check and try again.`| The install command is missing the app URL or ID.              |
+| `The app provided for lambda-install-app is not accessible. Please check and try again.`| The app ID does not belong to your account or is inaccessible. |
+| `Failed to fetch app details.`                      | The app ID is invalid or app is not found.                     |
+| `Failed to install the app using lambda-install-app.`  | Installation failed due to compatibility or other issues.      |
+| `No app package or app bundle id has been provided for lambda-uninstall-app. Please check and try again.` | The uninstall command is missing the app package or bundle ID. |
+| `Failed to uninstall the app using lambda-uninstall-app.`| Uninstallation failed; app may not be installed or wrong ID.|
+
+Multiple errors may occur based on the scenario. Understanding these errors will help you identify and resolve issues more efficiently, ensuring smooth test execution. Once the code snippets are added, the tests can be executed and will appear on the [TestMu AI App Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://appautomation.lambdatest.com/build).
+
+> **Note:** If the user had enabled any of the following capabilities in the previously installed app, they will remain available and functional in the upgraded app as well : `EnableScreenshotUnblock`,`EnableImageInjection`,`EnableVideoInjection`,`Network`,`AppProfiling`,`EnableWebContentsDebugging`,`EnableBiometricInjection`.This ensures that key testing features continue to work seamlessly after the app is updated, without requiring additional configuration.
+
+## Device Posture Hooks (iOS)
+
+You can change or read the fold position of iOS foldable devices during your automation session using the `setDevicePosture` and `getDevicePosture` hooks. This is useful for testing how your app responds to posture changes mid-session.
+
+### Set Device Posture
+
+Use `setDevicePosture` to change the fold position during the test. Accepted values: `closed`, `open`, `book`.
+
+**Python example:**
+
+```python
+driver.execute_script('lambda_executor: {"action":"setDevicePosture","arguments":{"posture":"open"}}')
+# → "posture set to open"
+```
+
+### Get Device Posture
+
+Use `getDevicePosture` to read the current fold position of the device.
+
+**Python example:**
+
+```python
+driver.execute_script('lambda_executor: {"action":"getDevicePosture"}')
+# → "open"
+```
+
+- These hooks are supported on **virtual devices only**.
+- To set the initial posture at session start, use the `devicePosture` capability. See [Appium Capabilities](/support/docs/desired-capabilities-in-appium/) for details.
+
+## Next Steps
+
+Continue with these related guides:
+
+- [Run your first Appium test](/support/docs/getting-started-with-appium-testing/)
+- [Appium automation capabilities](/support/docs/desired-capabilities-in-appium/)
+- [Upload apps to the real device cloud](/support/docs/application-setup-via-api/)
+- [App Automation Dashboard](/support/docs/app-automation-dashboard/)

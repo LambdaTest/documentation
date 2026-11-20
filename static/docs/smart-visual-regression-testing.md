@@ -2,7 +2,7 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-SmartUI is a visual testing tool that helps in identifying visual regressions in web applications, plugging into your End-to-End (E2E) testing across Selenium, Cypress, and Playwright to catch visual changes automatically. It uses advanced image comparison techniques to detect differences between baseline images and those captured during subsequent test runs.
+[SmartUI](https://www.testmuai.com/visual-testing-tool/) by TestMu AI is a visual testing tool: it captures screenshots of your UI and compares them against approved baselines to catch layout, color and font bugs that functional tests miss. It works on web pages, mobile apps, Figma designs and PDFs, plugs into your End-to-End (E2E) testing across Selenium, Cypress, and Playwright, and uses Visual AI to filter out pixel noise.
 
 You can perform following Visual Regression tests using SmartUI:
 

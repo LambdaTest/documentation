@@ -34,7 +34,7 @@ All screenshots and video recordings from test sessions are stored in the Galler
 It empowers you to streamline bug reporting within the testing environment itself. Encounter a UI glitch? Simply capture a screenshot, optionally annotate it with relevant details using shapes, text, and color coding, and seamlessly report the bug via your preferred integrated project management tool. This integration eliminates the need for context switching and facilitates efficient bug reporting.
 
 ## IP Geolocation
-This transcends basic location selection. It allows you to spoof the IP address of your emulated device, simulating various geographical locations across over 45 countries. This enables you to test geo-restricted features, localized content delivery, and the overall user experience for a global audience.
+This transcends basic location selection. It allows you to spoof the IP address of your emulated device, simulating various geographical locations across 180+ countries. This enables you to test geo-restricted features, localized content delivery, and the overall user experience for a global audience.
 
 ## Files and Media
 The [Upload and Download Files](/support/docs/real-time-upload-and-download-files/) feature allows to manage files directly within remote testing environments. This functionality streamlines the testing process by allowing seamless file transfers between local and remote environments across desktop and mobile platforms.

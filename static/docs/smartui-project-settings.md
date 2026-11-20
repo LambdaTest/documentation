@@ -83,6 +83,34 @@ Strike a balance between highlighting important changes and ignoring noise. The 
 
 Adjusting the Pixel Threshold in Comparison Settings will only affect new builds/screenshots captured after the update.
 
+**Color Sensitivity**
+
+Set how different two colors must be before Smart Ignore marks them as a change. Use it to catch subtle color changes, such as a button that moves to a slightly different shade.
+
+**Algorithm:** choose the color difference formula Smart Ignore uses.
+- **YIQ** (default): the formula Smart Ignore has always used. Projects that never change this setting keep their current results.
+- **CIEDE2000**, **CAM16-UCS** and **CAM02-UCS**: perceptual color difference formulas, built to match how people see color differences.
+
+**Sensitivity:** pick a preset or enter your own value. Each value is in the selected algorithm's own units. A lower value is stricter: smaller color differences are marked.
+
+| Algorithm | Default | Only obvious | Any color change | Custom range |
+|-----------|---------|--------------|------------------|--------------|
+| YIQ | 352.15 | 72.4 | 12.5 | 3.31 to 352.15 |
+| CIEDE2000 | Not shown | 5 | 2 | 1 to 10 |
+| CAM16-UCS | Not shown | 5.9 | 2.4 | 1.2 to 11.6 |
+| CAM02-UCS | Not shown | 5.9 | 2.4 | 1.2 to 11.6 |
+
+- **Default** (YIQ only): keeps the original Smart Ignore behavior.
+- **Only obvious**: marks color changes that are clearly visible.
+- **Any color change**: also marks subtle shade changes.
+- **Custom**: enter a value inside the range shown next to the field. A value outside the range shows an error and the settings cannot be saved until it is fixed.
+
+**Example:** a button changes from `#0969DA` to `#1D6EE0` (CIEDE2000 difference of about 2) and another button changes from `#0969DA` to `#2F76E9` (about 5.2). With **CIEDE2000** and **Only obvious** (5), Smart Ignore marks only the second button. With **Any color change** (2), it marks both.
+
+- Color Sensitivity applies to Smart Ignore comparisons only. Strict (pixel-to-pixel) comparisons are not affected.
+- To have screenshot and build statuses follow Smart Ignore results, turn on the **Smart Ignore** toggle in the same section.
+- The setting applies to builds you run after saving it. It works for both web and app projects.
+
 **Error Highlight Color**
 
 Set the color to show/highlight the changes in the pixel differences on your test output.
@@ -251,7 +279,7 @@ Show the world that you are using TestMu AI for your visual regression testing.
 
 **Badge Code:**
 ```markdown
-[![This project is using Lambda test for visual regression testing.](https://smartui.lambdatest.com/static/media/LTBadge.64a05e73.svg)](https://lambdatest.com)
+[![This project is using Lambda test for visual regression testing.](https://smartui.lambdatest.com/static/media/LTBadge.64a05e73.svg)](https://www.testmuai.com/)
 ```
 
 **Use Case**: Add to your README or documentation to showcase your testing setup.

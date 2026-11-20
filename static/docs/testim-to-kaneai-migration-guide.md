@@ -2,7 +2,7 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-This guide covers your Testim migration to KaneAI: what Testim can export, where it goes on TestMu AI, and how to re-create and run tests.
+This guide covers your Testim migration to KaneAI: what Testim can export, where it goes on TestMu AI, and how to re-create and run tests. Still choosing a tool? See our [Testim alternatives](https://www.testmuai.com/testim-alternative/) comparison.
 
 [Note: KaneAI does not import or convert Testim tests. You export what Testim's docs say it can export and run the exported Playwright code on TestMu AI. You then bring test cases into Test Manager and re-create each flow in KaneAI in natural language.]
 
@@ -106,7 +106,7 @@ KaneAI does not run Testim steps, so you re-create each flow in a KaneAI session
 
 - **From a test case.** Open a saved test case and click **Automate with KaneAI** in its **Automate** section. A KaneAI session opens with the test case's steps filled in, where you author and run the test. [This action](/support/docs/manual-test-case-creation/#automate-with-kaneai) works on one test case at a time, and the test case must have steps or scenarios.
 - **From the generator.** **Create and Automate** saves the generated test cases you select and sends them to KaneAI for automated authoring. It is an experimental feature, so review the steps afterwards.
-- **From scratch.** Start a [browser test](/support/docs/author-your-first-desktop-browser-test/) or an [app test](/support/docs/author-your-first-mobile-app-test/) and write each step in natural language. [Manual Interaction](/support/docs/kaneai-manual-interaction/) also records your clicks, typing, scrolls and navigation as steps. It cannot record hover actions or checks, and it does not capture mobile browsers. Write those as instructions.
+- **From scratch.** Start a [browser test](/support/docs/author-your-first-desktop-browser-test/) or an [app test](/support/docs/author-your-first-mobile-app-test/) and write each step in natural language. [Manual Interaction](/support/docs/kaneai-manual-interaction/) also records your clicks, typing, scrolls and navigation as steps, including in mobile browsers. It cannot record hover actions or checks. Write those as instructions.
 
 Re-create Testim features with their KaneAI counterparts:
 

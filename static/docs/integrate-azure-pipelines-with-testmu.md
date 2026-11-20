@@ -30,7 +30,7 @@ TestMu AI now integrates with Azure to boost your go-to-market delivery. Perform
 
 ## Integrating TestMu AI with Azure Pipelines
 
-> First and foremost, you need to clone our GitHub repository for downloading the relevant code needed to integrate [Azure Pipelines with LambdaTest](https://github.com/LambdaTest/protractor-selenium-azure-sample).
+> First and foremost, you need to clone our GitHub repository for downloading the relevant code needed to integrate [Azure Pipelines with TestMu AI](https://github.com/LambdaTest/protractor-selenium-azure-sample).
 
 **Step 1:** First and foremost, we need to create a project. Populate the relevant fields as you wish and hit the create button.
 

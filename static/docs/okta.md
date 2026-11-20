@@ -68,7 +68,7 @@ Group Provisioning must be enabled for your org. Contact **24/7 chat support** t
 
 **Step 4:** Okta will immediately push the group and its members to TestMu AI via SCIM.
 
-**Step 5:** In TestMu AI, go to **Settings** > **Organization Settings** > **SCIM Group Provisioning** to view the pushed groups and configure mappings.
+**Step 5:** In TestMu AI, go to **Settings** > **Organization Settings** > **Security** > **SCIM Provisioning** > **Groups** tab to view the pushed groups and configure mappings.
 
 ### Setting Roles on Okta Groups
 

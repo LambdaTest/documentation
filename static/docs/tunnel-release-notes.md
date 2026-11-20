@@ -2,10 +2,6 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-## Version 3.2.37 (15th November 2026)
-- **Security Updates and Stability Fixes**
-- Security Fixes for CVE
-  
 ## Version 3.2.36 (27th September 2026)
 - **Security Updates and Stability Fixes**
 - Security Fixes for CVE.

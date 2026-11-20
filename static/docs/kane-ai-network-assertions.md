@@ -15,6 +15,11 @@ This is useful when you need to ensure that API calls, response codes, payloads,
 
 - Here you will find all the Network requests made in this session so far and **having the Json data format**, you can filter the requests on basis of **Status Code** or **HTTP Methods**:
 
+**Latest call used for assertions**
+If the same API is called multiple times, KaneAI uses only the **latest matching call** available when the assertion step runs. This applies even if you selected an earlier call in the network logs; selecting that entry does not make the assertion validate the earlier call.
+
+For example, if `GET /user` returns `Rahul` on the first call and `Priya` on the second, an assertion added from either entry checks the latest call, which returns `Priya`.
+
 - Select the specific key's that you want to add in the assertion from the **Request Headers**.
 
 - To add **Request** or **Response blocks** in assertions click on the `Add Assertion` button. All the chosen values will be validated in a single step.

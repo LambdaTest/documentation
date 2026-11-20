@@ -42,11 +42,11 @@ The `Allure Test Trends` widget provides insights into the test execution result
 - Identify the trends of the tests run over a period of time.
 - Monitor for any anomalies in the test execution counts.
 
-## Allure Suite Health
+## Allure Suite Stability
 
-The `Allure Suite Health` widget provides insights into the health of the test suites executed using the Allure report. This widget helps you to get an overview of the test suite health and identify the test suites that require attention.
+The `Allure Suite Stability` widget provides insights into the health of the test suites executed using the Allure report. This widget helps you to get an overview of the test suite health and identify the test suites that require attention.
 
-### Use Cases of Allure Suite Health Widget
+### Use Cases of Allure Suite Stability Widget
 - Get insights into the health of the test suites executed using the Allure report.
 - Identify the test suites that require attention based on the test status.
 - Monitor the test suite health trends over time.

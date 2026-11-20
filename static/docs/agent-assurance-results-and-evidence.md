@@ -61,8 +61,8 @@ After a run, the CLI prints both on one line:
 
 ```text
 8 of 8 executed · Verified pass 100% · Assurance gap 60.0% — 12/20 criteria unverified
-  8 passed · 0 failed
-  0 unable to verify
+8 passed · 0 failed
+0 unable to verify
 ```
 
 `rook status` shows the last run's **Verified pass**. In the web app and `rook ui`, the **Runs** tab and the agent summary show both numbers, each with an ⓘ that explains it.
