@@ -83,11 +83,17 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 />
 Real-Time Mobile App Testing allows you to test mobile applications directly on real devices in real time. It ensures that your app functions as intended, performs optimally, and provides a seamless user experience across various mobile operating systems such as Android and iOS. With <BrandName />, developers, testers, and QA professionals can interact with their mobile applications as end users would, on actual devices, without needing to manage an in-house device lab.
 
+:::info Plan requirement
+
+The free plan includes 1 parallel session, limited 2-minute live sessions that renew each month, and 2 sessions of native app testing on emulators and simulators. Real devices, opened from **Switch to Real Devices**, are not part of the free plan or the Virtual Live plan: they need the Real Device Plus Live plan or an Enterprise plan. See [pricing](https://www.testmuai.com/pricing/) for the current plans.
+
+:::
+
 ## Launch the Virtual Machine
 
-- Navigate to the Real Time Testing section.
-- Select **Virtual Mobile** from the **App Testing** section.
-- To test your application, enter its URL or upload your application from your local machine and select your **Device** - Andoroid, iOS, or [ChromeOS](/support/docs/chrome-os-testing/), and its version.
+- From the left sidebar, open **Real Time**.
+- Under **App Testing**, select **Virtual Mobile**.
+- To test your application, enter its URL or upload your application from your local machine and select your **Device** - Android, iOS, or [ChromeOS](/support/docs/chrome-os-testing/), and its version.
 - Afterwards click on the **Start** button to initiate the testing process.
 
 <video class="right-side" width="80%" controls id="vid">

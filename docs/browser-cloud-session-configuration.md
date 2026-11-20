@@ -80,7 +80,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         "name": "Here is a typical create call that sets the most common options",
         "codeSampleType": "code snippet",
         "programmingLanguage": "JavaScript",
-        "text": "const session = await client.sessions.create({\n  adapter: 'playwright',\n  dimensions: { width: 1920, height: 1080 },\n  blockAds: true,\n  stealthConfig: {\n    humanizeInteractions: true,\n    randomizeUserAgent: true,\n  },\n  proxy: 'http://my-proxy:8080',\n  lambdatestOptions: {\n    build: 'my-build',\n    name: 'my-test',\n    user: process.env.LT_USERNAME,\n    accessKey: process.env.LT_ACCESS_KEY,\n  },\n});"
+        "text": "const session = await client.sessions.create({\n  adapter: 'playwright',\n  dimensions: { width: 1920, height: 1080 },\n  blockAds: true,\n  stealthConfig: {\n    humanizeInteractions: true,\n    randomizeUserAgent: true,\n  },\n  proxy: 'http://my-proxy:8080',\n  lambdatestOptions: {\n    build: 'my-build',\n    name: 'my-test',\n    'LT:Options': {\n      username: process.env.LT_USERNAME,\n      accessKey: process.env.LT_ACCESS_KEY,\n    },\n  },\n});"
       },
       {
         "@type": "SoftwareSourceCode",
@@ -120,8 +120,10 @@ const session = await client.sessions.create({
   lambdatestOptions: {
     build: 'my-build',
     name: 'my-test',
-    user: process.env.LT_USERNAME,
-    accessKey: process.env.LT_ACCESS_KEY,
+    'LT:Options': {
+      username: process.env.LT_USERNAME,
+      accessKey: process.env.LT_ACCESS_KEY,
+    },
   },
 });
 ```

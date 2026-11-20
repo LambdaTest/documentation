@@ -101,7 +101,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         "text": "chrome_options = webdriver.ChromeOptions()\noption = {\n    \"platform\": \"Windows 10\",\n    \"version\": \"latest\",\n    \"name\": test_name,\n    \"Build\": build,\n    \"video\": True,\n    \"visual\": True,\n    \"network\": True,\n    \"console\": True\n}\nchrome_options.set_capability(\"LT:Options\", option)\nbrowser = webdriver.Remote(\n    command_executor=selenium_endpoint,\n    options=chrome_options\n)"
       }
     ],
-    "dateModified": "2026-09-27T00:00:00+05:30"
+    "dateModified": "2026-11-20T00:00:00+05:30"
   }) }}
 />
 
@@ -131,7 +131,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
           "@type": "HowToStep",
           "position": 3,
           "name": "Step 3: Set Your Credentials",
-          "text": "Add your TestMu AI credentials as environment variables so the test can authenticate with the grid. Copy your Username and Access Key from the dashboard Credentials page and export them as LT_USERNAME and LT_ACCESS_KEY.",
+          "text": "Add your TestMu AI credentials as environment variables so the test can authenticate with the grid. Copy your Username and Access Key from the Password & Security page of Account Settings in your Profile and export them as LT_USERNAME and LT_ACCESS_KEY.",
           "url": "https://www.testmuai.com/support/docs/testmu-running-your-first-selenium-test/#step-3-set-your-credentials"
         },
         {
@@ -180,7 +180,7 @@ All the code used in this guide is available in the sample repository. Clone it 
 Make sure you have the following set up before you start.
 
 1. [Create a TestMu AI account](https://www.testmuai.com/register/) if you don't have one.
-2. Get your **Username** and **Access Key** from the [TestMu AI Dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard).
+2. Get your **Username** and **Access Key** from **Profile > Account Settings > [Password & Security](https://accounts.lambdatest.com/security/username-accesskey)**.
 3. Install [Python](https://www.python.org/downloads/) 3.7 or later (`pip` is included).
 
 ## Step 1: Clone the Sample Project
@@ -211,7 +211,7 @@ pip install -r requirements.txt
 
 Add your TestMu AI credentials as environment variables so the test can authenticate with the grid.
 
-Visit the [TestMu AI Dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard), navigate to the left sidebar, and select **Credentials**. Copy your **Username** and **Access Key**, then set them as environment variables:
+In your TestMu AI account, go to **Profile > Account Settings > [Password & Security](https://accounts.lambdatest.com/security/username-accesskey)**. Copy your **Username** and **Access Key**, then set them as environment variables:
 
 <Tabs className="docs__val">
 
