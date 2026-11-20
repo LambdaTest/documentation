@@ -2,7 +2,7 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-The best way to analyze your flaky tests is to use Test Intelligence. Test Intelligence is a machine learning-based algorithm that helps you identify flaky tests and get insights on the flaky tests that are causing your test runs to fail. By observing the historical test runs, Test Intelligence can identify the flaky tests and provide you with the insights to help you fix them.
+Test Intelligence is a machine learning-based algorithm that finds the [flaky tests](https://www.testmuai.com/learning-hub/flaky-test/) in your test suite by observing your historical test runs on TestMu AI. It checks each test's last 10 runs and marks it as flaky when its flake rate goes above 20%. Flaky Test Analytics then shows how flakiness is trending, how severe it is, and which test groups it hits, so you can decide which tests to fix first.
 
 **Get Flaky Alerts on Slack**
 Don't want to keep checking the dashboard? If you have the [Slack Integration](/docs/slack-integration/) enabled, turn on the **Flaky Test Messages** preference to receive a Slack alert the **first time** TestMu AI detects a test as flaky, including the test name, build, and flake rate. Alerts are opt-in and off by default.

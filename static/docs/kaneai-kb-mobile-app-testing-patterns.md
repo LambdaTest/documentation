@@ -142,7 +142,7 @@ set the brightness slider to 50
 
 If a picker doesn't respond to natural language:
 
-1. Open LambdaTest **App Live** with the [UI Inspector](https://www.testmuai.com/support/docs/ui-inspector/)
+1. Open TestMu AI **App Live** with the [UI Inspector](https://www.testmuai.com/support/docs/ui-inspector/)
 2. Inspect the picker element to verify its class name
 3. Confirm the class is one of the supported types listed above
 4. If the class is a custom implementation, you may need to perform the action directly on the device so it is captured by **Manual Interaction**

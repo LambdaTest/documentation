@@ -6,6 +6,9 @@ Welcome to HyperExecute, **an AI-Native Test Orchestration Cloud Platform**, des
 
 If you want to learn more about HyperExecute and how it can enable your team, then you are the right place. This guide will help you take your first steps with HyperExecute, from understanding the basics to running your first test.
 
+**On-premise teams start here**
+If your organization runs HyperExecute on-premise, start with the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/). It covers your own dashboard, the `--onprem-host` CLI flag and the main differences from the public cloud.
+
 ## What is HyperExecute?
 
 HyperExecute by TestMu AI is a cutting-edge, AI-powered platform designed for DevOps teams and QA engineers to significantly accelerate software testing pipelines. HyperExecute **replaces traditional hub-and-node test grids** with advanced orchestration techniques, **eliminating network latency and optimizing resource usage**. With HyperExecute:
@@ -35,10 +38,6 @@ Ready to experience the power of HyperExecute? Getting started is easy. We’ve 
      Run tests from your own machine using the HyperExecute CLI with sample project and preset configuration file.
 
      Learn More
-
-    Run your tests in a fully managed online development environment, without any local installations or configurations.
-
-    Learn More
 
 ## Watch HyperExecute in Action
 

@@ -22,10 +22,10 @@ This document provide details about the features and capabilities supported for 
 | tunnel, tunnelName  | Boolean | To activate the tunnel mode, pass the value as `tunnel: true` and provide the name of your tunnel as `tunnelName: NewTunnel` |
 | enableBluetooth | Boolean | Used to enable the bluetooth functionality during the session. Example: `enableBluetooth: true`|
 | resignApp  Not supported in **Virtual Devices** | Boolean | Set this to `false` if you want to to prevent the apps from being re-signed. The app should be built for enterprise distribution. |
-| testRemarks    | Boolean| Set to `true` to surface failure remarks at the top of the dashboard when a test fails. Has no effect on passing tests. **Default**: `false`. |
-| retries    | Integer |Defines the number of times a test should automatically retry if it fails. Maximum allowed value: 5.|
-| region | String | Set the region for the test execution data center. Supported values: `US`, `EU`, `AP`. **Default:** Nearest data center. Example: `region: EU` |
-| uploadMedia | String | Upload media files to the device for testing. Provide the media URL generated after [uploading the file](/support/docs/upload-media/). **Default:** `null`. Example: `uploadMedia: lt://MEDIA123456789` |
+| testRemarks    Real| Boolean| Set to `true` to surface failure remarks at the top of the dashboard when a test fails. Has no effect on passing tests. **Default**: `false`. |
+| retries    Real| Integer |Defines the number of times a test should automatically retry if it fails. Maximum allowed value: 5.|
+| region Real| String | Set the region for the test execution data center. Supported values: `US`, `EU`, `AP`. **Default:** Nearest data center. Example: `region: EU` |
+| uploadMedia Real| String | Upload media files to the device for testing. Provide the media URL generated after [uploading the file](/support/docs/upload-media/). Accepts up to 10 media URLs per session. **Default:** `null`. Example: `uploadMedia: lt://MEDIA123456789` |
 
 Ensure that the latitude is between -90 and 90, and the longitude is between -180 and 180. Otherwise, an error will occur like "Invalid GPS location: Latitude must be between -90 and +90, Longitude must be between -180 and +180."
 

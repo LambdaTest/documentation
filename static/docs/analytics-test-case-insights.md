@@ -66,6 +66,19 @@ To end a test case, use the `lambda-testCase-end` hook:
 
 ```
 
+These hooks are supported for App Automation on both Real Devices and Virtual Devices.
+
+#### Test Case Status
+
+By default, a test case is marked **Failed** if any command between its start and end hooks fails. To report the real result from your framework instead, for example when a command passed on retry or was expected to fail, use the `lambda-testCase-status` hook before `lambda-testCase-end`:
+
+```java
+// To mark the open test case as passed or failed
+((JavascriptExecutor) driver).executeScript("lambda-testCase-status=passed");
+```
+
+The status you send overrides the derived status in the Test Case Insights widgets. If you never call the hook, the derived status is used as before. The hook does not change the session status.
+
 To know more about the hooks and how to use them, you can refer to the [LambdaHooks for Appium](/support/docs/appium-testmu-hooks/#differentiating-test-cases-in-single-session) documentation.
 
 ## Capture Test Case Insights for HyperExecute
@@ -147,9 +160,9 @@ Once, you have completed the configuration and start executing your tests on the
 
 ## Test Case Insights Widgets
 
-### Test Case Health Snapshot
+### Test Cases Stability Snapshot
 
-You can analyze the health of your test cases by using the `Test Case Health Snapshot` widget. The widget will display the total number of test cases success, failed. The widget will be displayed in card view and you can also view the details of the test cases by clicking on the `View Details` button.
+You can analyze the health of your test cases by using the `Test Cases Stability Snapshot` widget. The widget will display the total number of test cases success, failed. The widget will be displayed in card view and you can also view the details of the test cases by clicking on the `View Details` button.
 
 ### Test Case Group View
 

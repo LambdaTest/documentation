@@ -129,7 +129,7 @@ $env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 
 ### Set HyperExecute Credentials
 
-For HyperExecute, you'll need your LambdaTest username and access key.
+For HyperExecute, you'll need your TestMu AI username and access key.
 
 ```bash
 export LT_USERNAME="${YOUR_LAMBDATEST_USERNAME}"
@@ -147,7 +147,7 @@ $env:LT_ACCESS_KEY="${YOUR_LAMBDATEST_ACCESS_KEY}"
 ```
 
 **Getting Your Credentials**
-- **Username and Access Key**: Available in your [LambdaTest Profile](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/details/profile)
+- **Username and Access Key**: Available in your [TestMu AI Profile](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/details/profile)
 - **Project Token**: Available in your SmartUI project settings after creation
 
 ## Step 5: Create URL Configuration Files
@@ -1068,4 +1068,4 @@ Now that you've set up SmartUI Capture with HyperExecute, explore these resource
 - [SmartUI Configuration Options](/support/docs/smartui-sdk-config-options/) - All configuration options
 - [HyperExecute YAML Reference](/support/docs/hyperexecute-yaml-version0.2/) - YAML configuration details
 - [SmartUI Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide/) - Common issues and solutions
-- [LambdaTest Support](https://www.testmuai.com/support) - Get help from our support team
+- [TestMu AI Support](https://www.testmuai.com/support/docs/) - Get help from our support team

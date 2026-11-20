@@ -4,6 +4,9 @@
 
 Smart Caching significantly reduces test execution times by optimizing resource utilization and minimizing redundant processes. This document provides a comprehensive technical overview of Smart Caching, detailing its architecture, functionalities, and benefits for software development teams.
 
+**On-premise deployments**
+The `cacheKey` and `cacheDirectories` keys are part of the standard YAML. Ask your admin how caching is set up on your deployment. See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/#step-4-prepare-your-yaml).
+
 ## Architecture
 
 Smart Caching operates on a distributed caching architecture, leveraging a network of caching nodes across TestMu AI's global infrastructure. This ensures low latency and high availability for test execution, regardless of user location.

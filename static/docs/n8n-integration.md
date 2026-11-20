@@ -17,7 +17,7 @@ Before you install the node, confirm you have the following in place.
 
 The TestMu AI Agent node uses your TestMu AI username and access key to authenticate each browser session. Retrieve both values from your account before you configure the node in n8n.
 
-**Step 1:** Sign into your TestMu AI account. Open the **Profile** dropdown in the top-right corner and click **Account Settings** > **Password & Security**. Your **Username** and **Access Key** are listed on that page. Copy both values.
+**Step 1:** Sign into your TestMu AI account. Open the **Profile** dropdown in the top-right corner and click **Account Settings** > [**Password & Security**](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/security/username-accesskey). Your **Username** and **Access Key** are listed on that page. Copy both values.
 
 **Step 2:** In n8n, open the **TestMu AI Agent** node settings. Click the **Credential** dropdown and select **Create credential**. A credential modal opens.
 

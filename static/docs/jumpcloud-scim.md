@@ -73,7 +73,7 @@ Group Provisioning must be enabled for your org. Contact **24/7 chat support** t
 
 **Step 3:** Click **Activate** to start pushing group membership via SCIM.
 
-**Step 4:** In TestMu AI, go to **Settings** > **Organization Settings** > **SCIM Group Provisioning** to view the synced groups and configure mappings.
+**Step 4:** In TestMu AI, go to **Settings** > **Organization Settings** > **Security** > **SCIM Provisioning** > **Groups** tab to view the synced groups and configure mappings.
 
 ### What Happens After Provisioning
 

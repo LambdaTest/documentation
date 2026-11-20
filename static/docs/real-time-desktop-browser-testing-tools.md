@@ -23,7 +23,7 @@ Optimize your tests for different screen sizes and resolutions to ensure your we
 The Scaling feature allows you to adjust the display scale of your web application during testing to simulate different zoom levels or device pixel ratios. This helps ensure your web application looks and functions correctly at various zoom levels, as users might have different display settings on their devices.
 
 ## IP Geolocation
-Simulate website and mobile experiences from over 45 countries using local IP addresses.
+Simulate website and mobile experiences from 180+ countries using local IP addresses.
 - **Why Use IP Geolocation? :** Test localized features such as language preferences, currency, regional product offerings, and content visibility based on a specific location.
 - **How to Enable? :** Use the IP Geolocation feature to verify that your app's traffic originates from a specific country, providing a comprehensive global testing approach.
 

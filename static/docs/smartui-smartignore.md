@@ -56,6 +56,19 @@ ltOptions.put("smartUI.smartIgnore", true);
 For full Hooks examples with Layout, Full Page, and Smart Ignore, see:
 - [Hooks: Layout + Full Page + Smart Ignore](/support/docs/smartui-hooks-layout-fullpage-smartignore/)
 
+### 4. Catching Subtle Color Changes with Color Sensitivity
+
+Smart Ignore uses a color difference threshold to decide whether a changed color is worth marking. You can choose the color difference algorithm and how strict it is in **Project Settings > Comparison > Color Sensitivity**.
+
+1. Open your project settings and go to **Comparison**.
+2. Under **Color Sensitivity**, pick an **Algorithm**: YIQ (default), CIEDE2000, CAM16-UCS or CAM02-UCS.
+3. Pick **Only obvious**, **Any color change** or **Custom**. A lower value marks smaller color differences.
+4. Click **Save Settings** and run a new build.
+
+In the example below, the **Pay Now** button changed to a slightly lighter green on an Android real device. With CIEDE2000 and **Any color change**, Smart Ignore marks the button:
+
+For every preset value and an example, see [Color Sensitivity in Project Settings](/support/docs/smartui-project-settings/).
+
 ## Use Cases of Smart Ignore
 
 ### Content Management Systems
@@ -142,6 +155,15 @@ When testing Smart Ignore, use per-screenshot mode to compare results with other
 2. Some differences may be actual content changes, not displacement
 3. Consider using Layout Comparison mode for layout-only testing
 4. Combine with `ignoreDOM` for specific elements
+
+**Issue: Subtle Color Changes Not Marked**
+
+**Symptoms**: An element changed to a slightly different shade, but Smart Ignore shows no difference
+
+**Solutions**:
+1. In **Project Settings > Comparison > Color Sensitivity**, choose a perceptual algorithm such as CIEDE2000 and select **Any color change**, or a lower **Custom** value
+2. Save the settings and run a new build, since the setting applies to builds run after saving
+3. Turn on the **Smart Ignore** toggle so screenshot and build statuses follow Smart Ignore results
 
 **Issue: Important Changes Hidden**
 

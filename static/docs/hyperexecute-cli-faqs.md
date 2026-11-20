@@ -2,6 +2,9 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+**On-premise deployments**
+On-prem, download the CLI from **Help** > **Hyperexecute CLI** on your own dashboard and add `--onprem-host` to every command. Tests run on Linux and Windows only. See [Install and configure the CLI](/support/docs/hyperexecute-on-premise-user-guide/#step-3-install-and-configure-the-cli).
+
 ## 1. **Can HyperExecute CLI download test artifacts generated during execution?**
 
   Yes, HyperExecute can download the artifacts generated during the test execution. In addition, HyperExecute has APIs to download artifacts for a particular job.

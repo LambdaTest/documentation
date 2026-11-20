@@ -1,4 +1,4 @@
-# Getting Started with Accessibility Testing
+# Getting Started with TestMu AI Accessibility
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
@@ -7,7 +7,7 @@ TestMu AI Accessibility Testing helps teams find, understand, and fix accessibil
 ## What Accessibility Testing covers
 
 - **Manual Testing (DevTools)** -- browser-based scanning and assisted testing for websites and web apps.
-- **Automation** -- automated accessibility checks in supported test frameworks (Selenium, Cypress, Playwright, and more).
+- **Automation** -- [automated accessibility testing](https://www.testmuai.com/accessibility-automation/) in supported test frameworks (Selenium, Cypress, Playwright, and more).
 - **Test Scheduling** -- recurring site scans driven by sitemaps, crawlers, or manual URL lists inside the Accessibility product (not the same doc set as the standalone Web Scanner product).
 - **Web Scanner** -- the separate **Web Scanner** product in the docs sidebar, where you add URLs and run accessibility scans on that surface. Use Accessibility **Test Scheduling** when your workflow is native to Accessibility scheduling, not Web Scanner.
 - **Mobile App Testing** -- manual and automated accessibility testing for native Android and iOS apps, including KaneAI-authored flows.

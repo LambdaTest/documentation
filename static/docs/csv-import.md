@@ -14,6 +14,9 @@ This lets you keep a spreadsheet as the source of truth for your suite: export y
 **Keep a spreadsheet in sync with Test Manager**
 The most reliable loop is **export → edit → re-import**. An [exported CSV](/support/docs/export-test-cases/) already contains the `TestCaseId` column, which is the safest thing to match on.
 
+**Importing Gherkin scenarios?**
+If your scenarios are in a `.feature` file, you don't need to convert them to CSV. [Import the feature file](/support/docs/import-feature-file/) directly, and each scenario becomes a BDD test case.
+
 ## Before you begin
 
 - Your file must be a valid `.csv`, up to **10 MB**. If it's larger, split it into smaller files and import them one after another.

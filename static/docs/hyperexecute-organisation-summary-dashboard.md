@@ -20,6 +20,9 @@ Within an enterprise org, only **organisation admins** can open the dashboard. T
 
 To open it, go to **HyperExecute → [Projects](/support/docs/hyperexecute-projects/)** and click **View Summary** at the top of the project list. The dashboard opens in a **Summary** dialog.
 
+**On-premise deployments**
+On-prem, open this dashboard with **View Summary** on the **Projects** page of your organization's own HyperExecute dashboard. Intelligent Test Analytics is not available on-prem (see [Private Cloud benefits](/support/docs/hyperexecute-private-cloud-benefits/)). See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/#step-8-review-results-and-rerun-failures).
+
 ## What the dashboard shows
 
 The dashboard splits into three sections, with filters that apply only to the ones that are time-sensitive.

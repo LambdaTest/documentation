@@ -24,7 +24,7 @@ To begin testing, upload your iOS application (.ipa file) to TestMu AI's servers
 
 {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/uploadFramework" -F "appFile=@""" -F "type="xcuit-ios""`}
 
-- Provide the path of your android application in the above URL in place of ``
+- Provide the path of your iOS application in the above URL in place of ``
 - Response of above cURL will be a **JSON** object containing the `App URL` of the format - `lt://APP123456789123456789` and will be used in the last step.
 
 ## Step 2: Upload Your Test Suite and XCTestRun File
@@ -35,7 +35,7 @@ Upload your iOS test suite (.ipa) file to TestMu AI servers using our REST API. 
 
 {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" --location --request POST "https://manual-api.lambdatest.com/app/uploadFramework" --form "appFile=@""" --form "type=\"xcuit-ios\""`}
 
-- Provide the path of your android application in the above URL in place of ``
+- Provide the path of your iOS test suite in the above URL in place of ``
 - Response of above cURL will be a **JSON** object containing the `App URL` of the format - `lt://APP123456789123456789` and will be used in the last step.
 
 > This is a sample xctestplan file which is compatible with our sample application provided above.
@@ -84,7 +84,7 @@ curl --location --request POST 'https://manual-api.lambdatest.com/app/xctestplan
 
 ## Step 3: Executing The Test
 
-- You will need **base64 encoded authentication** in order to execute your Espresso automation test suite. Enter your `username:accesskey` in **[Basic Authentication Header Generator](https://mixedanalytics.com/knowledge-base/api-connector-encode-credentials-to-base-64/)** to generate your auth token.
+- You will need **base64 encoded authentication** in order to execute your XCUITest automation test suite. Enter your `username:accesskey` in **[Basic Authentication Header Generator](https://mixedanalytics.com/knowledge-base/api-connector-encode-credentials-to-base-64/)** to generate your auth token.
 
 Take note of the base64 encoded authentication which needs to be added in the next step.
 
@@ -101,7 +101,7 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/x
 --data-raw '{
 "app" : "lt://APP_ID",
 "testSuite": "lt://TEST_SUITE_ID",
-"xctestplan" : "lt://YOUR_XC_TEST_PLAN_ID" #only when you want to use XCTestPlan
+"xctestplan" : "lt://YOUR_XC_TEST_PLAN_ID", #only when you want to use XCTestPlan
 "device" :  ["iPhone 11-14"],
 "video" : true,
 "queueTimeout": 10800,
@@ -119,7 +119,7 @@ curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/x
 --data-raw "{
 "app" : "lt://APP_ID",
 "testSuite": "lt://TEST_SUITE_ID",
-"xctestplan" : "lt://YOUR_XC_TEST_PLAN_ID" #only when you want to use XCTestPlan
+"xctestplan" : "lt://YOUR_XC_TEST_PLAN_ID", #only when you want to use XCTestPlan
 "device" :  ["iPhone 11-14"],
 "video" : true,
 "queueTimeout": 10800,

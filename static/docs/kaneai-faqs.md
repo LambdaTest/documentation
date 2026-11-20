@@ -2,7 +2,7 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-Answers to common questions about authoring and running tests with KaneAI.
+Answers to common questions about authoring and running tests with [KaneAI](https://www.testmuai.com/kane-ai/).
 
 ## General
 

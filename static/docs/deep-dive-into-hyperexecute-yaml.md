@@ -212,7 +212,7 @@ concurrency: 10
 ```
 **Pro Tip**
 - After analyzing your test cases and usage patterns, the platform will automatically recommend the optimal concurrency settings tailored to your needs. These recommendations are displayed in the banner on the left-hand side. [Learn more here.](/support/docs/hyperexecute-how-to-find-correct-concurrency/)
-- You can see the overall concurrency trends using our [analytics widgets.](/support/docs/analytics-modules-resource-utilization/#concurrency-trends)
+- You can see the overall concurrency trends using our [analytics widgets.](/support/docs/analytics-modules-resource-utilization/#concurrency-trends-org-level)
 
 ### `testDiscovery`
 This is used to locate or discover relevant tests via class names, filters, file names, etc.
@@ -263,6 +263,9 @@ mode: local  #or
 # test discovery happens in designated HyperExecute VMs
 mode: remote
 ```
+
+**On-premise deployments**
+On-premise supports `mode: remote` only, from the CLI and from Workflows. Discovery runs on Linux or Windows, so do not use macOS-only commands or paths. For a discovery `command` that fits your framework, start from [Frameworks you can run](/support/docs/hyperexecute-on-premise-user-guide/#frameworks-you-can-run).
 
 **`mode: local`**
 
@@ -415,6 +418,9 @@ browser: [chrome]
 ```
 In the above example linux combinations will run on a parallelism on 2, `windows` combinations will run on a parallelism on 1, and `mac` combinations will run on a parallelism defined of 3.
 
+**On-premise deployments**
+On-premise deployments run Linux and Windows only, so `macParallelism` and `macTestRunnerCommand` do not apply. See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/#step-4-prepare-your-yaml).
+
 ### `testRunnerCommand`
 The `testRunnerCommand` used to run a single test entity in isolation. This entity could be a file, module, feature, or scenario. It is defined in the YAML file and tells the system how to run the test entity.
 
@@ -480,6 +486,9 @@ env:
 USERNAME: abc
 PLATFORM: windows
 ```
+
+**On-premise deployments**
+Your admin can limit which environment variables jobs may use. If you set one that is not allowed, the CLI shows a warning. Remove the variable or ask your admin to allow it. See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/#step-4-prepare-your-yaml).
 
 #### Special Character Encoding
 
@@ -862,6 +871,9 @@ ref: master
 accessToken: <your_personal_access_token>
 commit: <optional>
 ```
+
+**On-premise deployments**
+On-prem, the Git providers you can use depend on your deployment. Ask your admin before you set `sourcePayload`. See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/).
 
 ### `hostsOverride`
 This field allows you to add domain mappings which are required to be added in the local DNS entry represented by the /etc/hosts file. This is required if you want to map a custom domain name to an ip (local or otherwise) so that any requests on this domain name resolves to the provided ip on HyperExecute machines where your tests are running. For instance, suppose for a domain "example.com", global DNS is having the entry which resolves the network call to the public IP address. With hostsOverride flag you can explicitly route the network call to a local IP address, instead of allowing the call to go through a public IP address.

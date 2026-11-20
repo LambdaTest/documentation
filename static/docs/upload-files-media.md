@@ -58,7 +58,7 @@ Everything else is identical; only these behaviors differ:
 
 ### Automation
 
-Pass the **`uploadMedia`** capability — an array of uploaded media IDs (maximum 5) — to make the files available in your session. The capability is identical for **app** and **browser** (web) automation. Refer to the documentation for [Uploading Files and Media on Real Devices](appium-upload-filemedia.md).
+Pass the **`uploadMedia`** capability — an array of uploaded media IDs (maximum 10) — to make the files available in your session. The capability is identical for **app** and **browser** (web) automation. Refer to the documentation for [Uploading Files and Media on Real Devices](appium-upload-filemedia.md).
 
 ## Supported File Types
 
@@ -68,4 +68,4 @@ The same formats and size limits apply to both **App** and **Browser** sessions:
 - **Videos**: MP4 (Max: 50 MB)
 - **Documents**: XLS, XLSX, DOC, DOCX, PDF, CSV, TXT, CRT, CER, GED, GPX, XML, PBIX, ZIP, JSON (Max: 15 MB)
 
-You can upload up to **5 files per session**. Files uploaded to or downloaded on the device exist only for the duration of the session and are wiped when the device is recycled.
+You can pass up to **10 files per automation session** (5 per manual session). Files uploaded to or downloaded on the device exist only for the duration of the session and are wiped when the device is recycled.

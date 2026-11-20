@@ -59,6 +59,9 @@ Go deeper into the workflow and metrics for your specific agent type.
     Outbound Phone Agent Testing
     The workflow for an agent that places calls.
 
+    IVR Agent Testing
+    Scripted phone menus, mapped and walked branch by branch with keypad tones and speech.
+
     Image Analyzer Testing
     Score generated images against a prompt, brand rules, and technical specs.
 

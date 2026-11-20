@@ -2,7 +2,7 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-Organization Settings > Security tab. Copy the SCIM Base URL and Bearer Token.",
+Organization Settings > Security > SCIM Provisioning. Copy the SCIM Base URL and Bearer Token.",
           "url": "https://www.testmuai.com/support/docs/scim/#step-1-copy-scim-credentials"
         },
         {
@@ -17,23 +17,59 @@ Organization Settings > Security tab. Copy the SCIM Base URL and Bearer Token.",
   ]) }}
 />
 
-SCIM (System for Cross-domain Identity Management) lets your Identity Provider (IDP) automatically manage users and groups within your TestMu AI organization, no manual account setup required.
+TestMu AI supports SCIM 2.0 (System for Cross-domain Identity Management) for user and group provisioning. After you connect your identity provider (IDP), the users and groups you manage there are created, updated, and deactivated in your TestMu AI organization automatically.
 
-| Capability | What it does |
+## Supported Features {#supported-features}
+
+| Feature | Description |
 |---|---|
-| **User Provisioning** | Auto-create, update, and deactivate user accounts |
-| **Group Provisioning** | Sync IDP groups and map them to TestMu AI teams, concurrency groups, or sub-orgs |
-| **Role Assignment** | Set organization roles (Admin / User / Guest) from your IDP |
+| **User provisioning** | Create, update, and deactivate user accounts from your IDP. See [User Provisioning](#user-provisioning) |
+| **Group provisioning** | Sync IDP groups and map each group to teams, a concurrency group, or a sub-organization, manually or with rules. See [Group Provisioning](#group-provisioning) |
+| **Organization roles** | Set each user's organization role (Admin, User, or Guest) from your IDP. See [Role Assignment](#roles) |
+| **Custom roles** | Assign custom roles to the teams a rule creates and to new SCIM users. Available only if your organization has **Custom Roles & Permissions** (RBAC) enabled. See [Custom Roles with SCIM](#custom-roles) |
 
-> **SSO is required.** If you haven't set up SSO yet, see [Getting Started with SSO](/support/docs/single-sign-on/) first.
+## Prerequisites {#prerequisites}
+
+- An Enterprise plan
+- [Single sign-on (SSO)](/support/docs/single-sign-on/) configured for your organization
+- Admin access to your TestMu AI organization
+- An identity provider that supports SCIM 2.0
+- *(Optional)* **Custom Roles & Permissions** (RBAC) enabled, only if you want SCIM to assign custom roles
+
+Group provisioning has additional requirements. See [Before You Start](#group-prerequisites).
+
+## Supported Identity Providers {#supported-idps}
+
+TestMu AI works with any identity provider that supports SCIM 2.0. Step-by-step guides are available for:
+
+- [Okta](/support/docs/scim/okta/)
+- [Microsoft Entra ID (Azure AD)](/support/docs/scim/azure/)
+- [JumpCloud](/support/docs/jumpcloud-scim/)
+- [PingOne](/support/docs/pingone-scim/)
+
+For any other identity provider, follow [Setup](#setup).
+
+## How Provisioning Works {#end-to-end}
+
+Once SCIM is set up, you manage access in your IDP and TestMu AI stays in sync. Users sign in with SSO and do not need an invitation.
+
+| When you | TestMu AI |
+|---|---|
+| Assign a user to the TestMu AI app | Creates the account in your organization with an [organization role](#roles). With custom roles: the user also gets the [default roles](#custom-roles), if they are turned on |
+| Add the user to a group that is pushed to TestMu AI | Adds the user to the teams, concurrency group, or sub-organization the group is [mapped](#mapping-groups-to-lambdatest-entities) to. With custom roles: the user also gets the custom roles of each team |
+| Move the user between groups, or change a group's roles | Updates the user's teams and roles on the next sync. See [What Happens When...](#sync-behavior) |
+| Unassign or deactivate the user | Deactivates the account and frees the license seat. The account is not deleted. With custom roles: default custom roles are removed |
+
+**Custom roles need RBAC**
+Custom roles are part of **Custom Roles & Permissions** (RBAC), which is not enabled for every organization. Without it, SCIM still provisions users and groups, sets organization roles (Admin, User, Guest), and maps groups to teams, concurrency groups, and sub-organizations. The role options described on this page (**Roles in the team** on a rule, the **Roles** column on the Rules tab, and **Auto-assign roles to new SCIM users**) are shown only when Custom Roles & Permissions is enabled.
 
 ## Setup {#setup}
 
-**What you need:** Enterprise plan, SSO configured, Admin access, and an IDP that supports SCIM 2.0 (Okta, Azure AD, JumpCloud, etc.).
+Complete the [prerequisites](#prerequisites) before you start.
 
 ### Step 1: Copy SCIM Credentials
 
-Go to **Settings** > **Organization Settings** > **Security** tab. Copy the **SCIM Base URL** and **Bearer Token**.
+Go to **Settings** > **Organization Settings** > **Security** > **SCIM Provisioning**. Copy the **SCIM Base URL** and **Bearer Token**.
 
 ### Step 2: Configure Your IDP
 
@@ -49,7 +85,7 @@ Full walkthrough: [Okta SCIM Guide](/support/docs/scim/okta/)
 
 Member changes in pushed Okta groups are automatically synced to TestMu AI.
 
-Full walkthrough: [Azure AD SCIM Guide](/support/docs/scim/azure/)
+Full walkthrough: [Microsoft Entra ID SCIM Guide](/support/docs/scim/azure/)
 
 1. **Enterprise Applications** > your TestMu AI app > **Provisioning** > set to **Automatic**
 2. Under **Admin Credentials**, paste SCIM Base URL (Tenant URL) and Bearer Token (Secret Token) > **Test Connection** > **Save**
@@ -75,7 +111,7 @@ Any SCIM 2.0-compliant IDP works. Use these settings:
 
 | Setting | Value |
 |---|---|
-| **SCIM Base URL** | From Organization Settings > Security |
+| **SCIM Base URL** | From Organization Settings > Security > SCIM Provisioning |
 | **Authentication** | Bearer Token (HTTP Header) |
 | **SCIM Version** | 2.0 |
 | **Users Resource** | `/Users` |
@@ -89,7 +125,7 @@ Any SCIM 2.0-compliant IDP works. Use these settings:
 | **Group extension** | `urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:Group` |
 
 - **User extension attributes:** `OrganizationRole` (Admin / User / Guest), `LambdatestGroup` (concurrency group name)
-- **Group extension attributes:** `LambdatestRoles` (array of Admin / User / Guest, applied to all group members)
+- **Group extension attributes:** `LambdatestRoles` (array of Admin / User / Guest, applied to all group members, plus optional [custom role names](#custom-roles) granted to the group's mapped team)
 
 ## User Provisioning {#user-provisioning}
 
@@ -97,9 +133,11 @@ Any SCIM 2.0-compliant IDP works. Use these settings:
 
 | Scenario | What happens |
 |---|---|
-| New user (email doesn't exist) | Account created and added to your org |
+| New user (email doesn't exist) | Account created and added to your org. With Custom Roles & Permissions enabled, the user also gets any [default SCIM roles](#custom-roles) you have turned on |
 | Existing user (same org) | Attributes (role, active) updated |
-| Existing user (different org) | **Not** provisioned, invite via team invite first |
+| Existing user (different org) | **Not** provisioned (`400 Bad Request`). Invite the user to your organization first, then SCIM can manage them |
+| User deactivated (`active: false` or `DELETE`) | Account deactivated, license seat freed, default SCIM roles removed. The account is not deleted |
+| User reactivated (`active: true`) | Account reactivated. Default SCIM roles granted again |
 
 ### Schema & Attributes
 
@@ -303,12 +341,19 @@ DELETE only **deactivates** the account. It does not permanently delete it. For 
 
 ## Group Provisioning {#group-provisioning}
 
-**Quick Start**
-Push groups from your IDP → approve the mapping in the **SCIM Group Provisioning** dashboard → members are synced automatically.
+Group provisioning syncs groups from your IDP and maps each group to teams, a concurrency group, or a sub-organization in TestMu AI. Membership changes in your IDP are applied to the mapped entities automatically.
+
+Setting up group provisioning takes five steps:
+
+1. [Turn on group provisioning](#enabling-disabling).
+2. [Create rules](#mapping-rules) that map new groups by name to a team, a concurrency group, or both.
+3. [Push groups from your IDP](#check-groups) and review them on the **Groups** tab.
+4. [Map or approve manually](#mapping-groups-to-lambdatest-entities) any group that a rule did not approve automatically.
+5. [Change a group's mappings](#changing-groups) later, if needed.
 
 ### How It Works
 
-Groups and members are stored **as soon as your IDP pushes them**, even before any mapping is configured. Mapping only controls **where** members are assigned.
+TestMu AI stores a group and its members as soon as your IDP pushes them, even before the group is mapped. The mapping determines which teams, concurrency group, or sub-organization the members are assigned to.
 
     Step 1: Your IDP (automatic)
     Groups & members pushed via SCIM
@@ -317,12 +362,12 @@ Groups and members are stored **as soon as your IDP pushes them**, even before a
 
     Step 2: TestMu AI (automatic)
     Group stored & roles applied to members
-    Members get roles immediately, even without mapping
+    Organization roles apply to members immediately, even without mapping
 
   ↓
 
     Step 3: Admin (manual) or Mapping Rules (automatic)
-    Group mapped to a TestMu AI entity
+    Group mapped to teams, a concurrency group, or a sub-organization (plus custom roles for teams)
 
     ↙
     ↓
@@ -340,13 +385,310 @@ Groups and members are stored **as soon as your IDP pushes them**, even before a
       Exclusive
       User can only belong to one
 
-### Enabling & Disabling
+### Before You Start {#group-prerequisites}
 
-Group provisioning is not enabled by default. Reach out to our **24/7 chat support** or email [support@testmuai.com](mailto:support@testmuai.com) to get it activated for your organization.
+| You need | Where to check |
+|---|---|
+| [User provisioning](#user-provisioning) working, so the group's members exist in TestMu AI | Your IDP's provisioning logs |
+| Group provisioning activated for your organization | The **Enable SCIM Group Provisioning** toggle is visible on the SCIM Provisioning page |
+| **Teams** enabled, and **Concurrency Groups** or **Sub-Organizations** if you want to map to them | You only see the options your organization has. Missing one? Ask support to enable it |
+| *(Optional)* Custom roles created, if teams should get roles automatically | **Settings** > **Organization Settings** > **Members** > **Custom Roles & Permissions** |
 
-Once activated, you can control it from **Settings** > **Organization Settings** > **Security** > **SCIM Group Provisioning**.
+Group provisioning, Teams, Concurrency Groups, and Sub-Organizations are not enabled by default. Reach out to our **24/7 chat support** or email [support@testmuai.com](mailto:support@testmuai.com) to get them activated for your organization.
+
+### Step 1: Turn On Group Provisioning {#enabling-disabling}
+
+1. Go to **Settings** > **Organization Settings** > **Security** > **SCIM Provisioning**
+2. Turn on **Enable SCIM Group Provisioning**
+
+The page now shows three tabs:
+
+| Tab | What you do there |
+|---|---|
+| **Groups** | See every group your IDP has synced, and choose the teams its members join |
+| **Rules** | Map new groups automatically by name. With Custom Roles & Permissions enabled, a rule can also assign roles to the team |
+| **Settings** | Base URL, Bearer Token, and the group provisioning toggle. With Custom Roles & Permissions enabled, also the default roles for new users |
+
+The screenshots on this page are from an organization with Custom Roles & Permissions enabled. Without it, the role fields are not shown.
 
 > **When toggled OFF:** New IDP group operations (create/update/delete) are rejected with `403`. Existing groups, mappings, and assignments are preserved. Nothing is deleted. Toggle back ON to resume syncing.
+
+### Step 2: Create Rules {#mapping-rules}
+
+A rule maps new IDP groups automatically, based on the group name. Create rules before your IDP pushes the groups, because a rule applies only to groups that sync after the rule exists.
+
+One rule can create a team and a concurrency group together, both named after the IDP group. With Custom Roles & Permissions enabled, the rule can also assign roles to the team.
+
+**To create a rule:**
+
+1. Open the **Rules** tab and click **Add rule**
+2. Under **When the group name**, choose a match type and enter the pattern. See [Match types](#match-types)
+3. Under **Map to**, select **Team**, **Concurrency group**, or both. **Sub-organization** can only be selected on its own
+4. *(Optional. Shown only when **Team** is selected and Custom Roles & Permissions is enabled)* Under **Roles in the team**, select one or more roles. Every team this rule creates gets these roles. See [Custom Roles with SCIM](#custom-roles)
+5. Turn on **Approve automatically** to map matching groups without admin review
+6. Click **Add rule**
+
+#### Match types {#match-types}
+
+Matches group names that start with the text you enter (case-insensitive). Enter plain text without a wildcard: a trailing `*` is treated as a literal character.
+
+`eng-` matches `eng-backend`, `eng-frontend`, `ENG-DevOps`
+
+Matches group names against a **regular expression** (case-sensitive).
+
+`^qa-.*-team$` matches `qa-mobile-team`, `qa-web-team`
+
+Matches every group. Use it as a catch-all at the bottom of the list.
+
+#### What a rule creates
+
+| Map to | Result when **Approve automatically** is on |
+|---|---|
+| Team | Creates a team named after the group (or reuses a team with that name) and adds the members |
+| Concurrency group | Creates a concurrency group named after the group (or reuses it) and moves the members into it. A newly created concurrency group starts with no concurrency allocated, so set it under **Members** > **Groups** |
+| Team + Concurrency group | Does both of the above for the same group |
+| Sub-organization | Maps the group to an **existing** sub-organization with the same name. Sub-organizations are never created automatically, and this option can't be combined with the other two |
+
+When **Approve automatically** is off, nothing is created. The group stays in **Needs approval** until an admin [approves it](#mapping-groups-to-lambdatest-entities).
+
+#### Rule order
+
+Rules are evaluated from the top of the list. The first matching rule applies, and the rules below it are skipped. If no rule matches, the group stays **Not mapped** until an admin maps it manually.
+
+Place specific rules at the top and an **is any group** catch-all rule at the bottom. Click **Change order** to move rules up or down.
+
+**Rules apply to new groups only**
+A new, edited, or deleted rule affects only groups that sync after the change. Groups that are already mapped keep their teams, concurrency groups, and roles. To change those, [change the group](#changing-groups).
+
+### Step 3: Push Groups and Review Them {#check-groups}
+
+Push or assign your groups in your IDP (see the guides for [Okta](/support/docs/scim/okta/), [Microsoft Entra ID](/support/docs/scim/azure/), [JumpCloud](/support/docs/jumpcloud-scim/), and [PingOne](/support/docs/pingone-scim/)). Each group appears on the **Groups** tab within a few seconds of the push.
+
+| Status | What it means | What to do |
+|---|---|---|
+| **Approved** | The group is mapped and its members are synced | No action needed |
+| **Needs approval** | A rule matched the group, but an admin has to approve it before members are added | [Approve it](#mapping-groups-to-lambdatest-entities) |
+| **Not mapped** | No rule matched and no mapping is selected. Members are not assigned to any entity | [Map it manually](#mapping-groups-to-lambdatest-entities) |
+| **Target deleted** | A mapped team, concurrency group, or sub-organization was deleted | See [Deleted Target](#target-deleted) |
+
+The yellow banner in the example above appears only when a user is in two groups that can't share members. See [Conflicts](#conflicts).
+
+Click a group to view its details. Entries that a rule created are marked **Added by a rule**. If the rule assigns roles, they are listed next to the team.
+
+- **Mappings** tab: the teams, concurrency group, or sub-organization the group maps to.
+- **Roles** tab: roles your IDP sends for the group, and roles a rule added.
+- **Members** tab: who is in the group.
+
+The teams also appear under **Members** > **Teams** with their custom roles, if any, and the concurrency groups under **Members** > **Groups**.
+
+### Step 4: Map or Approve a Group Manually {#mapping-groups-to-lambdatest-entities}
+
+Use this step for groups with the status **Not mapped** or **Needs approval**, or if you do not use rules.
+
+1. On the **Groups** tab, click the group. Its details open on the **Mappings** tab
+2. Under **Teams**, select one or more teams. Select a **Concurrency group** as well, if needed. Teams and concurrency groups must already exist, so create them first if required
+3. Click **Save**. The group is approved and members are updated in a few seconds
+
+If the group already lists its entries and shows **Waiting for your approval.**, click **Approve** there, or use **Approve** in the group's ⋯ menu on the Groups tab.
+
+**What one group can map to**
+
+| Field | How many | What happens |
+|---|---|---|
+| **Teams** | As many as you need | Members join every team listed |
+| **Concurrency group** | One | Members move to this concurrency group |
+| **Sub-organization** | One | Members move to this sub-organization. It can't be combined with teams or a concurrency group |
+
+Select an entity type for details:
+
+**Teams are additive**: a user can belong to multiple teams at once, so there are no conflicts.
+
+| | |
+|---|---|
+| **Auto-create** | Yes, by a rule with **Approve automatically** on. A manual mapping needs an existing team |
+| **On member removal** | Removed from team (unless another SCIM group also maps them there) |
+| **On group rename** | A team that a rule created is **renamed** to match the IDP group name, unless another SCIM group also maps to it. Teams you selected manually keep their names |
+| **Conflicts** | None, teams are never exclusive |
+
+Team is the simplest mapping and the recommended starting point.
+
+**Concurrency groups are exclusive**: a user can only belong to one at a time.
+
+| | |
+|---|---|
+| **Auto-create** | Yes, by a rule with **Approve automatically** on. A manual mapping needs an existing concurrency group |
+| **On member removal** | User moved back to the org's **default concurrency group** |
+| **On group rename** | A concurrency group that a rule created is **renamed** to match the IDP group name, unless another SCIM group also maps to it |
+| **Conflicts** | Yes, if the same user is in two SCIM groups mapped to **different** concurrency groups. See [Conflicts](#conflicts). |
+
+**Sub-organizations are exclusive**: a user can only belong to one at a time. Sub-organizations also **conflict with concurrency groups and teams** from other SCIM groups (cross-type conflict).
+
+| | |
+|---|---|
+| **Auto-create** | No, sub-organizations must be created manually first (they have billing and setup requirements) |
+| **On member removal** | User moved back to the **root organization** |
+| **On group rename** | Sub-organization is **not** renamed (sub-organizations have independent naming) |
+| **Conflicts** | Yes, two types: (1) same user in two groups mapped to **different** sub-organizations, or (2) same user in a sub-organization group **and** a concurrency group/team group from a different SCIM group |
+
+**Why cross-type conflicts?** Moving a user to a sub-organization removes them from the parent organization's resource pool. Team and concurrency group assignments in the parent org become invalid.
+
+A team you add manually does not get a rule's roles. Grant custom roles to that team directly or send them from your IDP. See [Custom Roles with SCIM](#custom-roles).
+
+### Step 5: Change a Group's Mappings {#changing-groups}
+
+A rule sets a group's initial mappings. You can change the mappings of any group afterwards: open the group, edit the **Mappings** tab, and click **Save**.
+
+| To | Do this on the Mappings tab | Result |
+|---|---|---|
+| Add the members to more teams | Add the teams | Members join every team listed. Entries the rule created stay |
+| Use a different concurrency group | Remove the current one and pick another | Members move to the one you picked |
+| Stop using a team | Remove the team | Members leave that team, unless another SCIM group still maps to it. If a rule created it, the rule's roles are removed from the team |
+| Share one team between several groups | Add the same team on each group | A user stays in the team as long as one of their groups maps to it |
+
+Rules do not overwrite changes you save here. Rules run only when a group is first pushed or renamed in your IDP.
+
+### Map Several Groups to One Team
+
+More than one SCIM group can map to the same team. A user stays in the team as long as at least one of their SCIM groups maps to it, and leaves it when the last one stops.
+
+### Role Assignment {#roles}
+
+This section covers **organization roles** (Admin / User / Guest). For custom RBAC roles, see [Custom Roles with SCIM](#custom-roles).
+
+Organization roles can be set per-user (User extension `OrganizationRole`) or per-group (Group extension `LambdatestRoles`). They work **independently of mappings**: even unmapped groups apply their organization roles to members immediately.
+
+When a user is in **multiple groups with different roles**, the highest-priority role wins: **Admin > User > Guest**
+
+| Group | Role |
+|---|---|
+| `eng-team` | User |
+| `org-admins` | Admin |
+| **Effective role** | **Admin** (highest wins) |
+
+**Roles can be upgraded and downgraded.** The effective role is always the **highest** across all current group memberships. Removing a user from one group only downgrades their role if no other group provides it.
+
+| Scenario | What happens |
+|---|---|
+| User added to a group with `Admin` role | Role upgraded to Admin (if currently lower) |
+| User removed from the `Admin` group | Role recomputed, drops to next highest (e.g., User) if no other group gives Admin |
+| All groups removed, or no roles set | Role defaults to **User** |
+| Group's `LambdatestRoles` changed from `Admin` to `Guest` | All members' roles recomputed, may downgrade |
+
+### Custom Roles with SCIM {#custom-roles}
+
+This section applies only to organizations with **Custom Roles & Permissions** (RBAC) enabled. If your organization does not use it, skip this section.
+
+The roles above are **organization roles** (Admin / User / Guest). With Custom Roles & Permissions, SCIM can also grant **custom roles** automatically, so users have the right access as soon as they are provisioned.
+
+**Prerequisites**
+Custom roles through SCIM need **Custom Roles & Permissions** enabled for your organization, and **SCIM Group Provisioning** enabled for team-based roles. Create the custom roles first under **Settings > Organization Settings > Members > Custom Roles & Permissions**. Reach out to our **24/7 chat support** if you don't see these options.
+
+There are three ways to grant custom roles with SCIM. Use any one of them, or combine them:
+
+| Method | Configured in | Who gets the role | Best for |
+|---|---|---|---|
+| **Roles in the team on a rule** | TestMu AI (Rules tab) | Every team the rule creates, and so every member of those teams | Groups that follow a naming convention, with no role setup in your IDP |
+| **Custom role names in `LambdatestRoles`** | Your IDP (group extension attribute) | The team the group is mapped to | Keeping all role assignment in your IDP |
+| **Auto-assign roles to new SCIM users** | TestMu AI (Settings tab of the SCIM Provisioning page) | Each user provisioned after you turn it on | A baseline role every new user should start with |
+
+Pick **Roles in the team** on a rule that maps to **Team**. When a group matches the rule, TestMu AI creates (or reuses) the team, attaches those roles to it, and adds the group's members. Everyone in the team inherits the roles.
+
+**Example:** your IDP groups follow the convention `acme-qe-web-` and `acme-qe-mobile-`.
+
+| Order | When group name | Maps to | Roles | Approval |
+|---|---|---|---|---|
+| 1 | Starts with `acme-qe-web-` | Team | `QE-Web-Tester` | Automatic |
+| 2 | Starts with `acme-qe-mobile-` | Team | `QE-Mobile-Tester` | Automatic |
+
+When your IDP pushes `acme-qe-web-payments`, the team **acme-qe-web-payments** is created with the `QE-Web-Tester` role and its members are added. No manual role assignment is needed. The **Custom Roles** column under **Members > Teams** shows the result.
+
+- The **Roles in the team** field appears only when **Team** is selected and Custom Roles & Permissions is enabled.
+- You can select more than one role. Default roles (Admin, User, Guest) and your custom roles appear in one searchable list.
+- With **Approve automatically OFF**, the group waits as **Needs approval**. The roles are attached when an admin approves it.
+- The roles go to the team the rule creates. Teams you add to the group manually do not get them.
+- If a mapped role is deleted later, the rule shows a warning. Edit the rule and reselect a role.
+
+The group extension attribute `LambdatestRoles` accepts **custom role names** as well as Admin / User / Guest. Custom role names are matched against the custom roles in your organization and granted to the team the group is mapped to.
+
+```json
+"urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:Group": {
+"LambdatestRoles": ["User", "QE-Web-Tester"]
+}
+```
+
+- `User` sets the members' organization role (highest wins, as described in [Role Assignment](#roles)).
+- `QE-Web-Tester` is granted to the group's mapped **team**. The group must be mapped to a team and approved.
+- Role names must match the custom role name in TestMu AI exactly. Names that don't match any role are ignored.
+- When your IDP changes the list, TestMu AI removes only the roles your IDP sent before and adds the new ones.
+
+Turn on **Auto-assign roles to new SCIM users** on the **Settings** tab of the **SCIM Provisioning** page and select one or more roles. Every user your IDP provisions from then on gets these roles directly, on top of their organization role.
+
+- Applies to users provisioned **after** you turn it on. Existing users are not changed.
+- Works independently of groups and mapping rules.
+- When your IDP **deactivates** a user, their default roles are removed. If the user is **reactivated**, the roles currently configured are granted again.
+- Changing or turning off the setting doesn't remove roles from users who already received them.
+- If a selected role is deleted later, the setting shows a warning. Reselect a role to fix it.
+
+**How the sources work together**
+
+- **All sources add up.** A team can hold roles from a rule and from your IDP at the same time. A user gets the roles of every team they belong to, plus any default roles.
+- **Each source removes only what it granted.** Removing a role from a rule's team never strips the same role your IDP granted, and the other way round.
+- **Rules are forward-only.** Editing or deleting a rule doesn't change roles on teams it already created. To change access for existing teams, edit the custom role itself under **Custom Roles & Permissions**. That change applies to everyone who holds the role.
+
+**What happens to rule roles when things change**
+
+| Change | Result |
+|---|---|
+| User added to the IDP group | Joins every team the group maps to and inherits their roles |
+| User removed from the IDP group | Leaves those teams (unless another of their SCIM groups maps to the same team) and loses the roles that came from them |
+| Group renamed, still matches the same rule | The team the rule created is renamed to match. Roles kept |
+| Group renamed to match a different rule | Old rule's roles removed. The group returns to **Needs approval** under the new rule. Teams added manually are not affected |
+| Group renamed so no rule matches | Rule's roles removed from the team. The group returns to **Needs approval**. Teams added manually are not affected |
+| Group deleted in your IDP | Members leave the mapped teams. Rule's roles removed from the team |
+| Admin removes the rule's team from the group's **Mappings** tab | Members leave the team (unless another SCIM group maps to it). Rule's roles removed from the team |
+| Rule edited or deleted | No change to existing teams. Applies to new groups only |
+
+### Conflicts {#conflicts}
+
+**Teams don't have conflicts**
+If you map groups only to **Teams**, you can skip this section. A user can belong to several teams, so teams never conflict.
+
+A conflict occurs when a user belongs to several SCIM groups whose mappings cannot apply to the same user at once. The user keeps their current assignment until an admin resolves the conflict. Nothing changes automatically.
+
+**When do conflicts happen?**
+
+When the same user is in two SCIM groups mapped to **different** concurrency groups. Example: Group A → "QA Pool" and Group B → "Dev Pool". The user can only be in one.
+
+When the same user is in two SCIM groups mapped to **different** sub-organizations. Example: Group X → "US Team" and Group Y → "EU Team". The user can only be in one.
+
+When a user is mapped to a **sub-organization** from one SCIM group and a **concurrency group or team** from another SCIM group. Example: Group A maps to sub-organization "US Team" and Group B maps to Concurrency Group "Dev Pool".
+
+**Why does this conflict?** Moving a user to a sub-organization removes them from the parent organization's resource pool. Team and concurrency group assignments in the parent org become invalid.
+
+**To resolve:**
+
+1. Go to **Settings** > **Organization Settings** > **Security** > **SCIM Provisioning** and open the **Groups** tab. When conflicts exist, a banner shows how many users are in more than one group that can't share members
+2. Click **Resolve**. The **Pending** tab lists open conflicts and **Resolved** lists past decisions
+3. Each conflict card shows the **Current** group (where the user is now) and the **Incoming** group (the one trying to claim the user)
+4. Click **Keep Current** or **Use Incoming**
+5. TestMu AI remembers this decision. The same combination won't create a new conflict
+
+**To avoid conflicts**
+Prefer **teams** when users need to be in multiple groups. Teams never create conflicts. Only use concurrency groups and sub-organizations when you need exclusive assignment.
+
+### Deleted Target {#target-deleted}
+
+If an admin deletes a team, concurrency group, or sub-organization that has an active SCIM mapping, the group's status changes to **Target deleted**.
+
+**Manual re-mapping required**
+When a target is deleted, TestMu AI does not create a replacement automatically, even if a matching rule has **Approve automatically** on. An admin must update the mapping to point to a new or recreated target.
+
+**To fix a group with a deleted target:**
+
+1. Go to **Settings** > **Organization Settings** > **Security** > **SCIM Provisioning** and open the **Groups** tab
+2. Open the group with the **Target deleted** status. The deleted entry is no longer listed on its **Mappings** tab
+3. Pick a replacement (create it first if needed), or leave it out
+4. Click **Save**. Members are synced to what is listed
 
 ### Group Schema & Attributes
 
@@ -377,156 +719,10 @@ These attributes are part of the `urn:ietf:params:scim:schemas:extension:LambdaT
 
 | Attribute | Required | Values | Notes |
 |---|---|---|---|
-| `LambdatestRoles` | No | `Admin`, `User`, `Guest` | Assigns [organization roles](#roles) to **all members** of the group. Highest role wins if a user is in multiple groups. |
+| `LambdatestRoles` | No | `Admin`, `User`, `Guest`, or [custom role names](#custom-roles) | `Admin` / `User` / `Guest` set the [organization role](#roles) of **all members**. Highest role wins if a user is in multiple groups. Custom role names are granted to the group's mapped **team**. |
 
 For PATCH operations, use the fully qualified SCIM path:
 - **LambdatestRoles:** `urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:Group:LambdatestRoles`
-
-### Mapping Groups to TestMu AI Entities
-
-Once a group is pushed, it needs to be **mapped** to tell TestMu AI what to do with its members. Select your target entity type below to see the details relevant to you:
-
-**Feature Activation**
-**Teams**, **Concurrency Groups**, and **Sub-Organizations** are not enabled by default. Reach out to our **24/7 chat support** or email [support@testmuai.com](mailto:support@testmuai.com) to get them activated for your organization before mapping groups to these entities.
-
-**Teams are additive**: a user can belong to multiple teams at once, so there are no conflicts.
-
-| | |
-|---|---|
-| **Auto-create** | Yes, if the team doesn't exist, it's created automatically |
-| **On member removal** | Removed from team (unless another SCIM group also maps them there) |
-| **On group rename** | Team is **automatically renamed** to match the IDP group name |
-| **Conflicts** | None, teams are never exclusive |
-
-This is the simplest and most common mapping. If you're just starting out, **Team is the recommended choice**.
-
-**Concurrency groups are exclusive**: a user can only belong to one at a time.
-
-| | |
-|---|---|
-| **Auto-create** | Yes, if the group doesn't exist, it's created automatically |
-| **On member removal** | User moved back to the org's **default concurrency group** |
-| **On group rename** | Concurrency group is **automatically renamed** to match the IDP group name |
-| **Conflicts** | Yes, if the same user is in two SCIM groups mapped to **different** concurrency groups. See [Conflicts](#conflicts). |
-
-**Sub-organizations are exclusive**: a user can only belong to one at a time. Sub-orgs also **conflict with concurrency groups and teams** from other SCIM groups (cross-type conflict).
-
-| | |
-|---|---|
-| **Auto-create** | No, sub-orgs must be created manually first (they have billing and setup requirements) |
-| **On member removal** | User moved back to the **root organization** |
-| **On group rename** | Sub-org is **not** renamed (sub-orgs have independent naming) |
-| **Conflicts** | Yes, two types: (1) same user in two groups mapped to **different** sub-orgs, or (2) same user in a sub-org group **and** a concurrency group/team group from a different SCIM group |
-
-**Why cross-type conflicts?** Moving a user to a sub-org takes them out of the parent org's resource pool entirely. Team and concurrency group assignments in the parent org become invalid.
-
-A single SCIM group can only be mapped to **one** TestMu AI entity (one team, one concurrency group, or one sub-org). To assign the same users to multiple entities, use separate IDP groups.
-
-> **Mapping statuses:** `Pending` → `Approved` / `Auto-Approved` (members synced) or `Rejected` (no sync). If no mapping rule matches, the group stays **Pending** until an admin maps it manually.
-
-**To map manually:** Go to **SCIM Group Provisioning** dashboard > click a Pending group > select target type and entity > **Approve**.
-
-### Mapping Rules (Automatic Mapping)
-
-Instead of mapping each group manually, create rules that auto-match groups by name.
-
-Matches group names **starting with** a pattern (case-insensitive).
-
-`eng-` matches `eng-backend`, `eng-frontend`, `ENG-DevOps`
-
-Matches group names against a **regular expression**.
-
-`^qa-.*-team$` matches `qa-mobile-team`, `qa-web-team`
-
-Matches **every group**. Use as a low-priority catch-all fallback.
-
-**Each rule has an auto-approve toggle:**
-- **ON** → finds (or creates) the target entity by name → mapping approved → members synced immediately.
-- **OFF** → creates a Pending mapping → admin approves manually.
-
-**Rules are evaluated by priority** (highest first). First match wins. If **no rule matches**, the group stays Pending until an admin maps it manually.
-
-| Priority | Rule | Target | Auto-Approve | Example match |
-|---|---|---|---|---|
-| 3 | Prefix: `eng-` | Team | ON | `eng-backend` → auto-approved Team |
-| 2 | Prefix: `qa-` | Team | ON | `qa-mobile` → auto-approved Team |
-| 1 | Match All | Concurrency Group | OFF | `design-ops` → Pending |
-
-**To create a rule:**
-
-1. Go to **SCIM Group Provisioning** dashboard
-2. Click **Add Mapping Rule**
-3. Select a **rule type** (Prefix, Regex, or Match All)
-4. Enter the **pattern** to match group names against
-5. Choose the **target type** (Team, Concurrency Group, or Sub-Organization)
-6. Toggle **auto-approve** ON if you want matched groups to be approved automatically
-7. Click **Save**
-
-### Role Assignment {#roles}
-
-Roles can be set per-user (User extension `OrganizationRole`) or per-group (Group extension `LambdatestRoles`). Roles work **independently of mappings**, even unmapped groups apply their roles to members immediately.
-
-When a user is in **multiple groups with different roles**, the highest-priority role wins: **Admin > User > Guest**
-
-| Group | Role |
-|---|---|
-| `eng-team` | User |
-| `org-admins` | Admin |
-| **Effective role** | **Admin** (highest wins) |
-
-**Roles can be upgraded and downgraded.** The effective role is always the **highest** across all current group memberships. Removing a user from one group only downgrades their role if no other group provides it.
-
-| Scenario | What happens |
-|---|---|
-| User added to a group with `Admin` role | Role upgraded to Admin (if currently lower) |
-| User removed from the `Admin` group | Role recomputed, drops to next highest (e.g., User) if no other group gives Admin |
-| All groups removed, or no roles set | Role defaults to **User** |
-| Group's `LambdatestRoles` changed from `Admin` to `Guest` | All members' roles recomputed, may downgrade |
-
-### One Group per Entity
-
-Each TestMu AI entity (team, concurrency group, or sub-org) can only be mapped from **one SCIM group at a time**. If you try to create a second mapping to the same entity, the request is rejected. This ensures a clear ownership model: one IDP group controls one TestMu AI entity.
-
-### Conflicts {#conflicts}
-
-**Teams don't have conflicts**
-If you're only mapping to **Teams**, you can skip this section entirely. Teams are additive: no conflicts possible.
-
-Conflicts happen when a user belongs to multiple SCIM groups that compete for the **same exclusive slot**. When a conflict occurs, the user **keeps their current assignment** until an admin resolves it. Nothing changes automatically.
-
-**When do conflicts happen?**
-
-When the same user is in two SCIM groups mapped to **different** concurrency groups. Example: Group A → "QA Pool" and Group B → "Dev Pool". The user can only be in one.
-
-When the same user is in two SCIM groups mapped to **different** sub-orgs. Example: Group X → "US Team" and Group Y → "EU Team". The user can only be in one.
-
-When a user is mapped to a **sub-organization** from one SCIM group and a **concurrency group or team** from another SCIM group. Example: Group A maps to Sub-Org "US Team" and Group B maps to Concurrency Group "Dev Pool".
-
-**Why does this conflict?** Moving a user to a sub-org takes them out of the parent org's resource pool entirely. Team and concurrency group assignments in the parent org become invalid.
-
-**To resolve:**
-
-1. Go to **SCIM Group Provisioning** dashboard > **Conflicts** tab
-2. Each conflict card shows the **Current** group (where the user is now) and the **Incoming** group (the one trying to claim the user)
-3. Click **Keep Current** or **Use Incoming**
-4. TestMu AI remembers this decision. The same combination won't create a new conflict
-
-**To avoid conflicts**
-Prefer **teams** when users need to be in multiple groups. Teams never create conflicts. Only use concurrency groups and sub-orgs when you need exclusive assignment.
-
-### Deleted Target {#target-deleted}
-
-If an admin deletes a team, concurrency group, or sub-org that has an active SCIM mapping, the mapping is flagged as `target_deleted` and the status changes to **Pending**.
-
-**Manual re-mapping required**
-When a target is deleted, the mapping **will not auto-create a replacement**, even if a matching mapping rule with auto-approve exists. This is intentional: auto-creating the same entity that was just deleted would cause a loop. An admin must manually update the mapping to point to a new (or recreated) target.
-
-**To fix a `target_deleted` mapping:**
-
-1. Go to **SCIM Group Provisioning** dashboard
-2. Find the group with `target_deleted` status
-3. Click the group and select a **new target entity**
-4. Click **Approve**: members will be synced to the new target
 
 ### Group API Operations
 
@@ -677,30 +873,35 @@ Filter by name: `?filter=displayName eq "eng-backend"` | Paginate: `?startIndex=
 
 **Response:** `204 No Content`
 
-**On delete:** group is soft-deleted, roles recomputed, members safely unassigned from all mapped entities (checking other group memberships first), mappings rejected, related conflicts auto-resolved.
+**On delete:** the group is deleted, roles recomputed, members unassigned from all mapped entities (checking other group memberships first), mappings rejected, related conflicts auto-resolved.
 
 **Errors:** `404 Not Found` if group doesn't exist.
 
 ## What Happens When... {#sync-behavior}
 
-Quick reference for common scenarios. Everything below is handled automatically, no action needed unless noted.
+This section lists what TestMu AI does when something changes in your IDP or in TestMu AI. No action is needed unless the last column says so.
 
 | You do this in your IDP | What happens in TestMu AI | Action needed? |
 |---|---|---|
-| **Rename a group** | Group name updated. Mapped team/concurrency group **renamed to match**. Mapping rules re-evaluated. | Only if mapping reverted to Pending |
-| **Delete a group** | Soft-deleted. Members safely unassigned. Roles recomputed. Conflicts auto-resolved. | No |
+| **Rename a group** | Group name updated. A team or concurrency group that a rule created is **renamed to match**. Rules re-evaluated. If the group now matches a different rule or no rule, [rule roles are removed](#custom-roles) and the group returns to **Needs approval**. Teams added manually are not affected. | Only if the group returned to Needs approval |
+| **Delete a group** | Group deleted. Members unassigned from its mapped entities. Roles recomputed. Conflicts resolved automatically. | No |
 | **Add a member to a group** | Added to all mapped entities. Role recomputed. | Only if a [conflict](#conflicts) is created |
 | **Remove a member from a group** | Unassigned from mapped entities (only if no other group maps them there). Role recomputed. | No |
 | **Re-push a previously deleted group** | Group restored. Members must be re-pushed. Mapping rules re-evaluated. | Depends on rules |
-| **Change roles on a group** | All members' roles recomputed immediately. | No |
+| **Change roles on a group** | All members' roles recomputed immediately. Custom role names are updated on the group's mapped team. | No |
+| **Deactivate a user** | Account deactivated. License seat freed. [Default SCIM roles](#custom-roles) removed. | No |
+| **Reactivate a user** | Account reactivated. Default SCIM roles granted again. | No |
 
 | You do this in TestMu AI | What happens | Important |
 |---|---|---|
-| **Rename a team / group / sub-org** | Works fine, but the next IDP group rename will overwrite it. | To control names, rename **in your IDP** |
-| **Delete a mapped entity** | Mapping flagged as `target_deleted`, reverts to Pending. Auto-create is blocked. | [Manually re-map](#target-deleted) to a new target |
+| **Rename a team / group / sub-organization** | The new name is kept until the IDP group is next renamed, which overwrites it. | To control names, rename **in your IDP** |
+| **Delete a mapped entity** | The group shows **Target deleted**. Auto-create is blocked. | [Pick a new target](#target-deleted) on the group |
 | **Manually remove a member from a team** | Removal is immediate but **temporary**. Next IDP sync re-adds them. | Remove **in your IDP** instead |
-| **Manually assign user to concurrency group / sub-org** | SCIM overrides non-SCIM assignments on next sync. | Use SCIM groups for exclusive assignments |
+| **Manually assign user to concurrency group / sub-organization** | SCIM overrides non-SCIM assignments on next sync. | Use SCIM groups for exclusive assignments |
 | **Manually change a SCIM-managed user's role** | May be overwritten on next IDP sync. | Manage roles **in your IDP** |
+| **Add, edit, or delete a rule** | Applies to groups that sync in afterwards. Existing teams and mappings keep what they have. | Edit the custom role to change access for existing teams |
+| **Remove a team from a group's Mappings tab** | The group's members leave that team, unless another SCIM group maps to it. | No |
+| **Delete a custom role used by a rule or the default-role setting** | The rule or setting shows a warning. No new grants for that role. | Reselect a role |
 
 ## Troubleshooting {#troubleshooting}
 
@@ -709,7 +910,7 @@ Quick reference for common scenarios. Everything below is handled automatically,
 | Error | Cause | Fix |
 |---|---|---|
 | `401 Unauthorized` | Invalid or expired Bearer Token | Regenerate in Organization Settings > Security |
-| `403 Forbidden` | Group Provisioning is disabled | Enable the toggle in Security settings |
+| `403 Forbidden` | Group Provisioning is disabled | Turn on **Enable SCIM Group Provisioning**. See [Enabling & Disabling](#enabling-disabling) |
 | `404 Not Found` | ID doesn't exist or belongs to a different org | Verify via a List call |
 | `409 Conflict` | Group with same `displayName` already exists | Rename or delete the existing group |
 | `400 Bad Request` | User exists in a different organization | Invite them via team invite first |
@@ -718,25 +919,36 @@ Quick reference for common scenarios. Everything below is handled automatically,
 
 | Issue | Solution |
 |---|---|
-| Members not appearing in teams or sub-orgs | Group mapping is still **Pending**. Approve it in the dashboard or create an auto-approve mapping rule. |
-| Members are in the SCIM group but not in the sub-org | Check for [conflicts](#conflicts). The user may belong to another group with a competing exclusive mapping. |
+| Members not appearing in teams or sub-organizations | The group is **Not mapped** or **Needs approval**. [Map or approve it](#mapping-groups-to-lambdatest-entities) from the Groups tab, or create a [rule](#mapping-rules) with **Approve automatically** on. |
+| Members are in the SCIM group but not in the sub-organization | Check for [conflicts](#conflicts). The user may belong to another group with a competing exclusive mapping. |
 | User has an unexpected role | Check **all** SCIM group memberships. Roles follow highest-wins (Admin > User > Guest). The user may inherit Admin from another group. |
 | User keeps getting re-added after manual removal | SCIM is the source of truth. Remove the user **in your IDP** instead. |
-| Group mapping reverted to Pending | The group was renamed (rules re-evaluated) or the target entity was deleted (`target_deleted`). If renamed, rules may auto-approve. If deleted, [manual re-mapping](#target-deleted) is required. |
-| Auto-approve didn't create my sub-organization | Sub-orgs are never auto-created (billing/setup required). Create the sub-org first, then approve manually. |
-| Can't map two SCIM groups to the same team | Each entity can only be mapped from one SCIM group. Use a single group, or merge in your IDP. |
+| Group went back to Needs approval, or shows Target deleted | The group was renamed (rules re-evaluated) or a mapped entity was deleted. If renamed, open the group and approve it. If deleted, [pick a new target](#target-deleted). |
+| Tests don't run in parallel for a team a rule set up | A concurrency group that a rule creates starts with no concurrency allocated. Set it under **Members** > **Groups**. |
+| Auto-approve didn't create my sub-organization | Sub-organizations are never created automatically, because they have billing and setup requirements. Create the sub-organization first, then approve the group manually. |
+| **Roles in the team** field is missing on a rule | Select **Team** under **Map to**, and make sure Custom Roles & Permissions is enabled for your organization. |
+| A rule with `eng-*` matches nothing | **Starts with** takes plain text. Remove the `*`. |
+| Can't pick a sub-organization on a group | A sub-organization can't be combined with teams or a concurrency group. Remove those first. |
+| A SCIM team has no custom role | Check that the group is **Approved**. Rules are forward-only, so a team created before the rule got its roles keeps its previous roles. Teams added to a group manually do not get rule roles. |
+| A custom role from `LambdatestRoles` isn't applied | The name must match a custom role exactly, and the group must be mapped to an approved **team**. |
+| New users don't get the default role | Check that **Auto-assign roles to new SCIM users** is ON with a role selected. Users provisioned before it was turned on are not updated. |
 
 ### FAQ
 
 | Question | Answer |
 |---|---|
-| Can a group be mapped to multiple targets? | No. A single SCIM group can only map to **one** entity (team, concurrency group, or sub-org). To assign the same users to multiple entities, use separate IDP groups. |
-| Can two SCIM groups map to the same entity? | No. Each entity can only be owned by one SCIM group. This prevents conflicting membership lists. |
+| Can one rule create a team and a concurrency group? | Yes. Select both **Team** and **Concurrency group** under **Map to**. Each matching group gets a team and a concurrency group named after it. See [Create Rules](#mapping-rules). |
+| Can a group be mapped to multiple targets? | Yes. A SCIM group can map to several teams and one concurrency group at the same time. A sub-organization mapping stands alone. See [Mapping Groups](#mapping-groups-to-lambdatest-entities). |
+| Can two SCIM groups map to the same team? | Yes. A user stays in the team as long as one of their SCIM groups maps to it. |
 | Can I disable group provisioning without losing data? | Yes. The toggle only blocks new IDP operations. Existing groups, mappings, and assignments are preserved. Toggle back ON to resume. |
-| Can I restore a deleted group? | Yes. Push a group with the same `displayName` from your IDP. The soft-deleted record is restored. Members need to be re-pushed. |
+| Can I restore a deleted group? | Yes. Push a group with the same `displayName` from your IDP. The group is restored. Members need to be re-pushed. |
 | Can roles be downgraded? | Yes. Roles are recomputed across all groups. If the highest role is removed, the effective role drops to the next highest. Defaults to **User** if none set. |
 | What happens to a conflict when one group is deleted? | The conflict is **auto-resolved** in favor of the remaining group. No admin action needed. |
-| What's the difference between Approved and Auto-Approved? | Both sync members identically. **Auto-Approved** = mapping rule matched automatically. **Approved** = admin approved manually. |
-| Do mapping rules overwrite existing mappings? | No. Rules only apply when a group is first created or renamed. Existing mappings (manual or auto) are not overwritten. |
+| Does it matter whether a rule or an admin approved a group? | No. Members are synced the same way, and both show as **Approved**. |
+| Do rules overwrite existing mappings? | No. Rules only apply when a group is first created or renamed. Mappings you set manually are not overwritten. |
+| Does changing a rule's roles update existing teams? | No. Rule changes are forward-only. To change access for existing teams, edit the custom role itself. |
+| Do rule roles replace roles sent by my IDP? | No. Both apply to the team, and removing one never removes the same role granted by the other. |
+| Can I give every new user a starting role without group rules? | Yes. Turn on **Auto-assign roles to new SCIM users** and select the roles. |
+| Can rule roles be used with Concurrency group or Sub-organization targets? | No. Rule roles apply to **Team** targets only. |
 
 > That's all you need to know about SCIM Provisioning with TestMu AI. In case you have any questions please feel free to reach out to us via the **24/7 chat support** or email us over [support@testmuai.com](mailto:support@testmuai.com).

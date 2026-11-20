@@ -57,12 +57,13 @@ By setting these parameters, QAs can ensure that the Appium server accurately ta
 ### iOS
 | KEY | VALUES | CAPABILITY DESCRIPTION | SUPPORTED ON |
 |-----|--------| -----------------------|--------------|
-| resignApp | TYPE: BOOLEAN  DEFAULT: True  `resignApp = true` | 1. By default, if this capability is not passed, your app will be re-signed. 2. You can pass "false" as a capability to prevent your apps from being re-signed. 3. This is only for iOS-specific applications and devices |   |
-| bundleId | TYPE: String `com.whatsapp`| Launch the app directly on the device using the Bundle ID. **Only for iOS**.|    |
-| autoDismissAlerts | TYPE: BOOLEAN  DEFAULT: False  `autoDismissAlerts=TRUE`  OR  `autoDismissAlerts=FALSE` | Appium capability to Dismiss alerts/popups on iOS Devices. |    |
-| autoAcceptAlerts | TYPE: BOOLEAN  DEFAULT: True  `autoAcceptAlerts=TRUE`  OR  `autoAcceptAlerts=FALSE` | Appium capability to Accept alerts/popups on iOS Devices. |    |
-| noReset | TYPE: BOOLEAN  DEFAULT: False `true` | Don't reset app state before this session. See [here](https://appium.readthedocs.io/en/stable/en/writing-running-appium/other/reset-strategies/) for more details. |    |
-| iosLiveInteraction | TYPE: BOOLEAN  DEFAULT: False `true` | This capability allows users to interact with the iOS device during an automation session for scenarios requiring manual interaction. For Virtual Devices, live interaction is supported by default in automation session.  |   |
+| resignApp | TYPE: BOOLEAN  DEFAULT: True  `resignApp = true` | 1. By default, if this capability is not passed, your app will be re-signed. 2. You can pass "false" as a capability to prevent your apps from being re-signed. 3. This is only for iOS-specific applications and devices |  Real|
+| bundleId | TYPE: String `com.whatsapp`| Launch the app directly on the device using the Bundle ID. **Only for iOS**.| Real &amp; Virtual|
+| autoDismissAlerts | TYPE: BOOLEAN  DEFAULT: False  `autoDismissAlerts=TRUE`  OR  `autoDismissAlerts=FALSE` | Appium capability to Dismiss alerts/popups on iOS Devices. | Real &amp; Virtual|
+| autoAcceptAlerts | TYPE: BOOLEAN  DEFAULT: True  `autoAcceptAlerts=TRUE`  OR  `autoAcceptAlerts=FALSE` | Appium capability to Accept alerts/popups on iOS Devices. | Real &amp; Virtual|
+| noReset | TYPE: BOOLEAN  DEFAULT: False `true` | Don't reset app state before this session. See [here](https://appium.readthedocs.io/en/stable/en/writing-running-appium/other/reset-strategies/) for more details.                                                                                                                               | Real &amp; Virtual|
+| iosLiveInteraction | TYPE: BOOLEAN  DEFAULT: False `true` | This capability allows users to interact with the iOS device during an automation session for scenarios requiring manual interaction. For Virtual Devices, live interaction is supported by default in automation session. | Real|
+| devicePosture | TYPE: STRING  DEFAULT: open  `devicePosture = "closed"` | Sets the device posture for iOS foldable devices.  Accepted values: `closed`, `open`, `book`.  If not passed, device starts in `open` posture. | Virtual|
 ## Real User conditions
 | KEY | VALUES | CAPABILITY DESCRIPTION | SUPPORTED ON |
 |-----|--------| -----------------------|--------------|

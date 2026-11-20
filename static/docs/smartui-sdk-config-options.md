@@ -172,6 +172,27 @@ The `enableJavaScript` option is a boolean parameter that determines whether Jav
 
 The `allowedHostnames` option controls the capture of assets from specific hostnames. By default, the SmartUI SDK only captures assets that match the hostname of the snapshot location. For instance, if snapshots are taken on `https://xyz.com`, assets hosted on `https://cdn.xyz.com` will not be captured. To include assets from other hostnames, each additional hostname needs to be added to the allowedHostnames configuration.
 
+**useExtendedViewport**
+
+The `useExtendedViewport` option is a boolean parameter that changes how full-page screenshots are captured. When set to `true`, SmartUI resizes the browser viewport to the full height of the page and captures the page in a single frame, instead of using the browser's standard full-page capture. This helps on pages whose layout depends on the viewport height, such as sections sized with `100vh` or fixed and sticky elements. By default, this option is set to false.
+
+The option applies only to full-page screenshots. Viewport screenshots (a viewport with both width and height) are not affected. On Firefox and Safari, pages taller than 32,767 pixels are captured at that maximum height and the option is skipped.
+
+```json title=".smartui.json"
+{
+"useExtendedViewport": true
+}
+```
+
+You can also set `useExtendedViewport` in the options of a single snapshot. The snapshot value overrides the project configuration in both directions, so `false` on a snapshot turns the option off for that snapshot even when the configuration file sets it to `true`. If a snapshot does not set it, the configuration file value is used.
+
+```javascript
+// The configuration file sets useExtendedViewport to true; this snapshot opts out
+await smartuiSnapshot(driver, 'Checkout page', { useExtendedViewport: false });
+```
+
+Setting `useExtendedViewport` per snapshot requires SmartUI CLI v4.1.91 or later. Earlier versions do not reliably apply the snapshot value over the configuration file.
+
 **lazyLoadConfiguration**
 
 The `lazyLoadConfiguration` option is used to handle lazy-loaded content on web pages. This configuration helps ensure that all content is loaded before capturing screenshots, preventing incomplete captures due to lazy loading.

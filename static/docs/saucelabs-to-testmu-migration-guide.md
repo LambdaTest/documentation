@@ -9,7 +9,7 @@
         "name": "TestMu AI Capabilities",
         "codeSampleType": "code snippet",
         "programmingLanguage": "JavaScript",
-        "text": "SafariOptions browserOptions = new SafariOptions();\nbrowserOptions.setPlatformName(\"MacOS Tahoe\");\nbrowserOptions.setBrowserVersion(\"26\");\nHashMap ltOptions = new HashMap();\nltOptions.put(\"username\", \"\");\nltOptions.put(\"accessKey\", \"\");\nltOptions.put(\"w3c\", true);\nbrowserOptions.setCapability(\"LT:Options\", ltOptions);"
+        "text": "SafariOptions browserOptions = new SafariOptions();\nbrowserOptions.setPlatformName(\"MacOS Tahoe\");\nbrowserOptions.setBrowserVersion(\"26\");\nHashMap ltOptions = new HashMap();\nltOptions.put(\"username\", System.getenv(\"LT_USERNAME\"));\nltOptions.put(\"accessKey\", System.getenv(\"LT_ACCESS_KEY\"));\nltOptions.put(\"w3c\", true);\nbrowserOptions.setCapability(\"LT:Options\", ltOptions);"
       },
       {
         "@type": "SoftwareSourceCode",
@@ -23,24 +23,24 @@
         "name": "TestMu AI Capabilities",
         "codeSampleType": "code snippet",
         "programmingLanguage": "JavaScript",
-        "text": "DesiredCapabilities capabilities = new DesiredCapabilities();\ncapabilities.setCapability(\"browserName\", \"Safari\");\ncapabilities.setCapability(\"browserVersion\", \"26\");\nHashMap ltOptions = new HashMap();\nltOptions.put(\"username\", \"\");\nltOptions.put(\"accessKey\", \"\");\nltOptions.put(\"platformName\", \"MacOS Tahoe\");\nltOptions.put(\"visual\", true);\nltOptions.put(\"video\", true);\ncapabilities.setCapability(\"LT:Options\", ltOptions);"
+        "text": "DesiredCapabilities capabilities = new DesiredCapabilities();\ncapabilities.setCapability(\"browserName\", \"Safari\");\ncapabilities.setCapability(\"browserVersion\", \"26\");\nHashMap ltOptions = new HashMap();\nltOptions.put(\"username\", System.getenv(\"LT_USERNAME\"));\nltOptions.put(\"accessKey\", System.getenv(\"LT_ACCESS_KEY\"));\nltOptions.put(\"platformName\", \"MacOS Tahoe\");\nltOptions.put(\"visual\", true);\nltOptions.put(\"video\", true);\ncapabilities.setCapability(\"LT:Options\", ltOptions);"
       },
       {
         "@type": "SoftwareSourceCode",
         "name": "Test Scenario (TestMu AI Execution With Selenium 4 Capabilities)",
         "codeSampleType": "code snippet",
         "programmingLanguage": "Java",
-        "text": "// TextValidationTest.java\nimport org.openqa.selenium.WebDriver;\nimport org.openqa.selenium.remote.RemoteWebDriver;\nimport org.openqa.selenium.JavascriptExecutor;\nimport org.openqa.selenium.safari.SafariOptions;\n\nimport java.net.URL;\nimport java.util.HashMap;\n\npublic class TextValidationTest {\n\n\n    public static void main(String[] args) throws Exception {\n\n        String username = System.getenv(\"LT_USERNAME\") == null ? \n        \"Your LT Username\" : System.getenv(\"LT_USERNAME\");\n\n        String authkey = System.getenv(\"LT_ACCESS_KEY\") == null ? \n        \"Your LT AccessKey\\n\"  : System.getenv(\"LT_ACCESS_KEY\");\n\n        String GRID_URL = \"https://\" + username + \":\" + authkey + \"@hub.lambdatest.com/wd/hub\";\n\n\n        SafariOptions browserOptions = new SafariOptions();\n        browserOptions.setPlatformName(\"MacOS Tahoe\");\n        browserOptions.setBrowserVersion(\"26\");\n        HashMap ltOptions = new HashMap();\n        ltOptions.put(\"username\", \"\");\n        ltOptions.put(\"accessKey\", \"\");\n        ltOptions.put(\"project\", \"Text Validation Test\");\n        ltOptions.put(\"build\", \"Text Validation Test Build\");\n        ltOptions.put(\"w3c\", true);\n        browserOptions.setCapability(\"LT:Options\", ltOptions);\n\n        WebDriver driver = new RemoteWebDriver(new URL(GRID_URL), browserOptions);\n\n        try {\n\n            driver.get(\"https://ecommerce-playground.lambdatest.io/\");\n\n            String expectedText = \"This is a dummy website for Web Automation Testing\";\n            boolean isTextPresent = driver.getPageSource().contains(expectedText);\n\n            if (isTextPresent) {\n                ((JavascriptExecutor) driver).executeScript(\"lambda-status=passed\");\n                System.out.println(\"\u2714 Text validation PASSED\");\n            } else {\n                ((JavascriptExecutor) driver).executeScript(\"lambda-status=failed\");\n                System.out.println(\"\u2718 Text validation FAILED\");\n            }\n\n        } catch (Exception e) {\n            ((JavascriptExecutor) driver).executeScript(\"lambda-status=pass\");\n            e.printStackTrace();\n        } finally {\n            driver.quit();   // \ud83d\udd39 Correctly placed \u2013 runs even if test fails\n        }\n    }\n}"
+        "text": "// TextValidationTest.java\nimport org.openqa.selenium.WebDriver;\nimport org.openqa.selenium.remote.RemoteWebDriver;\nimport org.openqa.selenium.JavascriptExecutor;\nimport org.openqa.selenium.safari.SafariOptions;\n\nimport java.net.URL;\nimport java.util.HashMap;\n\npublic class TextValidationTest {\n\n\n    public static void main(String[] args) throws Exception {\n\n        String username = System.getenv(\"LT_USERNAME\") == null ? \n        \"Your LT Username\" : System.getenv(\"LT_USERNAME\");\n\n        String authkey = System.getenv(\"LT_ACCESS_KEY\") == null ? \n        \"Your LT AccessKey\"  : System.getenv(\"LT_ACCESS_KEY\");\n\n        String GRID_URL = \"https://\" + username + \":\" + authkey + \"@hub.lambdatest.com/wd/hub\";\n\n\n        SafariOptions browserOptions = new SafariOptions();\n        browserOptions.setPlatformName(\"MacOS Tahoe\");\n        browserOptions.setBrowserVersion(\"26\");\n        HashMap ltOptions = new HashMap();\n        ltOptions.put(\"username\", username);\n        ltOptions.put(\"accessKey\", authkey);\n        ltOptions.put(\"project\", \"Text Validation Test\");\n        ltOptions.put(\"build\", \"Text Validation Test Build\");\n        ltOptions.put(\"w3c\", true);\n        browserOptions.setCapability(\"LT:Options\", ltOptions);\n\n        WebDriver driver = new RemoteWebDriver(new URL(GRID_URL), browserOptions);\n\n        try {\n\n            driver.get(\"https://ecommerce-playground.lambdatest.io/\");\n\n            String expectedText = \"This is a dummy website for Web Automation Testing\";\n            boolean isTextPresent = driver.getPageSource().contains(expectedText);\n\n            if (isTextPresent) {\n                ((JavascriptExecutor) driver).executeScript(\"lambda-status=passed\");\n                System.out.println(\"\u2714 Text validation PASSED\");\n            } else {\n                ((JavascriptExecutor) driver).executeScript(\"lambda-status=failed\");\n                System.out.println(\"\u2718 Text validation FAILED\");\n            }\n\n        } catch (Exception e) {\n            ((JavascriptExecutor) driver).executeScript(\"lambda-status=failed\");\n            throw e;\n        } finally {\n            driver.quit();   // \ud83d\udd39 Correctly placed \u2013 runs even if test fails\n        }\n    }\n}"
       },
       {
         "@type": "SoftwareSourceCode",
         "name": "TestMu AI Execution With Selenium 3 Capabilities",
         "codeSampleType": "code snippet",
         "programmingLanguage": "Java",
-        "text": "// TextValidationTest.java \u2013 Selenium 3 Configuration\nimport org.openqa.selenium.WebDriver;\nimport org.openqa.selenium.remote.DesiredCapabilities;\nimport org.openqa.selenium.remote.RemoteWebDriver;\nimport org.openqa.selenium.JavascriptExecutor;\n\nimport java.net.URL;\nimport java.util.HashMap;\n\npublic class TextValidationTest {\n\n\n    public static void main(String[] args) throws Exception {\n\n        String username = System.getenv(\"LT_USERNAME\") == null ? \n        \"Your LT Username\" : System.getenv(\"LT_USERNAME\");\n\n        String authkey = System.getenv(\"LT_ACCESS_KEY\") == null ? \n        \"Your LT AccessKey\" : System.getenv(\"LT_ACCESS_KEY\");\n\n        String GRID_URL = \"https://\" + username + \":\" + authkey + \"@hub.lambdatest.com/wd/hub\";\n        \n        DesiredCapabilities capabilities = new DesiredCapabilities();\n        capabilities.setCapability(\"browserName\", \"Safari\");\n        capabilities.setCapability(\"browserVersion\", \"26\");\n        HashMap ltOptions = new HashMap();\n        ltOptions.put(\"username\", \"\");\n        ltOptions.put(\"accessKey\", \"\");\n        ltOptions.put(\"platformName\", \"MacOS Tahoe\");\n        ltOptions.put(\"visual\", true);\n        ltOptions.put(\"video\", true);\n        capabilities.setCapability(\"LT:Options\", ltOptions);\n\n        WebDriver driver = new RemoteWebDriver(new URL(GRID_URL), capabilities);\n\n        try {\n\n            driver.get(\"https://ecommerce-playground.lambdatest.io/\");\n\n            String expectedText = \"This is a dummy website for Web Automation Testing\";\n            boolean isTextPresent = driver.getPageSource().contains(expectedText);\n\n            if (isTextPresent) {\n                ((JavascriptExecutor) driver).executeScript(\"lambda-status=passed\");\n                System.out.println(\"\u2714 Text validation PASSED\");\n            } else {\n                ((JavascriptExecutor) driver).executeScript(\"lambda-status=failed\");\n                System.out.println(\"\u2718 Text validation FAILED\");\n            }\n\n        } catch (Exception e) {\n            ((JavascriptExecutor) driver).executeScript(\"lambda-status=pass\");\n            e.printStackTrace();\n        } finally {\n            driver.quit();   // \ud83d\udd39 Correctly placed \u2013 runs even if test fails\n        }\n    }\n}\n"
+        "text": "// TextValidationTest.java \u2013 Selenium 3 Configuration\nimport org.openqa.selenium.WebDriver;\nimport org.openqa.selenium.remote.DesiredCapabilities;\nimport org.openqa.selenium.remote.RemoteWebDriver;\nimport org.openqa.selenium.JavascriptExecutor;\n\nimport java.net.URL;\nimport java.util.HashMap;\n\npublic class TextValidationTest {\n\n\n    public static void main(String[] args) throws Exception {\n\n        String username = System.getenv(\"LT_USERNAME\") == null ? \n        \"Your LT Username\" : System.getenv(\"LT_USERNAME\");\n\n        String authkey = System.getenv(\"LT_ACCESS_KEY\") == null ? \n        \"Your LT AccessKey\" : System.getenv(\"LT_ACCESS_KEY\");\n\n        String GRID_URL = \"https://\" + username + \":\" + authkey + \"@hub.lambdatest.com/wd/hub\";\n        \n        DesiredCapabilities capabilities = new DesiredCapabilities();\n        capabilities.setCapability(\"browserName\", \"Safari\");\n        capabilities.setCapability(\"browserVersion\", \"26\");\n        HashMap ltOptions = new HashMap();\n        ltOptions.put(\"username\", username);\n        ltOptions.put(\"accessKey\", authkey);\n        ltOptions.put(\"platformName\", \"MacOS Tahoe\");\n        ltOptions.put(\"visual\", true);\n        ltOptions.put(\"video\", true);\n        capabilities.setCapability(\"LT:Options\", ltOptions);\n\n        WebDriver driver = new RemoteWebDriver(new URL(GRID_URL), capabilities);\n\n        try {\n\n            driver.get(\"https://ecommerce-playground.lambdatest.io/\");\n\n            String expectedText = \"This is a dummy website for Web Automation Testing\";\n            boolean isTextPresent = driver.getPageSource().contains(expectedText);\n\n            if (isTextPresent) {\n                ((JavascriptExecutor) driver).executeScript(\"lambda-status=passed\");\n                System.out.println(\"\u2714 Text validation PASSED\");\n            } else {\n                ((JavascriptExecutor) driver).executeScript(\"lambda-status=failed\");\n                System.out.println(\"\u2718 Text validation FAILED\");\n            }\n\n        } catch (Exception e) {\n            ((JavascriptExecutor) driver).executeScript(\"lambda-status=failed\");\n            throw e;\n        } finally {\n            driver.quit();   // \ud83d\udd39 Correctly placed \u2013 runs even if test fails\n        }\n    }\n}\n"
       }
     ],
-    "dateModified": "2026-08-17T11:15:18+05:30"
+    "dateModified": "2026-11-14T15:30:00+05:30"
   }) }}
 />
 
@@ -53,7 +53,7 @@ TestMu AI and Sauce Labs both offer the cloud-based Selenium Grid. Hence, you ca
 ## Authentication
 Firstly, you need to change the authentication in your configuration settings of your test suite. For running tests on TestMu AI Selenium Grid, you need to have a valid user_name and access_key to perform tests on our Grid. In case you do not have an account on TestMu AI, visit the TestMu AI signup page and create a new account.
 
-When migrating your Selenium 4 tests from BrowserStack to TestMu AI, the following updates are required in your existing code:
+When migrating your Selenium 4 tests from Sauce Labs to TestMu AI, the following updates are required in your existing code:
 
 1.  Get TestMu AI Credentials: You can find these credentials under Account Settings > [Password & Security](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/security/username-accesskey) and copy your Username and Access Key, then add them to the .env file to keep them safe from public exposure.
 
@@ -116,8 +116,8 @@ SafariOptions browserOptions = new SafariOptions();
 browserOptions.setPlatformName("MacOS Tahoe");
 browserOptions.setBrowserVersion("26");
 HashMap<String, Object> ltOptions = new HashMap<String, Object>();
-ltOptions.put("username", "<your_username>");
-ltOptions.put("accessKey", "<your_access_key>");
+ltOptions.put("username", System.getenv("LT_USERNAME"));
+ltOptions.put("accessKey", System.getenv("LT_ACCESS_KEY"));
 ltOptions.put("w3c", true);
 browserOptions.setCapability("LT:Options", ltOptions);
 ```
@@ -156,8 +156,8 @@ DesiredCapabilities capabilities = new DesiredCapabilities();
 capabilities.setCapability("browserName", "Safari");
 capabilities.setCapability("browserVersion", "26");
 HashMap<String, Object> ltOptions = new HashMap<String, Object>();
-ltOptions.put("username", "<your_username>");
-ltOptions.put("accessKey", "<your_access_key>");
+ltOptions.put("username", System.getenv("LT_USERNAME"));
+ltOptions.put("accessKey", System.getenv("LT_ACCESS_KEY"));
 ltOptions.put("platformName", "MacOS Tahoe");
 ltOptions.put("visual", true);
 ltOptions.put("video", true);
@@ -166,7 +166,7 @@ capabilities.setCapability("LT:Options", ltOptions);
 
 ## Hands On Guide -  TestMu AI Migration
 
-Let’s walk through a practical example demonstrating how to migrate a Selenium 4 test to TestMu AI. In this scenario, we launch the latest Chrome browser on a Windows 10 machine.
+Let’s walk through a practical example demonstrating how to migrate a Selenium 4 test to TestMu AI. In this scenario, we launch Safari 26 on macOS Tahoe.
 
 **Test Scenario**:
 
@@ -190,7 +190,7 @@ String username = System.getenv("LT_USERNAME") == null ?
 "Your LT Username" : System.getenv("LT_USERNAME");
 
 String authkey = System.getenv("LT_ACCESS_KEY") == null ?
-"Your LT AccessKey\n"  : System.getenv("LT_ACCESS_KEY");
+"Your LT AccessKey"  : System.getenv("LT_ACCESS_KEY");
 
 String GRID_URL = "https://" + username + ":" + authkey + "@hub.lambdatest.com/wd/hub";
 
@@ -198,8 +198,8 @@ SafariOptions browserOptions = new SafariOptions();
 browserOptions.setPlatformName("MacOS Tahoe");
 browserOptions.setBrowserVersion("26");
 HashMap<String, Object> ltOptions = new HashMap<String, Object>();
-ltOptions.put("username", "<your_username>");
-ltOptions.put("accessKey", "<your_access_key>");
+ltOptions.put("username", username);
+ltOptions.put("accessKey", authkey);
 ltOptions.put("project", "Text Validation Test");
 ltOptions.put("build", "Text Validation Test Build");
 ltOptions.put("w3c", true);
@@ -223,8 +223,8 @@ System.out.println("✘ Text validation FAILED");
 }
 
 } catch (Exception e) {
-((JavascriptExecutor) driver).executeScript("lambda-status=pass");
-e.printStackTrace();
+((JavascriptExecutor) driver).executeScript("lambda-status=failed");
+throw e;
 } finally {
 driver.quit();   // 🔹 Correctly placed – runs even if test fails
 }
@@ -258,8 +258,8 @@ DesiredCapabilities capabilities = new DesiredCapabilities();
 capabilities.setCapability("browserName", "Safari");
 capabilities.setCapability("browserVersion", "26");
 HashMap<String, Object> ltOptions = new HashMap<String, Object>();
-ltOptions.put("username", "<your_username>");
-ltOptions.put("accessKey", "<your_access_key>");
+ltOptions.put("username", username);
+ltOptions.put("accessKey", authkey);
 ltOptions.put("platformName", "MacOS Tahoe");
 ltOptions.put("visual", true);
 ltOptions.put("video", true);
@@ -283,8 +283,8 @@ System.out.println("✘ Text validation FAILED");
 }
 
 } catch (Exception e) {
-((JavascriptExecutor) driver).executeScript("lambda-status=pass");
-e.printStackTrace();
+((JavascriptExecutor) driver).executeScript("lambda-status=failed");
+throw e;
 } finally {
 driver.quit();   // 🔹 Correctly placed – runs even if test fails
 }
