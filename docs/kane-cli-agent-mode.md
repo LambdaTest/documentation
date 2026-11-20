@@ -127,7 +127,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "text": "{\"type\": \"cancel\"}"
       }
     ],
-    "dateModified": "2026-07-23T20:51:45+05:30"
+    "dateModified": "2026-11-20"
   }) }}
 />
 
@@ -200,7 +200,7 @@ Kane CLI outputs one JSON object per line (NDJSON) to stdout:
 
 ## The `run_end` Event
 
-`run_end` is always the last line. It contains the complete test result:
+`run_end` is always the last line of a run that started (see [Exit Codes](#exit-codes) for runs refused before they start). It contains the complete test result:
 
 ```json
 {
@@ -268,6 +268,34 @@ kane-cli run "..." --agent 2>/dev/null | tail -1 | jq -r '.status'
 kane-cli run "go to example.com, store the price as 'price'" --agent 2>/dev/null \
   | tail -1 | jq -r '.final_state.price'
 ```
+
+---
+
+## Exit Codes
+
+Check the exit code before you parse stdout. A run refused before it starts can exit `2` with no `run_end` line, so reading only the last line can miss the failure.
+
+```bash
+kane-cli run "..." --agent --headless > run.ndjson; echo "exit=$?"
+```
+
+Exit codes for `kane-cli run` and `kane-cli testmd run`:
+
+| Code | Meaning |
+|------|---------|
+| `0` | Passed. |
+| `1` | Failed: the objective ran but did not pass (for `testmd run`, a non-optional step failed), or the results upload failed. An unreachable start URL also exits `1`, after about 45 seconds, and the run spends credits (observed 2026-11-19). |
+| `2` | Error: sign-in or auth failure, configuration, no start URL, a Chrome launch failure or crash, an unknown subcommand, or another infrastructure issue. A run refused before it starts has no `run_end` line. |
+| `3` | Timeout or cancelled. |
+
+Other commands keep the same numbers with different meanings:
+
+| Command | `0` | `1` | `2` | `3` |
+|---------|-----|-----|-----|-----|
+| `kane-cli testrun run` | All members passed | At least one member failed or broke | Usage error, invalid plan (preflight failures) or auth error; nothing ran | Cancelled; there is no suite timeout |
+| Assurance commands with `--mode agent` | Complete | Runtime failure | Usage, auth or refusal; nothing was mutated, with the exceptions listed in [Automation](/support/docs/kane-cli-assurance-automation/#exit-codes) | Paused and resumable within 24 hours, not a timeout; for `context push`, `context pull` and a stopped rebase, a person has to decide something |
+
+The assurance commands take `--mode agent`, not `--agent`, and their stream ends with a `done` event instead of `run_end`. See [testrun](/support/docs/kane-cli-testrun/) and [Automation](/support/docs/kane-cli-assurance-automation/) for the full rules.
 
 ---
 

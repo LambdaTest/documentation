@@ -75,7 +75,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-09T19:10:37+05:30"
+    "dateModified": "2026-11-20T14:00:00+05:30"
   }) }}
 />
 This page outlines how you can run your first End-to-End (E2E) testing execution job on HyperExecute.
@@ -86,7 +86,9 @@ We recommend running your first test execution job using a sample project on Hyp
 
 1. [**Using Quick Run**](/support/docs/hyperexecute-running-your-first-job/#1-using-quick-run): Execute tests directly from the HyperExecute Portal. ([Recommended](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/quickstart) for new users) 
 2. [**Using Local System**](/support/docs/hyperexecute-running-your-first-job/#2-using-local-system): Execute tests from your Local System. (Requires [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/))
-3. [**Using GitPod**](/support/docs/hyperexecute-running-your-first-job/#3-using-gitpod): Execute tests using GitPod. (Requires a [GitPod](https://gitpod.io/login/) account)
+3. [**Using the HyperExecute Agent Skill**](/support/docs/hyperexecute-running-your-first-job/#3-using-the-hyperexecute-agent-skill): Generate and run tests using an AI coding assistant with the HyperExecute Agent Skill.
+
+On the [Quickstart](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/quickstart) page these options are labelled **Quick Run**, **Run on Local System** and **Run via Agent Skills**. The Quickstart page needs a signed-in account; to start from public resources only (for example from CI or an AI coding agent), see [Run without the Quickstart page](#run-without-the-quickstart-page).
 
 ## 1. Using Quick Run
 
@@ -103,8 +105,10 @@ The platform automatically gets the instructions from the HyperExecute YAML file
 
 **Step 5:** Click on **View Test Result** to navigate to [HyperExecute Dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute/jobs) where you can see the job getting executed and the test results.
 
+> After your first job, you can open the Quickstart page again from the HyperExecute dashboard: select **Help** > **Quick Start**.
+
 <div className="storylane-iframe">
-  <script async src="https://js.storylane.io/js/v2/storylane.js"></script>
+  <script async src="https://js.storylane.io/js/v2/storylane.js" />
   <div className="sl-embed">
     <iframe loading="lazy" className="sl-demo" src="https://app.storylane.io/demo/ydgq44tmjpdc?embed=inline" name="sl-embed" allow="fullscreen" allowfullscreen></iframe>
   </div>
@@ -119,7 +123,7 @@ The platform automatically gets the instructions from the HyperExecute YAML file
 To run your Test Scripts on HyperExecute from you Local system, you'll need the following:
 - [HyperExecute YAML](/support/docs/deep-dive-into-hyperexecute-yaml/) file which contains all the necessary instructions.
 - [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) in order to initiate a test execution Job .
-- Your TestMu AI [Username and Access key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/)
+- Your TestMu AI [Username and Access key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/), found under **Profile** > **Account Settings** > **Password & Security** ([accounts.lambdatest.com/security/username-accesskey](https://accounts.lambdatest.com/security/username-accesskey))
 
 We will be taking care of everything one by one, just follow the steps given below: 
 
@@ -144,7 +148,7 @@ We will be taking care of everything one by one, just follow the steps given bel
 **Step 8:** Once your Job is running, you can click on **View Test Results** to navigate to HyperExecute Dashboard where you can see the job getting executed along with the test results.
 
 <div className="storylane-iframe">
-  <script async src="https://js.storylane.io/js/v2/storylane.js"></script>
+  <script async src="https://js.storylane.io/js/v2/storylane.js" />
   <div className="sl-embed">
     <iframe loading="lazy" className="sl-demo" src="https://app.storylane.io/demo/qn3z533xbk7l?embed=inline" name="sl-embed" allow="fullscreen" allowfullscreen></iframe>
   </div>
@@ -165,24 +169,48 @@ In case of MAC, if you get a permission denied warning while executing CLI, simp
 
 > If you are facing any issues in running your first job? Watch our [Webinar Video](/support/docs/hyperexecute-running-your-first-job/#hyperexecute-webinar-video)
 
+### Run without the Quickstart page
+
+The Quickstart page needs a signed-in account. From CI, a terminal without a browser or an AI coding agent, you can run the same first job from public resources:
+
+**Step 1:** Copy your username and access key from **Profile** > **Account Settings** > **Password & Security** ([accounts.lambdatest.com/security/username-accesskey](https://accounts.lambdatest.com/security/username-accesskey)). Keep them in environment variables or CI secrets, never in your YAML or code.
+
+**Step 2:** Clone a sample project, for example the [TestNG Selenium sample](https://github.com/LambdaTest/testng-selenium-hyperexecute-sample). Its HyperExecute YAML files are in the `yaml/` folder.
+
+**Step 3:** Download the HyperExecute CLI for your OS from the [download table](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/#download-the-hyperexecute-cli) into the project root.
+
+**Step 4:** On Linux or macOS, export your credentials and start the job:
+
+```bash
+export LT_USERNAME="your-username"
+export LT_ACCESS_KEY="your-access-key"
+chmod u+x ./hyperexecute
+./hyperexecute --user "$LT_USERNAME" --key "$LT_ACCESS_KEY" --config yaml/linux/v2/testng_hyperexecute_autosplit_sample.yaml
+```
+
+**Step 5:** Once you see the `Job Link` in the CLI logs, open it, or the [HyperExecute dashboard](https://hyperexecute.lambdatest.com/hyperexecute/jobs), to follow the job and its results.
+
 ***
 
 ## 3. Using Gitpod
 
-**Step 1:** Go to the [Quickstart](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/quickstart) page.
+You can generate production-ready HyperExecute tests and run them directly from your AI coding assistant (such as Claude or Cursor) using the HyperExecute Agent Skill. The skill writes the HyperExecute YAML for your project and runs the HyperExecute CLI for you. On the Quickstart page, this is the **Run via Agent Skills** option.
 
-**Step 2:** Choose your test automation framework, select **Run test on Gitpod** and click on **Get Started**.
+**Step 1:** Install the skill in your project:
 
-  <img loading="lazy" src={require('../assets/images/hyperexecute/getting_started/run-first-job/11.png').default} alt="Image"  className="doc_img"/>
+```bash
+git clone https://github.com/LambdaTest/agent-skills.git
+cp -r agent-skills/hyperexecute-skill .claude/skills/
 
-**Step 3:** You will need to login into your Gitpod account, or create a new one. <br/>
-  (If you are creating a new account, choose your preferred editor. We recommend VS Code)
+# Or for Cursor / Copilot
+cp -r agent-skills/hyperexecute-skill .cursor/skills/
+```
 
-  <img loading="lazy" src={require('../assets/images/hyperexecute/getting_started/run-first-job/12.png').default} alt="Image"  className="doc_img"/>
+**Step 2:** Export your username and access key as `LT_USERNAME` and `LT_ACCESS_KEY` (see [Run without the Quickstart page](#run-without-the-quickstart-page)).
 
-**Step 4:** As you are running a sample project, Fetching of the Test Scripts, [HyperExecute YAML](/support/docs/deep-dive-into-hyperexecute-yaml/), [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) and Triggering your tests using the `Execution Command` will be automated. 
+**Step 3:** Ask your assistant to run your tests on HyperExecute.
 
-**Step 5:** Once you see the `Job Link` in the logs, you can visit the [HyperExecute dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute) to see the tests getting executed.
+For the skill's contents and other install options, refer to [Using the HyperExecute Agent Skill with TestMu AI](/support/docs/getting-started-with-hyperexecute/#using-the-hyperexecute-agent-skill-with-testmu-ai).
 
 ## HyperExecute Webinar Video
 

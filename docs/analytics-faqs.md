@@ -145,3 +145,7 @@ Analytics is currently supported by 3 <BrandName /> products
 Other <BrandName /> products will be added soon with Analytics support.
 :::
 
+## Which plans include Insights?
+
+Insights is not sold as a separate product: it ships with <BrandName />'s execution products. Paid plans such as Virtual Live and the Desktop automation plans list test insights; the free Live Testing plan does not include them, and advanced analytics (whitelabeled dashboards, usage analytics and advanced data retention) are part of Enterprise plans. See [pricing](https://www.testmuai.com/pricing/), or contact the <BrandName /> team to confirm what your plan includes.
+

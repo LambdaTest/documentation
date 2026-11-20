@@ -98,7 +98,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         "text": "ChromeOptions browserOptions = new ChromeOptions();\nbrowserOptions.setPlatformName(\"Windows 10\");\nbrowserOptions.setBrowserVersion(\"latest\");\n\nHashMap<String, Object> ltOptions = new HashMap<String, Object>();\nltOptions.put(\"build\", \"My First Test\");\nltOptions.put(\"name\", \"Sample Test - Single\");\nltOptions.put(\"w3c\", true);\n\nbrowserOptions.setCapability(\"LT:Options\", ltOptions);"
       }
     ],
-    "dateModified": "2026-09-09T19:13:32+05:30"
+    "dateModified": "2026-11-20T00:00:00+05:30"
   }) }}
 />
 
@@ -127,9 +127,9 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         {
           "@type": "HowToStep",
           "position": 3,
-          "name": "Step 3: Configure Your Test Capabilities",
-          "text": "Define which browser, version, and OS your test runs on. The sample project includes a preconfigured capabilities object that tells the grid which browser and OS to use. Here is an example: You can customize these values to test on any browser, version, or OS. Use the Capabilities Generator to auto-generate the capabilities code for your target configuration. For the full list of supported capabilities, see Desired Capabilities in Selenium.",
-          "url": "https://www.testmuai.com/support/docs/testmu-running-your-first-selenium-test/#step-3-configure-your-test-capabilities"
+          "name": "Step 3: Set Your Credentials",
+          "text": "Add your TestMu AI credentials as environment variables so the test can authenticate with the grid. Copy your Username and Access Key from the Password & Security page of Account Settings in your Profile and export them as LT_USERNAME and LT_ACCESS_KEY.",
+          "url": "https://www.testmuai.com/support/docs/testmu-running-your-first-selenium-test/#step-3-set-your-credentials"
         },
         {
           "@type": "HowToStep",
@@ -169,9 +169,8 @@ All the code used in this guide is available in the sample repository. Clone it 
 Make sure you have the following set up before you start.
 
 1. [Create a TestMu AI account](https://www.testmuai.com/register/) if you don't have one.
-2. Get your **Username** and **Access Key** from the [TestMu AI Dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard).
-3. Install [Java Development Kit (JDK)](https://www.oracle.com/java/technologies/downloads/) 11 or later.
-4. Install [Maven](https://maven.apache.org/).
+2. Get your **Username** and **Access Key** from **Profile > Account Settings > [Password & Security](https://accounts.lambdatest.com/security/username-accesskey)**.
+3. Install [Python](https://www.python.org/downloads/) 3.7 or later (`pip` is included).
 
 ## Step 1: Clone the Sample Project
 ---
@@ -188,7 +187,7 @@ cd java-testng-selenium
 
 Add your TestMu AI credentials as environment variables so the test can authenticate with the grid.
 
-Visit the [TestMu AI Dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard), navigate to the left sidebar, and select **Credentials**. Copy your **Username** and **Access Key**, then set them as environment variables:
+In your TestMu AI account, go to **Profile > Account Settings > [Password & Security](https://accounts.lambdatest.com/security/username-accesskey)**. Copy your **Username** and **Access Key**, then set them as environment variables:
 
 <Tabs className="docs__val">
 

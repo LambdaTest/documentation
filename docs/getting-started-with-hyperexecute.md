@@ -92,7 +92,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "name": "The hyperexecute-skill package includes",
         "codeSampleType": "code snippet",
         "programmingLanguage": "text",
-        "text": "hyperexecute-skill/\n\u251c\u2500\u2500 SKILL.md\n\u2514\u2500\u2500 reference/\n    \u251c\u2500\u2500 playbook.md\n    \u2514\u2500\u2500 advanced-patterns.md"
+        "text": "hyperexecute-skill/\n\u251c\u2500\u2500 SKILL.md\n\u251c\u2500\u2500 reference/\n\u2502   \u251c\u2500\u2500 ci-cd.md\n\u2502   \u251c\u2500\u2500 cli.md\n\u2502   \u251c\u2500\u2500 frameworks.md\n\u2502   \u251c\u2500\u2500 security.md\n\u2502   \u251c\u2500\u2500 troubleshooting.md\n\u2502   \u2514\u2500\u2500 yaml-patterns.md\n\u2514\u2500\u2500 scripts/\n    \u251c\u2500\u2500 build-command.js\n    \u251c\u2500\u2500 doctor.js\n    \u251c\u2500\u2500 summarize-artifacts.js\n    \u2514\u2500\u2500 validate-config.js"
       },
       {
         "@type": "SoftwareSourceCode",
@@ -103,7 +103,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "text": "# Clone the repo and copy the skill you need\ngit clone https://github.com/LambdaTest/agent-skills.git\ncp -r agent-skills/hyperexecute-skill .claude/skills/\n\n# Or for Cursor / Copilot\ncp -r agent-skills/hyperexecute-skill .cursor/skills/"
       }
     ],
-    "dateModified": "2026-09-09T19:10:37+05:30"
+    "dateModified": "2026-11-20T14:00:00+05:30"
   }) }}
 />
 Welcome to HyperExecute, **an AI-Native Test Orchestration Cloud Platform**, designed to accelerate your End-to-End (E2E) testing, enabling test automation teams worldwide to achieve an accelerated time to market by providing **JIT (Just-in-time) testing infrastructure**.
@@ -159,13 +159,25 @@ Ready to experience the power of HyperExecute? Getting started is easy. We’ve 
 
      <a href="https://www.testmuai.com/support/docs/hyperexecute-running-your-first-job/#2-using-local-system" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/hyp.png').default} alt="Image" className="doc_img"/>Learn More</a>
   </TabItem>
-  <TabItem value="gitpod" label="Run on Gitpod">
-    Run your tests in a fully managed online development environment, without any local installations or configurations.
+  <TabItem value="skill" label="Run via Agent Skills">
+     Let an AI coding assistant such as Claude Code or Cursor set up and run your tests on HyperExecute with the HyperExecute Agent Skill.
 
-    <a href="https://www.testmuai.com/support/docs/hyperexecute-running-your-first-job/#3-using-gitpod" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/hyp.png').default} alt="Image" className="doc_img"/>Learn More</a>
+     <a href="https://www.testmuai.com/support/docs/hyperexecute-running-your-first-job/#3-using-the-hyperexecute-agent-skill" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/hyp.png').default} alt="Image" className="doc_img"/>Learn More</a>
   </TabItem>
 </Tabs>
 :::
+
+The same three options appear on the HyperExecute **Quickstart** page. Each one is explained step by step in [Running Your First Job on HyperExecute](/support/docs/hyperexecute-running-your-first-job/):
+
+- **Quick Run**: [run a sample project from the HyperExecute portal](/support/docs/hyperexecute-running-your-first-job/#1-using-quick-run).
+- **Run on Local System**: [run a sample project from your machine with the HyperExecute CLI](/support/docs/hyperexecute-running-your-first-job/#2-using-local-system).
+- **Run via Agent Skills**: [let an AI coding assistant run your tests with the HyperExecute Agent Skill](/support/docs/hyperexecute-running-your-first-job/#3-using-the-hyperexecute-agent-skill).
+
+Once the [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) and a [HyperExecute YAML](/support/docs/deep-dive-into-hyperexecute-yaml/) file are in your project root, and your username and access key are exported as `LT_USERNAME` and `LT_ACCESS_KEY`, one command starts a job:
+
+```bash
+./hyperexecute --user "$LT_USERNAME" --key "$LT_ACCESS_KEY" --config hyperexecute.yaml
+```
 
 <!-- Each method provides a streamlined experience with sample projects. Our step-by-step guide walks you through the entire process, from selecting your framework to viewing your test results on the HyperExecute Dashboard. -->
 
@@ -323,19 +335,30 @@ The hyperexecute-skill package includes:
 ```
 hyperexecute-skill/
 ├── SKILL.md
-└── reference/
-    ├── playbook.md
-    └── advanced-patterns.md
+├── reference/
+│   ├── ci-cd.md
+│   ├── cli.md
+│   ├── frameworks.md
+│   ├── security.md
+│   ├── troubleshooting.md
+│   └── yaml-patterns.md
+└── scripts/
+    ├── build-command.js
+    ├── doctor.js
+    ├── summarize-artifacts.js
+    └── validate-config.js
 ```
 
 It provides structured guidance for:
 
-* Project structure and setup
-* Dependency configuration
-* Local execution
-* TestMu AI cloud execution
-* Debugging patterns
-* CI/CD integration
+* HyperExecute CLI usage and flags (`reference/cli.md`)
+* HyperExecute YAML patterns (`reference/yaml-patterns.md`)
+* Framework recipes (`reference/frameworks.md`)
+* CI/CD integration (`reference/ci-cd.md`)
+* Security rules for credentials (`reference/security.md`)
+* Debugging failed jobs (`reference/troubleshooting.md`)
+
+The `scripts/` folder holds the skill's helper scripts.
 
 
 ### Installing HyperExecute Agent Skill
