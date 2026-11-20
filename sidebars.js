@@ -1664,6 +1664,7 @@ module.exports = {
           "espresso-bitrise",
           "bitrise-integration-xcuitest",
           "buildkite-integration",
+          "espresso-appcircle",
         ],
       },
       {
