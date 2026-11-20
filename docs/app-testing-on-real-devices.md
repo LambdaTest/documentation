@@ -74,9 +74,15 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 # Getting Started with Real Device App Testing
 
-Real device app testing is the process of testing a mobile application to ensure that their functionality and usability is not comprised when installed across multiple Android and iOS devices. With <BrandName />, you can test mobile applications manually to ensure they perform seamlessly across 3000 + real mobile devices.
+Real device app testing is the process of testing a mobile application to ensure that their functionality and usability is not compromised when installed across multiple Android and iOS devices. With <BrandName />, you can test mobile applications manually to ensure they perform seamlessly across 50,000+ real Android and iOS devices.
 
 For the basics, see our guide on [how to test on real devices](https://www.testmuai.com/blog/real-device-testing/).
+
+:::info Plan requirement
+
+Real devices are not part of the free plan or the Virtual Live plan. Manual app testing on real devices needs the Real Device Plus Live plan or an Enterprise plan. See [pricing](https://www.testmuai.com/pricing/) for the current plans.
+
+:::
 
 <div className="ytframe"> 
 <div className="youtube" data-embed="k-DgcPraWns" data-loading-attribute="eager">

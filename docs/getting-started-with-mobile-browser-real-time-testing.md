@@ -83,11 +83,17 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 />
 Real-Time Mobile Web Browser Testing allows you to test websites and web applications across different mobile browsers and operating systems, such as Android, iOS, and ChromeOS, in real-time. This process helps ensure that your web applications are fully functional, visually consistent, and optimized for various mobile devices, enhancing the user experience across different platforms. Using <BrandName />, developers, testers, and QA professionals can validate their web applications without the need for physical devices, all from a unified, user-friendly interface.
 
+:::info Free plan limits
+
+The free plan includes 1 parallel session and 2 live sessions a month, each limited to 2 minutes. Real devices, opened from **Switch to Real Devices**, are not part of the free plan or the Virtual Live plan: they need the Real Device Plus Live plan or an Enterprise plan. See [pricing](https://www.testmuai.com/pricing/) for the current plans.
+
+:::
+
 ## Launch the Virtual Machine
 
-- Navigate to the Real Time Testing section.
-- Select **Virtual Mobile** from the **Web Browser Testing** section.
-- To test a website, enter its URL and select your **Device** - Andoroid, iOS, or [ChromeOS](/support/docs/chrome-os-testing/), and its version.
+- From the left sidebar, open **Real Time**.
+- Under **Web Browser Testing**, select **Virtual Mobile**.
+- To test a website, enter its URL and select your **Device** - Android, iOS, or [ChromeOS](/support/docs/chrome-os-testing/), and its version. To try the flow without your own site, use the <BrandName /> sample page [https://www.testmuai.com/selenium-playground/](https://www.testmuai.com/selenium-playground/).
 - Afterwards click on the **Start** button to initiate the testing process.
 
 <video class="right-side" width="80%" controls id="vid">
