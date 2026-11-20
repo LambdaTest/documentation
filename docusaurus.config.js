@@ -13,6 +13,11 @@ function docsNoIndex() {
 }
 
 module.exports = {
+  // Search needs a Typesense host and search key. Local builds without them
+  // (HOST/API unset in .env) hide the search box instead of crashing on click.
+  customFields: {
+    typesenseEnabled: Boolean(process.env.HOST && process.env.API),
+  },
   title: 'TestMu AI (Formerly LambdaTest)',
   tagline: 'Ensure your web-apps work seamlessly on every desktop and mobile browsers.',
   url: 'https://www.testmuai.com',
