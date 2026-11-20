@@ -160,13 +160,17 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         "text": "-Dmaven.wagon.http.ssl.insecure=true -Dmaven.wagon.http.ssl.allowall=true -Dmaven.wagon.http.ssl.ignore.validity.dates=true"
       }
     ],
-    "dateModified": "2026-09-09T19:10:37+05:30"
+    "dateModified": "2026-11-11T14:00:00+05:30"
   }) }}
 />
 
 # HyperExecute YAML FAQs
 
 ***
+
+:::info On-premise deployments
+On-prem runs Linux and Windows only, so do not set `runson` to a macOS value. See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/#step-4-prepare-your-yaml).
+:::
 
 ## 1. I want to run all my feature files and scenarios listed in a folder. How can I do that without listing all of them explicitly in the YAML file?
 
