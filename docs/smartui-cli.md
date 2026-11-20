@@ -191,14 +191,14 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "name": "Specify a custom build name to group your screenshots in the following way",
         "codeSampleType": "code snippet",
         "programmingLanguage": "Shell",
-        "text": "npx smartui capture urls.json --buildName \"Sample Build Name\" --config .smartui.json"
+        "text": "npx smartui capture urls.json --config .smartui.json --buildName \"Sample Build Name\""
       },
       {
         "@type": "SoftwareSourceCode",
         "name": "Setup with Continuous Integration (CI)",
         "codeSampleType": "code snippet",
         "programmingLanguage": "YAML",
-        "text": "steps:\n  - name: Running SmartUI CLI Tests\n    run: |\n      npm install -g @lambdatest/smartui-cli\n      npx playwright install-deps\n      smartui capture urls.json --config smartui-web.json"
+        "text": "steps:\n  - name: Running SmartUI CLI Tests\n    run: |\n      npm install -g @lambdatest/smartui-cli\n      npx playwright install-deps\n      smartui capture urls.json --config .smartui.json"
       },
       {
         "@type": "SoftwareSourceCode",
@@ -272,6 +272,7 @@ With SmartUI CLI, you can seamlessly perform visual regression testing on the <B
 ## Prerequisites for running SmartUI CLI
 
 - Basic understanding of Command Line Interface is required.
+- Node.js `v20.3` or above and npm, required by SmartUI CLI `v4.x.x` (the current major version of `@lambdatest/smartui-cli`).
 - Login to [<BrandName /> SmartUI](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/) with your credentials.
 
 The following steps will guide you in running your first Visual Regression test on <BrandName /> platform using SmartUI CLI.
@@ -383,6 +384,8 @@ You can now configure your project settings on using various available options t
 ```bash
 npx smartui config:create .smartui.json
 ```
+
+The file name is your choice: `config:create` writes the file at the path you pass, and the capture command reads it through `--config <file>`. This guide uses `.smartui.json` in every command, in the form `npx smartui capture urls.json --config .smartui.json`.
 
 Once, the configuration file will be created, you will be seeing the default configuration pre-filled in the configuration file:
 
@@ -559,7 +562,7 @@ Specify a custom build name to group your screenshots in the following way:
 <VerifiedTag value="Verified" />
 
 ```bash
-npx smartui capture urls.json --buildName "Sample Build Name" --config .smartui.json
+npx smartui capture urls.json --config .smartui.json --buildName "Sample Build Name"
 ```
 
 > Note:
@@ -579,7 +582,7 @@ steps:
     run: |
       npm install -g @lambdatest/smartui-cli
       npx playwright install-deps
-      smartui capture urls.json --config smartui-web.json
+      smartui capture urls.json --config .smartui.json
 ```
 
 ## SmartUI CLI Options and Keys

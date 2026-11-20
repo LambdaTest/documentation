@@ -314,7 +314,7 @@ To ensure the binary you’ve downloaded is genuine and has not been tampered wi
 <Tabs className="docs__val">
 
 <TabItem value="zsh" label="Linux" default>
-You can verify the code signature of the binary using the `openssh` command. Download the [Signature](https://downloads.lambdatest.com/hyperexecute/linux/hyperexecute.sig) and [Public Key](https://downloads.lambdatest.com/hyperexecute/linux/public_key.pem), keep it with your CLI, and paste the location in the below command:
+You can verify the code signature of the binary using the `openssl` command. Download the [Signature](https://downloads.lambdatest.com/hyperexecute/linux/hyperexecute.sig) and [Public Key](https://downloads.lambdatest.com/hyperexecute/linux/public_key.pem), keep it with your CLI, and paste the location in the below command:
 
 ```bash
 openssl dgst -sha256 -verify <PUBLIC_KEY_PATH> -signature <SIGNATURE_PATH> <CLI_BINARY_PATH>
