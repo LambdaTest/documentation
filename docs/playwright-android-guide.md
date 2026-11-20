@@ -636,7 +636,7 @@ Continue with these related guides to extend your Playwright coverage on TestMu 
 
 ## Handle Pop-ups During Test Execution
 
-Some websites show a pop-up, such as a notification prompt, after the page loads. The pop-up blocks clicks on the elements behind it. Add a notification handler that clicks the pop-up's dismiss button when it appears and continues when it does not. This lets the same test pass whether or not the pop-up is shown.
+Some websites show a pop-up, such as a notification prompt, after the page loads. The pop-up blocks clicks on the elements behind it. Add a notification handler that clicks the pop-up's dismiss button when it appears and continues when it does not. This lets the same test pass whether or not the pop-up is shown. Below is a sample snippet demonstrating how to handle a notification pop-up after the website has loaded.
 
 <Tabs className="docs__val">
 
