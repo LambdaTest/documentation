@@ -103,10 +103,12 @@ Follow these seven steps in the dashboard. Each step builds on the previous one.
 
 - **Agent Name** (required).
 - **Description** (optional).
-- **Agent Type** (required): Chat Agent, Voice Agent, Video Agent, Phone Caller Agent (inbound or outbound), IVR Agent, or Image Analyzer. This walkthrough uses **Chat Agent**.
+- **Agent Type** (required): Chat Agent, Voice Agent, Video Agent, Phone Caller Agent (inbound or outbound), IVR Agent, WhatsApp Agent, or Image Analyzer. This walkthrough uses **Chat Agent**.
 - **Evaluation Mode** (required for Chat Agent): select **Pre-production testing**, which uploads requirements, generates test scenarios, and simulates conversations against your agent. To grade real production transcripts instead, see [Grade Production Chat Transcripts](/support/docs/chat-agent/#grade-production-chat-transcripts).
 
 Click **Create New Agent** to confirm.
+
+Chat, voice, video, and image analyzer agents are available to every organization. IVR, phone caller, and WhatsApp agents stay grayed out on **Create New Agent**, with the reason shown, until they are enabled for your organization. To keep an agent at the top of the agents list for everyone in your organization, pin it from its card menu with **Pin Agent**. **Unpin Agent** removes the pin.
 
 <img loading="lazy" src={require('../assets/images/agent-to-agent/create-chat-agent-evaluation-mode.webp').default} alt="Create New Agent panel with Chat Agent selected and the Pre-production testing and Post-production analysis evaluation modes" width="1899" height="942"  className="doc_img"/>
 
@@ -131,16 +133,16 @@ Click **Generate Scenarios**.
 **Step 4: Review the generated scenarios.** The **Scenarios** tab lists every scenario, with a count on the tab.
 
 - Each row shows the scenario name, its persona (such as "The Multitasker"), and its language.
-- Use **Search scenario** or the **Scenario Type** dropdown to narrow the list.
+- Use **Search scenario** or the **Scenario Type** dropdown to narrow the list. The dropdown filters by all five types: **Happy Path**, **Negative**, **Edge Case**, **Red Team**, and **Integration**.
 - Use the pencil icon to edit a scenario, or the trash icon to delete it.
 - Click **Create New Suite** to group scenarios for a run.
 
 <img loading="lazy" src={require('../assets/images/agent-to-agent/generated-test-scenarios-list-agent-testing.webp').default} alt="Scenarios tab listing generated test scenarios with persona and language tags" width="1914" height="948"  className="doc_img"/>
 
-**Step 5: Edit a scenario if needed.** Click the pencil icon on a scenario to open **Edit Scenario**.
+**Step 5: Edit a scenario if needed.** Click a scenario, or the pencil icon on it, to open the scenario on its own page. The page shows its name, description, validation criteria, and first message, with its persona, interaction mode, maximum conversation turns, and test profile alongside.
 
 - Change the **Scenario Name**, **Description**, or **Validation Criteria**.
-- Click **Save Scenario** to keep your changes, or **Cancel** to discard them.
+- Click **Save Scenario** to keep your changes, or **Cancel** to discard them. You can also delete the scenario from this page.
 
 <img loading="lazy" src={require('../assets/images/agent-to-agent/edit-test-scenario-validation-criteria.webp').default} alt="Edit Scenario panel showing scenario name, description and validation criteria fields" width="1911" height="945"  className="doc_img"/>
 
@@ -177,4 +179,4 @@ If you are testing a voice bot, the platform generates audio for each test case 
 - See how to [connect a chat agent over its API](/support/docs/chat-agent-api-integration/) for the API URL and authentication used in step 6.
 - See the [chat agent guide](/support/docs/chat-agent/) for red teaming, custom metrics, Data Validation, and scheduled runs.
 - See how to [test agents from the terminal](/support/docs/agent-testing-cli/) with the A2A CLI.
-- To test another agent type, see [voice agents](/support/docs/voice-agent/), [phone agents](/support/docs/phone-agent/), [video agents](/support/docs/video-agent/), or the [image analyzer](/support/docs/image-analyzer/).
+- To test another agent type, see [voice agents](/support/docs/voice-agent/), [phone agents](/support/docs/phone-agent/), [IVR agents](/support/docs/ivr-agent/), [video agents](/support/docs/video-agent/), or the [image analyzer](/support/docs/image-analyzer/).
