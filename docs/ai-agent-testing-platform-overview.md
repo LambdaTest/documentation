@@ -80,6 +80,8 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 TestMu AI Agent Testing scores every agent conversation across a set of quality dimensions, applies the pass/fail thresholds you configure, and rolls the results into a Green, Yellow, or Red go-live verdict. This page explains what the platform measures, how thresholds work, and how the production readiness verdict is decided.
 
+Chat, voice, image analyzer, and video agents are available to every organization. IVR, phone caller, and WhatsApp agents appear on **Create New Agent** grayed out, with the reason shown, until they are enabled for your organization.
+
 ## How the Platform Scores Conversations
 
 ---
@@ -89,7 +91,7 @@ Every completed conversation is scored by the evaluation engine across a set of 
 | Agent type | What is scored |
 |---|---|
 | [Chat](/support/docs/chat-agent/) and [voice](/support/docs/voice-agent/) | 9 quality metrics, each scored from 0 to 100%. |
-| [Phone caller](/support/docs/phone-agent/) (inbound or outbound) | 42 metrics in six groups: is it fast, does it sound good, does it hold a good conversation, does it get the facts right, does it get the job done, and is it safe. See [Phone Caller Agent Metrics](/support/docs/agent-features-and-metrics/#phone-agent-metrics). |
+| [Phone caller](/support/docs/phone-agent/) (inbound or outbound) | 42 metrics in six groups: is it fast, does it sound good, does it hold a good conversation, does it get the facts right, does it get the job done, and is it safe. Each call also gets an overall verdict of Pass, Fail, or Review incomplete. Review incomplete means the call could not be fully evaluated. See [Phone Caller Agent Metrics](/support/docs/agent-features-and-metrics/#phone-agent-metrics). |
 | [Video](/support/docs/video-agent/) | Pass or fail against the criteria you define, plus pillar scores from 0 to 10 for conversation flow, question handling, response quality, and avatar presentation. Only your agent is scored. |
 | [Image analyzer](/support/docs/image-analyzer/) | A quality score from 0 to 100 against the source prompt, plus custom criteria such as brand guidelines and technical specs. |
 
@@ -109,6 +111,8 @@ Commonly scored dimensions include the following.
 ---
 
 Each project can set a minimum score threshold, from 0 to 100%, for each metric and choose which metrics to evaluate. A regulated deployment might require a Compliance score of at least 95% and a Data Privacy score of at least 98%, while a consumer chatbot might prioritize Conversation Flow and User Satisfaction at a lower floor. Chat agents set thresholds on the **Configs** tab, under **Metric Thresholds**, and phone caller agents in **Metric Config**.
+
+On phone caller agents, the Max latency, Dead air, and Agent silence rate quality checks pass or fail against the bar set for them, and a check with no bar set uses its default bar. Turn count and Turn brevity are shown for information only until you set a bar. New inbound caller configs start with every quality check on at its default bar, and Insights follow the same rules.
 
 Threshold profiles are version-controlled and can differ across environments such as development, staging, and production. Scheduled runs use the active threshold configuration. A conversation passes a dimension when its score meets or exceeds the threshold you set for it.
 
@@ -134,6 +138,8 @@ The Go-Live Assessment aggregates results across all evaluated scenarios and dim
 | 🔴 **Red** | Below 65 | One or more critical thresholds not met. Specific failure categories are surfaced for remediation before production. |
 
 Each verdict carries an overall score from 0 to 100 and a confidence level. The assessment also shows Functional, Quality, Risk, and Operational scores, blockers, action items, AI insights, and scenario coverage.
+
+Calls from performance tests are not counted in Go-Live or project results. On phone caller agents, Go-Live, Insights, and the suite results page apply the same rules, so a call shows the same result on every page, and hovering over a check marked **Not tested** shows the reason.
 
 ### Confidence Levels
 

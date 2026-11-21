@@ -131,16 +131,16 @@ Click **Generate Scenarios**.
 **Step 4: Review the generated scenarios.** The **Scenarios** tab lists every scenario, with a count on the tab.
 
 - Each row shows the scenario name, its persona (such as "The Multitasker"), and its language.
-- Use **Search scenario** or the **Scenario Type** dropdown to narrow the list.
+- Use **Search scenario** or the **Scenario Type** dropdown to narrow the list. The dropdown filters by all five types: **Happy Path**, **Negative**, **Edge Case**, **Red Team**, and **Integration**.
 - Use the pencil icon to edit a scenario, or the trash icon to delete it.
 - Click **Create New Suite** to group scenarios for a run.
 
 <img loading="lazy" src={require('../assets/images/agent-to-agent/generated-test-scenarios-list-agent-testing.webp').default} alt="Scenarios tab listing generated test scenarios with persona and language tags" width="1914" height="948"  className="doc_img"/>
 
-**Step 5: Edit a scenario if needed.** Click the pencil icon on a scenario to open **Edit Scenario**.
+**Step 5: Edit a scenario if needed.** Click a scenario, or the pencil icon on it, to open the scenario on its own page. The page shows its name, description, validation criteria, and first message, with its persona, interaction mode, maximum conversation turns, and test profile alongside.
 
 - Change the **Scenario Name**, **Description**, or **Validation Criteria**.
-- Click **Save Scenario** to keep your changes, or **Cancel** to discard them.
+- Click **Save Scenario** to keep your changes, or **Cancel** to discard them. You can also delete the scenario from this page.
 
 <img loading="lazy" src={require('../assets/images/agent-to-agent/edit-test-scenario-validation-criteria.webp').default} alt="Edit Scenario panel showing scenario name, description and validation criteria fields" width="1911" height="945"  className="doc_img"/>
 
@@ -158,6 +158,7 @@ For the API URL format and authentication, see how to [connect a chat agent over
 **Step 7: Read the results.** When the run finishes, open a scenario from the list to see its score and the reasons behind it.
 
 - Start with the scenarios that failed or scored lowest. On the **Turns** tab, read the conversation to find the point where your agent went wrong.
+- If a setup step such as a login fails, the scenario is marked **Not scored · Setup failed** and shows which step failed and why. It does not count against your agent.
 - Use **Areas for Improvement** and **Recommendations** to decide what to fix in your agent, and **Validation Criteria** to see which of the scenario's criteria it missed. If a criterion is wrong rather than the agent, edit the scenario as in Step 5.
 - After you change your agent, click **Re-run** to run the same scenarios again. Each run is listed separately with its score and time, and re-runs are tagged in the suite results list, so you can compare before and after.
 - To stop a suite that is still running, abort it from the results banner.
@@ -172,7 +173,7 @@ See [Metrics](#metrics) for what each score measures.
 
 To grade real conversations instead of simulated ones, create the agent with **Post-production analysis** as its evaluation mode. Bulk upload your production chat transcripts as .txt or .json files, along with your requirement documents.
 
-The transcripts are graded with the same engine as pre-production suites, using your requirements as the reference. When you click **Continue to Conversation Analysis**, the platform first analyzes your uploaded requirements. A banner shows while this runs, and you are prompted if no requirements are uploaded.
+The transcripts are graded with the same engine as pre-production suites, using your requirements as the reference. When you click **Continue to Conversation Analysis**, the platform first analyzes your uploaded requirements. A banner shows while this runs and refreshes on its own, another appears if the analysis fails, and you are prompted if no requirements are uploaded. Uploading and analyzing conversations waits until the requirements analysis is ready, so no conversation is judged before it.
 
 Each conversation is judged against the scope and policies in your requirements, such as refund limits, return windows, verification, handoff, and disclosure. A reply that is out of scope or breaks a policy fails even when the conversation's overall score is high.
 
@@ -180,9 +181,9 @@ Each conversation is judged against the scope and policies in your requirements,
 
 ---
 
-The platform generates scenarios from your uploaded sources, in the count you choose at generation, then runs each one as a full conversation. Testing agents send multi-turn HTTP messages to your endpoint, read the reply from each response, and decide the next message based on the scenario goal and prior context.
+The platform generates scenarios from your uploaded sources, in the count you choose at generation, then runs each one as a full conversation. Testing agents send multi-turn HTTP or WebSocket messages to your endpoint, read the reply from each response, and decide the next message based on the scenario goal and prior context.
 
-A conversation ends when the goal is met, the maximum turn count is reached, or an unrecoverable error occurs. Each completed conversation is then scored. For the request and response mechanics, see how to [connect a chat agent over its API](/support/docs/chat-agent-api-integration/).
+A conversation ends when the goal is met, the maximum turn count is reached, or an unrecoverable error occurs. If your agent errors or refuses connections, each failed turn is recorded with its error, and the run stops after repeated errors. Each completed conversation is then scored. For the request and response mechanics, see how to [connect a chat agent over its API](/support/docs/chat-agent-api-integration/).
 
 Chat agents built on Gallup Intelligence are supported. The conversation is kept in a single thread, and table responses are evaluated.
 
@@ -194,7 +195,7 @@ Every conversation is scored on the 9 quality [metrics](#metrics), the scenario'
 
 Scenarios are drawn from behavioral test categories, including intent recognition, context and memory, multi-turn reasoning, error handling, and compliance.
 
-Red teaming runs a live adversarial attacker against your agent, rather than a single opening probe. It covers seven attack types: business logic, hallucination, hijacking, prompt injection, technical injection, overreliance, and off-topic. The attacker and the grader are separate, so the score is not influenced by how hard the attacker pushed. A run that cannot be judged is reported as inconclusive, not passed.
+Red teaming runs a live adversarial attacker against your agent, rather than a single opening probe. It covers seven attack types: business logic, hallucination, hijacking, prompt injection, technical injection, overreliance, and off-topic. The attacker and the grader are separate, so the score is not influenced by how hard the attacker pushed. A run that cannot be judged is reported as inconclusive, not passed. Red team attacks also run against localhost or tunnel targets on polling chat agents, where the attacker keeps pressing instead of stopping after one or two exchanges, and fewer results come back inconclusive.
 
 ## Chat Agent Testing Features
 
@@ -204,13 +205,18 @@ The steps above don't cover these features. [Data Validation](#data-validation) 
 
 - **Knowledge base.** Your uploaded and linked sources become the project's own isolated knowledge base, used as the ground truth for scenario generation, conversations, and evaluation.
 - **Healthcare knowledge packs.** Packs return UMLS vocabulary codes (ICD-10-CM, SNOMED CT, LOINC), and the **Turns** tab shows which pack lookups the simulator used on each turn.
-- **Scenario settings.** Link a test profile to a scenario to run it with specific test data, and give it its own maximum turns, which takes priority over the suite default.
-- **Endpoint profiles.** If your agent needs more than one request, such as a login or a new session before the chat, connect it with an endpoint profile instead of a single cURL command. Import a Postman collection or define it in JSON, then set up the suite setup, scenario setup, and chat phases. Variables can be static, generated, extracted with JSONPath, secret, or taken from a test profile, with retry, response caching, and timeouts. A credential in an imported collection triggers the **Move to vault** banner.
+- **Scenario settings.** Link a test profile to a scenario to run it with specific test data, and give it its own maximum conversation turns, from 1 to 100 (25 by default), which takes priority over the suite default.
+- **Endpoint profiles.** If your agent needs more than one request, such as a login or a new session before the chat, connect it with an endpoint profile instead of a single cURL command. Import a Postman collection or define it in JSON, then set up the suite setup, scenario setup, and chat phases. Variables can be static, generated, extracted with JSONPath, secret, or taken from a test profile, with retry, response caching, and timeouts. A credential in an imported collection triggers the **Move to vault** banner. See how to [set up an endpoint profile](/support/docs/chat-agent-api-integration/#set-up-an-endpoint-profile).
+- **Guided profile setup.** Import any Postman collection: the import finds the chat request, keeps only the login and lookup requests it needs, and shows you the flow to review before you save, naming gaps such as expired tokens or undefined variables with the fix. REST profiles also have a guided step editor that starts from a Postman collection or a cURL command, or builds the profile step by step.
+- **Connection checks.** **Test connection** sends a real chat message and shows the reply, with the request and response of each setup step. A profile that cannot run is caught when you save it, and every problem names the field and the fix.
+- **WebSocket chat agents.** A WebSocket endpoint profile connects a chat agent that talks over WebSocket, including agents on Genesys Web Messaging. For Genesys Web Messaging, optional profile settings collect split replies until the agent goes quiet, pause between connect messages, and add quick-reply and button labels to the reply text. WebSocket suites also run against localhost or tunnel targets.
+- **AWS Signature V4.** Test bots behind API Gateway, Lambda URLs, or Bedrock: paste a `curl --aws-sigv4` command or fill in the **Signing** fields, and keep the keys in the vault.
 - **Test profiles.** Reusable key-value test data with typed fields, a default profile, and JSON import and export, injected at run time for data-driven testing. See [Test Suites and Test Profiles](/support/docs/agent-features-and-metrics/#test-suites-and-test-profiles).
-- **Playground.** Test your agent interactively before a full run, with multi-turn chat, cURL connection testing, and request and response schema detection.
 - **HyperExecute and tunnels.** Evaluations run at scale on HyperExecute, with a tunnel for agents behind a firewall, and progress streams live during the run.
 - **Go-Live Assessment.** A Green, Yellow, or Red verdict on whether your agent is ready for production, with a confidence level, dimension scores, scenario coverage, risk assessment, and AI recommendations. See [Go-Live Assessment](/support/docs/agent-features-and-metrics/#go-live-assessment).
-- **Scheduled runs.** Besides **Schedule Run Evaluation** in Step 6, you can select **Schedule Run** from the dropdown next to a suite's **Run** button. Schedules run in your local time zone, and you stop one by deleting the scheduled run. See [Scheduled Runs](/support/docs/agent-features-and-metrics/#scheduled-runs).
+- **Scheduled runs.** Besides **Schedule Run Evaluation** in Step 6, you can select **Schedule Run** from the dropdown next to a suite's **Run** button. Schedules run in your local time zone, and you stop one by deleting the scheduled run. To change a schedule without deleting it, open **Run Suite** on the scheduled suite: it shows the current cadence, pre-selects the endpoint profile and metrics the schedule runs with, and saves your changes to the same schedule. The **Edit** icon on the **Scheduled** tab changes only the day and time. See [Scheduled Runs](/support/docs/agent-features-and-metrics/#scheduled-runs).
+- **Slack notifications.** Chat run outcomes post to Slack, and a technical failure is never posted as a test result.
+- **Business reports.** Export a suite's results as a PDF or HTML report for business readers, from **Export report** on the suite results page or a share page. Choose the latest result for each scenario or a date range, pick the scenarios, and choose whether to include transcripts. The report shows a readiness verdict, KPI tiles that each say why they are On track, At risk, or Off track, top issues, changes since the last run, a scorecard, and scenario details, and its **Data accuracy** tile flags any value that did not match your data. Reports use no credits, and reports exported from share links always mask personal data.
 
 ## Metrics
 
@@ -237,7 +243,7 @@ Every evaluation result includes the overall score, per-metric scores with pass 
 Both are set in the **Configs** tab, under the **Metric Thresholds** and **Custom Metrics** sub-tabs.
 
 - **Metric Thresholds:** set a minimum passing score (0 to 100%) for each metric, choose whether higher or lower is better, and save named configurations. Scheduled runs use the active configuration.
-- **Custom Metrics:** define project-specific checks and apply them to all scenarios or selected ones. **Suggest examples** drafts metrics from your scenarios. Grades appear under **Validation Criteria** with an explanation, the evidence turns, and a Pass/Fail override, and each custom metric can gate the overall score.
+- **Custom Metrics:** define project-specific checks and apply them to all scenarios or selected ones. **Suggest examples** drafts metrics from your scenarios. Grades appear under **Validation Criteria** with an explanation, the evidence turns, and a Pass/Fail override, and each custom metric can gate the overall score, set from **Metric Thresholds**. Suite insights add a per-metric table that shows, for each custom metric, the number graded, the pass rate, and the average.
 
 ## Data Validation
 
@@ -270,6 +276,8 @@ A config defines what to check: one label per fact the agent might state, and on
 3. Select **Create New Config**.
 4. Give the config a name that says what it checks, such as "Catalog Ground Truth" rather than "Config 3".
 5. In **Config (JSON)**, enter the config's variables, endpoints, and validation mappings. For every field and an example, see the [config reference](#data-validation-config-reference).
+
+The editor can also start a config from a cURL command, add login steps, and move secrets into the vault.
 
 Before you save the config, [test it with a dry run](#test-a-config-before-you-save-it). After you save it, [attach it to a workflow](#attach-a-config-to-a-workflow). A config runs only in the workflows it is attached to.
 
@@ -313,6 +321,10 @@ Each entry in `endpoints` is one HTTP lookup.
 | `validation_mappings` | Required | The label and JSONPath pairs extracted from this endpoint's response. See [Validation Mappings](#validation-mappings). |
 
 A config can hold several endpoints when a conversation touches more than one system of record, such as orders from one service and inventory from another.
+
+:::note
+Cookies do not carry over between data validation requests. To pass a cookie value to a later request, use `from_cookie`.
+:::
 
 #### Validation Mappings
 
@@ -369,7 +381,9 @@ The **Test this config** panel in the config editor runs a dry run. It calls eve
 2. In **Test variables**, enter one sample value per variable the config references, for example `{ "order_id": "ORD-12345" }`.
 3. Select **Test**.
 
-The panel shows the resolved request, the HTTP status and duration, and each label's extracted value. Each label reports one of these statuses.
+You can also run the test with a test profile. A request that cannot run, such as one with a missing secret or an empty required header, is refused with the reason.
+
+The panel shows the resolved request, the HTTP status and duration, and each label's extracted value. It masks responses and suggests response paths to check. Each label reports one of these statuses.
 
 | Status | Meaning |
 |---|---|
@@ -380,7 +394,7 @@ The panel shows the resolved request, the HTTP status and duration, and each lab
 These statuses show a bad JSONPath or an unresolved `{{variable}}` before the config runs against a real conversation. To fix a label that reports **Path missing** or **Fetch failed**, see [Troubleshoot Data Validation](#troubleshoot-data-validation).
 
 :::note
-The dry run calls your endpoints directly and does not go through a tunnel. An API that is only reachable through your tunnel fails the dry run but still works during real runs.
+The dry run can go through a tunnel, so you can test an API that is only reachable through your tunnel before you save the config.
 :::
 
 ### Attach a Config to a Workflow
@@ -394,6 +408,13 @@ Data Validation runs per workflow. Attach a config to each workflow whose conver
 TestMu AI then runs that config after every conversation in the workflow.
 
 Different workflows can attach different configs. One config in the project can be marked **Default** to show the intended choice.
+
+### Choose Data Validation Run Settings
+
+For chat agents, the workflow tab is now called **Settings**. In **Settings**, you also choose the following.
+
+- Whether a run warns or fails when no data can be fetched.
+- Which labels each scenario checks.
 
 ### Turn Off Data Validation for a Workflow
 
@@ -424,6 +445,8 @@ Data validation verdicts appear in each scenario result.
 3. To see the evidence for a criterion, expand it.
 
 Data validation criteria appear alongside your scenario's own criteria, each tagged with a purple **Data Validation** chip. They count toward the same pass counts and compliance percentage as the scenario's own criteria.
+
+Test cases where data could not be checked show a banner, and the results list shows a **Data not verified** chip and count. Before a run starts, the run drawer shows the data validation status.
 
 #### Verdicts
 
@@ -480,7 +503,7 @@ Find the situation you see, then apply the fix beside it.
 | Situation | What to do |
 |---|---|
 | A label reports **Path missing** in the dry run | Check the JSONPath against a real response body. Paths are case-sensitive and arrays are zero-indexed. |
-| A label reports **Fetch failed** in the dry run | Check the URL, auth headers, and that every `{{variable}}` has a test value. If the API is tunnel-only, expect the dry run to fail and verify in a real run instead. |
+| A label reports **Fetch failed** in the dry run | Check the URL, auth headers, and that every `{{variable}}` has a test value. If the API is tunnel-only, run the test through your tunnel. |
 | Results show **Cannot verify** with a fetch error | The endpoint was unreachable or slow during the run. Check the endpoint's health and the `timeout` and `fetch_budget_seconds` values. |
 | Results show **Cannot verify** with "not discussed" | The agent never stated that fact in this conversation. This is expected for facts outside the scenario's scope. |
 | A criterion fails but the agent looks right | Expand the criterion and compare **Agent stated** with **Ground truth (from your API)**. If the ground truth itself is wrong, fix the mapping or the source data. |
@@ -493,6 +516,7 @@ The following controls and recommendations apply to Data Validation lookups.
 - Endpoints are restricted to read-only GET and POST lookups. TestMu AI never writes to your systems.
 - Secrets used in headers or variables are stored encrypted and are redacted from logs and fetch results.
 - Requests to internal and cloud-metadata addresses are blocked.
+- On shared reports, fetched values and the judge's explanation are hidden. Scores, verdicts, and label names are still shown.
 - Use dedicated, least-privilege API credentials for validation lookups, and rotate them according to your organization's security policy.
 
 ## Related TestMu AI Guides
