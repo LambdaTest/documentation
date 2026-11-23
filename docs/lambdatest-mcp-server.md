@@ -163,7 +163,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         "text": "which npx   # macOS/Linux\nwhere npx   # Windows"
       }
     ],
-    "dateModified": "2026-07-22T12:56:44+05:30"
+    "dateModified": "2026-11-23T12:00:00+05:30"
   }) }}
 />
 
@@ -280,6 +280,20 @@ Custom connectors in Claude Desktop are configured through **Settings > Connecto
 3. Complete the OAuth flow when first invoked. Use **MCP: List Servers** to manage installed servers.
 
 ### Antigravity
+
+**Install the TestMu AI plugin (recommended)**
+
+The TestMu AI plugin in the Antigravity Marketplace adds this hosted MCP server, along with the Kane CLI and Rook CLI skills. Nothing is installed locally for the MCP server.
+
+1. In the Antigravity App, open **Customizations**, then the **Marketplace** tab, and search for **TestMu AI**.
+2. Open the **TestMu AI** card and click **Add**.
+3. The first time Antigravity connects to the server, sign in to TestMu AI in your browser. No API keys are stored in configuration files.
+
+If the server shows as **Unauthorized**, open **Customizations > MCP Servers**, select **Authenticate** next to `testmu-ai`, and finish the sign-in in your browser. To switch accounts, select **Sign out** first.
+
+**Add the server manually**
+
+If you do not use the plugin, add the server to your MCP configuration instead. If you installed the plugin, skip these steps.
 
 1. In the Agent panel, click the **...** menu, then **MCP Servers**, then **Manage MCP Servers**.
 2. Click **View raw config** and add the configuration to `mcp_config.json`:

@@ -33,6 +33,8 @@ Each page includes its own installation, discovery check, first prompt, troubles
 
 The first three are explicit targets of the [public Rook skill installer](https://github.com/LambdaTest/rook/tree/main/skill-installer). The other guides use the clients' documented Agent Skills compatibility; they do not add new installer flags or imply a live certification of every client/version. Their pages link the corresponding vendor documentation.
 
+In the Antigravity App, the TestMu AI plugin includes the Rook skill. Open **Customizations**, then the **Marketplace** tab, search for **TestMu AI**, open its card, and click **Add**. Install [Rook CLI](/support/docs/rook-installation/) separately, because the plugin does not include it. Rook CLI has its own sign-in (`rook login`), and the skill walks you through it when needed.
+
 ## Install for the Three Packaged Clients
 
 With Node.js 22+ and npm:
