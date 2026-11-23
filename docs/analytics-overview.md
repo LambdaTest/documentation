@@ -87,6 +87,12 @@ To know more about this feature, refer to the [AI Dashboard CoPilot](/docs/analy
 
 Insights in <BrandName /> allows the QA managers and executives to efficiently track the tests conducted on the platform and get deep-level insights with the numerous widgets that the product provides.
 
+:::info Plans
+
+Insights is not sold as a separate product: it ships with <BrandName />'s execution products. Paid plans such as Virtual Live and the Desktop automation plans list test insights; the free Live Testing plan does not include them. Advanced analytics, such as whitelabeled dashboards, usage analytics and advanced data retention, are part of Enterprise plans. See [pricing](https://www.testmuai.com/pricing/), or contact the <BrandName /> team to confirm what your plan includes.
+
+:::
+
 <div className="ytframe"> 
 <div className="youtube" data-embed="AFQWaAkLg6o" data-loading-attribute="eager">
     <div className="play-button"></div>

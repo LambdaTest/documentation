@@ -96,7 +96,7 @@ A call transcript shows what the agent said, not which tools it ran. Once the in
 | **Tool catalog** | The agent's actions, for example `LookupCustomer` or `GetOrderStatus`, appear in the scenario editor, so you can state which tools a scenario expects the agent to call. |
 | **Tool call validation** | After each call, TestMu AI fetches what the agent actually did from Salesforce and marks each expected tool as **Called** or **Not Called**. |
 
-TestMu AI offers this kind of integration for ElevenLabs, Retell, Vapi, and Salesforce Agentforce. For the others, see the [ElevenLabs integration](/support/docs/test-elevenlabs-agents/#elevenlabs-integration), the [Retell integration](/support/docs/test-retell-agents/#retell-integration), and the [Vapi integration](/support/docs/test-vapi-agents/#vapi-integration).
+TestMu AI offers this kind of integration for ElevenLabs, Retell, Vapi, Salesforce Agentforce, Amazon Connect (Amazon Q in Connect), and Cartesia Managed Agents. Cartesia Line SDK agents are not supported. For the other integration guides, see the [ElevenLabs integration](/support/docs/test-elevenlabs-agents/#elevenlabs-integration), the [Retell integration](/support/docs/test-retell-agents/#retell-integration), the [Vapi integration](/support/docs/test-vapi-agents/#vapi-integration), and the [Amazon Q in Connect integration](/support/docs/test-amazon-connect-bots/#amazon-q-in-connect).
 
 ### Timing to Expect
 

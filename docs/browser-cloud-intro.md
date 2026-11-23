@@ -155,7 +155,7 @@ Ready-to-run examples to get you started fast.
 
 <div className="row">
   <div className="col col--4 margin-bottom--lg">
-    <a className="card padding--lg" href="https://github.com/SparshKesari/browser-cloud-cookbook/tree/main/browser-cloud-crewai" target="_blank" style={{height: '100%', textDecoration: 'none'}}>
+    <a className="card padding--lg" href="https://github.com/SparshKesari/browser-cloud-cookbook/tree/main/browser-cloud-openai-computer-use" target="_blank" style={{height: '100%', textDecoration: 'none'}}>
       <h3>OpenAI Computer Use</h3>
       <p>Build a browser automation agent using Browser Cloud and OpenAI's Computer Use.</p>
     </a>

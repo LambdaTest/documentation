@@ -104,11 +104,15 @@ The platform uses a hybrid stack that combines third-party large language models
 
 ### Agent Types You Can Test
 
-Agent Testing covers [chat](/support/docs/chat-agent/), [voice](/support/docs/voice-agent/), [video](/support/docs/video-agent/), [phone caller](/support/docs/phone-agent/) (inbound or outbound), [IVR](/support/docs/ivr-agent/), and [image analyzer](/support/docs/image-analyzer/) agents. You choose the type under **Agent Type** when you create the agent. To test autonomous agents that take real actions through tools, APIs, and files, use [Agent Assurance](/support/docs/agent-assurance-overview/), a separate product that runs from the rook CLI.
+Agent Testing covers [chat](/support/docs/chat-agent/), [voice](/support/docs/voice-agent/), [video](/support/docs/video-agent/), [phone caller](/support/docs/phone-agent/) (inbound or outbound), [IVR](/support/docs/ivr-agent/), [image analyzer](/support/docs/image-analyzer/), and WhatsApp agents. You choose the type under **Agent Type** when you create the agent. Chat, voice, image analyzer, and video agents are available to every organization, while IVR, phone caller, and WhatsApp agents stay grayed out, with the reason shown, until they are enabled for your organization. To test autonomous agents that take real actions through tools, APIs, and files, use [Agent Assurance](/support/docs/agent-assurance-overview/), a separate product that runs from Rook CLI.
 
 ### Connecting an Agent Without Code Changes
 
 No changes to your agent are required. The agent needs an accessible endpoint, which is an HTTP API, a voice endpoint, or a phone number. There is no SDK to install, and the platform interacts with the agent through the same interface production users use.
+
+### Voice Platforms You Can Connect for Tool Call Checks
+
+On a phone caller agent's **Integrations** tab, you can connect an agent built on ElevenLabs, Retell, Vapi, Salesforce Agentforce, Amazon Connect (Amazon Q in Connect), or Cartesia Managed Agents. The platform imports the agent's prompt and tools and checks the tool calls it makes on each test call. Cartesia Line SDK agents are not supported. Voice agents built on Deepgram Voice Agent connect through a voice endpoint profile, and their tool calls are recorded for the scenario's **Expected Tool Calls** check. See [Phone Agent Testing](/support/docs/phone-agent/).
 
 ### Testing an Agent Behind a Firewall
 
@@ -128,7 +132,7 @@ Running against a production agent is technically possible, but evaluating again
 
 ### How Phone Testing Places Real Calls
 
-The platform dials real phone numbers. For an inbound agent, it calls the agent's actual number as a real caller would, then drives the conversation with a simulated caller. SIP endpoint simulation is also available for teams that prefer to test through SIP without routing over the PSTN.
+The platform places real calls. For an inbound agent, it calls the agent's actual number as a real caller would, then drives the conversation with a simulated caller. For an outbound agent, your agent calls a number the platform reserves from an outbound number pool, and the platform answers. Inbound agents reachable over a SIP trunk, rather than a phone number, can be tested over SIP. API users can follow a test call while it runs, including transfer events for scenarios with **Transfer to human agent** turned on. See [Phone Agent Testing](/support/docs/phone-agent/) and its [Live Call Events API](/support/docs/phone-agent/#live-call-events).
 
 ## Security and Data Handling
 
@@ -144,7 +148,7 @@ TestMu AI follows HIPAA guidelines. Healthcare teams should use synthetic patien
 
 ### Who Can See Your Evaluation Results
 
-Evaluation results are scoped to the project and accessible only to users with the appropriate role-based access control permissions within your organization.
+Evaluation results are scoped to the project and accessible only to users with the appropriate role-based access control permissions within your organization, unless you share them. Phone caller results and performance runs can be shared through public links that open without a login. A shared performance run shows aggregate metrics only, with no recordings, transcripts, or call IDs, and turning the feature off for your organization revokes every link it has issued. Business reports exported from a share link always mask personal data, and shared chat reports hide fetched data validation values and the judge's explanation.
 
 ### On-Premises and VPC Deployment
 
@@ -164,11 +168,18 @@ Review the failing scenario transcript. If the assessment does not match expert 
 
 ### Comparing Results Across Model Versions
 
-Yes. The dashboard shows metric score deltas between test runs and tracks trends over time, so you can confirm whether a model update improved or regressed quality.
+Yes. The dashboard shows metric score deltas between test runs and tracks trends over time, so you can confirm whether a model update improved or regressed quality. On inbound phone caller and IVR agents, **Insights** group calls into runs, with **Run** and **Compare** pickers, a pass-rate-per-run chart, and scenario cards grouped as **Broke**, **Still failing**, **Fixed**, and **Healthy**.
 
 ## Platform Capabilities
 
 ---
+
+### Red Team Testing for Adversarial Attacks
+
+Yes. Red Team scenarios attack your agent on purpose.
+
+- **Chat agents:** a live adversarial attacker, not a single opening probe, runs seven attack types: business logic, hallucination, hijacking, prompt injection, technical injection, overreliance, and off-topic. The attacker and the grader are separate, so the score is not influenced by how hard the attacker pushed. A run that cannot be judged is reported as inconclusive, not passed.
+- **Phone caller agents:** red team scenarios are generated from the agent's own prompt. The platform finds the rules the agent must follow and attacks them, prioritizing rules not yet covered, and refreshes its targets when the prompt changes. Findings appear in the Red Team section of the suite **Insights** page, each linked to its moment in the call recording. Reports use the OWASP Agentic Top 10 categories ASI03 (identity), ASI06 (made-up history), and ASI09 (fake approval or pressure) alongside the OWASP LLM Top 10, with LLM10 Unbounded Consumption added, and a radar chart shows the pass rate for each risk category.
 
 ### Multilingual Requirement Analysis and Multi-Language Testing
 

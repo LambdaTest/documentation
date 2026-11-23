@@ -78,7 +78,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
-Amazon Connect is a contact centre rather than an agent builder. The conversational logic lives in a Lex bot invoked from a contact flow, while the flow controls routing, queueing, and escalation around it. The TestMu AI Agent Testing Platform tests both layers together with multi-turn conversations across personas and edge cases and scores each run, so you can validate the bot and the contact flow the way callers actually hit them.
+Amazon Connect is a contact center. Its conversational logic lives in a Lex bot invoked from a contact flow, or in an agentic self-service AI agent built on Amazon Q in Connect, while the flow controls routing, queueing, and escalation around it. The TestMu AI Agent Testing Platform tests both layers together with multi-turn conversations across personas and edge cases and scores each run, so you can validate the bot and the contact flow the way callers actually hit them.
 
 To connect one, you need an Amazon Connect instance with a published contact flow, the Connect phone number for phone testing, a TestMu AI workspace with agent-testing permissions, and source docs for scenario generation such as the bot definition, contact flow export, or knowledge base.
 
@@ -101,6 +101,14 @@ Amazon Connect tests the Lex bot and the contact flow together across surfaces. 
 
 - **Phone** covers callers reaching your bot inbound or outbound on the Connect number. It covers what telephony introduces around the bot's conversational accuracy: DTMF entry, queue routing, hold behaviour, transfer to a representative, and carrier latency. Setup: [phone agent testing](/support/docs/phone-agent/).
 - **Chat** covers text conversations through the Connect chat widget or a custom client, using the chat contact API with messages received over the participant WebSocket. It catches reasoning, slot filling, and routing failures. Setup: [chat agent testing](/support/docs/chat-agent/).
+
+## How do you connect an Amazon Q in Connect AI agent? {#amazon-q-in-connect}
+
+---
+
+Agentic self-service AI agents built on Amazon Connect (Amazon Q in Connect) can also be connected for prompt and tool import. Connect the AI agent from the **Integrations** tab of the Phone Caller agent that will test it: add the AWS region, the instance ID, the AI agent ID, and the access keys. When you save, the AI agent's prompt and tools are imported.
+
+After each test call, the AI agent's tool calls are read from Amazon Connect and checked against the scenario. They can take up to a minute after hangup to appear, because Amazon Connect makes a call searchable only once it ends. For the rest of the setup, see [phone agent testing](/support/docs/phone-agent/).
 
 ## Where do Amazon Connect tests drop?
 

@@ -80,13 +80,20 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 TestMu AI Agent Testing scores every agent conversation across a set of quality dimensions, applies the pass/fail thresholds you configure, and rolls the results into a Green, Yellow, or Red go-live verdict. This page explains what the platform measures, how thresholds work, and how the production readiness verdict is decided.
 
+Chat, voice, image analyzer, and video agents are available to every organization. IVR, phone caller, and WhatsApp agents appear on **Create New Agent** grayed out, with the reason shown, until they are enabled for your organization.
+
 ## How the Platform Scores Conversations
 
 ---
 
 Every completed conversation, voice or chat, is scored by the evaluation engine across a set of quality dimensions. Each dimension is scored on a normalized 0.0 to 1.0 scale, with configurable pass/fail thresholds per project.
 
-The exact set of metrics depends on the agent type. Chat and voice agents are scored across 9 quality metrics, and phone agents across 30+ call metrics.
+| Agent type | What is scored |
+|---|---|
+| [Chat](/support/docs/chat-agent/) and [voice](/support/docs/voice-agent/) | 9 quality metrics, each scored from 0 to 100%. |
+| [Phone caller](/support/docs/phone-agent/) (inbound or outbound) | 42 metrics in six groups: is it fast, does it sound good, does it hold a good conversation, does it get the facts right, does it get the job done, and is it safe. Each call also gets an overall verdict of Pass, Fail, or Review incomplete. Review incomplete means the call could not be fully evaluated. See [Phone Caller Agent Metrics](/support/docs/agent-features-and-metrics/#phone-agent-metrics). |
+| [Video](/support/docs/video-agent/) | Pass or fail against the criteria you define, plus pillar scores from 0 to 10 for conversation flow, question handling, response quality, and avatar presentation. Only your agent is scored. |
+| [Image analyzer](/support/docs/image-analyzer/) | A quality score from 0 to 100 against the source prompt, plus custom criteria such as brand guidelines and technical specs. |
 
 Commonly scored dimensions include the following.
 
@@ -105,7 +112,18 @@ Commonly scored dimensions include the following.
 
 Each project can define custom minimum thresholds per dimension. A regulated deployment might require a Compliance score of at least 0.95 and a Data Privacy score of at least 0.98, while a consumer chatbot might prioritize Conversation Flow and User Satisfaction at a lower floor.
 
-Threshold profiles are version-controlled and can differ across environments such as development, staging, and production. A conversation passes a dimension when its score meets or exceeds the threshold you set for it.
+On phone caller agents, the Max latency, Dead air, and Agent silence rate quality checks pass or fail against the bar set for them, and a check with no bar set uses its default bar. Turn count and Turn brevity are shown for information only until you set a bar. New inbound caller configs start with every quality check on at its default bar, and Insights follow the same rules.
+
+Threshold profiles are version-controlled and can differ across environments such as development, staging, and production. Scheduled runs use the active threshold configuration. A conversation passes a dimension when its score meets or exceeds the threshold you set for it.
+
+## Add Custom Metrics
+
+---
+
+Custom metrics grade rules specific to your business, such as asking for a PIN before changing an address, alongside the built-in metrics. You choose whether each one counts toward the pass or fail result.
+
+- **Chat agents:** define them on the **Configs** tab, under **Custom Metrics**, and apply them to all or selected scenarios. **Suggest examples** drafts metrics from your scenarios. Grades appear under **Validation Criteria** with an explanation, the evidence turns, and a Pass/Fail override.
+- **Phone caller agents:** each metric is a Yes/No check or a 0 to 100 rating. A project holds up to 50, and up to 20 can be attached to one scenario. See [Custom Metrics](/support/docs/agent-features-and-metrics/#custom-metrics).
 
 ## Read the Go-Live Readiness Verdict
 
@@ -120,6 +138,8 @@ The Go-Live Assessment aggregates results across all evaluated scenarios and dim
 | 🔴 **Red** | One or more critical thresholds not met. Specific failure categories are surfaced for remediation before production. |
 
 Each verdict carries an overall aggregate score and a confidence level, plus a pass/fail breakdown across the behavioral test categories.
+
+Calls from performance tests are not counted in Go-Live or project results. On phone caller agents, Go-Live, Insights, and the suite results page apply the same rules, so a call shows the same result on every page, and hovering over a check marked **Not tested** shows the reason.
 
 ### Confidence Levels
 
