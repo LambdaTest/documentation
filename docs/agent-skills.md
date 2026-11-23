@@ -12,7 +12,7 @@ keywords:
   - playwright agent skill
 url: https://www.testmuai.com/support/docs/agent-skills/
 site_name: TestMu AI
-slug: skills/
+slug: agent-skills/
 canonical: https://www.testmuai.com/support/docs/agent-skills/
 ---
 import Tabs from '@theme/Tabs';

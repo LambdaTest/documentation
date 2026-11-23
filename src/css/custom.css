@@ -2391,6 +2391,7 @@ h6[id]::before {
 .Doc_intro_cta{background-color:#F7F7F7;display:flex;padding:25px 0;align-items:center;flex-wrap:wrap;position:relative;overflow:hidden;}
 [data-theme=dark] .Doc_intro_cta{background:#171A21;}
 [data-theme=dark] .Doc_intro_cta .Doc_intro_cta_text h1{color:var(--ifm-color-primary)!important;}
+[data-theme=dark] .Doc_intro_cta .Doc_intro_cta_text p{color:#8D949E;}
 
 
 .Doc_intro_cta .Doc_intro_cta_text{width:70%;position:relative;z-index:9;}
@@ -2407,11 +2408,12 @@ h6[id]::before {
 .home_dark_icon{display:none;}
 [data-theme='dark'] .home_dark_icon{display:block;}
 [data-theme='dark'] .home_light_icon{display:none;}
+[data-theme=dark] .homeMain_h2{color:#CBD1D9!important;}
 
 .home_inners>a{color:var(--ifm-link-color-primary);margin:0;display:block;position:relative;}
 .home_inners>a p{display:inline-block;}
 .home_inners>a p span{position:absolute;top:50%;transform:translateY(-50%);}
-.p_home_inners{font-size:16px!important;font-weight:500!important;margin-bottom:12px!important;color:var(--ifm-link-color-primary);position:relative;}
+.p_home_inners{font-size:14px!important;font-weight:500!important;margin-bottom:12px!important;color:var(--ifm-link-color-primary);position:relative;}
 .p_home_inners::after{display:none;width:100%;height:1px;content:'';position:absolute;background-color:var(--ifm-link-color-primary);left:0;bottom:0;}
 .home_inners>a:hover .p_home_inners::after{display:initial;}
 [data-theme='dark'] .home_inners>a:hover .p_home_inners::after{background-color:var(--brand-amber);}
@@ -2427,8 +2429,35 @@ h6[id]::before {
 }
 
 /* ── Docs landing: product catalog cards ── */
-.prodCatalog{margin-top:24px;}
-.prodSection{margin:0 0 40px;}
+/* Catalog = sections column + sticky ToC rail. */
+.prodCatalog{margin-top:24px;display:flex;gap:40px;align-items:flex-start;}
+.prodCatalog_body{flex:1 1 auto;min-width:0;}
+
+/* Sticky "On this page" table of contents (vertical, amber active accent). */
+.prodToc{flex:0 0 212px;width:212px;position:sticky;top:110px;align-self:flex-start;max-height:calc(100vh - 140px);overflow-y:auto;}
+.prodToc_title{font-size:.72rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--ifm-color-emphasis-600,#8a8a93);margin:0 0 10px;padding-left:13px;}
+.prodToc_list{list-style:none;margin:0;padding:0;border-left:1px solid var(--ifm-toc-border-color,#e6e6e9);}
+.prodToc_list li{margin:0;}
+.prodToc_list a{
+  display:block;padding:5px 0 5px 13px;margin-left:-1px;
+  border-left:2px solid transparent;
+  color:var(--ifm-color-emphasis-700,#5c5c6a);
+  font-size:13.5px;line-height:1.4;text-decoration:none;
+  transition:color .15s ease,border-color .15s ease;
+}
+.prodToc_list a:hover{color:var(--brand-amber);text-decoration:none;}
+.prodToc_list a.prodToc_active{color:var(--brand-amber);border-left-color:var(--brand-amber);font-weight:600;}
+[data-theme='dark'] .prodToc_list{border-left-color:#2a2f3a;}
+[data-theme='dark'] .prodToc_list a{color:#9aa0ab;}
+[data-theme='dark'] .prodToc_list a:hover,
+[data-theme='dark'] .prodToc_list a.prodToc_active{color:#fff;border-left-color:#fff;}
+@media(max-width:996px){
+  .prodCatalog{display:block;}
+  .prodToc{display:none;}
+}
+/* scroll-margin-top keeps the section heading clear of the sticky navbar when
+   a product line is reached via its #anchor (e.g. /support/docs/#smartui). */
+.prodSection{margin:0 0 40px;scroll-margin-top:120px;}
 .prodSection_h2{display:flex;align-items:center;font-weight:600;color:var(--ifm-color-primary);font-size:20px;margin:0 0 6px;}
 .prodSection_h2 .home_icons{width:22px;height:22px;margin-right:8px;}
 .prodSection_desc{margin:0 0 16px;font-size:14.5px;line-height:1.5;color:var(--ifm-color-emphasis-700,#5c5c6a);max-width:780px;}
@@ -2501,3 +2530,26 @@ h6[id]::before {
 .DocSearch-Container {
   z-index: 500 !important;
 }
+
+/* Docs home (support.md): match the standalone docs.js page layout (full width, 1536px container) */
+html.docs-doc-id-support-start [class*="docMainContainer"]{max-width:100%!important;}
+html.docs-doc-id-support-start [class*="docMainContainer"] > .container{max-width:none;padding:0;}
+html.docs-doc-id-support-start [class*="docMainContainer"] .col{max-width:100%;padding:0;flex:1 1 100%;}
+html.docs-doc-id-support-start [class*="docMainContainer"] .row{margin:0;}
+html.docs-doc-id-support-start [class*="docMainContainer"] .row{margin:0;}
+html.docs-doc-id-support-start .theme-doc-footer,html.docs-doc-id-support-start .pagination-nav{display:none;}
+html.docs-doc-id-support-start .theme-doc-markdown .container{max-width:1536px;margin:0 auto;}
+
+/* Docs home (support.md): render like the standalone docs page (full-width hero, 1536px container) */
+html.docs-doc-id-support-start [class*="docMainContainer"]{max-width:100%!important;}
+html.docs-doc-id-support-start [class*="docMainContainer"] > .container{max-width:none;padding:0;}
+html.docs-doc-id-support-start [class*="docMainContainer"] .col{max-width:100%;padding:0;flex:1 1 100%;}
+html.docs-doc-id-support-start [class*="docMainContainer"] .row{margin:0;}
+html.docs-doc-id-support-start .theme-doc-footer,html.docs-doc-id-support-start .pagination-nav{display:none;}
+html.docs-doc-id-support-start .theme-doc-markdown .container{max-width:1536px;margin:0 auto;}
+html.docs-doc-id-support-start footer{display:none;}
+
+/* Variables used by the testmuCom navbar / docs home (brand colour, layout sizes, HTTP method colours) */
+:root{--ai-bar-height:60px;--left-sidebar-width:260px;--right-rail-width:220px;--navbar-row1-height:60px;--navbar-row2-height:40px;--brand-amber:#ED5F00;--brand-amber-light:#FFF4ED;--method-get:#28A745;--method-post:#007BFF;--method-put:#FFC107;--method-delete:#DC3545;--method-patch:#6F42C1;}
+[data-theme=dark]{--brand-amber-light:#3D2200;--method-get:#3DDC84;--method-post:#58A6FF;--method-put:#FFD866;--method-delete:#FF6B6B;--method-patch:#B48EFF;}
+html.docs-doc-id-support-start .hide_extra_space_main_div{overflow:clip;}
