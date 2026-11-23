@@ -101,7 +101,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         "text": "kane-cli run \"go to http://localhost:3000, log in with email 'you@example.com' using the OTP sent to my inbox, assert the page contains 'Welcome'\""
       }
     ],
-    "dateModified": "2026-08-12T00:03:23+05:30"
+    "dateModified": "2026-11-23T12:00:00+05:30"
   }) }}
 />
 
@@ -129,7 +129,8 @@ The architecture is the same no matter which builder you use, and it has only th
 | Codex CLI | Appended to `~/.codex/AGENTS.md` or the project's `AGENTS.md` |
 | Gemini CLI | `SKILL.md` in `~/.gemini/skills/kane-cli/` or `.gemini/skills/kane-cli/` |
 | Kiro | The **Kane CLI — Browser Automation & AI Test Authoring** Power |
-| Cursor, Lovable, Antigravity, GLM, and others | Point the agent at the hosted skill: `https://www.testmuai.com/kane-cli/agents.md` |
+| Antigravity | The **TestMu AI** plugin from the Antigravity Marketplace, or the hosted skill URL |
+| Cursor, Lovable, GLM, and others | Point the agent at the hosted skill: `https://www.testmuai.com/kane-cli/agents.md` |
 
 ### Install the Skill
 
@@ -250,6 +251,10 @@ Form validation, the error path, the successful auth, the redirect, and the prot
 ---
 
 ## Antigravity
+
+**Install the plugin.** In the Antigravity App, the TestMu AI plugin from the Antigravity Marketplace includes the Kane CLI skill (`/kanecli-skill`). Open **Customizations**, then the **Marketplace** tab, search for **TestMu AI**, open its card, and click **Add**. The skill needs Node.js 18+ and Kane CLI (`npm install -g @testmuai/kane-cli`). It checks for both and offers to install Kane CLI. Kane CLI has its own sign-in (`kane-cli login`).
+
+The walkthrough below uses the hosted skill URL instead, so no plugin or skill file is needed.
 
 <video class="right-side" width="100%" controls id="vid">
 <source src= {require('../assets/videos/kane-cli/agents/antigravity-x-kane-cli.mp4').default} type="video/mp4" />
