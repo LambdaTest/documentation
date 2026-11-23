@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import useBaseUrl from '@docusaurus/useBaseUrl';
+// Static images are served from the production CDN host. On lambdatest.com a root-relative
+// /support/img/... request is 301-redirected to testmuai.com with a trailing slash, which 404s.
+const IMG_BASE = 'https://www.testmuai.com/support/img/';
+const useBaseUrl = (path) => IMG_BASE + path.replace(/^img\//, '');
 
 const ORG_SCHEMA = {
   "@context": "https://schema.org",

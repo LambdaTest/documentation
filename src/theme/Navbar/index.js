@@ -344,8 +344,8 @@ export default function Navbar() {
         </button>
 
         <a href="https://www.testmuai.com" className={styles.logoLink}>
-          <img src="/support/img/testmuai-logo-light.svg" alt="TestMu AI" className={`${styles.logoLight} no-zoom`} height="32" />
-          <img src="/support/img/testmuai-logo-dark.svg" alt="TestMu AI" className={`${styles.logoDark} no-zoom`} height="32" />
+          <img src="https://www.testmuai.com/support/img/testmuai-logo-light.svg" alt="TestMu AI" className={`${styles.logoLight} no-zoom`} height="32" />
+          <img src="https://www.testmuai.com/support/img/testmuai-logo-dark.svg" alt="TestMu AI" className={`${styles.logoDark} no-zoom`} height="32" />
         </a>
 
         {/* Search — hidden on mobile */}
@@ -450,8 +450,8 @@ export default function Navbar() {
           <div className={styles.mobileDrawer} role="dialog" aria-modal="true" aria-label="Navigation menu">
             <div className={styles.mobileDrawerHeader}>
               <a href="https://www.testmuai.com" className={styles.logoLink}>
-                <img src="/support/img/testmuai-logo-light.svg" alt="TestMu AI" className={`${styles.logoLight} no-zoom`} height="32" />
-                <img src="/support/img/testmuai-logo-dark.svg" alt="TestMu AI" className={`${styles.logoDark} no-zoom`} height="32" />
+                <img src="https://www.testmuai.com/support/img/testmuai-logo-light.svg" alt="TestMu AI" className={`${styles.logoLight} no-zoom`} height="32" />
+                <img src="https://www.testmuai.com/support/img/testmuai-logo-dark.svg" alt="TestMu AI" className={`${styles.logoDark} no-zoom`} height="32" />
               </a>
               <div className={styles.mobileDrawerHeaderActions}>
                 <div className={styles.mobileThemeToggle}>

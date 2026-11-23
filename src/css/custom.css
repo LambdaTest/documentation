@@ -1,6 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&display=swap');
 
 :root {
+   --ai-bar-height: 60px;
+   --left-sidebar-width: 260px;
+   --right-rail-width: 220px;
+   --navbar-row1-height: 60px;
+   --navbar-row2-height: 40px;
+   --brand-amber: #ED5F00;
+   --brand-amber-light: #FFF4ED;
+   --method-get: #28A745;
+   --method-post: #007BFF;
+   --method-put: #FFC107;
+   --method-delete: #DC3545;
+   --method-patch: #6F42C1;
   --ifm-color-primary: #333333;
   --ifm-link-color-primary: #0969DA;
   --ifm-color-primary-dark: rgb(33, 175, 144);
@@ -36,6 +48,12 @@
 }
 
 [data-theme=dark] {
+   --brand-amber-light: #3D2200;
+   --method-get: #3DDC84;
+   --method-post: #58A6FF;
+   --method-put: #FFD866;
+   --method-delete: #FF6B6B;
+   --method-patch: #B48EFF;
   --ifm-footer-link-color: #C9D1D9;
   --ifm-color-primary: #F0F6FC;
   --ifm-link-color-primary: #FFFFFF;
@@ -2549,7 +2567,4 @@ html.docs-doc-id-support-start .theme-doc-footer,html.docs-doc-id-support-start 
 html.docs-doc-id-support-start .theme-doc-markdown .container{max-width:1536px;margin:0 auto;}
 html.docs-doc-id-support-start footer{display:none;}
 
-/* Variables used by the testmuCom navbar / docs home (brand colour, layout sizes, HTTP method colours) */
-:root{--ai-bar-height:60px;--left-sidebar-width:260px;--right-rail-width:220px;--navbar-row1-height:60px;--navbar-row2-height:40px;--brand-amber:#ED5F00;--brand-amber-light:#FFF4ED;--method-get:#28A745;--method-post:#007BFF;--method-put:#FFC107;--method-delete:#DC3545;--method-patch:#6F42C1;}
-[data-theme=dark]{--brand-amber-light:#3D2200;--method-get:#3DDC84;--method-post:#58A6FF;--method-put:#FFD866;--method-delete:#FF6B6B;--method-patch:#B48EFF;}
 html.docs-doc-id-support-start .hide_extra_space_main_div{overflow:clip;}
