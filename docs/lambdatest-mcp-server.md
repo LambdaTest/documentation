@@ -194,6 +194,24 @@ TestMu AI MCP Server works with any MCP-compatible AI client. Pick your client b
 - **Server URL:** `https://mcp.lambdatest.com/mcp`
 - **Authentication:** OAuth (you will be redirected to testmuai.com on first use)
 
+### EU Data Center Accounts
+
+If your TestMu AI account is in the EU data center (GDPR), add `?region=eu` to the server URL in every configuration on this page:
+
+```text
+https://mcp.lambdatest.com/mcp?region=eu
+```
+
+With this URL, sign-in opens the EU login page (`eu-accounts.lambdatest.com`) and the tools work with your EU account data. For example, in Claude Code:
+
+```bash
+claude mcp add --transport http mcp-lambdatest "https://mcp.lambdatest.com/mcp?region=eu"
+```
+
+:::note
+Always use the `?region=eu` URL with an EU account. Without it, sign-in goes to the US login page.
+:::
+
 ### Cursor
 
 Use the one-click install button to add the server to Cursor:
@@ -449,6 +467,11 @@ You can also ask questions like:
 - Make sure pop-ups are not blocked in your default browser.
 - If you have previously connected and the connection has expired, look for a **Disconnect** or **Clear authentication** option in your client's MCP settings, then reconnect.
 - Verify your TestMu AI account has the necessary permissions for the workspace you are trying to access.
+
+**EU account: the US login page opens or tools return 401**
+
+- Check that the server URL ends with `?region=eu`.
+- If you added the server before EU support was available, your client may still hold the old sign-in. Remove the server, add it again with the `?region=eu` URL, and sign in again. In Claude Code, run `claude mcp remove mcp-lambdatest` and then the `claude mcp add` command above.
 
 **Tools not appearing after configuration**
 
