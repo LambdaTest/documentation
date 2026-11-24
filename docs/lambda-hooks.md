@@ -218,7 +218,7 @@ driver.execute_script("lambda-screenshot=true")
 await driver.executeScript("lambda-screenshot=true", []);
 ```
 
-No extra capability is required.
+No extra capability is required. The value is case sensitive: only lowercase `true` captures a screenshot, and `lambda-screenshot=TRUE` is ignored without an error.
 
 ### How the Hook Behaves
 
@@ -242,11 +242,11 @@ Screenshots are named `<testId>-0`, `<testId>-1`, and so on, in the order they w
 
 ### Supported Platforms
 
-- Desktop browsers, including desktop web tests on HyperExecute.
+- Chrome, Edge and Firefox on Windows, macOS and Linux, including desktop web tests on HyperExecute.
 - Android Chrome and iOS Safari on real devices.
 - Chrome on Android emulators and Safari on iOS simulators.
 
-For native and hybrid apps, see [Lambda Hooks for Appium](/support/docs/appium-lambdaHooks/#capture-screenshots-on-demand).
+For native and hybrid apps, see [Lambda Hooks for Appium](/support/docs/appium-testmu-hooks/#capture-screenshots-on-demand).
 
 ## Playwright-Only Lambda Hooks
 

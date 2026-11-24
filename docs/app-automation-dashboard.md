@@ -156,7 +156,7 @@ Use the `visual` capability to enable the Visual logs.
 capabilities.setCapability("visual", "true")
 ```
 
->**Note**: To capture screenshots only at specific steps, keep `visual` set to `false` and call the [`lambda-screenshot` hook](/support/docs/appium-lambdaHooks/#capture-screenshots-on-demand) where you need them.
+>**Note**: To capture screenshots only at specific steps, keep `visual` set to `false` and call the [`lambda-screenshot` hook](/support/docs/appium-testmu-hooks/#capture-screenshots-on-demand) where you need them.
 
 5. **Video Logs**
 

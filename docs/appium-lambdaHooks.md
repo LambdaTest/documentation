@@ -416,7 +416,7 @@ driver.execute_script("lambdatest_executor: {\"action\": \"stepcontext\", \"argu
 ## Capture Screenshots on Demand
 ---
 
-Use the `lambda-screenshot` hook to capture a screenshot exactly where you need one, without turning on visual logs for the whole test. Keep `visual` set to `false` (or leave it out) and call the hook at each point you want a screenshot. Each call captures one screenshot. No extra capability is required.
+Use the `lambda-screenshot` hook to capture a screenshot exactly where you need one, without turning on visual logs for the whole test. Keep `visual` set to `false` (or leave it out) and call the hook at each point you want a screenshot. Each call captures one screenshot. No extra capability is required. The value is case sensitive: only lowercase `true` captures a screenshot, and `lambda-screenshot=TRUE` is ignored without an error.
 
 <VerifiedTag value="Verified" />
 
@@ -451,10 +451,10 @@ await driver.executeScript("lambda-screenshot=true", []);
 Hook screenshots appear in the same places as visual log screenshots:
 
 - **Command Logs**: the command row for the hook links to its screenshot.
-- **Meta Data → Media**: a `<testId>.zip` file is listed next to the video, ready to download.
+- **Meta Data → Media**: each screenshot is listed with its own download button. Use **Download All** to get them as `<testId>.zip`.
 - **API**: `GET https://mobile-api.lambdatest.com/mobile-automation/api/v1/sessions/{sessionId}/screenshots` returns the URL of the zip file.
 
-The zip file contains `<testId>-0.png`, `<testId>-1.png`, and so on, in the order they were captured. Files are sorted by name, so after 10 screenshots they are listed as `-0, -1, -10, -11, …, -2`.
+Screenshots are named by capture time (for example `2026-11-19_08-44-12-123456789.png`), so they sort in the order they were captured.
 
 ### Supported Platforms
 
