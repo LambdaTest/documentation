@@ -194,6 +194,10 @@ Every baseline change in SmartUI requires **explicit user action**. There is no 
 In CLI-based workflows, approval alone may not be sufficient for baseline persistence across different build contexts.
 :::
 
+:::tip
+To approve or reject the same change on many screenshots in one step, use the change groups in [AI Build Summary](/support/docs/smartui-ai-build-summary/#review-change-groups).
+:::
+
 ### Reject Function
 **What it does**: Marks screenshots as unacceptable without updating the baseline.
 

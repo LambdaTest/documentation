@@ -276,3 +276,5 @@ Password and secure text fields are never captured: their text and value are lef
 * **Improved Collaboration**: Share precise, actionable bug reports. Instead of describing a visual bug, you can link your team directly to the RCA view, showing them the exact DOM and CSS changes responsible.
 * **Focus on Meaningful Changes**: The system intelligently filters out noise, ensuring you and your team are alerted only to significant changes that impact user experience.
 * **No False Triggers**: RCA works only where DOM diff data is available, ensuring a smooth and guided experience without misleading information.
+
+For a build-level view of changes, with a risk score and similar changes grouped across screenshots, see [AI Build Summary](/support/docs/smartui-ai-build-summary/).
