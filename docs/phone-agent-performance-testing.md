@@ -97,7 +97,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-11-12T13:50:45+05:30"
+    "dateModified": "2026-11-24T12:00:00+05:30"
   }) }}
 />
 
@@ -122,8 +122,6 @@ Choose the test that matches what you want to check.
 ## Configure a Performance Test
 
 ---
-
-<!-- TODO: add the steps to start a performance test from a suite, with screenshots, once confirmed with product. -->
 
 Set two parameters for the test: how many concurrent calls to hold, and for how long.
 

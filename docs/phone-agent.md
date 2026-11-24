@@ -77,7 +77,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-11-12T13:50:45+05:30"
+    "dateModified": "2026-11-24T12:00:00+05:30"
   }) }}
 />
 
@@ -119,7 +119,7 @@ These features apply to inbound and outbound agents, and the walkthroughs below 
 - **Background noise.** Add one of 15 presets, such as café, street, call center, or poor cellular connection, to test your agent in realistic conditions.
 - **Call timing.** **Turn Wait Time** (0.5 to 5 seconds) is how long the caller waits after your agent stops speaking before it replies. Raise it if your agent pauses between sentences, so the caller doesn't cut in. **End call if silent for** (30 to 180 seconds) ends a call that goes quiet, and a maximum call duration (60 to 1800 seconds) stops runaway calls. You can also choose whether the caller or your agent speaks first.
 - **Scenario types.** When you generate scenarios, choose **Happy Path** for normal flows, **Negative** for errors and invalid inputs, **Edge Case** for boundary values and unusual conditions, or **Red Team** for security attacks and adversarial inputs. Scenario languages include Japanese and Portuguese.
-- **Red teaming.** Red team scenarios are generated from your agent's own prompt. The platform identifies the rules your agent must follow, attacks those rules, and prioritizes rules not yet covered, and the target list refreshes when the prompt changes. Findings appear in the Red Team section of the suite's **Insights** page, and each one links to the moment in the call recording.
+- **Red teaming.** Red team scenarios send a caller who plays a fraudster and attacks the rules in your agent's own prompt, across six OWASP LLM risks. Each call is rated Held, Partial, Breached, or Inconclusive, and red team results are kept out of your pass rate and the Go-Live assessment. See [Red Teaming for Phone Caller Agents](/support/docs/phone-agent-red-teaming/).
 - **Pronunciation assessment.** Set an accent on the agent and switch the check on per scenario to see mispronounced words on the finished call.
 - **Personas.** A persona sets the type of caller the simulated caller plays. Choose an available persona or create your own.
 - **Validation criteria.** Each scenario lists the outcomes a call must reach, such as "agent confirms the new appointment date". Every call is checked against them on the **Validation Results** tab.
@@ -127,7 +127,7 @@ These features apply to inbound and outbound agents, and the walkthroughs below 
 - **Agent profiles.** For inbound tests, an agent profile is a reusable caller persona with a name, phone number, voice, and background noise, kept in a library for your whole organization. Each profile can be switched between active and inactive.
 - **Live call monitoring.** Follow each call's status and duration while it runs, and end a call in progress.
 - **Recordings and transcripts.** Every call produces a recording and a speaker-identified transcript. Keypad tones (DTMF) appear in the transcript, so you can test IVR menu navigation. Click anywhere on the waveform to jump to that moment, or drag to scrub.
-- **Voice platform integrations.** If your agent runs on ElevenLabs, Retell, or Vapi, connect it on the **Integrations** tab to import its prompt and tool catalog, and see whether your agent called each expected tool on every test call. See the setup for [ElevenLabs](/support/docs/test-elevenlabs-agents/#elevenlabs-integration), [Retell](/support/docs/test-retell-agents/#retell-integration), or [Vapi](/support/docs/test-vapi-agents/#vapi-integration). Salesforce Agentforce voice agents connect the same way: the prompt syncs, you pick Agentforce tools in the scenario editor, and the tool calls made on each call are verified. See the [Agentforce integration](/support/docs/test-agentforce-agents/#agentforce-integration).
+- **Voice platform integrations.** If your agent runs on Amazon Connect, Cartesia, ElevenLabs, Retell, Vapi, or Salesforce Agentforce, connect it on the **Integrations** tab to import its prompt and tools, and see whether your agent called each expected tool on every test call. See the setup for [Amazon Connect](/support/docs/test-amazon-connect-bots/), [Cartesia](/support/docs/test-cartesia-agents/), [ElevenLabs](/support/docs/test-elevenlabs-agents/), [Retell](/support/docs/test-retell-agents/), [Vapi](/support/docs/test-vapi-agents/), or [Agentforce](/support/docs/test-agentforce-agents/#agentforce-integration).
 
 ## Inbound Phone Agents
 
@@ -202,8 +202,6 @@ An outbound phone agent places calls. To test one, the platform reserves a recip
 - **Passive mode.** Listen to a live outbound call and score it without taking part in the conversation, for QA monitoring.
 - **No performance testing.** Performance testing places calls to your agent, so it applies only to inbound agents.
 
-<!-- TODO: add how to start passive mode once confirmed with product. -->
-
 ## Test an Outbound Phone Agent (Pre Analysis)
 
 ---
@@ -256,15 +254,20 @@ The suite holds its reserved numbers until you release them, so click **Clear Re
 
 Post Analysis scores recordings of real production calls with the same metrics as live test calls, without placing new calls. Use it to check how your agent performs with real customers. It works for inbound and outbound agents.
 
-<!-- TODO: replace with step-by-step instructions and screenshots once the Post Analysis flow is confirmed with product. -->
+Follow these four steps on the agent whose calls you want to analyze.
 
-To analyze production calls, select **Post Analysis** from the analysis dropdown. In Post Analysis, you can:
+**Step 1: Switch to Post Analysis.** Open the agent and select **Post Analysis** from the analysis dropdown at the top right. The agent then shows two tabs: **Voice Analysis**, which lists your uploaded recordings, and **Metric Config**.
 
-- **Upload recordings** of production calls as MP3 or WAV files. Add their transcripts too if you want to compare them with the speech-to-text output, and pick an accent at upload to check pronunciation.
-- **Analyze in batches.** Multiple recordings are analyzed in parallel.
-- **Choose metrics.** Select which metric categories or individual metrics to run.
-- **Review a call.** Play the recording, follow the speaker-identified transcript with any keypad inputs (0 to 9, star, pound), and download the audio and transcript.
-- **Organize recordings.** Bookmark and tag recordings, and search or filter them by name, status, date, or tag.
+<img loading="lazy" src={require('../assets/images/agent-to-agent/phone-agent-post-analysis-voice-analysis.webp').default} alt="Post Analysis mode of an inbound phone agent showing the Voice Analysis and Metric Config tabs and the Upload Recordings button" width="1918" height="946"  className="doc_img"/>
+
+**Step 2: Choose the metrics.** On the **Metric Config** tab, select the metric categories or individual metrics to run. Do this before you upload, because a custom metric grades only recordings analyzed after you create it.
+
+**Step 3: Upload recordings.** On the **Voice Analysis** tab, click **Upload Recordings** and add production calls as MP3 or WAV files. Upload several at once to analyze them in parallel.
+
+- Add each call's transcript if you have it, to compare it with the speech-to-text output.
+- Pick an accent at upload to check your agent's pronunciation.
+
+**Step 4: Review a recording.** Open a recording from the list. Play the call, follow the speaker-identified transcript with any keypad inputs (0 to 9, star, pound), and download the audio and transcript if you need them elsewhere. To find calls again later, bookmark and tag them, then search or filter the list by name, status, date, or tag.
 
 ## Phone Agent Metrics {#metrics}
 
@@ -291,5 +294,5 @@ For what each metric measures, its default targets, and how to set up custom met
 - See how to [load test an inbound phone agent](/support/docs/phone-agent-performance-testing/) with concurrent calls.
 - See how to [run phone agent tests from the terminal](/support/docs/agent-testing-cli/) with the CLI.
 - See how to [test a scripted IVR menu](/support/docs/ivr-agent/), including [Twilio IVRs](/support/docs/test-twilio-ivr/).
-- See how to connect [ElevenLabs](/support/docs/test-elevenlabs-agents/#elevenlabs-integration), [Retell](/support/docs/test-retell-agents/#retell-integration), [Vapi](/support/docs/test-vapi-agents/#vapi-integration), or [Salesforce Agentforce](/support/docs/test-agentforce-agents/#agentforce-integration) agents for tool call validation.
+- See how to connect [Amazon Connect](/support/docs/test-amazon-connect-bots/), [Cartesia](/support/docs/test-cartesia-agents/), [ElevenLabs](/support/docs/test-elevenlabs-agents/), [Retell](/support/docs/test-retell-agents/), [Vapi](/support/docs/test-vapi-agents/), or [Salesforce Agentforce](/support/docs/test-agentforce-agents/#agentforce-integration) agents for tool call validation.
 - See how the platform [runs an evaluation end to end](/support/docs/architecture-and-how-evaluation-works/).

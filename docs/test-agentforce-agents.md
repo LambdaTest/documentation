@@ -1,9 +1,9 @@
 ---
 id: test-agentforce-agents
 toc_max_heading_level: 2
-title: How to Test Salesforce Agentforce Voice Agents With TestMu AI
+title: Salesforce Agentforce Integration for TestMu AI Agent Testing
 hide_title: false
-sidebar_label: Test Agentforce Agents
+sidebar_label: Salesforce Agentforce
 description: Connect a Salesforce Agentforce voice agent to TestMu AI, call it from a Phone Caller agent, import its prompt and actions, and verify which tools it called.
 keywords:
  - test agentforce agents
@@ -32,7 +32,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       "@type": "WebPage",
       "@id": "https://www.testmuai.com/support/docs/test-agentforce-agents/"
     },
-    "headline": "How to Test Salesforce Agentforce Voice Agents With TestMu AI",
+    "headline": "Salesforce Agentforce Integration for TestMu AI Agent Testing",
     "description": "Connect a Salesforce Agentforce voice agent to TestMu AI, call it from a Phone Caller agent, import its prompt and actions, and verify which tools it called.",
     "url": "https://www.testmuai.com/support/docs/test-agentforce-agents/",
     "image": {
@@ -74,7 +74,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-11-12T13:50:45+05:30"
+    "dateModified": "2026-11-20T12:00:00+05:30"
   }) }}
 />
 
@@ -84,19 +84,20 @@ To connect one, you need an Agentforce agent with an active version, an External
 
 The [Salesforce setup](#salesforce-setup) is usually done by your Salesforce admin. [Connecting the agent](#connect-the-agent) and [running the tests](#run-tests) are done in TestMu AI by whoever runs the tests. Four [example calls](#what-it-catches) show what tool call validation catches. [Troubleshooting](#troubleshooting) and a short set of [verification queries](#verification-queries) are at the end.
 
-## What does the Agentforce integration add to your tests? {#agentforce-integration}
+## Integration at a Glance {#agentforce-integration}
 
 ---
 
 A call transcript shows what the agent said, not which tools it ran. Once the integration is connected, TestMu AI reads the agent's definition and its session traces from Salesforce.
 
-| Capability | What it means for you |
+| Item | Details |
 |---|---|
-| **Prompt sync** | The agent's topics, instructions, and agent script are pulled from Salesforce into the agent's **Prompt** page, so scenario generation knows what the agent is supposed to do. |
-| **Tool catalog** | The agent's actions, for example `LookupCustomer` or `GetOrderStatus`, appear in the scenario editor, so you can state which tools a scenario expects the agent to call. |
-| **Tool call validation** | After each call, TestMu AI fetches what the agent actually did from Salesforce and marks each expected tool as **Called** or **Not Called**. |
-
-TestMu AI offers this kind of integration for ElevenLabs, Retell, Vapi, and Salesforce Agentforce. For the others, see the [ElevenLabs integration](/support/docs/test-elevenlabs-agents/#elevenlabs-integration), the [Retell integration](/support/docs/test-retell-agents/#retell-integration), and the [Vapi integration](/support/docs/test-vapi-agents/#vapi-integration).
+| **Agent type** | Phone Caller, inbound. TestMu AI calls the phone number routed to your Agentforce agent. |
+| **Where you connect** | The agent's **Integrations** tab, on the **Agentforce** tile. |
+| **What you need** | Your org's My Domain, the consumer key and secret of an External Client App, and the Agentforce agent ID. |
+| **What is imported** | The active version's topics, instructions, and agent script as the prompt, and its actions, for example `LookupCustomer` or `GetOrderStatus`, as the tool catalog. |
+| **What is checked** | Whether the agent called each tool a scenario expects, with the arguments and result of every call. |
+| **When tool calls appear** | About 6 to 10 minutes after the call ends. |
 
 ### Timing to Expect
 
@@ -106,7 +107,7 @@ TestMu AI offers this kind of integration for ElevenLabs, Retell, Vapi, and Sale
 | Tool calls | About 6 to 10 minutes after the call ends. Salesforce delivers agent traces to Data Cloud in a single batch, and this delay is on the Salesforce side, not in TestMu AI. |
 | Tool call verification timeout | If no trace has appeared 35 minutes after the call ended, that call's tool calls are marked unverified. See [Troubleshooting](#troubleshooting). |
 
-## What do you need before you start? {#prerequisites}
+## Prerequisites {#prerequisites}
 
 ---
 
@@ -127,7 +128,7 @@ You can connect before voice is ready. Saving the credentials, the prompt sync, 
 
 - A project to hold the agent under test.
 
-## How do you set up Salesforce for TestMu AI? {#salesforce-setup}
+## Set Up Salesforce {#salesforce-setup}
 
 ---
 
@@ -186,7 +187,7 @@ Treat the consumer secret like a password. Copy it straight into TestMu AI when 
 
 Only a Salesforce My Domain (`https://…my.salesforce.com`) is accepted for **Your org's My Domain**. Login hosts, Lightning hosts, and any other URL are rejected when you save.
 
-## How do you connect an Agentforce agent to TestMu AI? {#connect-the-agent}
+## Connect the Agentforce Agent {#connect-the-agent}
 
 ---
 
@@ -218,7 +219,7 @@ A message confirms the result:
 | **Existing project prompt kept; Agentforce tools synchronized** | The project already had a prompt, so TestMu AI kept it and synchronized the tools. |
 | **Could not sync Agentforce:** followed by the reason | A step failed. See [Troubleshooting](#troubleshooting). |
 
-TestMu AI stores the credentials encrypted. After you save, the page shows that a key and secret are saved, with the fields reading *saved — enter to replace*, but never displays them again. To change them, enter new values and select **Save**.
+TestMu AI stores the credentials as HyperExecute secrets, scoped to this agent. After you save, the page shows that a key and secret are saved, with the fields reading *saved — enter to replace*, but never displays them again. To change them, enter new values and select **Save**.
 
 Once connected, the **Agentforce** tile shows **Connected** and a **Re-sync** button, which pulls the agent's active version from Salesforce again.
 
@@ -237,13 +238,13 @@ Open any scenario in the agent, or create one, and look for the **Agentforce Too
 
 If the section is empty, the sync found no actions on the active agent version. Confirm that the agent has actions, then sync again: select **Re-sync** on the **Agentforce** tile in **Integrations**, or **Sync from Agentforce** on the **Prompt** page.
 
-## How do you run Agentforce tests and read the results? {#run-tests}
+## Run Tests and Read the Tool Calls {#run-tests}
 
 ---
 
 ### Select the Expected Tools for Each Scenario
 
-Generate scenarios from the synced prompt, or write them by hand. For each scenario where you want the agent's tool use checked:
+Generate scenarios from the synced prompt. For each scenario where you want the agent's tool use checked:
 
 1. Open the scenario and expand **Agentforce Tools (Optional)**.
 2. Select the checkbox for each tool that the scenario expects the agent to call.
@@ -292,7 +293,7 @@ A run with zero tool calls is not necessarily an error. If the scenario never ga
 | The tool calls are listed | The call was matched to its Salesforce session, and the trace was fetched. | Nothing. |
 | *Tool calls are unverified* | Either verification timed out because no trace appeared within 35 minutes of the call ending, or TestMu AI could not tell with certainty which session belonged to this call and chose not to guess. The transcript and grading are unaffected. | See [Troubleshooting](#troubleshooting). Rerunning the scenario is usually enough. If every run ends unverified, Data Cloud tracing or the integration user's access is the cause. |
 
-## What failures does Agentforce tool call validation catch? {#what-it-catches}
+## What Tool Call Validation Catches {#what-it-catches}
 
 ---
 
@@ -350,7 +351,7 @@ In this version of the agent, the agent stopped calling its actions.
 
 In the three failed calls, **Validation Results**, **Analytics**, and the **Call Summary** show that the agent did not complete the task. The **Tool Calls** tab shows which actions the agent called, how many times, with what arguments, and what each one returned, or that it called none.
 
-## How do you troubleshoot the Agentforce integration? {#troubleshooting}
+## Troubleshooting {#troubleshooting}
 
 ---
 
@@ -371,7 +372,7 @@ In the three failed calls, **Validation Results**, **Analytics**, and the **Call
 | A scenario ends with `dispatch-failed` and no call | The call could not be placed. Most often, the agent's phone number is not in international format (a `+`, then the country code and the number), or there was a transient telephony error. If TestMu AI itself refused the call, for example because the integration is not active or the selected tools no longer match the connected agent, the scenario shows that message instead. | Check the number on the agent. See [Create the Phone Caller Agent](#create-the-phone-caller-agent). Then rerun the scenario. |
 | The agent said something it should not have, for example it named its backend data provider | A real defect in the agent's instructions. | This is not a TestMu AI problem. Add the guardrail to every topic that can answer, not only the off-topic one. |
 
-## How does Agentforce tool call validation work? {#how-it-works}
+## How Tool Call Validation Works {#how-it-works}
 
 ---
 
@@ -385,7 +386,7 @@ You do not need this section to use the integration. It explains the wait and th
 
 **Privacy and access.** TestMu AI holds the consumer key and secret encrypted, requests short-lived tokens with them, and performs read-only queries. The session and tool call data that it fetches is stored with the call result, alongside the transcript.
 
-## How do you verify Salesforce access with queries? {#verification-queries}
+## Verification Queries {#verification-queries}
 
 ---
 
@@ -433,10 +434,10 @@ If a query fails or returns nothing, use this table to find the cause.
 | The `VoiceCall` query returns nothing after a call | The user lacks Service Cloud Voice access. |
 | The session or tool call query returns nothing after 10 minutes | Data Cloud tracing is not flowing, or the user lacks access to it. |
 
-## Related TestMu AI Guides
+## Other Integrations
 
 ---
 
-- See the [phone agent testing overview](/support/docs/phone-agent/) for live test calls, recording analysis, and performance testing.
-- See how to [test an inbound phone agent](/support/docs/phone-agent/#test-an-inbound-phone-agent-pre-analysis) step by step.
-- See how to connect [ElevenLabs](/support/docs/test-elevenlabs-agents/#elevenlabs-integration), [Retell](/support/docs/test-retell-agents/#retell-integration), or [Vapi](/support/docs/test-vapi-agents/#vapi-integration) agents for tool call validation.
+- **Phone Caller agents:** [Amazon Connect](/support/docs/test-amazon-connect-bots/), [Cartesia](/support/docs/test-cartesia-agents/), [ElevenLabs](/support/docs/test-elevenlabs-agents/), [Retell](/support/docs/test-retell-agents/), and [Vapi](/support/docs/test-vapi-agents/).
+- **Voice agents:** [Deepgram Voice Agent](/support/docs/test-deepgram-voice-agents/).
+- See [Phone Agent Testing](/support/docs/phone-agent/) for everything else a phone test covers.

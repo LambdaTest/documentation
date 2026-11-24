@@ -76,7 +76,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-11-14T11:30:00+05:30"
+    "dateModified": "2026-11-24T12:00:00+05:30"
   }) }}
 />
 
@@ -101,9 +101,8 @@ These features apply to IVR agents, and the walkthrough below doesn't cover them
 - **Cyara import.** If your IVR test cases already live in Cyara, upload a Cyara XML export. Every test case becomes a callable IVR scenario, with its prompts, keypad steps, shared blocks, dial number, and test data carried across, and the flow appears on the **IVR System Map**.
 - **Personas.** Each scenario pairs a menu path with a persona that sets how the simulated caller behaves, such as a caller who over-explains at a speech prompt or one who multitasks and answers late.
 - **Recordings and transcripts.** Every call produces a recording and a speaker-identified transcript, with the keypad tones the caller pressed, so you can match each menu choice to what the IVR played next.
-- **Email alerts for failed runs.** On the **Integrations** tab, turn on email alerts and choose the recipients. Each failed run sends one email listing the failed scenarios, any red team attacks that succeeded, and a link to the results.
+- **Email alerts for failed runs.** On the **Integrations** tab, turn on email alerts and choose the recipients. Each failed run sends one email listing the failed scenarios and a link to the results.
 - **Insights.** The **Insights** tab summarizes your suites with pass rate, average score, and completed runs, with a page per suite for run history.
-- **Performance testing.** On the **Performance Testing** tab, hold a set number of concurrent calls to your IVR to find the load at which it starts to slow down or drop calls. See [performance testing](/support/docs/phone-agent-performance-testing/) for how a load test is set up and read.
 
 ## Test an IVR Agent
 
@@ -187,8 +186,6 @@ A large IVR has hundreds of reachable paths, so build scenarios for these first.
 Each IVR call gets an overall score, a mean opinion score (MOS) out of 5 for the call audio, and a result for each of the scenario's validation criteria.
 
 Hallucination, grounding, and safety metrics are built for conversational agents and don't apply to a scripted menu, so leave them off when you choose which metrics run. For what each call metric measures, see [Phone Caller Agent Metrics](/support/docs/agent-features-and-metrics/#phone-agent-metrics).
-
-<!-- TODO: confirm with product which of the 42 phone call metrics apply to IVR agents. -->
 
 ## Go-Live Assessment and Scheduled Runs
 

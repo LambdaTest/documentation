@@ -130,10 +130,10 @@ The platform does not rely on a single evaluator. 15+ testing agents each own on
 
 ---
 
-Agent Testing red-teams AI agents with adversarial scenario suites aligned to the OWASP Top 10 for LLM applications: prompt injection (LLM01), insecure output handling (LLM02), sensitive-information disclosure and PII leakage (LLM06), data exfiltration, jailbreak, and policy violations.
+Agent Testing red-teams AI agents with adversarial scenario suites aligned to the OWASP Top 10 for LLM applications: prompt injection (LLM01), sensitive information disclosure and PII leakage (LLM02), improper output handling (LLM05), excessive agency (LLM06), system prompt leakage (LLM07), misinformation (LLM09), data exfiltration, jailbreak, and policy violations.
 
 - **Chat agents** face a live adversarial attacker across seven attack types: business logic, hallucination, hijacking, prompt injection, technical injection, overreliance, and off-topic. The attacker and the grader are separate, so the score is not influenced by how hard the attacker pushed, and a run that cannot be judged is reported as inconclusive rather than passed.
-- **Phone caller agents** get red team scenarios generated from the agent's own prompt. The platform identifies the rules the agent must follow, attacks those rules, and prioritizes rules not yet covered. Each finding links to the moment in the call recording.
+- **Phone caller agents** get red team scenarios generated from the agent's own prompt. The platform identifies the rules the agent must follow, attacks those rules, and prioritizes rules not yet covered. Each finding links to the moment in the call recording. See [Red Teaming for Phone Caller Agents](/support/docs/phone-agent-red-teaming/).
 
 Toxicity, bias and harmful-content generation are evaluated as first-class metrics across the tested persona set. Every finding is evidence-backed. The specific conversation turns that triggered a flag are preserved with per-turn attribution and confidence intervals, exportable for regulatory documentation, and the A2A CLI runs the same scenarios in CI so security testing gates every release.
 

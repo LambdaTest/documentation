@@ -135,6 +135,7 @@ Click **Generate Scenarios** to confirm.
 - Endpoint profiles define multi-step API flows for complex authentication scenarios: login, session creation, and chat endpoints, with variable extraction and injection.
 - Keep secrets such as tokens and API keys in the vault instead of in plaintext in the profile.
 - For an agent hosted on LiveKit, the profile can connect over WebRTC transport. See how to [test LiveKit agents](/support/docs/test-livekit-agents/).
+- For an agent built on Deepgram Voice Agent, choose the **Deepgram Voice Agent** option. See the [Deepgram Voice Agent integration](/support/docs/test-deepgram-voice-agents/).
 
 <img loading="lazy" src={require('../assets/images/agent-to-agent/voice-agent-endpoint-profiles-tab.webp').default} alt="Endpoint Profiles tab with the Create New Endpoint Profile and Import options for a voice agent" width="1918" height="936"  className="doc_img"/>
 
@@ -170,6 +171,7 @@ The steps above don't cover these features. They work the same way as on [chat a
 
 - **Knowledge sources.** Besides uploading files on the **Prompt** tab, link Confluence, Jira, or S3 bucket sources to generate scenarios from them.
 - **Validation criteria.** Each generated scenario comes with its own validation criteria, and you can edit a scenario or its criteria before you run it.
+- **Tool call checks.** List the functions a scenario expects under **Expected Tool Calls**, one per line, with `(optional)` after any the agent may skip. The **Tool Calls** tab shows the verdict and every call the agent made. Tool calls are recorded for [Deepgram Voice Agent](/support/docs/test-deepgram-voice-agents/) runs.
 - **Test profiles.** A test profile holds the data a conversation runs with, such as a customer ID, and its values can be overridden per suite or per scenario. See [Test Suites and Test Profiles](/support/docs/agent-features-and-metrics/#test-suites-and-test-profiles).
 - **Playground.** Try your endpoint profile interactively across several turns before you run a full suite, to check that the connection works.
 - **Metrics and thresholds.** Choose which metrics a run uses and set the minimum passing score for each one. See [Metric Thresholds](/support/docs/agent-features-and-metrics/#metric-thresholds-and-custom-metrics).
