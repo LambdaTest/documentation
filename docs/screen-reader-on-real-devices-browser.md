@@ -114,6 +114,12 @@ Manual accessibility testing is crucial to ensure that your mobile apps and webs
 |Google Pixel 7 Pro|Android 13|
 |Samsung Galaxy S22 5G|Android 12|
 |Google Pixel 6 Pro|Android 12|
+|Galaxy S24|Android 14|
+|Galaxy S25|Android 15|
+|Galaxy S26|Android 16|
+|Pixel 9|Android 16|
+|Pixel 10|Android 16|
+
 
 ---
 ## How to Navigate using Keyboard Shortcuts
