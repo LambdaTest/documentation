@@ -13,6 +13,8 @@ slug: app-testing-on-real-devices/
 canonical: https://www.testmuai.com/support/docs/app-testing-on-real-devices/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 
 
@@ -123,4 +125,58 @@ Check out our detailed [support documentation](/support/docs/testing-locally-hos
 **Step 6**: Select the preferred **Brand**, **Device Name** and **OS Version** to easily navigate to your required device. You can also use the search bar to select your devices.
 
 **Step 7**: Click on **Start** to run your test session.
+
+## Automate Your App on Real Devices With Appium
+
+When a manual check should become a repeatable test, run the same app on real Android and iOS devices with Appium. Connect your test to the <BrandName /> hub at `mobile-hub.lambdatest.com/wd/hub` with your `LT_USERNAME` and `LT_ACCESS_KEY`, and pass capabilities like these. `isRealMobile` set to `True` runs the session on a real device.
+
+<Tabs className="docs__val">
+
+<TabItem value="android" label="Android" default>
+
+```python title="android_caps.py"
+desired_caps = {
+    "deviceName": "Galaxy S20",
+    "platformName": "Android",
+    "platformVersion": "10",
+    # highlight-next-line
+    "app": "APP_URL",  # Enter app (.apk) url
+    "isRealMobile": True,
+    "build": "Python Vanilla Android",
+    "name": "Sample Test - Python",
+    "network": False,
+    "visual": True,
+    "video": True
+}
+```
+
+</TabItem>
+
+<TabItem value="ios" label="iOS">
+
+```python title="ios_caps.py"
+desired_caps = {
+    "deviceName": "iPhone 12",
+    "platformName": "ios",
+    "platformVersion": "14",
+    "isRealMobile": True,
+    # highlight-next-line
+    "app": "APP_URL",  # Enter app (.ipa) url
+    "build": "Python Vanilla iOS",
+    "name": "Sample Test - Python",
+    "network": False,
+    "visual": True,
+    "video": True
+}
+```
+
+</TabItem>
+
+</Tabs>
+
+:::info
+- Set `app` to your app's `app_url`, of the form `lt://APP123456789123456789`, which the [app upload API](/support/docs/application-setup-via-api/) returns. For an app you uploaded on the Real Device dashboard, copy the App ID from the app's **Settings**, as shown in [uploading apps from the dashboard](/support/docs/application-setup-via-gui/).
+- Set `isRealMobile` to `False` to run on virtual devices instead of real ones.
+- Generate a capabilities set for any device and OS with the [Capabilities Generator](https://www.testmuai.com/capabilities-generator/). For every supported key, see [Appium automation capabilities](/support/docs/desired-capabilities-in-appium/), and for the full test that uses these capabilities, see how to [run your first Appium test](/support/docs/getting-started-with-appium-testing/).
+:::
 
