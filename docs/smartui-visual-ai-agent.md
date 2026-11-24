@@ -191,5 +191,6 @@ All members can give feedback on AI-generated differences and summaries. Followi
 
 *   Visual AI Agent is currently available for comparisons with vertical lengths under **5000px**.
 *   If the Visual AI agent is active and you open the **RCA panel**, the panel will still display all differences from the standard Smart RCA comparison.
+*   To review a whole build at once, with a risk score and changes grouped across screenshots, see [AI Build Summary](/support/docs/smartui-ai-build-summary/).
 > **Visual AI Agent can make mistakes. Please visually verify the results.**
 

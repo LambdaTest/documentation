@@ -3687,6 +3687,11 @@ module.exports = {
           },
           {
             type: "doc",
+            label: "AI Build Summary",
+            id: "smartui-ai-build-summary",
+          },
+          {
+            type: "doc",
             label: "Multiselect & Bulk Operations",
             id: "smartui-multiselect-bulkops",
           },
