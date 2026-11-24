@@ -103,7 +103,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         "text": "await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: 'setTestStatus', arguments: { status: 'passed', remark: 'Title matched' } })}`);"
       }
     ],
-    "dateModified": "2026-09-09T19:13:32+05:30"
+    "dateModified": "2026-11-23T12:00:00+05:30"
   }) }}
 />
 
@@ -182,7 +182,7 @@ These hooks work only through the Selenium JavascriptExecutor and are not availa
 | **lambda-action** | Used to mark a test as passed/failed. Moreover, it allows the option to include a failure reason, which will be visible on the TestMu AI Automation Dashboard inside the session view. | `Map<String, String> action = new HashMap();action.put("status", "failed"); action.put("reason", "tmp reason"); driver.executeScript("lambda-action", action);`<br /><br />`((JavascriptExecutor) driver).executeScript("lambda-action=" + "Lambda Error");` |
 | **lambda-perform-keyboard-events** | You can simulate keyboard shortcuts like **ctrl + c**, **ctrl + v** in automation test scenarios. This hook is supported on both Windows and MacOS. | `js.executeScript("lambda-perform-keyboard-events:tab");` |
 | **lambda-breakpoint** | Aborts the test execution to use the live interaction feature. | `driver.executeScript("lambda-breakpoint=true");` |
-| **lambda-screenshot** | Captures the async screenshot during test execution. | `driver.executeScript("lambda-screenshot=true");` |
+| **lambda-screenshot** | Captures a screenshot at that point in the test, even when `visual` is set to `false`. See [Capture Screenshots on Demand](#capture-screenshots-on-demand). | `driver.executeScript("lambda-screenshot=true");` |
 | **lambda-throttle-network** | Throttles network speed during test execution. | `executeScript("lambda-throttle-network","Regular 4G")` |
 | **lambda-ping** | Fetches the IPs of the domain. | `driver.executeScript("lambda-ping=lambdatest.com");` |
 | **lambda-exceptions** | Uploads the exceptions for tests that are captured on the console. | `driver.executeScript('lambda-exceptions', [[message]])` |
@@ -193,6 +193,60 @@ These hooks work only through the Selenium JavascriptExecutor and are not availa
 | **lambda:network=full.har** | Fetches the complete network HAR log at runtime during the test session. | **Syntax :** `driver.execute_script("lambda:network=full.har");`<br /><br />**Note :**<br />**Required Capabilities:** Both `network` and `network.full.har` must be set to `true` in your test capabilities |
 | **lambda-test-tags** | Dynamically update your test tags for a test session which can be used to organize and filter your test results. | **Syntax :** `driver.executeScript("lambda-test-tags", "Tag 1,Tag 3,Tag 2");`<br /><br />**Limitations :**<br />**1. Maximum Character Length per Tag:** Each tag can have up to 50 characters.<br />**2. Maximum Number of Tags:** A maximum of 15 tags can be assigned to a single test session. |
 | **lambda-heal-start* / *lambda-heal-stop** | Enables / disables [AutoHeal with hooks](/support/docs/auto-healing/) for the portion of the test between the two calls, so locator failures are healed automatically. | `driver.execute_script('lambdatest_executor:{"action":"lambda-heal-start"}')`<br /><br />`// ...steps with dynamic locators...`<br /><br />`driver.execute_script('lambdatest_executor:{"action":"lambda-heal-stop"}')` |
+
+## Capture Screenshots on Demand
+
+---
+
+Use the `lambda-screenshot` hook to capture a screenshot exactly where you need one, without turning on visual logs for the whole test. Keep `visual` set to `false` (or leave it out) and call the hook at each point you want a screenshot. Each call captures one screenshot.
+
+<VerifiedTag value="Verified" />
+
+```python
+driver.execute_script("lambda-screenshot=true")
+```
+
+<VerifiedTag value="Verified" />
+
+```java
+((JavascriptExecutor) driver).executeScript("lambda-screenshot=true");
+```
+
+<VerifiedTag value="Verified" />
+
+```javascript
+await driver.executeScript("lambda-screenshot=true", []);
+```
+
+No extra capability is required. The value is case sensitive: only lowercase `true` captures a screenshot, and `lambda-screenshot=TRUE` is ignored without an error.
+
+### How the Hook Behaves
+
+| Scenario | Result |
+| -------- | ------ |
+| `visual: false` and `lambda-screenshot=true` | One screenshot for each hook call. |
+| `visual: false` and `lambda-screenshot=false` | No screenshot. |
+| `visual: false` and no hook | No screenshots. |
+| `visual: true` and `lambda-screenshot=true` | A screenshot for every command, as usual. Hook calls are also captured, without duplicates. |
+| Screenshot capture fails | The test does not fail. The failure is logged and the test continues. |
+
+### Where to Find the Screenshots
+
+Hook screenshots appear in the same places as visual log screenshots:
+
+- **Command Logs**: the command row for the hook links to its screenshot.
+- **Meta Data → Media**: a `<testId>.zip` file is listed next to the video, ready to download.
+- **API**: `GET https://api.lambdatest.com/automation/api/v1/sessions/{sessionId}/screenshots` returns the URL of the zip file.
+
+Screenshots are named `<testId>-0`, `<testId>-1`, and so on, in the order they were captured. The zip file sorts them by name, so after 10 screenshots they are listed as `-0, -1, -10, -11, …, -2`.
+
+### Supported Platforms
+
+- Chrome, Edge and Firefox on Windows, macOS and Linux, including desktop web tests on HyperExecute.
+- Android Chrome and iOS Safari on real devices.
+- Chrome on Android emulators and Safari on iOS simulators.
+
+For native and hybrid apps, see [Lambda Hooks for Appium](/support/docs/appium-testmu-hooks/#capture-screenshots-on-demand).
 
 ## Playwright-Only Lambda Hooks
 

@@ -4,7 +4,7 @@ title: How to Use Lambda Hooks for Appium on TestMu AI
 hide_title: true
 toc_max_heading_level: 2
 sidebar_label: "Appium Hooks"
-description: Use Lambda Hooks in Appium scripts on TestMu AI to set custom status and remarks, rename tests, differentiate cases, annotate commands, and install apps.
+description: Use Lambda Hooks in Appium scripts on TestMu AI to set custom status and remarks, rename tests, differentiate cases, annotate commands, capture screenshots, and install apps.
 keywords:
   - appium
   - testmu ai hooks
@@ -138,7 +138,7 @@ import VirtualDeviceTag from '@site/src/component/virtualDevice';
         "text": "driver.execute_script(\"lambdatest_executor: {\\\"action\\\": \\\"stepcontext\\\", \\\"arguments\\\": {\\\"data\\\": \\\"\\\"}}\");"
       }
     ],
-    "dateModified": "2026-11-11T12:00:00+05:30"
+    "dateModified": "2026-11-23T12:00:00+05:30"
   }) }}
 />
 
@@ -149,7 +149,7 @@ import VirtualDeviceTag from '@site/src/component/virtualDevice';
 
 
 
-Lambda Hooks on <BrandName /> are JavaScript-executor snippets you drop into Appium scripts to control and annotate a test run without leaving your own code. Set a status and remarks, rename tests, differentiate cases per session, annotate commands, and install apps.
+Lambda Hooks on <BrandName /> are JavaScript-executor snippets you drop into Appium scripts to control and annotate a test run without leaving your own code. Set a status and remarks, rename tests, differentiate cases per session, annotate commands, capture screenshots, and install apps.
 
 ## Adding custom status & remark
 ---
@@ -412,6 +412,57 @@ driver.execute_script("lambdatest_executor: {\"action\": \"stepcontext\", \"argu
 :::info
 **Mutual exclusivity:** Test case and Command Annotations cannot be used together in the same script. You can only use **one** of them per session.
 :::
+
+## Capture Screenshots on Demand
+---
+
+Use the `lambda-screenshot` hook to capture a screenshot exactly where you need one, without turning on visual logs for the whole test. Keep `visual` set to `false` (or leave it out) and call the hook at each point you want a screenshot. Each call captures one screenshot. No extra capability is required. The value is case sensitive: only lowercase `true` captures a screenshot, and `lambda-screenshot=TRUE` is ignored without an error.
+
+<VerifiedTag value="Verified" />
+
+```python
+driver.execute_script("lambda-screenshot=true")
+```
+
+<VerifiedTag value="Verified" />
+
+```java
+((JavascriptExecutor) driver).executeScript("lambda-screenshot=true");
+```
+
+<VerifiedTag value="Verified" />
+
+```javascript
+await driver.executeScript("lambda-screenshot=true", []);
+```
+
+### How the Hook Behaves
+
+| Scenario | Result |
+|----------|--------|
+| `visual: false` and `lambda-screenshot=true` | One screenshot for each hook call. |
+| `visual: false` and `lambda-screenshot=false` | No screenshot. |
+| `visual: false` and no hook | No screenshots. |
+| `visual: true` and `lambda-screenshot=true` | A screenshot for every command, as usual. Hook calls are also captured, without duplicates. |
+| Screenshot capture fails | The test does not fail. The failure is logged and the test continues. |
+
+### Where to Find the Screenshots
+
+Hook screenshots appear in the same places as visual log screenshots:
+
+- **Command Logs**: the command row for the hook links to its screenshot.
+- **Meta Data → Media**: each screenshot is listed with its own download button. Use **Download All** to get them as `<testId>.zip`.
+- **API**: `GET https://mobile-api.lambdatest.com/mobile-automation/api/v1/sessions/{sessionId}/screenshots` returns the URL of the zip file.
+
+Screenshots are named by capture time (for example `2026-11-19_08-44-12-123456789.png`), so they sort in the order they were captured.
+
+### Supported Platforms
+
+- Android and iOS apps on real devices.
+- Android emulators and iOS simulators.
+- Hybrid apps, in both webview and native contexts.
+
+For browser tests, see [Lambda Hooks in Selenium](/support/docs/lambda-hooks/#capture-screenshots-on-demand).
 
 ## Install and Uninstall App Hooks
 ---
