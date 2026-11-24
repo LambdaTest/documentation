@@ -135,7 +135,7 @@ Click **Generate Scenarios** to confirm.
 - Endpoint profiles define multi-step API flows for complex authentication scenarios: login, session creation, and chat endpoints, with variable extraction and injection.
 - Keep secrets such as tokens and API keys in the vault instead of in plaintext in the profile.
 - For an agent hosted on LiveKit, the profile can connect over WebRTC transport, set with a server and a room-token endpoint. See how to [test LiveKit agents](/support/docs/test-livekit-agents/).
-- For an agent built on Deepgram Voice Agent, choose the **Deepgram Voice Agent** option, then add the API key (a vault secret is recommended), the agent ID, and how client tool calls are answered: with a mock reply or an HTTP call.
+- For an agent built on Deepgram Voice Agent, choose the **Deepgram Voice Agent** option, then add the API key (a vault secret is recommended), the agent ID, and how client tool calls are answered: with a mock reply or an HTTP call. See the [Deepgram Voice Agent integration](/support/docs/test-deepgram-voice-agents/).
 
 <img loading="lazy" src={require('../assets/images/agent-to-agent/voice-agent-endpoint-profiles-tab.webp').default} alt="Endpoint Profiles tab with the Create New Endpoint Profile and Import options for a voice agent" width="1918" height="936"  className="doc_img"/>
 
@@ -172,7 +172,7 @@ The steps above don't cover these features. Most of them work the same way as on
 - **Knowledge sources.** Besides uploading files on the **Prompt** tab, link Confluence, Jira, or S3 bucket sources to generate scenarios from them.
 - **Validation criteria.** Each generated scenario comes with its own validation criteria, and you can edit a scenario or its criteria before you run it.
 - **Maximum conversation turns.** Voice scenarios take a limit from 1 to 100 turns, 50 by default.
-- **Tool call checks.** Deepgram Voice Agent runs record the agent's tool calls. For those agents, list the calls you expect in a scenario's **Expected Tool Calls** field, one function name per line, with `(optional)` after any the agent may skip. Results show a **Tool Calls** tab with the pass or fail verdict, then every call the agent made with its outcome, turn, latency, arguments, and result.
+- **Tool call checks.** List the functions a scenario expects under **Expected Tool Calls**, one per line, with `(optional)` after any the agent may skip. The **Tool Calls** tab shows the verdict and every call the agent made. Tool calls are recorded for [Deepgram Voice Agent](/support/docs/test-deepgram-voice-agents/) runs.
 - **Test profiles.** A test profile holds the data a conversation runs with, such as a customer ID, and its values can be overridden per suite or per scenario. See [Test Suites and Test Profiles](/support/docs/agent-features-and-metrics/#test-suites-and-test-profiles).
 - **Playground.** Try your endpoint profile interactively across several turns before you run a full suite, to check that the connection works.
 - **Metrics and thresholds.** Choose which metrics a run uses and set the minimum passing score for each one. See [Metric Thresholds](/support/docs/agent-features-and-metrics/#metric-thresholds-and-custom-metrics).

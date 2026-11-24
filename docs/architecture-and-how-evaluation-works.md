@@ -74,7 +74,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-04T12:50:18+05:30"
+    "dateModified": "2026-11-12T13:50:45+05:30"
   }) }}
 />
 
@@ -92,13 +92,15 @@ Every run follows the same path, from the context you upload to a go or no-go ve
 
 2. **Generate scenarios.** The platform generates 60 to 100+ test scenarios from that context, distributed across happy-path flows, edge cases, adversarial inputs, persona-specific scenarios, and compliance checks.
 
-3. **Run autonomous evaluation.** 15+ specialized testing agents interact with your agent through its real channel, a chat API, a voice endpoint, or a phone number, in parallel.
+3. **Run autonomous evaluation.** 15+ specialized testing agents interact with your agent through its real channel, in parallel: a chat API, a voice endpoint, a phone number or SIP trunk, an IVR menu, or a video session URL.
 
 4. **Score each interaction.** Every scenario is scored per metric with a pass or fail result, a confidence level of High, Medium, or Low, and an evidence excerpt from the conversation. Scores aggregate per metric across the run.
 
 5. **Return a readiness verdict.** All scores roll up into a single Green, Yellow, or Red production readiness verdict.
 
 The agent prompt in phase one is the evaluation baseline. It tells the platform what a correct response looks like, so the quality of the verdict depends on how precisely you define it.
+
+The same scoring also runs on production data. Uploaded chat transcripts (Post mode) and phone call recordings (Post Analysis) skip phases 2 and 3 and are scored like test conversations. Chat transcripts are judged against your requirement documents.
 
 ## What the Specialized Testing Agents Evaluate
 
@@ -128,10 +130,10 @@ The platform does not rely on a single evaluator. 15+ testing agents each own on
 
 ---
 
-Agent Testing red-teams AI agents with adversarial scenario suites aligned to the OWASP Top 10 for LLM applications: prompt injection, insecure output handling, sensitive-information disclosure and PII leakage, data exfiltration, jailbreak, and policy violations.
+Agent Testing red-teams AI agents with adversarial scenario suites aligned to the OWASP Top 10 for LLM applications: prompt injection (LLM01), sensitive information disclosure and PII leakage (LLM02), improper output handling (LLM05), excessive agency (LLM06), system prompt leakage (LLM07), misinformation (LLM09), data exfiltration, jailbreak, and policy violations.
 
 - **Chat agents** face a live adversarial attacker across seven attack types: business logic, hallucination, hijacking, prompt injection, technical injection, overreliance, and off-topic. The attacker and the grader are separate, so the score is not influenced by how hard the attacker pushed, and a run that cannot be judged is reported as inconclusive rather than passed.
-- **Phone caller agents** get red team scenarios generated from the agent's own prompt. The platform identifies the rules the agent must follow, attacks those rules, and prioritizes rules not yet covered. Each finding links to the moment in the call recording. Their reports use the OWASP Agentic Top 10 categories ASI03 (identity), ASI06 (made-up history), and ASI09 (fake approval or pressure) alongside the OWASP LLM Top 10, with LLM10 Unbounded Consumption added, and a radar chart shows the pass rate for each risk category.
+- **Phone caller agents** get red team scenarios generated from the agent's own prompt. The platform identifies the rules the agent must follow, attacks those rules, and prioritizes rules not yet covered. Each finding links to the moment in the call recording. Their reports use the OWASP Agentic Top 10 categories ASI03 (identity), ASI06 (made-up history), and ASI09 (fake approval or pressure) alongside the OWASP LLM Top 10, with LLM10 Unbounded Consumption added, and a radar chart shows the pass rate for each risk category. See [Red Teaming for Phone Caller Agents](/support/docs/phone-agent-red-teaming/).
 
 Toxicity, bias and harmful-content generation are evaluated as first-class metrics across the tested persona set. Every finding is evidence-backed. The specific conversation turns that triggered a flag are preserved with per-turn attribution and confidence intervals, exportable for regulatory documentation, and the A2A CLI runs the same scenarios in CI so security testing gates every release.
 
@@ -186,7 +188,13 @@ The platform is a single hosted web application. A request flows through six lay
       <div style={{fontSize:'20px',marginBottom:'4px'}}>📞</div>
       <div style={{fontSize:'13px',fontWeight:600,color:'#3730a3'}}>Phone Testing</div>
       <div style={{fontSize:'11px',color:'#6366f1',marginTop:'2px'}}>Inbound & Outbound</div>
-      <div style={{fontSize:'10px',color:'#818cf8',marginTop:'4px'}}>Real calls via telephony providers</div>
+      <div style={{fontSize:'10px',color:'#818cf8',marginTop:'4px'}}>Real calls and SIP trunks</div>
+    </div>
+    <div style={{background:'#eef2ff',border:'1px solid #c7d2fe',padding:'14px 16px',borderRadius:'10px',textAlign:'center',flex:'1',minWidth:'130px',maxWidth:'180px'}}>
+      <div style={{fontSize:'20px',marginBottom:'4px'}}>☎️</div>
+      <div style={{fontSize:'13px',fontWeight:600,color:'#3730a3'}}>IVR Testing</div>
+      <div style={{fontSize:'11px',color:'#6366f1',marginTop:'2px'}}>Menus & Keypad</div>
+      <div style={{fontSize:'10px',color:'#818cf8',marginTop:'4px'}}>Every menu branch, Cyara import</div>
     </div>
     <div style={{background:'#eef2ff',border:'1px solid #c7d2fe',padding:'14px 16px',borderRadius:'10px',textAlign:'center',flex:'1',minWidth:'130px',maxWidth:'180px'}}>
       <div style={{fontSize:'20px',marginBottom:'4px'}}>💬</div>
@@ -199,6 +207,12 @@ The platform is a single hosted web application. A request flows through six lay
       <div style={{fontSize:'13px',fontWeight:600,color:'#3730a3'}}>Voice Testing</div>
       <div style={{fontSize:'11px',color:'#6366f1',marginTop:'2px'}}>Real-time Multi-transport</div>
       <div style={{fontSize:'10px',color:'#818cf8',marginTop:'4px'}}>REST, WebSocket & WebRTC</div>
+    </div>
+    <div style={{background:'#eef2ff',border:'1px solid #c7d2fe',padding:'14px 16px',borderRadius:'10px',textAlign:'center',flex:'1',minWidth:'130px',maxWidth:'180px'}}>
+      <div style={{fontSize:'20px',marginBottom:'4px'}}>🎥</div>
+      <div style={{fontSize:'13px',fontWeight:600,color:'#3730a3'}}>Video Testing</div>
+      <div style={{fontSize:'11px',color:'#6366f1',marginTop:'2px'}}>Live Video Sessions</div>
+      <div style={{fontSize:'10px',color:'#818cf8',marginTop:'4px'}}>Simulated participant joins by URL</div>
     </div>
     <div style={{background:'#eef2ff',border:'1px solid #c7d2fe',padding:'14px 16px',borderRadius:'10px',textAlign:'center',flex:'1',minWidth:'130px',maxWidth:'180px'}}>
       <div style={{fontSize:'20px',marginBottom:'4px'}}>🖼️</div>

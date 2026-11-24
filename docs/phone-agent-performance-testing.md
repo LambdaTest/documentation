@@ -97,7 +97,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-11-12T13:50:45+05:30"
+    "dateModified": "2026-11-24T12:00:00+05:30"
   }) }}
 />
 
@@ -123,9 +123,7 @@ Choose the test that matches what you want to check.
 
 ---
 
-<!-- TODO: add the steps to start a performance test from a suite, with screenshots, once confirmed with product. -->
-
-Set how many concurrent calls to hold and for how long. The reply-latency bands (**Excellent**, **Good**, and **Poor**) for the **Latency** tab are also set for each run when you start the test, prefilled from **Metric Config**.
+Set two parameters for the test: how many concurrent calls to hold, and for how long. The reply-latency bands (**Excellent**, **Good**, and **Poor**) for the **Latency** tab are also set for each run when you start the test, prefilled from **Metric Config**.
 
 | Parameter | Description | Accepted range |
 |---|---|---|
