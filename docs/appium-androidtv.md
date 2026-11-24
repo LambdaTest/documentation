@@ -103,7 +103,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
 
 # How to Automate Android TV Apps on TestMu AI
 
-Automating Android TV apps on TestMu AI runs Appium scripts against real smart TV devices in the cloud, validating remote-based navigation, voice commands, and app behavior across many Android TV models while removing repetitive manual checks and expanding device coverage.
+Automated smart TV testing on <BrandName /> runs your Appium scripts against real Android TV devices in the cloud, such as the Nvidia Shield TV on Android 11. This page shows how to upload your app, set the Android TV capabilities and send D-pad key events, so you can check remote-based navigation and app behavior in automated runs.
 
 :::note Plus Plan Feature
 This feature is available exclusively with the **Private Cloud** Plan.
@@ -228,12 +228,70 @@ In your automation script, set up the **platform capability** to specify that yo
 </TabItem>
 </Tabs>
 
+What each Android TV capability in the block above does:
+
+| Capability | Value | What it does |
+|------------|-------|--------------|
+| `platformName` | `androidtv` | Runs the test on an Android TV device instead of a phone or tablet. |
+| `deviceName` | `Nvidia Shield TV` | Picks the device model from [Supported Models](#supported-models). |
+| `platformVersion` | `11` | Sets the Android version of that device. |
+| `isRealMobile` | `true` | Runs the test on a real device. |
+| `privateCloud` | `true` | Fetches the device from your organization's Private Cloud, which Android TV automation needs. |
+| `automationName` | `UiAutomator2` | Uses the UiAutomator2 automation engine, which also sends the D-pad key events shown below. |
+| `w3c` | `true` | Makes Appium use the W3C WebDriver protocol. |
+| `app` | `lt://APP_ID` | Points to the app you uploaded in step 2. |
+| `appPackage` | `org.smarttube.stable` | Optional. Names the package of the app to start. |
+
 Shown below is an execution snapshot from TestMu AI Dashboard:
 
 <p align="center">
 <img loading="lazy" src={require('../assets/images/uploads/execution-real-device.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
 </p>
 
+## Navigate With D-pad Key Events
+---
+
+An Android TV app is driven by its remote, so most steps in a TV test move focus with the D-pad and then select the focused item. Appium sends each remote button as an Android key event through the UiAutomator2 driver. These are the key codes from the [Android `KeyEvent` reference](https://developer.android.com/reference/android/view/KeyEvent):
+
+| Remote button | Android key code | Value |
+|---------------|------------------|-------|
+| Up | `KEYCODE_DPAD_UP` | 19 |
+| Down | `KEYCODE_DPAD_DOWN` | 20 |
+| Left | `KEYCODE_DPAD_LEFT` | 21 |
+| Right | `KEYCODE_DPAD_RIGHT` | 22 |
+| Select (center) | `KEYCODE_DPAD_CENTER` | 23 |
+| Back | `KEYCODE_BACK` | 4 |
+| Home | `KEYCODE_HOME` | 3 |
+
+In your test, press the keys in the order a viewer would:
+
+<Tabs className="docs__val">
+<TabItem value="java" label="Java" default>
+
+```java
+import io.appium.java_client.android.nativekey.AndroidKey;
+import io.appium.java_client.android.nativekey.KeyEvent;
+
+// driver is the AndroidDriver session started with the capabilities above
+driver.pressKey(new KeyEvent(AndroidKey.DPAD_DOWN));   // move focus down one row
+driver.pressKey(new KeyEvent(AndroidKey.DPAD_RIGHT));  // move focus to the next tile
+driver.pressKey(new KeyEvent(AndroidKey.DPAD_CENTER)); // select the focused item
+driver.pressKey(new KeyEvent(AndroidKey.BACK));        // go back one screen
+```
+
+</TabItem>
+<TabItem value="python" label="Python">
+
+```python
+# driver is the Appium session started with the capabilities above
+driver.press_keycode(20)  # KEYCODE_DPAD_DOWN: move focus down one row
+driver.press_keycode(22)  # KEYCODE_DPAD_RIGHT: move focus to the next tile
+driver.press_keycode(23)  # KEYCODE_DPAD_CENTER: select the focused item
+driver.press_keycode(4)   # KEYCODE_BACK: go back one screen
+```
+
+</TabItem>
+</Tabs>
 
 ## Additional Links
 
