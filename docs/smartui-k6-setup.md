@@ -18,7 +18,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/smartui-k6-setup/
 site_name: TestMu AI
 slug: smartui-k6-setup/
-canonical: https://www.testmu.ai/support/docs/smartui-k6-setup/
+canonical: https://www.testmuai.com/support/docs/smartui-k6-setup/
 
 ---
 import Tabs from '@theme/Tabs';
@@ -26,6 +26,8 @@ import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -297,6 +299,8 @@ This documentation will act as your step-by-step guide in to perform K6 test wit
 - Go to [SmartUI](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/) and login along with your credentials.
 - Copy `LT_USERNAME` and `LT_ACCESS_KEY` credentials from `Access Key` button on the top right of the dashboard.
 
+<VerifiedTag value="Verified" />
+
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux' label='MacOS/Linux' default>
 
@@ -342,6 +346,8 @@ Once you have created a SmartUI Project, you can generate screenshots by running
 
 1. Clone the sample GitHub repository:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git clone https://github.com/LambdaTest/smartui-k6-sample
 cd smartui-k6-sample
@@ -349,11 +355,15 @@ cd smartui-k6-sample
 
 2. Install the required dependencies:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npm install @lambdatest/smartui-cli @lambdatest/k6-driver
 ```
 
 3. Install k6 by referring to the installation guide `https://k6.io/docs/get-started/installation/`:
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS' label='MacOS' default>
@@ -373,6 +383,8 @@ winget install k6
 </Tabs>
 
 4. Set up the <BrandName /> credentials by using the commands below in the terminal. The account details are available on your [<BrandName /> Profile](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/details/profile) page.
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux' label='MacOS/Linux' default>
@@ -406,11 +418,15 @@ $env:PROJECT_TOKEN="YOUR_PROJECT_TOKEN"
 
 5. Create and configure SmartUI config file:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npx smartui config:create smartui-web.json
 ```
 
 6. Add the SmartUI snapshot function to your test file. Create or edit `test.js`:
+
+<VerifiedTag value="Verified" />
 
 ```javascript title="test.js"
 import http from 'k6/http';
@@ -429,6 +445,8 @@ export default function () {
 
 Execute the test using the following command:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npx smartui exec k6 run test.js
 ```
@@ -436,6 +454,8 @@ npx smartui exec k6 run test.js
   - You can check the executed builds over at [<BrandName /> SmartUI](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/).
 
 ## Best Practices
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='best-practices'>
 <TabItem value='screenshot-naming' label='Screenshot Naming' default>
@@ -510,6 +530,8 @@ smartuiSnapshot(response, "Page-Loaded");
 </Tabs>
 
 ## Troubleshooting
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='troubleshooting'>
 <TabItem value='screenshots-not-appearing-in-dashboard' label='Screenshots Not Appearing in Dashboard' default>
@@ -680,11 +702,12 @@ If you encounter issues not covered here:
 - Check [SmartUI Configuration Options](/support/docs/smartui-sdk-config-options) documentation
 - See [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data) for dynamic content issues
 - Visit [K6 Browser Testing Documentation](/support/docs/k6-browser-testing/) for K6-specific issues
-- Visit [<BrandName /> Support](https://www.testmuai.com/support) for additional resources
-- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support)
+- Visit [<BrandName /> Support](https://www.testmuai.com/support/docs/) for additional resources
+- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support/docs/)
 
 </TabItem>
 </Tabs>
+
 
 ## Additional Resources
 

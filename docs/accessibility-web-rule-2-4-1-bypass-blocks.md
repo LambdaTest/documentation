@@ -5,6 +5,8 @@ sidebar_label: Bypass Blocks (2.4.1)
 description: Rule-level Accessibility guidance for Bypass Blocks (WCAG 2.4.1 Level A).
 slug: accessibility-web-rule-2-4-1-bypass-blocks/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

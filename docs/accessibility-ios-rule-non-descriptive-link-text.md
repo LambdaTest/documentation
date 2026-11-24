@@ -5,6 +5,8 @@ sidebar_label: Non-Descriptive Link Text
 description: "Flag iOS links whose whole label is generic text like 'Click here' or 'Read more' that fails to describe the destination for VoiceOver users."
 slug: accessibility-ios-rule-non-descriptive-link-text/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

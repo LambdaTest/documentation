@@ -22,6 +22,7 @@ canonical: https://www.testmuai.com/support/docs/smartui-customscroll/
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -180,11 +181,15 @@ CustomScroll is opt-in. Existing snapshots continue to behave the same unless yo
 
 Install or update the SmartUI CLI in the repository where your tests run:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npm install @lambdatest/smartui-cli@latest
 ```
 
 You can verify the installed version with:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 npx smartui --version
@@ -206,6 +211,8 @@ CustomScroll does not replace waits. For virtualized, lazy-loaded, or document-h
 ## Java And Playwright Examples
 
 Use `pageCustomScroll` and `elementsCustomScroll` in the snapshot options when the page and nested content can both scroll.
+
+<VerifiedTag value="Verified" />
 
 <Tabs>
 <TabItem value="java" label="Java">
@@ -243,6 +250,8 @@ In this example:
 
 You can keep standard screenshots unchanged and enable CustomScroll only for scroll-dependent states.
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 await smartuiSnapshot(page, 'Header');
 
@@ -271,6 +280,8 @@ Best for:
 
 Recommended option:
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 {
   elementsCustomScroll: true
@@ -278,6 +289,8 @@ Recommended option:
 ```
 
 Use both options if the page and viewer can both scroll:
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 {
@@ -301,6 +314,8 @@ Best for:
 
 Recommended option:
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 {
   elementsCustomScroll: true
@@ -320,6 +335,8 @@ Best for:
 - Long forms
 
 Recommended option:
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 {

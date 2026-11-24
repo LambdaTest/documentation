@@ -5,6 +5,8 @@ sidebar_label: Minimum Text Size
 description: "Find Android text below the readable 16dp minimum that doesn't scale with font settings, making it hard to read for low-vision users."
 slug: accessibility-android-rule-minimum-text-size/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

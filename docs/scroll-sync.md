@@ -12,7 +12,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/scroll-sync/
 site_name: TestMu AI
 slug: scroll-sync/
-canonical: https://www.testmu.ai/support/docs/scroll-sync/
+canonical: https://www.testmuai.com/support/docs/scroll-sync/
 ---
 
 

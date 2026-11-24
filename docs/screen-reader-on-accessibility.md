@@ -10,7 +10,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/screen-reader-on-accessibility/
 site_name: TestMu AI
 slug: screen-reader-on-accessibility/
-canonical: https://www.testmu.ai/support/docs/screen-reader-on-accessibility/
+canonical: https://www.testmuai.com/support/docs/screen-reader-on-accessibility/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

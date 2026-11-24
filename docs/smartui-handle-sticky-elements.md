@@ -14,7 +14,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/smartui-handle-sticky-elements/
 site_name: TestMu AI
 slug: smartui-handle-sticky-elements/
-canonical: https://www.testmu.ai/support/docs/smartui-handle-sticky-elements/
+canonical: https://www.testmuai.com/support/docs/smartui-handle-sticky-elements/
 
 ---
 import Tabs from '@theme/Tabs';
@@ -23,6 +23,7 @@ import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -218,6 +219,8 @@ In rare cases, you may need to manually handle sticky elements:
 
 If you want to exclude sticky elements from comparison entirely:
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 let options = {
     ignoreDOM: {
@@ -230,6 +233,8 @@ await smartuiSnapshot(driver, 'Page with Sticky Elements', options);
 #### Option 2: Select Only Static Content
 
 If you only want to compare non-sticky content:
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 let options = {
@@ -281,6 +286,8 @@ You can combine sticky element handling with other SmartUI features like dynamic
 </Tabs>
 
 ## Troubleshooting
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='troubleshooting'>
 <TabItem value='sticky-elements-still-causing-false-positives' label='Sticky Elements Still Causing False Positives' default>
@@ -353,6 +360,7 @@ await smartuiSnapshot(driver, 'Page');
 
 - Very complex sticky behaviors (multiple sticky elements, conditional stickiness) may need manual configuration
 - Test thoroughly before relying on automatic handling
+
 
 ## Additional Resources
 

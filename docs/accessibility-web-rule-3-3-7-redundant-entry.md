@@ -5,6 +5,8 @@ sidebar_label: Redundant Entry (3.3.7)
 description: Rule-level Accessibility guidance for Redundant Entry (WCAG 3.3.7 Level A).
 slug: accessibility-web-rule-3-3-7-redundant-entry/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

@@ -12,7 +12,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/web-scanner-getting-started/
 site_name: TestMu AI
 slug: web-scanner-getting-started/
-canonical: https://www.testmu.ai/support/docs/web-scanner-getting-started/
+canonical: https://www.testmuai.com/support/docs/web-scanner-getting-started/
 ---
 
 import Tabs from '@theme/Tabs';
@@ -215,7 +215,8 @@ Each scan has an action menu (3-dots icon) with the following options:
 
 **Visual UI:**
 * View History (SmartUI builds)
-* Edit Scan Config (recurrence, time)
+* Edit Scan Config (name, settings, URLs, schedule)
+* Clone Scan
 * Stop Recurring Scan
 * Delete Scan
 

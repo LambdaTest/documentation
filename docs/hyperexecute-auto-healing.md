@@ -26,6 +26,7 @@ canonical: https://www.testmuai.com/support/docs/hyperexecute-auto-healing/
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -103,6 +104,8 @@ HyperExecute's Auto Healing feature automatically recovers from locator failures
 
 **Step 1:** To enable the Auto Healing feature, you need to pass the **`autoHeal: true`** as a capability in your WebDriver configuration.
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 const capability = {
     "browserName": "Chrome",
@@ -114,6 +117,8 @@ const capability = {
 }
 ```
 **Step 2:** Now, trigger your test on HyperExecute using the mentioned command. Please replace the placeholder values with your details.
+
+  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">

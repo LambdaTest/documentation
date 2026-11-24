@@ -15,6 +15,7 @@ slug: fastlane-with-testmu/
 canonical: https://www.testmuai.com/support/docs/fastlane-with-testmu/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -130,6 +131,8 @@ fastlane is a CI/CD tool to automate beta deployments and releases for Android a
 
 To get started, please try our **[fastlane Sample](https://github.com/LambdaTest/fastlane-android-sample)** GitHub repository..
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git clone https://github.com/LambdaTest/fastlane-android-sample
 ```
@@ -147,6 +150,8 @@ To upload an app to <BrandName /> for app testing, you would need the following 
 
     <img loading="lazy" src={require('../assets/images/fastlane/lambdatest_creds.png').default} alt="add" width="100" height="100" className="doc_img"/>
 
+    <VerifiedTag value="Verified" />
+
     ``` bash
     LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
     LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
@@ -156,11 +161,17 @@ To upload an app to <BrandName /> for app testing, you would need the following 
 ***
 
 **Step 1:** Add <BrandName /> [fastlane](https://rubygems.org/gems/fastlane-plugin-lambdatest) plugin by running.
+
+<VerifiedTag value="Verified" />
+
 ```
 fastlane add_plugin lambdatest
 ```
 
 **Step 2:** Add the below action in fastfile in desired lane to upload the app to <BrandName />.   
+
+<VerifiedTag value="Verified" />
+
 ```
 upload_to_lambdatest(
     lt_username: ENV["LT_USERNAME"],
@@ -169,6 +180,8 @@ upload_to_lambdatest(
 )
 ```
 or if you want to used custom_id.
+
+<VerifiedTag value="Verified" />
 
 ```
 upload_to_lambdatest(
@@ -182,12 +195,16 @@ upload_to_lambdatest(
 
 **Step 3:** Once the app is uploaded to <BrandName />, this action will set an identifier to the uploaded app as APP_URL in the environment variable and can be accessed in the test.
 
+<VerifiedTag value="Verified" />
+
 ```
 String app = System.getenv("APP_URL");
 capabilities.setCapability("app", app);
 ```
 
 **Step 4:**  Execute the below command to upload app and run tests.
+
+<VerifiedTag value="Verified" />
 
 ```
 fastlane <lane>

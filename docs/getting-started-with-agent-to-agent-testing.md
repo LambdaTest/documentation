@@ -88,10 +88,18 @@ TestMu AI [Agent Testing](https://www.testmuai.com/agent-testing/) Platform prov
 
 It is the first platform to test chat, voice, phone, and image agents in one place. Connecting an agent takes three inputs and no SDK: upload the documents that describe it, define its intended behavior, and point the platform at its endpoint or phone number.
 
-<div className="ytframe"> 
-<div className="youtube" data-embed="DrdnovKzUQY" data-loading-attribute="eager">
-  <div className="play-button"></div>
-</div>
+Every organization can create chat, voice, image analyzer, and video agents. IVR, phone caller, and WhatsApp agents appear on **Create New Agent** grayed out, with the reason shown, until they are enabled for your organization.
+
+<div style={{ width: "50%", aspectRatio: "16 / 9", margin: "20px auto", borderRadius: "8px", overflow: "hidden" }}>
+  <iframe
+    style={{ display: "block", width: "100%", height: "100%", border: 0 }}
+    src="https://www.youtube.com/embed/DrdnovKzUQY?rel=0"
+    title="Agent Testing by TestMu AI: The QA Layer AI Agents Never Had"
+    loading="lazy"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerPolicy="strict-origin-when-cross-origin"
+    allowFullScreen
+  ></iframe>
 </div>
 
 

@@ -29,6 +29,7 @@ import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 
@@ -193,12 +194,16 @@ Run the below mentioned commands in the terminal to setup the CLI and the enviro
 
 For macOS / Linux:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 export LT_USERNAME=YOUR_LT_USERNAME
 export LT_ACCESS_KEY=YOUR_LT_ACCESS_KEY
 ```
 
 For Windows:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 set LT_USERNAME=YOUR_LT_USERNAME
@@ -211,6 +216,8 @@ set LT_ACCESS_KEY=YOUR_LT_ACCESS_KEY
 
 2. Your test files must have this code snippet in order for them to take screenshots.
 
+<VerifiedTag value="Verified" />
+
 ```java
 cy.screenshot('my-image')
 ```
@@ -219,6 +226,8 @@ Here **'my-image'** is the name of the image which will be rendered on the Dashb
 > Refer to the [Cypress Documentation](https://docs.cypress.io/api/commands/screenshot) to understand the different methods for taking screenshots.
 
 3. Paste the below mentioned code in your YAML file.
+
+<VerifiedTag value="Verified" />
 
 ```bash
 cypressOps:
@@ -247,6 +256,8 @@ cypressOps:
 ## Step 3: Execute your Project and Compare the Results
 
 To execute the project run the below command in your terminal at the root folder.
+
+<VerifiedTag value="Verified" />
 
 ```bash
 ./hyperexecute --config <yaml-file-path> --download-artifacts --force-clean-artifacts

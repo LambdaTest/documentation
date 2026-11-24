@@ -5,6 +5,8 @@ sidebar_label: Reflow (1.4.10)
 description: Rule-level Accessibility guidance for Reflow (WCAG 1.4.10 Level AA).
 slug: accessibility-web-rule-1-4-10-reflow/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

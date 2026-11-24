@@ -18,7 +18,6 @@ canonical: https://www.testmuai.com/support/docs/kane-cli-testrun/
 import VerifiedTag from '@site/src/component/verifiedTag';
 
 
-
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
     "@context": "https://schema.org",

@@ -5,6 +5,8 @@ sidebar_label: Insufficient Target Spacing
 description: Rule-level Accessibility guidance for Insufficient Target Spacing on Android.
 slug: accessibility-android-rule-insufficient-target-spacing/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

@@ -16,6 +16,7 @@ canonical: https://www.testmuai.com/support/docs/hyperexecute-yaml-version0.2/
 
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -186,15 +187,19 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "text": "---\nversion: 0.2\nrunson: win\n\nautosplit: true\nconcurrency: 2\n\npre:\n  # Skip execution of the tests in the pre step\n  - mvn dependency:resolve\n\nframework:\n  name: maven/testng\n  flags:\n    - \"-Dplatname=win\"\n  discoveryFlags: [\"-Dgroups=selenium-test\"]\n  runnerFlags: [\"-Dgroups=database\"]\n  discoveryType: method\n  discoveryMode: remote\n  workingDirectory: src/main\n  defaultReports: false\n  args:\n    region: ap\n    language: es\n    locale: es\n    mitmProxy: true\n\nretryOnFailure: true\nmaxRetries: 1\n\npost:\n  - ls target/surefire-reports/\n\nmergeArtifacts: true\nuploadArtefacts:\n - name: ExecutionSnapshots\n   path:\n    - target/surefire-reports/html/**"
       }
     ],
-    "dateModified": "2026-09-09T19:10:37+05:30"
+    "dateModified": "2026-11-11T14:00:00+05:30"
   }) }}
 />
 This version introduces several new features and improvements over Version 0.1. This documentation outlines the changes and provides guidance on when to use Version 0.2 instead of Version 0.1.
 
 :::info
-- Currently supported frameworks are **maven/testng**, **maven/junit4**, **maven/junit5**, **wdio/mocha**, and **wdio/jasmine** framework.
+- Currently supported frameworks are **maven/testng**, **maven/junit4**, **maven/junit5**, **maven/spock**, **gradle/testng**, **gradle/junit4**, **gradle/junit5**, **gradle/spock**, **wdio/mocha**, and **wdio/jasmine** framework.
 - Version 0.2 supports all the fields available in Version 0.1, except for [`testDiscovery`](/support/docs/deep-dive-into-hyperexecute-yaml/#testdiscovery) and [`testRunnerCommand`](/support/docs/deep-dive-into-hyperexecute-yaml/#testrunnercommand)
 - The new [`framework`](/support/docs/hyperexecute-yaml-version0.2/#framework) flag has been introduced to configure the test framework.
+:::
+
+:::info On-premise deployments
+On-prem, use `runson: linux` or `runson: win` and set `discoveryMode: remote`. See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/#step-4-prepare-your-yaml).
 :::
 
 ## Why to use HyperExecute YAML Version 0.2?
@@ -211,19 +216,22 @@ The ```framework``` field in HyperExecute YAML Version 0.2 allows you to configu
 |:---|:--|:---|:---|
 | [name](#name) | String | Yes | You need to specify which testing framework you are using in your repo.|
 | [flags](#flags) | Array | No | Command line flags to pass to the custom runner for both test discovery and execution.|
-| [discoveryFlags](#discoveryFlags) | Array | No | Command line flags to pass to the custom runner for test discovery only.|
-| [runnerFlags](#runnerFlags) | Array | No | Command line flags to pass to the custom runner for test execution only. |
-| [discoveryType](#discoveryType) | String | No | Specifies the type of test discovery to use. Supported values are "method" and "class". The default is "method".|
-| [workingDirectory](#workingDirectory) | String | No | Specifies the working directory where all discovery and execution commands will be executed.|
-| [defaultReports](#defaultReports) | Boolean | No | Specifies whether to create default reports for the specified framework.|
+| [discoveryFlags](#discoveryflags) | Array | No | Command line flags to pass to the custom runner for test discovery only.|
+| [runnerFlags](#runnerflags) | Array | No | Command line flags to pass to the custom runner for test execution only. |
+| [discoveryType](#discoverytype) | String | No | Specifies the type of test discovery to use. Supported values are "method" and "class". The default is "method".|
+| [discoveryMode](#discoverymode) | String | No | Specifies where the test discovery runs. Supported values are "local" and "remote".|
+| [workingDirectory](#workingdirectory) | String | No | Specifies the working directory where all discovery and execution commands will be executed.|
+| [defaultReports](#defaultreports) | Boolean | No | Specifies whether to create default reports for the specified framework.|
 | [region](#region) | String | No | Specifies in which region you want to spin your appium tests.|
 | [artifacts](#artifacts) | Boolean | No | Specifies whether to generate artifacts or not |
 | [language](#language) | String | No | Specifies the device’s system language for the test session. This determines the language in which your app’s UI and strings will be displayed. |
 | [locale](#locale) | String | No | Defines the regional format settings such as date, time, currency, and number conventions. |
-| [mitmProxy](#mitmProxy) | Boolean | No | Capture network logs directly from emulator sessions using MITM. |
+| [mitmProxy](#mitmproxy) | Boolean | No | Capture network logs directly from emulator sessions using MITM. |
 
 ### `name`
 Specifies the testing framework used in your repository.
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 framework:
@@ -232,14 +240,44 @@ framework:
 
 To enable maven runner with Appium, you have to pass `appium: true` before the `framework` field
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 appium: true
 framework: 
   name: "maven/testng"
 ```
 
+Both **Maven** and **Gradle** build tools are supported for the Java runners:
+
+| Runner | Build tool | Test framework |
+|:--|:--|:--|
+| `maven/testng` | Maven | TestNG |
+| `maven/junit4` | Maven | JUnit 4 |
+| `maven/junit5` | Maven | JUnit 5 |
+| `maven/spock` | Maven | Spock |
+| `gradle/testng` | Gradle | TestNG |
+| `gradle/junit4` | Gradle | JUnit 4 |
+| `gradle/junit5` | Gradle | JUnit 5 |
+| `gradle/spock` | Gradle | Spock |
+
+<VerifiedTag value="Verified" />
+
+```yaml
+framework:
+  name: gradle/testng
+```
+
+:::info Prerequisites for the Gradle runners
+- **Gradle 7.0 or higher** and **JDK 8 or higher**.
+- Apply the `java` plugin in your `build.gradle`.
+- For **gradle/spock**, also apply the `groovy` plugin, since Spock specifications are written in Groovy.
+:::
+
 ### `flags`
 Specifies the command line flags to pass to the custom runner for both test discovery and execution.
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 framework:
@@ -250,6 +288,8 @@ framework:
 ### `discoveryFlags`
 Specifies the command line flags to pass to the custom runner for test discovery only.
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 framework:
   name: "maven/testng"
@@ -259,6 +299,8 @@ framework:
 ### `runnerFlags`
 Specifies the command line flags to pass to the custom runner for test execution only.
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 framework:
   name: "maven/testng"
@@ -267,6 +309,8 @@ framework:
 
 ### `discoveryType`
 Specifies the level at which user wants to discover the tests. Supported values are "method" and "class". The default is "method".
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 framework:
@@ -283,10 +327,31 @@ framework:
 - For **wdio/mocha** and **wdio/jasmine** the supported discovery types are **test, spec, suite** and **wdiosuite**. The default is **spec**. 
 :::
 
+### `discoveryMode`
+Specifies where the test discovery runs. Supported values are `local` and `remote`.
+
+- **`local`**: Test discovery runs on the same machine as the HyperExecute CLI and needs the framework dependencies available locally.
+- **`remote`**: Test discovery runs on a dedicated remote Virtual Machine instead of your local machine. This centralizes discovery, shares the cache across execution tasks, and removes the need to install the framework dependencies locally. See [discovery modes](/support/docs/deep-dive-into-hyperexecute-yaml/#mode) for more details.
+
+<VerifiedTag value="Verified" />
+
+```yaml
+framework:
+  name: gradle/testng
+  #highlight-next-line
+  discoveryMode: remote
+```
+
+:::info
+Remote discovery is supported for all Java runners: **maven/testng**, **maven/junit4**, **maven/junit5**, **maven/spock**, **gradle/testng**, **gradle/junit4**, **gradle/junit5**, and **gradle/spock**.
+:::
+
 ### `workingDirectory`
 <!-- Specifies the working directory where all discovery and execution commands will be executed. -->
 
 The `working directory` specifies the location of the directory in which all test discovery and execution commands will be run, as well as the location of any files or directories that are created as a result of the command execution.  If the `workingDirectory` option is not specified, then the working directory will be the directory where the YAML file is located.
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 framework:
@@ -299,6 +364,8 @@ framework:
 
 ### `defaultReports`
 Specifies whether to create default reports for the specified framework.
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 framework:
@@ -318,6 +385,8 @@ The region parameter specifies the region or location where the Appium tests wil
 
 > The region parameter should always be defined under the `args` parameter, as shown in the below sample code.
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 framework:
   args:
@@ -327,6 +396,8 @@ framework:
 ### `artifacts`
 
 To generate artifacts for your Espresso tests, add the `artifacts: true` flag in your YAML file:
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 framework:
@@ -341,6 +412,8 @@ framework:
 
 Specifies the device’s system language for the test session. This determines the language in which your app’s UI and strings will be displayed.
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 framework:
   args:
@@ -350,6 +423,8 @@ framework:
 ### `locale`
 
 Defines the regional format settings such as date, time, currency, and number conventions.
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 framework:
@@ -362,6 +437,8 @@ framework:
 
 You can now capture network logs directly from emulator sessions using MITM. This enhancement enables deeper debugging of API calls, request/response payloads, and overall network traffic during test execution.
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 framework:
   args:
@@ -370,6 +447,8 @@ framework:
 
 
 ## Sample Yaml Version 0.2
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 ---
@@ -390,6 +469,7 @@ framework:
   discoveryFlags: ["-Dgroups=selenium-test"]
   runnerFlags: ["-Dgroups=database"]
   discoveryType: method
+  discoveryMode: remote
   workingDirectory: src/main
   defaultReports: false
   args:

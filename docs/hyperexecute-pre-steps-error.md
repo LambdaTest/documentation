@@ -17,6 +17,7 @@ canonical: https://www.testmuai.com/support/docs/hyperexecute-pre-steps-error/
 
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -145,7 +146,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "text": "runtime:\n  language: java\n  version: \"11\""
       }
     ],
-    "dateModified": "2026-09-09T19:10:37+05:30"
+    "dateModified": "2026-11-11T14:00:00+05:30"
   }) }}
 />
 
@@ -153,11 +154,17 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 This document will help you debug your failed job if you are facing any errors in the pre-command stage.
 
+:::info On-premise deployments
+If your deployment cannot reach public registries such as npm, PyPI or Maven Central, ask your admin for your internal registry, and see [Registry error](#registry-error) and [SSL certificate error](#ssl-certificate-error). See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/#troubleshooting).
+:::
+
 ## Lambda Error
 
 While executing a playwright project in HyperExecute, you may encounter a Lambda Error.
 
 To resolve this issue, you need to pass the below mentioned command in the pre step in your YAML file
+
+<VerifiedTag value="Verified" />
 
 ```bash
 pre:
@@ -167,6 +174,8 @@ pre:
 ## .Net Build Issue in C#
 
 If you encounter a similar error while running the command `dotnet build` in pre steps, as mentioned below, it means that you are not using a **core dotnet** version but instead a **framework** version.
+
+<VerifiedTag value="Verified" />
 
 ```bash
 error : MSB4803: The task "ResolveComReference" is not supported on the .NET Core version of MSBuild
@@ -186,6 +195,8 @@ This error is generated while installing the dependencies in your project suite.
 
 You can encounter a similar error while installing dependencies 
 
+<VerifiedTag value="Verified" />
+
 ```bash
 There was a problem confirming the ssl certificate:
 HTTPSConnectionPool(host='http://pypi.org ', port=443):
@@ -197,6 +208,8 @@ certificate verify failed: self signed certificate in certificate chain
 
 To resolve the above issue, you are required to pass the following command
 
+<VerifiedTag value="Verified" />
+
 ```bash
 pip install -r requirements.txt --cache-dir
 pip_cache --trusted-host http://pypi.org  --trusted-host http://pypi.python.org  --trusted-host files.pythonhosted.org
@@ -207,6 +220,8 @@ pip setuptools
 
 You can encounter a similar error while running Maven Project as well, Now to resolve this issue for **maven**, pass the following command
 
+<VerifiedTag value="Verified" />
+
 ```bash
 -Dmaven.wagon.http.ssl.insecure=true -Dmaven.wagon.http.ssl.allowall=true -Dmaven.wagon.http.ssl.ignore.validity.dates=true
 ```
@@ -214,6 +229,8 @@ You can encounter a similar error while running Maven Project as well, Now to re
 ## Registry Error
 
 If you incorporate any npm registry related error in the **Pre** stage, then pass the following command in your YAML file in the pre command before npm install:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 pre:
@@ -224,11 +241,15 @@ pre:
 
 If you encounter an error as mentioned below, it implies that you are using node version **below 15**, so you need to upgrade to **>=15.0** using runtime command.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 SyntaxError: Unexpected token '||='
 ```
 
 To resolve this, simply pass the below mentioned command in your YAML file
+
+<VerifiedTag value="Verified" />
 
 ```bash
 runtime:
@@ -240,12 +261,16 @@ runtime:
 
 This error incorporates that the version of Java that you are using in your local machine or in pom.xml file is not matching with the one used in the HyperExecute.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.7.0:compile (default-compile) on project My-Project: Fatal error compiling: invalid target release: 1.10 -> [Help 1]
 org.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.7.0:compile (default-compile) on project My-Project: Fatal error compiling
 ```
 
 To rectify this, you need to simply pass the **runtime** flag with the correct java version in your YAML file.
+
+<VerifiedTag value="Verified" />
 
 ```bash
 runtime:

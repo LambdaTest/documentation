@@ -13,12 +13,13 @@ image: /assets/images/og-images/automation-testing-og.png
 url: https://www.testmuai.com/support/docs/selenium-add-test-meta-data/
 site_name: TestMu AI
 slug: selenium-add-test-meta-data/
-canonical: https://www.testmu.ai/support/docs/selenium-add-test-meta-data/
+canonical: https://www.testmuai.com/support/docs/selenium-add-test-meta-data/
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 
@@ -135,6 +136,8 @@ Add the `customData` capability to your test script with the metadata fields you
 
 To add custom metadata in your automation tests, add the capability `customData` in your test script with all the metadata information that we support:
 
+<VerifiedTag value="Verified" />
+
 <Tabs className="docs__val">
 
 <TabItem value="Java" label="Java" default>
@@ -234,6 +237,8 @@ See how teams use the customData capability in different testing workflows.
 ### 1. Enhanced Reporting With GitHub and Jira Links
 **Scenario:** A QA team wants to include direct links to GitHub pull requests or Jira issues related to a test. This helps developers and testers quickly access related code changes or tasks when a test fails.
 
+<VerifiedTag value="Verified" />
+
 ```javascript title="Test.js"
 'customData': { 	
   "jiraTicket": "JIRA-12345",
@@ -248,6 +253,8 @@ See how teams use the customData capability in different testing workflows.
 
 ### 2. Linking Test Management Systems
 **Scenario:** The team uses a test management tool (e.g., TestRail, Zephyr) to manage test cases. Adding the test case ID ensures results link back to the test plan.
+
+<VerifiedTag value="Verified" />
 
 ```javascript title="Test.js"
 'customData': { 	
@@ -266,6 +273,8 @@ See how teams use the customData capability in different testing workflows.
 ### 3. Debugging With Environment Metadata
 **Scenario:** When debugging test failures, include information about the environment or build being tested.
 
+<VerifiedTag value="Verified" />
+
 ```javascript title="Test.js"
 'customData': { 	
   "buildNumber": "1234",
@@ -283,6 +292,8 @@ See how teams use the customData capability in different testing workflows.
 ### 4. Capturing User Story or Feature Metadata
 **Scenario:** A product manager wants test results linked to specific user stories or features for tracking progress on new functionality.
 
+<VerifiedTag value="Verified" />
+
 ```javascript title="Test.js"
 'customData': { 	
   "featureID": "FEAT-9876",
@@ -298,6 +309,8 @@ See how teams use the customData capability in different testing workflows.
 ### 5. Tracking Third-Party Dependencies
 **Scenario:** A test depends on third-party APIs or integrations, and tracking the versions or configurations of these dependencies is critical.
 
+<VerifiedTag value="Verified" />
+
 ```javascript title="Test.js"
 'customData': { 	
   "thirdPartyAPI": "Stripe",
@@ -312,6 +325,8 @@ See how teams use the customData capability in different testing workflows.
 
 ### 6. Integrating Test Runs With CI/CD Pipelines
 **Scenario:** A DevOps team wants to include pipeline-specific metadata in the test report to track CI/CD execution details.
+
+<VerifiedTag value="Verified" />
 
 ```javascript title="Test.js"
 'customData': { 	

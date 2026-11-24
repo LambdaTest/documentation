@@ -13,7 +13,7 @@ image: /assets/images/og-images/automation-testing-og.png
 url: https://www.testmuai.com/support/docs/testmu-grid-configuration/
 site_name: TestMu AI
 slug: testmu-grid-configuration/
-canonical: https://www.testmu.ai/support/docs/testmu-grid-configuration/
+canonical: https://www.testmuai.com/support/docs/testmu-grid-configuration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

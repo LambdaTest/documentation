@@ -5,6 +5,8 @@ sidebar_label: Images with Text
 description: "Detect meaningful text baked into images on Android that is invisible to TalkBack and must be provided as real text or an accessible description."
 slug: accessibility-android-rule-images-with-text/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

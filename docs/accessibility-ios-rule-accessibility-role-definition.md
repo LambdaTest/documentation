@@ -5,6 +5,8 @@ sidebar_label: Accessibility Role Definition
 description: Rule-level Accessibility guidance for Accessibility Role Definition on iOS.
 slug: accessibility-ios-rule-accessibility-role-definition/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

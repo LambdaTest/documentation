@@ -20,6 +20,7 @@ canonical: https://www.testmuai.com/support/docs/appium-languages-and-frameworks
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 
@@ -211,6 +212,8 @@ The [appium-skill](https://github.com/LambdaTest/agent-skills/tree/main/appium-s
 
 The appium-skill package includes:
 
+<VerifiedTag value="Verified" />
+
 ```
 appium-skill/
 ├── SKILL.md
@@ -233,6 +236,8 @@ It provides structured guidance for:
 ***
 
 Install a Appium Agent Skill using the command below:
+
+<VerifiedTag value="Verified" />
 
 ```
 # Clone the repo and copy the skill you need

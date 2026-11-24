@@ -13,9 +13,10 @@ image: /assets/images/og-images/automation-testing-og.png
 url: https://www.testmuai.com/support/docs/mobile-web-automation-on-real-devices/
 site_name: TestMu AI
 slug: mobile-web-automation-on-real-devices/
-canonical: https://www.testmu.ai/support/docs/mobile-web-automation-on-real-devices/
+canonical: https://www.testmuai.com/support/docs/mobile-web-automation-on-real-devices/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -120,11 +121,13 @@ Install Python and the Appium client library before running mobile web tests.
 1. Download the latest version of [Python](https://www.python.org/downloads/).
 2. Install the Appium dependency by running the following command from the CMD terminal.
 
+<VerifiedTag value="Verified" />
+
 ```
 pip install Appium-Python-Client
 ```
 :::info
-The above code installs the latest Python client library for Appium which only supports `w3c : True` capability.
+The above code installs the latest Python client library for Appium which only supports `w3c : True` capability. Currently, we provide support for Chrome on Android and Safari on iOS for real device browser automation.
 :::
 
 
@@ -139,6 +142,8 @@ To test on a real mobile device, pass the below capability in your test scripts.
 You can also add the capability using the [Desired Capabilities Generator](https://www.testmuai.com/capabilities-generator/). 
 
 In the below Python test script, we take an example of our sample ToDo app. We check two checkboxes of the list and add another item to the list. The test runs on iPhone 11 with platform version iOS 13.
+
+<VerifiedTag value="Verified" />
 
 ```python
 //todo.py
@@ -200,11 +205,15 @@ driver.quit()
 
 In the below test snippet, add your TestMu AI Username and TestMu AI Access Key. Get them from the [TestMu AI dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard). In the Hub URL, we added a beta prefix (`mobile-hub.lambdatest.com/wd/hub`).
 
+<VerifiedTag value="Verified" />
+
 ```
 url = "https://LT_USERNAME:LT_ACCESS_KEY@mobile-hub.lambdatest.com/wd/hub"
 ```
 
 Execute the below command in the terminal to run the test.
+
+<VerifiedTag value="Verified" />
 
 ```
 python todo.py

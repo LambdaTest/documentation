@@ -18,12 +18,14 @@ keywords:
 url: https://www.testmuai.com/support/docs/selenium-visual-regression/
 site_name: TestMu AI
 slug: selenium-visual-regression/
-canonical: https://www.testmu.ai/support/docs/selenium-visual-regression/
+canonical: https://www.testmuai.com/support/docs/selenium-visual-regression/
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -504,6 +506,8 @@ Using the <BrandName /> platform, perform regression testing in just one click a
 - Access your Hub for your selenium **remote connection** instance at `hub.lambdatest.com/wd/hub`.
 - Copy `LT_USERNAME` and `LT_ACCESS_KEY` credentials from `Access Key` button on the top right of the dashboard.
 
+<VerifiedTag value="Verified" />
+
 <Tabs className="docs__val" groupId="language">
 <TabItem value="MacOS/Linux" label="MacOS/Linux" default>
 
@@ -550,12 +554,16 @@ Once you have created a SmartUI Project, you can generate screenshots by running
 
 1. Please clone the following sample Github repo (`https://github.com/LambdaTest/smartui-node-sample`).
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git clone https://github.com/LambdaTest/smartui-node-sample
 ```
 
 2. Set up the <BrandName /> credentials by following the instructions mentioned in the `README.md` file.
 3. Edit the required capabilities for your test suite.
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val" groupId="language">
 <TabItem value="nodejs" label="NodeJS" default>
@@ -696,6 +704,8 @@ driver = new RemoteWebDriver(new URL("https://" + username + ":" + accesskey + g
 
 - Installing dependency and for executing the test.
 
+<VerifiedTag value="Verified" />
+
 <Tabs className="docs__val" groupId="language">
 <TabItem value="nodejs" label="NodeJS" default>
 
@@ -743,6 +753,9 @@ Here you can explore multiple features and execute more such builds.
 ### For taking viewport screenshot
 
 This part of the code needs to be attached below the required segment of selenium script of which we would like to take the screenshot to test on.
+
+<VerifiedTag value="Verified" />
+
 <Tabs className="docs__val" groupId="language">
 <TabItem value="nodejs" label="NodeJS" default>
 
@@ -801,6 +814,8 @@ You can capture the full page screenshot for all different websites which have a
 Add the following **Webhook** to your test cases where we need to capture the screenshot of your application.
 
 
+<VerifiedTag value="Verified" />
+
 <Tabs className="docs__val" groupId="language">
 <TabItem value="nodejs" label="NodeJS" default>
 
@@ -849,6 +864,8 @@ The following feature is applicable for `Selenium >= 4.0.0 with Chrome` versions
 For browsers other than chrome (Mozilla, Safari etc.) and for websites `Full Page Screenshot` fails, you can use smartscroll to take a full page screenshot of your web page by adding this hook in your test script.
 
 
+<VerifiedTag value="Verified" />
+
 <Tabs className="docs__val" groupId="language">
 <TabItem value="nodejs" label="NodeJS" default>
 
@@ -891,6 +908,8 @@ driver.ExecuteScript("smartui.takeFullPageScreenshot,{\"screenshotName\":\"<scre
 You can capture screenshots of targeted elements by leveraging various locator mechanisms such as XPath, CSS ID, class, and selectors. This precision-driven approach ensures accurate and specific visual regression testing for your web application.
 
 Add the following **Webhook** to your test cases where you need to capture the screenshot of a particular element on your UI.
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val" groupId="language">
 <TabItem value="nodejs" label="NodeJS" default>
@@ -962,6 +981,9 @@ You can see the SmartUI dashboard to view the results. This will help you identi
 
 
 You can fetch the status of the screenshot captured and the results of the screenshot captured using the following webhook.
+
+<VerifiedTag value="Verified" />
+
 <Tabs className="docs__val" groupId="language">
 <TabItem value="nodejs" label="NodeJS" default>
 
@@ -1004,6 +1026,8 @@ driver.ExecuteScript("smartui.fetchScreenshotStatus");
 For fetching results specific to a screenshot, you can use the following webhook by adding the `Screenshot Name` to the WebHook.
 
 
+<VerifiedTag value="Verified" />
+
 <Tabs className="docs__val" groupId="language">
 <TabItem value="nodejs" label="NodeJS" default>
 
@@ -1043,6 +1067,8 @@ driver.ExecuteScript("smartui.fetchScreenshotStatus=<Your Screenshot Name>");
 </TabItem>
 </Tabs>
 The following webhook will return the status of the screenshot captured. The status can be one of the following:
+
+<VerifiedTag value="Verified" />
 
 ```json
 {
@@ -1099,6 +1125,8 @@ This may take a few seconds to process the screenshot. Please ensure that you ha
   **Handling Dynamic Data** - In case if you have any dynamic elements that are not in the same position across test runs, you can ignore or select a specific area to be removed from the comparison. For accessing such HTML DOM Config and Options, see [Handling Dynamic Data with DOM Configuration](/support/docs/html-dom-smartui-options).
 
 ## Best Practices
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val" groupId="best-practices">
 <TabItem value="capability-configuration" label="Capability Configuration" default>
@@ -1169,6 +1197,8 @@ let capabilities = {
 </Tabs>
 
 ## Troubleshooting
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val" groupId="troubleshooting">
 <TabItem value="screenshots-not-captured" label="Screenshots Not Captured" default>
@@ -1333,8 +1363,8 @@ If you encounter issues not covered here:
 
 - Review [SmartUI Build Options](/support/docs/smart-ui-build-options) documentation
 - Check [Advanced Test Settings](/support/docs/test-settings-options/) for comparison options
-- Visit [<BrandName /> Support](https://www.testmuai.com/support) for additional resources
-- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support)
+- Visit [<BrandName /> Support](https://www.testmuai.com/support/docs/) for additional resources
+- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support/docs/)
 
 </TabItem>
 </Tabs>

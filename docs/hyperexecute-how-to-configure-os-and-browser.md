@@ -19,6 +19,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import HyperExecuteSupportedLanguageRepos from '../src/component/SupportedLanguages/HyperExecuteSupportedLanguageRepos';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 
@@ -129,6 +130,9 @@ Configuring the capabilities is the first step to define the environment for you
 - **`version` :** Defines the specific version or sets it as latest to always use the most recent version.
 
 Below is a Java example using the TestNG framework:
+
+<VerifiedTag value="Verified" />
+
 ```java title="Test.java"
 DesiredCapabilities caps = new DesiredCapabilities();
 caps.setCapability("platform", "Windows");
@@ -140,6 +144,8 @@ The above configuration ensures that your tests run on Windows OS using the late
 
 ## Step 2: Configure your HyperExecute YAML file
 The HyperExecute YAML configuration file is the blueprint for running your tests in the HyperExecute cloud environment. It defines the testing environment, execution strategy, and resource allocation. Properly configuring this file ensures that your tests are executed efficiently across the desired platforms and browsers.
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val" queryString="test-method">
   <TabItem value="autosplit" label="AutoSplit" default>

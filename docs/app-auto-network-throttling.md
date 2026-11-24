@@ -30,6 +30,7 @@ import TabItem from '@theme/TabItem';
 import RealDeviceTag from '../src/component/realDevice';
 import VirtualDeviceTag from '../src/component/virtualDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 
@@ -152,6 +153,9 @@ In Appium testing, assessing your app's performance under diverse network condit
 ### Initialization
 
 - **Capability:** Initiate a test session with predefined network profiles using the `networkProfile` capability. Example:
+
+     <VerifiedTag value="Verified" />
+
      ```python
      caps = {
         "network": True,
@@ -159,13 +163,12 @@ In Appium testing, assessing your app's performance under diverse network condit
     }
     ```
 
-:::note
-To utilize the **networkProfile** capability, ensure that you include `network: True` in the capabilities.
-:::  
-
 ### During Test Execution
 
 - **LambdaHook:** Dynamically alter the network profile within the test session using the following LambdaHook:
+
+    <VerifiedTag value="Verified" />
+
     ```python
     driver.execute_script("updateNetworkProfile=3g-umts-good")
     ```
@@ -193,6 +196,9 @@ To utilize the **networkProfile** capability, ensure that you include `network: 
 ### Custom Profiles
 
 - **LambdaHook:** Define and implement custom network profiles with LambdaHook by specifying the maximum download speed (kbps), maximum upload speed (kbps), and latency (ms) for the custom condition, as illustrated in the example.
+
+    <VerifiedTag value="Verified" />
+
     ```python
     driver.execute_script("customNetworkProfile: { \"downloadSpeed\": 500, \"uploadSpeed\" : 250, \"latency\": 100 }" )
     ```
@@ -200,6 +206,9 @@ To utilize the **networkProfile** capability, ensure that you include `network: 
 ### Default/Reset Network Configuration
 
 - **LambdaHook:** Employ this webhook to seamlessly restore the device's network profile to its default state. Invocation of this LambdaHook removes any predefined or custom network settings, ensuring the device is reset to its original configuration.
+
+    <VerifiedTag value="Verified" />
+
     ```python
     driver.execute_script("updateNetworkProfile=default")
     ```
@@ -207,6 +216,9 @@ To utilize the **networkProfile** capability, ensure that you include `network: 
 ### Offline Mode
 
 - To initialize tests in **offline mode**, set the `networkProfile` capability to `offline` during session initiation:
+
+    <VerifiedTag value="Verified" />
+
     ```python
     caps = {
         "network": True,
@@ -215,6 +227,9 @@ To utilize the **networkProfile** capability, ensure that you include `network: 
     ```
 
 - **LambdaHook:** You can also switch to offline mode during the test execution with the following command:
+
+    <VerifiedTag value="Verified" />
+
     ```python
     driver.execute_script("updateNetworkProfile=offline")
     ```
@@ -223,6 +238,8 @@ To utilize the **networkProfile** capability, ensure that you include `network: 
 ## Toggle Offline/Online Mode via API
 
 - For Android and iOS devices, you can use the offline/online mode API within the running test session:
+
+    <VerifiedTag value="Verified" />
 
     ```bash
     curl --location 'https://mobile-api.lambdatest.com/mobile-automation/api/v1/sessions/<session-id>/update_network' \

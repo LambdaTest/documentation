@@ -16,6 +16,8 @@ slug: integrating-testmu-with-jenkins-freestyle-project/
 canonical: https://www.testmuai.com/support/docs/integrating-testmu-with-jenkins-freestyle-project/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -106,6 +108,8 @@ Integrate <BrandName /> Jenkins plugin with your Jenkins Freestyle project for:
 **Step 4:** Add a build step to **Execute Shell**. 
 <img loading="lazy" src={require('../assets/images/integrating-lambdaTest-with-jenkins-freestyle-project/4.webp').default} alt="Image" width="1024" height="481" className="doc_img"/> 
 **Step 5:** Hit the below command to **Execute Shell** and hit **save**.
+
+<VerifiedTag value="Verified" />
 
 ```
 python google-search-lambdatest.py

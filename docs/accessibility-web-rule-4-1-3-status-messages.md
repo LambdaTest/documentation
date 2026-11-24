@@ -5,6 +5,8 @@ sidebar_label: Status Messages (4.1.3)
 description: Rule-level Accessibility guidance for Status Messages (WCAG 4.1.3 Level AA).
 slug: accessibility-web-rule-4-1-3-status-messages/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

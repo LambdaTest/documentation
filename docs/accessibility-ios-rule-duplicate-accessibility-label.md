@@ -5,6 +5,8 @@ sidebar_label: Duplicate Accessibility Label
 description: Rule-level Accessibility guidance for Duplicate Accessibility Label on iOS.
 slug: accessibility-ios-rule-duplicate-accessibility-label/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

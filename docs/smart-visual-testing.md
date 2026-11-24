@@ -18,7 +18,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/smart-visual-testing/
 site_name: TestMu AI
 slug: smart-visual-testing/
-canonical: https://www.testmu.ai/support/docs/smart-visual-testing/
+canonical: https://www.testmuai.com/support/docs/smart-visual-testing/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

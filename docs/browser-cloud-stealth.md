@@ -17,6 +17,7 @@ canonical: https://www.testmuai.com/support/docs/browser-cloud-stealth/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -118,15 +119,16 @@ detectable fingerprints that these systems check for:
 - Identical user-agent strings across all sessions
 - Inhuman interaction speeds - instant clicks, perfectly uniform typing
 
-Stealth mode in the TestMu AI Browser SDK removes or fakes these fingerprints, so
-the cloud browser is indistinguishable from a regular human user's Chrome
-session.
+Stealth mode in the TestMu AI Browser SDK removes or fakes these fingerprints. This is
+best-effort stealth that reduces bot detection; some sites may still detect automation.
 
 
 ## Enabling Stealth
 
 Add a `stealthConfig` to your session. That's it - the adapter handles
 everything else automatically:
+
+<VerifiedTag value="Verified" />
 
 ```typescript
 const session = await client.sessions.create({
@@ -226,6 +228,8 @@ behavior.
 To explicitly disable stealth (useful for comparison testing or sites that
 don't use bot detection):
 
+<VerifiedTag value="Verified" />
+
 ```typescript
 const session = await client.sessions.create({
     adapter: 'puppeteer',
@@ -250,6 +254,8 @@ OFF shows red failures.
 
 
 ## How Stealth Works
+
+<VerifiedTag value="Verified" />
 
 ```
 Session Creation

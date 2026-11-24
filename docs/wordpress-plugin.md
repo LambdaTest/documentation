@@ -15,7 +15,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/wordpress-plugin/
 site_name: TestMu AI
 slug: wordpress-plugin/
-canonical: https://www.testmu.ai/support/docs/wordpress-plugin/
+canonical: https://www.testmuai.com/support/docs/wordpress-plugin/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

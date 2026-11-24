@@ -24,6 +24,7 @@ import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -576,6 +577,8 @@ After creating the project, you will receive a `PROJECT_TOKEN`. Save this token 
 
 Create a new directory for your SmartUI Capture project or use an existing one. Here's the recommended structure:
 
+<VerifiedTag value="Verified" />
+
 ```
 smartui-capture-project/
 ├── config.json              # SmartUI configuration
@@ -597,6 +600,8 @@ smartui-capture-project/
 
 If you're starting fresh, initialize a new Node.js project:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 mkdir smartui-capture-project
 cd smartui-capture-project
@@ -609,11 +614,15 @@ Install the required SmartUI CLI package. You can install it globally or locally
 
 ### Global Installation (Recommended)
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npm install -g @lambdatest/smartui-cli@4.1.54-beta.0
 ```
 
 ### Local Installation
+
+<VerifiedTag value="Verified" />
 
 ```bash
 npm install @lambdatest/smartui-cli@4.1.54-beta.0
@@ -621,6 +630,8 @@ npm install @lambdatest/smartui-cli@4.1.54-beta.0
 
 :::tip Sample Repository
 You can also clone the sample repository to get started quickly:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 git clone https://github.com/LambdaTest/smartui-playwright-sample
@@ -637,6 +648,8 @@ Set up your environment variables for authentication and configuration.
 ### Set Project Token
 
 The `PROJECT_TOKEN` is required for SmartUI CLI capture commands.
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux' label='MacOS/Linux' default>
@@ -665,6 +678,8 @@ $env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ### Set HyperExecute Credentials
 
 For HyperExecute, you'll need your <BrandName /> username and access key.
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux-1' label='MacOS/Linux' default>
@@ -706,6 +721,8 @@ Create JSON files containing the URLs you want to test. Each URL entry should ha
 
 You can generate a sample URL file using the SmartUI CLI:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npx smartui config:create-web-static urls.json
 ```
@@ -713,6 +730,8 @@ npx smartui config:create-web-static urls.json
 ### Manual URL File Creation
 
 Alternatively, create your URL file manually. Here's the structure:
+
+<VerifiedTag value="Verified" />
 
 ```json title="urlTest.json"
 [
@@ -755,6 +774,8 @@ Each URL object supports the following properties:
 
 For large test suites, you can split URLs into multiple files for better parallel execution:
 
+<VerifiedTag value="Verified" />
+
 ```json title="test/urls_test_1.json"
 [
     {
@@ -776,6 +797,8 @@ Create a `config.json` file to configure browsers, viewports, and other SmartUI 
 
 ### Generate Configuration File
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npx smartui config:create config.json
 ```
@@ -783,6 +806,8 @@ npx smartui config:create config.json
 ### Manual Configuration
 
 Create `config.json` with your desired settings:
+
+<VerifiedTag value="Verified" />
 
 ```json title="config.json"
 {
@@ -846,6 +871,8 @@ Create a `hyperexecute.yaml` file to configure HyperExecute execution settings.
 
 ### Basic HyperExecute YAML
 
+<VerifiedTag value="Verified" />
+
 ```yaml title="hyperexecute.yaml"
 ---
 version: 0.1
@@ -884,6 +911,8 @@ jobLabel: ['HYP', 'SmartUI', 'Capture']
 ### Advanced HyperExecute YAML with Multiple Test Suites
 
 For running multiple URL files in parallel:
+
+<VerifiedTag value="Verified" />
 
 ```yaml title="hyperexecute.yaml"
 ---
@@ -954,6 +983,8 @@ Download the HyperExecute CLI for your operating system:
 
 ### Set Execute Permissions (MacOS/Linux)
 
+<VerifiedTag value="Verified" />
+
 ```bash
 chmod u+x ./hyperexecute
 ```
@@ -962,11 +993,15 @@ chmod u+x ./hyperexecute
 
 Execute your tests using the HyperExecute CLI:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 ./hyperexecute --config hyperexecute.yaml
 ```
 
 Or with explicit credentials:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 ./hyperexecute --user ${YOUR_LAMBDATEST_USERNAME} --key ${YOUR_LAMBDATEST_ACCESS_KEY} --config hyperexecute.yaml
@@ -975,6 +1010,8 @@ Or with explicit credentials:
 ### Capture Command Options
 
 You can enhance your capture commands with additional options:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 # With custom build name
@@ -1022,17 +1059,26 @@ The [SmartUI Reporter](https://smartui-reporter.netlify.app/) is a web-based too
 #### Step 1: Export Results JSON
 
 **From CLI Capture Command:**
+
+<VerifiedTag value="Verified" />
+
 ```bash
 npx smartui capture urlTest.json --config config.json --fetch-results results.json
 ```
 
 **From CLI Exec Command:**
+
+<VerifiedTag value="Verified" />
+
 ```bash
 npx smartui --config config.json exec --fetch-results results.json -- <execution-command>
 ```
 
 **From SmartUI API:**
 You can also fetch results using the [Fetch Build Screenshots API endpoint](https://swagger-api-support.lambdatest.com/smartui/index.html#/Fetch%20Build%20Screenshots):
+
+<VerifiedTag value="Verified" />
+
 ```
 GET /build/screenshots?project_id=YOUR_PROJECT_ID&build_id=YOUR_BUILD_ID
 ```
@@ -1058,6 +1104,8 @@ For detailed information, see the [Fetch Results Documentation](/support/docs/sm
 ## Best Practices
 
 ### 1. URL Organization
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='best-practices'>
 <TabItem value='environment-separation' label='Environment Separation' default>
@@ -1111,6 +1159,8 @@ Avoid generic names like `"page1"` or `"test"`.
 ### 1.1. URL Grouping Strategies for Large Test Suites
 
 When working with large numbers of URLs (e.g., 1000+ URLs) that can be logically divided into sections or groups (e.g., Section 1: Product Category A, Section 2: Product Category B, Section 3: Product Category C, etc.), you have two primary strategies for organizing your SmartUI projects:
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='grouping-strategy'>
 <TabItem value='single-project-branching' label='Strategy 1: Single Project with Branching' default>
@@ -1337,6 +1387,8 @@ You can also combine both strategies:
 - **Major Sections**: Use separate projects (e.g., "Production URLs" vs "Staging URLs")
 - **Sub-sections**: Use branching within each project (e.g., within "Production URLs", use branches for different product categories)
 
+<VerifiedTag value="Verified" />
+
 ```bash
 # Production Project - Category A Section
 export PROJECT_TOKEN="${PROJECT_TOKEN_PROD}"
@@ -1360,6 +1412,8 @@ npx smartui capture sections/category_a_staging.json --config config.json
 5. **Parallel Execution**: Leverage HyperExecute's parallel execution for faster test runs
 
 ### 2. Configuration Management
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='config-practices'>
 <TabItem value='browser-selection' label='Browser Selection' default>
@@ -1419,6 +1473,8 @@ Higher timeouts increase execution time.
 
 ### 3. HyperExecute Configuration
 
+<VerifiedTag value="Verified" />
+
 <Tabs className='docs__val' groupId='hyperexecute-practices'>
 <TabItem value='concurrency' label='Concurrency' default>
 
@@ -1473,6 +1529,8 @@ Use descriptive build names that include:
 - Version or release number
 - Date or timestamp
 
+<VerifiedTag value="Verified" />
+
 ```bash
 --buildName "Test-Release-v1.0-2024-01-15"
 ```
@@ -1486,6 +1544,8 @@ Use descriptive build names that include:
 ## Troubleshooting
 
 ### Common Issues and Solutions
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='troubleshooting'>
 <TabItem value='authentication-errors' label='Authentication Errors' default>
@@ -1603,6 +1663,9 @@ Use descriptive build names that include:
 ### Debugging Tips
 
 1. **Test Locally First**: Run SmartUI capture locally before HyperExecute:
+
+   <VerifiedTag value="Verified" />
+
    ```bash
    npx smartui capture urlTest.json --config config.json
    ```
@@ -1620,6 +1683,8 @@ Use descriptive build names that include:
 ### CI/CD Integration
 
 Integrate SmartUI Capture with your CI/CD pipeline:
+
+<VerifiedTag value="Verified" />
 
 ```yaml title=".github/workflows/smartui-capture.yml"
 name: SmartUI Capture Tests
@@ -1661,6 +1726,8 @@ jobs:
 
 Use the `--scheduled` flag for scheduled test executions:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npx smartui capture urlProd.json --config config.json --scheduled "schedule-123"
 ```
@@ -1668,6 +1735,8 @@ npx smartui capture urlProd.json --config config.json --scheduled "schedule-123"
 ### Custom Build Names with Variables
 
 Use environment variables in build names:
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 testSuites:
@@ -1693,7 +1762,7 @@ Now that you've set up SmartUI Capture with HyperExecute, explore these resource
 - [SmartUI Configuration Options](/support/docs/smartui-sdk-config-options/) - All configuration options
 - [HyperExecute YAML Reference](/support/docs/hyperexecute-yaml-version0.2/) - YAML configuration details
 - [SmartUI Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide/) - Common issues and solutions
-- [<BrandName /> Support](https://www.testmuai.com/support) - Get help from our support team
+- [<BrandName /> Support](https://www.testmuai.com/support/docs/) - Get help from our support team
 
 <nav aria-label='breadcrumbs'>
   <ul className='breadcrumbs'>

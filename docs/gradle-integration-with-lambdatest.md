@@ -22,6 +22,7 @@ slug: gradle-integration-with-testmu/
 canonical: https://www.testmuai.com/support/docs/gradle-integration-with-testmu/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 
@@ -158,6 +159,8 @@ Gradle is a build automation tool for multi-language software development. It co
 
 ### Step 1: Add <BrandName /> Gradle Plugin to the `build.gradle` file
 
+<VerifiedTag value="Verified" />
+
 ```java title="build.gradle"
 plugins {
     id 'io.github.lambdatest.gradle' version '1.0.7'
@@ -171,6 +174,8 @@ repositories {
 ```
 
 ### Step 2: Configure <BrandName /> Parameters in `build.gradle` file
+
+<VerifiedTag value="Verified" />
 
 ```java title="build.gradle"
 runLambdaTest {
@@ -188,6 +193,8 @@ runLambdaTest {
 ### Step 3: Configure Upload APK Parameters
 With the release of version **`1.0.7`** of the `lambdatest-gradle-plugin`, users now have the option to upload their APK files directly to <BrandName />. Add the following configuration to build.gradle to enable APK upload:
 
+<VerifiedTag value="Verified" />
+
 ```java title="build.gradle"
 uploadApkToLambdaTest {
   username = 'YOUR_LAMBDATEST_USERNAME'
@@ -199,11 +206,15 @@ uploadApkToLambdaTest {
 ### Step 4: Execute the Plugin
 To run the plugin configured in build.gradle, execute the following command:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 ./gradlew runLambdaTest
 ```
 
 If you only want to upload your APK files to <BrandName />, use the following command:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 ./gradlew uploadApkToLambdaTest

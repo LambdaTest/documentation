@@ -20,6 +20,7 @@ import TabItem from '@theme/TabItem';
 import CodeBlock from '@theme/CodeBlock';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -183,6 +184,8 @@ This guide takes you from a fresh install to a passing run in under five minutes
 
 ## Step 1: Install
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npm install -g @testmuai/kane-cli
 ```
@@ -190,6 +193,8 @@ npm install -g @testmuai/kane-cli
 Once `kane-cli --version` prints a version number, you are ready. See [Installation](/support/docs/kane-cli-installation/) for platform requirements and troubleshooting.
 
 ## Step 2: Authenticate
+
+<VerifiedTag value="Verified" />
 
 <Tabs groupId="auth-method">
 
@@ -240,6 +245,8 @@ Store `LT_USERNAME` and `LT_ACCESS_KEY` as secrets in your CI/CD platform. See [
 
 Verify authentication at any time:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 kane-cli whoami
 ```
@@ -250,6 +257,8 @@ If you prefer username and access key, or need to manage multiple accounts, see 
 
 Run `kane-cli --tui`:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 kane-cli --tui
 ```
@@ -259,6 +268,8 @@ A short boot animation renders, then the main view drops you at a chat prompt wi
 ## Step 4: Run Your First Test
 
 At the chat prompt, type a natural-language objective and press Enter:
+
+<VerifiedTag value="Verified" />
 
 ```text
 Search for "wireless headphones" on Amazon and add the first result to cart
@@ -271,6 +282,8 @@ If you ever need to stop a run, press `Ctrl+C` once. Pressing it twice exits Kan
 ## Step 5: Or Run from the Command Line
 
 For scripting and CI, skip the TUI and use the `run` subcommand:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 kane-cli run "Click the 'More information' link" --url https://example.com
@@ -286,6 +299,8 @@ In CLI mode, Kane CLI streams progress to **stderr**, prints the final result as
 | `3` | Timeout or cancelled |
 
 Capture results in a shell script:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 kane-cli run "Verify the homepage loads" > result.json

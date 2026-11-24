@@ -5,6 +5,8 @@ sidebar_label: Unnamed Nested Element
 description: Rule-level Accessibility guidance for Unnamed Nested Element on Android.
 slug: accessibility-android-rule-unnamed-nested-element/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

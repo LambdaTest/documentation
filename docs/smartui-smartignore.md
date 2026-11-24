@@ -12,7 +12,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/smartui-smartignore/
 site_name: TestMu AI
 slug: smartui-smartignore/
-canonical: https://www.testmu.ai/support/docs/smartui-smartignore/
+canonical: https://www.testmuai.com/support/docs/smartui-smartignore/
 
 ---
 import Tabs from '@theme/Tabs';
@@ -20,6 +20,9 @@ import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import VerifiedTag from '@site/src/component/verifiedTag';
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -150,7 +153,9 @@ This allows you to selectively apply Smart Ignore to specific screenshots, makin
 
 ### 3. Using Smart Ignore in Hooks Flow (Automation Capabilities)
 
-If you are using SmartUI Hooks (for example Selenium `executeScript("smartui.takeScreenshot=...")` style), enable Smart Ignore using `ignoreType` in capabilities.
+If you are using SmartUI Hooks for web automation (for example Selenium `executeScript("smartui.takeScreenshot=...")` style), enable Smart Ignore using the `smartUI.smartIgnore` capability.
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 const capabilities = {
@@ -160,15 +165,38 @@ const capabilities = {
     accessKey: process.env.LT_ACCESS_KEY,
     visual: true,
     'smartUI.project': 'My-Project',
-    ignoreType: ['smartignore']
+    'smartUI.smartIgnore': true
   }
 };
 ```
 
-> Smart Ignore is a strategy mode. Prefer `ignoreType` strategy configuration over a standalone `smartignore: true` flag.
+For Selenium with Java, set the same capability inside your `LT:Options`:
+
+<VerifiedTag value="Verified" />
+
+```java
+ltOptions.put("smartUI.smartIgnore", true);
+```
+
+> **Note:** In the web automation Hooks flow, the Smart Ignore comparison mode must be enabled with the `smartUI.smartIgnore: true` capability. The `ignoreType: ['smartignore']` configuration does **not** switch the comparison mode to Smart Ignore for web automation Hooks. Smart Ignore takes effect from the subsequent execution build (the first build establishes the baseline, and the comparison applies on the next build).
 
 For full Hooks examples with Layout, Full Page, and Smart Ignore, see:
 - [Hooks: Layout + Full Page + Smart Ignore](/support/docs/smartui-hooks-layout-fullpage-smartignore/)
+
+### 4. Catching Subtle Color Changes with Color Sensitivity
+
+Smart Ignore uses a color difference threshold to decide whether a changed color is worth marking. You can choose the color difference algorithm and how strict it is in **Project Settings > Comparison > Color Sensitivity**.
+
+1. Open your project settings and go to **Comparison**.
+2. Under **Color Sensitivity**, pick an **Algorithm**: YIQ (default), CIEDE2000, CAM16-UCS or CAM02-UCS.
+3. Pick **Only obvious**, **Any color change** or **Custom**. A lower value marks smaller color differences.
+4. Click **Save Settings** and run a new build.
+
+In the example below, the **Pay Now** button changed to a slightly lighter green on an Android real device. With CIEDE2000 and **Any color change**, Smart Ignore marks the button:
+
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/smart-ignore/colour-sensitivity-result.webp').default} alt="Smart Ignore comparison on a Pixel 8 marking the Pay Now button after a subtle color change, mismatch 5.47 percent" width="768" height="272" className='doc_img'/>
+
+For every preset value and an example, see [Color Sensitivity in Project Settings](/support/docs/smartui-project-settings/).
 
 ## Use Cases of Smart Ignore
 
@@ -282,6 +310,18 @@ When testing Smart Ignore, use per-screenshot mode to compare results with other
 4. Combine with `ignoreDOM` for specific elements
 
 </TabItem>
+<TabItem value='subtle-color-changes-not-marked' label='Subtle Color Changes Not Marked' >
+
+**Issue: Subtle Color Changes Not Marked**
+
+**Symptoms**: An element changed to a slightly different shade, but Smart Ignore shows no difference
+
+**Solutions**:
+1. In **Project Settings > Comparison > Color Sensitivity**, choose a perceptual algorithm such as CIEDE2000 and select **Any color change**, or a lower **Custom** value
+2. Save the settings and run a new build, since the setting applies to builds run after saving
+3. Turn on the **Smart Ignore** toggle so screenshot and build statuses follow Smart Ignore results
+
+</TabItem>
 <TabItem value='important-changes-hidden' label='Important Changes Hidden' >
 
 **Issue: Important Changes Hidden**
@@ -329,6 +369,7 @@ When testing Smart Ignore, use per-screenshot mode to compare results with other
 | Layout Changes | ✅ Detected | ✅ Detected |
 | Displacement | ✅ Ignored | ✅ Ignored |
 | Best For | Content + layout | Layout only |
+
 
 ## Additional Resources
 

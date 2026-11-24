@@ -16,6 +16,7 @@ canonical: https://www.testmuai.com/support/docs/hyperexecute-reports/
 
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -95,7 +96,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "text": "\nEnsure that your Testrunner.java file should have the complete path from where partial reports will be added. Example:\n\n```java title=\"Testrunner.java\"\nplugin = {\n    \"json:target/abc/mno/pqr/xyz/cucumber-reports/CucumberTestReport.json\",\n    \"json:target/abc/its/pqr/abc/cucumber-reports/CucumberTestReport.json\"\n}"
       }
     ],
-    "dateModified": "2026-09-09T19:10:37+05:30"
+    "dateModified": "2026-11-11T14:00:00+05:30"
   }) }}
 />
 Reports provide summarized job information, including status counts and links to tests. You can generate and download detailed reports at the end of job execution that helps you analyze the outcome of your tests based on your framework. 
@@ -114,6 +115,8 @@ Follow the below mentioned steps to generate the Reports for your desired framew
 
 - You must set the `report` flag to **true**.
 - You will have to specify the **location**, **type** and **framework** associated with your report in the `partialReports` field to generate it. 
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 report: true
@@ -137,6 +140,8 @@ Here is the sample report generated.
 ## Generate Multiple Reports
 If you want to generate multiple reports of different types [supported by HyperExecute](/support/docs/hyperexecute-job-reports/), simply add the required specifications in the `partialReports` field as shown below:
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 partialReports:
   - location: reports/json
@@ -152,6 +157,9 @@ partialReports:
 You can now use **glob-style wildcards `(**)`** in the location field of `partialReports` to dynamically match nested folders and custom report paths. This is especially useful when your test reports are generated inside directories that include date stamps, environment names, or other runtime variables.
 
 Example:
+
+<VerifiedTag value="Verified" />
+
 ```yaml title="hyperexecute.yaml"
 partialReports:
   location: reports/**/cucumber/
@@ -162,9 +170,15 @@ partialReports:
 
 Ensure that your Testrunner.java file should have the complete path from where partial reports will be added. Example:
 
+<VerifiedTag value="Verified" />
+
 ```java title="Testrunner.java"
 plugin = {
     "json:target/abc/mno/pqr/xyz/cucumber-reports/CucumberTestReport.json",
     "json:target/abc/its/pqr/abc/cucumber-reports/CucumberTestReport.json"
 }
 ```
+
+:::info On-premise deployments
+On-prem, open reports from your organization's own HyperExecute dashboard, not the public dashboard link on this page. When you download reports with the CLI, keep `--onprem-host` in the command so the CLI talks to your deployment. See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/#step-8-review-results-and-rerun-failures).
+:::

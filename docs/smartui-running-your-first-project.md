@@ -27,6 +27,7 @@ import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 
@@ -261,6 +262,8 @@ Download or Clone the code sample code repository from the <BrandName /> GitHub 
 
 - Add the following dependency in your `pom.xml` file
 
+<VerifiedTag value="Verified" />
+
 ```xml title="pom.xml"
 <dependency>
     <groupId>io.github.lambdatest</groupId>
@@ -274,6 +277,8 @@ You can check the latest version of [lambdatest-java-sdk]( https://mvnrepository
 :::
 
 - Install your CLI and required modules for running SmartUI SDK and compile your defined dependencies in the `pom.xml` file:
+
+<VerifiedTag value="Verified" />
 
 ```zsh
 npm install -g @lambdatest/smartui-cli
@@ -289,6 +294,8 @@ If you face any problems executing tests with SmartUI-CLI `versions >= v4.x.x`, 
 Setup your project token and credentials shown in the **SmartUI** app after creating your project.
 
 ### Setting Project Token
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux' label='MacOS/Linux' default>
@@ -315,6 +322,8 @@ $env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 </Tabs>
 
 ### Setting <BrandName /> Credentials (for Hooks)
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux-1' label='MacOS/Linux' default>
@@ -353,10 +362,14 @@ $env:LT_ACCESS_KEY="${YOUR_LAMBDATEST_ACCESS_KEY}"
 ## Step 4: Create and Configure SmartUI Config
 You can now configure your project configurations on using various available options to run your project with the SmartUI integration. To generate the configuration file, please execute the following command:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npx smartui config:create .smartui.json
 ```
 Once, the configuration file will be created, you will be seeing the default configuration pre-filled in the configuration file:
+
+<VerifiedTag value="Verified" />
 
 ```javascript title="/smartui-sdk-project/.smartui.json"
 {
@@ -402,6 +415,8 @@ Once, the configuration file will be created, you will be seeing the default con
 ## Step 5: Adding SmartUI function to take screenshot
 You can incorporate SmartUI into your custom `Selenium` automation test (any platform) script by adding the `smartuiSnapshot` function in the required segment of selenium script of which we would like to take the screenshot, as shown below:
 
+<VerifiedTag value="Verified" />
+
 ```java
  //Importing the lambdatest-java SDK
 //Rest of your code here
@@ -420,6 +435,8 @@ You can incorporate SmartUI into your custom `Selenium` automation test (any pla
 
 ## Step 6: Execute the Tests on SmartUI Cloud
 Execute `visual regression tests` on SmartUI using the following commands
+
+<VerifiedTag value="Verified" />
 
 ```bash
 npx smartui --config .smartui.json exec -- mvn test -D suite="sdk-cloud.xml"
@@ -448,6 +465,8 @@ The [smartui-skill](https://github.com/LambdaTest/agent-skills/tree/main/smartui
 
 The smartui-skill package includes:
 
+<VerifiedTag value="Verified" />
+
 ```
 smartui-skill/
 ├── SKILL.md
@@ -470,6 +489,8 @@ It provides structured guidance for:
 ***
 
 Install a SmartUI Agent Skill using the command below:
+
+<VerifiedTag value="Verified" />
 
 ```
 # Clone the repo and copy the skill you need

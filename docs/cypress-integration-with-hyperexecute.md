@@ -18,6 +18,7 @@ canonical: https://www.testmuai.com/support/docs/cypress-integration-with-hypere
 
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -178,6 +179,8 @@ The [cypress-skill](https://github.com/LambdaTest/agent-skills/tree/main/cypress
 
 The cypress-skill package includes:
 
+<VerifiedTag value="Verified" />
+
 ```
 cypress-skill/
 ├── SKILL.md
@@ -200,6 +203,8 @@ It provides structured guidance for:
 ***
 
 Install a Cypress Agent Skill using the command below:
+
+<VerifiedTag value="Verified" />
 
 ```
 # Clone the repo and copy the skill you need

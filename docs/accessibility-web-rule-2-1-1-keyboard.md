@@ -5,6 +5,8 @@ sidebar_label: Keyboard (2.1.1)
 description: Rule-level Accessibility guidance for Keyboard (WCAG 2.1.1 Level A).
 slug: accessibility-web-rule-2-1-1-keyboard/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

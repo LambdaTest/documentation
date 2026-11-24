@@ -211,3 +211,4 @@ To use diff navigation and highlight, ensure the screenshot is compared with **S
 - [Layout Testing](/support/docs/smartui-layout-testing) — Compare layout structure (diff navigation for this mode coming later).
 - [View comparison and issues](/support/docs/smart-visual-testing#view-comparison-and-issues) — Basics of the comparison view.
 
+

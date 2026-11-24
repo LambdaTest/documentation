@@ -19,6 +19,7 @@ canonical: https://www.testmuai.com/support/docs/smartui-hooks-region-ignore/
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -163,6 +164,8 @@ Pass a `coordinates` entry (a list of `"x1,y1,x2,y2"` strings) under `ignoreDOM`
 
 For example, `"50,50,300,300"` defines the region whose top-left corner is at `(left=50, top=50)` and whose bottom-right corner is at `(right=300, bottom=300)`, a 250 × 250 rectangle.
 
+<VerifiedTag value="Verified" />
+
 <Tabs className="docs__val" groupId="language">
 <TabItem value="java" label="Java" default>
 
@@ -218,6 +221,8 @@ The origin the coordinates are measured from depends on `fullPage`: viewport-rel
 
 Everything above works identically for `selectDOM`. Where `ignoreDOM` excludes a region, `selectDOM` restricts the comparison to only the given region(s). Both DOM selectors and `coordinates` are supported.
 
+<VerifiedTag value="Verified" />
+
 <Tabs className="docs__val" groupId="language">
 <TabItem value="java" label="Java" default>
 
@@ -272,6 +277,8 @@ So for a full-page screenshot, supply coordinates relative to the whole page (a 
 ## 4. Combine selectors and coordinates
 
 Within a single `ignoreDOM` (or `selectDOM`) the two input modes are **additive**: all resolved regions are combined.
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val" groupId="language">
 <TabItem value="java" label="Java" default>

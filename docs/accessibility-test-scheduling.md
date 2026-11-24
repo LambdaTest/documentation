@@ -8,6 +8,8 @@ url: https://www.testmuai.com/support/docs/accessibility-test-scheduling/
 site_name: TestMu AI
 canonical: https://www.testmuai.com/support/docs/accessibility-test-scheduling/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

@@ -14,7 +14,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/vs-code-extension/
 site_name: TestMu AI
 slug: vs-code-extension/
-canonical: https://www.testmu.ai/support/docs/vs-code-extension/
+canonical: https://www.testmuai.com/support/docs/vs-code-extension/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

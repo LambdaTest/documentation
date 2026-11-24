@@ -23,6 +23,7 @@ import CodeBlock from '@theme/CodeBlock';
 import RealDeviceTag from '../src/component/realDevice';
 import VirtualDeviceTag from '../src/component/virtualDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <RealDeviceTag value="Real Device" /> 
@@ -133,6 +134,9 @@ The maximum size for application should not exceed 1GB.
 <Tabs className="docs__val">
 
 <TabItem value="real" label="Real Device" default>
+
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "appFile=@"/Users/macuser/Downloads/Appname.apk"" -F "name="appname""`}
@@ -141,6 +145,9 @@ The maximum size for application should not exceed 1GB.
 </TabItem>
 
 <TabItem value="virtual" label="Virtual Device">
+
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/virtualDevice" -F "appFile=@"/Users/macuser/Downloads/Appname.apk"" -F "name="appname""`}
@@ -155,6 +162,9 @@ The maximum size for application should not exceed 1GB.
 <Tabs className="docs__val">
 
 <TabItem value="real" label="Real Device" default>
+
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "url=https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk" -F "name=Proverbial_App" -F "custom_id=sampleName" -F "storage=url" -F "visibility=individual"`}
@@ -163,6 +173,9 @@ The maximum size for application should not exceed 1GB.
 </TabItem>
 
 <TabItem value="virtual" label="Virtual Device">
+
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/virtualDevice" -F "url=https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk" -F "name=Proverbial_App" -F "custom_id=sampleName" -F "storage=url" -F "visibility=individual"`}
@@ -214,6 +227,9 @@ Retrieve a list of the apps you have uploaded for real devices, by platform.
 <Tabs className="docs__val">
 
 <TabItem value="android" label="Android" default>
+
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`curl --location --request GET "https://${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}@manual-api.lambdatest.com/app/data?type=android&level=user"`}
@@ -223,6 +239,9 @@ Retrieve a list of the apps you have uploaded for real devices, by platform.
 </TabItem>
 
 <TabItem value="ios" label="iOS" default>
+
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
   {`curl --location --request GET "https://${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}@manual-api.lambdatest.com/app/data?type=ios&level=user"`}
@@ -233,6 +252,8 @@ Retrieve a list of the apps you have uploaded for real devices, by platform.
 </Tabs>
 
 Shown below is the response to the above cURL request.
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 {
@@ -258,6 +279,9 @@ Shown below is the response to the above cURL request.
 <Tabs className="docs__val">
 
 <TabItem value="android" label="Android" default>
+
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`curl --location --request GET "https://${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}@manual-api.lambdatest.com/app/data?type=emulator&level=user"`}
@@ -267,6 +291,9 @@ Shown below is the response to the above cURL request.
 </TabItem>
 
 <TabItem value="ios" label="iOS" default>
+
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
   {`curl --location --request GET "https://${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}@manual-api.lambdatest.com/app/data?type=simulator&level=user"`}
@@ -282,6 +309,9 @@ Shown below is the response to the above cURL request.
 <Tabs className="docs__val">
 
 <TabItem value="real" label="Real Device" default>
+
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`curl --location --request DELETE "https://${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}@manual-api.lambdatest.com/app/delete" \
@@ -295,6 +325,9 @@ Shown below is the response to the above cURL request.
 </TabItem>
 
 <TabItem value="virtual" label="Virtual Device">
+
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`curl --location --request DELETE "https://${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}@manual-api.lambdatest.com/app/delete" \
@@ -311,6 +344,8 @@ Shown below is the response to the above cURL request.
 
 Shown below is the response to the above cURL request.
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 {
   "message": "Deleted successfully."
@@ -322,6 +357,9 @@ Shown below is the response to the above cURL request.
 <Tabs className="docs__val">
 
 <TabItem value="real" label="Real Device" default>
+
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`curl --location --request POST 'https://mobile-api.lambdatest.com/mobile-automation/api/v1/fetchpatchedapkurl' \
@@ -338,6 +376,9 @@ Shown below is the response to the above cURL request.
 </TabItem>
 
 <TabItem value="virtual" label="Virtual Device">
+
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`curl --location --request POST 'https://mobile-api.lambdatest.com/mobile-automation/api/v1/fetchpatchedapkurl/virtualDevice' \
@@ -356,6 +397,8 @@ Shown below is the response to the above cURL request.
 </Tabs>
 
 The payload allows you to check the processing status for specific features. If the **patched_url** is empty, the processing is still in progress. To check if the processing for image injection or screenshot unblock is complete, pass either **imageInjectionEnabled** or **screenshotUnblockEnabled** as `true` based on the feature you are testing.
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 {

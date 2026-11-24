@@ -88,7 +88,9 @@ This document outlines how to leverage features like mark as bug, changing IP ge
 **Step 3:** Select the **ChromeOS** option, and enter your URL in the space provided. (We are using the <BrandName /> website for the demo purpose) <br />
 **Step 4:** Select your screen resolution and click on **Start** button.
 
-<img loading="lazy" src={require('../assets/videos/real-time/chromeos/launch-chromos-web.gif').default} style={{ height: '380px' }} className="doc_img"/>
+<video class="right-side" width="80%" controls id="vid">
+<source src= {require('../assets/videos/real-time/chromeos/launch-chromos-web.mp4').default} style={{ height: '300px' }} type="video/mp4" />
+</video>
 
 ## Device Controls
 The Device Control feature allows you tp perform certain actions with your device  within your current test session:
@@ -97,7 +99,9 @@ The Device Control feature allows you tp perform certain actions with your devic
 - **Volume:** Adjust the device volume directly within your testing session, ensuring optimal audio levels for your tests.
 - **Lock Device:** Lock or unlock your device seamlessly during testing sessions without interrupting your workflow.
 
-<img loading="lazy" src={require('../assets/videos/real-time/chromeos/device-control.gif').default} style={{ height: '350px' }} className="doc_img"/>
+<video class="right-side" width="80%" controls id="vid">
+<source src= {require('../assets/videos/real-time/chromeos/device-control.mp4').default} style={{ height: '300px' }} type="video/mp4" />
+</video>
 
 ## Screenshot
 Capture clear screenshots of the current screen on your test device. Easily access and download these screenshots for future reference or bug reporting.
@@ -107,7 +111,9 @@ Capture clear screenshots of the current screen on your test device. Easily acce
 ## Record Session
 Record your entire test session for detailed playback. A timer keeps track of recording duration, allowing you to pinpoint specific moments for review. You can click on the stop button to stop the video recording.
 
-<img loading="lazy" src={require('../assets/videos/real-time/chromeos/recording.gif').default} style={{ height: '350px' }} className="doc_img"/> 
+<video class="right-side" width="80%" controls id="vid">
+<source src= {require('../assets/videos/real-time/chromeos/recording.mp4').default} style={{ height: '300px' }} type="video/mp4" />
+</video> 
 
 ## Gallery
 All screenshots and video recordings from test sessions are stored in the Gallery. To access, select Gallery from the left toolbar and you'll find the saved screenshots and videos. To download the screenshots or videos to your local machine, click on the Download icon. You can also mark them as bug by clicking on the Bug icon. To mark multiple screenshots as bugs, select the screenshots using the checkbox option, then click "Mark as Bug."
@@ -124,9 +130,12 @@ You can also share that bug, save the image to the gallery or download that scre
 </video>
  
 ## IP Geolocation
-The IP Geolocation feature enables you to simulate website and mobile experiences from over 45 countries by using local IP addresses. This allows you to test localized features such as pricing, languages, and product offerings. With IP Geolocation enabled, you can verify that your app's traffic is coming from a specific country, allowing for comprehensive global testing.
+The IP Geolocation feature enables you to simulate website and mobile experiences from 180+ countries by using local IP addresses. This allows you to test localized features such as pricing, languages, and product offerings. With IP Geolocation enabled, you can verify that your app's traffic is coming from a specific country, allowing for comprehensive global testing.
  
 <img loading="lazy" src={require('../assets/videos/real-time/chromeos/ip.png').default} style={{ height: '350px' }} className="doc_img"/>
+
+## Files and Media
+The [Upload and Download Files](/support/docs/real-time-upload-and-download-files/) feature allows to manage files directly within remote testing environments. This functionality streamlines the testing process by allowing seamless file transfers between local and remote environments across desktop and mobile platforms.
  
 ## Network Throttling
 <BrandName />'s network throttling feature empowers you to simulate real-world network conditions (Offline, Slow 3G, Fast 3G, 4G, 5G and Custom) during testing. This allows you to assess your application performance under varying internet speeds, ensuring a seamless user experience across different network environments. You can leverage predefined network profiles or craft custom settings for comprehensive testing.
@@ -147,7 +156,9 @@ The settings section offer the following features:
 - **Time Zone :** With this feature, you can select the time zone of your preferred region that align with your testing needs.
 - **Keyboard Input :** With this feature, you can change the language in your test session for a more localized testing experience.
 
-<img loading="lazy" src={require('../assets/videos/real-time/chromeos/settings.gif').default} style={{ height: '350px' }} className="doc_img"/>
+<video class="right-side" width="80%" controls id="vid">
+<source src= {require('../assets/videos/real-time/chromeos/settings.mp4').default} style={{ height: '300px' }} type="video/mp4" />
+</video>
  
 
 ## Switch

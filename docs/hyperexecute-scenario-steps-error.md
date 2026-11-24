@@ -17,6 +17,7 @@ canonical: https://www.testmuai.com/support/docs/hyperexecute-scenario-steps-err
 
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -110,7 +111,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "text": "<dependencies>\n    <dependency>\n        <groupId>io.rest-assured<\/groupId>\n        <artifactId>rest-assured<\/artifactId>\n        <version>4.5.0<\/version> <!-- Use the latest version available -->\n        <scope>test<\/scope>\n    <\/dependency>\n<\/dependencies>"
       }
     ],
-    "dateModified": "2026-09-09T19:10:37+05:30"
+    "dateModified": "2026-11-11T14:00:00+05:30"
   }) }}
 />
 
@@ -118,9 +119,15 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 This document will help you debug your failed job if you are facing any errors in the Scenario stage.
 
+:::info On-premise deployments
+On-prem, use the username and access key from **Credentials** on your organization's own dashboard. See [Copy your username and access key](/support/docs/hyperexecute-on-premise-user-guide/#copy-your-username-and-access-key).
+:::
+
 ## Invalid Credentials
 
 If you're encountering an error message as shown below, it means you have entered an invalid  **Username** and **Access Key** in your test file capabilities.
+
+<VerifiedTag value="Verified" />
 
 ```bash
 OpenQA.Selenium.WebDriverException : The newSession command returned an unexpected error. 
@@ -163,12 +170,16 @@ To rectify this issue, you need to cross-check your HUB URL. You can also visit 
 
 If you are trying to access an internal website or any other private endpoint which is behind any firewall using tunnel and you are getting the below mentioned error:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 System.AggregateException: One or more errors occurred. --->
 OpenQA.Selenium.WebDriverException: unknown error: net::ERR_NAME_NOT_RESOLVED
 ```
 
 To resolve this, you have to pass this flag in your YAML file:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 tunnel: true
@@ -284,6 +295,8 @@ After identifying the issue, follow these steps to resolve the situation:
 
 Here's an example of how you can set connection and **socket timeouts**:
 
+<VerifiedTag value="Verified" />
+
 ```java
 public static void main(String[] args) {
 
@@ -308,6 +321,8 @@ public static void main(String[] args) {
 ```
 
 Make sure to include the necessary dependencies in your project. If you are using Maven, you can add the following dependencies to your pom.xml file:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 <dependencies>

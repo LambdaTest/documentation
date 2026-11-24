@@ -17,6 +17,7 @@ canonical: https://www.testmuai.com/support/docs/hyperexecute-browser-list-api/
 
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -151,6 +152,8 @@ It will provide you the details like:
 
 The Endpoint for the Browser List API is:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 https://api.hyperexecute.cloud/v2.0/browsers
 ```
@@ -160,6 +163,8 @@ To use the Browser List API, you will need an API key. You can obtain your API k
 
 Include your API key in the request headers using Basic Authentication as follows: -->
 
+<VerifiedTag value="Verified" />
+
 ```
 Request Type : GET 
 Authorization: Basic
@@ -168,6 +173,8 @@ Authorization: Basic
 ## Request
 The Browser List API supports a simple HTTP GET request to fetch the list of supported browsers
 
+<VerifiedTag value="Verified" />
+
 ```bash
 https://api.hyperexecute.cloud/v2.0/browsers
 ```
@@ -175,6 +182,8 @@ https://api.hyperexecute.cloud/v2.0/browsers
 ## Sample Response
 
 The response will be in JSON format, containing an array of objects representing each supported browser along with its versions.
+
+<VerifiedTag value="Verified" />
 
 ```bash
 {
@@ -248,6 +257,8 @@ Example Error Response: -->
 
 ## Params
 
+<VerifiedTag value="Verified" />
+
 ```bash
 {
  "platform": "windows 10" #optional
@@ -258,6 +269,8 @@ Example Error Response: -->
 ### Sample Response
 
 The response will be in JSON format, containing an array of objects representing each supported browser in **windows 10**  only along with its versions.
+
+<VerifiedTag value="Verified" />
 
 ```bash
 {
@@ -302,6 +315,8 @@ The response will be in JSON format, containing an array of objects representing
 
 ## cURL Command
 You can also use the `curl` command to trigger the following api:
+
+<VerifiedTag value="Verified" />
 
 ```
 curl --location --request GET 'https://api-hyperexecute.lambdatest.com/sentinel/v2.0/browsers'

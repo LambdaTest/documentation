@@ -5,6 +5,8 @@ sidebar_label: Focus Visible (2.4.7)
 description: Rule-level Accessibility guidance for Focus Visible (2.4.7).
 slug: accessibility-web-rule-2-4-7-focus-visible/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

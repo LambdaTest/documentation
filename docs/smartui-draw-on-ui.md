@@ -25,7 +25,7 @@ keywords:
 
 url: https://www.testmuai.com/support/docs/smartui-ignore-regions/
 slug: smartui-draw-on-ui/
-canonical: https://www.testmu.ai/support/docs/smartui-draw-on-ui/
+canonical: https://www.testmuai.com/support/docs/smartui-draw-on-ui/
 
 ---
 import Tabs from '@theme/Tabs';
@@ -668,6 +668,7 @@ Follow these best practices to get the most out of the annotation tool:
 </Tabs>
 
 For more comprehensive troubleshooting, refer to the [SmartUI Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide).
+
 
 ## Additional Resources
 

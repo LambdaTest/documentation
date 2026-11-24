@@ -5,6 +5,8 @@ sidebar_label: Pointer Cancellation (2.5.2)
 description: Rule-level Accessibility guidance for Pointer Cancellation (WCAG 2.5.2 Level A).
 slug: accessibility-web-rule-2-5-2-pointer-cancellation/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

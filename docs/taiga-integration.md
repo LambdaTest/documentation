@@ -20,7 +20,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/taiga-integration/
 site_name: TestMu AI
 slug: taiga-integration/
-canonical: https://www.testmu.ai/support/docs/taiga-integration/
+canonical: https://www.testmuai.com/support/docs/taiga-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

@@ -102,6 +102,8 @@ Using HTTP/2 with <BrandName /> Tunnel does not require any special configuratio
 
 To start using <BrandName /> Tunnel with HTTP/2 support, simply initiate the tunnel as you normally would:
 
+<VerifiedTag value="Verified" />
+
 ```sh
 ./LambdaTestTunnel --user YourLambdaTestUsername --key YourLambdaTestAccessKey
 ```

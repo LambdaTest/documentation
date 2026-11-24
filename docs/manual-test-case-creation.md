@@ -1,7 +1,7 @@
 ---
 id: manual-test-case-creation
 title: Create & Manage Test Cases
-sidebar_label: Create & Manage Test Cases
+sidebar_label: Create Test Cases Manually
 description: Learn efficient manual test case creation with TestMu AI's Test Manager, streamlining testing processes and enhancing test execution.
 keywords:
   - test case creation
@@ -277,6 +277,8 @@ This works for both test case templates:
 :::note
 The action requires KaneAI access, and the test case must have content — a test case with no steps or no scenarios cannot be automated.
 :::
+
+***
 
 ### Test Case Runs Section
 

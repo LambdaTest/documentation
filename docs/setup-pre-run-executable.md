@@ -1,8 +1,10 @@
 ---
 id: setup-pre-run-executable
-title: Install Custom Certificates on the VM Through Pre-run Executables
-sidebar_label: Run a Pre-Test Script
-description: Run custom scripts before Selenium tests start to install certificates required for test execution.
+title: How to Run a Pre-Test Executable on TestMu AI
+toc_max_heading_level: 2
+hide_title: true
+sidebar_label: "Run a Pre-Test Script"
+description: Run a pre-run executable before your Selenium tests on TestMu AI to install certificates, dependencies, or set up the test environment.
 keywords:
   - pre-run executable selenium custom certificate
   - install certificate VM automation test
@@ -11,9 +13,10 @@ image: /assets/images/og-images/automation-testing-og.png
 url: https://www.testmuai.com/support/docs/setup-pre-run-executable/
 site_name: TestMu AI
 slug: setup-pre-run-executable/
-canonical: https://www.testmu.ai/support/docs/setup-pre-run-executable/
+canonical: https://www.testmuai.com/support/docs/setup-pre-run-executable/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 
@@ -28,8 +31,8 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       "@type": "WebPage",
       "@id": "https://www.testmuai.com/support/docs/setup-pre-run-executable/"
     },
-    "headline": "Install Custom Certificates on the VM Through Pre-run Executables",
-    "description": "Run custom scripts before Selenium tests start to install certificates required for test execution.",
+    "headline": "How to Run a Pre-Test Executable on TestMu AI",
+    "description": "Run a pre-run executable before your Selenium tests on TestMu AI to install certificates, dependencies, or set up the test environment.",
     "url": "https://www.testmuai.com/support/docs/setup-pre-run-executable/",
     "image": {
       "@type": "ImageObject",
@@ -74,35 +77,35 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     "hasPart": [
       {
         "@type": "SoftwareSourceCode",
-        "name": "Instructions",
+        "name": "Upload your certificate using the below command",
         "codeSampleType": "code snippet",
         "programmingLanguage": "Shell",
         "text": "curl --location --request POST '<https://api.lambdatest.com/automation/api/v1/user-files>'"
       },
       {
         "@type": "SoftwareSourceCode",
-        "name": "Instructions",
+        "name": "Install the certificate on macOS using the following command",
         "codeSampleType": "code snippet",
         "programmingLanguage": "Shell",
         "text": "sudo security add-trusted-cert -d -r trustRoot -k /Library/Keychains/System.keychain /Users/ltuser/Downloads/{CERTIFICATE-FILE-NAME}"
       },
       {
         "@type": "SoftwareSourceCode",
-        "name": "Instructions",
+        "name": "Install the certificate on Windows using the below command",
         "codeSampleType": "code snippet",
         "programmingLanguage": "Shell",
         "text": "Import-Certificate -FilePath \"C:\\Users\\ltuser\\Downloads\\{NAME-OF-THE-CERTIFICATE}\" -CertStoreLocation 'Cert:\\LocalMachine\\Root' -Verbose"
       },
       {
         "@type": "SoftwareSourceCode",
-        "name": "Instructions",
+        "name": "Use the following cURL request to upload pre and post run files altogether",
         "codeSampleType": "code snippet",
         "programmingLanguage": "Shell",
         "text": "curl --request POST \\\n  --url <https://api.lambdatest.com/automation/api/v1/files> \\\n  --header 'Authorization: Basic {TOKEN}' \\\n  --header 'Content-Type: multipart/form-data' \\\n  --header 'cache-control: no-cache,no-cache,no-cache' \\\n  --header 'content-type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW' \\\n  --form pre_run_file=@{PATH-TO-CERTIFIFICATE-INSTALLATION-SCRIPT} \\\n  --form post_run_file=@{PATH-TO-CERTIFICATE-DELETION-SCRIPT} \\\n  --form 'name={NAME-OF-YOUR-PRERUN}' "
       },
       {
         "@type": "SoftwareSourceCode",
-        "name": "Code sample 5",
+        "name": "Run the below capabilities to use the certificate, pre, and post run files in a test",
         "codeSampleType": "code snippet",
         "programmingLanguage": "Shell",
         "text": "\"lambda:userFiles\": [\"certificate.p12\"],\n\"prerun\": {\n        \"accessKey\": \"****\",\n        \"background\": False,\n        \"filePath\": \"<organization-id>/uploads/install_certificate.ps1\",\n        \"postAction\": {\n            \"filePath\": \"xyz/post/delete_certificate.ps1\",\n            \"url\": \"<https://api.lambdatest.com/automation/api/v1/files/download>\"\n        },\n        \"url\": \"<https://api.lambdatest.com/automation/api/v1/files/download>\",\n        \"user\": \"****\"\n    },"
@@ -116,28 +119,28 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       },
       {
         "@type": "SoftwareSourceCode",
-        "name": "Following are the contents of the sample file",
+        "name": "Sample Certificate Installation File (macOS) - For Installing",
         "codeSampleType": "code snippet",
         "programmingLanguage": "Shell",
         "text": "sudo security add-trusted-cert -d -r trustRoot -k /Library/Keychains/System.keychain /Users/ltuser/Downloads/{CERTIFICATE-FILE-NAME}"
       },
       {
         "@type": "SoftwareSourceCode",
-        "name": "Sample Certificate Installation and Uninstallation File (macOS)",
+        "name": "Sample Certificate Uninstallation File (macOS) - For Deleting",
         "codeSampleType": "code snippet",
         "programmingLanguage": "Shell",
         "text": "sudo security delete-certificate -c \"Local Certificate\""
       },
       {
         "@type": "SoftwareSourceCode",
-        "name": "Following are the contents of the sample file",
+        "name": "Sample Certificate Installation File (Windows) - For Installing",
         "codeSampleType": "code snippet",
         "programmingLanguage": "Shell",
         "text": "Import-Certificate -FilePath \"C:\\Users\\ltuser\\Downloads\\{NAME-OF-THE-CERTIFICATE}\" -CertStoreLocation 'Cert:\\LocalMachine\\Root' -Verbose"
       },
       {
         "@type": "SoftwareSourceCode",
-        "name": "Sample Certificate Installation and Uninstallation File (Windows)",
+        "name": "Sample Certificate Uninstallation File (Windows) - For Deleting",
         "codeSampleType": "code snippet",
         "programmingLanguage": "Shell",
         "text": "Get-ChildItem Cert:\\CurrentUser\\Root\\{THUMBPRINT-OF-THE-CERTIFICATE} | Remove-Item"
@@ -147,9 +150,8 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
-# Install Custom Certificates on the VM Through Pre-run Executables
-
-* * *
+# How to Run a Pre-Test Executable on TestMu AI
+---
 Pre-run executables let you run custom scripts before the Selenium test starts. Use this feature to install user custom certificates that are required for test cases to execute successfully.
 
 To use certificates for Selenium tests, you need 3 things:
@@ -161,25 +163,33 @@ To use certificates for Selenium tests, you need 3 things:
 ## Instructions
 ---
 
-Upload your certificate file, installation, and uninstallation script using the below steps.
+Upload your certificate file, installation, and uninstallation script using the below steps. The `prerun` and `lambda:userFiles` keys shown here are part of the broader set of [Selenium automation capabilities](/support/docs/selenium-automation-capabilities/) you can pass to a test.
 
 1. Upload your certificate using the below command.
+
+<VerifiedTag value="Verified" />
 
 ```bash
 curl --location --request POST '<https://api.lambdatest.com/automation/api/v1/user-files>'
 ```
 2. Install the certificate on macOS using the following command.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 sudo security add-trusted-cert -d -r trustRoot -k /Library/Keychains/System.keychain /Users/ltuser/Downloads/{CERTIFICATE-FILE-NAME}
 ```
 3. Install the certificate on Windows using the below command.
+
+<VerifiedTag value="Verified" />
 
 ```bash
 Import-Certificate -FilePath "C:\Users\ltuser\Downloads\{NAME-OF-THE-CERTIFICATE}" -CertStoreLocation 'Cert:\LocalMachine\Root' -Verbose
 ```
 
 4. Use the following cURL request to upload pre and post run files altogether.
+
+<VerifiedTag value="Verified" />
 
 ```bash
 curl --request POST \
@@ -194,6 +204,8 @@ curl --request POST \
   ```
 
 5. Run the below capabilities to use the certificate, pre, and post run files in a test.
+
+<VerifiedTag value="Verified" />
 
 ```bash
 "lambda:userFiles": ["certificate.p12"],
@@ -217,6 +229,8 @@ curl --request POST \
 
 7. Once your script is approved, pass the `prerun` key in the capability as follows:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 "prerun": {
     "url": "{NAME-OF-YOUR-PRERUN}/pre/{NAME-OF-YOUR-CERTIFICATE-INSTALLATION-SCRIPT}",
@@ -227,7 +241,7 @@ curl --request POST \
 ## Leverage the Use of APIs to Pre-run Tests
 ---
 
-Use the following prerun APIs to manage pre-run files.
+Use the following prerun APIs to manage pre-run files. If you are still setting up your environment, first learn how to run your first Selenium test before adding pre-run scripts to the flow.
 
 * **GET/`files`:** Fetch all pre run files uploaded by the user.
 * **POST/`files`:** Upload pre run executable file to lambda storage.
@@ -248,11 +262,17 @@ Replace the placeholder values in each script file before use.
 Following are the contents of the sample file:
 
 **For Installing:**
+
+<VerifiedTag value="Verified" />
+
 ```bash
 sudo security add-trusted-cert -d -r trustRoot -k /Library/Keychains/System.keychain /Users/ltuser/Downloads/{CERTIFICATE-FILE-NAME}
 ```
 
 **For Deleting:**
+
+<VerifiedTag value="Verified" />
+
 ```bash
 sudo security delete-certificate -c "Local Certificate"
 ```
@@ -268,14 +288,28 @@ Replace the placeholder values in each script file before use.
 Following are the contents of the sample file:
 
 **For Installing:**
+
+<VerifiedTag value="Verified" />
+
 ```bash
 Import-Certificate -FilePath "C:\Users\ltuser\Downloads\{NAME-OF-THE-CERTIFICATE}" -CertStoreLocation 'Cert:\LocalMachine\Root' -Verbose
 ```
 **For Deleting:**
+
+<VerifiedTag value="Verified" />
+
 ```bash
 Get-ChildItem Cert:\CurrentUser\Root\{THUMBPRINT-OF-THE-CERTIFICATE} | Remove-Item
 ```
 
 >Got any questions?<br/>
 Please reach out at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24x7 Chat Support**</span> or you could also mail us at support@testmuai.com.
+
+## Next Steps
+---
+
+Continue with these related guides:
+
+- [Selenium Automation Capabilities](/support/docs/selenium-automation-capabilities/)
+- [Running Your First Selenium Test](/support/docs/testmu-running-your-first-selenium-test/)
 

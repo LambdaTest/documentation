@@ -14,7 +14,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/smartui-handle-lazy-loading/
 site_name: TestMu AI
 slug: smartui-handle-lazy-loading/
-canonical: https://www.testmu.ai/support/docs/smartui-handle-lazy-loading/
+canonical: https://www.testmuai.com/support/docs/smartui-handle-lazy-loading/
 
 ---
 import Tabs from '@theme/Tabs';
@@ -23,6 +23,7 @@ import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -145,6 +146,8 @@ The `waitForTimeout` option in your SmartUI configuration file adds a delay befo
 
 Add `waitForTimeout` to your `.smartui.json` file:
 
+<VerifiedTag value="Verified" />
+
 ```json
 {
   "web": {
@@ -175,6 +178,8 @@ Add `waitForTimeout` to your `.smartui.json` file:
 For pages with extensive lazy loading or infinite scroll, programmatically scroll through the page to trigger all lazy-loaded content before capturing the screenshot.
 
 #### JavaScript (Selenium) Example
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 const { Builder, By, until } = require('selenium-webdriver');
@@ -234,6 +239,8 @@ const { smartuiSnapshot } = require('@lambdatest/selenium-driver');
 
 #### Java (Selenium) Example
 
+<VerifiedTag value="Verified" />
+
 ```java
 
 public void handleLazyLoading(WebDriver driver) throws InterruptedException {
@@ -272,6 +279,8 @@ public void handleLazyLoading(WebDriver driver) throws InterruptedException {
 ```
 
 #### Python (Selenium) Example
+
+<VerifiedTag value="Verified" />
 
 ```python
 from selenium import webdriver
@@ -318,6 +327,8 @@ smartui_snapshot(driver, "Lazy Loaded Page")
 For pages where you know which elements are lazy-loaded, wait for those specific elements before taking the snapshot.
 
 #### JavaScript Example
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 const { Builder, By, until } = require('selenium-webdriver');
@@ -456,6 +467,7 @@ await smartuiSnapshot(driver, "Lazy Loaded Images");
 
 </TabItem>
 </Tabs>
+
 
 ## Additional Resources
 

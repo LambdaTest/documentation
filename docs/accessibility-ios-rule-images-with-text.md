@@ -5,6 +5,8 @@ sidebar_label: Images with Text
 description: "Detect meaningful text baked into images on iOS that is invisible to VoiceOver and must be provided as real text or an accessible label."
 slug: accessibility-ios-rule-images-with-text/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

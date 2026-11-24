@@ -5,6 +5,8 @@ sidebar_label: Mismatched Label Text
 description: Rule-level Accessibility guidance for Mismatched Label Text on Android.
 slug: accessibility-android-rule-mismatched-label-text/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

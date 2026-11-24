@@ -21,6 +21,7 @@ import TabItem from '@theme/TabItem';
 import RealDeviceTag from '../src/component/realDevice';
 import VirtualDeviceTag from '../src/component/virtualDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 
@@ -88,6 +89,8 @@ In this documentation, we look at some APIs that will help you optimize your mob
 
 To fetch the Devices that are available for running Tests.
 
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X GET "https://mobile-api.lambdatest.com/mobile-automation/api/v1/list?region=us"
@@ -117,6 +120,9 @@ To fetch the Devices that are available for running Tests.
 <Tabs className="docs__val">
 
 <TabItem value="real" label="Real Device" default>
+
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "appFile=@"/Users/macuser/Downloads/Appname.apk"" -F "name="appname""
@@ -126,6 +132,9 @@ To fetch the Devices that are available for running Tests.
 </TabItem>
 
 <TabItem value="virtual" label="Virtual Device">
+
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/virtualDevice" -F "appFile=@"/Users/macuser/Downloads/Appname.apk"" -F "name="appname""
@@ -141,6 +150,9 @@ To fetch the Devices that are available for running Tests.
 <Tabs className="docs__val">
 
 <TabItem value="real" label="Real Device" default>
+
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "url=https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk" -F "name=Proverbial_App" -F "custom_id=sampleName" -F "storage=url" -F "visibility=individual"`}
@@ -149,6 +161,9 @@ To fetch the Devices that are available for running Tests.
 </TabItem>
 
 <TabItem value="virtual" label="Virtual Device">
+
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/virtualDevice" -F "url=https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk" -F "name=Proverbial_App" -F "custom_id=sampleName" -F "storage=url" -F "visibility=individual"`}
@@ -171,6 +186,9 @@ To fetch the Devices that are available for running Tests.
 <Tabs className="docs__val">
 
 <TabItem value="android" label="Android" default>
+
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`curl --location --request GET "https://${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}@manual-api.lambdatest.com/app/data?type=android&level=user"`}
@@ -180,6 +198,9 @@ To fetch the Devices that are available for running Tests.
 </TabItem>
 
 <TabItem value="ios" label="iOS" default>
+
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
   {`curl --location --request GET "https://${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}@manual-api.lambdatest.com/app/data?type=ios&level=user"`}
@@ -194,6 +215,9 @@ To fetch the Devices that are available for running Tests.
 <Tabs className="docs__val">
 
 <TabItem value="android" label="Android" default>
+
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`curl --location --request GET "https://${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}@manual-api.lambdatest.com/app/data?type=emulator&level=user"`}
@@ -203,6 +227,9 @@ To fetch the Devices that are available for running Tests.
 </TabItem>
 
 <TabItem value="ios" label="iOS" default>
+
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
   {`curl --location --request GET "https://${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}@manual-api.lambdatest.com/app/data?type=simulator&level=user"`}
@@ -213,6 +240,8 @@ To fetch the Devices that are available for running Tests.
 </Tabs>
 
 Shown below is the response to the above cURL request.
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
@@ -243,6 +272,9 @@ To delete your uploaded apps, run the below cURL command.
 <Tabs className="docs__val">
 
 <TabItem value="real" label="Real Device" default>
+
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`curl --location --request DELETE "https://${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}@manual-api.lambdatest.com/app/delete" \
@@ -256,6 +288,9 @@ To delete your uploaded apps, run the below cURL command.
 </TabItem>
 
 <TabItem value="virtual" label="Virtual Device">
+
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`curl --location --request DELETE "https://${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}@manual-api.lambdatest.com/app/delete" \
@@ -271,6 +306,8 @@ To delete your uploaded apps, run the below cURL command.
 </Tabs>
 
 Shown below is the response to the above cURL request.
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
@@ -288,6 +325,9 @@ To unlock features such as network logs, image injection, and screenshotunblock 
 <Tabs className="docs__val">
 
 <TabItem value="real" label="Real Device" default>
+
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`curl --location --request POST 'https://mobile-api.lambdatest.com/mobile-automation/api/v1/fetchpatchedapkurl' \
@@ -303,6 +343,9 @@ To unlock features such as network logs, image injection, and screenshotunblock 
 </TabItem>
 
 <TabItem value="virtual" label="Virtual Device">
+
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`curl --location --request POST 'https://mobile-api.lambdatest.com/mobile-automation/api/v1/fetchpatchedapkurl/virtualDevice' \
@@ -320,6 +363,8 @@ To unlock features such as network logs, image injection, and screenshotunblock 
 </Tabs>
 
 The payload allows you to check the processing status for specific features. If the **patched_url** is empty, the processing is still in progress. To check if the processing for image injection or screenshot unblock is complete, pass either **imageInjectionEnabled** or **screenshotUnblockEnabled** as `true` based on the feature you are testing.
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
@@ -341,6 +386,8 @@ The payload allows you to check the processing status for specific features. If 
 
 To get your concurrency details, run the below cURL command.
 
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`curl -u "${YOUR_LAMBDATEST_USERNAME()}:${YOUR_LAMBDATEST_ACCESS_KEY()}" -X GET "https://mobile-api.lambdatest.com/mobile-automation/api/v1/org/concurrency"`}
@@ -348,6 +395,8 @@ To get your concurrency details, run the below cURL command.
 </div>
 
 Shown below is the response to the above cURL request.
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
@@ -372,6 +421,9 @@ To generate public shareable links, run the below cURL command.
 <Tabs className="docs__val">
 
 <TabItem value="build" label="Build Link" default>
+
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`curl 'https://api.lambdatest.com/lshs/api/v1.0/share-item/generate-sharable-link' \
@@ -383,6 +435,9 @@ To generate public shareable links, run the below cURL command.
 </TabItem>
 
 <TabItem value="test" label="Test Link">
+
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`curl 'https://api.lambdatest.com/lshs/api/v1.0/share-item/generate-sharable-link' \

@@ -17,7 +17,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/smartui-github-app-integration/
 site_name: TestMu AI
 slug: smartui-github-app-integration/
-canonical: https://www.testmu.ai/support/docs/smartui-github-app-integration/
+canonical: https://www.testmuai.com/support/docs/smartui-github-app-integration/
 
 ---
 
@@ -27,6 +27,7 @@ import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 
@@ -199,6 +200,8 @@ Please check out GitHub sample here: https://github.com/LambdaTest/smartui-node-
 
  Add the `GitHub` capability to your current test configuration:
 
+<VerifiedTag value="Verified" />
+
 ```js
 const capabilities: {
   platform: "Windows 10",
@@ -221,6 +224,8 @@ const capabilities: {
 Setting up your **CI** workflow to execute on **GitHub**. Here is an example setup with `GitHub Actions`:
 
 Go to `.github/workflows/<your_ci_file>.yml`
+
+<VerifiedTag value="Verified" />
 
 ```yaml
     name: Execute SmartUI Test with GitHub App Integration

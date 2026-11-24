@@ -5,6 +5,8 @@ sidebar_label: Dynamic Type Support
 description: Rule-level Accessibility guidance for Dynamic Type Support on iOS.
 slug: accessibility-ios-rule-dynamic-type-support/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

@@ -17,6 +17,7 @@ canonical: https://www.testmuai.com/support/docs/hyperexecute-prioritize-tests/
 
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -89,11 +90,13 @@ HyperExecute's job prioritization feature empowers you to ensure that your most 
 
 ## `jobLabel`
 
-The `jobLabel` YAML key is used to add tags or labels to jobs. In addition to prioritizing your jobs, you can also use the job labels to search for a job using the relevant label or tag that is assigned to it. To learn more about how to use this feature with the HyperExecute YAML, go through [this section](/support/docs/deep-dive-into-hyperexecute-yaml/#23-joblabel).
+The `jobLabel` YAML key is used to add tags or labels to jobs. In addition to prioritizing your jobs, you can also use the job labels to search for a job using the relevant label or tag that is assigned to it. To learn more about how to use this feature with the HyperExecute YAML, go through [this section](/support/docs/deep-dive-into-hyperexecute-yaml/#joblabel).
 
 ## Prioritize your Jobs using `jobLabel`
 
 You can prioritize your jobs by assigning the job labels **low**, **medium** or **high** to your jobs. The jobs with the priority **high** will be executed first, followed by **medium** priority jobs with **low** priority jobs at the end.
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 jobLabel: ['high', 'medium', 'low']

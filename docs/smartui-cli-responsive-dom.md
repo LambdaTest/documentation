@@ -17,7 +17,7 @@ keywords:
 
 url: https://www.testmuai.com/support/docs/smartui-cli-responsive-dom/
 slug: smartui-cli-responsive-dom/
-canonical: https://www.testmu.ai/support/docs/smartui-cli-responsive-dom/
+canonical: https://www.testmuai.com/support/docs/smartui-cli-responsive-dom/
 
 ---
 import Tabs from '@theme/Tabs';
@@ -26,6 +26,7 @@ import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 ---
 
@@ -48,6 +49,8 @@ If you face any problems executing tests with SmartUI-CLI `versions >= v4.x.x`, 
 ### Step-1
 Specify `delayedUpload` to true in your configuration file.
 
+<VerifiedTag value="Verified" />
+
 ```json
 "delayedUpload" : true
 ```
@@ -55,6 +58,8 @@ Specify `delayedUpload` to true in your configuration file.
 ### Step-2
 
 Resize your viewport according to your framework and take the screenshot. For example in **Selenium NodeJs**, you can do it as follows:
+
+<VerifiedTag value="Verified" />
 
 ```js
 

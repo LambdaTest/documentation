@@ -5,6 +5,8 @@ sidebar_label: Inaccessible Text Focus
 description: Rule-level Accessibility guidance for Inaccessible Text Focus on Android.
 slug: accessibility-android-rule-inaccessible-text-focus/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

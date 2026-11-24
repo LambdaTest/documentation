@@ -18,11 +18,12 @@ keywords:
 url: https://www.testmuai.com/support/docs/npm-via-tunnel/
 site_name: TestMu AI
 slug: npm-via-tunnel/
-canonical: https://www.testmu.ai/support/docs/npm-via-tunnel/
+canonical: https://www.testmuai.com/support/docs/npm-via-tunnel/
 ---
 
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -109,6 +110,8 @@ There are a few reasons why you might want to use `npm_via_tunnel`:
 ## How to use npm_via_tunnel
 
 To use `npm_via_tunnel`, simply add the following line to your run settings:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 "npm_via_tunnel": true

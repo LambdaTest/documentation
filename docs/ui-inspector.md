@@ -9,7 +9,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/ui-inspector/
 site_name: TestMu AI
 slug: ui-inspector/
-canonical: https://www.testmu.ai/support/docs/ui-inspector/
+canonical: https://www.testmuai.com/support/docs/ui-inspector/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

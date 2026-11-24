@@ -11,7 +11,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/sso-azure-integration/
 site_name: TestMu AI
 slug: sso-azure-integration/
-canonical: https://www.testmu.ai/support/docs/sso-azure-integration/
+canonical: https://www.testmuai.com/support/docs/sso-azure-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

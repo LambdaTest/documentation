@@ -17,7 +17,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/smartui-pdf-comparison/
 site_name: TestMu AI
 slug: smartui-pdf-comparison/
-canonical: https://www.testmu.ai/support/docs/smartui-pdf-comparison/
+canonical: https://www.testmuai.com/support/docs/smartui-pdf-comparison/
 ---
 
 import Tabs from '@theme/Tabs';
@@ -26,6 +26,7 @@ import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 
@@ -135,6 +136,8 @@ To initiate a SmartUI PDF Comparison Project, adhere to the following instructio
 5. Confirm your entry by clicking on **Submit**.
 
 Once your project is active, retrieve your `Project Token` from the application. Here's an example of a project token:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 projectToken = "123456#1234abcd-****-****-****-************"

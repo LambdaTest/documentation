@@ -14,6 +14,8 @@ site_name: TestMu AI
 slug: accessibility-ios-what-we-cover/
 canonical: https://www.testmuai.com/support/docs/accessibility-ios-what-we-cover/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

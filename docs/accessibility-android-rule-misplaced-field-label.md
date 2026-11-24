@@ -5,6 +5,8 @@ sidebar_label: Misplaced Field Label
 description: Rule-level Accessibility guidance for Misplaced Field Label on Android.
 slug: accessibility-android-rule-misplaced-field-label/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

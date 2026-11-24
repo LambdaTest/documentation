@@ -8,6 +8,9 @@ url: https://www.testmuai.com/support/docs/accessibility-appium-webdriverio/
 site_name: TestMu AI
 canonical: https://www.testmuai.com/support/docs/accessibility-appium-webdriverio/
 ---
+import VerifiedTag from '@site/src/component/verifiedTag';
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -101,6 +104,8 @@ Use this guide when **WebdriverIO** orchestrates **Appium** tests for Android or
 
 ### 1. Set capabilities in `wdio.conf.ts` (or `.js`)
 
+<VerifiedTag value="Verified" />
+
 ```ts
 export const config = {
   capabilities: [{
@@ -122,6 +127,8 @@ To scan every screen your test reaches without a hook call at each one, set `acc
 
 ### 2. Call the hook after screens load
 
+<VerifiedTag value="Verified" />
+
 ```ts
 await browser.execute('lambda-accessibility-scan');
 ```
@@ -129,6 +136,8 @@ await browser.execute('lambda-accessibility-scan');
 Use WDIO’s **`waitUntil`** patterns before executing the hook so dynamic content is present.
 
 ### 3. Run the suite
+
+<VerifiedTag value="Verified" />
 
 ```bash
 npx wdio run wdio.conf.ts

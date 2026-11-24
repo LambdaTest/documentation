@@ -22,6 +22,7 @@ import TabItem from '@theme/TabItem';
 import CodeBlock from '@theme/CodeBlock';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -168,6 +169,8 @@ Skills are plain markdown files. Review and customize them by editing the instal
 
 The quickest way to install the Kane CLI skill globally for all supported agents (Claude Code, Codex CLI, and Gemini CLI) in one command:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npx @testmuai/kane-cli-skill
 ```
@@ -177,6 +180,8 @@ If you prefer to install manually for a specific agent, follow the instructions 
 ---
 
 ## Install by Agent
+
+<VerifiedTag value="Verified" />
 
 <Tabs groupId="agent-platform">
 
@@ -304,6 +309,8 @@ curl -o .gemini/skills/kane-cli/SKILL.md \
 
 OAuth login opens a browser window: AI agents cannot complete this flow. Use Basic Auth instead:
 
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`kane-cli login \\
@@ -338,4 +345,4 @@ When you ask your AI agent to test something on the web, the skill:
 | Codex CLI | `~/.codex/AGENTS.md` (appended section) | `AGENTS.md` (appended section) |
 | Gemini CLI | `~/.gemini/skills/kane-cli/SKILL.md` | `.gemini/skills/kane-cli/SKILL.md` |
 
-Source files: [github.com/LambdaTest/kane-cli/tree/main/skills](https://github.com/LambdaTest/kane-cli/blob/main/docs/user-guide/getting-started.md)
+Source files: [github.com/LambdaTest/kane-cli/tree/main/skill-installer/skills](https://github.com/LambdaTest/kane-cli/tree/main/skill-installer/skills)

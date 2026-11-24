@@ -2,6 +2,7 @@
 id: supported-browsers-and-operating-systems-for-the-web-interface
 title: Supported Browsers and Operating Systems
 sidebar_label: Supported Browsers & OSes
+toc_max_heading_level: 2
 description: Check which browsers, versions, and operating systems are supported for Selenium and Appium testing.
 keywords:
   - selenium supported browser versions
@@ -13,7 +14,7 @@ image: /assets/images/og-images/automation-testing-og.png
 url: https://www.testmuai.com/support/docs/supported-browsers-and-operating-systems-for-the-web-interface/
 site_name: TestMu AI
 slug: supported-browsers-and-operating-systems-for-the-web-interface/
-canonical: https://www.testmu.ai/support/docs/supported-browsers-and-operating-systems-for-the-web-interface/
+canonical: https://www.testmuai.com/support/docs/supported-browsers-and-operating-systems-for-the-web-interface/
 ---
 
 import { BRAND_URL } from '@site/src/component/BrandName';
@@ -45,8 +46,11 @@ import { BRAND_URL } from '@site/src/component/BrandName';
     "keywords": [
       "selenium supported browser versions",
       "chrome firefox safari edge testing",
-      "appium ios android device list"
+      "appium ios android device list",
+      "macos windows browser compatibility",
+      "cross browser testing os support"
     ],
+    "proficiencyLevel": "Beginner",
     "author": {
       "@type": "Organization",
       "@id": "https://www.testmuai.com/#organization",
@@ -72,8 +76,7 @@ import { BRAND_URL } from '@site/src/component/BrandName';
         "https://x.com/testmuai",
         "https://www.youtube.com/@TestMuAI"
       ]
-    },
-    "dateModified": "2026-08-14T19:24:28+05:30"
+    }
   }) }}
 />
 

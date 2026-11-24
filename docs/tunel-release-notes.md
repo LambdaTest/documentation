@@ -12,7 +12,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/tunnel-release-notes/
 site_name: TestMu AI
 slug: tunnel-release-notes/
-canonical: https://www.testmu.ai/support/docs/tunnel-release-notes/
+canonical: https://www.testmuai.com/support/docs/tunnel-release-notes/
 ---
 
 
@@ -75,6 +75,12 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     "dateModified": "2026-09-06T15:11:15+05:30"
   }) }}
 />
+## Version 3.2.36 (27th September 2026)
+- **Security Updates and Stability Fixes**
+- Security Fixes for CVE.
+- Fix for WS traffic routed without port.
+- Binary now captures host machine IP and hostname.
+  
 ## Version 3.2.35 (13th September 2026)
 - **Security Updates and Stability Fixes**
 - Security Fixes for CVE.

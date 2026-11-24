@@ -14,7 +14,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/testsigma-integration/
 site_name: TestMu AI
 slug: testsigma-integration/
-canonical: https://www.testmu.ai/support/docs/testsigma-integration/
+canonical: https://www.testmuai.com/support/docs/testsigma-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

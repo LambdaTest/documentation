@@ -18,7 +18,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/smartui-appium-hooks/
 site_name: TestMu AI
 slug: smartui-appium-hooks/
-canonical: https://www.testmu.ai/support/docs/smartui-appium-hooks/
+canonical: https://www.testmuai.com/support/docs/smartui-appium-hooks/
 ---
 
 import Tabs from '@theme/Tabs';
@@ -27,6 +27,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import CodeBlock from '@theme/CodeBlock';
 import NewTag from '../src/component/newTag';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 
@@ -368,6 +369,8 @@ Using the <BrandName /> platform, perform regression testing in just one click a
 
 Below are code examples for taking viewport screenshots using SmartUI with Appium across different programming languages and frameworks:
 
+<VerifiedTag value="Verified" />
+
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux' label='MacOS/Linux' default>
 
@@ -414,6 +417,8 @@ Upload your **_iOS_** application (.ipa file) or **_android_** application (.apk
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='App File' label='App File' default>
 
+ <VerifiedTag value="Verified" />
+
  <div className='lambdatest__codeblock'>
 <CodeBlock className='language-bash'>
 {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "appFile=@"/Users/macuser/Downloads/proverbial_android.apk"" -F "name="proverbial_app""
@@ -423,6 +428,8 @@ Upload your **_iOS_** application (.ipa file) or **_android_** application (.apk
 
 </TabItem>
 <TabItem value='App URL' label='App URL' default>
+
+<VerifiedTag value="Verified" />
 
 <div className='lambdatest__codeblock'>
 <CodeBlock className='language-bash'>
@@ -445,6 +452,8 @@ Upload your **_iOS_** application (.ipa file) or **_android_** application (.apk
 
 Clone the <BrandName />’s :link: [LT-appium-nodejs](https://github.com/LambdaTest/LT-appium-nodejs) repository and navigate to the code directory as shown below:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git clone https://github.com/LambdaTest/LT-appium-nodejs
 cd LT-appium-nodejs
@@ -457,6 +466,9 @@ Make sure you have your <BrandName /> credentials with you to run test automatio
 <Tabs className='docs__val'>
 
 <TabItem value='bash' label='Linux / MacOS' default>
+
+  <VerifiedTag value="Verified" />
+
   <div className='lambdatest__codeblock'>
   <CodeBlock className='language-bash'>
   {`export LT_USERNAME=${ YOUR_LAMBDATEST_USERNAME()} \\
@@ -467,6 +479,8 @@ export LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
 </TabItem>
 
 <TabItem value='powershell' label='Windows' default>
+
+  <VerifiedTag value="Verified" />
 
   <div className='lambdatest__codeblock'>
   <CodeBlock className='language-powershell'>
@@ -487,6 +501,8 @@ To view and generate more capabilities for your appium application test suite, p
 :::
 
 Once you have created a SmartUI Project, you can generate screenshots by running automation scripts. Edit the required capabilities for your test suite as shown in the below sample code snippet:
+
+<VerifiedTag value="Verified" />
 
 ```javascript title="Please replace your capabilities in your Remote Webdriver DesiredCapabilities configuration. This sample is for NodeJS"
 let capabilities = {
@@ -535,6 +551,8 @@ Set `smartUI.captureDom` to `true` to save the app's element tree with each scre
 
 - Webhook for taking the screenshot - This part of the code needs to be attached below the required segment of appium script of which we would like to take the screenshot to test on.
 
+<VerifiedTag value="Verified" />
+
 ```javascript title="For Example if your are using with NodeJS"
 driver.execute("smartui.takeScreenshot=<Name of your screenshot>");
 ```
@@ -546,6 +564,8 @@ Appium with SmartUI is currently only supports the viewport based screenshot com
 :::
 
 - Execute your test suite as per the execution command depending on your framework or language.
+
+<VerifiedTag value="Verified" />
 
 ```bash title="For Example if your are using with NodeJS"
 npm i && node your_test_script.js
@@ -579,6 +599,8 @@ This is especially useful for enterprise applications where certain UI elements 
 
 ### Usage in Node.js (Primary Example)
 
+<VerifiedTag value="Verified" />
+
 ```javascript title="Example: Ignoring Dynamic Elements in Node.js"
 let config = {
   screenshotName: 'Home Screen',
@@ -595,6 +617,8 @@ let config = {
 await driver.execute("smartui.takeScreenshot", config);
 ```
 
+<VerifiedTag value="Verified" />
+
 ```javascript title="Example: Selecting Only Critical Regions in Node.js"
 let config = {
   screenshotName: 'Checkout Form',
@@ -610,6 +634,8 @@ await driver.execute("smartui.takeScreenshot", config);
 ```
 
 ### Cross-Framework Examples
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='nodejs' label='Node.js' default>
@@ -707,6 +733,8 @@ In a similar way, we can run visual tests for other languages and frameworks usi
 
 This part of the code needs to be attached below the required segment of selenium script of which we would like to take the screenshot to test on.
 
+<VerifiedTag value="Verified" />
+
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='nodejs-1' label='NodeJS' default>
 
@@ -749,6 +777,8 @@ driver.Execute("smartui.takeScreenshot=<Your Screenshot Name>");
 You can capture the full page screenshot for apps which have a scrolling functionality on their application user interface for your **Appium** functional testing.
 
 Add the following **Webhook** to your test cases where we need to capture the screenshot of your application.
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='nodejs-2' label='NodeJS' default>
@@ -813,6 +843,8 @@ Please note that this webhook is only applicable to <b>native app screenshots</b
 :::
 
 ## Best Practices
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='best-practices'>
 <TabItem value='screenshot-naming' label='Screenshot Naming' default>
@@ -886,6 +918,8 @@ await driver.execute("smartui.takeScreenshot=Screen Loaded");
 </Tabs>
 
 ## Troubleshooting
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='troubleshooting'>
 <TabItem value='screenshots-not-captured' label='Screenshots Not Captured' default>
@@ -1025,11 +1059,12 @@ If you encounter issues not covered here:
 - Review the [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide) for detailed solutions
 - Check [SmartUI Configuration Options](/support/docs/smartui-sdk-config-options) documentation
 - See [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data) for dynamic content issues
-- Visit [TestMu AI Support](https://www.testmuai.com/support) for additional resources
-- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support)
+- Visit [TestMu AI Support](https://www.testmuai.com/support/docs/) for additional resources
+- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support/docs/)
 
 </TabItem>
 </Tabs>
+
 
 ## Additional Resources
 

@@ -26,6 +26,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import RealDeviceTag from '../src/component/realDevice';
 import VirtualDeviceTag from '../src/component/virtualDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
@@ -253,6 +254,8 @@ In this documentation, you will learn how to trigger a automation script of **Ru
 - Your <BrandName /> [Username and Access key](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/security).
 - Install **Ruby** on your local system. Follow these instructions to install on different operating systems.
 
+<VerifiedTag value="Verified" />
+
 <Tabs className="docs__val">
 
 <TabItem value="rubymac" label="macOS" default>
@@ -294,6 +297,9 @@ You need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* 
 
 <Tabs className="docs__val">
 <TabItem value="bash" label="Linux / MacOS" default>
+
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
@@ -302,6 +308,9 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </div>
 </TabItem>
 <TabItem value="powershell" label="Windows" default>
+
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
   {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
@@ -319,6 +328,9 @@ Make sure to add the path of the **appFile** in the cURL request. Below is an ex
 <Tabs className="docs__val">
 
 <TabItem value="bash" label="App File" default>
+
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
       {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "appFile=@"/Users/macuser/Downloads/proverbial_android.apk"" -F "name="proverbial_app""`}
@@ -327,6 +339,9 @@ Make sure to add the path of the **appFile** in the cURL request. Below is an ex
 </TabItem>
 
 <TabItem value="powershell" label="App URL" default>
+
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
       {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "url=:https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk" -F "name=Proverbial_App"`}
@@ -347,6 +362,8 @@ Make sure to add the path of the **appFile** in the cURL request. Below is an ex
 ### Step 4: Update your Automation Script
 
 An automation script for the sample application given above has been provided here. Ensure to update the `APP_URL`, `username` and `accessKey` in the code scripts before running the tests.
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
 
@@ -477,6 +494,8 @@ You can update your custom capabilities in test scripts. In this sample project,
 
 The capabilities object in the sample code are defined as:
 
+<VerifiedTag value="Verified" />
+
 <Tabs className="docs__val">
 
 <TabItem value="ios-config" label="iOS" default>
@@ -529,6 +548,8 @@ caps = {
 
 ### Step 6: Execute and Monitor your Tests
 
+<VerifiedTag value="Verified" />
+
 <Tabs className="docs__val">
 
 <TabItem value="ios" label="iOS" default>
@@ -577,16 +598,23 @@ In case of Windows, if you get any error message. Please try this method:
 
 - Navigate to the corresponding directory based on your app.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 cd android
 ```
 
 - Refresh the gem bundles through given command
+
+<VerifiedTag value="Verified" />
+
 ```bash
 gem uninstall -aIx
 ```
 
 - Re-install the gems required
+
+<VerifiedTag value="Verified" />
 
 ```bash
 gem install appium_lib -v 10.6.0
@@ -594,6 +622,8 @@ gem install ffi
 
 ```
 - Now try running the corresponding automation script for your app.
+
+<VerifiedTag value="Verified" />
 
 ```bash
 ruby android-sample.rb
@@ -608,6 +638,8 @@ ruby android-sample.rb
 The [appium-skill](https://github.com/LambdaTest/agent-skills/tree/main/appium-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
 
 The appium-skill package includes:
+
+<VerifiedTag value="Verified" />
 
 ```
 appium-skill/
@@ -631,6 +663,8 @@ It provides structured guidance for:
 ***
 
 Install a Appium Agent Skill using the command below:
+
+<VerifiedTag value="Verified" />
 
 ```
 # Clone the repo and copy the skill you need

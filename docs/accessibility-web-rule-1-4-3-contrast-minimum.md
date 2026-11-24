@@ -5,6 +5,8 @@ sidebar_label: Contrast (Minimum) (1.4.3)
 description: Rule-level Accessibility guidance for Contrast (Minimum) (1.4.3).
 slug: accessibility-web-rule-1-4-3-contrast-minimum/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

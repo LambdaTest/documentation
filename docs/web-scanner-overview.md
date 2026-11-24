@@ -13,7 +13,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/web-scanner-overview/
 site_name: TestMu AI
 slug: web-scanner-overview/
-canonical: https://www.testmu.ai/support/docs/web-scanner-overview/
+canonical: https://www.testmuai.com/support/docs/web-scanner-overview/
 ---
 
 import Tabs from '@theme/Tabs';

@@ -5,6 +5,8 @@ sidebar_label: Pointer Gestures (2.5.1)
 description: Rule-level Accessibility guidance for Pointer Gestures (WCAG 2.5.1 Level A).
 slug: accessibility-web-rule-2-5-1-pointer-gestures/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

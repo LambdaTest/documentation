@@ -5,6 +5,8 @@ sidebar_label: Consistent Help (3.2.6)
 description: Rule-level Accessibility guidance for Consistent Help (WCAG 3.2.6 Level A).
 slug: accessibility-web-rule-3-2-6-consistent-help/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

@@ -16,6 +16,7 @@ canonical: https://www.testmuai.com/support/docs/hyperexecute-artifacts/
 
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -88,12 +89,16 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "text": "matrix:\n   os: [win]\n   browser: [\"chrome-latest-1\", \"firefox-latest-2\"]\n\nmergeArtifacts: true\nuploadArtefacts:\n  - name: $browser\n    path: \n      - allure-results/"
       }
     ],
-    "dateModified": "2026-09-09T19:10:37+05:30"
+    "dateModified": "2026-11-11T14:00:00+05:30"
   }) }}
 />
 Artifacts are files generated during test execution, including reports and logs. You can refer to these files for obtaining consolidated information about the executed test cases, and can seamlessly interact with artifacts through the HyperExecute UI.
 
 Following the completion of a Job, these artifacts are automatically stored in the **artifacts folder**, distinguishing previous files into **old-artifacts** on subsequent runs while retaining the recent files in artifacts.
+
+:::info On-premise deployments
+On-prem, open artifacts from your organization's own HyperExecute dashboard, not the public dashboard link in the steps below. Keep `--onprem-host` in any CLI command that downloads artifacts. See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/#step-8-review-results-and-rerun-failures).
+:::
 
 ## Steps to Generate and Download Artifacts
 Follow the below mentioned steps to generate the Artifacts for your desired framework:
@@ -101,6 +106,8 @@ Follow the below mentioned steps to generate the Artifacts for your desired fram
 **Step 1:** Go to the HyperExecute YAML file
 
 **Step 2:** Add the below mentioned parameters in the YAML file to generate the Artifacts
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 uploadArtifacts:
@@ -115,6 +122,8 @@ uploadArtifacts:
 - If you are generating multiple artifacts, then it is recommended to use this parameter, [`mergeArtifacts`](/support/docs/deep-dive-into-hyperexecute-yaml/#mergeartifacts) in your YAML, as it will zip all your Artifacts files while downloading from the dashboard.
 
 - You can replace the Artifacts folder name value with any of the Matrix parameters value.
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 matrix:

@@ -38,6 +38,35 @@ export function coerceBodyValue(raw, type) {
   return raw;
 }
 
+// Detect bodies shaped like `{ wrapper: [ { ...primitive fields } ] }` (e.g.
+// Test Manager Create Folder). When matched, the form can render the inner
+// object's primitive fields directly and the body assembly wraps them back
+// into the array shape — giving the same per-field UX as a flat-body endpoint.
+export function detectFlattenedArrayBody(endpoint) {
+  if (!endpoint || !endpoint.requestBody) return null;
+  const props = endpoint.requestBody.properties || [];
+  if (props.length !== 1) return null;
+  const only = props[0];
+  if (only.type !== 'array') return null;
+  const example = endpoint.requestBody.example;
+  if (!example || typeof example !== 'object' || Array.isArray(example)) return null;
+  const arr = example[only.name];
+  if (!Array.isArray(arr) || arr.length !== 1) return null;
+  const inner = arr[0];
+  if (!inner || typeof inner !== 'object' || Array.isArray(inner)) return null;
+  // Bail when any inner value is an array or non-null object — the flat form
+  // can't represent nesting. `null` values are accepted (typed as string).
+  const innerFields = Object.entries(inner).map(([name, value]) => {
+    let type = 'string';
+    if (typeof value === 'number') type = Number.isInteger(value) ? 'integer' : 'number';
+    else if (typeof value === 'boolean') type = 'boolean';
+    else if (Array.isArray(value) || (typeof value === 'object' && value !== null)) return null;
+    return { name, type, required: false, description: '' };
+  });
+  if (innerFields.some((f) => f === null)) return null;
+  return { wrapperKey: only.name, innerFields, innerExample: inner };
+}
+
 // prism language mapping — only use languages bundled in prism-react-renderer
 export const LANGUAGES = [
   { label: 'cURL',       prism: 'clike' },

@@ -4,7 +4,7 @@ title: GitLab PR Checks with SmartUI Exec (SDK)
 sidebar_label: GitLab PR Checks (Exec)
 description: Integrate SmartUI visual regression testing with GitLab merge requests using SmartUI SDK/Exec method for web and mobile testing with Selenium, Playwright, Appium, and more.
 slug: smartui-gitlab-pr-checks-exec/
-canonical: https://www.testmu.ai/support/docs/smartui-gitlab-pr-checks-exec/
+canonical: https://www.testmuai.com/support/docs/smartui-gitlab-pr-checks-exec/
 keywords:
   - GitLab PR checks
   - SmartUI SDK
@@ -23,6 +23,8 @@ import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -235,6 +237,8 @@ You can verify your GitLab integration is active by checking the [Integrations p
 
 Create or update your SmartUI configuration file (`.smartui.json`):
 
+<VerifiedTag value="Verified" />
+
 ```json title=".smartui.json"
 {
   "projectName": "your-smartui-project-name",
@@ -256,6 +260,8 @@ The SmartUI configuration file is used to specify project settings. You can also
 Create or update your `.gitlab-ci.yml` file. The key difference with the Exec method is that you use `npx smartui exec --gitURL` to run your tests.
 
 ### Complete GitLab CI/CD Configuration
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='ci-language'>
 <TabItem value='typescript' label='TypeScript/JavaScript' default>
@@ -486,6 +492,8 @@ visual_regression_tests:
 
 The `npx smartui exec` command wraps your test execution and provides SmartUI integration:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npx smartui exec --gitURL "<gitlab-url>" -- <your-test-command>
 ```
@@ -557,6 +565,8 @@ When visual differences are detected:
 ---
 
 ## Complete Working Examples
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='complete-example'>
 <TabItem value='web-example' label='Web Testing Example' default>

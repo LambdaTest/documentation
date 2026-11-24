@@ -17,6 +17,7 @@ canonical: https://www.testmuai.com/support/docs/browser-cloud-debugging/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -145,6 +146,8 @@ logs, and network request capture - no extra setup required.
 
 Every session appears on the TestMu AI Web Automation Dashboard:
 
+<VerifiedTag value="Verified" />
+
 ```
 https://automation.lambdatest.com/logs/
 ```
@@ -163,6 +166,8 @@ From the dashboard you can:
 
 Use `build` and `name` in `lambdatestOptions` to organize sessions on the
 dashboard. This is especially helpful when running multiple agents or scenarios:
+
+<VerifiedTag value="Verified" />
 
 ```typescript
 const session = await client.sessions.create({
@@ -184,6 +189,8 @@ const session = await client.sessions.create({
 
 Every session provides URLs for viewing:
 
+<VerifiedTag value="Verified" />
+
 ```typescript
 console.log(session.debugUrl);          // Dashboard URL for this session
 console.log(session.sessionViewerUrl);  // Live stream of the browser
@@ -193,6 +200,8 @@ console.log(session.sessionViewerUrl);  // Live stream of the browser
 ## SDK Console Output
 
 The SDK logs connection steps and actions to stdout:
+
+<VerifiedTag value="Verified" />
 
 ```
 Adapter: Connecting to session session_123_abc via Puppeteer...
@@ -209,6 +218,8 @@ Here are the most common issues and how to fix them.
 
 **Connection Timeout**
 
+<VerifiedTag value="Verified" />
+
 ```
 Error: Timed out after 30000ms while waiting for the WebSocket
 ```
@@ -222,6 +233,8 @@ network.
 
 **Session Not Found**
 
+<VerifiedTag value="Verified" />
+
 ```
 Session session_xyz not found
 ```
@@ -233,6 +246,8 @@ Fix: Increase with `timeout: 600000` (10 minutes) in your session config.
 
 
 **Playwright Requires Node 18+**
+
+<VerifiedTag value="Verified" />
 
 ```
 Playwright requires Node.js 18 or higher.

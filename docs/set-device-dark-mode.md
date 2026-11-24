@@ -15,7 +15,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/set-device-dark-mode/
 site_name: TestMu AI
 slug: set-device-dark-mode/
-canonical: https://www.testmu.ai/support/docs/set-device-dark-mode/
+canonical: https://www.testmuai.com/support/docs/set-device-dark-mode/
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -25,6 +25,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import RealDeviceTag from '../src/component/realDevice';
 import VirtualDeviceTag from '../src/component/virtualDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 
@@ -158,6 +159,8 @@ To unlock this feature, purchase or upgrade to the required [plan](https://www.t
 
 You can enable the dark mode setting through `darkMode` capability before the session starts. This ensures the device starts in the dark   theme without additional steps during test execution.
 
+<VerifiedTag value="Verified" />
+
 <Tabs>
 <TabItem value="ios" label="iOS" default>
 
@@ -203,6 +206,8 @@ You can enable the dark mode setting through `darkMode` capability before the se
 ### Enabling Dark Mode via Hooks
 
 To change dark mode settings during test execution, use the hook with the `updateDeviceSettings` action. The example below demonstrates this using **Python**.
+
+<VerifiedTag value="Verified" />
 
 <Tabs>
 <TabItem value="real-devices" label="Real Devices" default>

@@ -19,6 +19,7 @@ canonical: https://www.testmuai.com/support/docs/hyperexecute-run-jmeter-tests/
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 
@@ -184,6 +185,49 @@ Override selected JMeter properties for this run. The following [user properties
 - **`jmeter.save.saveservice.subresults`**: Whether sub-results (for example, sub-samples generated within a transaction or by HTTP redirects) are written to the results file. Set to `false` to reduce result file size.
 - **`httpclient.socket.https.cps`**: Characters per second cap on HTTPS downloads for the HttpClient sampler. Use it to simulate low-bandwidth conditions; `0` means unlimited.
 
+### Custom Variables
+
+HyperExecute allows you to override values in your JMeter test plan using custom variables.
+
+To use custom variables, define the value in your JMX file using the JMeter `__P()` property function.
+
+Example:
+
+<VerifiedTag value="Verified" />
+
+```xml
+<stringProp name="ThreadGroup.num_threads">${__P(f_threads,5)}</stringProp>
+```
+
+You can override the default value when running the test:
+
+<VerifiedTag value="Verified" />
+
+```yaml
+jmeter:
+  variables:
+    f_threads: 99
+```
+
+In this example, HyperExecute uses `99` instead of the default value `5`.
+
+Custom variables can be used for:
+
+- Thread count
+- Ramp-up time
+- Duration
+- HTTP domain, port, protocol, path, and method
+- Request body
+- Header values
+- Timer delays
+- Assertions
+
+:::note
+Custom variable overrides work only with JMeter properties defined using `${__P(name,default)}`. Variables defined using `${var}` with a User Defined Variables element cannot be overridden using `jmeter.variables`.
+
+For boolean values, custom variable substitution works when the JMX field uses `<stringProp>`. It does not work correctly when the field uses `<boolProp>`.
+:::
+
 - Click on the **Run Test** button.
 
 <video class="right-side" width="100%" controls id="vid">
@@ -226,7 +270,7 @@ You can analyze the number of requests sent on that particular time.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/performance_testing/logs.png').default} alt="HyperExecute"  width="1920" height="868" className="doc_img"/>
 
-## Handling Special Scenarios: Overriding and Default Values
+## Overriding and Default Values
 
 
 

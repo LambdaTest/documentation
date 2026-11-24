@@ -18,6 +18,7 @@ slug: katalon-integration/
 canonical: https://www.testmuai.com/support/docs/katalon-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 
@@ -192,6 +193,9 @@ For the rest of the details, quickly head over to [Capabilities Generator](https
 Add in all the [Desired Capabilities](https://www.testmuai.com/capabilities-generator/) as shown below, then click Apply and Close.
 
 **Mandatory Capabilities:**
+
+<VerifiedTag value="Verified" />
+
 ```java
 "platformName", "android";
 "deviceName", "Pixel 6";
@@ -207,6 +211,8 @@ Upload your **_iOS_** application (.ipa file) or **_android_** application (.apk
 
  **Using App File from System:**
 
+ <VerifiedTag value="Verified" />
+
  <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "appFile=@"/Users/macuser/Downloads/proverbial_android.apk"" `}
@@ -214,6 +220,8 @@ Upload your **_iOS_** application (.ipa file) or **_android_** application (.apk
 </div>
 
 **Using App URL:**
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">

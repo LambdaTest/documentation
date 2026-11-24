@@ -12,7 +12,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/screen-reader-voiceover-real-devices-app/
 site_name: TestMu AI
 slug: screen-reader-voiceover-real-devices-app/
-canonical: https://www.testmu.ai/support/docs/screen-reader-voiceover-real-devices-app/
+canonical: https://www.testmuai.com/support/docs/screen-reader-voiceover-real-devices-app/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

@@ -5,6 +5,8 @@ sidebar_label: Missing Image Alt
 description: Rule-level Accessibility guidance for Missing Image Alt.
 slug: accessibility-android-rule-missing-image-alt/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

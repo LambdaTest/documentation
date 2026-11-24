@@ -5,6 +5,9 @@ sidebar_label: Minimum Text Size
 description: "Find iOS text rendered below a readable minimum size that is hard to read for low-vision users and should scale with Dynamic Type."
 slug: accessibility-ios-rule-minimum-text-size/
 ---
+import VerifiedTag from '@site/src/component/verifiedTag';
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -80,6 +83,8 @@ Text should render at or above a readable minimum size so it isn't difficult to 
 ## What this rule checks
 
 The scanner estimates the font size of text elements from their accessibility frame height using the San Francisco font's line-height ratio:
+
+<VerifiedTag value="Verified" />
 
 ```
 estimatedFontSize = frameHeight / 1.1777

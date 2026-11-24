@@ -16,6 +16,8 @@ keywords:
   - audit evidence
   - no VPAT report
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

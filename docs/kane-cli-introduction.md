@@ -1,6 +1,6 @@
 ---
 id: kane-cli-introduction
-title: Kane CLI
+title: Kane CLI Documentation - Getting Started
 sidebar_label: Introduction
 description: "Kane CLI is an AI-powered command-line tool that runs browser and native mobile app tests in plain English: from your terminal, IDE, or CI pipeline."
 keywords:
@@ -19,6 +19,7 @@ canonical: https://www.testmuai.com/support/docs/kane-cli-introduction/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -94,6 +95,8 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 - **Test the web and native mobile apps**: the default target is the desktop browser, and on macOS Apple Silicon you can point the same objective at an Android Emulator or iOS Simulator. See [Mobile Testing](/support/docs/kane-cli-mobile/)
 - **Integrate into CI/CD pipelines**: headless mode with structured JSON output and standard exit codes for [CLI testing](https://www.testmuai.com/cli-testing/)
 - **Use as a skill in AI coding agents**: Claude Code, Codex CLI, and Gemini CLI can invoke Kane CLI directly to test and verify UIs on your behalf
+
+<VerifiedTag value="Verified" />
 
 ```bash
 # Install

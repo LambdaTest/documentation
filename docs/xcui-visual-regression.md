@@ -18,7 +18,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/xcui-visual-regression/
 site_name: TestMu AI
 slug: xcui-visual-regression/
-canonical: https://www.testmu.ai/support/docs/xcui-visual-regression/
+canonical: https://www.testmuai.com/support/docs/xcui-visual-regression/
 ---
 
 import Tabs from '@theme/Tabs';
@@ -27,6 +27,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import CodeBlock from '@theme/CodeBlock';
 import NewTag from '../src/component/newTag';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 
@@ -231,6 +232,8 @@ Run the below mentioned commands in your terminal to setup the CLI and the envir
 
 <TabItem value="bash" label="Linux / MacOS" default>
 
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`export LT_USERNAME=${ YOUR_LAMBDATEST_USERNAME()}
@@ -241,6 +244,8 @@ export LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
+
+  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
@@ -256,6 +261,8 @@ set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
 > It should be in your app configurations then only you can perform the XCUI integration.
 - Update this [dependency](https://swiftpackageindex.com/LambdaTest/lambdatest-xcui) in your test classes. You can do it as follows:
+
+<VerifiedTag value="Verified" />
 
 ```java
 import XCTest
@@ -285,6 +292,8 @@ To begin testing, upload your iOS application (.ipa file) to <BrandName />'s ser
 
 <TabItem value="bash" label="Linux / MacOS" default>
 
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" --location --request POST 'https://manual-api.lambdatest.com/app/uploadFramework' --form 'appFile=@"<PATH_OF_YOUR_IOS_APP>"' --form 'type="xcuit-ios"'`}
@@ -294,6 +303,8 @@ To begin testing, upload your iOS application (.ipa file) to <BrandName />'s ser
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
+
+  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
@@ -319,6 +330,8 @@ The following sample cURL command shows how to upload a test suite:
 
 <TabItem value="bash" label="Linux / MacOS" default>
 
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" --location --request POST 'https://manual-api.lambdatest.com/app/uploadFramework' --form 'appFile=@"<PATH_OF_YOUR_TEST_SUITE_APP>"' --form 'type="xcuit-ios"'`}
@@ -328,6 +341,8 @@ The following sample cURL command shows how to upload a test suite:
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
+
+  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
@@ -349,6 +364,8 @@ The following sample cURL command shows how to upload a test suite:
 
 Take note of the base64 encoded authentication which needs to be added in the next step.
 
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
 {`${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
@@ -358,6 +375,8 @@ Take note of the base64 encoded authentication which needs to be added in the 
 - Once you have uploaded your app and test suite, you can execute your test by running the following command:
  
 > Enter your **BASIC_AUTH_TOKEN**, **APP_ID** (generated in the fourth step) and **TEST_SUITE_ID** (generated in the fifth step) in the below command.
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 curl --location 'https://mobile-api.lambdatest.com/framework/v1/xcui/build' \
@@ -396,6 +415,8 @@ curl --location 'https://mobile-api.lambdatest.com/framework/v1/xcui/build' \
 - [LambdaUiKitIOS.ipa](https://prod-mobile-artefacts.lambdatest.com/assets/docs/LambdaUiKitIOS.ipa) 
 
 Refer to the sample `.yaml` file here
+
+<VerifiedTag value="Verified" />
 
 ```bash title="SampleYamlFile.yaml"
 version: "0.2"
@@ -467,6 +488,8 @@ If you are using the `deviceSelectionStrategy: any`, then in that case all the m
 You can filter the Classes / Tests that you'd like to execute using filters.
 Here's an example of the same.
 
+<VerifiedTag value="Verified" />
+
 ```java
 filters:
       attributes:
@@ -479,6 +502,8 @@ This example will run only the 2 classes & one test as mentioned from the TestSu
 
 ## XCTestPlan in Sharding
 To implement the XCTestPlan in Sharding, add the `xctestplan` flag along with `app` and `testSuite` in the [framework](/support/docs/hyperexecute-yaml-version0.2/#framework) flag as shown below:
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 framework:
@@ -502,6 +527,8 @@ By leveraging machine learning algorithms, it accurately detects and crops the s
 | <img loading="lazy" src={require('../assets/images/smart-visual-testing/screenshot.webp').default} alt="Profile" width="1360" height="603" className="doc_img"/> | <img loading="lazy" src={require('../assets/images/smart-visual-testing/cropped_ss.jpg').default} alt="Profile" width="1360" height="603" className="doc_img"/> |
 
 ## Best Practices
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val" groupId="best-practices">
 <TabItem value="project-and-build-naming" label="Project and Build Naming" default>
@@ -570,6 +597,8 @@ By leveraging machine learning algorithms, it accurately detects and crops the s
 </Tabs>
 
 ## Troubleshooting
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val" groupId="troubleshooting">
 <TabItem value="screenshots-not-captured" label="Screenshots Not Captured" default>

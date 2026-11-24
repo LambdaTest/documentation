@@ -19,6 +19,7 @@ slug: jenkins-with-testmu/
 canonical: https://www.testmuai.com/support/docs/jenkins-with-testmu/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 
@@ -191,6 +192,8 @@ Here we will look at the process of enabling Lambda Tunnel to test your locally 
 
 
 Using the above variables you will receive an output in the below format.
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 sample Output $LT_BROWSERS:

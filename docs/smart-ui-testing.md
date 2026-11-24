@@ -19,7 +19,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/smart-ui-testing/
 site_name: TestMu AI
 slug: smart-ui-testing/
-canonical: https://www.testmu.ai/support/docs/smart-ui-testing/
+canonical: https://www.testmuai.com/support/docs/smart-ui-testing/
 
 ---
 

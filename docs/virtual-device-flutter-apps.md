@@ -13,9 +13,10 @@ keywords:
 url: https://www.testmuai.com/support/docs/virtual-device-flutter-apps/
 site_name: TestMu AI
 slug: virtual-device-flutter-apps/
-canonical: https://www.testmu.ai/support/docs/virtual-device-flutter-apps/
+canonical: https://www.testmuai.com/support/docs/virtual-device-flutter-apps/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 
@@ -117,6 +118,8 @@ Before automating Flutter apps using Appium, make sure you have the following th
 - Your Flutter App must be compiled in `debug` or `profile` mode, as  Appium Flutter Driver does not support Flutter App running in release mode. 
 - Add the below dependencies in Flutter app's `pubspec.yaml`
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 dev_dependencies:
   test: Demo
@@ -128,6 +131,8 @@ dev_dependencies:
 
 - In `main.dart` file, ensure the app has `enableFlutterDriverExtension()` enabled before `runApp`.
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 void main() {
   enableFlutterDriverExtension();
@@ -138,11 +143,15 @@ void main() {
 
 - Set the `automationName` capability to `flutter` in Appium desired capabilities.
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 desiredCapabilities.setCapability("automationName", "flutter");
 ```
 
 Shown below is the test script for automating Flutter apps on <BrandName /> platform.
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 import os

@@ -11,7 +11,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/pivotal-tracker-integration/
 site_name: TestMu AI
 slug: pivotal-tracker-integration/
-canonical: https://www.testmu.ai/support/docs/pivotal-tracker-integration/
+canonical: https://www.testmuai.com/support/docs/pivotal-tracker-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

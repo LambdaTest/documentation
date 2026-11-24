@@ -17,7 +17,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/supported-timezone/
 site_name: TestMu AI
 slug: supported-timezone/
-canonical: https://www.testmu.ai/support/docs/supported-timezone/
+canonical: https://www.testmuai.com/support/docs/supported-timezone/
 ---
 
 import Tabs from '@theme/Tabs';
@@ -25,6 +25,7 @@ import TabItem from '@theme/TabItem';
 import RealDeviceTag from '../src/component/realDevice';
 import VirtualDeviceTag from '../src/component/virtualDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 
@@ -109,6 +110,9 @@ To specify the timezone for automated tests in Appium on <BrandName />, the **ti
 Here's an example of how to set the timezone in your Appium test script:
 
 **Java Example:** 
+
+<VerifiedTag value="Verified" />
+
 ```java
 // Java code example for configuring timezone in Appium tests on LambdaTest
 

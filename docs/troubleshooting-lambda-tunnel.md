@@ -15,7 +15,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/troubleshooting-lambda-tunnel/
 site_name: TestMu AI
 slug: troubleshooting-lambda-tunnel/
-canonical: https://www.testmu.ai/support/docs/troubleshooting-lambda-tunnel/
+canonical: https://www.testmuai.com/support/docs/troubleshooting-lambda-tunnel/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

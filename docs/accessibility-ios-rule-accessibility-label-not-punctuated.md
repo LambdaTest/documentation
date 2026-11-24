@@ -5,6 +5,8 @@ sidebar_label: Accessibility Label Not Punctuated
 description: Rule-level Accessibility guidance for Accessibility Label Not Punctuated on iOS.
 slug: accessibility-ios-rule-accessibility-label-not-punctuated/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

@@ -14,11 +14,12 @@ keywords:
 url: https://www.testmuai.com/support/docs/travis-ci-with-hyperexecute/
 site_name: TestMu AI
 slug: travis-ci-with-hyperexecute/
-canonical: https://www.testmu.ai/support/docs/travis-ci-with-hyperexecute/
+canonical: https://www.testmuai.com/support/docs/travis-ci-with-hyperexecute/
 ---
 
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -146,6 +147,8 @@ To integrate Travis CI Pipeline with HyperExecute, follow the below steps:
 Once you have set up your project, you need to add a `.travis.yml` file to your desired repository to trigger the build from the Travis CI.
 
 Below is a sample of Travis CI YAML created for your reference:
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 language: node

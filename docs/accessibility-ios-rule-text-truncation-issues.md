@@ -5,6 +5,8 @@ sidebar_label: Text Truncation Issues
 description: Rule-level Accessibility guidance for Text Truncation Issues on iOS.
 slug: accessibility-ios-rule-text-truncation-issues/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

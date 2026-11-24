@@ -12,7 +12,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/youtrack-integration/
 site_name: TestMu AI
 slug: youtrack-integration/
-canonical: https://www.testmu.ai/support/docs/youtrack-integration/
+canonical: https://www.testmuai.com/support/docs/youtrack-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

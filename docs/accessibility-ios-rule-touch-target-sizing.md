@@ -5,6 +5,8 @@ sidebar_label: Touch Target Sizing
 description: Rule-level Accessibility guidance for Touch Target Sizing.
 slug: accessibility-ios-rule-touch-target-sizing/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

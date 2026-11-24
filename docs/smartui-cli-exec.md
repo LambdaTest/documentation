@@ -17,7 +17,7 @@ keywords:
 
 url: https://www.testmuai.com/support/docs/smartui-cli-exec/
 slug: smartui-cli-exec/
-canonical: https://www.testmu.ai/support/docs/smartui-cli-exec/
+canonical: https://www.testmuai.com/support/docs/smartui-cli-exec/
 
 ---
 import Tabs from '@theme/Tabs';
@@ -26,6 +26,8 @@ import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -256,6 +258,8 @@ SmartUI CLI offers the following exec commands:
 
 The `npx smartui exec` command allows you to run your tests with various configuration options. Here's the basic syntax:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npx smartui exec [options] -- <command>
 ```
@@ -277,41 +281,65 @@ npx smartui exec [options] -- <command>
 ### Examples
 
 1. Running with a custom port:
+
+<VerifiedTag value="Verified" />
+
 ```bash
 npx smartui exec -P 5000 -- npm test
 ```
 
 2. Fetching results with custom filename:
+
+<VerifiedTag value="Verified" />
+
 ```bash
 npx smartui exec --fetch-results custom-results.json -- npm test
 ```
 
 3. Specifying a build name:
+
+<VerifiedTag value="Verified" />
+
 ```bash
 npx smartui exec --buildName "Release-1.0" -- npm test
 ```
 
 4. Using a configuration file:
+
+<VerifiedTag value="Verified" />
+
 ```bash
 npx smartui exec --config smartui-config.json -- npm test
 ```
 
 5. Combining multiple options:
+
+<VerifiedTag value="Verified" />
+
 ```bash
 npx smartui exec -P 5000 --buildName "Release-1.0" --config smartui-config.json --fetch-results -- npm test
 ```
 
 6. Running scheduled tests:
+
+<VerifiedTag value="Verified" />
+
 ```bash
 npx smartui exec --scheduled "schedule-123" -- npm test
 ```
 
 7. Showing render errors:
+
+<VerifiedTag value="Verified" />
+
 ```bash
 npx smartui exec --show-render-errors -- npm test
 ```
 
 8. Overriding credentials:
+
+<VerifiedTag value="Verified" />
+
 ```bash
 npx smartui exec --userName "user" --accessKey "key" -- npm test
 ```
@@ -319,6 +347,8 @@ npx smartui exec --userName "user" --accessKey "key" -- npm test
 ## Starting the Server
 
 To start the SmartUI snapshot server:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 npx smartui exec:start
@@ -329,6 +359,8 @@ This will start a local server that handles snapshot requests. By default, the s
 ## Stopping the Server
 
 To properly stop the SmartUI snapshot server:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 npx smartui exec:stop
@@ -341,11 +373,17 @@ npx smartui exec:stop
 To verify if the SmartUI server is running, you can use either of these commands:
 
 **Using exec:ping (custom HTTP client):**
+
+<VerifiedTag value="Verified" />
+
 ```bash
 npx smartui exec:ping
 ```
 
 **Using exec:pingTest (default HTTP client):**
+
+<VerifiedTag value="Verified" />
+
 ```bash
 npx smartui exec:pingTest
 ```
@@ -357,6 +395,8 @@ Both commands check if the server is running at the address specified in `SMARTU
 ### Step 1: Configure Server Address
 
 For most test frameworks (except Selenium Java and JavaScript), you'll need to set the server address:
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux' label='MacOS/Linux' default>
@@ -385,6 +425,8 @@ $env:SMARTUI_SERVER_ADDRESS="http://localhost:49152"
 ### Step 2: Execute Your Tests
 
 You can run your tests using your preferred test runner:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 # Using npm
@@ -488,8 +530,9 @@ Review the server logs for error messages.
 If you encounter issues not covered here:
 - Review the [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide) for detailed solutions
 - Check [CLI Documentation](/support/docs/smartui-cli) for general CLI usage
-- Visit [<BrandName /> Support](https://www.testmuai.com/support) for additional resources
-- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support)
+- Visit [<BrandName /> Support](https://www.testmuai.com/support/docs/) for additional resources
+- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support/docs/)
+
 
 ## Additional Resources
 

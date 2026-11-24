@@ -5,6 +5,8 @@ sidebar_label: Emoji or Symbol in Label
 description: "Flag iOS accessibility labels made up mostly of emoji or symbols, which VoiceOver announces inconsistently. Use clear descriptive text instead."
 slug: accessibility-ios-rule-emoji-symbol-label/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

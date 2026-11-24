@@ -20,6 +20,7 @@ slug: hyperexecute-cli-error/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-cli-error/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 
@@ -76,7 +77,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-09T19:10:37+05:30"
+    "dateModified": "2026-11-11T14:00:00+05:30"
   }) }}
 />
 
@@ -91,6 +92,10 @@ If you are encountering any error which is properly not detailed, it is recommen
 :::
 
 
+:::info On-premise deployments
+On-prem, pass [`--onprem-host`](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/#--onprem-host) on every run and use the credentials from your own dashboard. The hosts in [IPs to be whitelisted](#ips-to-be-whitelisted) are for SaaS. See [Troubleshooting](/support/docs/hyperexecute-on-premise-user-guide/#troubleshooting) in the On-Premise User Guide.
+:::
+
 ## Symbolic Link Error
 
 This error will mark your Job as a **Lambda Error**.
@@ -102,6 +107,8 @@ To resolve this issue, either you remove that directory or you simply add node_
 <img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/debugging-guide/cli-errors/symlink.png').default} alt="HyperExecute CLI output for a Symbolic Link Error, ending in Exiting with error: Lambda error found"  className="doc_img"/>
 
 The CLI output looks like this:
+
+<VerifiedTag value="Verified" />
 
 ```text
 error    ERR::JOB::STS     Job lambda_error!
@@ -120,6 +127,8 @@ It's crucial to understand a specific characteristic of Gherkin – it exclusive
 
 The CLI prints output like this:
 
+<VerifiedTag value="Verified" />
+
 ```text
 Snooper failed:
  Error occurred while running snooper command
@@ -128,6 +137,8 @@ Snooper failed:
 ```
 
 Use **Examples** only under a **Scenario Outline**:
+
+<VerifiedTag value="Verified" />
 
 ```text
 Scenario Outline: test
@@ -140,6 +151,8 @@ Scenario Outline: test
 ```
 
 Not under a plain **Scenario**, which causes the error above:
+
+<VerifiedTag value="Verified" />
 
 ```text
 Scenario: test
@@ -157,6 +170,8 @@ There may be cases where, when trying to connect to HyperExecute services, the C
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/debugging-guide/cli-errors/auth.png').default} alt="HyperExecute CLI output: ERR:HTTP:HOST Facing problem in connecting with LUMS_HOST"  className="doc_img"/>
 
+<VerifiedTag value="Verified" />
+
 ```text
 error    ERR:HTTP:HOST     Facing problem in connecting with LUMS_HOST :: https://auth.hyperexecute.cloud - prod  - error in authenticating user.
 ```
@@ -166,6 +181,8 @@ If the CLI printed an error code such as `ERR::NO::USER`, `ERR::NO::KEY`, or `ER
 Now, to validate the connectivity and to make sure the **auth.hyperexecute.cloud** is reachable, you have to run a `scan` command in your CLI, as shown below. If the network scan fails, then you are required to whitelist the IP address.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/debugging-guide/cli-errors/auth1.png').default} alt="Output of hyperexecute --scan showing each HyperExecute host as reachable"  className="doc_img"/>
+
+<VerifiedTag value="Verified" />
 
 ```text
 hyperexecute.exe --scan
@@ -193,6 +210,8 @@ Network Scan Passed!
 
 When a HyperExecute run fails, the CLI prints an error code, a short title, and a suggested fix, then exits with code `1`. For example:
 
+<VerifiedTag value="Verified" />
+
 ```text
 error    ERR::NO::USER     Unable to find LT username.    Unable to parse LT username. Use --user cli flag or LT_USERNAME environment variable
 Error: ERR::NO::USER     Unable to find LT username.
@@ -215,6 +234,8 @@ The CLI checks your credentials **before** it validates your YAML. If your crede
 | **What to do** | Set the `LT_USERNAME` environment variable, or pass `--user`. See [how to find your username and access key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/). |
 | **Exit code** | `1` |
 
+<VerifiedTag value="Verified" />
+
 ```text
 error    ERR::NO::USER     Unable to find LT username.    Unable to parse LT username. Use --user cli flag or LT_USERNAME environment variable
 Error: ERR::NO::USER     Unable to find LT username.
@@ -228,6 +249,8 @@ Error: ERR::NO::USER     Unable to find LT username.
 | **What happened** | The CLI could not find a <BrandName /> access key. |
 | **What to do** | Set the `LT_ACCESS_KEY` environment variable, or pass `--key`. See [how to find your username and access key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/). |
 | **Exit code** | `1` |
+
+<VerifiedTag value="Verified" />
 
 ```text
 error    ERR::NO::KEY     Unable to find LT access key.    Unable to parse LT access key. Use --key cli flag or LT_ACCESS_KEY environment variable
@@ -244,6 +267,8 @@ Error: ERR::NO::KEY     Unable to find LT access key.
 | **You may be seeing this for a different reason** | Credentials are checked before your YAML. A missing `framework:` key, an invalid `partialReports` type, and a `--config` path that does not exist all show this code when the credentials are also wrong. Fix the credentials first. |
 | **Exit code** | `1` |
 
+<VerifiedTag value="Verified" />
+
 ```text
 error    ERR::UP::VER     Unable to fetch latest version from upstream  ERR::HTTP::RESP     non-20x status code 401    Invalid user/key credentials
 Error: ERR::HTTP::RESP     non-20x status code 401    Invalid user/key credentials
@@ -259,6 +284,8 @@ Error: ERR::HTTP::RESP     non-20x status code 401    Invalid user/key credentia
 | **What to do** | Fix the credentials problem reported by [ERR::HTTP::RESP](#err_http_resp). |
 | **Exit code** | `1` |
 
+<VerifiedTag value="Verified" />
+
 ```text
 error    ERR::UP::VER     Unable to fetch latest version from upstream  ERR::HTTP::RESP     non-20x status code 401    Invalid user/key credentials
 ```
@@ -270,6 +297,8 @@ error    ERR::UP::VER     Unable to fetch latest version from upstream  ERR::HTT
 | **Alias** | `ERR_HTTP_HOST` |
 | **What happened** | The CLI could not connect to the HyperExecute authentication service at `auth.hyperexecute.cloud`. |
 | **What to do** | Run the CLI with `--scan` to check each host, and allow the hosts in [IPs to be Whitelisted](#ips-to-be-whitelisted). See [Authentication Error](#authentication-error). |
+
+<VerifiedTag value="Verified" />
 
 ```text
 error    ERR:HTTP:HOST     Facing problem in connecting with LUMS_HOST :: https://auth.hyperexecute.cloud - prod  - error in authenticating user.
@@ -283,6 +312,8 @@ error    ERR:HTTP:HOST     Facing problem in connecting with LUMS_HOST :: https:
 | **What happened** | The job finished with an error status, which the CLI prints after the code, for example `Job lambda_error!`. |
 | **Example** | In the [Symbolic Link Error](#symbolic-link-error) above, the status was `lambda_error`, caused by symbolic links in an uploaded `node_modules` folder. |
 | **What to do** | Read the task remarks printed below the code. |
+
+<VerifiedTag value="Verified" />
 
 ```text
 error    ERR::JOB::STS     Job lambda_error!
@@ -302,6 +333,8 @@ error    ERR::JOB::STS     Job lambda_error!
 ## Handling Error Codes in CI
 
 Every failure exits with a non-zero code and prints the error code, so you can branch on it:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 OUTPUT=$(hyperexecute --config hyperexecute.yaml 2>&1)
@@ -455,7 +488,7 @@ The CLI can also print the codes below. Their causes are not documented yet. If 
 
 ## Related
 
-- [Kane CLI Error Codes](/support/docs/kane-cli-error-codes/)
+- [Kane CLI Error Codes](https://www.testmuai.com/docs/kane-cli-error-codes)
 - [KaneAI Errors](/support/docs/error-handling-kaneai/)
 - [Platform Error Messages](/support/docs/error-messages/)
 - [Tunnel Error Messages](/support/docs/troubleshooting-lambda-tunnel/#error-messages)

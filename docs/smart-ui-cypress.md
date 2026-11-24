@@ -17,7 +17,7 @@ keywords:
 
 url: https://www.testmuai.com/support/docs/smart-ui-cypress/
 slug: smart-ui-cypress/
-canonical: https://www.testmu.ai/support/docs/smart-ui-cypress/
+canonical: https://www.testmuai.com/support/docs/smart-ui-cypress/
 
 ---
 
@@ -26,6 +26,7 @@ import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
@@ -148,17 +149,23 @@ The first step is to create a project with the application in which we will comb
 
 **Step 1**: Install the required NPM module for `LambdaTest Cypress CLI` in your project.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npm install -g lambdatest-cypress-cli
 ```
 
 **Step 2:** Use `init` command to generate the sample configuration files.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 lambdatest-cypress init
 ```
 
 **Step 3:** Define SmartUI configuration in the `lambdatest-config.json` file of your Cypress project as shown in the below code snippet.
+
+<VerifiedTag value="Verified" />
 
 ```json title="/cypress-project/lambdatest-config.json"
 {
@@ -208,6 +215,8 @@ lambdatest-cypress init
 
 **Step 4:** Add **cy.screenshot()** method in your test script to capture the screenshots with the desired screenshot name.
 
+<VerifiedTag value="Verified" />
+
 ```js
 describe("Cypress test with Visual Regression", () => {
   it("Example test", () => {
@@ -219,6 +228,8 @@ describe("Cypress test with Visual Regression", () => {
 ```
 
 **Step 5:** Run the test on the <BrandName /> platform by executing the below-run command:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 lambdatest-cypress run
@@ -240,4 +251,5 @@ For additional information about Cypress framework please explore the documentat
   
 
   **HTML DOM Config and Options** - In case if you have any dynamic elements that are not in the same position across test runs, you can ignore or select a specific area to be removed from the comparison. For accessing such HTML DOM Config and Options, click [here](/support/docs/html-dom-smartui-options/).
+
 

@@ -25,6 +25,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 
@@ -117,6 +118,8 @@ To modify the date and time settings programmatically, use the `lambda_executor`
 ---
 ### Appium Hook Example
 
+<VerifiedTag value="Verified" />
+
 <CodeBlock language="js">
 {`driver.execute_script('lambda_executor: { 
   "action": "updateDeviceSettings", 
@@ -157,6 +160,7 @@ If you encounter this error, retry your automation run on a different Android de
 
 
 > For Configuring Device **Date and Time** during **Manual Testing** on Real Devices, please refer to our [Set Date & Time on Real Devices (Manual)](/support/docs/set-date-time-hour-format-real-devices/) guide.
+
 
 
 

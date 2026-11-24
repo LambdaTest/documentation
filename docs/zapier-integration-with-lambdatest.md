@@ -12,9 +12,10 @@ keywords:
 url: https://www.testmuai.com/support/docs/zapier-integration-with-testmu/
 site_name: TestMu AI
 slug: zapier-integration-with-testmu/
-canonical: https://www.testmu.ai/support/docs/zapier-integration-with-testmu/
+canonical: https://www.testmuai.com/support/docs/zapier-integration-with-testmu/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

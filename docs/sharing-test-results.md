@@ -13,11 +13,12 @@ image: /assets/images/og-images/automation-testing-og.png
 url: https://www.testmuai.com/support/docs/sharing-test-results/
 site_name: TestMu AI
 slug: sharing-test-results/
-canonical: https://www.testmu.ai/support/docs/sharing-test-results/
+canonical: https://www.testmuai.com/support/docs/sharing-test-results/
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 
@@ -244,6 +245,8 @@ Retrieve the Selenium Session ID programmatically so you can build shareable res
 
 Every test session on TestMu AI has a unique Session ID. Use the code below to retrieve it in your preferred language:
 
+<VerifiedTag value="Verified" />
+
 <Tabs className="docs__val">
 
 <TabItem value="java" label="Java" default>
@@ -306,6 +309,8 @@ puts "Session ID: #{session_id}"
 
 Once you have the Session ID, share the automation logs URL with your colleague:
 
+<VerifiedTag value="Verified" />
+
 ```
 https://automation.lambdatest.com/logs/?sessionID=YOUR_SESSION_ID
 ```
@@ -315,6 +320,8 @@ https://automation.lambdatest.com/logs/?sessionID=YOUR_SESSION_ID
 Build a shareable URL using the TestID/SessionID and an MD5-generated auth token.
 
 You can share a video recording of any test execution. Build the URL in the following format:
+
+<VerifiedTag value="Verified" />
 
 ```
 https://automation.lambdatest.com/public/video?testID={testid/sessionid}&auth=AUTH_TOKEN
@@ -328,6 +335,8 @@ Open the test on the **Automation Dashboard**. In the test summary, click the **
 
 For example, if your SessionID is `HJKXM-RHZL1-SVPWY-AB8X6`, the URL becomes:
 
+<VerifiedTag value="Verified" />
+
 ```
 https://automation.lambdatest.com/public/video?testID=HJKXM-RHZL1-SVPWY-AB8X6&auth=AUTH_TOKEN
 ```
@@ -335,6 +344,8 @@ https://automation.lambdatest.com/public/video?testID=HJKXM-RHZL1-SVPWY-AB8X6&au
 ### Step 2 - Generate the AUTH_TOKEN
 
 Create the AUTH_TOKEN by computing an MD5 hash of your `username:access_key` string.
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
 
@@ -406,6 +417,8 @@ puts "AUTH_TOKEN: #{token}"
 </Tabs>
 
 For example, if the generated AUTH_TOKEN is `331k534uf3toef`, the final URL becomes:
+
+<VerifiedTag value="Verified" />
 
 ```
 https://automation.lambdatest.com/public/video?testID=HJKXM-RHZL1-SVPWY-AB8X6&auth=331k534uf3toef

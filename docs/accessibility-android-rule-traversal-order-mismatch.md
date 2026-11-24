@@ -5,6 +5,8 @@ sidebar_label: Traversal Order Mismatch
 description: "Detect misused Android traversal overrides that break TalkBack order, creating loops or a reading sequence that contradicts the visual layout."
 slug: accessibility-android-rule-traversal-order-mismatch/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

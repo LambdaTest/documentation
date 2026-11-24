@@ -14,7 +14,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/uipath-integration/
 site_name: TestMu AI
 slug: uipath-integration/
-canonical: https://www.testmu.ai/support/docs/uipath-integration/
+canonical: https://www.testmuai.com/support/docs/uipath-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

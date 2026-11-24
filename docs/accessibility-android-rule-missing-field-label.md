@@ -5,6 +5,8 @@ sidebar_label: Missing Field Label
 description: Rule-level Accessibility guidance for Missing Field Label.
 slug: accessibility-android-rule-missing-field-label/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

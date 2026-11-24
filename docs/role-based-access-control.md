@@ -10,9 +10,10 @@ keywords:
 url: https://www.testmuai.com/support/docs/role-based-access-control/
 site_name: TestMu AI
 slug: role-based-access-control/
-canonical: https://www.testmu.ai/support/docs/role-based-access-control/
+canonical: https://www.testmuai.com/support/docs/role-based-access-control/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

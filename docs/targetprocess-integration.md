@@ -15,7 +15,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/target-process-integration/
 site_name: TestMu AI
 slug: target-process-integration/
-canonical: https://www.testmu.ai/support/docs/target-process-integration/
+canonical: https://www.testmuai.com/support/docs/target-process-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

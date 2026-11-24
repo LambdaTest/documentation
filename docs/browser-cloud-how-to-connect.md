@@ -17,6 +17,7 @@ canonical: https://www.testmuai.com/support/docs/browser-cloud-sdk-setup/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -111,6 +112,8 @@ profiles, files, extensions, and tunnels directly from your Node.js application.
 - **Node.js 16+** installed on your machine
 - Install the SDK:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npm install @testmuai/browser-cloud
 ```
@@ -121,6 +124,8 @@ npm install @testmuai/browser-cloud
 From here, you can create sessions, configure stealth mode, manage profiles,
 upload files, load extensions, and open tunnels - all through a single client
 instance.
+
+<VerifiedTag value="Verified" />
 
 ```typescript
 import { Browser } from '@testmuai/browser-cloud';

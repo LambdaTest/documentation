@@ -13,7 +13,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/performance-report/
 site_name: TestMu AI
 slug: performance-report/
-canonical: https://www.testmu.ai/support/docs/performance-report/
+canonical: https://www.testmuai.com/support/docs/performance-report/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

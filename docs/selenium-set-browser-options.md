@@ -13,12 +13,13 @@ image: /assets/images/og-images/automation-testing-og.png
 url: https://www.testmuai.com/support/docs/selenium-set-browser-options/
 site_name: TestMu AI
 slug: selenium-set-browser-options/
-canonical: https://www.testmu.ai/support/docs/selenium-set-browser-options/
+canonical: https://www.testmuai.com/support/docs/selenium-set-browser-options/
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 
@@ -116,6 +117,8 @@ Configure Chrome, Firefox, and Edge browser arguments using their respective Opt
 
 Selenium lets you set browser arguments for Chromium-based browsers. When selecting Chrome, Firefox, and Edge, you can set browser options using `ChromeOptions`, `EdgeOptions`, and `FirefoxOptions` capability as shown below.
 
+<VerifiedTag value="Verified" />
+
 <Tabs className="docs__val">
 
 <TabItem value="chrome" label="Chrome" default>
@@ -195,6 +198,8 @@ Selenium lets you set browser arguments for Chromium-based browsers. When select
 Run IE Mode automation on Microsoft Edge for Windows 11 using the InternetExplorerOptions class.
 
 TestMu AI's Automation allows you to automate IE Mode in Microsoft Edge on Windows 11. Pass the below desired capability in your test script and execute your tests.
+
+<VerifiedTag value="Verified" />
 
 ```java
 InternetExplorerOptions browserOptions = new InternetExplorerOptions();

@@ -11,9 +11,10 @@ keywords:
 url: https://www.testmuai.com/support/docs/testmo-integration/
 site_name: TestMu AI
 slug: testmo-integration/
-canonical: https://www.testmu.ai/support/docs/testmo-integration/
+canonical: https://www.testmuai.com/support/docs/testmo-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -166,6 +167,8 @@ To submit and report your test results to Testmo, execute your automated tests a
 
 For this case, we are using TestNG Framework. Run the below command to generate the file
 
+<VerifiedTag value="Verified" />
+
 ```
 java org.testng.TestNG testng1.xml
 ```
@@ -178,6 +181,8 @@ Our test automation suite has now been successfully executed, and an XML report 
 
 - Install the official `@testmo/testmo-cli` **NPM package**
 
+<VerifiedTag value="Verified" />
+
 ```
 npm install -g @testmo/testmo-cli
 
@@ -185,9 +190,13 @@ testmo -h
 ```
 - Generate the **API Token** in TestMo and run the below command:
 
+<VerifiedTag value="Verified" />
+
 ```
 export TESTMO_TOKEN=<YOUR_API_TOKEN>
 ```
+
+<VerifiedTag value="Verified" />
 
 ```
 testmo automation:run:submit --instance <https://<your_testmo_address>.testmo.net

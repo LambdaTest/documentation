@@ -14,7 +14,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/xcui-supported-capabilities/
 site_name: TestMu AI
 slug: xcui-supported-capabilities/
-canonical: https://www.testmu.ai/support/docs/xcui-supported-capabilities/
+canonical: https://www.testmuai.com/support/docs/xcui-supported-capabilities/
 ---
 
 import CodeBlock from '@theme/CodeBlock';

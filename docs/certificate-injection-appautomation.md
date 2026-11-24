@@ -31,6 +31,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import RealDeviceTag from '../src/component/realDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 
@@ -239,6 +240,8 @@ Upload the file to the media upload endpoint with `type=cert`, using your <Brand
 
 Upload a `.crt`, `.cer`, or `.mobileconfig` file. No password is involved.
 
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`curl -u "${YOUR_LAMBDATEST_USERNAME()}:${YOUR_LAMBDATEST_ACCESS_KEY()}" \\
@@ -252,6 +255,8 @@ Upload a `.crt`, `.cer`, or `.mobileconfig` file. No password is involved.
   <TabItem value="pfx" label="PKCS#12 Identity (.pfx)">
 
 For a PKCS#12 bundle, send the password along with the upload. The password is stored securely against the certificate and applied automatically in every session that uses it.
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
@@ -275,6 +280,8 @@ For a PKCS#12 bundle, send the password along with the upload. The password is s
 | `password` | Only for `.pfx` | The password for the PKCS#12 bundle. Stored securely and reused automatically. |
 
 The response returns the ID that you reference in your capabilities:
+
+<VerifiedTag value="Verified" />
 
 ```json
 {
@@ -300,6 +307,8 @@ Pass `customCertificates` inside `LT:Options` as an **array of objects**. Each e
 | `customCertificates` | Array of objects | Yes | The certificates to install for this session. Maximum 3 entries. |
 | `certificateId` | String | Yes | The `media_id` returned by the upload API. |
 | `password` | String | No | Overrides the password stored with a `.pfx` certificate at upload time. |
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
   <TabItem value="json" label="JSON" default>
@@ -429,6 +438,8 @@ If a certificate fails to install, your session **does not fail**. The session s
 ---
 
 ## What Happens on the Device
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
   <TabItem value="android" label="Android" default>

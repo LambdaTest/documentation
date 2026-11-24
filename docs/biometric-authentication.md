@@ -29,6 +29,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import RealDeviceTag from '../src/component/realDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 
@@ -160,6 +161,8 @@ The OS versions and APIs mentioned above are subject to change as per the latest
 
 To enable biometric authentication feature in your automation script, set the capability `enableBiometricsAuthentication` to `true`.
 
+<VerifiedTag value="Verified" />
+
 ```java
 DesiredCapabilities capabilities = new DesiredCapabilities();
 capabilities.setcapability("enableBiometricsAuthentication",true)
@@ -168,6 +171,8 @@ capabilities.setcapability("enableBiometricsAuthentication",true)
 ### Using Lambda-Hook
 
 To implement `pass` or `fail` conditions for biometric authentication in your automation script, you have to use our Lambda-hook mentioned below:
+
+<VerifiedTag value="Verified" />
 
 ```python
 driver.execute_script("lambda-biometric-injection=fail")
@@ -181,7 +186,7 @@ driver.execute_script("lambda-biometric-injection=fail")
 :::note
 - To use the web hook, passing `enableBiometricsAuthentication` capability is mandatory.
 - If you plan to use the **Uninstall Lambda Hook**, and then the **Install Lambda Hook** for the same application, biometric authentication can be used afterwards only via the lambda-hook. In this case, the initial capability won't be applicable anymore.
-- When biometric capability is `true`, set `autoAcceptAlerts` and `autoDismissAlerts` to `false`. For help, contact [support](https://www.testmuai.com/support/).
+- When biometric capability is `true`, set `autoAcceptAlerts` and `autoDismissAlerts` to `false`. For help, contact [support](https://www.testmuai.com/support/docs/).
 :::
 
 > 📕 Check the [documentation for Biometrics Authentication](/support/docs/biometric-authentication-on-real-devices/) feature in Manual App Testing on Real devices

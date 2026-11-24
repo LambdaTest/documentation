@@ -5,6 +5,8 @@ sidebar_label: Focus Order (2.4.3)
 description: Rule-level Accessibility guidance for Focus Order (WCAG 2.4.3 Level A).
 slug: accessibility-web-rule-2-4-3-focus-order/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

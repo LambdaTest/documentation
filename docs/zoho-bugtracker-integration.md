@@ -11,7 +11,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/zoho-bugtracker-integration/
 site_name: TestMu AI
 slug: zoho-bugtracker-integration/
-canonical: https://www.testmu.ai/support/docs/zoho-bugtracker-integration/
+canonical: https://www.testmuai.com/support/docs/zoho-bugtracker-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

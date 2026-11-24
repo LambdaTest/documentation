@@ -8,7 +8,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/test-intelligence-command-logs/
 site_name: TestMu AI
 slug: test-intelligence-command-error-logs-analytics/
-canonical: https://www.testmu.ai/support/docs/test-intelligence-command-error-logs-analytics/
+canonical: https://www.testmuai.com/support/docs/test-intelligence-command-error-logs-analytics/
 ---
 
 import NewTag from '../src/component/newTag';

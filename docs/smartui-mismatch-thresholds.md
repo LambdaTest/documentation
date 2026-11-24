@@ -20,7 +20,9 @@ slug: smartui-mismatch-thresholds/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
+import VerifiedTag from '@site/src/component/verifiedTag';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -186,6 +188,8 @@ Set thresholds for an entire build by adding them to your test capabilities. Thi
 
 ### Examples
 
+<VerifiedTag value="Verified" />
+
 <Tabs className="docs__val" groupId="language">
 <TabItem value="javascript" label="JavaScript" default>
 
@@ -284,6 +288,8 @@ The `smartuiSnapshot` method accepts an optional options object with threshold p
 
 ### Examples
 
+<VerifiedTag value="Verified" />
+
 <Tabs className="docs__val" groupId="language">
 <TabItem value="javascript" label="JavaScript" default>
 
@@ -376,6 +382,8 @@ smartui_snapshot(driver, "Live Dashboard", {
 ## Combining Build and Screenshot Thresholds
 
 You can set a strict default at the build level and relax it only for specific screenshots that need it. Here is a full JavaScript example:
+
+<VerifiedTag value="Verified" />
 
 ```javascript title="Build-level strict + screenshot-level relaxed"
 // Build-level: strict 1% approval, 3% rejection for most pages

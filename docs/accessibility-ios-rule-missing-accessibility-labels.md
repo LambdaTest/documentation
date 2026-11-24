@@ -5,6 +5,8 @@ sidebar_label: Missing Accessibility Labels
 description: Rule-level Accessibility guidance for Missing Accessibility Labels.
 slug: accessibility-ios-rule-missing-accessibility-labels/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

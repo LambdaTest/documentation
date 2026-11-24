@@ -20,6 +20,8 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import RealDeviceTag from '../src/component/realDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -83,6 +85,10 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 <BrandName /> now supports **Group Folder Redirect** for iOS apps during automation testing with Appium.  
 This feature ensures your app uses its **private container directory** instead of the **shared app group container**, which becomes inaccessible after **app resigning** on Real Devices.
 
+:::note Availability
+This feature is being rolled out gradually. Please contact your <BrandName /> support representative to get it enabled or you could reach out at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**[24X7 Chat Support]**</span> or mail us directly at support@testmuai.com.
+:::
+
 ---
 
  ## Use Cases 
@@ -107,6 +113,9 @@ Include the `groupFolderRedirectEnabled` capability in your Appium desired capab
 
 <Tabs>
   <TabItem value="ios" label="iOS">
+
+    <VerifiedTag value="Verified" />
+
     <CodeBlock className="language-java">
 {`desired_caps = {
     "deviceName":"iPhone 16",

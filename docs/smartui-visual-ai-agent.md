@@ -12,7 +12,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/smartui-visual-ai/
 site_name: TestMu AI
 slug: smartui-visual-ai/
-canonical: https://www.testmu.ai/support/docs/smartui-visual-ai/
+canonical: https://www.testmuai.com/support/docs/smartui-visual-ai/
 ---
 
 import Tabs from '@theme/Tabs';

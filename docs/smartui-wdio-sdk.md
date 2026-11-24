@@ -17,7 +17,7 @@ keywords:
 
 url: https://www.testmuai.com/support/docs/smartui-wdio-sdk/
 slug: smartui-wdio-sdk/
-canonical: https://www.testmu.ai/support/docs/smartui-wdio-sdk/
+canonical: https://www.testmuai.com/support/docs/smartui-wdio-sdk/
 
 ---
 import Tabs from '@theme/Tabs';
@@ -25,6 +25,7 @@ import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
@@ -337,6 +338,8 @@ Once you have created a SmartUI Project, you can generate screenshots by running
 
 You can clone the sample repository to run `LambdaTest` automation tests with `SmartUI` and use the `cloud.e2e.js` file present in the `test/specs` folder.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git clone https://github.com/LambdaTest/smartui-wdio-sample
 cd smartui-wdio-sample
@@ -344,6 +347,8 @@ cd smartui-wdio-sample
 ### **Step 2**: Install the Dependencies
 
 Install required NPM modules for `LambdaTest SmartUI WebdriverIO SDK` in your **Frontend** project.
+
+<VerifiedTag value="Verified" />
 
 ```bash
 npm install @lambdatest/smartui-cli @lambdatest/wdio-driver webdriverio wdio-lambdatest-service
@@ -360,6 +365,8 @@ If you are using <BrandName /> automation grid to run webdriverio, please update
 ### **Step 3:** Configure your Project Token
 
 Setup your project token shown in the **SmartUI** app after creating your project.
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux' label='MacOS/Linux' default>
@@ -391,11 +398,15 @@ $env:PROJECT_TOKEN=123456#1234abcd-****-****-****-************"
 
 You can now configure your project configurations on using various available options to run your tests with the SmartUI integration. To generate the configuration file, please execute the following command:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npx smartui config:create .smartui.json
 ```
 
 Once, the configuration file will be created, you will be seeing the default configuration pre-filled in the configuration file:
+
+<VerifiedTag value="Verified" />
 
 ```json title="/smartui-sdk-project/.smartui.json"
 {
@@ -442,6 +453,8 @@ Once, the configuration file will be created, you will be seeing the default con
 
 - You can incorporate SmartUI into your custom `WebdriverIO` automation test (any platform) script by adding the `smartuiSnapshot` function in the required segment of WebdriverIO script of which we would like to take the screenshot, as shown below:
 
+<VerifiedTag value="Verified" />
+
 ```js
 const { expect, browser, $ } = require('@wdio/globals')
 const { smartuiSnapshot } = require('@lambdatest/wdio-driver');
@@ -458,6 +471,8 @@ describe('My first visual test', () => {
 ### **Step 6:** Execute the Tests on SmartUI Cloud
 
 Execute `visual regression tests` on SmartUI using the following commands
+
+<VerifiedTag value="Verified" />
 
 ```bash
 npx smartui --config .smartui.json exec -- wdio run ./wdio.conf.js
@@ -489,6 +504,8 @@ The following are the different options which are currently supported:
 ## Handling Dynamic Data in SmartUI SDK  **<NewTag value='New' color='#000' bgColor='#ffec02' />**
 
 When conducting visual tests, you may encounter scenarios where certain elements within your application change between test runs. These changes  might introduce inconsistencies in your test results.You can ignore / select specific element(s) to be removed from the comparison by parsing the options in the `smartuiSnapshot` function in the following way
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='framework'>
 <TabItem value='IgnoreID' label='Ignore ID' default>
@@ -545,6 +562,8 @@ let options = {
 </TabItem>
 
 </Tabs>
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='framework'>
 <TabItem value='SelectID' label='Select ID' default>
@@ -606,6 +625,8 @@ let options = {
 
 You can capture screenshots of targeted elements by leveraging various locator mechanisms such as XPath, CSS ID, class, and selectors. This precision-driven approach ensures accurate and specific visual regression testing for your web application's components.
 
+<VerifiedTag value="Verified" />
+
 <Tabs className='docs__val' groupId='framework'>
 <TabItem value='ElementID' label='Capture Element by ID' default>
 
@@ -663,6 +684,8 @@ let options = {
 </Tabs>
 
 ## Best Practices
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='best-practices'>
 <TabItem value='screenshot-naming' label='Screenshot Naming' default>
@@ -724,6 +747,8 @@ await smartuiSnapshot(driver, 'Page Loaded');
 - Run tests in consistent environments
 
 **Troubleshooting**
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='troubleshooting'>
 <TabItem value='screenshots-not-appearing-in-dashboard' label='Screenshots Not Appearing in Dashboard' default>
@@ -880,11 +905,12 @@ If you encounter issues not covered here:
 - Review the [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide) for detailed solutions
 - Check [SmartUI Configuration Options](/support/docs/smartui-sdk-config-options) documentation
 - See [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data) for dynamic content issues
-- Visit [<BrandName /> Support](https://www.testmuai.com/support) for additional resources
-- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support)
+- Visit [<BrandName /> Support](https://www.testmuai.com/support/docs/) for additional resources
+- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support/docs/)
 
 </TabItem>
 </Tabs>
+
 
 ## Additional Resources
 

@@ -1,0 +1,749 @@
+openapi: 3.0.0
+info:
+  title: TestMu AI Screenshots API Documentation
+  version: 1.0.1
+servers:
+  - url: "https://api.lambdatest.com/screenshots/v1"
+  - url: "https://eu-api.lambdatest.com/screenshots/v1"
+
+paths:
+  /os-browsers:
+    get:
+      tags:
+        - Get OS-Browsers
+      summary: Fetch all available os-browser combinations.
+      description: Fetch all os browsers combinations available on lambdatest platform.
+      operationId: os-browsers
+      parameters:
+        - name: os
+          in: query
+          description: Fetch details for a particular OS
+          schema:
+            type: string
+      responses:
+        200:
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/os-browsers"
+        401:
+          description: Access denied. Auth error.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AccessDenied"
+      security:
+        - basicAuth: []
+  /devices:
+    get:
+      tags:
+        - Get Devices
+      summary: Fetch all available device combinations.
+      description: Fetch all os devices combinations available on lambdatest platform.
+      operationId: devices
+      parameters:
+        - name: os
+          in: query
+          description: Fetch details for a particular OS
+          schema:
+            type: string
+      responses:
+        200:
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/os-devices"
+        401:
+          description: Access denied. Auth error.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AccessDenied"
+      security:
+        - basicAuth: []
+  /resolutions:
+    get:
+      tags:
+        - Get Resolutions
+      summary: Fetch all available resolution on different OS.
+      description: Fetch all available resolution on different OS.
+      operationId: Resolutions
+      responses:
+        200:
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/resolutions"
+        401:
+          description: Access denied. Auth error.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AccessDenied"
+      security:
+        - basicAuth: []
+  /{test_id}:
+    get:
+      tags:
+        - Get Screenshots
+      summary: Fetch specified screenshot details.
+      description: To fetch specified screenshot details.
+      operationId: screenshots
+      parameters:
+        - name: test_id
+          in: path
+          description: Test ID that details you want to fetch
+          required: true
+          style: simple
+          explode: false
+          schema:
+            type: string
+      responses:
+        200:
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/screenshot-details"
+        401:
+          description: Access denied. Auth error.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AccessDenied"
+        403:
+          description: Access denied. Auth error.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Forbidden"
+        404:
+          description: Resource not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/screenshot-not-found"
+      security:
+        - basicAuth: []
+  /{test_id}/zip:
+    get:
+      tags:
+        - Get Zipped Screenshots
+      summary: Fetch Zipped Screenshots
+      description: Fetch Zipped Screenshots
+      operationId: ZippedScreenshots
+      parameters:
+        - name: test_id
+          in: path
+          description: Test ID that Zipped Screenshots you want to fetch
+          required: true
+          style: simple
+          explode: false
+          schema:
+            type: string
+      responses:
+        200:
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/zipped-screenshots-success"
+        401:
+          description: Access denied. Auth error.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AccessDenied"
+        403:
+          description: Access denied. Auth error.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Forbidden"
+        404:
+          description: Resource not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/screenshot-not-found"
+      security:
+        - basicAuth: []
+  /profiles:
+    get:
+      tags:
+        - Get Profiles
+      summary: Fetch login profiles
+      description: Fetch login profiles
+      operationId: Profiles
+      responses:
+        200:
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/profiles"
+        401:
+          description: Access denied. Auth error.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AccessDenied"
+      security:
+        - basicAuth: []
+  /locations:
+    get:
+      tags:
+        - Get Locations
+      summary: Fetch Locations
+      description: Fetch list of available Geolocations
+      operationId: Locations
+      responses:
+        200:
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/locations"
+        401:
+          description: Access denied. Auth error.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AccessDenied"
+      security:
+        - basicAuth: []
+  /:
+    post:
+      tags:
+        - Start Screenshot Test
+      summary: Start Screenshot Test
+      description: Start Screenshot Test
+      operationId: Start Screenshot Test
+      requestBody:
+        description: start screenshot test payload.
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/screenshot-payload"
+            examples:
+              objectExample:
+                $ref: "#/components/examples/objectExample"
+              objectExample2:
+                $ref: "#/components/examples/objectExample2"
+              objectExample3:
+                $ref: "#/components/examples/objectExample3"
+              objectExample4:
+                $ref: "#/components/examples/objectExample4"
+              objectExample5:
+                $ref: "#/components/examples/objectExample5"
+              objectExample6:
+                $ref: "#/components/examples/objectExample6"
+        required: true
+      responses:
+        200:
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/start-screenshot-success"
+        400:
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/start-screenshot-bad-request"
+        401:
+          description: Access denied. Auth error.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AccessDenied"
+        403:
+          description: Access denied. Auth error.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Forbidden"
+      security:
+        - basicAuth: []
+  /stop/{test_id}:
+    put:
+      tags:
+        - Stop Screenshot Test
+      summary: Stop specified screenshot test
+      description: Stop specified screenshot test
+      operationId: stop screenshots test
+      parameters:
+        - name: test_id
+          in: path
+          description: Test ID that details you want to stop
+          required: true
+          style: simple
+          explode: false
+          schema:
+            type: string
+      responses:
+        200:
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/stop-screenshot-success"
+        401:
+          description: Access denied. Auth error.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AccessDenied"
+        403:
+          description: Access denied. Auth error.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Forbidden"
+        404:
+          description: Resource not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/stop-screenshot-not-found"
+      security:
+        - basicAuth: []
+
+components:
+  schemas:
+    os-browsers:
+      properties:
+        windows 10:
+          $ref: "#/components/schemas/browsers"
+        macos mojave:
+          $ref: "#/components/schemas/browsers"
+
+    os-devices:
+      properties:
+        ios 12.0:
+          $ref: "#/components/schemas/ios-12.0"
+        android 7.0:
+          $ref: "#/components/schemas/android-7.0"
+
+    ios-12.0:
+      type: object
+      properties:
+        devices:
+          type: array
+          items:
+            type: string
+          example: ["iphone xr", "iphone xs", "iphone xs max"]
+    android-9.0:
+      type: object
+      properties:
+        devices:
+          type: array
+          items:
+            type: string
+          example: ["galaxy s9 plus"]
+    android-7.0:
+      type: object
+      properties:
+        devices:
+          type: array
+          items:
+            type: string
+          example:
+            [
+              "galaxy j7 max",
+              "galaxy s8",
+              "galaxy s8+",
+              "galaxy tab s3 9.3",
+              "huawei honor 6x",
+              "nexus 5x",
+              "nexus 6p",
+              "oppo r9",
+            ]
+    browsers:
+      type: object
+      properties:
+        chrome:
+          type: array
+          items:
+            type: string
+          example: ["76", "75"]
+        firefox:
+          type: array
+          items:
+            type: string
+          example: ["67", "66"]
+        opera:
+          type: array
+          items:
+            type: string
+          example: ["55", "54"]
+    resolutions:
+      properties:
+        mac_res:
+          $ref: "#/components/schemas/res_list"
+        win_res:
+          $ref: "#/components/schemas/res_list"
+    res_list:
+      type: array
+      items:
+        type: string
+      example: ["1024x768", "1280x1024"]
+    profiles:
+      type: object
+      properties:
+        profiles:
+          type: array
+          items:
+            type: object
+            properties:
+              name:
+                type: string
+                example: "lambda-login"
+              profile_config:
+                type: object
+                properties:
+                  credentials:
+                    type: object
+                    properties:
+                      password:
+                        type: string
+                        example: "password"
+                      username:
+                        type: string
+                        example: "name"
+                  locators:
+                    type: object
+                    properties:
+                      password:
+                        type: object
+                        properties:
+                          type:
+                            type: string
+                            example: "name"
+                          value:
+                            type: string
+                            example: "password"
+                      submit:
+                        type: object
+                        properties:
+                          type:
+                            type: string
+                            example: "css"
+                          value:
+                            type: string
+                            example: "button.btn-lg"
+                      username:
+                        type: object
+                        properties:
+                          type:
+                            type: string
+                            example: "name"
+                          value:
+                            type: string
+                            example: "email"
+                  login_url:
+                    type: string
+                    example: "https://accounts.lambdatest.com/login"
+                  profile_name:
+                    type: string
+                    example: "lambda-login"
+    locations:
+      type: object
+      properties:
+        locations:
+          type: array
+          items:
+            type: object
+            properties:
+              code:
+                type: string
+                example: "US"
+              name:
+                type: string
+                example: "United States"
+
+    zipped-screenshots-success:
+      type: object
+      properties:
+        url:
+          type: string
+          example: https://s3-screenshots.s3.amazonaws.com/screenshots/TES1009632231568637527345629.zip
+    screenshot-details:
+      $ref: "#/components/schemas/screenshot-test-response"
+    screenshot-test-response:
+      type: object
+      properties:
+        test_id:
+          type: string
+          example: "TES100968331562237283314836"
+        defer_time:
+          type: number
+          example: 5
+        test_status:
+          type: string
+          example: "completed"
+        url:
+          type: string
+          example: "https://www.lambdatest.com"
+        callback_url:
+          type: string
+          example: "https://www.example.com"
+        screenshots:
+          type: array
+          items:
+            $ref: "#/components/schemas/screenshot-type"
+    screenshot-type:
+      type: object
+      properties:
+        os:
+          type: string
+          example: "windows 10"
+        browser:
+          type: string
+          example: "chrome"
+        browser_version:
+          type: string
+          example: "76"
+        status:
+          type: string
+          example: "completed"
+        screenshot_url:
+          type: string
+          example: "https://s3.amazonaws.com/s3-screenshots/prod/ACT100968331562237283340194/screenshot/win-cr-76.0.png"
+        thumbnail_url:
+          type: string
+          example: "https://s3.amazonaws.com/s3-screenshots/prod/ACT100968331562237283340194/screenshot/win-cr-76.0.png"
+        activity_id:
+          type: string
+          example: "ACT100968331562237283340194"
+        resolution:
+          type: string
+          example: "1024x768"
+    screenshot-not-found:
+      properties:
+        message:
+          type: string
+          example: "No data found"
+        reason:
+          type: string
+          example: "test_id is invalid"
+    stop-screenshot-success:
+      properties:
+        message:
+          type: string
+          example: "Test stopped successfully"
+    stop-screenshot-not-found:
+      properties:
+        message:
+          type: string
+          example: "No active Screenshot test found for this test_id"
+    screenshot-payload:
+      type: object
+      properties:
+        url:
+          type: string
+          example: https://www.lambdatest.com
+        defer_time:
+          type: number
+          example: 5
+        email:
+          type: boolean
+          example: true
+        mac_res:
+          type: string
+          example: 1024x768
+        win_res:
+          type: string
+          example: 1366X768
+        tunnel:
+          type: boolean
+          example: true
+        tunnel_identifier:
+          type: string
+          example: tunnel
+        username:
+          type: string
+          example: admin
+        password:
+          type: string
+          example: password
+        callback_url:
+          type: string
+          example: https://www.example.com
+        configs:
+          type: object
+          properties:
+            windows 10:
+              $ref: "#/components/schemas/browsers"
+            macos mojave:
+              $ref: "#/components/schemas/browsers"
+    start-screenshot-success:
+      type: object
+      properties:
+        test_id:
+          type: string
+          example: TES100968331562243938913767
+    start-screenshot-bad-request:
+      type: object
+      properties:
+        message:
+          type: string
+          example: The os, browser, browser_version combination is either unsupported or doesn't exist. Please try again with a different combination.
+
+    AccessDenied:
+      properties:
+        message:
+          type: string
+          example: "Unauthorized"
+    Forbidden:
+      properties:
+        message:
+          type: string
+          example: "Screenshot API is supported only in our premium plans. Please upgrade."
+  examples:
+    objectExample:
+      value:
+        url: "https://www.lambdatest.com"
+        defer_time: 5
+        email: true
+        mac_res: "1024x768"
+        win_res: "1366X768"
+        smart_scroll: true
+        layout: "portrait"
+        configs:
+          windows 10:
+            chrome: ["76", "75"]
+            firefox: ["67", "66"]
+            opera: ["58", "57"]
+            ie: ["11"]
+          macos mojave:
+            chrome: ["76", "75"]
+            firefox: ["67", "66"]
+            opera: ["58", "57"]
+            safari: ["12"]
+          ios 12.0:
+            devices: ["iphone xr", "iphone xs", "iphone xs max"]
+          android 9.0:
+            devices: ["galaxy s9 plus"]
+      summary: Screenshot Test
+    objectExample2:
+      value:
+        url: "https://www.lambdatest.com"
+        defer_time: 5
+        email: true
+        smart_scroll: true
+        tunnel: true
+        mac_res: "1024x768"
+        win_res: "1366X768"
+        layout: "portrait"
+        configs:
+          windows 10:
+            chrome: ["76", "75"]
+            firefox: ["67", "66"]
+            opera: ["58", "57"]
+            ie: ["11"]
+          macos mojave:
+            chrome: ["76", "75"]
+            firefox: ["67", "66"]
+            opera: ["58", "57"]
+            safari: ["12"]
+          ios 12.0:
+            devices: ["iphone xr", "iphone xs", "iphone xs max"]
+          android 9.0:
+            devices: ["galaxy s9 plus"]
+      summary: Screenshot Test with Tunnel
+    objectExample3:
+      value:
+        url: "https://httpbin.org/basic-auth/username/password"
+        defer_time: 5
+        email: true
+        smart_scroll: true
+        mac_res: "1024x768"
+        win_res: "1366X768"
+        username: "username"
+        password: "password"
+        layout: "portrait"
+        configs:
+          windows 10:
+            chrome: ["76", "75"]
+            firefox: ["67", "66"]
+            opera: ["58", "57"]
+            ie: ["11"]
+          macos mojave:
+            chrome: ["76", "75"]
+            firefox: ["67", "66"]
+            opera: ["58", "57"]
+          ios 12.0:
+            devices: ["iphone xr", "iphone xs", "iphone xs max"]
+          android 9.0:
+            devices: ["galaxy s9 plus"]
+      summary: Screenshot Test with Basic Authentication
+    objectExample4:
+      value:
+        url: "https://www.lambdatest.com"
+        defer_time: 5
+        email: true
+        mac_res: "1024x768"
+        win_res: "1366X768"
+        callback_url: "https://www.example.com"
+        configs:
+          windows 10:
+            chrome: ["76", "75"]
+            firefox: ["67", "66"]
+            opera: ["58", "57"]
+            ie: ["11"]
+          macos mojave:
+            chrome: ["76", "75"]
+            firefox: ["67", "66"]
+            opera:
+          ios 12.0:
+            devices: ["iphone xr", "iphone xs", "iphone xs max"]
+          android 9.0:
+            devices: ["galaxy s9 plus"]
+      summary: Screenshot Test with Callback Url
+    objectExample5:
+      value:
+        url: "https://www.lambdatest.com"
+        defer_time: 5
+        email: true
+        mac_res: "1024x768"
+        win_res: "1366X768"
+        profile_id: "lambda-login"
+        configs:
+          windows 10:
+            chrome: ["76", "75"]
+            firefox: ["67", "66"]
+            opera: ["58", "57"]
+            ie: ["11"]
+          macos mojave:
+            chrome: ["76", "75"]
+            firefox: ["67", "66"]
+      summary: Screenshot Test with Login
+  
+    objectExample6:
+      value:
+        url: "https://www.lambdatest.com"
+        defer_time: 5
+        email: true
+        mac_res: "1024x768"
+        win_res: "1366X768"
+        country_code: "US"
+        configs:
+          windows 10:
+            chrome: ["76", "75"]
+            firefox: ["67", "66"]
+            opera: ["58", "57"]
+            ie: ["11"]
+          macos mojave:
+            chrome: ["76", "75"]
+            firefox: ["67", "66"]
+      summary: Screenshot Test with Geolocation
+
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic

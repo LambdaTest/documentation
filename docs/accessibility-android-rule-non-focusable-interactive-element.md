@@ -5,6 +5,8 @@ sidebar_label: Non-Focusable Interactive Element
 description: Rule-level Accessibility guidance for Non-Focusable Interactive Element on Android.
 slug: accessibility-android-rule-non-focusable-interactive-element/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

@@ -128,7 +128,10 @@ The platform does not rely on a single evaluator. 15+ testing agents each own on
 
 ---
 
-Agent Testing red-teams AI agents with adversarial scenario suites aligned to the OWASP Top 10 for LLM applications: prompt injection (LLM01), insecure output handling (LLM02), sensitive-information disclosure and PII leakage (LLM06), data exfiltration, jailbreak, and policy violations.
+Agent Testing red-teams AI agents with adversarial scenario suites aligned to the OWASP Top 10 for LLM applications: prompt injection, insecure output handling, sensitive-information disclosure and PII leakage, data exfiltration, jailbreak, and policy violations.
+
+- **Chat agents** face a live adversarial attacker across seven attack types: business logic, hallucination, hijacking, prompt injection, technical injection, overreliance, and off-topic. The attacker and the grader are separate, so the score is not influenced by how hard the attacker pushed, and a run that cannot be judged is reported as inconclusive rather than passed.
+- **Phone caller agents** get red team scenarios generated from the agent's own prompt. The platform identifies the rules the agent must follow, attacks those rules, and prioritizes rules not yet covered. Each finding links to the moment in the call recording. Their reports use the OWASP Agentic Top 10 categories ASI03 (identity), ASI06 (made-up history), and ASI09 (fake approval or pressure) alongside the OWASP LLM Top 10, with LLM10 Unbounded Consumption added, and a radar chart shows the pass rate for each risk category.
 
 Toxicity, bias and harmful-content generation are evaluated as first-class metrics across the tested persona set. Every finding is evidence-backed. The specific conversation turns that triggered a flag are preserved with per-turn attribution and confidence intervals, exportable for regulatory documentation, and the A2A CLI runs the same scenarios in CI so security testing gates every release.
 
@@ -307,11 +310,11 @@ The platform is a single hosted web application. A request flows through six lay
 | Layer | What it does |
 |---|---|
 | Interface & access | Web app, REST API, CLI, and CI/CD pipelines configure projects, scenarios, and schedules. Requests authenticate with a Bearer token or API key. |
-| Authentication & isolation | Isolates data per organization, stores third-party credentials encrypted, and reaches private agents through a secure tunnel proxy. |
-| Testing engine | Runs the chat, voice, phone, and image modules, generates scenarios, orchestrates parallel execution, and schedules recurring runs. |
+| Authentication & isolation | Isolates data per organization, keeps tokens, cookies, and API keys in a credentials vault that resolves them only at run time, and reaches private agents through a secure tunnel proxy. |
+| Testing engine | Runs the chat, voice, video, phone, IVR, image, and WhatsApp modules, generates scenarios, orchestrates parallel execution, and schedules recurring runs. |
 | Evaluation layer | Scores conversations with the testing agents, analyzes uploaded recordings, and produces the go-live assessment against configurable thresholds. |
 | Data persistence | Stores scores and metadata in a managed database, streams live run status over server-sent events, and keeps recordings and uploads in encrypted object storage. |
-| External integrations | Connects telephony and voice providers, speech-to-text and text-to-speech engines, issue trackers (Jira, GitHub, Confluence), and the AI models used to generate and score. |
+| External integrations | Connects telephony and voice providers, speech-to-text and text-to-speech engines, issue trackers (Jira, GitHub, Confluence), Slack and email notifications, voice agent platforms whose prompt and tools it imports for tool call checks (ElevenLabs, Retell, Vapi, Salesforce Agentforce, Amazon Connect, and Cartesia), Test Manager and HyperExecute for post-call web tests, and the AI models used to generate and score. |
 
 ## How the Platform Reaches Your Agent
 
@@ -319,10 +322,12 @@ The platform is a single hosted web application. A request flows through six lay
 
 The testing agents talk to your agent through the same interface real users do. The transport depends on the agent type.
 
-- **Chat:** HTTP requests to your API endpoint.
-- **Voice:** a real-time voice session over REST, WebSocket, or WebRTC.
-- **Phone inbound:** a real phone call placed to the agent's number.
-- **Phone outbound:** a provisioned number the agent calls, which the platform answers and scores.
+- **Chat:** HTTP requests to your API endpoint, or a WebSocket connection.
+- **Voice:** a real-time voice session over REST, WebSocket, or WebRTC. WebRTC covers LiveKit-hosted agents, and agents built on Deepgram Voice Agent connect through the Deepgram Voice Agent option in a voice endpoint profile.
+- **Video:** a simulated participant with a rendered face and voice joins your agent's session from its web URL.
+- **Phone inbound:** a real phone call placed to the agent's number, or to a SIP trunk.
+- **Phone outbound:** a number reserved from an outbound pool, which the agent calls and the platform answers and scores.
+- **IVR:** a real phone call that navigates the menu with speech and keypad tones.
 - **Image:** prompts or images submitted to the generation endpoint.
 
 Agents on a private network are reached through the secure tunnel, so the endpoint never needs a public URL.
@@ -331,7 +336,7 @@ Agents on a private network are reached through the secure tunnel, so the endpoi
 
 ---
 
-The testing agents score chat and voice agents across 9 quality metrics and phone agents across 30+ call metrics. Each score carries a confidence level based on how many scenarios backed it.
+The testing agents score chat and voice agents across 9 quality metrics and phone agents across 42 call quality metrics. Each phone call also gets an overall verdict of Pass, Fail, or Review incomplete, and its validation criteria are Pass or Fail only. Video agents get pillar scores from 0 to 10, and image outputs get a quality score from 0 to 100. Chat and phone agents can also be graded on custom metrics, plain-language checks for your own business rules. Each score carries a confidence level based on how many scenarios backed it. See [Features & Metrics](/support/docs/agent-features-and-metrics/) for every metric by agent type.
 
 The verdict is a deployment decision, not just a number. Green clears the agent for production, Yellow flags specific issues to fix first, and Red blocks deployment. Every verdict links back to the conversation turns that drove it, so a failing result points straight at the fix.
 

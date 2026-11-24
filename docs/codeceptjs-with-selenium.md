@@ -22,6 +22,7 @@ canonical: https://www.testmuai.com/support/docs/codeceptjs-with-selenium/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -160,12 +161,16 @@ Download or clone the CodeceptJS Selenium sample from the <BrandName /> GitHub r
 <a href="https://github.com/LambdaTest/lambdatest-codeceptjs-sample" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
 :::
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git clone https://github.com/LambdaTest/lambdatest-codeceptjs-sample.git
 cd lambdatest-codeceptjs-sample
 ```
 
 2. Install the dependencies.
+
+<VerifiedTag value="Verified" />
 
 ```bash
 npm install
@@ -179,12 +184,16 @@ npm install
 
 **Windows**
 
+<VerifiedTag value="Verified" />
+
 ```bash
 set LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
 set LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 ```
 
 **macOS/Linux**
+
+<VerifiedTag value="Verified" />
 
 ```bash
 export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
@@ -196,6 +205,8 @@ export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 ---
 
 The `codecept.conf.js` file connects your tests to the <BrandName /> Selenium Grid using the `WebDriver` helper. Set `host` to `hub.lambdatest.com` and pass your credentials via environment variables.
+
+<VerifiedTag value="Verified" />
 
 ```js title="codecept.conf.js"
 exports.config = {
@@ -252,6 +263,8 @@ The [codeceptjs-lambdatest-service](https://github.com/LambdaTest/codeceptjs-lam
 
 The package is included as a dev dependency in the sample repo. To add it to your own project:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npm install codeceptjs-lambdatest-service --save-dev
 ```
@@ -259,6 +272,8 @@ npm install codeceptjs-lambdatest-service --save-dev
 ### Add the LTHelper to Your Config
 
 Add the `LTHelper` block inside the `helpers` section of `codecept.conf.js`:
+
+<VerifiedTag value="Verified" />
 
 ```js
 helpers: {
@@ -278,6 +293,8 @@ helpers: {
 When `updateTestName: true` is set, the service reads the CodeceptJS scenario title and updates the test name on <BrandName /> dynamically. This means each test in the <BrandName /> Automation Dashboard reflects the exact scenario name from your test file instead of the default session name.
 
 For example, if your test is:
+
+<VerifiedTag value="Verified" />
 
 ```js title="googleTest_test.js"
 Feature('GoogleTest');
@@ -302,6 +319,8 @@ No additional configuration is needed beyond adding `LTHelper` to your helpers.
 
 **Run desktop tests:**
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npm test
 # or
@@ -309,6 +328,8 @@ npm run test:desktop
 ```
 
 **Run a specific test file:**
+
+<VerifiedTag value="Verified" />
 
 ```bash
 npx codeceptjs run --steps googleTest_test.js

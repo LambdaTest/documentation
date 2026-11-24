@@ -17,7 +17,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/zipboard-integration/
 site_name: TestMu AI
 slug: zipboard-integration/
-canonical: https://www.testmu.ai/support/docs/zipboard-integration/
+canonical: https://www.testmuai.com/support/docs/zipboard-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

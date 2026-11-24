@@ -5,6 +5,8 @@ sidebar_label: Color Contrast Issues
 description: Rule-level Accessibility guidance for Color Contrast Issues on iOS.
 slug: accessibility-ios-rule-color-contrast-issues/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

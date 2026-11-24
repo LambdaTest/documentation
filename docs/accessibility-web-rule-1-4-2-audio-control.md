@@ -5,6 +5,8 @@ sidebar_label: Audio Control (1.4.2)
 description: Rule-level Accessibility guidance for Audio Control (WCAG 1.4.2 Level A).
 slug: accessibility-web-rule-1-4-2-audio-control/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

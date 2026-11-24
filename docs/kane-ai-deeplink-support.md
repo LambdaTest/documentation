@@ -20,6 +20,8 @@ canonical: https://www.testmuai.com/support/docs/kane-ai-deeplink-support/
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

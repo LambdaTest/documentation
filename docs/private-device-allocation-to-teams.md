@@ -12,7 +12,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/private-device-allocation-to-teams/
 site_name: TestMu AI
 slug: private-device-allocation-to-teams/
-canonical: https://www.testmu.ai/support/docs/private-device-allocation-to-teams/
+canonical: https://www.testmuai.com/support/docs/private-device-allocation-to-teams/
 ---
 
 import Tabs from '@theme/Tabs';

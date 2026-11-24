@@ -5,6 +5,8 @@ sidebar_label: Character Key Shortcuts (2.1.4)
 description: Rule-level Accessibility guidance for Character Key Shortcuts (WCAG 2.1.4 Level A).
 slug: accessibility-web-rule-2-1-4-character-key-shortcuts/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

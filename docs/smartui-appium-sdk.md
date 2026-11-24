@@ -16,7 +16,7 @@ keywords:
   - How to Run Visual Regression Tests
 url: https://www.testmuai.com/support/docs/smartui-appium-sdk/
 slug: smartui-appium-sdk/
-canonical: https://www.testmu.ai/support/docs/smartui-appium-sdk/
+canonical: https://www.testmuai.com/support/docs/smartui-appium-sdk/
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -24,6 +24,7 @@ import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 
@@ -246,6 +247,8 @@ For languages other than Java, SmartUI uses Hooks integration, which leverages A
 
 Add the following code snippet in your test where you want to capture a screenshot:
 
+<VerifiedTag value="Verified" />
+
 <Tabs className='docs__val' groupId='hooks-language'>
 <TabItem value='javascript' label='JavaScript' default>
 
@@ -280,6 +283,8 @@ driver.Execute("smartui.takeScreenshot=<Your Screenshot Name>");
 **Taking Full Page Screenshots (Native Apps):**
 
 For apps with scrolling functionality, you can capture full-page screenshots:
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='hooks-fullpage'>
 <TabItem value='javascript-full' label='JavaScript' default>
@@ -336,6 +341,8 @@ driver.Execute("smartui.takeScreenshot", config);
 
 Set your Project Token as an environment variable before running tests:
 
+<VerifiedTag value="Verified" />
+
 <Tabs className='docs__val' groupId='hooks-config'>
 <TabItem value='macos-linux' label='MacOS/Linux' default>
 
@@ -366,6 +373,7 @@ After selecting your preferred language, refer to the specific documentation for
 
 - **[Java SDK](/support/docs/smartui-appium-java-sdk)** - Complete guide with best practices and troubleshooting
 - **[Appium Hooks](/support/docs/smartui-appium-hooks)** - For JavaScript, Python, Ruby, and C# implementations
+
 
 ## Additional Resources
 

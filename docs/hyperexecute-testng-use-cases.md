@@ -17,6 +17,7 @@ canonical: https://www.testmuai.com/support/docs/hyperexecute-testng-use-cases/
 
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -399,6 +400,8 @@ By default, HyperExecute VMs are provisioned with **Java 8**. If your project re
 
 **YAML Example for Java 11**
 
+<VerifiedTag value="Verified" />
+
 ```yaml title="hyperexecute.yaml"
 runtime:
   language: java
@@ -423,6 +426,8 @@ runtime:
 
 Automatic Discovery (Tag-based)
 
+<VerifiedTag value="Verified" />
+
 ```yaml title="hyperexecute.yaml"
 testDiscovery:
   type: automatic
@@ -434,6 +439,8 @@ testDiscovery:
 ```
 
 Raw Command Discovery
+
+<VerifiedTag value="Verified" />
 
 ```yaml title="hyperexecute.yaml"
 testDiscovery:
@@ -451,6 +458,8 @@ You can pass logical tag expressions in testDiscovery or use the ignoredTags par
 
 Example: Logical Tag Filtering
 
+<VerifiedTag value="Verified" />
+
 ```yaml title="hyperexecute.yaml"
 testDiscovery:
   command: .hyperexecute/snooper --targetOs=win \
@@ -463,6 +472,8 @@ testDiscovery:
 ```
 
 Example: Ignored Tags
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 ignoredTags: ["@tag3", "@tag2"]
@@ -479,6 +490,8 @@ ignoredTags: ["@tag3", "@tag2"]
 In projects with modules (web, api, mobile), discovered test paths may include the module prefix (e.g., web/), causing mismatches.
 
 **Solution :** Use awk to strip module prefixes from discovered test paths.
+
+<VerifiedTag value="Verified" />
 
 ```yaml title="hyperexecute.yaml"
 testDiscovery:
@@ -501,6 +514,8 @@ To avoid duplicate executions:
 
 **Example: testng.xml**
 
+<VerifiedTag value="Verified" />
+
 ```xml title="testng.xml"
 <suite name="Sanity Suite">
   <test name="Test">
@@ -512,6 +527,8 @@ To avoid duplicate executions:
 ```
 
 **Example: @CucumberOptions**
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 @CucumberOptions(
@@ -531,6 +548,8 @@ To avoid duplicate executions:
 
 Discovery YAML Example
 
+<VerifiedTag value="Verified" />
+
 ```yaml title="hyperexecute.yaml"
 testDiscovery:
   type: automatic
@@ -546,6 +565,8 @@ Large reports may fail to render in HyperExecute dashboard. It is recommended to
 
 YAML Example
 
+<VerifiedTag value="Verified" />
+
 ```yaml title="hyperexecute.yaml"
 report: true
 partialReports:
@@ -557,11 +578,15 @@ partialReports:
 To view Locally
 - Install Allure
 
+<VerifiedTag value="Verified" />
+
 ```bash
 brew install allure
 ```
 
 - Open report
+
+<VerifiedTag value="Verified" />
 
 ```bash
 allure open ./pathDirectory   # Replace pathDirectory with the actual report folder.

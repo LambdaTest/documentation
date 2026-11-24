@@ -18,7 +18,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/playwright-visual-regression/
 site_name: TestMu AI
 slug: playwright-visual-regression/
-canonical: https://www.testmu.ai/support/docs/playwright-visual-regression/
+canonical: https://www.testmuai.com/support/docs/playwright-visual-regression/
 ---
 
 import Tabs from '@theme/Tabs';
@@ -26,6 +26,8 @@ import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -268,6 +270,8 @@ This documentation will act as your step-by-step guide in to perform Playwright 
 - Go to [SmartUI](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/) and login along with your credentials.
 - Copy `LT_USERNAME` and `LT_ACCESS_KEY` credentials from `Access Key` button on the top right of the dashboard.
 
+<VerifiedTag value="Verified" />
+
 <Tabs className="docs__val" groupId="language">
 <TabItem value="MacOS/Linux" label="MacOS/Linux" default>
 
@@ -313,11 +317,15 @@ Once you have created a SmartUI Project, you can generate screenshots by running
 
 1. Please clone the following sample Github repo 
 
+<VerifiedTag value="Verified" />
+
 ```bash 
 git clone https://github.com/LambdaTest/playwright-sample
 ```
 
 2. Install the node modules using the command
+
+<VerifiedTag value="Verified" />
 
 ```bash
 npm i
@@ -326,22 +334,33 @@ npm i
 3. Set up the <BrandName /> credentials by using the commands below in the terminal.The account details are available on your [<BrandName /> Profile](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/details/profile) page.
    
 For macOS:
+
+<VerifiedTag value="Verified" />
+
 ```bash
 export LT_USERNAME=LT_USERNAME
 export LT_ACCESS_KEY=LT_ACCESS_KEY
 ```
 For Linux:
+
+<VerifiedTag value="Verified" />
+
 ```bash
 export LT_USERNAME=LT_USERNAME
 export LT_ACCESS_KEY=LT_ACCESS_KEY
 ```
 For Windows:
+
+<VerifiedTag value="Verified" />
+
 ```bash
 set LT_USERNAME=LT_USERNAME
 set LT_ACCESS_KEY=LT_ACCESS_KEY
 ```
 
 1. Edit the required capabilities in your test file `playwright-smartui.js`.
+
+<VerifiedTag value="Verified" />
 
 ```javascript title="Add the following code snippet to run SmartUI with Playwright in playwright-smartui.js file"
 const { chromium } = require('playwright')
@@ -395,6 +414,8 @@ const { expect } = require('@playwright/test');
 
 - Execute the test using the following command
 
+<VerifiedTag value="Verified" />
+
 ```bash
 node playwright-smartui.js
 ```
@@ -407,6 +428,8 @@ node playwright-smartui.js
 
 To retrieve the status and results of a captured screenshot, you can utilize the provided webhook. Follow the steps below to fetch this information:
 
+<VerifiedTag value="Verified" />
+
 ```javascript
  // Add this code snippet within your script to fetch the screenshot status during runtime
 
@@ -416,6 +439,8 @@ response = await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ac
 console.log(response)
 ```
 A sample response for the same can be seen below
+
+<VerifiedTag value="Verified" />
 
 ```json
 screenshotStatus response:  {
@@ -466,6 +491,8 @@ Experience effortless collaboration and streamlined testing workflows with Smart
 
 To add this integration, you can add the following capability:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 const capabilities: {
   ...
@@ -489,6 +516,8 @@ For additional information about Playwright framework please explore the documen
   **Handling Dynamic Data** - In case if you have any dynamic elements that are not in the same position across test runs, you can ignore or select a specific area to be removed from the comparison. For accessing such HTML DOM Config and Options, see [Handling Dynamic Data with DOM Configuration](/support/docs/html-dom-smartui-options).
 
 ## Best Practices
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val" groupId="best-practices">
 <TabItem value="capability-configuration" label="Capability Configuration" default>
@@ -573,6 +602,8 @@ await page.waitForLoadState('networkidle');
 </Tabs>
 
 ## Troubleshooting
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val" groupId="troubleshooting">
 <TabItem value="screenshots-not-captured" label="Screenshots Not Captured" default>
@@ -713,11 +744,12 @@ If you encounter issues not covered here:
 
 - Review [SmartUI Build Options](/support/docs/smart-ui-build-options) documentation
 - Check [Advanced Test Settings](/support/docs/test-settings-options/) for comparison options
-- Visit [<BrandName /> Support](https://www.testmuai.com/support) for additional resources
-- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support)
+- Visit [<BrandName /> Support](https://www.testmuai.com/support/docs/) for additional resources
+- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support/docs/)
 
 </TabItem>
 </Tabs>
+
 
 ## Additional Resources
 

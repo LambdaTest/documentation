@@ -5,6 +5,8 @@ sidebar_label: Link Purpose (2.4.4)
 description: Rule-level Accessibility guidance for Link Purpose in Context (WCAG 2.4.4 Level A).
 slug: accessibility-web-rule-2-4-4-link-purpose/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

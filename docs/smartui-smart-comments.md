@@ -3,7 +3,7 @@ id: smartui-smart-comments
 title: SmartUI Smart Comments
 description: Learn how to collaborate on visual test results using Smart Comments. Add comments directly on screenshots and builds, mention teammates, and manage threaded discussions for better team collaboration.
 slug: smartui-smart-comments/
-canonical: https://www.testmu.ai/support/docs/smartui-smart-comments/
+canonical: https://www.testmuai.com/support/docs/smartui-smart-comments/
 keywords:
   - SmartUI comments
   - Smart Comments
@@ -17,6 +17,8 @@ import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

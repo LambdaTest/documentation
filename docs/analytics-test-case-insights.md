@@ -11,6 +11,7 @@ slug: analytics-test-case-insights/
 canonical: https://www.testmuai.com/support/docs/analytics-test-case-insights/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 
@@ -182,6 +183,8 @@ You can use LambdaHooks to start and end a test case within a single Selenium se
 
 To start a test case, use the `lambda-testCase-start` hook:
 
+<VerifiedTag value="Verified" />
+
 ```java
 // To start a test case
 ((JavascriptExecutor) driver).executeScript("lambda-testCase-start={Your Test Case Name}");
@@ -190,6 +193,8 @@ To start a test case, use the `lambda-testCase-start` hook:
 #### Test Case End
 
 To end a test case, use the `lambda-testCase-end` hook:
+
+<VerifiedTag value="Verified" />
 
 ```java
 // To end a test case
@@ -206,6 +211,8 @@ You can use LambdaHooks to start and end a test case within a single Appium sess
 
 To start a test case, use the `lambda-testCase-start` hook:
 
+<VerifiedTag value="Verified" />
+
 ```java
 // To start a test case
 ((JavascriptExecutor) driver).executeScript("lambda-testCase-start={Your Test Case Name}");
@@ -214,6 +221,8 @@ To start a test case, use the `lambda-testCase-start` hook:
 #### Test Case End
 
 To end a test case, use the `lambda-testCase-end` hook:
+
+<VerifiedTag value="Verified" />
 
 ```java
 // To end a test case
@@ -242,6 +251,8 @@ To know more about the hooks and how to use them, you can refer to the [LambdaHo
 
 You can capture the test case insights by using the WebHook. You need to add the following `WebHook` in your test script.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 // For Stage of test case `START`
 driver.executeScript(`lambda-testCase-start=${Name of the test case}`)
@@ -262,6 +273,8 @@ Here is a link to documentation for setting up the reporter for `PlaywrightJS`: 
 #### Step 2 - Add the code to lambdatest-setup file
 
 Once, you have setup the `reporter` then the following code snippet should be added to your `lambdatest-setup.js` config. 
+
+<VerifiedTag value="Verified" />
 
 ```js title=lambdatest-
 try {
@@ -296,11 +309,15 @@ You can capture the test case insights by using the NPM Package. You need to add
 The package currently only supports for `WebdriverIO` framework. We will be adding support for other frameworks soon.
 :::
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npm i wdio-lambdatest-test-case-analytics-service
 ```
 
 Now, once the package has been installed, you need to add the following code in your `wdio.conf.js` file.
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 exports.config = {
@@ -328,6 +345,10 @@ You can analyze the health of your test cases by using the `Test Cases Stability
 You can analyze the test cases by their group by using the `Test Case Group View` widget. The widget will display the total number of test cases in each group. The widget will be displayed in card view and you can also view the details of the test cases by clicking on the `View Details` button.
 
 <img loading="lazy" src={require('../assets/images/analytics/test-cases-view.webp').default} alt="cmd" width="800" height="400" className="doc_img"/>
+
+### Test cases in builds
+
+Once test cases are captured, you can also analyze them build by build — with history, drilldowns, smart tags, flakiness, failure categories and anomaly notifications. See [Test Cases in Build Insights](/support/docs/analytics-build-insights-test-cases/).
 
 ## Test Case Use Cases
 

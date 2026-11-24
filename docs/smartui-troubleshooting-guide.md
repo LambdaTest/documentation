@@ -15,7 +15,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/smartui-troubleshooting-guide/
 site_name: TestMu AI
 slug: smartui-troubleshooting-guide/
-canonical: https://www.testmu.ai/support/docs/smartui-troubleshooting-guide/
+canonical: https://www.testmuai.com/support/docs/smartui-troubleshooting-guide/
 
 ---
 import Tabs from '@theme/Tabs';
@@ -24,6 +24,7 @@ import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 
@@ -573,6 +574,8 @@ Before diving into specific issues, run through this quick checklist:
 ---
 
 ## Troubleshooting by Category
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='troubleshooting-category'>
 <TabItem value='authentication' label='Authentication & Setup' default>
@@ -1868,13 +1871,13 @@ If you encounter issues not covered in this guide:
    - Review [Configuration Options](/support/docs/smartui-sdk-config-options)
 
 2. **Search Existing Issues**:
-   - Check [<BrandName /> Support](https://www.testmuai.com/support)
+   - Check [<BrandName /> Support](https://www.testmuai.com/support/docs/)
    - Review community forums
    - Search knowledge base
 
 3. **Contact Support**:
    - Email: support@testmuai.com
-   - [24/7 Chat Support](https://www.testmuai.com/support)
+   - [24/7 Chat Support](https://www.testmuai.com/support/docs/)
    - Include error messages, logs, and configuration details
 
 4. **Provide Diagnostic Information**:
@@ -1882,6 +1885,7 @@ If you encounter issues not covered in this guide:
    - Configuration file (redact sensitive data)
    - Error messages and logs
    - Steps to reproduce
+
 
 ## Additional Resources
 

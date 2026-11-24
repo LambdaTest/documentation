@@ -15,6 +15,7 @@ canonical: https://www.testmuai.com/support/docs/extent-report/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -153,6 +154,8 @@ Follow these steps to enable Extent Reports for your HyperExecute job:
 ### Step 1: Add Dependency
 If using Maven, add the following dependency to your `pom.xml` file:
 
+<VerifiedTag value="Verified" />
+
 ```xml title="pom.xml"
 <dependency>
   <groupId>com.relevantcodes</groupId>
@@ -163,6 +166,8 @@ If using Maven, add the following dependency to your `pom.xml` file:
 
 ### Step 2: Create an Extent Report Listener
 Create a class, e.g., `ExtentReportListenerV2.java`, to initialize and flush Extent Reports during test execution. This listener will log each test case’s status to the report.
+
+<VerifiedTag value="Verified" />
 
 ```java title="ExtentReportListenerV2.java"
 import com.relevantcodes.extentreports.ExtentReports;
@@ -188,6 +193,8 @@ Follow these steps to enable Extent Reports for your HyperExecute job:
 ### Step 1: Add Dependency
 If using Maven, add the latest extentreports dependency to `pom.xml` file:
 
+<VerifiedTag value="Verified" />
+
 ```xml title="pom.xml"
 <dependency>
   <groupId>com.aventstack</groupId>
@@ -198,6 +205,8 @@ If using Maven, add the latest extentreports dependency to `pom.xml` file:
 
 ### Step 2: Create an Extent Report Listener
 For Extent Reports > 2, use `ExtentHtmlReporter` to generate and customize the HTML report. Create `ExtentReportListener.java`:
+
+<VerifiedTag value="Verified" />
 
 ```java title="ExtentReportListener.java"
 import com.aventstack.extentreports.ExtentReports;
@@ -223,6 +232,8 @@ public class ExtentReportListener implements ITestListener {
 
 ## Configure the HyperExecute YAML File
 In your HyperExecute YAML configuration, define the [`report`](/support/docs/deep-dive-into-hyperexecute-yaml/#report) parameters like this:
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 report: true

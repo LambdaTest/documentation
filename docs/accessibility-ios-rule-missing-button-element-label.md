@@ -5,6 +5,8 @@ sidebar_label: Missing Button Element Label
 description: Rule-level Accessibility guidance for Missing Button Element Label on iOS.
 slug: accessibility-ios-rule-missing-button-element-label/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

@@ -5,6 +5,8 @@ sidebar_label: Meaningful Sequence
 description: "Check that Android content is announced in an order matching its visual layout, so TalkBack users don't hear the screen in a confusing sequence."
 slug: accessibility-android-rule-meaningful-sequence/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

@@ -99,7 +99,7 @@ Unable to Verify remains its own verdict even when it blocks a release. The publ
 
 ## Add the Jenkinsfile
 
-Commit this at your repository root beside the reviewed definitions and `ci/rook-ci.sh`. [Download the Jenkinsfile](pathname:///support/resources/rook/Jenkinsfile).
+Commit this at your repository root beside the reviewed definitions and `ci/rook-ci.sh`. [Download the Jenkinsfile](pathname:///support/resources/rook/Jenkinsfile.groovy) and save it as `Jenkinsfile`.
 
 ```groovy
 pipeline {

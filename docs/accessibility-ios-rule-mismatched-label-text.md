@@ -5,6 +5,8 @@ sidebar_label: Mismatched Label Text
 description: "Ensure an iOS control's accessibility label contains its visible text so Voice Control users can activate it by speaking what they see."
 slug: accessibility-ios-rule-mismatched-label-text/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

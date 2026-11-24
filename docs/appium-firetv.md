@@ -27,6 +27,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import RealDeviceTag from '../src/component/realDevice';
 import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -126,7 +127,7 @@ import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 In this topic, you will learn how to configure and run your **Fire TV** automation testing scripts with **Appium** on **<BrandName /> Real Device Cloud platform**.
 
 :::note Plus Plan Feature
-This feature is available exclusively with the **Real Device Plus Automation Cloud** Plan.
+This feature is available exclusively with the **Private Cloud** Plan.
 
 To unlock this feature, purchase or upgrade to the required [plan](https://www.testmuai.com/pricing/). If you need assistance, please contact your <BrandName /> support representative, reach out to our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**[24×7 Chat Support]**</span>, or email us at **support@testmuai.com**.
 :::
@@ -165,6 +166,9 @@ Before you can start performing App automation testing with Appium, you would ne
 Upload your **Fire TV** application (.apk file) to the <BrandName /> servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format `Username:AccessKey` in the **cURL** command for authentication. Make sure to add the path of the **appFile** in the cURL request. Here is an example cURL request to upload your app using our REST API:
 
  **Using App File from System:**
+
+ <VerifiedTag value="Verified" />
+
  <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "appFile=@"/Users/macuser/Downloads/fireos-sample-app.apk"" -F "name="fireos_app""
@@ -192,6 +196,8 @@ Upload your **Fire TV** application (.apk file) to the <BrandName /> servers usi
 
 1. Clone the <BrandName />'s [LT-appium-firetv](https://github.com/LambdaTest/LT-appium-firetv) and navigate to the code directory as shown below:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git clone https://github.com/LambdaTest/LT-appium-firetv
 cd LT-appium-firetv
@@ -204,6 +210,9 @@ Make sure you have your <BrandName /> credentials with you to run test automatio
 <Tabs className="docs__val">
 
 <TabItem value="bash" label="Linux / MacOS" default>
+
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">
   {`export LT_USERNAME=${ YOUR_LAMBDATEST_USERNAME()} \\
@@ -214,6 +223,8 @@ export LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
+
+  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
   <CodeBlock className="language-powershell">
@@ -229,6 +240,8 @@ set LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
 
 An automation script for the sample application available above has been provided below. Ensure to update the `APP_URL`, `username` and `accessKey` in the code scripts before running the tests.
 
+
+<VerifiedTag value="Verified" />
 
 ```python title="firetv.py"
 from xml.dom.expatbuilder import Rejecter
@@ -316,6 +329,8 @@ Same as Android.
 **Platform:**
 `"fireos"`
 
+<VerifiedTag value="Verified" />
+
 ```python title="firetv.py"
 def getCaps():
     desired_cap= {
@@ -344,11 +359,15 @@ def getCaps():
 
 1. Install the required packages from the cloned project directory:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 pip install -r requirements.txt
 ```
 
 2. Run the following command in the directory where your project has been saved to execute your build.
+
+<VerifiedTag value="Verified" />
 
 ```python
 python firetv.py

@@ -19,6 +19,7 @@ canonical: https://www.testmuai.com/support/docs/run-tests-with-chrome-devtools-
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -211,11 +212,15 @@ These examples are written in TypeScript. You're free to use plain JavaScript in
 
 **1. Install the Puppeteer client.** `puppeteer-core` connects to a remote browser without downloading a local one.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npm install puppeteer-core
 ```
 
 A successful install adds the package to your project:
+
+<VerifiedTag value="Verified" />
 
 ```text
 added 25 packages, and audited 26 packages in 5s
@@ -223,6 +228,8 @@ found 0 vulnerabilities
 ```
 
 **2. Set your credentials.** Copy your **Username** and **Access Key** from **Settings → Account Settings**, then set them as environment variables.
+
+<VerifiedTag value="Verified" />
 
 <Tabs groupId="os">
   <TabItem value="unix" label="macOS / Linux" default>
@@ -252,6 +259,8 @@ set LT_ACCESS_KEY=your_access_key
 </Tabs>
 
 **3. Create `cdp-test.ts`.** It builds the CDP endpoint from your credentials, connects Puppeteer to the cloud browser, pages through the listing, marks the test **passed** or **failed** on the dashboard, and disconnects.
+
+<VerifiedTag value="Verified" />
 
 ```typescript
 // cdp-test.ts
@@ -337,11 +346,15 @@ run().catch((e) => {
 
 **4. Run it** with a TypeScript runner:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npx tsx cdp-test.ts
 ```
 
 The scan runs on the cloud browser and prints the products it collected:
+
+<VerifiedTag value="Verified" />
 
 ```text
 Page 1: 15 products
@@ -373,11 +386,15 @@ The TestMu AI Browser SDK wraps the same CDP connection and adds these, so it is
 
 **1. Install the TestMu AI Browser SDK.** It includes the Puppeteer client and manages the CDP session for you. The package is published on the npm registry as [`@testmuai/browser-cloud`](https://www.npmjs.com/package/@testmuai/browser-cloud).
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npm install @testmuai/browser-cloud
 ```
 
 **2. Create `agent-scrape.ts`.** This is the same product-listing scan from the section above, ported to the Browser SDK: it creates a stealth session, connects over CDP, runs the scan, marks the test **passed** or **failed**, and releases the session.
+
+<VerifiedTag value="Verified" />
 
 ```typescript
 // agent-scrape.ts
@@ -458,11 +475,15 @@ run().catch((e) => {
 
 **3. Run it:**
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npx tsx agent-scrape.ts
 ```
 
 The SDK creates a stealth session, prints a live-session link, and runs the same scan through Browser Cloud:
+
+<VerifiedTag value="Verified" />
 
 ```text
 Session created: session_1786903262009_f0ruuv
@@ -484,6 +505,8 @@ Open the TestMu AI Web Automation dashboard to watch the run and confirm it is m
 Because the SDK hands you a full Puppeteer `page`, an agent can do more than read text. This example scrapes the primary product image from each card on the [E-Commerce Playground](https://ecommerce-playground.lambdatest.io/) listing and downloads the first five to disk.
 
 **Create `agent-image-scrape.ts`:**
+
+<VerifiedTag value="Verified" />
 
 ```typescript
 // agent-image-scrape.ts
@@ -559,6 +582,8 @@ run().catch((e) => {
 ```
 
 Run it with `npx tsx agent-image-scrape.ts`. It reads the images from the cloud browser and saves them locally:
+
+<VerifiedTag value="Verified" />
 
 ```text
 Found 15 product images

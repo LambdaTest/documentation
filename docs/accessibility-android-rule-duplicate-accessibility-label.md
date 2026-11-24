@@ -5,6 +5,8 @@ sidebar_label: Duplicate Accessibility Label
 description: "Find interactive Android elements that share an identical accessibility label so TalkBack and Voice Access users can tell controls apart."
 slug: accessibility-android-rule-duplicate-accessibility-label/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

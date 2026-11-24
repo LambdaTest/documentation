@@ -17,7 +17,7 @@ image: /assets/images/og-images/selenium-testing-og.png
 url: https://www.testmuai.com/support/docs/selenium-supported-languages-and-frameworks/
 site_name: TestMu AI
 slug: selenium-supported-languages-and-frameworks/
-canonical: https://www.testmu.ai/support/docs/selenium-supported-languages-and-frameworks/
+canonical: https://www.testmuai.com/support/docs/selenium-supported-languages-and-frameworks/
 ---
 
 import SeleniumSupportedLanguage from '../src/component/SupportedLanguages/SeleniumSupportedLanguage';

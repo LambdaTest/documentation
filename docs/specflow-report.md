@@ -11,10 +11,11 @@ keywords:
 url: https://www.testmuai.com/support/docs/specflow-report/
 site_name: TestMu AI
 slug: specflow-report/
-canonical: https://www.testmu.ai/support/docs/specflow-report/
+canonical: https://www.testmuai.com/support/docs/specflow-report/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -92,6 +93,8 @@ This technical document provides a guide on generating SpecFlow reports after ex
 **Step 1:** Configure all the necessary dependencies and configurations to your project.
 
 **Step 2:** Configure the report parameters in the HyperExecute YAML file.
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 report: true

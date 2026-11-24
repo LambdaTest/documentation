@@ -5,6 +5,8 @@ sidebar_label: Interactive Role Undefined
 description: "Find custom tappable iOS views that expose no accessibility role, so VoiceOver can announce what they are and how to interact with them."
 slug: accessibility-ios-rule-interactive-role-undefined/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

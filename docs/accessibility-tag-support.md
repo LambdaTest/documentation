@@ -18,6 +18,7 @@ canonical: https://www.testmuai.com/support/docs/accessibility-tag-support/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -254,6 +255,8 @@ Trigger the scan with `lambda-accessibility-scan` and pass one or more tags.
 
 Tag support is available in all supported Appium flows for mobile accessibility automation. The exact method name depends on your client library, but the payload pattern stays the same: call `lambda-accessibility-scan` and pass a `tags` list.
 
+<VerifiedTag value="Verified" />
+
 ```java
 ((JavascriptExecutor) driver).executeScript(
     "lambda-accessibility-scan",
@@ -262,6 +265,8 @@ Tag support is available in all supported Appium flows for mobile accessibility 
     }}
 );
 ```
+
+<VerifiedTag value="Verified" />
 
 ```python
 driver.execute_script(
@@ -272,6 +277,8 @@ driver.execute_script(
 )
 ```
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 await driver.execute("lambda-accessibility-scan", [{
   tags: ["Login Screen", "Smoke"]
@@ -281,6 +288,8 @@ await driver.execute("lambda-accessibility-scan", [{
 ### Example: Tag scans for multiple screens
 
 You can call the scan multiple times in the same test and use different tags for each scan.
+
+<VerifiedTag value="Verified" />
 
 ```java
 ((JavascriptExecutor) driver).executeScript(

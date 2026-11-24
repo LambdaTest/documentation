@@ -1,0 +1,141 @@
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: sticky;
+  top: 110px;
+  max-height: calc(100vh - 130px);
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+
+.panel::-webkit-scrollbar {
+  display: none;
+}
+
+/* Code Section */
+.codeSection {
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.codeHeader {
+  display: flex;
+  align-items: center;
+  padding: 10px 14px;
+  background: var(--ifm-color-emphasis-100);
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+  gap: 8px;
+}
+
+.codeTitle {
+  flex: 1;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ifm-color-primary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.langSelector {
+  flex-shrink: 0;
+}
+
+.langDropdown {
+  padding: 4px 8px;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 4px;
+  background: var(--ifm-background-color);
+  color: var(--ifm-color-primary);
+  font-size: 12px;
+  cursor: pointer;
+  outline: none;
+}
+
+.copyBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  color: var(--ifm-color-emphasis-500);
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+.copyBtn:hover {
+  background: var(--ifm-color-emphasis-200);
+  color: var(--brand-amber);
+}
+
+.codeBlock {
+  margin: 0;
+  padding: 16px;
+  overflow-x: auto;
+  font-size: 13px;
+  line-height: 1.6;
+  background: var(--ifm-background-color);
+  max-height: 300px;
+}
+
+.codeBlock code {
+  background: transparent;
+  padding: 0;
+  white-space: pre;
+}
+
+/* Response Section */
+.responseSection {
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.responseTabs {
+  display: flex;
+  align-items: center;
+  padding: 0 14px;
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+  background: var(--ifm-color-emphasis-100);
+  gap: 4px;
+}
+
+.responseTab {
+  padding: 8px 12px;
+  border: none;
+  background: transparent;
+  color: var(--ifm-color-emphasis-600);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: color 0.15s;
+}
+
+.responseTab:hover {
+  color: var(--brand-amber);
+}
+
+.responseTabActive {
+  color: var(--brand-amber);
+  border-bottom-color: var(--brand-amber);
+}
+
+.responseBlock {
+  margin: 0;
+  padding: 16px;
+  overflow: auto;
+  font-size: 13px;
+  line-height: 1.6;
+  background: var(--ifm-background-color);
+  max-height: 400px;
+}
+
+.responseBlock code {
+  background: transparent;
+  padding: 0;
+  white-space: pre;
+}

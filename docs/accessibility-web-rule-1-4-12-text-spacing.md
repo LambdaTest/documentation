@@ -5,6 +5,8 @@ sidebar_label: Text Spacing (1.4.12)
 description: Rule-level Accessibility guidance for Text Spacing (WCAG 1.4.12 Level AA).
 slug: accessibility-web-rule-1-4-12-text-spacing/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

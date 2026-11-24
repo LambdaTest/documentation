@@ -21,6 +21,7 @@ import TabItem from '@theme/TabItem';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 
@@ -196,6 +197,8 @@ Make sure you have the following set up before you start.
 
 Pull the sample repo to your local machine and navigate into the project directory.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git clone https://github.com/LambdaTest/CSharp-xUnit-Selenium
 cd CSharp-xUnit-Selenium
@@ -212,6 +215,8 @@ Visit the [TestMu AI Dashboard](https://www.testmuai.com/login/?redirectTo=https
 
 <TabItem value="bash" label="macOS / Linux" default>
 
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
@@ -222,6 +227,8 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
+
+  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
@@ -239,6 +246,8 @@ set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 Define the browser, version, and OS for your test run.
 
 Update the `config.json` file with your desired capabilities:
+
+<VerifiedTag value="Verified" />
 
 ```csharp
 {
@@ -286,12 +295,16 @@ Build and run xUnit tests from Visual Studio or the command line.
 
 **From the terminal (macOS/Linux):**
 
+<VerifiedTag value="Verified" />
+
 ```bash
 dotnet clean
 dotnet test --filter "profile=single"
 ```
 
 To run tests in parallel:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 dotnet test --filter "profile=parallel"
@@ -318,6 +331,8 @@ Use AI coding assistants to generate and run xUnit tests with the TestMu AI Agen
 The [xunit-skill](https://github.com/LambdaTest/agent-skills/tree/main/xunit-skill) is part of [TestMu AI Agent Skills](https://github.com/LambdaTest/agent-skills/) - structured packages that teach AI coding assistants how to write production-grade test automation.
 
 Install the skill:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 git clone https://github.com/LambdaTest/agent-skills.git

@@ -21,6 +21,7 @@ import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import CookieTrackingLogin from '@site/src/component/CookieTracking';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 
@@ -152,6 +153,8 @@ Run the below mentioned commands in the terminal to setup the CLI and the enviro
 
 <TabItem value="bash" label="Linux / MacOS" default>
 
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
@@ -162,6 +165,8 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
+
+  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
@@ -180,6 +185,8 @@ Here is a sample automation script in Java. Ensure to update the `username` and 
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
   <TabItem value="android" label="Android Web App" default>
@@ -410,6 +417,8 @@ Once you have run your tests, you can view the test execution along with logs. Y
 
 ## Sample YAML 0.2
 
+<VerifiedTag value="Verified" />
+
 ```bash
 version: "0.1"
 runson: win
@@ -436,6 +445,8 @@ framework:
 
 ## More About Desired Capabilities
 Sample Capabilities for both android and iOS web app mentioned below -
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
 <TabItem value="androidCaps" label="Android" default>

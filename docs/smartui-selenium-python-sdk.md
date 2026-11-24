@@ -17,7 +17,7 @@ keywords:
 
 url: https://www.testmuai.com/support/docs/smartui-selenium-python-sdk/
 slug: smartui-selenium-python-sdk/
-canonical: https://www.testmu.ai/support/docs/smartui-selenium-python-sdk/
+canonical: https://www.testmuai.com/support/docs/smartui-selenium-python-sdk/
 
 ---
 import Tabs from '@theme/Tabs';
@@ -25,6 +25,7 @@ import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
@@ -360,6 +361,8 @@ Integrating seamlessly into your existing Selenium testing suite, SmartUI SDK re
 - Login to [<BrandName /> SmartUI](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/) with your credentials.
 - Install **virtualenv** which is the recommended way to run your tests. It will isolate the build from other setups you may have running and ensure that the tests run with the specified versions of the modules.
   
+<VerifiedTag value="Verified" />
+
 ```bash
 pip install virtualenv
 ```
@@ -384,6 +387,8 @@ Once you have created a SmartUI Project, you can generate screenshots by running
 
 - You can clone the sample repository to run `LambdaTest` automation tests with `SmartUI` and use the `SmartUI_SDK_LT_hub.py` file.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git clone https://github.com/LambdaTest/smartui-python-sample
 cd smartui-python-sample
@@ -391,12 +396,16 @@ cd smartui-python-sample
 
 - Create a virtual environment in your project folder (the environment name is arbitrary).
   
+<VerifiedTag value="Verified" />
+
 ```bash
 virtualenv venv
 ```
 
 - Activate the environment.
   
+<VerifiedTag value="Verified" />
+
 ```bash
 source venv/bin/activate
 ```
@@ -405,6 +414,8 @@ source venv/bin/activate
 
 Install required NPM modules for `TestMu AI SmartUI Selenium SDK` in your **Frontend** project.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npm install @lambdatest/smartui-cli
 ```
@@ -412,6 +423,9 @@ npm install @lambdatest/smartui-cli
 :::note
 If you face any problems executing tests with SmartUI-CLI `versions >= v4.x.x`, upgrade your Node.js version to `v20.3` or above.
 :::
+
+<VerifiedTag value="Verified" />
+
 ```bash
 pip install lambdatest-selenium-driver
 ```
@@ -419,6 +433,8 @@ pip install lambdatest-selenium-driver
 ### **Step 3:** Configure your Project Token
 
 Setup your project token shown in the **SmartUI** app after creating your project.
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux' label='MacOS/Linux' default>
@@ -450,11 +466,15 @@ $env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 
 You can now configure your project configurations on using various available options to run your tests with the SmartUI integration. To generate the configuration file, please execute the following command:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npx smartui config:create .smartui.json
 ```
 
 Once, the configuration file will be created, you will be seeing the default configuration pre-filled in the configuration file:
+
+<VerifiedTag value="Verified" />
 
 ```json title="/smartui-sdk-project/.smartui.json"
 {
@@ -501,6 +521,8 @@ Once, the configuration file will be created, you will be seeing the default con
 
 - You can incorporate SmartUI into your custom `Selenium` automation test (any platform) script by adding the `smartuiSnapshot` function in the required segment of selenium script of which we would like to take the screenshot, as shown below: 
 
+<VerifiedTag value="Verified" />
+
 ```python
 from lambdatest_selenium_driver import smartui_snapshot
 from selenium import webdriver
@@ -518,6 +540,8 @@ finally:
 ### **Step 6:** Execute the Tests on SmartUI Cloud
 
 Execute `visual regression tests` on SmartUI using the following commands
+
+<VerifiedTag value="Verified" />
 
 ```bash
 npx smartui exec python SmartUI_SDK_LT_hub.py --config .smartui.json
@@ -548,6 +572,8 @@ The following are the different options which are currently supported:
 ## Handling Dynamic Data in SmartUI SDK  **<NewTag value='New' color='#000' bgColor='#ffec02' />** 
 
 When conducting visual tests, you may encounter scenarios where certain elements within your application change between test runs. These changes  might introduce inconsistencies in your test results.You can ignore / select specific element(s) to be removed from the comparison by parsing the options in the `smartuiSnapshot` function in the following way
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='framework'>
 <TabItem value='IgnoreID' label='Ignore ID' default>
@@ -604,6 +630,8 @@ smartui_snapshot(driver,"<Screenshot Name>", options)
 </TabItem>
 
 </Tabs>
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='framework'>
 <TabItem value='SelectID' label='Select ID' default>
@@ -665,6 +693,8 @@ smartui_snapshot(driver,"<Screenshot Name>", options)
 
 You can capture screenshots of targeted elements by leveraging various locator mechanisms such as XPath, CSS ID, class, and selectors. This precision-driven approach ensures accurate and specific visual regression testing for your web application's components.
 
+<VerifiedTag value="Verified" />
+
 <Tabs className='docs__val' groupId='framework'>
 <TabItem value='ElementID' label='Capture Element by ID' default>
 
@@ -725,6 +755,8 @@ smartui_snapshot(driver,"<Screenshot Name>", options)
 
 If you encounter difficulties loading interactive elements that appear on scroll in full-page screenshots, consider functionally incorporating a full-page scroll into your script before capturing the screenshot. This approach ensures the elements load first, facilitating the screenshot processing.
 
+<VerifiedTag value="Verified" />
+
 ```py Example for scrolling to bottom for lazy elements
 from selenium import webdriver
 from lambdatest_selenium_driver import smartui_snapshot
@@ -762,6 +794,8 @@ if __name__ == "__main__":
 ```
 
 ## Best Practices
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='best-practices'>
 <TabItem value='screenshot-naming' label='Screenshot Naming' default>
@@ -835,6 +869,8 @@ smartui_snapshot(driver, "Page Loaded")
 </Tabs>
 
 ## Troubleshooting
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='troubleshooting'>
 <TabItem value='screenshots-not-appearing-in-dashboard' label='Screenshots Not Appearing in Dashboard' default>
@@ -1005,11 +1041,12 @@ If you encounter issues not covered here:
 - Review the [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide) for detailed solutions
 - Check [SmartUI Configuration Options](/support/docs/smartui-sdk-config-options) documentation
 - See [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data) for dynamic content issues
-- Visit [<BrandName /> Support](https://www.testmuai.com/support) for additional resources
-- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support)
+- Visit [<BrandName /> Support](https://www.testmuai.com/support/docs/) for additional resources
+- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support/docs/)
 
 </TabItem>
 </Tabs>
+
 
 ## Additional Resources
 

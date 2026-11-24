@@ -5,6 +5,8 @@ sidebar_label: Non-accessible Interaction
 description: "Flag iOS interactions available to touch but unreachable via VoiceOver, Switch Control, or Voice Control, so every action is accessible."
 slug: accessibility-ios-rule-non-accessible-interaction/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

@@ -12,7 +12,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/microsoft-teams-integration/
 site_name: TestMu AI
 slug: microsoft-teams-integration/
-canonical: https://www.testmu.ai/support/docs/microsoft-teams-integration/
+canonical: https://www.testmuai.com/support/docs/microsoft-teams-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

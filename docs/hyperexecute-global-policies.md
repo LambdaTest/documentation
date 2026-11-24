@@ -127,7 +127,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         "text": "{\n  \"enabled\": false,\n  \"updatedBy\": \"<your-name-or-service-account>\"\n}"
       }
     ],
-    "dateModified": "2026-09-09T19:10:37+05:30"
+    "dateModified": "2026-11-11T14:00:00+05:30"
   }) }}
 />
 
@@ -162,9 +162,7 @@ Every HyperExecute job is configured by a [YAML file](/support/docs/deep-dive-in
 
 **Global Policies** let an organization admin define a rule once and have it govern every HyperExecute job across the projects they choose. The rule is applied when a job is submitted, so no developer has to touch their YAML.
 
-:::info BETA
-Global Policies is currently in BETA. Phase 1 supports seven YAML parameters, listed in [Supported parameters and modes](#supported-parameters-and-modes). More parameters and policy modes will follow.
-:::
+Global Policies support seven YAML parameters, listed in [Supported parameters and modes](#supported-parameters-and-modes). More parameters and policy modes will follow.
 
 :::note
 Creating, editing, and deleting policies is **admin-only**. Developers can see which policies acted on their jobs, but cannot change them.
@@ -181,6 +179,10 @@ Creating, editing, and deleting policies is **admin-only**. Developers can see w
 <img loading="lazy" src={require('../assets/images/hyperexecute/features/global-policies/global-policies-list.png').default} alt="Global Policies dashboard listing existing policies with their parameter, mode, severity and enabled state" className="doc_img"/>
 
 Policies are **API-first**, so you can create and maintain them from your automation (Harness, Jenkins, a Git-managed script) exactly like the rest of your pipeline. You can also manage them from the <BrandName /> dashboard under [Org Product Preferences](/support/docs/hyperexecute-org-product-preferences/).
+
+:::info On-premise deployments
+On-prem runs Linux and Windows only, so a `mac` command block is never used, and `default` should name `linux` or `win`. See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/#step-4-prepare-your-yaml).
+:::
 
 ## What a policy is
 
@@ -343,6 +345,8 @@ A checking policy at `warn` severity lets the job run and records the violation.
 
 A checking policy at `error` severity rejects the submission, so no job is created. The response tells the developer which policy blocked it, the offending value, and the fix:
 
+<VerifiedTag value="Verified" />
+
 ```text
 Your job was rejected by org policy "cap-retries":
 maxRetries is 6; the allowed maximum is 3. Fix: set maxRetries to 3 or lower.
@@ -359,6 +363,8 @@ Everything you can do in the UI, you can do over the API, which is usually what 
 
 Policy routes sit under a `/logistics` path prefix on the HyperExecute API host:
 
+<VerifiedTag value="Verified" />
+
 ```text
 https://api.hyperexecute.cloud/logistics
 ```
@@ -367,6 +373,8 @@ https://api.hyperexecute.cloud/logistics
 
 Policy endpoints use HTTP Basic authentication with your <BrandName /> **username** and **access key**, the same credentials as the rest of the HyperExecute API. Because policy management is admin-only, use an organization admin user, or a **service account** if you are driving this from automation with no interactive login.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 curl -u "<YOUR_USERNAME>:<YOUR_ACCESS_KEY>" \
   -H "Content-Type: application/json" \
@@ -374,6 +382,10 @@ curl -u "<YOUR_USERNAME>:<YOUR_ACCESS_KEY>" \
 ```
 
 Run that list call first to confirm your credentials work. A `200` with a list (possibly empty) means you are set.
+
+:::info On-premise deployments
+On-prem, ask your admin for your deployment's API base URL, and use credentials from your organization's own dashboard. See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/).
+:::
 
 ### Endpoints
 
@@ -417,6 +429,8 @@ The `value` field takes a different shape for each parameter:
 
 This example appends a result-logging command to every job in the organization, with a per-OS command list:
 
+<VerifiedTag value="Verified" />
+
 ```json
 {
   "name": "post-job-result-logging",
@@ -438,6 +452,8 @@ This example appends a result-logging command to every job in the organization, 
 ```
 
 The response returns the created policy's generated `id`, which you use for every subsequent call:
+
+<VerifiedTag value="Verified" />
 
 ```json
 {
@@ -501,6 +517,8 @@ The response returns the created policy's generated `id`, which you use for ever
 
 A checking policy adds a `severity` and drops the per-OS structure:
 
+<VerifiedTag value="Verified" />
+
 ```json
 {
   "name": "cap-retries",
@@ -518,6 +536,8 @@ A checking policy adds a `severity` and drops the per-OS structure:
 `PUT /v1.0/policies/{id}` updates a policy's **value**, **scope**, **severity**, or **enabled** state. Send the full object back, including `name` and `parameter` unchanged; neither can be modified. To change either one, create a new policy instead.
 
 To pause enforcement without losing the policy, use the toggle endpoint. `updatedBy` is optional and records who made the change for the audit trail:
+
+<VerifiedTag value="Verified" />
 
 ```json
 {

@@ -2,8 +2,8 @@
 id: generate-test-cases-with-ai
 title: Generate Test Cases with AI
 hide_title: true
-sidebar_label: Generate Test Cases with AI
-description: Learn efficient test case generation with in TestMu AI's Test Manager using AI, in manual steps or BDD (Gherkin) format.
+sidebar_label: AI Test Case Generator
+description: Learn efficient test case generation with in TestMu AI's Test Manager using AI.
 keywords:
   - test case creation
   - test case
@@ -19,10 +19,6 @@ keywords:
   - codeless test automation
   - automated test case creation
   - generate tests from requirements
-  - BDD test case generation
-  - Gherkin test cases
-  - Given When Then
-  - behaviour driven development test cases
 url: https://www.testmuai.com/support/docs/generate-test-cases-with-ai/
 site_name: TestMu AI
 slug: generate-test-cases-with-ai/
@@ -31,6 +27,7 @@ toc_min_heading_level: 2
 toc_max_heading_level: 2
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 
@@ -165,8 +162,8 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 # AI Test Case Generator
 
-## What is the AI Test Case Generator?
-The **AI Test Case Generator** is an intelligent feature within <BrandName /> Test Manager and KaneAI that allows users to convert various requirement formats (like text, PDFs, audio, videos, images, Jira tickets and more) into structured, contextual software test cases. It significantly accelerates the test case creation process while improving coverage and quality.
+
+The **AI Test Case Generator** is an intelligent feature within <BrandName /> Test Manager and KaneAI that allows users to convert various requirement formats (like text, PDFs, audio, videos, images, issues from Jira, Azure DevOps, and Linear, and more) into structured, contextual software test cases. It significantly accelerates the test case creation process while improving coverage and quality.
 
 This feature is designed to save time, improve test coverage, and streamline the test design process for both manual and automated testing workflows.
 
@@ -226,6 +223,9 @@ Project-level instructions are specific to a single project and are applied when
 
 
 **Example project-level instructions:**
+
+<VerifiedTag value="Verified" />
+
 ```
 - All test cases must include preconditions for user authentication state.
 - Use the naming convention: [Module]_[Feature]_[Scenario]_[Positive/Negative].
@@ -247,6 +247,9 @@ Organization-level instructions apply globally across all projects within your o
 
 
 **Example organization-level instructions:**
+
+<VerifiedTag value="Verified" />
+
 ```
 - Include accessibility testing considerations where applicable.
 - Severity and priority must be assigned to every test case.
@@ -282,6 +285,7 @@ The Memory Layer operates automatically in the background, you can choose to ena
 :::
 ---
 
+
 ## Generate Test Cases: Step-by-Step
 
 ### Step 1: Open the AI Test Case Generator
@@ -304,7 +308,7 @@ Start by entering your product or feature requirements in the input box.
 
 We support multiple input formats, including:
 - **Textual requirements**
-- **Jira/Azure DevOps links** (e.g., epics, stories, tasks)
+- **Jira/Azure DevOps/Linear links** (e.g., epics, stories, tasks)
 - **PDFs**
 - **Images**
 - **Audio** (recordings or uploads)
@@ -340,6 +344,8 @@ The format you choose is remembered for the rest of the session. Follow-up messa
 ##### BDD Scenario Output
 
 With the toggle on, each test case carries one or more Gherkin scenarios instead of manual steps:
+
+<VerifiedTag value="Verified" />
 
 ```gherkin
 Scenario: Complete a motorcycle purchase successfully
@@ -404,18 +410,18 @@ Keywords used are `Scenario:`, `Given`, `When`, `Then`, `And` and `But`. The fol
 
 
 ##### Add Issue Links
-- Integrate your <BrandName /> account with Jira/Azure DevOps. Follow the steps described in the following link to integrate Jira/Azure DevOps:
-[<BrandName /> Jira Integration](/support/docs/jira-integration/#how-to-establish-integration-with-jira-from-your-lambdatest-account) / [<BrandName /> Azure DevOps Integration](/support/docs/link-ado-issues-with-test-manager/)
+- Integrate your <BrandName /> account with Jira/Azure DevOps/Linear. Follow the steps described in the following link to integrate Jira/Azure DevOps/Linear:
+[<BrandName /> Jira Integration](/support/docs/jira-integration/#how-to-establish-integration-with-jira-from-your--account) / [<BrandName /> Azure DevOps Integration](/support/docs/link-ado-issues-with-test-manager/) / [<BrandName /> Linear Integration](/support/docs/linear-app-integration/)
 
-- After integration is completed, select `Link Jira Issues` / `Link Azure DevOps Issues`.
+- After integration is completed, select `Link Jira Issues` / `Link Azure DevOps Issues` / `Link Linear Issues`.
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/link_jira_test_cases_generation.png').default} alt="link_jira_test_cases_generation" width="1347" height="616"  className="doc_img"/>
 
 
-- Enter your Jira/Azure DevOps issue ID or link and press Enter.
+- Enter your Jira/Azure DevOps/Linear issue ID or link and press Enter.
 
 :::note
- Only issues from the connected Jira/Azure DevOps project can be linked here.
+ Only issues from the connected Jira/Azure DevOps/Linear project can be linked here.
 :::
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/jira_id_test_cases_generation.png').default} alt="jira_id_test_cases_generation" width="1347" height="616"  className="doc_img"/>
@@ -426,7 +432,7 @@ Keywords used are `Scenario:`, `Given`, `When`, `Then`, `And` and `But`. The fol
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/linked_jira_view_test_cases_generation.png').default} alt="linked_jira_view_test_cases_generation" width="1347" height="616"  className="doc_img"/>
 
 :::note
-For linked Jira issues, attachments such as images and other files are also fetched and used as context for test case generation, in addition to the textual content. The same limits that apply to direct file uploads apply here: a maximum of 10 files with a file size limit of 50 MB per file. Azure DevOps integration fetches textual content only.
+For linked Jira issues, attachments such as images and other files are also fetched and used as context for test case generation, in addition to the textual content. The same limits that apply to direct file uploads apply here: a maximum of 10 files with a file size limit of 50 MB per file. Azure DevOps and Linear integrations fetch textual content only. For a linked Linear issue, that context is the issue's summary, description, and comments.
 :::
 
 ##### Configure Generation Settings
@@ -487,6 +493,7 @@ The details panel matches the format the test case was generated in. Manual Test
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/bdd_scenarios_test_case_details.png').default} alt="bdd-scenarios-test-case-details" width="1347" height="616" className="doc_img"/>
 
+
 ---
 
 ## Conversation Layer: Refine Your Test Cases
@@ -495,7 +502,7 @@ After generating your initial test scenarios and cases, you can use the **Conver
 
 <!-- <img loading="lazy" src={require('../assets/images/mobile-app-testing/conversation_layer_overview.png').default} alt="conversation-layer-overview" width="1347" height="616" className="doc_img"/> -->
 
-### Conversational Workspace
+#### Conversational Workspace
 
 When the Conversation Layer is active, the workspace is divided into two primary panels:
 
@@ -531,14 +538,14 @@ To review the context used for your current generation session, click the **penc
 - **Attached Files**: All files uploaded during the session.
 - **Organization Instructions**: Organization-level custom instructions applied to the session.
 - **Project Instructions**: Project-level custom instructions applied to the session.
-- **Linked Issues**: Jira or Azure DevOps issues linked to the session.
+- **Linked Issues**: Jira, Azure DevOps, or Linear issues linked to the session.
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/session_context_drawer.png').default} alt="session-context-drawer" width="1347" height="616" className="doc_img"/>
 
 
 Use the context drawer to verify that the AI is working with the correct inputs. You can review linked issues, attached files, and the custom instructions being applied before sending refinement messages.
 
-### Conversational Refinement
+#### Conversational Refinement
 
 **How It Works:**
 
@@ -547,7 +554,7 @@ Use the context drawer to verify that the AI is working with the correct inputs.
 3. **Changes stream in real time** to the live output view on the right.
 4. **You review and iterate**: send follow-up messages to fine-tune further.
 
-### @ Referencing System
+#### @ Referencing System
 
 The `@` referencing system allows you to precisely target specific scenarios or test cases in your messages.
 
@@ -571,7 +578,7 @@ The `@` referencing system allows you to precisely target specific scenarios or 
 
 The Conversation Layer transforms how you refine test scenarios. Instead of manually editing each test case, describe what you need in natural language, and watch your test suite reshape itself in real time.
 
-### Reorganize Test Scenarios
+#### Reorganize Test Scenarios
 
 Restructure how your test cases are grouped and organized.
 
@@ -583,7 +590,7 @@ Restructure how your test cases are grouped and organized.
 | Create user journey scenarios | Create end-to-end user journey scenarios. Combine login, product search, add to cart, and checkout into a complete "Customer Purchase Journey" scenario |
 
 
-### Expand Test Coverage
+#### Expand Test Coverage
 
 Add new test cases or scenarios to improve coverage.
 
@@ -596,7 +603,7 @@ Add new test cases or scenarios to improve coverage.
 | Add new scenarios | Create a new scenario for the password reset flow with test cases covering successful reset, expired reset links, invalid tokens, rate limiting, and already-used tokens |
 
 
-### Remove Unnecessary Tests
+#### Remove Unnecessary Tests
 
 Clean up your test suite by removing low-value or out-of-scope test cases.
 
@@ -608,7 +615,7 @@ Clean up your test suite by removing low-value or out-of-scope test cases.
 | Remove by user role | Our next sprint focuses only on logged-in users. Remove all guest user and anonymous browsing test cases, keep authenticated user workflows |
 
 
-### Combine and Merge Tests
+#### Combine and Merge Tests
 
 Reduce redundancy by merging overlapping test cases.
 
@@ -619,7 +626,7 @@ Reduce redundancy by merging overlapping test cases.
 | Consolidate compatibility tests | We have separate test cases for Chrome, Firefox, Safari, and Edge. Merge these into a single cross-browser compatibility test with browser-specific validation steps |
 
 
-### Standardize Naming and Formatting
+#### Standardize Naming and Formatting
 
 Apply consistent naming conventions and formatting across test cases.
 
@@ -631,7 +638,7 @@ Apply consistent naming conventions and formatting across test cases.
 | Add tags | Tag all critical user journey test cases with "smoke-suite" so we can easily filter them for our smoke testing runs |
 
 
-### Enhance Test Case Details
+#### Enhance Test Case Details
 
 Add preconditions, cleanup steps, or additional context to test cases.
 
@@ -644,7 +651,7 @@ Add preconditions, cleanup steps, or additional context to test cases.
 | Add steps at specific position | In @S2.C2, add a step between step 3 and step 4 to take a screenshot of the shopping cart and verify the item quantity matches what was added |
 
 
-### Make Targeted Modifications
+#### Make Targeted Modifications
 
 Precisely modify specific scenarios or test cases using `@` references.
 
@@ -662,7 +669,7 @@ Precisely modify specific scenarios or test cases using `@` references.
 - **Start broad, then refine**: First organize scenarios at a high level, then drill down to individual test cases
 :::
 
-### Re-Generation Settings
+#### Re-Generation Settings
 
 The Test Case Generator provides several controls that work alongside the Conversation Layer:
 
@@ -678,7 +685,7 @@ Regeneration replaces all current scenarios. To keep specific scenarios intact a
 :::
 
 
-### Credit Usage
+#### Credit Usage
 
 The Conversation Layer consumes AI credits based on the scope of each refinement.
 
@@ -692,7 +699,7 @@ The Conversation Layer consumes AI credits based on the scope of each refinement
 - If your message affects multiple scenarios, credits are deducted for each scenario impacted.
 - Your remaining credit balance is visible in your account dashboard.
 
-### Current Limitations
+#### Current Limitations
 
 The following capabilities are planned for future releases:
 
@@ -709,16 +716,19 @@ Once you have generated and refined your test scenarios and test cases, it's tim
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/create_automate_test_cases.png').default} alt="create-test-cases" width="1347" height="616" className="doc_img"/>
 
 
-### Option 1: Create Test Cases
+#### Option 1: Create Test Cases
 Select the desired test cases and click **Create** to save them directly to your **Test Case Repository** in <BrandName /> Test Manager. These saved test cases can then be assigned to test runs, shared with teams, or used in manual test planning. Any files attached during the generation session will also be saved as attachments on the created test cases.
 
 Test cases generated in **BDD Scenarios** format are saved with the **Behaviour Driven Development** template, and their scenarios appear under the **Test steps** tab. Test cases generated in **Manual Test Steps** format are saved with the **Manual Test Steps** template. The format is carried over from the generation session — you do not need to select a template when saving.
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/bdd_saved_test_case_test_manager.png').default} alt="bdd-saved-test-case-test-manager" width="1347" height="616" className="doc_img"/>
+
 <!-- <img loading="lazy" src={require('../assets/images/mobile-app-testing/create_test_cases.png').default} alt="create-test-cases" width="1347" height="616" className="doc_img"/> -->
 
-### Option 2: Create and Automate with KaneAI
+#### Option 2: Create and Automate with KaneAI
 Select the desired test cases and click **Create and Automate** to save the test cases to your repository and submit them to KaneAI for automated authoring. Clicking this button opens the **Create and Automate Test Cases** dialog, where you configure automation settings before KaneAI begins authoring. The dialog displays the number of distinct test cases selected and how many are automation-ready.
+
+Test cases are sent to KaneAI in whichever format they were generated in. KaneAI reads manual steps and Gherkin scenarios directly, so no conversion happens either way. The same is true of the **Automate with KaneAI** action on an individual saved test case.
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/create_automate_dialog_desktop.png').default} alt=" " className="doc_img"/>
 
@@ -738,10 +748,6 @@ Configure environment-level settings for your test run. All platforms support **
 
 :::note
 The **Create and Automate** option requires KaneAI access. If you do not have KaneAI enabled on your account, use the **Create** option to save test cases manually.
-:::
-
-:::note
-Test cases are sent to KaneAI in whichever format they were generated in. KaneAI reads manual steps and Gherkin scenarios directly, so no conversion happens either way. The same is true of the **Automate with KaneAI** action on an individual saved test case.
 :::
 
 :::info Experimental Feature
@@ -798,6 +804,10 @@ Your session context, including generated scenarios and conversation history, is
 
 Yes. After refining your test cases through the Conversation Layer, you can export or save them to your Test Manager project using the same export workflows available in the Test Case Generator.
 
+**Is the Conversation Layer available for all plans?**
+
+The Conversation Layer is available to all users with access to Test Manager Premium or KaneAI plans. Credit consumption applies based on your plan's AI credit allocation.
+
 **Can I switch a test case between Manual Test Steps and BDD Scenarios after it is generated?**
 
 Not from the generator. The **Gherkin Format** toggle sets the format for test cases generated after you change it; existing test cases keep the format they were generated in. To convert a whole session, regenerate with the toggle in the format you want. Once a test case is saved, you can change its template in Test Manager, but the existing content is not rewritten into the new format.
@@ -813,7 +823,3 @@ Yes. KaneAI reads the `Given` / `When` / `Then` steps directly, so BDD test case
 **Why does the AI not generate `Scenario Outline:` or `Examples:` tables?**
 
 Test Manager's BDD editor has no interface for parameterised tables, so a scenario written that way could not be edited after saving. The AI writes a separate `Scenario:` for each data set instead.
-
-**Is the Conversation Layer available for all plans?**
-
-The Conversation Layer is available to all users with access to Test Manager Premium or KaneAI plans. Credit consumption applies based on your plan's AI credit allocation.

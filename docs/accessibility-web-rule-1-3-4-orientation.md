@@ -5,6 +5,8 @@ sidebar_label: Orientation (1.3.4)
 description: Rule-level Accessibility guidance for Orientation (WCAG 1.3.4 Level AA).
 slug: accessibility-web-rule-1-3-4-orientation/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

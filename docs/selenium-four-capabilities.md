@@ -13,7 +13,7 @@ image: /assets/images/og-images/automation-testing-og.png
 url: https://www.testmuai.com/support/docs/selenium-four-capabilities/
 site_name: TestMu AI
 slug: selenium-four-capabilities/
-canonical: https://www.testmu.ai/support/docs/selenium-four-capabilities/
+canonical: https://www.testmuai.com/support/docs/selenium-four-capabilities/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";

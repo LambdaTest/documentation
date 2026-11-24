@@ -5,6 +5,8 @@ sidebar_label: Button Element Capitalisation Check
 description: Rule-level Accessibility guidance for Button Element Capitalisation Check on iOS.
 slug: accessibility-ios-rule-button-element-capitalisation-check/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

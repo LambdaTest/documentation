@@ -34,6 +34,8 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import RealDeviceTag from '../src/component/realDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -175,6 +177,8 @@ Before enabling Smart Heal, ensure your app is uploaded to <BrandName />.
 
 To enable Smart Heal, add `"smartHeal": true` to your desired capabilities in your Appium test script.
 
+<VerifiedTag value="Verified" />
+
 <Tabs className="docs__val">
 <TabItem value="ios" label="iOS" default>
 
@@ -220,6 +224,8 @@ You can generate capabilities for your test requirements with the help of our in
 ### 3. Enable Smart Heal with Runtime Hooks
 
 You can also control Smart Heal dynamically during test execution using runtime hooks. This is useful when you want healing active in specific phases or after major UI changes.
+
+<VerifiedTag value="Verified" />
 
 ```java
 // Stop Smart Heal

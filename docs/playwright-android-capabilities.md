@@ -15,7 +15,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/capabilities-for-playwright-android/
 site_name: TestMu AI
 slug: capabilities-for-playwright-android/
-canonical: https://www.testmu.ai/support/docs/capabilities-for-playwright-android/
+canonical: https://www.testmuai.com/support/docs/capabilities-for-playwright-android/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
@@ -115,5 +115,6 @@ When you run a test on <BrandName /> using a specific device, there may be scena
 To quote an example, consider you want to run the test on an Pixel. It doesn’t matter which one, but it’s got to be an Pixel. In these cases, we can use REGEX to specify exactly that. You’ll now be allotted any Pixel device that’s available which widens the search of devices considerably.
 
 Refer [REGEX for App/Browser Automation](/support/docs/regular-expression-appium/) to read more on this.
+
 
 

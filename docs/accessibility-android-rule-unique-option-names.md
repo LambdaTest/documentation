@@ -5,6 +5,8 @@ sidebar_label: Unique Option Names
 description: "Find options in an Android selection group, like radio buttons or tabs, that share an accessible name so TalkBack users can tell them apart."
 slug: accessibility-android-rule-unique-option-names/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

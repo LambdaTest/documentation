@@ -17,7 +17,7 @@ keywords:
 
 url: https://www.testmuai.com/support/docs/smartui-cli/
 slug: smartui-cli-figma-web/
-canonical: https://www.testmu.ai/support/docs/smartui-cli-figma-web/
+canonical: https://www.testmuai.com/support/docs/smartui-cli-figma-web/
 
 ---
 import Tabs from '@theme/Tabs';
@@ -25,6 +25,7 @@ import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
@@ -341,7 +342,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "text": "   echo $PROJECT_TOKEN"
       }
     ],
-    "dateModified": "2026-09-09T19:10:37+05:30"
+    "dateModified": "2026-09-29T12:00:00+05:30"
   }) }}
 />
 
@@ -442,21 +443,31 @@ The first step is to create a project with the application in which we will comb
 Install required NPM modules for `TestMu AI SmartUI CLI` globally or in your project:
 
 **Global Installation (Recommended):**
+
+<VerifiedTag value="Verified" />
+
 ```bash
 npm install -g @lambdatest/smartui-cli
 ```
 
 **Local Installation:**
+
+<VerifiedTag value="Verified" />
+
 ```bash
 npm install @lambdatest/smartui-cli
 ```
 
 ### **Step 2:** Create the design configuration file
 
+<VerifiedTag value="Verified" />
+
 ```
 smartui config:create-figma-web designs.json
 ```
 Once, the `designs` file will be created, you will be seeing the sample pre-filled configuration in the `designs.json` file:
+
+<VerifiedTag value="Verified" />
 
 ```json title="/smartui-cli-figma-project/designs.json"
 {
@@ -469,7 +480,7 @@ Once, the `designs` file will be created, you will be seeing the sample pre-fill
     ]
   },
   "figma": {
-    "depth": 2, //Figma Tree depth - (Optional), change the value according to the your file structure
+    "depth": 2, //Optional. Remove it to capture only figma_ids; each extra level adds more screenshots and Figma API calls
     "configs": [
       {
         "figma_file_token": "<token>",
@@ -503,6 +514,8 @@ Once, the `designs` file will be created, you will be seeing the sample pre-fill
 
 1. Setup your project token shown in the **SmartUI** app after creating your project.
 
+<VerifiedTag value="Verified" />
+
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux' label='MacOS/Linux' default>
 
@@ -529,6 +542,8 @@ $env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 
 2. Setup your [personal access token for Figma](https://help.figma.com/hc/en-us/articles/8085703771159-Manage-personal-access-tokens) to authenticate Figma with SmartUI.
 
+<VerifiedTag value="Verified" />
+
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux-1' label='MacOS/Linux' default>
 
@@ -554,6 +569,8 @@ $env:FIGMA_TOKEN="123456#1234abcd-****-****-****-************"
 </Tabs>
 
 ### **Step 4:** Configure your <BrandName /> Credentials
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux-2' label='MacOS/Linux' default>
@@ -589,11 +606,13 @@ Please read the following table for more information about the configuration fil
 | -------------- | ---------------------------------------------------------------------------------------------------------------------------------- | --------- |
 | figma_file_token       | File token for your required Figma file. You can use multiple figma files in the same configuration.| Mandatory |
 | figma_ids  | Comma separated list of nodes that you care about in the document. If specified, only a subset of the document will be returned corresponding to the nodes listed, their children, and everything between the root node and the listed nodes. | Optional |
-| depth (int)    | Positive integer (>1) representing how deep into the document tree to traverse. For example, setting it to 2 returns Pages and all top level objects on each page. Not setting this parameter returns all nodes | Optional |
+| depth (int)    | Optional. Leave it out to capture only the frames listed in `figma_ids`. If you set it above 1, every node down to that depth in the fetched tree also becomes a screenshot: `2` adds the top-level frames, and each extra level adds every child layer inside them. More screenshots means more Figma API requests; see [Figma API usage and rate limits](#figma-api-usage-and-rate-limits). | Optional |
 
 ### **Step 5:** Uploading the Figma files on SmartUI Cloud using CLI
 
 You can now execute tests for `Visual Testing for Figma objects` using the following options:.
+
+<VerifiedTag value="Verified" />
 
 ```powershell
 npx smartui upload-figma-web designs.json
@@ -603,10 +622,14 @@ npx smartui upload-figma-web designs.json
 
 1. Please clone the following sample GitHub repo (`https://github.com/LambdaTest/smartui-figma-web-cli-sample`).
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git clone https://github.com/LambdaTest/smartui-figma-web-cli-sample
 ```
 2. Install the node modules using the command:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 npm i
@@ -614,6 +637,8 @@ npm i
 3. Configure your project token and Figma token
 
 - Setup your project token shown in the **SmartUI** app after creating your project.
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux-3' label='MacOS/Linux' default>
@@ -641,6 +666,8 @@ $env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 
 - Setup your [personal access token for Figma](https://help.figma.com/hc/en-us/articles/8085703771159-Manage-personal-access-tokens) to authenticate Figma with SmartUI.
 
+<VerifiedTag value="Verified" />
+
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux-4' label='MacOS/Linux' default>
 
@@ -666,10 +693,16 @@ $env:FIGMA_TOKEN="123456#1234abcd-****-****-****-************"
 </Tabs>
 
 4. Create your figma baseline
+
+<VerifiedTag value="Verified" />
+
 ```bash
 npx smartui upload-figma-web designs.json --buildName=FigmaBaseline2
 ```
 5. Execute your functional test script (Selenium Nodejs in this sample)
+
+<VerifiedTag value="Verified" />
+
 ```
 npx smartui --config web-config.json exec --buildName=web-build -- node figma-web-local.js
 ```
@@ -684,6 +717,8 @@ npx smartui --config web-config.json exec --buildName=web-build -- node figma-we
 <TabItem value='build-names' label='Build Names' default>
 
 **Build Names**
+
+<VerifiedTag value="Verified" />
 
 ```bash
    npx smartui upload-figma-web designs.json --buildName "v1.0.0"
@@ -710,6 +745,9 @@ npx smartui --config web-config.json exec --buildName=web-build -- node figma-we
 Figma-uploaded screenshots automatically have `.png` appended (e.g., `homepage.png`), so your SDK screenshots must match:
 
 **In your SDK code:**
+
+<VerifiedTag value="Verified" />
+
 ```javascript
 // ❌ Wrong - will not match Figma screenshot
 smartuiSnapshot(driver, "homepage");
@@ -720,8 +758,12 @@ smartuiSnapshot(driver, "homepage.png");
 
 **Example for different frameworks:**
 
+<VerifiedTag value="Verified" />
+
 <Tabs className='docs__val' groupId='framework'>
 <TabItem value='selenium' label='Selenium' default>
+
+<VerifiedTag value="Verified" />
 
 ```java
 // Java
@@ -731,6 +773,8 @@ SmartUISnapshot.smartuiSnapshot(driver, "homepage.png");
 </TabItem>
 <TabItem value='playwright' label='Playwright'>
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 // JavaScript
 await smartuiSnapshot(page, "homepage.png");
@@ -738,6 +782,8 @@ await smartuiSnapshot(page, "homepage.png");
 
 </TabItem>
 <TabItem value='cypress' label='Cypress'>
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 // JavaScript
@@ -748,6 +794,9 @@ cy.smartuiSnapshot("homepage.png");
 </Tabs>
 
 **Configuration Example:**
+
+<VerifiedTag value="Verified" />
+
 ```json
 {
   "figma": {
@@ -773,6 +822,9 @@ This ensures that Figma screenshots (e.g., `homepage.png`) match SDK screenshots
 Figma-uploaded screenshots automatically have `.png` appended (e.g., `homepage.png`), so your SDK screenshots must match:
 
 **In your SDK code:**
+
+<VerifiedTag value="Verified" />
+
 ```javascript
 // ❌ Wrong - will not match Figma screenshot
 smartuiSnapshot(driver, "homepage");
@@ -783,8 +835,12 @@ smartuiSnapshot(driver, "homepage.png");
 
 **Example for different frameworks:**
 
+<VerifiedTag value="Verified" />
+
 <Tabs className='docs__val' groupId='framework'>
 <TabItem value='selenium-1' label='Selenium' default>
+
+<VerifiedTag value="Verified" />
 
 ```java
 // Java
@@ -794,6 +850,8 @@ SmartUISnapshot.smartuiSnapshot(driver, "homepage.png");
 </TabItem>
 <TabItem value='playwright-1' label='Playwright'>
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 // JavaScript
 await smartuiSnapshot(page, "homepage.png");
@@ -801,6 +859,8 @@ await smartuiSnapshot(page, "homepage.png");
 
 </TabItem>
 <TabItem value='cypress-1' label='Cypress'>
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 // JavaScript
@@ -811,6 +871,9 @@ cy.smartuiSnapshot("homepage.png");
 </Tabs>
 
 **Configuration Example:**
+
+<VerifiedTag value="Verified" />
+
 ```json
 {
   "figma": {
@@ -830,7 +893,39 @@ This ensures that Figma screenshots (e.g., `homepage.png`) match SDK screenshots
 </TabItem>
 </Tabs>
 
+## Figma API usage and rate limits
+
+Every upload calls the Figma REST API with your `FIGMA_TOKEN`, and Figma limits how many calls a token can make. When the limit is reached, Figma answers with HTTP 429 and SmartUI cannot fetch your frames.
+
+### Requests one upload makes
+
+For each entry in `figma.configs`, `upload-figma-web` makes:
+
+| Figma API call | How many |
+|----------------|----------|
+| `GET /v1/files/<file>` | 2 (one to check the token and file before the build is created, one to read the frames) |
+| `GET /v1/images/<file>` | 1 for every 10 frames it renders |
+
+For example, a configuration with two files and 25 frames in each makes 2 x (2 + 3) = 10 Figma API calls. The number of frames rendered is the `figma_ids` you list, plus every node that `depth` adds, so a large `depth` value on a big file multiplies the image calls.
+
+### What happens when Figma returns 429
+
+SmartUI does not wait and retry a rate-limited call, so the upload stops at the first 429. What you see depends on which call hit the limit:
+
+- **While checking the token and file**: the command fails with Figma's reason, for example `Figma API rate limit reached for your token. Your file is on the 'starter' plan tier ... and your token's rate-limit bucket is 'low'`.
+- **While reading frames or rendering images**: the build has already been created, so the task title still reads `Web Figma images uploaded successfully to SmartUI`, but the printed result is `{"error": "Failed to process Web Figma Screenshots"}` and the build has no Figma screenshots. Treat that output as a failed upload.
+
+### How to stay under the limit
+
+- Leave `depth` out, and list only the frames you compare in `figma_ids`.
+- Wait before retrying. Figma's limits reset over minutes, not seconds, so an immediate re-run usually fails again.
+- Avoid re-running the Figma upload in every pipeline run when the designs have not changed.
+- Use a token that belongs to an Editor seat on a paid Figma plan. Figma puts tokens of View or Collab seats, and files on the free Starter plan, in its lowest rate-limit bucket.
+- Check Figma's own [rate limit documentation](https://developers.figma.com/docs/rest-api/rate-limits/) for the current limits of your plan.
+
 ## Troubleshooting
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='troubleshooting'>
 <TabItem value='verify-figma-token' label='Verify Figma Token' default>
@@ -861,6 +956,14 @@ Validate Node IDs
 - Figma screenshots don't match web screenshots
 - Comparison shows mismatches even when designs are identical
 **Solutions**:
+
+</TabItem>
+<TabItem value='figma-rate-limit' label='Figma Rate Limit (429)' >
+
+Figma Rate Limit (429)
+
+- The command fails with `Figma API rate limit reached for your token`, or it reports success but prints `{"error": "Failed to process Web Figma Screenshots"}`
+   - Both mean Figma refused a request from your token. See [Figma API usage and rate limits](#figma-api-usage-and-rate-limits) for how many requests an upload makes and how to reduce them
 
 </TabItem>
 <TabItem value='check-screenshot-names' label='Check Screenshot Names' >
@@ -921,11 +1024,12 @@ Check Project Type
 If you encounter issues not covered here:
 - Review the [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide) for detailed solutions
 - Check [Figma CLI Documentation](/support/docs/smartui-cli-figma) for basic Figma workflows
-- Visit [<BrandName /> Support](https://www.testmuai.com/support) for additional resources
-- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support)
+- Visit [<BrandName /> Support](https://www.testmuai.com/support/docs/) for additional resources
+- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support/docs/)
 
 </TabItem>
 </Tabs>
+
 
 ## Additional Resources
 

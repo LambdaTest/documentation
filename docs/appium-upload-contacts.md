@@ -26,6 +26,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import RealDeviceTag from '../src/component/realDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -157,6 +158,8 @@ Upload your `.vcf` file using the Upload Media API.
 
 ### Request
 
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`curl --user "${YOUR_LAMBDATEST_USERNAME()}:${YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://api.lambdatest.com/mfs/v1.0/media/upload" -F "media_file=@"/path/to/contacts.vcf"" -F "type=contact" -F "custom_id=SampleContacts"`
@@ -170,6 +173,8 @@ Upload your `.vcf` file using the Upload Media API.
 - `custom_id`: A custom identifier for the uploaded file.
 
 ### Response
+
+<VerifiedTag value="Verified" />
 
 ```json
 {
@@ -188,6 +193,8 @@ Use the `media_url` from the response in the next step.
 ## Step 2: Set the Capability in Your Test Script
 
 Once the contacts are uploaded to <BrandName />'s cloud, set the **uploadMedia** capability to the **media_url** parameter returned in the API response.
+
+<VerifiedTag value="Verified" />
 
 ```python
 desired_capabilities = {

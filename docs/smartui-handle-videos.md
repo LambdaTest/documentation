@@ -14,7 +14,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/smartui-handle-videos/
 site_name: TestMu AI
 slug: smartui-handle-videos/
-canonical: https://www.testmu.ai/support/docs/smartui-handle-videos/
+canonical: https://www.testmuai.com/support/docs/smartui-handle-videos/
 
 ---
 import Tabs from '@theme/Tabs';
@@ -23,6 +23,7 @@ import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -136,6 +137,8 @@ This approach ensures that:
 
 ### Process Flow
 
+<VerifiedTag value="Verified" />
+
 ```
 Page Load → Video Detection → First Frame Extraction → Static Image Comparison → Results
 ```
@@ -194,6 +197,8 @@ SmartUI handles videos automatically with no additional configuration required. 
 
 If videos take time to load, you can add a wait timeout to ensure the first frame is captured correctly:
 
+<VerifiedTag value="Verified" />
+
 ```json
 {
   "web": {
@@ -209,6 +214,8 @@ If videos take time to load, you can add a wait timeout to ensure the first fram
 You can combine video handling with other SmartUI features:
 
 **Example: Ignoring video controls while keeping the first frame**
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 let options = {
@@ -292,6 +299,8 @@ Occasionally review captured first frames to ensure they represent the intended 
 
 ## Troubleshooting
 
+<VerifiedTag value="Verified" />
+
 <Tabs className='docs__val' groupId='troubleshooting'>
 <TabItem value='videos-not-captured-correctly' label='Videos Not Captured Correctly' default>
 
@@ -337,6 +346,7 @@ await smartuiSnapshot(driver, 'Video Page');
 
 </TabItem>
 </Tabs>
+
 
 ## Additional Resources
 

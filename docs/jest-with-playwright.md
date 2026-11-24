@@ -21,6 +21,7 @@ import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 
@@ -144,6 +145,8 @@ Download or clone the code sample for the Playwright Jest from the <BrandName />
 <a href="https://github.com/LambdaTest/playwright-sample/tree/main/playwright-jest-js" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
 :::
 
+<VerifiedTag value="Verified" />
+
 ```js
 git clone https://github.com/LambdaTest/playwright-sample.git
 cd playwright-sample
@@ -151,6 +154,8 @@ cd playwright-jest-js
 ```
 
 2. Install the npm dependencies.
+
+<VerifiedTag value="Verified" />
 
 ```
 npm install
@@ -167,6 +172,8 @@ npm install
 ---
 
 Navigate to the `jest-playwright.config.js` file in the `playwright-jest-js` directory and provide your <BrandName /> Username and Access key.
+
+<VerifiedTag value="Verified" />
 
 ```js
 const cp = require('child_process');
@@ -245,6 +252,8 @@ module.exports = {
 
 Pass the below command in the terminal to run the test.
 
+<VerifiedTag value="Verified" />
+
 ```js
 npm run test
 ```
@@ -265,6 +274,8 @@ Go to the [<BrandName /> Web Automation Dashboard](https://www.testmuai.com/logi
 The [jest-skill](https://github.com/LambdaTest/agent-skills/tree/main/jest-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
 
 The jest-skill package includes:
+
+<VerifiedTag value="Verified" />
 
 ```
 jest-skill/
@@ -288,6 +299,8 @@ It provides structured guidance for:
 ***
 
 Install a Jest Agent Skill using the command below:
+
+<VerifiedTag value="Verified" />
 
 ```
 # Clone the repo and copy the skill you need

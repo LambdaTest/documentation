@@ -11,7 +11,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/opsgenie-integration/
 site_name: TestMu AI
 slug: opsgenie-integration/
-canonical: https://www.testmu.ai/support/docs/opsgenie-integration/
+canonical: https://www.testmuai.com/support/docs/opsgenie-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

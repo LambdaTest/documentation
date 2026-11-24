@@ -5,6 +5,8 @@ sidebar_label: Redundant Role in Label
 description: "Flag Android accessibility labels that repeat a control's role, like 'button' or 'switch', since TalkBack already announces the role separately."
 slug: accessibility-android-rule-redundant-role-label/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

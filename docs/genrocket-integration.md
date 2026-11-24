@@ -15,6 +15,7 @@ canonical: https://www.testmuai.com/support/docs/genrocket-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import CookieTrackingLogin, { CookieTrackingSignup } from '@site/src/component/CookieTracking';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 
@@ -197,11 +198,13 @@ Till now you have learnt how to set up your generators on GenRocket. Now, in ord
 
 >**Note:** The HyperExecute YAML configuration file is already present in the sample project that you have downloaded.
 
-Following two commands have been already added in the "[pre](/support/docs/deep-dive-into-hyperexecute-yaml/#14-predirectives-or-pre)" section of this HyperExecute Yaml.
+Following two commands have been already added in the "[pre](/support/docs/deep-dive-into-hyperexecute-yaml/#predirectives)" section of this HyperExecute Yaml.
 
 * In HyperExecute, every time the tests are run, a new environment is created, and gets destroyed as soon as the tests are completed. 
 
 * To configure Genrocket on HyperExecute we need to create a directory in the HyperExecute Machine with the name **.genrocket** which is done by the following command. 
+
+<VerifiedTag value="Verified" />
 
 ```bash
 mkdir /home/ltuser/.genrocket
@@ -209,11 +212,13 @@ mkdir /home/ltuser/.genrocket
 
 * After creating the directory, we also need to copy the Genrocket profile **.grp** file to the .genrocket folder which is done by the following command.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 cp ******Profile.grp /home/ltuser/.genrocket
 ```
 
-* Once done, the [pre section](/support/docs/deep-dive-into-hyperexecute-yaml/#14-predirectives-or-pre) inside the HyperExecute YAML will look like as shown below (already present inside the sample project).
+* Once done, the [pre section](/support/docs/deep-dive-into-hyperexecute-yaml/#predirectives) inside the HyperExecute YAML will look like as shown below (already present inside the sample project).
 
 <img loading="lazy" src={require('../assets/images/genrocket-integration/gen-eight.webp').default} alt="Integrating <BrandName /> With genrocket" width="1366" height="625" className="doc_img"/>
 
@@ -223,6 +228,8 @@ cp ******Profile.grp /home/ltuser/.genrocket
 
 * Open the terminal and navigate to the project root directory.
 * Run the following command with your **<BrandName /> Username** and **AccessKey**. (as noted in step 4.1 above)
+
+<VerifiedTag value="Verified" />
 
 ```bash
 ./hyperexecute --user USERNAME --key ACCESS_KEY --config hyperexecute.yaml

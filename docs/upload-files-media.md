@@ -16,7 +16,7 @@ keywords:
   - browser testing
   - TestMu AI
 slug: upload-files-media/
-canonical: https://www.testmu.ai/support/docs/upload-files-media/
+canonical: https://www.testmuai.com/support/docs/upload-files-media/
 url: https://www.testmuai.com/support/docs/upload-files-media/
 site_name: TestMu AI
 ---
@@ -25,6 +25,7 @@ import CodeBlock from '@theme/CodeBlock';
 import RealDeviceTag from '../src/component/realDevice';
 import VirtualDeviceTag from '../src/component/virtualDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -126,6 +127,11 @@ Once uploaded, files are stored in the device’s default locations. **This is t
 |                 | iOS      | Camera Roll → `/private/var/mobile/Media/DCIM/`   | Photo Library (reachable from the native *Photo Library* picker) |
 | Non-Media Files | Android  | Downloads folder                                  | Downloads (reachable from the browser file picker)          |
 |                 | iOS      | Files app → On My iPhone → Your app's directory   | Files app → On My iPhone → **Chrome** (even when testing in Safari) |
+
+:::note
+* **Target App Must Be Installed:** In manual testing, your iOS app must be installed on the device before you can upload non-media files.
+* **Info.plist Configuration:** For non-media files, ensure your iOS app’s `Info.plist` file sets both `UIFileSharingEnabled` and `LSSupportsOpeningDocumentsInPlace` to `true`. This makes your app’s directory accessible in the native **Files** app under **On My iPhone → Your App’s Directory**.
+:::
 
 ### Download
 

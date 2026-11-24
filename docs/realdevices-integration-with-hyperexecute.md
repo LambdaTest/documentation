@@ -18,7 +18,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/realdevices-integration-with-hyperexecute/
 site_name: TestMu AI
 slug: real-devices-integration-with-hyperexecute/
-canonical: https://www.testmu.ai/support/docs/real-devices-integration-with-hyperexecute/
+canonical: https://www.testmuai.com/support/docs/real-devices-integration-with-hyperexecute/
 ---
 
 

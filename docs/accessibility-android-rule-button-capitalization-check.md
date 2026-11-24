@@ -5,6 +5,8 @@ sidebar_label: Button Capitalisation Check
 description: "Check Android button labels for irregular capitalization like lowercase starts or mid-word caps, so TalkBack and text-to-speech read them correctly."
 slug: accessibility-android-rule-button-capitalization-check/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

@@ -5,6 +5,8 @@ sidebar_label: Assistive Technology Access
 description: Rule-level Accessibility guidance for Assistive Technology Access on iOS.
 slug: accessibility-ios-rule-assistive-technology-access/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

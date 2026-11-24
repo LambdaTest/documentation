@@ -19,6 +19,8 @@ import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 
 
 <script type="application/ld+json"
@@ -136,6 +138,8 @@ In this topic, you will learn about the:
  Be aware of your <BrandName /> authentication credentials i.e., your <BrandName /> username, access key, and HubURL. You need to set them up as your environment variables. You can retrieve them from your [<BrandName /> automation dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com) by clicking on the key icon near the help button. 
 * For Linux/Mac:  
 
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-javascript">
 {`$ export LT_USERNAME= ${ YOUR_LAMBDATEST_USERNAME()}
@@ -145,6 +149,8 @@ $ export LT_ACCESS_KEY= ${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
 
 
 * For Windows: 
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-javascript">
@@ -157,11 +163,17 @@ $ set LT_ACCESS_KEY= ${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
 
   You can find your Applitools API key by logging into your Applitools account and going to your **Profile > My API Key.**   In your terminal or CMD, you need to export the Applitools API key along with <BrandName /> Credentials.    
    * For Linux/Mac:  
+
+        <VerifiedTag value="Verified" />
+
         ```
         $ export APPLITOOLS_API_KEY=<your applitool api key> 
         ```
 
     * For Windows: 
+
+        <VerifiedTag value="Verified" />
+
         ```
         $ set APPLITOOLS_API_KEY=<your applitool api key>
         ```
@@ -171,6 +183,9 @@ $ set LT_ACCESS_KEY= ${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
     * Download and install [Maven Apache.](https://maven.apache.org/download.cgi)
 
 * Install **Maven dependencies** using the below command.
+
+   <VerifiedTag value="Verified" />
+
    ```
 $ mvn install
    ```
@@ -181,6 +196,8 @@ Below is a code to run a demo test on <BrandName /> Selenium Grid from Applitool
 >**Important:** You can clone the below code from our [GitHub repository for <BrandName /> Integration with Applitools](https://github.com/LambdaTest/applitools-lambdatest-integration/blob/master/src/test/java/com/applitools/quickstarts/BasicDemo.java).
 
 
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-jsx">
@@ -291,6 +308,8 @@ public class BasicDemo {
 
 Once you have cloned the above code, you need to execute the below command to trigger the test on <BrandName /> Selenium Grid.
 
+<VerifiedTag value="Verified" />
+
 ```
 $ mvn -Dtest=BasicDemo test
 ```
@@ -310,6 +329,8 @@ Download the latest <BrandName /> Tunnel binary file and extract it.
 * [Lambda Tunnel for Linux](https://downloads.lambdatest.com/tunnel/v3/linux/64bit/LT_Linux.zip)
 
 To run your Applitools automation script for locally hosted web applications on <BrandName /> Selenium Grid, you would need to set the **Tunnel Capability** flag to ```true```.
+
+<VerifiedTag value="Verified" />
 
 ```
  DesiredCapabilities capabilities = new DesiredCapabilities();

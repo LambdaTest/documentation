@@ -13,7 +13,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/settings-and-security/
 site_name: TestMu AI
 slug: settings-and-security/
-canonical: https://www.testmu.ai/support/docs/settings-and-security/
+canonical: https://www.testmuai.com/support/docs/settings-and-security/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

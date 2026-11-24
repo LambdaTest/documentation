@@ -4,7 +4,7 @@ import { Highlight, themes } from 'prism-react-renderer';
 import MethodBadge from './MethodBadge';
 import InlineText from './InlineText';
 import styles from './TryItModal.module.css';
-import { LANGUAGES, generateCodeExample, LangDropdownPortal, LangSelectorButton, coerceBodyValue } from './langUtils';
+import { LANGUAGES, generateCodeExample, LangDropdownPortal, LangSelectorButton, coerceBodyValue, detectFlattenedArrayBody } from './langUtils';
 
 const githubWithGreenKeys = {
   ...themes.github,
@@ -95,6 +95,8 @@ function buildCurl(endpoint, username, password, params, baseUrl) {
 
   const bodyProps = endpoint.requestBody?.properties || [];
   const contentType = endpoint.requestBody?.contentType || 'application/json';
+  const isMultipart = contentType === 'multipart/form-data';
+  const flattenedBody = !isMultipart ? detectFlattenedArrayBody(endpoint) : null;
   let bodyLine = '';
   if (bodyProps.length > 0 || flattenedBody) {
     if (isMultipart) {
@@ -110,10 +112,27 @@ function buildCurl(endpoint, username, password, params, baseUrl) {
         .filter(([, v]) => v)
         .map(([k, v]) => ` \\\n  --form '${k}=${v}'`)
         .join('');
+    } else if (flattenedBody) {
+      const inner = {};
+      for (const f of flattenedBody.innerFields) {
+        const raw = params[`__body__${f.name}`];
+        if (raw !== undefined && raw !== '') {
+          inner[f.name] = coerceBodyValue(raw, f.type);
+        }
+      }
+      if (Object.keys(inner).length) {
+        const bodyJson = { [flattenedBody.wrapperKey]: [inner] };
+        bodyLine = ` \\\n  --header 'Content-Type: application/json' \\\n  --data '${JSON.stringify(bodyJson, null, 2)}'`;
+      }
     } else {
-      const bodyObj = Object.fromEntries(bodyEntries.filter(([, v]) => v));
+      const bodyEntries = bodyProps.map((p) => {
+        const raw = params[`__body__${p.name}`] || '';
+        if (!raw) return [p.name, ''];
+        return [p.name, coerceBodyValue(raw, p.type)];
+      });
+      const bodyObj = Object.fromEntries(bodyEntries.filter(([, v]) => v !== '' && v !== undefined));
       if (Object.keys(bodyObj).length) {
-        bodyLine = ` \\\n  --header 'Content-Type: application/json' \\\n  --data '${JSON.stringify(bodyObj)}'`;
+        bodyLine = ` \\\n  --header 'Content-Type: application/json' \\\n  --data '${JSON.stringify(bodyObj, null, 2)}'`;
       }
     }
   }
@@ -302,7 +321,60 @@ export default function TryItModal({ endpoint, onClose, selectedLang: selectedLa
 
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const [params, setParams] = useState({});
+  // Variant-aware view of the request body: when the spec ships multiple
+  // payload shapes for one endpoint (e.g. PUT folder rename/move), the modal
+  // picks one tab and presents it as the effective body. Downstream helpers
+  // (buildCurl, handleSend, generateCodeExample) operate on `effectiveEndpoint`
+  // and stay variant-agnostic.
+  const variants = endpoint.requestBody?.variants || null;
+  const [selectedVariantIdx, setSelectedVariantIdx] = useState(0);
+  const selectedVariant = variants ? variants[selectedVariantIdx] : null;
+  const effectiveEndpoint = useMemo(() => {
+    if (!selectedVariant) return endpoint;
+    return {
+      ...endpoint,
+      requestBody: {
+        ...endpoint.requestBody,
+        properties: selectedVariant.properties,
+        example: selectedVariant.example,
+      },
+    };
+  }, [endpoint, selectedVariant]);
+  // Compute once at render time — both the params initializer and the body
+  // section need it, and `effectiveEndpoint` is stable for the variant's lifetime.
+  const flattenedBody = detectFlattenedArrayBody(effectiveEndpoint);
+
+  // Build the per-variant prefill — also reused when the user switches tabs.
+  function computeInitialParams() {
+    const initial = {};
+    if (flattenedBody) {
+      for (const f of flattenedBody.innerFields) {
+        const val = flattenedBody.innerExample[f.name];
+        initial[`__body__${f.name}`] = val == null ? '' : String(val);
+      }
+      return initial;
+    }
+    return initial;
+  }
+  // Prefill body fields with the spec example so the form is usable on first
+  // open. Flattened-array bodies expose inner primitive fields; plain bodies
+  // get one prefilled input per property.
+  const [params, setParams] = useState(computeInitialParams);
+
+  // Reset & re-prefill body params whenever the active variant changes.
+  // Other params (path/query/auth) are not affected by variant switches.
+  useEffect(() => {
+    if (!variants) return;
+    setParams((prev) => {
+      const next = {};
+      for (const k of Object.keys(prev)) {
+        if (!k.startsWith('__body__')) next[k] = prev[k];
+      }
+      const fresh = computeInitialParams();
+      return { ...next, ...fresh };
+    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [selectedVariantIdx]);
   const [response, setResponse] = useState(null);
   const [loading, setLoading] = useState(false);
   const [activeResTab, setActiveResTab] = useState(null);
@@ -365,18 +437,38 @@ export default function TryItModal({ endpoint, onClose, selectedLang: selectedLa
       ? `Basic ${safeBase64(`${username}:${password}`)}`
       : '';
 
-    const bodyProps = endpoint.requestBody?.properties || [];
-    const contentType = endpoint.requestBody?.contentType || 'application/json';
+    const bodyProps = effectiveEndpoint.requestBody?.properties || [];
+    const contentType = effectiveEndpoint.requestBody?.contentType || 'application/json';
+    const isMultipart = contentType === 'multipart/form-data';
+    const flattenedBodyHS = !isMultipart ? detectFlattenedArrayBody(effectiveEndpoint) : null;
     let fetchBody;
     let fetchHeaders = { ...(authHeader && { Authorization: authHeader }) };
-    if (bodyProps.length > 0) {
-      if (contentType === 'multipart/form-data') {
+    if (bodyProps.length > 0 || flattenedBodyHS) {
+      if (isMultipart) {
         const fd = new FormData();
         bodyProps.forEach((p) => { if (params[`__body__${p.name}`]) fd.append(p.name, params[`__body__${p.name}`]); });
         fetchBody = fd;
         // Don't set Content-Type for FormData — browser sets it with boundary
+      } else if (flattenedBodyHS) {
+        const inner = {};
+        for (const f of flattenedBodyHS.innerFields) {
+          const raw = params[`__body__${f.name}`];
+          if (raw !== undefined && raw !== '') {
+            inner[f.name] = coerceBodyValue(raw, f.type);
+          }
+        }
+        if (Object.keys(inner).length) {
+          fetchBody = JSON.stringify({ [flattenedBodyHS.wrapperKey]: [inner] });
+          fetchHeaders['Content-Type'] = 'application/json';
+        }
       } else {
-        const bodyObj = Object.fromEntries(bodyProps.map((p) => [p.name, coerceBodyValue(params[`__body__${p.name}`] || '', p.type)]).filter(([, v]) => v));
+        const bodyObj = Object.fromEntries(
+          bodyProps.map((p) => {
+            const raw = params[`__body__${p.name}`] || '';
+            if (!raw) return [p.name, ''];
+            return [p.name, coerceBodyValue(raw, p.type)];
+          }).filter(([, v]) => v !== '' && v !== undefined)
+        );
         if (Object.keys(bodyObj).length) {
           fetchBody = JSON.stringify(bodyObj);
           fetchHeaders['Content-Type'] = 'application/json';
@@ -402,16 +494,16 @@ export default function TryItModal({ endpoint, onClose, selectedLang: selectedLa
     }
   }
 
-  const curlCode = buildCurl(endpoint, username, password, params, selectedServer);
+  const curlCode = buildCurl(effectiveEndpoint, username, password, params, selectedServer);
   const langDef = LANGUAGES.find((l) => l.label === selectedLang) || LANGUAGES[0];
   const codeToShow = selectedLang === 'cURL'
     ? curlCode
-    : generateCodeExample(endpoint, selectedLang, { username, password, params });
+    : generateCodeExample(effectiveEndpoint, selectedLang, { username, password, params });
   const hasAuth = endpoint.auth && endpoint.auth.length > 0;
   const hasQuery = endpoint.queryParams && endpoint.queryParams.length > 0;
   const hasPath = endpoint.pathParams && endpoint.pathParams.length > 0;
-  const bodyProps = endpoint.requestBody?.properties || [];
-  const hasBody = bodyProps.length > 0;
+  const bodyProps = effectiveEndpoint.requestBody?.properties || [];
+  const hasBody = bodyProps.length > 0 || !!variants;
 
   // Static spec responses — always shown
   const specResponses = endpoint.responses || {};
@@ -567,7 +659,7 @@ export default function TryItModal({ endpoint, onClose, selectedLang: selectedLa
             {hasBody && (
               <CollapsibleSection
                 title="Body"
-                description={endpoint.requestBody.description || null}
+                description={effectiveEndpoint.requestBody?.description || null}
               >
                 {variants && (
                   <div style={{

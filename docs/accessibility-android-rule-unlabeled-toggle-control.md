@@ -5,6 +5,8 @@ sidebar_label: Unlabeled Toggle Control
 description: Rule-level Accessibility guidance for Unlabeled Toggle Control on Android.
 slug: accessibility-android-rule-unlabeled-toggle-control/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

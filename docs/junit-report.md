@@ -22,6 +22,7 @@ canonical: https://www.testmuai.com/support/docs/espresso-junit-report/
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 
@@ -106,6 +107,8 @@ JUnit reports provide a detailed summary of test execution, allowing you to bett
 To fetch the JUnit report for a `non-shard` build, you can use the following cURL command:
 
 
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`curl --location "https://mobile-api.lambdatest.com/mobile-automation/api/v1/framework/builds/<build_id>/report/?encoder=false" \
@@ -117,6 +120,8 @@ To fetch the JUnit report for a `non-shard` build, you can use the following cUR
 **Shard build (For single shard):**
 To fetch the JUnit report for a `single shard` in a shard build,use:
 
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`curl --location 'https://mobile-api.lambdatest.com/mobile-automation/api/v1/framework/jobs/<job_id>/report/?shard=<shard_id>&encoder=false' \
@@ -127,6 +132,8 @@ To fetch the JUnit report for a `single shard` in a shard build,use:
 
 **Shard build (For all the shards):**
 To fetch the JUnit reports for `all shards` in a shard build, use:
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
@@ -142,4 +149,5 @@ To fetch the JUnit reports for `all shards` in a shard build, use:
 - It is recommended to run the sharding test(via HyperExecute CLI) in the verbose mode i.e. with the **--verbose** flag. This allows the shard ID(task ID) and build ID(Job ID) to be displayed in the logs and then they can be used to fetch the above reports.
 - In case the report is not a valid XML format, the `encoder=true` parameter can be utilized to prevent the decoding of certain characters. Decoding is usually performed at the server's end to enhance the readability of the report. 
 :::
+
 

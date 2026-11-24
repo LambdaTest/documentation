@@ -19,7 +19,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/real-time-testing-troubleshooting/
 site_name: TestMu AI
 slug: real-time-testing-troubleshooting/
-canonical: https://www.testmu.ai/support/docs/real-time-testing-troubleshooting/
+canonical: https://www.testmuai.com/support/docs/real-time-testing-troubleshooting/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

@@ -14,6 +14,9 @@ site_name: TestMu AI
 slug: accessibility-junit5-test/
 canonical: https://www.testmuai.com/support/docs/accessibility-junit5-test/
 ---
+import VerifiedTag from '@site/src/component/verifiedTag';
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -124,6 +127,8 @@ Use `@BeforeEach` or `@BeforeAll` (with a static WebDriver if you share one per 
 
 ### 2. Enable Accessibility on the session
 
+<VerifiedTag value="Verified" />
+
 ```java
 capabilities.setCapability("accessibility", true);
 capabilities.setCapability("accessibility.wcagVersion", "wcag21aa"); // optional
@@ -135,17 +140,23 @@ See [Configure Accessibility Automation](/support/docs/accessibility-automation-
 
 **Hook after stable UI:**
 
+<VerifiedTag value="Verified" />
+
 ```java
 driver.executeScript("lambda-accessibility-scan");
 ```
 
 **Or auto-scan every navigation:**
 
+<VerifiedTag value="Verified" />
+
 ```java
 capabilities.setCapability("accessibility.autoscan", true);
 ```
 
 ### 4. Run and verify
+
+<VerifiedTag value="Verified" />
 
 ```bash
 mvn test

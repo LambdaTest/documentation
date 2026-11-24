@@ -5,6 +5,8 @@ sidebar_label: Android Rule Repository
 description: Browse Android accessibility rule guidance, WCAG mappings, and remediation references.
 slug: accessibility-android-rule-repository/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

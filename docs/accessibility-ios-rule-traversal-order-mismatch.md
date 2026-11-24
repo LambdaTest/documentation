@@ -5,6 +5,8 @@ sidebar_label: Traversal Order Mismatch
 description: "Detect iOS screens where VoiceOver's reading order jumps backward against the visual layout, so navigation matches what sighted users see."
 slug: accessibility-ios-rule-traversal-order-mismatch/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

@@ -10,7 +10,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/team-management/
 site_name: TestMu AI
 slug: team-management/
-canonical: https://www.testmu.ai/support/docs/team-management/
+canonical: https://www.testmuai.com/support/docs/team-management/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

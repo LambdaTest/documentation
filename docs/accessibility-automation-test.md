@@ -20,6 +20,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -191,6 +192,8 @@ If you are using your own project, make sure you update the **Hub endpoint** in 
 
 Configure the desired capabilities based on your test requirements. For example:
 
+<VerifiedTag value="Verified" />
+
 ```java
 DesiredCapabilities capabilities = new DesiredCapabilities();
 capabilities.setCapability("browserName", "chrome");
@@ -212,6 +215,8 @@ Run the below mentioned commands in your terminal to setup the CLI and the envir
 
 <TabItem value="bash" label="Linux / MacOS" default>
 
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
@@ -222,6 +227,8 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
+
+  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
@@ -243,11 +250,17 @@ There are two primary ways to run accessibility tests:
 For precise control over which pages are scanned, you can trigger scans manually at specific points in your test execution. This is the recommended approach to reduce test execution time and focus only on relevant pages.
 
 To use this, simply enable accessibility in your capabilities:
+
+<VerifiedTag value="Verified" />
+
 ```java
 capability.setCapability("accessibility", true); // Enable accessibility testing
 ```
 
 Then, trigger the scan directly within your test script when the desired page is fully loaded:
+
+<VerifiedTag value="Verified" />
+
 ```java
 // Execute the LambdaTest accessibility scan hook
 driver.executeScript("lambda-accessibility-scan");
@@ -257,6 +270,8 @@ driver.executeScript("lambda-accessibility-scan");
 #### 2. Continuous Auto-Scanning
 If you want the accessibility scanner to run automatically on every single page navigation throughout the entire test session without writing manual hooks, you can pass the `accessibility.autoscan` capability:
 
+<VerifiedTag value="Verified" />
+
 ```java
 capability.setCapability("accessibility", true); // Enable accessibility testing
 capability.setCapability("accessibility.autoscan", true); // Automatically scan all pages
@@ -264,6 +279,8 @@ capability.setCapability("accessibility.autoscan", true); // Automatically scan 
 
 #### Advanced Capabilities
 You can also define other settings capabilities to refine your scan rules as described below:
+
+<VerifiedTag value="Verified" />
 
 ```java
 capability.setCapability("accessibility.wcagVersion", "wcag21aa"); // Specify WCAG version (e.g., WCAG 2.1 Level AA)
@@ -274,6 +291,8 @@ capability.setCapability("accessibility.needsReview", true); // Include issues t
 ### Step 4: Execute and Monitor your Test
 
 Now execute your tests and visit the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard). Click on the Accessibility tab and check the report generated.
+
+<VerifiedTag value="Verified" />
 
 ```bash
 mvn test

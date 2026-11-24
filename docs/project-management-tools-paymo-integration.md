@@ -11,7 +11,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/paymo-integration/
 site_name: TestMu AI
 slug: paymo-integration/
-canonical: https://www.testmu.ai/support/docs/paymo-integration/
+canonical: https://www.testmuai.com/support/docs/paymo-integration/
 
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

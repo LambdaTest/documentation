@@ -124,6 +124,10 @@ This integration supports three onboarding paths:
 - **Your Existing GitHub App** (On-Prem / Private Cloud)
 - **Private GitHub App Dedicated to Your Organization** (On-Prem / Air-Gapped)
 
+:::info On-premise deployments
+On-prem, which Git providers and GitHub App setup you can use depends on your deployment, so ask your admin which approach applies. For GitHub Enterprise Server, also read [Multi-Tenant GitHub Support](#multi-tenant-github-support). See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/#step-2-create-a-project).
+:::
+
 ## How It Works
 1. Install a GitHub App using one of the three supported approaches. <br />
 2. Complete the post-installation registration within the <BrandName /> platform. <br />
@@ -212,6 +216,9 @@ Add the GitHub App's private key as an org-level secret. HyperExecute uses it to
 **Installation Steps**
 
 1. Navigate to the private app installation URL:
+
+<VerifiedTag value="Verified" />
+
 ```
    https://github.com/apps/{private-app-name}/installations/new
 ```
@@ -226,6 +233,9 @@ Add the GitHub App's private key as an org-level secret. HyperExecute uses it to
 **Post-Installation Configuration**
 
 GitHub will redirect you to the private setup URL configured for your environment:
+
+<VerifiedTag value="Verified" />
+
 ```
 https://{{private_accounts_base_url}}/org-settings/hyperexecute/git-integration
 ```

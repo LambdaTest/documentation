@@ -11,7 +11,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/test-case-repository/
 site_name: TestMu AI
 slug: test-case-repository/
-canonical: https://www.testmu.ai/support/docs/test-case-repository/
+canonical: https://www.testmuai.com/support/docs/test-case-repository/
 ---
 
 

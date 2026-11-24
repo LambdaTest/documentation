@@ -11,7 +11,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/smartui-multiple-projects-per-repo/
 site_name: TestMu AI
 slug: smartui-multiple-projects-per-repo/
-canonical: https://www.testmu.ai/support/docs/smartui-multiple-projects-per-repo/
+canonical: https://www.testmuai.com/support/docs/smartui-multiple-projects-per-repo/
 
 ---
 
@@ -21,6 +21,7 @@ import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 
@@ -146,6 +147,8 @@ Download or Clone the code sample from the <BrandName /> GitHub repository to ru
 - Navigate to the main page of the repository.
 - Under your repository name, click **Actions**.
 - In the left sidebar, click the **New workflow** button.
+
+<VerifiedTag value="Verified" />
 
 ```yaml reference
 https://github.com/LambdaTest/smartui-monorepo-sample/blob/main/.github/workflows/main.yml

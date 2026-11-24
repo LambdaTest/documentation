@@ -5,6 +5,8 @@ sidebar_label: Pause, Stop, Hide (2.2.2)
 description: Rule-level Accessibility guidance for Pause, Stop, Hide (WCAG 2.2.2 Level A).
 slug: accessibility-web-rule-2-2-2-pause-stop-hide/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

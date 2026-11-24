@@ -5,6 +5,8 @@ sidebar_label: Dynamic Type Support
 description: "Ensure Android text uses scale-independent pixels (sp) so it scales with the user's system font-size setting for low-vision readability."
 slug: accessibility-android-rule-dynamic-type-support/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

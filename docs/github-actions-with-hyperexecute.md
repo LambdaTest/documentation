@@ -17,6 +17,7 @@ slug: github-actions-with-hyperexecute/
 canonical: https://www.testmuai.com/support/docs/github-actions-with-hyperexecute/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 
@@ -92,7 +93,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 GitHub Actions is a continuous integration and continuous delivery (CI/CD) platform that allows you to automate your build, test, and deployment pipeline. You can create workflows that build and test every pull request to your repository, or deploy merged pull requests to production.
 
-This document will show you how to integrate GitHub Actions Pipeline with HyperExecute to greatly shorten your test cycles.
+This document will show you how to integrate GitHub Actions Pipeline with HyperExecute to [greatly shorten your test cycles](https://www.testmuai.com/hyperexecute-github-actions/).
 
 ## How To Integrate GitHub Actions Pipeline with HyperExecute
 
@@ -120,6 +121,8 @@ In the left sidebar, click the **New workflow** button.
 ### 3. Create the GitHub Actions work-flow YAML file:
 
 To create the GitHub Actions pipeline YAML file, follow the sample command below:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 name: HyperExecute

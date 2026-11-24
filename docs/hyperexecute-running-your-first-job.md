@@ -20,6 +20,7 @@ import Tabs from '@theme/Tabs';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -79,6 +80,10 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 This page outlines how you can run your first End-to-End (E2E) testing execution job on HyperExecute.
+
+:::info On-premise deployments
+On-prem, use [2. Using Local System](#2-using-local-system). Use the access key from your organization's own dashboard, and add `--onprem-host` to the CLI command. See [Trigger a job from the CLI](/support/docs/hyperexecute-on-premise-user-guide/#step-5-trigger-a-job-from-the-cli).
+:::
 
 ## Before you start
 
@@ -156,6 +161,8 @@ We will be taking care of everything one by one, just follow the steps given bel
 
 :::note
 The generic command required to initiate test execution is given below. You will need to insert the name of your YAML file in place of the `RELATIVE_PATH_OF_YOUR_YAML_FILE` before running this command. (Skip if you already used the command from Step 6. )
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">
