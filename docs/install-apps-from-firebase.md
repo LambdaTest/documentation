@@ -87,20 +87,20 @@ These settings can be updated in the OAuth consent screen.
 
 1. Sign in to the [Google Cloud Console](https://console.cloud.google.com/), search for **Clients**, and select **Clients** (Google Auth Platform) from the results.
 
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/firebase/firebase-clientsearch.png').default} alt="Real "  className="doc_img" width="1366" height="450"/>
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/firebase/firebase-client-search.png').default} alt="Real "  className="doc_img" width="1366" height="450"/>
 
 2. On the **Clients** page, click **Create project**, enter your project details, click **Create**, and then click **Get started**.
 
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/firebase/firebase-createproject.png').default} alt="Real "  className="doc_img" width="1366" height="450"/>
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/firebase/firebase-create-project.png').default} alt="Real "  className="doc_img" width="1366" height="450"/>
 
 
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/firebase/firebase-getstarted.png').default} alt="Real "  className="doc_img" width="1366" height="450"/>
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/firebase/firebase-get-started.png').default} alt="Real "  className="doc_img" width="1366" height="450"/>
 
 3. Enter your app information, select **Internal** or **External** as per the preference, add your contact information, and click **Create**.
 
 4. Click **Create OAuth client**.
 
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/firebase/firebase-createOauth.png').default} alt="Real "  className="doc_img" width="1366" height="450"/>
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/firebase/firebase-create-Oauth.png').default} alt="Real "  className="doc_img" width="1366" height="450"/>
 
 5. Select **Web application** as the application type, and enter a name for the client (for example, `Web Client 1`). Update the following URLs, and then click **Create**:
 
@@ -112,13 +112,13 @@ These settings can be updated in the OAuth consent screen.
 
 For more information, see [OAuth 2.0 Client IDs](https://developers.google.com/identity/protocols/oauth2).
 
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/firebase/firebase-Oauthdetail.png').default} alt="Real "  className="doc_img" width="1366" height="450"/>
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/firebase/firebase-Oauth-detail.png').default} alt="Real "  className="doc_img" width="1366" height="450"/>
 
 After the OAuth client is created, click the **Download** icon to download the JSON file, and then click **OK**.
 
 6. Search for **Firebase** in the search bar and select **Firebase** from the results.
 
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/firebase/firebase-searchproduct.png').default} alt="Real "  className="doc_img" width="1366" height="450"/>
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/firebase/firebase-search-product.png').default} alt="Real "  className="doc_img" width="1366" height="450"/>
 
 7. Select **Firestore**, click **Get started**, and then click **Continue**.
 
@@ -126,7 +126,7 @@ After the OAuth client is created, click the **Download** icon to download the J
 
 9. Select your project, click **Add app**, and choose your platform (for example, **Android**).
 
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/firebase/firebase-selectapp.png').default} alt="Real "  className="doc_img" width="1366" height="450"/>
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/firebase/firebase-select-app.png').default} alt="Real "  className="doc_img" width="1366" height="450"/>
 
 10. On the **Add Firebase to your Android app** page, register your app, download the `google-services.json` file, add the Firebase SDK, and then click **Continue to console**.
 
@@ -138,7 +138,7 @@ After the OAuth client is created, click the **Download** icon to download the J
 
 13. Each tester receives an invitation email from Firebase, and once they accept it, their status appears in the **Testers** list as shown below.
 
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/firebase/firebase-acceptinvite.png').default} alt="Real "  className="doc_img" width="1366" height="450"/>
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/firebase/firebase-accept-invite.png').default} alt="Real "  className="doc_img" width="1366" height="450"/>
 
 
 
@@ -146,14 +146,14 @@ After the OAuth client is created, click the **Download** icon to download the J
 
 1. In the <BrandName /> dashboard, go to **Real Device** > **App Testing**, select **Install from Firebase**, and click the **Add Project** icon.
 
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/firebase/firebase-uploadconfig.png').default} alt="Real "  className="doc_img" width="1366" height="450"/>
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/firebase/firebase-upload-config.png').default} alt="Real "  className="doc_img" width="1366" height="450"/>
 
 2. Choose whether to connect your Firebase account by uploading a **config file** or by using **credentials**, and upload the JSON file you downloaded in step 5. In the pop-up that appears, click **Sign in with Google** and follow the prompts to select the Google account you want to use to integrate Firebase with <BrandName />.
 
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/firebase/firebase-selectaccount.png').default} alt="Real "  className="doc_img" width="1366" height="450"/>
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/firebase/firebase-select-account.png').default} alt="Real "  className="doc_img" width="1366" height="450"/>
 
 
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/firebase/firebase-allowaccount.png').default} alt="Real "  className="doc_img" width="1366" height="450"/>
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/firebase/firebase-allow-account.png').default} alt="Real "  className="doc_img" width="1366" height="450"/>
 
 3. After the integration is complete, your Firebase project appears in the projects list, and you can click **Share Now** to share it with the testers you added in Google Cloud.
 
@@ -179,7 +179,7 @@ After assigning these permissions, retry the integration.
 
 ## Key Actions Overview 
 
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/firebase/Buttonexplanation.png').default} alt="Real "  className="doc_img" width="1366" height="629"/>
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/firebase/Button-explanation.png').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
 1. **Add new project:** Click this button to add and sync new Firebase projects to your workspace.  
 2. **Refresh:** This button refreshes the project list, apps, and releases to their latest state without affecting your synced releases.
