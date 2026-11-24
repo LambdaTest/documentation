@@ -137,7 +137,7 @@ capabilities.setCapability("platformName", "ios");
 :::note
 - **Default and Latest Versions:** The table above lists the **Default** Version and **Latest** Version supported for each platform. The corresponding version will be selected when you explicitly set the `appiumVersion` capability to `default` or `latest`, respectively. These versions apply to the OS versions listed under the respective platform.
 
-- For example, for **Android**, setting `appiumVersion: default` selects version `2.2.1`, while setting `appiumVersion: latest` selects version `2.3.0`, as listed in the table above.
+For example, for **Android**, setting `appiumVersion: default` selects version `2.2.1`, while setting `appiumVersion: latest` selects version `2.3.0`, as listed in the table above.
 
 - To use a specific **Appium version**, set the `appiumVersion` capability to your preferred version. For example, `appiumVersion: 3.0.2`.
 

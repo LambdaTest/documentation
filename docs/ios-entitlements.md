@@ -77,9 +77,9 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 # iOS Entitlements
 ***
-Entitlements are permissions included in an iOS app's signature that give the app access to specific Apple services and system features, such as Push Notifications, App Groups, Keychain Sharing and Associated Domains (universal links). Each entitlement must be authorized by the provisioning profile the app is signed with. For the full list, see [Apple's entitlements documentation](https://developer.apple.com/documentation/bundleresources/entitlements).
+Entitlements are permissions included in an iOS app's signature that give the app access to specific Apple services and system features, such as Push Notifications, App Groups, Keychain Sharing and Associated Domains (universal links). Each entitlement must be authorized by the provisioning profile used to sign the app. For the complete list, refer to [Apple's entitlements documentation](https://developer.apple.com/documentation/bundleresources/entitlements).
 
-We support all `.ipa` files, irrespective of the certificate and provisioning profile used to build them. To install these apps on our devices, we re-sign them with our wildcard provisioning profile. Apps built with an Enterprise account can be installed without re-signing.
+We support all `.ipa` files, irrespective of the certificate and provisioning profile used to build them. To install these apps on our devices, we re-sign them with our wildcard provisioning profile.
 
 
 ## Re-signing iOS Apps
@@ -103,9 +103,9 @@ How your app was signed decides whether it needs to be re-signed to install on a
 | Build type | How Apple limits installation | Can it run without re-signing? |
 |--|--|--|
 | **Development** | Only on devices whose UDIDs are added to the provisioning profile | Yes, on private devices whose UDIDs are added to the provisioning profile |
-| **Ad Hoc** | Only on devices whose UDIDs are added to the provisioning profile (up to 100 per device type per year) | Yes, on private devices whose UDIDs are added to the provisioning profile |
+| **Ad Hoc** | Only on devices whose UDIDs are added to the provisioning profile | Yes, on private devices whose UDIDs are added to the provisioning profile |
 | **App Store** | Delivered only through the App Store or TestFlight | No, it must be re-signed |
-| **Enterprise** (In-House) | Any device, with no device list | Yes, on any public or private device |
+| **Enterprise** (In-House) | It can be installed on any device | Yes, on any public or private device |
 
 
 ## Supported entitlements
@@ -124,9 +124,8 @@ For setup steps and requirements, refer to [Keychain Access Groups support](/sup
 
 | Feature | What you may notice |
 |---|---|
-| Push notifications | Notifications aren't delivered, or the app can't register for them |
+| Push notifications | Notifications are not delivered, or the app is unable to register for notifications |
 | Universal links (`https://` deep links) | The link opens in Safari rather than in your app |
-| Sign in with Apple, iCloud, Apple Pay | The feature fails or isn't offered |
 
 
 ## Testing with your original signature
@@ -135,16 +134,15 @@ You can skip re-signing when iOS is already able to trust your app on the device
 
 ### Private devices: add their UDIDs to your provisioning profile
 
-If you use private devices (available under a separate paid plan), their UDIDs belong to your organization and don't change. Add them to your app's provisioning profile, and your build can install with your own signature:
+If you use private devices (available under a separate paid plan), their UDIDs belong to your organization. Add them to your app's provisioning profile, and your build can install with your own signature:
 
-1. Get the UDIDs of your private devices from LambdaTest.
+1. You can find the UDIDs of your private devices in the App Live dashboard. For more details, refer to this(/support/docs/public-cloud-vs-private-cloud/).
 2. Add these UDIDs to your Development or Ad Hoc provisioning profile in your Apple Developer account. See Apple's guide to [registering devices](https://developer.apple.com/help/account/devices/devices-overview/).
 3. Export a new `.ipa` with the updated provisioning profile and upload it.
 4. Turn off re-signing for your test.
 
-This works well when login, deep links or push notifications must behave exactly as they do in production.
 
-### Any device: use an Enterprise-signed build
+### Any public device: use an Enterprise-signed build
 
 Apps signed through the [Apple Developer Enterprise Program](https://developer.apple.com/programs/enterprise/) (In-House distribution) aren't limited to a device list. iOS accepts them on any device, public or private, so no re-signing is required and every entitlement stays intact. Upload your Enterprise build and turn off re-signing for your test.
 
@@ -160,13 +158,13 @@ Choosing the right setup
 
 :::info
 
-- Your application must be an Enterprise Application.
+Your application must be an Enterprise Application.
 
 :::
 
 When you upload an application that is generated through an Enterprise Account, you have the option at the beginning of your test to disable re-signing by toggling **Disable App Resigning**.
 
-Once you toggle the `Disable App Resigning` option, your application's certificates will be preserved.
+Once you toggle the **Disable App Resigning** option, your application's certificates will be preserved.
 
 <img loading="lazy" src={require('../assets/images/entitlements/disableappresign.png').default} alt="monday integration" width="626" height="439" className="doc_img"/>
 
@@ -175,17 +173,12 @@ Once you toggle the `Disable App Resigning` option, your application's certifica
 ## Disabling Re-Signing In App Automation
 ***
 
-:::info
 
-- Your application must be an Enterprise Application.
-
-:::
-
-You can prevent re-signing your application with the "resignApp" capability. Upload your enterprise application & specify the capability as "false" to prevent it from being re-signed.
+You can prevent re-signing your application with the `resignApp` capability. Upload your enterprise application & specify the capability as "false" to prevent it from being re-signed.
 
 KEY|VALUE|DESCRIPTION
 --|--|--
-| resignApp            | TYPE: BOOLEAN <br/> DEFAULT: True <br/> `resignApp = true` | 1. By default, if this capability is not passed, your app will be re-signed.<br/> 2. You can pass "false" as a capability to prevent your apps from being re-signed.<br/> 3. This is only for iOS-specific applications and devices. |
+| resignApp            | TYPE: BOOLEAN <br/> DEFAULT: True <br/> `resignApp = true` | 1. By default, if this capability is not passed, your app will be re-signed.<br/> 2. You can pass "false" as a value to prevent your apps from being re-signed. |
 
 >If you still have any questions for us, please feel free to let us know via our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24X7 Chat Portal**</span> or mail us to support@testmuai.com
 

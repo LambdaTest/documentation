@@ -173,195 +173,142 @@ import VerifiedTag from '@site/src/component/verifiedTag';
   ]) }}
 />
 
-# Network Proxy Support in Flutter Apps
+# Configure Proxy Support in Flutter Apps
 
-When you run Flutter tests on <BrandName /> real devices with network logs enabled, the device's traffic is routed through a network proxy so that requests and responses can be captured. Most native Android and iOS apps pick up this proxy automatically. **Flutter apps do not.** Unless a few settings are updated in your app, its API calls will bypass the proxy, and the network logs for your test session will be empty or incomplete.
+When you run Flutter tests on <BrandName /> real devices with a proxy enabled (such as Network, Tunnel, or Dedicated Proxy), the device’s traffic is routed through the proxy. Unlike most native **Android** and **iOS** apps, **Flutter** apps do not automatically use the device’s proxy settings.
 
-This section explains why this happens and what you need to change in your app so that its traffic honors the device proxy.
+This section explains why this happens and how to configure your app to use the device proxy.
 
-## Why the network proxy doesn't work with Flutter apps by default
+## Why the Proxy Does Not Work with Flutter Apps by Default
 
-Native apps send network requests through the platform's own networking stack: `HttpURLConnection` / OkHttp on Android, and `URLSession` on iOS. These stacks read the device's proxy settings and route traffic through the proxy without any extra code.
+Native apps typically use the platform's networking stack, such as `HttpURLConnection` or `OkHttp` on Android, and `URLSession` on iOS. These networking stacks can automatically honor the device's proxy settings.
 
-Flutter apps work differently. Popular Dart networking packages such as [`http`](https://pub.dev/packages/http) and [`dio`](https://pub.dev/packages/dio) are built on Dart's own `HttpClient` from `dart:io`. This client has its own networking implementation and **does not read the operating system's proxy settings**. By default, it connects directly to the destination server.
+Flutter apps work differently. Popular Dart networking packages such as `http` and `dio` use Dart's **HttpClient** from `dart:io`. To route your app's API requests through the device proxy, you must retrieve the proxy settings and configure the **HTTP client** to use them.
+
+For more information, refer to the [Flutter networking documentation](https://docs.flutter.dev/data-and-backend/networking?) and [Dart HttpClient documentation](https://api.dart.dev/dart-io/HttpClient-class.html?).
 
 As a result:
 
-- Requests made by your Flutter app skip the proxy that <BrandName /> configures on the device.
-- Those requests are not captured, so they don't appear in the network logs, even when `network: true` is set.
-- Other traffic on the device (for example, from the browser or from native SDKs inside your app) may still appear, which can make the logs look partially populated.
+- Requests made by your Flutter app may bypass the proxy configured on the device.
+- When these requests bypass the proxy, they may not be captured and therefore may not appear in the Logs section. For example, when you enable the `network: true` capability, network logs related to your application will not be available. The same applies to Tunnel logs and other proxy configurations.
+- Other traffic on the device, such as browser traffic or traffic from native SDKs, may still use the proxy.
 
-To fix this, your app must explicitly look up the device's proxy and tell Dart's `HttpClient` to use it.
 
-## How to make your Flutter app honor the network proxy
+## Configure Your Flutter App to Use the Proxy
 
-The approach is the same regardless of which HTTP package you use:
-
-1. **Read the device's proxy settings** using the [`flutter_system_proxy`](https://github.com/LambdaTest/flutter_system_proxy) plugin.
-2. **Apply the proxy to Dart's `HttpClient`** through its `findProxy` callback.
-3. **Send all API calls through this configured client.**
 
 ### Step 1: Add the dependencies
 
-Add `flutter_system_proxy` to your app's `pubspec.yaml`, along with the HTTP package your app already uses:
+Add `flutter_system_proxy` to your app's `pubspec.yaml` file.
 
 ```yaml
 dependencies:
-  flutter:
-    sdk: flutter
   flutter_system_proxy:
     git:
       url: https://github.com/LambdaTest/flutter_system_proxy.git
       ref: main
-  dio: ^5.6.0      # if your app uses Dio
-  http: ^1.4.0     # if your app uses the http package
 ```
 
-Then run:
+Run the following command to install the dependency:
 
 ```bash
 flutter pub get
 ```
 
-### Step 2: Configure your HTTP client to use the system proxy
+### Step 2: Configure the Proxy
 
-Choose the example that matches the networking package your app uses.
 
-<details>
-<summary><strong>Using Dio</strong></summary>
+#### Using Dio
 
-Dio exposes the underlying Dart `HttpClient` through `IOHttpClientAdapter`. Set the proxy there when the client is created:
+If your app uses **Dio**, configure its **HTTP adapter** in your API or service file.
 
 ```dart
+
 import 'dart:io';
+
 import 'package:dio/dio.dart';
 import 'package:dio/io.dart';
 import 'package:flutter_system_proxy/flutter_system_proxy.dart';
 
-class ProxyAwareDio {
-  final Dio dio = Dio(BaseOptions(
-    connectTimeout: const Duration(seconds: 10),
-    receiveTimeout: const Duration(seconds: 10),
-  ));
+Future<Dio> createProxyAwareDio() async {
+  final dio = Dio();
 
-  Future<Response<T>> get<T>(String url) async {
-    // Look up the proxy the device is configured to use for this URL.
-    // Returns a value such as "PROXY host:port", or "DIRECT" if no proxy is set.
-    final proxy = await FlutterSystemProxy.findProxyFromEnvironment(url);
+  final proxy = await FlutterSystemProxy.findProxyFromEnvironment(
+    // Replace this with your application's API URL.
+    'https://example.com',
+  );
 
-    // Tell Dio's underlying HttpClient to route requests through that proxy.
-    (dio.httpClientAdapter as IOHttpClientAdapter).createHttpClient = () {
-      final client = HttpClient();
-      client.findProxy = (uri) => proxy;
-      return client;
-    };
+  (dio.httpClientAdapter as IOHttpClientAdapter)
+      .createHttpClient = () {
+    final client = HttpClient();
+    client.findProxy = (uri) => proxy;
+    return client;
+  };
 
-    return dio.get<T>(url);
-  }
+  return dio;
 }
+
 ```
 
-:::note
-Older Dio versions use `onHttpClientCreate` instead of `createHttpClient`. Use whichever property your installed version of Dio provides.
-:::
-
-</details>
-
-<details>
-<summary><strong>Using the http package</strong></summary>
-
-The `http` package lets you supply your own Dart `HttpClient` through `IOClient`. Create the `HttpClient`, set its proxy, and wrap it:
+You may use this configured Dio instance for your API requests instead of creating a separate Dio instance with the default configuration.
 
 ```dart
+final dio = await createProxyAwareDio();
+
+final response = await dio.get(
+  'https://example.com/api',
+);
+
+```
+
+For more information, refer to the [Dio IOHttpClientAdapter documentation](https://pub.dev/documentation/dio/latest/io/IOHttpClientAdapter-class.html?).
+
+#### Using the http Package
+
+If your app uses the **http package**, configure an **IOClient** in your API or service file.
+
+```dart
+
 import 'dart:io';
+
 import 'package:http/http.dart' as http;
 import 'package:http/io_client.dart';
 import 'package:flutter_system_proxy/flutter_system_proxy.dart';
 
-Future<http.Client> createProxyAwareClient(String baseUrl) async {
-  // Look up the proxy the device is configured to use.
-  final proxy = await FlutterSystemProxy.findProxyFromEnvironment(baseUrl);
+Future<http.Client> createProxyAwareClient() async {
+  final proxy = await FlutterSystemProxy.findProxyFromEnvironment(
+    // Replace this with your application's API URL.
+    'https://example.com',
+  );
 
-  // Route all requests from this client through that proxy.
-  final httpClient = HttpClient()..findProxy = (uri) => proxy;
+  final httpClient = HttpClient()
+    ..findProxy = (uri) => proxy;
 
   return IOClient(httpClient);
 }
 
-// Usage
-final client = await createProxyAwareClient('https://api.example.com');
-final response = await client.get(Uri.parse('https://api.example.com/users'));
 ```
 
-</details>
+Use the configured client to make your API requests instead of the default `http.get()` or `http.post()` methods.
 
-### Step 3: Route all API calls through the configured client
-
-Make sure every network call in your app uses the proxy-aware client from Step 2. Any request made with a plain `Dio()` instance, a default `http.get()` call, or a new `HttpClient()` will still bypass the proxy and won't be captured.
-
-A simple way to guarantee this is to create the configured client once (for example, in your API service or dependency-injection layer) and reuse it throughout the app.
-
-:::tip Apply the proxy globally
-If your app has many independent HTTP clients, you can apply the proxy app-wide with `HttpOverrides.global`. Every `HttpClient` created after this runs, including those inside Dio and `http`, will use the proxy:
+For example:
 
 ```dart
-import 'dart:io';
-import 'package:flutter/widgets.dart';
-import 'package:flutter_system_proxy/flutter_system_proxy.dart';
+final client = await createProxyAwareClient();
 
-class ProxyHttpOverrides extends HttpOverrides {
-  final String proxy;
-  ProxyHttpOverrides(this.proxy);
+final response = await client.get(
+  Uri.parse('https://example.com/api'),
+);
 
-  @override
-  HttpClient createHttpClient(SecurityContext? context) {
-    return super.createHttpClient(context)..findProxy = (uri) => proxy;
-  }
-}
-
-Future<void> main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  final proxy = await FlutterSystemProxy.findProxyFromEnvironment('https://example.com');
-  HttpOverrides.global = ProxyHttpOverrides(proxy);
-  runApp(const MyApp());
-}
-```
-:::
-
-### iOS: using native networking (alternative)
-
-On iOS, you can also make network calls from native Swift code using `URLSession`, which respects the system proxy automatically. Your Flutter code calls the native method through a [platform channel](https://docs.flutter.dev/platform-integration/platform-channels). This is useful if you already have native networking code or prefer not to add a plugin.
-
-## Capture network logs with the `network` capability
-
-Once your app routes its traffic through the device proxy, set the `network` capability to `true` in your test configuration. <BrandName /> will then capture your app's HTTP and HTTPS requests and display them in the **Network** tab of the test session on the dashboard.
-
-```json
-{
-  "app": "lt://APP_ID",
-  "testSuite": "lt://TEST_SUITE_ID",
-  "device": ["Galaxy S24-14"],
-  "network": true,
-  "deviceLog": true,
-  "build": "Flutter Network Logs"
-}
 ```
 
-:::info
-Setting `network: true` on its own is not enough for Flutter apps. Without the code changes above, the capability is applied, but your app's requests never pass through the proxy, so they won't appear in the logs.
-:::
+For more information, refer to the [Dart HttpClient.findProxy](https://api.dart.dev/dart-io/HttpClient/findProxy.html?) documentation.
 
-## Verify the setup
+### Step 3: Run Your Test
 
-1. Build your app with the changes above and upload it to <BrandName />.
-2. Run a test with `network: true`.
-3. Open the test session on the dashboard and go to the **Network** tab.
-4. Confirm that requests to your app's API endpoints are listed.
+Build your app with the changes above and upload it to <BrandName />. Run your test using the required proxy configuration.
 
-## Troubleshooting
+Your Flutter app's API requests should now use the device's configured proxy.
 
-| Issue | Likely cause | What to do |
-|---|---|---|
-| Network tab is empty or shows only non-app traffic | Some requests are still made with a client that doesn't have the proxy configured | Search your code for `Dio()`, `http.get`, `http.post`, and `HttpClient()` and make sure they all use the proxy-aware client, or use `HttpOverrides.global` |
-| Requests fail with a handshake or certificate error after enabling the proxy | The app doesn't trust the certificate used for HTTPS inspection | Contact [TestMu AI support](https://www.testmuai.com/support/docs/) for guidance on certificate handling for your app |
-| `findProxyFromEnvironment` returns `DIRECT` | No proxy is configured on the device, for example when running locally | This is expected outside a <BrandName /> session with `network: true`. The app connects directly, so no change to your code is needed |
+
+

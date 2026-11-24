@@ -120,6 +120,8 @@ The VoiceOver feature is currently supported on selected iOS devices, allowing a
 | iPhone 15 | iOS 17 |
 | iPhone 16 | iOS 18 |
 | iPhone 17 | iOS 26 |
+| iPhone 17 Pro | iOS 26 |
+
 
 ---
 ## How to Navigate using Keyboard Shortcuts
