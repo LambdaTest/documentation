@@ -485,9 +485,13 @@ Only the **Admin** or **Creator** of the project can delete a project. Once dele
 </TabItem>
 </Tabs>
 
+## Ignored Rules
+
+The **Ignored Rules** section lists the rules created when you ignore a change in an AI Build Summary. Matching changes are hidden from the project's later builds. You can search the rules and remove the ones you no longer need. See [AI Build Summary: Ignore Rules](/support/docs/smartui-ai-build-summary/#ignore-rules).
 
 ## Additional Resources
 
+- [AI Build Summary](/support/docs/smartui-ai-build-summary/) - Review a whole build with a risk score, grouped changes and ignore rules
 - [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide) - Solutions for project configuration issues
 - [Baseline Management](/support/docs/smartui-baseline-management) - Learn how to manage baselines effectively
 - [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data) - Configure ignoreDOM/selectDOM for dynamic content
