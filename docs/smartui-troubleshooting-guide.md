@@ -1813,6 +1813,14 @@ Errors about the Figma token and about Figma config validation are documented on
 | **What happened** | The number of Figma IDs does not match the number of screenshot viewports. |
 | **What to do** | Give every Figma ID a matching viewport. |
 
+#### auto_detect_height must be true/false {#figma-auto-detect-height}
+
+| Field | Value |
+|-------|-------|
+| **Message** | `Invalid figma-web config; Invalid figma config; auto_detect_height must be true/false` |
+| **What happened** | `auto_detect_height` in a Figma-Web config is not a boolean, for example `"no"`. |
+| **What to do** | Set it to `true` or `false` without quotes, or remove it. See [Compare tall Figma frames with full-page screenshots](/support/docs/smartui-cli-figma-web/#compare-tall-figma-frames-with-full-page-screenshots). |
+
 #### Uploading Figma designs failed {#figma-upload-failed}
 
 | Field | Value |
