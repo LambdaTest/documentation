@@ -79,6 +79,9 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 />
 
 # Automated Screenshot Testing
+
+Automated screenshot testing on <BrandName /> captures screenshots of one URL across up to 25 desktop and mobile browser and OS combinations in a single session. This page shows how to run a screenshot test, download the results, view recent sessions, set preferences, schedule tests, share screenshots with your team and test pages behind basic authentication.
+
 > This feature is **deprecated** and as a result, no further support will be provided for this feature by the <BrandName /> Organization. 
 
 ***
