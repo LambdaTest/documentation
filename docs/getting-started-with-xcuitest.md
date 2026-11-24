@@ -1,8 +1,8 @@
 ---
 id: getting-started-with-xcui-testing
-title: XCUI Testing on TestMu AI
-sidebar_label: XCUI Testing
-description: Master XCUITest automation with TestMu AI! Learn to run scripts, utilize capabilities, and execute tests on real iOS devices effortlessly. Get started now!
+title: "XCUI Testing on Real iOS Devices: Quickstart"
+sidebar_label: "Run First Test"
+description: Run XCUITest automation for your iOS apps across 5000+ real devices and OS combinations on TestMu AI, from app upload to viewing results.
 keywords:
   - xcuitest
   - app test automation
@@ -38,7 +38,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       "@type": "WebPage",
       "@id": "https://www.testmuai.com/support/docs/getting-started-with-xcuitest/"
     },
-    "headline": "XCUI Testing on TestMu AI",
+    "headline": "XCUI Testing on Real iOS Devices: Quickstart",
     "description": "Master XCUITest automation with TestMu AI! Learn to run scripts, utilize capabilities, and execute tests on real iOS devices effortlessly. Get started now!",
     "url": "https://www.testmuai.com/support/docs/getting-started-with-xcuitest/",
     "image": {
@@ -200,7 +200,10 @@ import VerifiedTag from '@site/src/component/verifiedTag';
   ]) }}
 />
 <RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
-Developed by Apple, XCUITest is a UI testing framework for iOS applications, commonly used for End-to-End (E2E) testing of app user flows. It is built on top of XCTest, an integrated test framework in Apple's Xcode IDE. <BrandName /> lets you perform automated app testing of your iOS apps using XCUITest across 50,000+ real devices and OS combinations.
+
+Run XCUITest, Apple's XCTest-based UI testing framework, on <BrandName /> to test your iOS apps across 50,000+ real devices and OS combinations, or on virtual devices. Upload your app and XCUITest test suite as .ipa files, set capabilities such as the device, video and timeouts, trigger the build with one REST API call, and review results on the dashboard.
+
+Developed by Apple, XCUITest is a UI testing framework for iOS applications, commonly used for End-to-End (E2E) testing of app user flows. It is built on top of XCTest, an integrated test framework in Apple's Xcode IDE. <BrandName /> lets you perform automated app testing of your iOS apps using XCUITest across 50,000+ real devices and OS combinations. To learn the framework itself, read the [XCUITest tutorial](https://www.testmuai.com/xcuitest/).
 
 ## Prerequisites
 
@@ -212,6 +215,30 @@ Developed by Apple, XCUITest is a UI testing framework for iOS applications, com
 If you do not have any **iOS** app (.ipa) and an **XCUI Test** app (.ipa) file, you can run your sample tests on <BrandName /> by using our sample :link: [iOS app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_ios.ipa) and a sample :link: [XCUI Test](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_ios_xcuitest.ipa).
 
 :::
+
+## Build the App and Test Suite .ipa Files
+
+You need two .ipa files: your app and the XCUITest test suite (the test runner). Build both in Xcode with **Generic iOS Device** or **Any iOS Device (arm64)** as the device target.
+
+**App .ipa**
+
+1. Go to **Product** > **Clean**, then **Product** > **Archive**.
+2. Select the archive, click **Distribute App** and choose an **Ad Hoc**, **Enterprise** or **Development** export. Set **App Thinning** to None, and clear **Rebuild from Bitcode** and **Include manifest for over-the-air installation**.
+3. Choose your distribution certificate and provisioning profile, then save the exported .ipa file.
+
+**Test suite .ipa**
+
+1. Check that your UI test targets are in **Target Membership** and are selected for the **Test** build action of your Xcode build scheme.
+2. Go to **Product** > **Build For** > **Testing**.
+3. Find the generated .app file in the **Products** directory of your Xcode project and package it as an .ipa file:
+
+```bash
+mkdir Payload
+cp -r <YOUR_TEST_RUNNER>.app Payload/
+zip -r <YOUR_TEST_SUITE>.ipa Payload
+```
+
+Set the same **iOS Deployment Target** in **Build Settings** for the app and the test runner. If they differ, the tests run locally but cannot run on <BrandName /> real devices. The full steps, including how to package the app itself from a .app bundle, are in [How to Create iOS IPA Files](/support/docs/ios-ipa-files-xcui/).
 
 ## Running Your First Test: A Step-by-Step Guide
 
@@ -421,6 +448,25 @@ Once you have run your tests, you can view the test execution along with logs. Y
 
 <img loading="lazy" src={require('../assets/images/xcui/xcui-test.jpeg').default} alt="Image" width="521" height="268" className="doc_img"/>
 
+## Build Request Capabilities
+
+The build request body takes the capabilities below. The values in the commands above are examples: replace them with your own.
+
+| Capability | Type | What it does |
+|---|---|---|
+| `app` | String | The app ID returned by the app upload, in the format `lt://APP123456789123456789`. |
+| `testSuite` | String | The test suite ID returned by the test suite upload. |
+| `device` | Array | The devices to run on, each in `DeviceName-OSVersion` format, for example `["iPhone 11-14"]`. Pass several devices to run in parallel. |
+| `isVirtualDevice` | Boolean | Set to `true` to run the build on virtual devices instead of real devices. |
+| `video` | Boolean | Records a video of every test in the build. |
+| `queueTimeout` | Integer | Time in seconds after which the build times out from the queue. |
+| `idleTimeout` | Integer | Maximum running time of a test in the build, in seconds. |
+| `devicelog` | Boolean | Captures device logs. |
+| `network` | Boolean | Captures network logs. |
+| `build` | String | The build name shown on the dashboard. |
+
+For geolocation, GPS location, tunnels, Bluetooth, retries, region and the other options, see [XCUI Supported Capabilities](/support/docs/xcui-supported-capabilities/).
+
 ## Running Tests in Parallel
 
 You can run tests in parallel on multiple devices by passing the device name in comma separated format in the execute command as show below:
@@ -529,49 +575,19 @@ curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/x
 </TabItem>
 </Tabs>
 
+To run only some of your tests, upload an XCTestPlan file and pass its ID in the `xctestplan` capability, as described in [filter XCUITest runs with an XCTestPlan file](/support/docs/xctestplan/). XCTestPlan and filters cannot be used in the same build. To split a large suite into shards that run in parallel on real devices, see [Sharding for XCUI](/support/docs/sharding-rd-hyperexec/), which needs App Automation and HyperExecute plans on your account.
 
-## Using the XCUITest Agent Skill with TestMu AI
-***
+## Troubleshooting
 
-The [xcuitest-skill](https://github.com/LambdaTest/agent-skills/tree/main/xcuitest-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
+If a build does not start or your tests do not run as expected, check these points first:
 
-The xcuitest-skill package includes:
-
-<VerifiedTag value="Verified" />
-
-```
-xcuitest-skill/
-├── SKILL.md
-└── reference/
-    ├── playbook.md
-    └── advanced-patterns.md
-```
-
-It provides structured guidance for:
-
-* Project structure and setup
-* Dependency configuration
-* Local execution
-* TestMu AI cloud execution
-* Debugging patterns
-* CI/CD integration
-
-
-### Installing XCUITest Agent Skill
-***
-
-Install a XCUITest Agent Skill using the command below:
-
-<VerifiedTag value="Verified" />
-
-```
-# Clone the repo and copy the skill you need
-git clone https://github.com/LambdaTest/agent-skills.git
-cp -r agent-skills/xcuitest-skill .claude/skills/
-
-# Or for Cursor / Copilot
-cp -r agent-skills/xcuitest-skill .cursor/skills/
-```
-
-**Note**: If you prefer installing all available framework skills instead of only xcuitest-skill, clone the repository directly into your tool's skills directory (for example, .claude/skills/, .cursor/skills/, .gemini/skills/, or .agent/skills/).
+- **Device target:** both .ipa files are built with **Generic iOS Device** or **Any iOS Device (arm64)** as the device target.
+- **iOS Deployment Target:** the app and the test runner use the same iOS Deployment Target. When they differ, the tests run locally but cannot run on <BrandName /> real devices.
+- **Test targets:** your UI test targets are in **Target Membership** and selected for the **Test** build action of your scheme.
+- **IDs and token:** `app` and `testSuite` hold the `lt://` IDs returned by the two upload calls, and `BASIC_AUTH_TOKEN` is the base64 encoding of `username:accesskey`.
+- **Windows shell:** run the build command from Command Prompt (cmd.exe). PowerShell and other shells may need different syntax.
+- **Geolocation and tunnel:** `geoLocation` and `tunnel` are mutually exclusive, so pass only one of them in a build request.
+- **GPS coordinates:** latitude must be between -90 and 90 and longitude between -180 and 180, or the build returns an "Invalid GPS location" error.
+- **App re-signing:** `resignApp: false` works only for apps built for enterprise distribution and is not supported on virtual devices.
+- **XCTestPlan:** XCTestPlan and filters cannot be used in the same build.
 

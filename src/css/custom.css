@@ -1968,7 +1968,8 @@ h6[id]::before {
   padding: 48px 32px 32px 32px;
 }
 
-.kane_cli_cta .kane_cli_cta_content h2 {
+.kane_cli_cta .kane_cli_cta_content .kane_cli_cta_title {
+  max-width: none;
   margin: 0 0 4px;
   font-family: 'Manrope', 'SF Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   font-size: 28px;
@@ -2078,7 +2079,7 @@ h6[id]::before {
     padding: 28px 24px;
   }
 
-  .kane_cli_cta .kane_cli_cta_content h2 {
+  .kane_cli_cta .kane_cli_cta_content .kane_cli_cta_title {
     font-size: 22px;
     line-height: 30px;
     letter-spacing: -0.5px;
@@ -2092,7 +2093,7 @@ h6[id]::before {
 }
 
 @media (max-width: 1489px) {
-  .kane_cli_cta .kane_cli_cta_content h2 {
+  .kane_cli_cta .kane_cli_cta_content .kane_cli_cta_title {
     font-size: 18px;
     line-height: 26px;
   }

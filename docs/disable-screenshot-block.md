@@ -116,6 +116,56 @@ This feature is in the **beta phase**. To enable it, please reach out to our 24x
 
 :::
 
+## Why app screenshots and session video come out black
+---
+
+An Android app can mark a window as secure with the `FLAG_SECURE` window flag. Android then treats that window's content as secure and keeps it out of screenshots and off non-secure displays ([Android developer reference](https://developer.android.com/reference/android/view/WindowManager.LayoutParams#FLAG_SECURE)). When your test reaches a screen that sets this flag, the screenshot of that screen comes out black and the session video shows black frames, even though the app itself works.
+
+Disable Screenshot Block lets <BrandName /> capture those screens on Android real devices. In app automation, add the `"enableScreenshotUnblock": true` capability to the capabilities you already pass:
+
+<Tabs className="docs__val">
+
+<TabItem value="java" label="Java" default>
+
+```java
+DesiredCapabilities capabilities = new DesiredCapabilities();
+capabilities.setCapability("platformName", "Android");
+capabilities.setCapability("deviceName", "Galaxy S20");
+capabilities.setCapability("platformVersion", "10");
+capabilities.setCapability("isRealMobile", true);
+capabilities.setCapability("app", "YOUR_APP_URL");
+
+// Capture screens that set FLAG_SECURE
+capabilities.setCapability("enableScreenshotUnblock", true);
+```
+
+</TabItem>
+
+<TabItem value="python" label="Python">
+
+```python
+desired_caps = {
+    "platformName": "Android",
+    "deviceName": "Galaxy S20",
+    "platformVersion": "10",
+    "isRealMobile": True,
+    "app": "YOUR_APP_URL",
+
+    # Capture screens that set FLAG_SECURE
+    "enableScreenshotUnblock": True,
+}
+```
+
+</TabItem>
+
+</Tabs>
+
+Before you rely on it, check these three points:
+
+- The feature is in beta, so it has to be enabled for your account first. Ask <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24x7 Chat Support**</span> or write to [support@testmuai.com](mailto:support@testmuai.com).
+- It works on Android real devices.
+- It works only for apps uploaded after June 28, 2023.
+
 ## Disable Screenshot Block in Real Time App Testing
 
 ----
