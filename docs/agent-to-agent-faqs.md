@@ -179,7 +179,7 @@ Yes. The dashboard shows metric score deltas between test runs and tracks trends
 Yes. Red Team scenarios attack your agent on purpose.
 
 - **Chat agents:** a live adversarial attacker, not a single opening probe, runs seven attack types: business logic, hallucination, hijacking, prompt injection, technical injection, overreliance, and off-topic. The attacker and the grader are separate, so the score is not influenced by how hard the attacker pushed. A run that cannot be judged is reported as inconclusive, not passed.
-- **Phone caller agents:** red team scenarios are generated from the agent's own prompt. The platform finds the rules the agent must follow and attacks them, prioritizing rules not yet covered, and refreshes its targets when the prompt changes. Findings appear in the Red Team section of the suite **Insights** page, each linked to its moment in the call recording. Reports use the OWASP Agentic Top 10 categories ASI03 (identity), ASI06 (made-up history), and ASI09 (fake approval or pressure) alongside the OWASP LLM Top 10, with LLM10 Unbounded Consumption added, and a radar chart shows the pass rate for each risk category.
+- **Phone caller agents:** red team scenarios are generated from the agent's own prompt. The platform finds the rules the agent must follow and attacks them, prioritizing rules not yet covered, and refreshes its targets when the prompt changes. Findings appear in the Red Team view of the suite **Insights** page, each linked to its moment in the call recording. See [Red Teaming for Phone Caller Agents](/support/docs/phone-agent-red-teaming/).
 
 ### Multilingual Requirement Analysis and Multi-Language Testing
 
