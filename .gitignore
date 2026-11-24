@@ -29,3 +29,6 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-lock.yaml
+# Auto-generated API data and endpoint pages (regenerated on every build)
+/src/data/api/all-apis.json
+/src/pages/api-doc/*/

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Redirect } from '@docusaurus/router';
 import allApisData from '@site/src/data/api/all-apis.json';
-import { slugify } from './_ApiDocPage';
+import { slugify } from '@site/src/component/ApiReference/utils';
 
 function getFirstEndpointPath() {
   for (const api of allApisData.apis) {

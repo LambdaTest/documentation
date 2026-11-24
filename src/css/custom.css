@@ -3055,3 +3055,12 @@ h6[id]::before {
     transform: none;
   }
 }
+
+/* Docs home (support.md): render like the standalone docs page (full-width hero, 1536px container) */
+html.docs-doc-id-support-start [class*="docMainContainer"]{max-width:100%!important;}
+html.docs-doc-id-support-start [class*="docMainContainer"] > .container{max-width:none;padding:0;}
+html.docs-doc-id-support-start [class*="docMainContainer"] .col{max-width:100%;padding:0;flex:1 1 100%;}
+html.docs-doc-id-support-start [class*="docMainContainer"] .row{margin:0;}
+html.docs-doc-id-support-start .theme-doc-footer,html.docs-doc-id-support-start .pagination-nav,html.docs-doc-id-support-start footer{display:none;}
+html.docs-doc-id-support-start .theme-doc-markdown .container{max-width:1536px;margin:0 auto;}
+html.docs-doc-id-support-start .hide_extra_space_main_div{overflow:clip;}
