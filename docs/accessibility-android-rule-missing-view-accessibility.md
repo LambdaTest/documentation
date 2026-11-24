@@ -5,6 +5,8 @@ sidebar_label: Missing View Accessibility
 description: Rule-level Accessibility guidance for Missing View Accessibility on Android.
 slug: accessibility-android-rule-missing-view-accessibility/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

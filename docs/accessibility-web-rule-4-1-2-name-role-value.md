@@ -5,6 +5,8 @@ sidebar_label: Name, Role, Value (4.1.2)
 description: Rule-level Accessibility guidance for Name, Role, Value (WCAG 4.1.2 Level A).
 slug: accessibility-web-rule-4-1-2-name-role-value/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

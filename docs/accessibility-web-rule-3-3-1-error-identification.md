@@ -5,6 +5,8 @@ sidebar_label: Error Identification (3.3.1)
 description: Rule-level Accessibility guidance for Error Identification (WCAG 3.3.1 Level A).
 slug: accessibility-web-rule-3-3-1-error-identification/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

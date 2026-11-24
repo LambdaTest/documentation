@@ -14,7 +14,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/test-runs-configurations/
 site_name: TestMu AI
 slug: test-runs-configurations/
-canonical: https://www.testmu.ai/support/docs/test-runs-configurations/
+canonical: https://www.testmuai.com/support/docs/test-runs-configurations/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

@@ -25,21 +25,8 @@ function NotFound() {
                 Page Not Found
               </Translate>
             </h1>
-            <p>
-              <Translate
-                id="theme.NotFound.p1"
-                description="The first paragraph of the 404 page">
-                We could not find what you were looking for.
-              </Translate>
-            </p>
-            <p>
-              <Translate
-                id="theme.NotFound.p2"
-                description="The 2nd paragraph of the 404 page">
-                Please contact the owner of the site that linked you to the
-                original URL and let them know their link is broken.
-              </Translate>
-            </p>
+            <p>LambdaTest is now TestMu AI. We've moved from lambdatest.com to testmuai.com.<br /> This page may have a new location or no longer exist.
+              Chat with us and we'll help you find what you need.</p>
           </div>
         </div>
       </main>

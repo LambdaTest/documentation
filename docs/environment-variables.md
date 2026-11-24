@@ -16,6 +16,7 @@ slug: using-environment-variables-for-authentication-credentials/
 canonical: https://www.testmuai.com/support/docs/using-environment-variables-for-authentication-credentials/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 
@@ -174,6 +175,8 @@ Export your credentials in the bash profile to make them available across termin
 2. Press the **i** button from your keyboard to perform text-insertion into your profile.
 3. Feed TestMu AI Authentication credentials using the code below:
 
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-javascript">
 {`$ export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
@@ -210,6 +213,8 @@ Now that we have set up our TestMu AI Authentication Credentials as System Envir
 
 - For **JUnit** & **TestNG**:
 
+<VerifiedTag value="Verified" />
+
 ```
   lambdatestUserName = System.getenv("LT_USERNAME");
   lambdatestAccessKey = System.getenv("LT_ACCESS_KEY");
@@ -219,6 +224,9 @@ Now that we have set up our TestMu AI Authentication Credentials as System Envir
 ---
 
 - For **PyTest** & **unittest**:
+
+<VerifiedTag value="Verified" />
+
 ```
 lambdatest_username = os.environ["LT_USERNAME"]
 lambdatest_access_key = os.environ["LT_ACCESS_KEY"]
@@ -229,12 +237,16 @@ lambdatest_access_key = os.environ["LT_ACCESS_KEY"]
 
 - For **Mocha-Chai** & **Jasmine-Chai**:
 
+<VerifiedTag value="Verified" />
+
 ```
 let username = process.env.LT_USERNAME,
 accessKey = process.env.LT_ACCESS_KEY,
 ```
 
 - For **Protractor-Jasmine**:
+
+<VerifiedTag value="Verified" />
 
 ```
 exports.config = {
@@ -248,6 +260,8 @@ exports.config = {
 
 - For **RSpec**:
 
+<VerifiedTag value="Verified" />
+
 ```
         username: ENV['LT_USERNAME'],
         accessKey: ENV['LT_ACCESS_KEY']
@@ -257,6 +271,8 @@ exports.config = {
 ---
 
 - For **NUnit**:
+
+<VerifiedTag value="Verified" />
 
 ```
 var lambdatestUserName =
@@ -269,6 +285,8 @@ var lambdatestAccessKey =
 ---
 
 - For **Behat**:
+
+<VerifiedTag value="Verified" />
 
 ```
 $user = getenv('LT_USERNAME')

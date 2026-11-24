@@ -5,6 +5,8 @@ sidebar_label: Emoji or Symbol in Label
 description: "Flag Android accessibility labels made up mostly of emoji or symbols, which TalkBack announces inconsistently. Use clear descriptive text instead."
 slug: accessibility-android-rule-emoji-symbol-label/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

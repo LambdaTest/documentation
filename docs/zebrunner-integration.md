@@ -14,7 +14,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/zebrunner-integration/
 site_name: TestMu AI
 slug: zebrunner-integration/
-canonical: https://www.testmu.ai/support/docs/zebrunner-integration/
+canonical: https://www.testmuai.com/support/docs/zebrunner-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

@@ -14,7 +14,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/smartui-handle-dynamic-data/
 site_name: TestMu AI
 slug: smartui-handle-dynamic-data/
-canonical: https://www.testmu.ai/support/docs/smartui-handle-dynamic-data/
+canonical: https://www.testmuai.com/support/docs/smartui-handle-dynamic-data/
 
 ---
 import Tabs from '@theme/Tabs';
@@ -23,6 +23,7 @@ import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -330,6 +331,8 @@ You should use dynamic data handling in the following scenarios:
 
 ## Dynamic Data Handling Methods
 
+<VerifiedTag value="Verified" />
+
 <Tabs className='docs__val' groupId='dynamic-data-methods'>
 <TabItem value='ignore' label='Ignore DOM Elements' default>
 
@@ -352,6 +355,8 @@ smartuiSnapshot(driver, 'Screenshot Name', options);
 ```
 
 **Examples by Selector Type**
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='selector'>
 <TabItem value='id' label='By ID' default>
@@ -537,6 +542,8 @@ smartuiSnapshot(driver, 'Screenshot Name', options);
 ```
 
 **Examples by Selector Type**
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='selector'>
 <TabItem value='select-id' label='By ID' default>
@@ -788,6 +795,8 @@ await smartuiSnapshot(driver, 'Article Page', options);
 
 ## Troubleshooting
 
+<VerifiedTag value="Verified" />
+
 <Tabs className='docs__val' groupId='troubleshooting'>
 <TabItem value='elements-not-being-ignored' label='Elements Not Being Ignored' default>
 
@@ -846,6 +855,7 @@ await smartuiSnapshot(driver, 'Page', options);
 
 </TabItem>
 </Tabs>
+
 
 ## Additional Resources
 

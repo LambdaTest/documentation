@@ -18,7 +18,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/puppteer-visual-regression/
 site_name: TestMu AI
 slug: puppeteer-visual-regression/
-canonical: https://www.testmu.ai/support/docs/puppeteer-visual-regression/
+canonical: https://www.testmuai.com/support/docs/puppeteer-visual-regression/
 
 ---
 import Tabs from '@theme/Tabs';
@@ -26,6 +26,8 @@ import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -178,6 +180,8 @@ This documentation will act as your step-by-step guide in to perform Puppteer te
 - Go to [SmartUI](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/) and login along with your credentials.
 - Copy `LT_USERNAME` and `LT_ACCESS_KEY` credentials from `Access Key` button on the top right of the dashboard.
 
+<VerifiedTag value="Verified" />
+
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux' label='MacOS/Linux' default>
 
@@ -223,11 +227,15 @@ Once you have created a SmartUI Project, you can generate screenshots by running
 
 1. Please clone the following sample GitHub repo (`https://github.com/LambdaTest/puppeteer-sample`).
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git clone https://github.com/LambdaTest/puppeteer-sample.git
 ```
 
 2. Install the node modules using the command:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 npm i
@@ -235,6 +243,8 @@ npm i
 
 3. Set up the <BrandName /> credentials by following the instructions mentioned in the `README.md` file.
 4. Edit the required capabilities in your test file `navigation.js`.
+
+<VerifiedTag value="Verified" />
 
 ```javascript title="Add the following code snippet to run SmartUI with Puppeteer in ./navigation.js"
 "use strict";
@@ -297,6 +307,8 @@ const expect = require("chai").expect;
 ## **Step 3:** Executing the SmartUI Test Suite on Cloud
 
 Execute the test using the following command to run the test suite using `puppeteer`
+
+<VerifiedTag value="Verified" />
 
 ```bash
 node navigation.js

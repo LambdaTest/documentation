@@ -20,6 +20,7 @@ canonical: https://www.testmuai.com/support/docs/kane-cli-agent-mode/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -137,6 +138,8 @@ Agent Mode outputs structured NDJSON instead of the interactive terminal UI. It'
 
 Add `--agent` to any run command:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 kane-cli run "Verify the checkout flow completes successfully" \
   --url https://myapp.com \
@@ -157,6 +160,8 @@ Always combine `--agent` with `--headless` in non-interactive environments (CI/C
 ## Output Format
 
 Kane CLI outputs one JSON object per line (NDJSON) to stdout:
+
+<VerifiedTag value="Verified" />
 
 ```
 {"type":"run_start","objective":"Verify checkout","timestamp":"2026-04-14T10:30:45Z"}
@@ -201,6 +206,8 @@ Kane CLI outputs one JSON object per line (NDJSON) to stdout:
 ## The `run_end` Event
 
 `run_end` is always the last line of a run that started (see [Exit Codes](#exit-codes) for runs refused before they start). It contains the complete test result:
+
+<VerifiedTag value="Verified" />
 
 ```json
 {
@@ -257,6 +264,8 @@ Every Kane CLI run produces an `.evidence` pack stored natively in the results f
 
 Get the `run_end` event:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 # Get just the final result
 kane-cli run "..." --agent 2>/dev/null | tail -1 | jq .
@@ -303,6 +312,8 @@ The assurance commands take `--mode agent`, not `--agent`, and their stream ends
 
 If an objective requires user input mid-run, Kane CLI fires `ask_user`:
 
+<VerifiedTag value="Verified" />
+
 ```json
 {"type": "ask_user", "question": "Which item should I select?", "options": ["Small", "Medium", "Large"]}
 ```
@@ -313,11 +324,15 @@ If an objective requires user input mid-run, Kane CLI fires `ask_user`:
 
 If stdin IS a TTY, respond by writing JSON to stdin:
 
+<VerifiedTag value="Verified" />
+
 ```json
 {"type": "user_response", "answer": "Medium"}
 ```
 
 To cancel:
+
+<VerifiedTag value="Verified" />
 
 ```json
 {"type": "cancel"}

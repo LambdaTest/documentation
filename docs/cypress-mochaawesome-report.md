@@ -19,6 +19,7 @@ canonical: https://www.testmuai.com/support/docs/cypress-mochaawesome-report/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -129,6 +130,8 @@ Follow these steps to generate a consolidated HTML report using Mochawesome:
 ### Step 1: Update Your Cypress Configuration
 In your Cypress configuration file `cypress.config.js`, add the following code to enable Mochawesome as a reporter:
 
+<VerifiedTag value="Verified" />
+
 ```javascript title="cypress.config.js"
 "reporter": "cypress-multi-reporters",
   "reporterOptions": {
@@ -153,6 +156,8 @@ In your Cypress configuration file `cypress.config.js`, add the following code t
 ### Step 2: Configure the HyperExecute YAML File
 In your HyperExecute YAML configuration, define the [`report`](/support/docs/deep-dive-into-hyperexecute-yaml/#report) parameters like this:
 
+<VerifiedTag value="Verified" />
+
 ```yaml title="hyperexecute.yaml"
 report: true
 partialReports:
@@ -164,4 +169,6 @@ partialReports:
 ### Step 3: Execute Your Tests
 Run your Cypress tests on HyperExecute using the CLI. After your job completes, you can visit the HyperExecute dashboard to download and view the consolidated Mochawesome report.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/reports/cypress-mochawesome-report.gif').default} alt="Image" className="doc_img"/> 
+<video class="right-side" width="80%" controls id="vid">
+<source src= {require('../assets/images/hyperexecute/knowledge-base/reports/cypress-mochawesome-report.mp4').default} style={{ height: '300px' }} type="video/mp4" />
+</video> 

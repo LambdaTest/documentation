@@ -12,7 +12,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/smartui-root-cause-analysis/
 site_name: TestMu AI
 slug: smartui-root-cause-analysis/
-canonical: https://www.testmu.ai/support/docs/smartui-root-cause-analysis/
+canonical: https://www.testmuai.com/support/docs/smartui-root-cause-analysis/
 ---
 
 import Tabs from '@theme/Tabs';

@@ -72,13 +72,17 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-09T19:10:37+05:30"
+    "dateModified": "2026-11-11T14:00:00+05:30"
   }) }}
 />
 
 # How to Get my Username and Access key
 
 This page explains where you can find your LT Username and Access Key. 
+
+:::info On-premise deployments
+On-prem, click **Credentials** in the left sidebar of your organization's own HyperExecute dashboard and copy **Username** and **Access Key**. Use these keys, not the ones from the public cloud. See [Copy your username and access key](/support/docs/hyperexecute-on-premise-user-guide/#copy-your-username-and-access-key).
+:::
 
 **Step 1:** Go to the right side Profile dropdown and select **Account Settings**.
 
@@ -99,4 +103,3 @@ You can directly copy your Username and Access Key using shortcut key button.
 :::
 
 >If you have more questions, then just give us a <span className="doc__lt" onClick={() => window.openLTChatWidget()}>shout</span> and we will answer them for you.
-

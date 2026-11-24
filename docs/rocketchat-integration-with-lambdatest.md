@@ -13,7 +13,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/rocketchat-integration-with-testmu/
 site_name: TestMu AI
 slug: rocketchat-integration-with-testmu/
-canonical: https://www.testmu.ai/support/docs/rocketchat-integration-with-testmu/
+canonical: https://www.testmuai.com/support/docs/rocketchat-integration-with-testmu/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

@@ -1,0 +1,382 @@
+{
+  "name": "Selenium Automation API",
+  "baseUrl": "https://api.lambdatest.com/automation/api/v1",
+  "groups": [
+    {
+      "name": "Build",
+      "endpoints": [
+        {
+          "name": "Fetch all builds of an account.",
+          "method": "GET",
+          "path": "/builds",
+          "description": "Fetch all builds of an account. You can limit the number of records and apply filter on status, build date range and sort by users, start date and end date in asc and desc order. You can apply sort on multiple columns.",
+          "auth": [
+            {
+              "name": "Authorization",
+              "type": "string",
+              "in": "header",
+              "required": true,
+              "description": "Basic authentication header of the form Basic <encoded-value>, where <encoded-value> is the base64-encoded string username:password."
+            }
+          ],
+          "queryParams": [
+            {
+              "name": "offset",
+              "type": "integer",
+              "description": "Used to specify starting point",
+              "required": false
+            },
+            {
+              "name": "limit",
+              "type": "integer",
+              "description": "Used to limit the number of results",
+              "required": false
+            },
+            {
+              "name": "status",
+              "type": "string",
+              "description": "Filter by status (running, passed, failed, error)",
+              "required": false,
+              "enum": [
+                "running",
+                "passed",
+                "failed",
+                "error"
+              ]
+            },
+            {
+              "name": "fromdate",
+              "type": "string",
+              "description": "Start date (YYYY-MM-DD)",
+              "required": false
+            },
+            {
+              "name": "todate",
+              "type": "string",
+              "description": "End date (YYYY-MM-DD)",
+              "required": false
+            },
+            {
+              "name": "sort",
+              "type": "string",
+              "description": "Sort order (asc/desc)",
+              "required": false,
+              "enum": [
+                "asc",
+                "desc"
+              ]
+            }
+          ],
+          "responses": {
+            "200": {
+              "Meta": {
+                "attributes": {
+                  "org_id": 123
+                },
+                "result_set": {
+                  "count": 123,
+                  "limit": 123,
+                  "offset": 123,
+                  "total": 123
+                }
+              },
+              "data": [
+                {
+                  "build_id": 1782,
+                  "name": "shivam-video-test",
+                  "user_id": 1212,
+                  "username": "shivam",
+                  "status_ind": "completed"
+                }
+              ]
+            },
+            "401": {
+              "message": "Unauthorized",
+              "status": "error"
+            }
+          }
+        },
+        {
+          "name": "Fetch specified build details",
+          "method": "GET",
+          "path": "/builds/{buildId}",
+          "description": "Fetch details of a specific build by its ID.",
+          "auth": [
+            {
+              "name": "Authorization",
+              "type": "string",
+              "in": "header",
+              "required": true,
+              "description": "Basic authentication header."
+            }
+          ],
+          "pathParams": [
+            {
+              "name": "buildId",
+              "type": "integer",
+              "required": true,
+              "description": "The build ID"
+            }
+          ],
+          "responses": {
+            "200": {
+              "data": {
+                "build_id": 1782,
+                "name": "my-build",
+                "status_ind": "completed"
+              }
+            },
+            "401": {
+              "message": "Unauthorized"
+            }
+          }
+        },
+        {
+          "name": "Delete Build",
+          "method": "DELETE",
+          "path": "/builds/{buildId}",
+          "description": "Delete a specific build by its ID.",
+          "auth": [
+            {
+              "name": "Authorization",
+              "type": "string",
+              "in": "header",
+              "required": true,
+              "description": "Basic authentication header."
+            }
+          ],
+          "pathParams": [
+            {
+              "name": "buildId",
+              "type": "integer",
+              "required": true,
+              "description": "The build ID to delete"
+            }
+          ],
+          "responses": {
+            "200": {
+              "message": "Build deleted successfully"
+            },
+            "401": {
+              "message": "Unauthorized"
+            }
+          }
+        },
+        {
+          "name": "Update Build Name or Status",
+          "method": "PATCH",
+          "path": "/builds/{buildId}",
+          "description": "Update the name or status of a build.",
+          "auth": [
+            {
+              "name": "Authorization",
+              "type": "string",
+              "in": "header",
+              "required": true,
+              "description": "Basic authentication header."
+            }
+          ],
+          "pathParams": [
+            {
+              "name": "buildId",
+              "type": "integer",
+              "required": true,
+              "description": "The build ID to update"
+            }
+          ],
+          "requestBody": {
+            "name": "string",
+            "status_ind": "string"
+          },
+          "responses": {
+            "200": {
+              "message": "Build updated successfully"
+            },
+            "401": {
+              "message": "Unauthorized"
+            }
+          }
+        },
+        {
+          "name": "Stop tests by BuildID",
+          "method": "PUT",
+          "path": "/builds/stop/{buildId}",
+          "description": "Stop all running tests in a build.",
+          "auth": [
+            {
+              "name": "Authorization",
+              "type": "string",
+              "in": "header",
+              "required": true,
+              "description": "Basic authentication header."
+            }
+          ],
+          "pathParams": [
+            {
+              "name": "buildId",
+              "type": "integer",
+              "required": true,
+              "description": "The build ID"
+            }
+          ],
+          "responses": {
+            "200": {
+              "message": "Tests stopped successfully"
+            },
+            "401": {
+              "message": "Unauthorized"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Session",
+      "endpoints": [
+        {
+          "name": "Fetch all sessions of a build",
+          "method": "GET",
+          "path": "/sessions",
+          "description": "Fetch all sessions associated with a build.",
+          "auth": [
+            {
+              "name": "Authorization",
+              "type": "string",
+              "in": "header",
+              "required": true,
+              "description": "Basic authentication header."
+            }
+          ],
+          "queryParams": [
+            {
+              "name": "build_id",
+              "type": "integer",
+              "description": "The build ID",
+              "required": true
+            },
+            {
+              "name": "offset",
+              "type": "integer",
+              "description": "Starting point",
+              "required": false
+            },
+            {
+              "name": "limit",
+              "type": "integer",
+              "description": "Number of results",
+              "required": false
+            }
+          ],
+          "responses": {
+            "200": {
+              "data": []
+            },
+            "401": {
+              "message": "Unauthorized"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Session Logs (V2)",
+      "endpoints": [
+        {
+          "name": "Fetch session logs",
+          "method": "GET",
+          "path": "/sessions/{sessionId}/log",
+          "description": "Fetch logs for a specific session.",
+          "auth": [
+            {
+              "name": "Authorization",
+              "type": "string",
+              "in": "header",
+              "required": true,
+              "description": "Basic authentication header."
+            }
+          ],
+          "pathParams": [
+            {
+              "name": "sessionId",
+              "type": "string",
+              "required": true,
+              "description": "The session ID"
+            }
+          ],
+          "responses": {
+            "200": {
+              "data": []
+            },
+            "401": {
+              "message": "Unauthorized"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Test",
+      "endpoints": [
+        {
+          "name": "Fetch all tests of a session",
+          "method": "GET",
+          "path": "/tests",
+          "description": "Fetch all tests associated with a session.",
+          "auth": [
+            {
+              "name": "Authorization",
+              "type": "string",
+              "in": "header",
+              "required": true,
+              "description": "Basic authentication header."
+            }
+          ],
+          "queryParams": [
+            {
+              "name": "session_id",
+              "type": "string",
+              "description": "The session ID",
+              "required": true
+            }
+          ],
+          "responses": {
+            "200": {
+              "data": []
+            },
+            "401": {
+              "message": "Unauthorized"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "tunnel",
+      "endpoints": []
+    },
+    {
+      "name": "platforms",
+      "endpoints": []
+    },
+    {
+      "name": "prerun",
+      "endpoints": []
+    },
+    {
+      "name": "user-files",
+      "endpoints": []
+    },
+    {
+      "name": "Lighthouse",
+      "endpoints": []
+    },
+    {
+      "name": "Organisation",
+      "endpoints": []
+    },
+    {
+      "name": "extensions",
+      "endpoints": []
+    }
+  ]
+}

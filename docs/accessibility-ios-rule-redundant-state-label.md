@@ -5,6 +5,8 @@ sidebar_label: Redundant State in Label
 description: "Flag iOS accessibility labels that bake in state words like 'on' or 'selected' that VoiceOver already announces from the control itself."
 slug: accessibility-ios-rule-redundant-state-label/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

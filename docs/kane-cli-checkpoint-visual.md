@@ -14,6 +14,7 @@ site_name: TestMu AI
 slug: kane-cli-checkpoint-visual/
 canonical: https://www.testmuai.com/support/docs/kane-cli-checkpoint-visual/
 ---
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -110,6 +111,8 @@ Visual assertions verify what's visible on screen by analyzing the current scree
 
 ### Assertions
 
+<VerifiedTag value="Verified" />
+
 ```
 Assert: the product price is $29.99
 Assert: the search results show at least 5 items
@@ -119,6 +122,8 @@ Assert: the hero section displays "Welcome back"
 
 ### Extractions
 
+<VerifiedTag value="Verified" />
+
 ```
 Store the product price
 Extract the heading text
@@ -126,6 +131,8 @@ Get the number of items in the cart
 ```
 
 ### If/Else
+
+<VerifiedTag value="Verified" />
 
 ```
 If the login button is visible then click it, else click Sign Up

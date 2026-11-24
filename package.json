@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
-    "prestart": "node scripts/generate-static-md.js && node scripts/generate-llms-txt.js && node scripts/generate-skill-index.js",
+    "prestart": "node scripts/build-api-data.js && node scripts/generate-api-pages.js && node scripts/generate-static-md.js && node scripts/generate-llms-txt.js && node scripts/generate-skill-index.js",
     "start": "docusaurus start",
-    "prebuild": "node scripts/generate-static-md.js && node scripts/generate-llms-txt.js && node scripts/generate-skill-index.js",
+    "prebuild": "node scripts/build-api-data.js && node scripts/generate-api-pages.js && node scripts/generate-static-md.js && node scripts/generate-llms-txt.js && node scripts/generate-skill-index.js",
     "generate-static-md": "node scripts/generate-static-md.js",
     "generate-llms-txt": "node scripts/generate-llms-txt.js",
     "generate-skill-index": "node scripts/generate-skill-index.js",
@@ -50,5 +50,10 @@
       "last 1 safari version"
     ]
   },
-  "packageManager": "pnpm@8.15.9+sha512.499434c9d8fdd1a2794ebf4552b3b25c0a633abcee5bb15e7b5de90f32f47b513aca98cd5cfd001c31f0db454bc3804edccd578501e4ca293a6816166bbd9f81"
+  "packageManager": "pnpm@8.15.9+sha512.499434c9d8fdd1a2794ebf4552b3b25c0a633abcee5bb15e7b5de90f32f47b513aca98cd5cfd001c31f0db454bc3804edccd578501e4ca293a6816166bbd9f81",
+  "devDependencies": {
+    "autoprefixer": "^10.4.27",
+    "postcss": "^8.5.8",
+    "tailwindcss": "3"
+  }
 }

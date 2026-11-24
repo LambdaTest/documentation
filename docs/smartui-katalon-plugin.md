@@ -20,7 +20,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/smartui-katalon-plugin/
 site_name: TestMu AI
 slug: smartui-katalon-plugin/
-canonical: https://www.testmu.ai/support/docs/smartui-katalon-plugin/
+canonical: https://www.testmuai.com/support/docs/smartui-katalon-plugin/
 
 ---
 import Tabs from '@theme/Tabs';
@@ -29,6 +29,7 @@ import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 
@@ -218,6 +219,8 @@ With this plugin, you can:
 
 Run the following command in the terminal to start the Katalon instance.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 /Applications/Katalon\ Studio\ Enterprise.app/Contents/MacOS/katalon
 ```
@@ -231,6 +234,8 @@ In your Katalon project, set the `PROJECT_TOKEN` environment variable:
 1. Go to **Project > Settings > Plugins > SmartUI Integration**.
 2. Here you may set your project token
 
+<VerifiedTag value="Verified" />
+
 ```bash
 PROJECT_TOKEN = "project_token..."
 ```
@@ -242,6 +247,8 @@ PROJECT_TOKEN = "project_token..."
 Use the provided custom keywords to start, capture, and stop SmartUI sessions.
 
 #### Minimal Example:
+
+<VerifiedTag value="Verified" />
 
 ```groovy
 // Start SmartUI Server
@@ -271,6 +278,8 @@ You can pass additional configuration via a JSON file or inline parameters.
 
 #### Using a Config File (`config.json`):
 
+<VerifiedTag value="Verified" />
+
 ```json
 {
   "deviceName": "Chrome Desktop",
@@ -286,6 +295,8 @@ You can pass additional configuration via a JSON file or inline parameters.
 ```
 
 Then use it in your test:
+
+<VerifiedTag value="Verified" />
 
 ```groovy
 CustomKeywords.'com.katalon.plugin.keyword.smartui.SmartKeywords.startServer'('Build v1.0', 'config.json', '')

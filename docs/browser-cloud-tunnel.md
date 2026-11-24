@@ -17,6 +17,7 @@ canonical: https://www.testmuai.com/support/docs/browser-cloud-tunnel/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -130,6 +131,8 @@ Your cloud browser can only reach public URLs by default. But your agent may nee
 
 The Tunnel Service solves this by creating an encrypted connection between your local machine and <BrandName />'s cloud infrastructure. Once the tunnel is running, your <BrandName /> Browser Cloud sessions can reach any URL that your machine can reach - including `localhost`, private IPs, and internal hostnames.
 
+<VerifiedTag value="Verified" />
+
 ```
 Cloud Browser --(encrypted tunnel)--> Your Machine --> localhost:3000
                                                    --> staging.internal.company.com
@@ -141,6 +144,8 @@ Cloud Browser --(encrypted tunnel)--> Your Machine --> localhost:3000
 
 The easiest approach. Set `tunnel: true` in your session config and the
 TestMu AI Browser SDK handles starting and routing the tunnel automatically:
+
+<VerifiedTag value="Verified" />
 
 ```typescript
 const session = await client.sessions.create({
@@ -164,6 +169,8 @@ and starts the tunnel for you.
 
 For more control - for example, starting the tunnel once and reusing it across
 multiple sessions:
+
+<VerifiedTag value="Verified" />
 
 ```typescript
 // Start the tunnel
@@ -192,6 +199,8 @@ await client.tunnel.stop();
 
 ## Tunnel Config
 
+<VerifiedTag value="Verified" />
+
 ```typescript
 interface TunnelConfig {
     user: string;           // TestMu AI username
@@ -207,6 +216,8 @@ interface TunnelConfig {
 
 
 ## API
+
+<VerifiedTag value="Verified" />
 
 ```typescript
 await client.tunnel.start(config);   // Start tunnel

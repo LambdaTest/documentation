@@ -1,8 +1,10 @@
 ---
 id: custom-header
-title: How to Bypass Firewalls Using CustomHeaders Capability
-sidebar_label: Inject Custom HTTP Headers
-description: Add custom headers to Selenium tests and bypass firewall restrictions using the customHeaders capability.
+title: How to Set Custom HTTP Headers in Selenium on TestMu AI
+toc_max_heading_level: 2
+hide_title: true
+sidebar_label: "Custom HTTP Headers"
+description: Add custom HTTP headers to Selenium tests on TestMu AI using the customHeaders capability to bypass firewalls and control requests.
 keywords:
   - custom headers bypass firewall selenium
   - customUrlFilters selective header injection
@@ -13,6 +15,10 @@ site_name: TestMu AI
 slug: custom-headers/
 canonical: https://www.testmuai.com/support/docs/custom-headers/
 ---
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -25,8 +31,8 @@ canonical: https://www.testmuai.com/support/docs/custom-headers/
       "@type": "WebPage",
       "@id": "https://www.testmuai.com/support/docs/custom-headers/"
     },
-    "headline": "How to Bypass Firewalls Using CustomHeaders Capability",
-    "description": "Add custom headers to Selenium tests and bypass firewall restrictions using the customHeaders capability.",
+    "headline": "How to Set Custom HTTP Headers in Selenium on TestMu AI",
+    "description": "Add custom HTTP headers to Selenium tests on TestMu AI using the customHeaders capability to bypass firewalls and control requests.",
     "url": "https://www.testmuai.com/support/docs/custom-headers/",
     "image": {
       "@type": "ImageObject",
@@ -78,76 +84,6 @@ canonical: https://www.testmuai.com/support/docs/custom-headers/
       },
       {
         "@type": "SoftwareSourceCode",
-        "name": "CustomHeaders: Use Cases and Examples",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Java",
-        "text": "X-Session-ID: 1234567890 "
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "CustomHeaders: Use Cases and Examples",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Java",
-        "text": "Accept: application/json "
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "CustomHeaders: Use Cases and Examples",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Java",
-        "text": "X-RateLimit-Limit: 60\nX-RateLimit-Remaining: 56\nX-RateLimit-Reset: 1372700873"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Code sample 5",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Java",
-        "text": "X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions."
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Code sample 6",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Java",
-        "text": "X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions."
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Code sample 7",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Java",
-        "text": "X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions."
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Code sample 8",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Java",
-        "text": "X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions."
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Code sample 9",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Java",
-        "text": "X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions."
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Code sample 10",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Java",
-        "text": "X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions."
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Code sample 11",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Java",
-        "text": "X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions."
-      },
-      {
-        "@type": "SoftwareSourceCode",
         "name": "Implementation Example",
         "codeSampleType": "code snippet",
         "programmingLanguage": "Java",
@@ -155,72 +91,72 @@ canonical: https://www.testmuai.com/support/docs/custom-headers/
       },
       {
         "@type": "SoftwareSourceCode",
-        "name": "Send tokens or session IDs with headers like",
+        "name": "User Identification and Session Management",
         "codeSampleType": "code snippet",
-        "programmingLanguage": "Java",
+        "programmingLanguage": "HTTP",
         "text": "X-Session-ID: 1234567890"
       },
       {
         "@type": "SoftwareSourceCode",
-        "name": "Specify expected response formats",
+        "name": "Content Negotiation",
         "codeSampleType": "code snippet",
-        "programmingLanguage": "Java",
+        "programmingLanguage": "HTTP",
         "text": "Accept: application/json"
       },
       {
         "@type": "SoftwareSourceCode",
-        "name": "Get limits and usage from APIs",
+        "name": "Rate Limiting",
         "codeSampleType": "code snippet",
-        "programmingLanguage": "Java",
+        "programmingLanguage": "HTTP",
         "text": "X-RateLimit-Remaining: 10"
       },
       {
         "@type": "SoftwareSourceCode",
-        "name": "Include trace info or timing metrics",
+        "name": "Debugging and Performance Tracking",
         "codeSampleType": "code snippet",
-        "programmingLanguage": "Java",
+        "programmingLanguage": "HTTP",
         "text": "X-Execution-Time: 150ms"
       },
       {
         "@type": "SoftwareSourceCode",
-        "name": "Enable cross-origin requests",
+        "name": "CORS (Cross-Origin Resource Sharing)",
         "codeSampleType": "code snippet",
-        "programmingLanguage": "Java",
+        "programmingLanguage": "HTTP",
         "text": "Access-Control-Allow-Origin: *"
       },
       {
         "@type": "SoftwareSourceCode",
-        "name": "Pass app-level config",
+        "name": "Custom Application Logic",
         "codeSampleType": "code snippet",
-        "programmingLanguage": "Java",
+        "programmingLanguage": "HTTP",
         "text": "X-App-Version: v2.3.1"
       },
       {
         "@type": "SoftwareSourceCode",
-        "name": "Mask the request with common headers",
+        "name": "Bypassing Firewalls/Proxies",
         "codeSampleType": "code snippet",
-        "programmingLanguage": "Java",
+        "programmingLanguage": "HTTP",
         "text": "User-Agent: Mozilla/5.0 (Windows NT 10.0...)"
       },
       {
         "@type": "SoftwareSourceCode",
-        "name": "Return backend state",
+        "name": "Server Health",
         "codeSampleType": "code snippet",
-        "programmingLanguage": "Java",
+        "programmingLanguage": "HTTP",
         "text": "X-Server-Status: All systems operational"
       },
       {
         "@type": "SoftwareSourceCode",
-        "name": "Guide search engines",
+        "name": "SEO Optimization",
         "codeSampleType": "code snippet",
-        "programmingLanguage": "Java",
+        "programmingLanguage": "HTTP",
         "text": "Link: <https://example.com/page>; rel=\"canonical\""
       },
       {
         "@type": "SoftwareSourceCode",
-        "name": "Track experimental groups",
+        "name": "A/B Testing",
         "codeSampleType": "code snippet",
-        "programmingLanguage": "Java",
+        "programmingLanguage": "HTTP",
         "text": "X-Experiment-ID: variant_b"
       }
     ],
@@ -228,11 +164,8 @@ canonical: https://www.testmuai.com/support/docs/custom-headers/
   }) }}
 />
 
-# Bypass Firewalls with customHeaders and customUrlFilters
+# How to Set Custom HTTP Headers in Selenium on TestMu AI
 ---
-
-
-import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 Corporate firewalls keep networks secure but can occasionally interfere with your testing process. The customHeaders and customUrlFilters capabilities give developers precise control over network requests and firewall bypassing during testing.
 
@@ -241,16 +174,18 @@ This document covers the customHeaders capability, which lets you add custom hea
 ## About CustomHeaders
 ---
 
-Custom headers carry information about the request or response, such as the method, URL, and body content. You can modify the parameters of HTTP requests sent by your tests by manipulating these headers, thereby working around firewall restrictions.
+Custom headers carry information about the request or response, such as the method, URL, and body content. You can modify the parameters of HTTP requests sent by your tests by manipulating these headers, thereby working around firewall restrictions. `customHeaders` is one of many network controls available on the platform; see the full list of [Selenium automation capabilities](/support/docs/selenium-automation-capabilities/) for related options.
 
 ## How to Use CustomHeaders Capability on TestMu AI
 ---
 
-Add custom headers using the Desired Capabilities class.
+Add custom headers using the Capabilities class.
 
-1. Create an instance of the Desired Capabilities class.
+1. Create an instance of the Capabilities class.
 
 2. Use the customHeaders capability to add your custom headers.
+
+<VerifiedTag value="Verified" />
 
 ```java
 DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -271,6 +206,8 @@ Custom headers serve different purposes for web development and network communic
 
 **Example**: The Custom header `X-Session-ID` tracks user sessions.
 
+<VerifiedTag value="Verified" />
+
 ```java
 X-Session-ID: 1234567890 
 ```
@@ -279,6 +216,8 @@ X-Session-ID: 1234567890
 
 **Example**: `Accept` header specifies the client-preferred format of the response data.
 
+<VerifiedTag value="Verified" />
+
 ```java
 Accept: application/json 
 ```
@@ -286,6 +225,8 @@ Accept: application/json
 3. **Rate Limiting**: APIs use custom headers to provide information about rate limits, including how many requests a client can make in a given time period and when they can make new requests.
 
 **Example**
+
+<VerifiedTag value="Verified" />
 
 ```java
 X-RateLimit-Limit: 60
@@ -297,6 +238,8 @@ X-RateLimit-Reset: 1372700873
 
 **Example**
 
+<VerifiedTag value="Verified" />
+
 ```java
 X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions.
 ```
@@ -304,6 +247,8 @@ X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions.
 5. **CORS (Cross-Origin Resource Sharing)**: The CORS standard uses custom headers to allow browsers and servers to interact securely with resources from different origins, including headers like "Access-Control-Allow-Origin" and "Access-Control-Allow-Methods".
 
 **Example**
+
+<VerifiedTag value="Verified" />
 
 ```java
 X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions.
@@ -313,6 +258,8 @@ X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions.
 
 **Example**
 
+<VerifiedTag value="Verified" />
+
 ```java
 X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions.
 ```
@@ -320,6 +267,8 @@ X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions.
 7. **Bypassing Firewalls or Proxies**: In some cases, use custom headers to bypass certain network restrictions, such as firewalls or proxy servers. Always do this responsibly and in accordance with security policies.
 
 **Example**
+
+<VerifiedTag value="Verified" />
 
 ```java
 X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions.
@@ -329,6 +278,8 @@ X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions.
 
 **Example**
 
+<VerifiedTag value="Verified" />
+
 ```java
 X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions.
 ```
@@ -337,6 +288,8 @@ X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions.
 
 **Example**
 
+<VerifiedTag value="Verified" />
+
 ```java
 X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions.
 ```
@@ -344,6 +297,8 @@ X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions.
 10. **A/B Testing**: Use custom headers to control or track A/B testing, where different versions of a service are tested against each other.
 
 **Example**
+
+<VerifiedTag value="Verified" />
 
 ```java
 X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions.
@@ -362,12 +317,16 @@ Custom headers are an integral part of HTTP requests and responses. They can car
 The customUrlFilters capability, used together with customHeaders, lets you specify exactly which URLs should receive the custom headers. This ensures that headers are only applied to requests matching your defined filters.
 
 ### Key Behavior
+---
 
 - If customHeaders are defined without customUrlFilters, the headers apply globally to all outgoing network requests.
 - If customUrlFilters are provided, the customHeaders only apply to requests matching the filter criteria.
 - Filters can be exact URLs or regular expressions, providing flexible targeting.
 
 ### Implementation Example
+---
+
+<VerifiedTag value="Verified" />
 
 ```java
 DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -386,6 +345,7 @@ capabilities.setCapability("customUrlFilters", urlFilters);
 ```
 
 ### Behavior of This Example
+---
 
 The headers `WebView: Enable` and `X-Custom-Token: secure-token-123` are only applied to:
 
@@ -397,7 +357,7 @@ A request to `https://lambdatest.github.io/sample-todo-app/` will not contain an
 ## A Responsible Approach to Bypassing Firewalls
 ---
 
-While the ability to add and control custom headers is useful, always follow your organization's security and compliance policies. These capabilities are designed to facilitate secure, realistic testing - not to bypass security controls inappropriately.
+While the ability to add and control custom headers is useful, always follow your organization's security and compliance policies. These capabilities are designed to facilitate secure, realistic testing - not to bypass security controls inappropriately. For related network configuration, you can also apply custom DNS mapping to redirect domains or run tests behind a proxy for restricted environments.
 
 ## Use Cases
 ---
@@ -408,7 +368,9 @@ The following examples show common use cases for custom headers.
 
 Send tokens or session IDs with headers like:
 
-```java
+<VerifiedTag value="Verified" />
+
+```http
 X-Session-ID: 1234567890
 ```
 
@@ -416,7 +378,9 @@ X-Session-ID: 1234567890
 
 Specify expected response formats:
 
-```java
+<VerifiedTag value="Verified" />
+
+```http
 Accept: application/json
 ```
 
@@ -424,7 +388,9 @@ Accept: application/json
 
 Get limits and usage from APIs:
 
-```java
+<VerifiedTag value="Verified" />
+
+```http
 X-RateLimit-Remaining: 10
 ```
 
@@ -432,7 +398,9 @@ X-RateLimit-Remaining: 10
 
 Include trace info or timing metrics:
 
-```java
+<VerifiedTag value="Verified" />
+
+```http
 X-Execution-Time: 150ms
 ```
 
@@ -440,7 +408,9 @@ X-Execution-Time: 150ms
 
 Enable cross-origin requests:
 
-```java
+<VerifiedTag value="Verified" />
+
+```http
 Access-Control-Allow-Origin: *
 ```
 
@@ -448,7 +418,9 @@ Access-Control-Allow-Origin: *
 
 Pass app-level config:
 
-```java
+<VerifiedTag value="Verified" />
+
+```http
 X-App-Version: v2.3.1
 ```
 
@@ -456,7 +428,9 @@ X-App-Version: v2.3.1
 
 Mask the request with common headers:
 
-```java
+<VerifiedTag value="Verified" />
+
+```http
 User-Agent: Mozilla/5.0 (Windows NT 10.0...)
 ```
 
@@ -464,7 +438,9 @@ User-Agent: Mozilla/5.0 (Windows NT 10.0...)
 
 Return backend state:
 
-```java
+<VerifiedTag value="Verified" />
+
+```http
 X-Server-Status: All systems operational
 ```
 
@@ -472,7 +448,9 @@ X-Server-Status: All systems operational
 
 Guide search engines:
 
-```java
+<VerifiedTag value="Verified" />
+
+```http
 Link: <https://example.com/page>; rel="canonical"
 ```
 
@@ -480,7 +458,9 @@ Link: <https://example.com/page>; rel="canonical"
 
 Track experimental groups:
 
-```java
+<VerifiedTag value="Verified" />
+
+```http
 X-Experiment-ID: variant_b
 ```
 
@@ -492,4 +472,13 @@ The customHeaders and customUrlFilters capabilities let you simulate request sce
 By turning obstacles like firewalls into controllable conditions, TestMu AI simplifies testing and enhances the realism and effectiveness of your QA process.
 
 Happy testing!
+
+## Next Steps
+---
+
+Continue with these related guides:
+
+- [Custom DNS Map](/support/docs/custom-dns-map/)
+- [Run Selenium Tests Behind the Proxy](/support/docs/selenium-tests-behind-proxy/)
+- [Selenium Automation Capabilities](/support/docs/selenium-automation-capabilities/)
 

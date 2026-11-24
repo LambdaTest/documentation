@@ -27,6 +27,7 @@ import TabItem from '@theme/TabItem';
 import RealDeviceTag from '../src/component/realDevice';
 import VirtualDeviceTag from '../src/component/virtualDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
@@ -225,11 +226,15 @@ In this documentation, you will learn how to trigger a automation script of **Ro
 
 ### Create your Virtual Environment
 
+<VerifiedTag value="Verified" />
+
 ```python
 python3 -m virtualenv venv
 ```
 
 ### Activate your Virtual Environment
+
+<VerifiedTag value="Verified" />
 
 ```python
 source venv/bin/activate
@@ -239,6 +244,8 @@ These commands will create a new virtual environment name `venv` and activate it
 ## Setup Your Authentication
 
 Replace <BrandName /> `username` and `accesskey` in the `common.robot` file as mentioned below:
+
+<VerifiedTag value="Verified" />
 
 ```js title="common.robot"
 *** Settings ***
@@ -310,6 +317,9 @@ You need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* 
 
 <Tabs className="docs__val">
 <TabItem value="bash" label="Linux / MacOS" default>
+
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
@@ -318,6 +328,9 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </div>
 </TabItem>
 <TabItem value="powershell" label="Windows" default>
+
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
   {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
@@ -335,6 +348,9 @@ Make sure to add the path of the **appFile** in the cURL request. Below is an ex
 <Tabs className="docs__val">
 
 <TabItem value="bash" label="App File" default>
+
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
       {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "appFile=@"/Users/macuser/Downloads/proverbial_android.apk"" -F "name="proverbial_app""`}
@@ -343,6 +359,9 @@ Make sure to add the path of the **appFile** in the cURL request. Below is an ex
 </TabItem>
 
 <TabItem value="powershell" label="App URL" default>
+
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
       {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "url=:https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk" -F "name=Proverbial_App"`}
@@ -363,6 +382,8 @@ Make sure to add the path of the **appFile** in the cURL request. Below is an ex
 ### Step 4: Update your Automation Script
 
 An automation script file `*StepDef.py` for the sample application given above has been provided here.
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
 
@@ -435,6 +456,8 @@ Example of connecting to Lambdatest via Robot Framework
 
 You can update your custom capabilities in test scripts `Makefile` file. In this sample project, we are passing platform name, platform version, device name and app url _(generated earlier)_ along with other capabilities like build name and test name via capabilities object.
 
+<VerifiedTag value="Verified" />
+
 ```python title="Makefile"
 test_Web_ios:
 	robot --variable version:15 --variable platformName:ios --variable deviceName:"iPhone.*" --variable isRealMobile:true --variable visual:true --variable network:true --variable console:true --variable devicelog:true Tests/AndroidIosWeb.robot
@@ -454,11 +477,15 @@ test_Web_Android:
 
 - Install the required packages from the cloned project directory:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 pip install -r requirements.txt
 ```
 
 - Execute the following command to run your test on <BrandName /> platform:
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
 
@@ -489,6 +516,8 @@ The [robot-framework-skill](https://github.com/LambdaTest/agent-skills/tree/main
 
 The robot-framework-skill package includes:
 
+<VerifiedTag value="Verified" />
+
 ```
 robot-framework-skill/
 ├── SKILL.md
@@ -511,6 +540,8 @@ It provides structured guidance for:
 ***
 
 Install a Robot Framework Agent Skill using the command below:
+
+<VerifiedTag value="Verified" />
 
 ```
 # Clone the repo and copy the skill you need

@@ -16,6 +16,7 @@ canonical: https://www.testmuai.com/support/docs/hyperexecute-inherit-config/
 
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -120,6 +121,8 @@ For example, you can create a base YAML file with common settings like **browser
 
 You can use the inheritance feature by entering the following flag in your YAML file:
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 base:
   yamls:
@@ -137,6 +140,8 @@ base:
 Go through the example attached below to understand how the resultant YAML will function if you inherit a base YAML in your parent YAML file. 
 
 ### Parent YAML
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 ---
@@ -171,6 +176,9 @@ jobLabel: [selenium-testng, linux, v1, autosplit]
 ```
 
 ### Base YAML
+
+<VerifiedTag value="Verified" />
+
 ```yaml
 ---
 version: 0.1
@@ -201,6 +209,9 @@ jobLabel: [selenium-testng, autosplit]
 ```
 
 ### Resultant YAML
+
+<VerifiedTag value="Verified" />
+
 ```yaml
 version: 0.1
 # highlight-next-line

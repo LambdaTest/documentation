@@ -13,10 +13,11 @@ keywords:
 url: https://www.testmuai.com/support/docs/network-configurations-in-real-devices/
 site_name: TestMu AI
 slug: network-configurations-in-real-devices/
-canonical: https://www.testmu.ai/support/docs/network-configurations-in-real-devices/
+canonical: https://www.testmuai.com/support/docs/network-configurations-in-real-devices/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

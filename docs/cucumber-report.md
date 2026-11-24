@@ -14,6 +14,7 @@ canonical: https://www.testmuai.com/support/docs/cucumber-report/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -124,6 +125,8 @@ Cucumber itself provides basic reporting in the command line, but additional plu
 ### Step 1: Configure the TestRunner File
 In your `TestRunner` file, configure `@CucumberOptions` to specify report formats and output paths. Here’s an example configuration:
 
+<VerifiedTag value="Verified" />
+
 ```javascript title="TestRunner.java"
 @CucumberOptions(
         features = "src/main/java/Features",
@@ -146,6 +149,8 @@ Explanation of plugin Options:
 
 ### Step 2: Configure the HyperExecute YAML File
 In your HyperExecute YAML configuration, define the [`report`](/support/docs/deep-dive-into-hyperexecute-yaml/#report) parameters like this:
+
+<VerifiedTag value="Verified" />
 
 ```yaml title="hyperexecute.yaml"
 report: true

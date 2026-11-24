@@ -13,7 +13,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/network-throttling-for-responsive-testing/
 site_name: TestMu AI
 slug: network-throttling-for-responsive-testing/
-canonical: https://www.testmu.ai/support/docs/network-throttling-for-responsive-testing/
+canonical: https://www.testmuai.com/support/docs/network-throttling-for-responsive-testing/
 ---
 
 

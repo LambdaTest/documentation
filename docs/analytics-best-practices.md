@@ -17,6 +17,7 @@ canonical: https://www.testmuai.com/support/docs/insights-best-practices/
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
+
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
     "@context": "https://schema.org",

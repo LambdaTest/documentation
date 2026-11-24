@@ -16,6 +16,7 @@ slug: testing-flutter-apps/
 canonical: https://www.testmuai.com/support/docs/testing-flutter-apps/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 
@@ -152,6 +153,8 @@ Before automating Flutter apps using Appium, make sure you have the following th
 
 2. Add the below dependencies in Flutter app's `pubspec.yaml`
 
+<VerifiedTag value="Verified" />
+
 ```
  dev_dependencies:
    test: Demo
@@ -163,6 +166,8 @@ Before automating Flutter apps using Appium, make sure you have the following th
 
 3. In `main.dart` file, ensure the app has `enableFlutterDriverExtension()` enabled before `runApp`.
 
+<VerifiedTag value="Verified" />
+
 ```
 void main() {
     enableFlutterDriverExtension();
@@ -173,11 +178,15 @@ void main() {
 
  4. Set the `automationName` capability to `flutter` in Appium desired capabilities.
 
+<VerifiedTag value="Verified" />
+
 ```
  desiredCapabilities.setCapability("automationName", "flutter");
 ```
 
 Shown below is the test script for automating Flutter apps on <BrandName /> platform.
+
+<VerifiedTag value="Verified" />
 
 ```py
 import os
@@ -232,6 +241,8 @@ Check out this [Flutter Appium Java GitHub](https://github.com/LambdaTest/flutte
 
 To run Appium tests using the Flutter Integration Driver on TestMu AI, set the *automationName* capability to *FlutterIntegration*.
 
+<VerifiedTag value="Verified" />
+
 ```java
 desired_caps = {
   "deviceName": "Galaxy S20",
@@ -246,6 +257,8 @@ desired_caps = {
 ```
 
 The example below shows a basic login flow for an Android Flutter app using the Appium Flutter Integration Driver. It covers driver setup, Flutter-specific capabilities, and widget interaction using *ValueKey*.
+
+<VerifiedTag value="Verified" />
 
 ```java
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -319,6 +332,8 @@ The [flutter-testing-skill](https://github.com/LambdaTest/agent-skills/tree/main
 
 The flutter-testing-skill package includes:
 
+<VerifiedTag value="Verified" />
+
 ```
 flutter-testing-skill/
 ├── SKILL.md
@@ -341,6 +356,8 @@ It provides structured guidance for:
 ***
 
 Install a Flutter Testing Agent Skill using the command below:
+
+<VerifiedTag value="Verified" />
 
 ```
 # Clone the repo and copy the skill you need

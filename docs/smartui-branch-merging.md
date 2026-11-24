@@ -13,7 +13,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/smartui-branch-merging/
 site_name: TestMu AI
 slug: smartui-branch-merging/
-canonical: https://www.testmu.ai/support/docs/smartui-branch-merging/
+canonical: https://www.testmuai.com/support/docs/smartui-branch-merging/
 
 ---
 import Tabs from '@theme/Tabs';
@@ -22,6 +22,7 @@ import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 ---
 
@@ -145,6 +146,8 @@ Branch-level merging allows you to merge visual regression test results from one
 
 ### Merge Command
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npx smartui merge branch --source <source-branch> --target <target-branch>
 ```
@@ -160,6 +163,8 @@ npx smartui merge branch --source <source-branch> --target <target-branch>
    - For build merges: `merged-build/<sourcebuildname>-<targetbuildname>`
 
 ### Example Workflow
+
+<VerifiedTag value="Verified" />
 
 ```bash
 # Merge feature branch into main
@@ -187,6 +192,8 @@ npx smartui merge branch --source hotfix/security-patch --target staging
 
 **Scenario**: Merging a feature branch into main after approval
 
+<VerifiedTag value="Verified" />
+
 ```bash
 # 1. Ensure feature branch is approved
 npx smartui merge branch --source feature/new-login --target main
@@ -195,6 +202,8 @@ npx smartui merge branch --source feature/new-login --target main
 ### 2. Hotfix Strategy
 
 **Scenario**: Merging a hotfix into multiple branches
+
+<VerifiedTag value="Verified" />
 
 ```bash
 # 1. Merge to staging
@@ -207,6 +216,8 @@ npx smartui merge branch --source hotfix/security-patch --target production
 ### 3. Release Branch Strategy
 
 **Scenario**: Managing release branches
+
+<VerifiedTag value="Verified" />
 
 ```bash
 # 1. Create release branch
@@ -281,6 +292,8 @@ If you encounter any issues with branch merging in SmartUI, please contact our s
 
 Let's walk through a complete workflow where a team is developing a new feature with multiple iterations and PRs.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 # Initial feature development
 git checkout -b feature/new-dashboard
@@ -311,6 +324,8 @@ npx smartui --config .smartui.json exec -- <Your execution command> --buildName 
 ### CI/CD Integration with Branch Merging
 
 Here's a GitHub Actions workflow that automates the branch merging process in your CI/CD pipeline:
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 name: Visual Regression Tests with Branch Merging

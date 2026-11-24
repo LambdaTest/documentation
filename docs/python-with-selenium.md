@@ -1,8 +1,10 @@
 ---
 id: python-with-selenium-running-python-automation-scripts-on-testmu-selenium-grid
-title: Selenium With Python
-sidebar_label: Python
-description: Run Python Selenium test scripts on TestMu AI cloud grid with 10,000+ browser/device combinations. Covers unittest, pytest, Robot Framework, and Behave.
+title: How to Run Selenium Tests With Python on TestMu AI
+toc_max_heading_level: 2
+hide_title: true
+sidebar_label: "Python"
+description: Run Python Selenium tests on the TestMu AI cloud grid across 10,000+ browsers. Covers unittest, pytest, Robot Framework, and Behave.
 keywords:
 - python selenium cloud testing
 - run python selenium tests online
@@ -10,11 +12,12 @@ keywords:
 - python automation testing cloud grid
 - cross browser testing python selenium
 - selenium remote webdriver python
+- pytest robot behave unittest selenium
 image: /assets/images/og-images/automation-testing-og.png
 url: https://www.testmuai.com/support/docs/python-with-selenium-running-python-automation-scripts-on-testmu-selenium-grid/
 site_name: TestMu AI
 slug: python-with-selenium-running-python-automation-scripts-on-testmu-selenium-grid/
-canonical: https://www.testmu.ai/support/docs/python-with-selenium-running-python-automation-scripts-on-testmu-selenium-grid/
+canonical: https://www.testmuai.com/support/docs/python-with-selenium-running-python-automation-scripts-on-testmu-selenium-grid/
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -36,8 +39,8 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       "@type": "WebPage",
       "@id": "https://www.testmuai.com/support/docs/python-with-selenium-running-python-automation-scripts-on-testmu-selenium-grid/"
     },
-    "headline": "Selenium With Python",
-    "description": "Run Python Selenium test scripts on TestMu AI cloud grid with 10,000+ browser/device combinations. Covers unittest, pytest, Robot Framework, and Behave.",
+    "headline": "How to Run Selenium Tests With Python on TestMu AI",
+    "description": "Run Python Selenium tests on the TestMu AI cloud grid across 10,000+ browsers. Covers unittest, pytest, Robot Framework, and Behave.",
     "url": "https://www.testmuai.com/support/docs/python-with-selenium-running-python-automation-scripts-on-testmu-selenium-grid/",
     "image": {
       "@type": "ImageObject",
@@ -50,7 +53,8 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     "keywords": [
       "python selenium cloud testing",
       "run python selenium tests online",
-      "selenium webdriver python tutorial"
+      "selenium webdriver python tutorial",
+      "pytest robot behave unittest selenium"
     ],
     "proficiencyLevel": "Beginner",
     "author": {
@@ -82,14 +86,14 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     "hasPart": [
       {
         "@type": "SoftwareSourceCode",
-        "name": "How the sample test works",
+        "name": "A capabilities dictionary passing your browser and OS choices to the grid",
         "codeSampleType": "code snippet",
         "programmingLanguage": "Python",
         "text": "capabilities = {\n    \"build\": \"your build name\",\n    \"name\": \"your test name\",\n    \"platformName\": \"Windows 10\",\n    \"browserName\": \"Chrome\",\n    \"browserVersion\": \"latest\",\n}"
       },
       {
         "@type": "SoftwareSourceCode",
-        "name": "Clone the sample GitHub project",
+        "name": "Clone the unittest sample GitHub project",
         "codeSampleType": "code snippet",
         "programmingLanguage": "Shell",
         "codeRepository": "https://github.com/LambdaTest/Python-UnitTest-Selenium",
@@ -97,79 +101,33 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       },
       {
         "@type": "SoftwareSourceCode",
-        "name": "Set your browser and OS in the capabilities dictionary",
+        "name": "Set your browser and OS in the pytest conftest.py capabilities",
         "codeSampleType": "code snippet",
         "programmingLanguage": "Python",
-        "text": "capabilities = {\n    \"build\": \"UnitTest-Selenium-Sample\",\n    \"name\": \"UnitTest-Selenium-Test\",\n    \"platformName\": \"Windows 11\",\n    \"browserName\": \"Chrome\",\n    \"browserVersion\": \"latest\",\n}"
+        "text": "capabilities = {\n    \"build\": \"Sample PY Build\",\n    \"platformName\": \"Windows 11\",\n    \"browserName\": \"Chrome\",\n    \"browserVersion\": \"latest\",\n}"
       },
       {
         "@type": "SoftwareSourceCode",
-        "name": "Run the test",
+        "name": "Install dependencies and run the pytest test in parallel",
         "codeSampleType": "code snippet",
         "programmingLanguage": "Shell",
-        "text": "python lambdatest_test.py"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Clone the sample GitHub project",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Shell",
-        "codeRepository": "https://github.com/LambdaTest/pytest-selenium-sample",
-        "text": "git clone https://github.com/LambdaTest/pytest-selenium-sample\ncd pytest-selenium-sample"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "pytest",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "\n3. Run a single test, or in parallel:\n\n```bash\npython tests/lt_sample_todo.py\npytest -s -n=2 tests/lt_sample_todo.py"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Clone the sample GitHub project",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Shell",
-        "codeRepository": "https://github.com/LambdaTest/Robot-Selenium-Sample",
-        "text": "git clone https://github.com/LambdaTest/Robot-Selenium-Sample\ncd Robot-Selenium-Sample"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Robot",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "\n3. Run a single test, or all in parallel:\n\n```bash\nmake test_Windows_10_chrome_latest\nmake run_all_in_parallel"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Clone the sample GitHub project",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "Shell",
-        "codeRepository": "https://github.com/LambdaTest/Python-Behave-Selenium",
-        "text": "git clone https://github.com/LambdaTest/Python-Behave-Selenium\ncd Python-Behave-Selenium"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Behave",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "\n3. Run the test:\n\n```bash\nbehave features/test.feature"
+        "text": "pip install -r requirements.txt\npytest -s -n=2 tests/lt_sample_todo.py"
       }
     ],
     "dateModified": "2026-09-09T19:13:32+05:30"
   }) }}
 />
 
+# How to Run Selenium Tests With Python on TestMu AI
 ---
+
 
 Run your Python Selenium tests on the TestMu AI cloud grid across 10,000+ browser/device combinations. The setup is the same for every framework: you connect to the grid and pass your capabilities. This guide covers that shared flow once, then gives you a per-framework quickstart in the tabs below.
 
 ## Prerequisites
 ---
-Complete these steps before running your first Python Selenium test.
 
-1. Install the latest Python build from the [official website](https://www.python.org/downloads/).
-2. Verify that **pip** is installed in your system. Install **pip** from [pip documentation](https://pip.pypa.io/en/stable/installation/).
-3. Download the latest **Selenium Client** and its **WebDriver bindings** from the [official website](https://www.selenium.dev/downloads/).
+Have these in place before you run any of the frameworks below.
 
 1. [Create a TestMu AI account](https://www.testmuai.com/register/) if you don't have one.
 2. Get your **Username** and **Access Key** from the [TestMu AI Dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard).
@@ -190,37 +148,16 @@ On Windows, activate it with `venv\Scripts\activate` instead.
 
 ## Set Your Credentials
 ---
-Clone the repository and install dependencies.
 
-Set TestMu AI `Username` and `Access Key` in environment variables.
-
-```bash
-git clone https://github.com/LambdaTest/python-selenium-sample
-cd python-selenium-sample
-```
-
-Install the Selenium driver using pip:
+Every framework authenticates the same way: your Username and Access Key are read from environment variables. Set them once. Pick your operating system:
 
 <VerifiedTag value="Verified" />
 
-```bash
-pip install selenium
-export PYTHONWARNINGS="ignore:Unverified HTTPS request"   //Disable ssl warning
-```
+<Tabs className="docs__val" groupId="os">
 
-## Step 2: Set Your Credentials
----
-Configure your credentials to connect to the TestMu AI Selenium Grid.
+<TabItem value="macos" label="macOS / Linux" default>
 
-Set TestMu AI `Username` and `Access Key` in environment variables.
-
-<Tabs className="docs__val">
-
-<TabItem value="bash" label="macOS / Linux" default>
-
-  <VerifiedTag value="Verified" />
-
-  <div className="lambdatest__codeblock">
+<div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
 export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
@@ -229,83 +166,40 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
 </TabItem>
 
-<TabItem value="powershell" label="Windows" default>
+<TabItem value="win-cmd" label="Windows (CMD)">
 
-  <VerifiedTag value="Verified" />
-
-  <div className="lambdatest__codeblock">
-    <CodeBlock className="language-powershell">
-  {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
-set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+<div className="lambdatest__codeblock">
+    <CodeBlock className="language-batch">
+  {`set LT_USERNAME=${ YOUR_LAMBDATEST_USERNAME()}
+set LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
   </CodeBlock>
 </div>
 
 </TabItem>
+
 </Tabs>
 
-## Step 3: Configure Your Test Capabilities
+## How the Sample Test Works
 ---
-Define browser, version, and OS settings for your test run.
 
-In the Python script, update your test capabilities. This code passes browser, browser version, and operating system information, along with TestMu AI Selenium grid capabilities via the capabilities object.
+Every framework below connects to the grid at `hub.lambdatest.com/wd/hub` and passes your browser and OS choices through a capabilities dictionary:
 
 <VerifiedTag value="Verified" />
 
 ```python
 capabilities = {
-        "build": "your build name",
-        "name": "your test name",
-        "platformName": "Windows 10",
-        "browserName": "Chrome",
-        "browserVersion": "latest",
+    "build": "your build name",
+    "name": "your test name",
+    "platformName": "Windows 10",
+    "browserName": "Chrome",
+    "browserVersion": "latest",
 }
 ```
 
-:::tip Capabilities Generator
-Use the TestMu AI [Capabilities Generator](https://www.testmuai.com/capabilities-generator/) to auto-generate the capabilities class for your test requirements.
-:::
-
-## Step 4: Run the Test
----
-Execute the Python Selenium test from the command line.
-
-The [selenium-skill](https://github.com/LambdaTest/agent-skills/tree/main/selenium-skill) is part of [TestMu AI Agent Skills](https://github.com/LambdaTest/agent-skills/) - structured packages that teach AI coding assistants how to write production-grade test automation.
-
-```bash
-python google-search-lambdatest.py
-```
-
-## Step 5: View Your Results
----
-Check the test output on the console and the TestMu AI dashboard.
-
-Visit the [TestMu AI Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build) to view your test results. The dashboard provides:
-
-- Text logs for each test step
-- Screenshots captured during execution
-- Video recordings of the full test session
-
-## Run Python Selenium Tests Using Agent Skills
----
-
-Use AI coding assistants to generate and run Python Selenium tests with the TestMu AI Agent Skill.
-
-The [selenium-skill](https://github.com/LambdaTest/agent-skills/tree/main/selenium-skill) is part of [TestMu AI Agent Skills](https://github.com/LambdaTest/agent-skills/) - structured packages that teach AI coding assistants how to write production-grade test automation.
-
-Install the skill:
-
-<VerifiedTag value="Verified" />
-
-```bash
-git clone https://github.com/LambdaTest/agent-skills.git
-cp -r agent-skills/selenium-skill .claude/skills/
-
-# For Cursor / Copilot
-cp -r agent-skills/selenium-skill .cursor/skills/
-```
+What changes between frameworks is only how those capabilities are supplied: inline, a `conftest.py`, a `.robot` variables block, or a JSON config. That is what each tab covers.
 
 :::tip
-Install all available framework skills at once by cloning the repository directly into your tool's skills directory (e.g., `.claude/skills/`, `.cursor/skills/`).
+Use the [Capabilities Generator](https://www.testmuai.com/capabilities-generator/) to build a capabilities block for any browser, version, and OS combination.
 :::
 
 ## Run a Test in Your Framework

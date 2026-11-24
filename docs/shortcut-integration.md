@@ -20,7 +20,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/shortcut-integration/
 site_name: TestMu AI
 slug: shortcut-integration/
-canonical: https://www.testmu.ai/support/docs/shortcut-integration/
+canonical: https://www.testmuai.com/support/docs/shortcut-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

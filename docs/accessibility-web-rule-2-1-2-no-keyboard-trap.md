@@ -5,6 +5,8 @@ sidebar_label: No Keyboard Trap (2.1.2)
 description: Rule-level Accessibility guidance for No Keyboard Trap (WCAG 2.1.2 Level A).
 slug: accessibility-web-rule-2-1-2-no-keyboard-trap/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

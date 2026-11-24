@@ -5,6 +5,8 @@ sidebar_label: Two-Dimensional Scrolling
 description: Rule-level Accessibility guidance for Two-Dimensional Scrolling Required on iOS.
 slug: accessibility-ios-rule-two-dimensional-scrolling/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

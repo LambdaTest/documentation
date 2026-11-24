@@ -5,6 +5,8 @@ sidebar_label: Three Flashes (2.3.1)
 description: Rule-level Accessibility guidance for Three Flashes or Below Threshold (WCAG 2.3.1 Level A).
 slug: accessibility-web-rule-2-3-1-three-flashes/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

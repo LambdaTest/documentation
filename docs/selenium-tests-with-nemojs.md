@@ -12,13 +12,14 @@ image: /assets/images/og-images/automation-testing-og.png
 url: https://www.testmuai.com/support/docs/selenium-tests-with-nemojs/
 site_name: TestMu AI
 slug: selenium-tests-with-nemojs/
-canonical: https://www.testmu.ai/support/docs/selenium-tests-with-nemojs/
+canonical: https://www.testmuai.com/support/docs/selenium-tests-with-nemojs/
 ---
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -184,12 +185,17 @@ Complete these steps before running NemoJS Selenium tests on TestMu AI.
 ---
 Clone the TestMu AI NemoJS sample repository to your local machine.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git clone https://github.com/LambdaTest/Nemo-Lambdatest-sample
 cd Nemo-Lambdatest-sample
 ```
 
 Install the required dependencies:
+
+<VerifiedTag value="Verified" />
+
 ```bash
 npm install
 ```
@@ -202,6 +208,8 @@ Set your TestMu AI username and access key as environment variables.
 
 <TabItem value="bash" label="macOS / Linux" default>
 
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
@@ -212,6 +220,8 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
+
+  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
@@ -228,6 +238,8 @@ Set the environment variables in the `nemo.config.js` file with your TestMu AI U
 ## Step 3: Configure Your Test Capabilities
 ---
 Update the capabilities in `nemo.config.js` to define the browser and platform settings.
+
+<VerifiedTag value="Verified" />
 
 ``` js
 "withCapabilities": [{
@@ -250,11 +262,17 @@ Generate capabilities for your test requirements with the [Capabilities Generato
 Execute the test using the following command.
 
 **Single test:**
+
+<VerifiedTag value="Verified" />
+
 ``` js
 npx nemo -P chrome
 ```
 
 **Parallel tests:**
+
+<VerifiedTag value="Verified" />
+
 ``` js
 npx nemo -P chrome,chrome_2,firefox
 ```
@@ -278,6 +296,8 @@ Use AI coding assistants to generate and run NemoJS tests with the TestMu AI Age
 The [nemojs-skill](https://github.com/LambdaTest/agent-skills/tree/main/nemojs-skill) is part of [TestMu AI Agent Skills](https://github.com/LambdaTest/agent-skills/) - structured packages that teach AI coding assistants how to write production-grade test automation.
 
 Install the skill:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 git clone https://github.com/LambdaTest/agent-skills.git

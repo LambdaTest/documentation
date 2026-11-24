@@ -5,6 +5,8 @@ sidebar_label: Redundant State in Label
 description: "Flag Android accessibility labels that bake in state words like 'on', 'off', or 'selected' that TalkBack already announces from the control."
 slug: accessibility-android-rule-redundant-state-label/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

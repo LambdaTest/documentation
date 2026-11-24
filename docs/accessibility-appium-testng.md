@@ -8,6 +8,9 @@ url: https://www.testmuai.com/support/docs/accessibility-appium-testng/
 site_name: TestMu AI
 canonical: https://www.testmuai.com/support/docs/accessibility-appium-testng/
 ---
+import VerifiedTag from '@site/src/component/verifiedTag';
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -103,6 +106,8 @@ Use this guide when **Appium** drives Android or iOS tests and **TestNG** is you
 
 Illustrative Java pattern (adapt platform names, device, and app paths to your suite):
 
+<VerifiedTag value="Verified" />
+
 ```java
 UiAutomator2Options options = new UiAutomator2Options();
 options.setDeviceName("Pixel.*");
@@ -120,6 +125,8 @@ To scan every screen your test reaches without a hook call at each one, set `acc
 
 ### 2. Call the scan hook after navigation
 
+<VerifiedTag value="Verified" />
+
 ```java
 ((JavascriptExecutor) driver).executeScript("lambda-accessibility-scan");
 ```
@@ -127,6 +134,8 @@ To scan every screen your test reaches without a hook call at each one, set `acc
 Place this **after** explicit waits for loading spinners, animations, or lazy content.
 
 ### 3. Run TestNG
+
+<VerifiedTag value="Verified" />
 
 ```bash
 mvn test

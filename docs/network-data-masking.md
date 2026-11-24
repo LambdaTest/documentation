@@ -11,10 +11,11 @@ image: /assets/images/og-images/automation-testing-og.png
 url: https://www.testmuai.com/support/docs/network-data-masking/
 site_name: TestMu AI
 slug: network-data-masking/
-canonical: https://www.testmu.ai/support/docs/network-data-masking/
+canonical: https://www.testmuai.com/support/docs/network-data-masking/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -152,6 +153,8 @@ Set the `network.mask` capability to `true` to enable network data masking.
 
 ### Java Implementation
 
+<VerifiedTag value="Verified" />
+
 ```java
 // Java code for configuring Network Masking in tests on LambdaTest
 DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -163,6 +166,8 @@ capabilities.setCapability("network.mask", "true");
 
 **Python:**
 
+<VerifiedTag value="Verified" />
+
 ```python
 capabilities = {
     "network.mask": "true"
@@ -171,6 +176,8 @@ capabilities = {
 ```
 
 **Node.js:**
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 const capabilities = {
@@ -219,6 +226,8 @@ The following examples show how network logs appear before and after masking.
 
 ### Before Masking (network.mask: false)
 
+<VerifiedTag value="Verified" />
+
 ```
 Request Headers:
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
@@ -230,6 +239,8 @@ auth_token=abc123xyz789; session_key=def456uvw012
 ```
 
 ### After Masking (network.mask: true)
+
+<VerifiedTag value="Verified" />
 
 ```
 Request Headers:

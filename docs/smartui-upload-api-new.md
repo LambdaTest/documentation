@@ -17,7 +17,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/smartui-upload-api-v2/
 site_name: TestMu AI
 slug: smartui-upload-api-v2/
-canonical: https://www.testmu.ai/support/docs/smartui-upload-api-v2/
+canonical: https://www.testmuai.com/support/docs/smartui-upload-api-v2/
 
 ---
 
@@ -27,6 +27,7 @@ import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 
@@ -128,6 +129,8 @@ To create a SmartUI Project, follow these steps:
 
 Once, the project is created then you copy the `Project Token` from the application, here is a sample project token:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 projectToken = "123456#1234abcd-****-****-****-************"
 ```
@@ -139,6 +142,8 @@ Once you have created a SmartUI Project, you can upload your local screenshots t
 Follow the below steps to upload screenshots -
 
 **Step 1:** Copy the below API endpoint to your project.
+
+<VerifiedTag value="Verified" />
 
 ```
 API_URL="https://api.lambdatest.com/automation/smart-ui/v2/upload"

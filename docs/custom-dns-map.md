@@ -1,8 +1,10 @@
 ---
 id: custom-dns-map
-title: Custom DNS Mapping for Selenium Tests
-sidebar_label: Map a Custom DNS Entry
-description: Define custom IP addresses for specific domains during Selenium tests using the customDnsMap capability.
+title: How to Map Custom DNS in Selenium on TestMu AI
+toc_max_heading_level: 2
+hide_title: true
+sidebar_label: "Custom DNS Entry"
+description: Map custom DNS entries in Selenium tests on TestMu AI using the customDnsMap capability to redirect domains to specific IP addresses.
 keywords:
   - custom dns mapping selenium capability
   - redirect domain IP selenium testing
@@ -14,6 +16,7 @@ slug: custom-dns-map/
 canonical: https://www.testmuai.com/support/docs/custom-dns-map/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -27,8 +30,8 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       "@type": "WebPage",
       "@id": "https://www.testmuai.com/support/docs/custom-dns-map/"
     },
-    "headline": "Custom DNS Mapping for Selenium Tests",
-    "description": "Define custom IP addresses for specific domains during Selenium tests using the customDnsMap capability.",
+    "headline": "How to Map Custom DNS in Selenium on TestMu AI",
+    "description": "Map custom DNS entries in Selenium tests on TestMu AI using the customDnsMap capability to redirect domains to specific IP addresses.",
     "url": "https://www.testmuai.com/support/docs/custom-dns-map/",
     "image": {
       "@type": "ImageObject",
@@ -90,7 +93,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
-## Overview
+# How to Map Custom DNS in Selenium on TestMu AI
 ---
 
 The `customDnsMap` capability lets you define custom IP addresses for specific domains.
@@ -98,6 +101,8 @@ The `customDnsMap` capability lets you define custom IP addresses for specific d
 This is useful when you need to redirect domain requests to different IP addresses for testing purposes, without altering the global or browser-specific configurations.
 
 The customDnsMap capability uses the following format:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 "customDnsMap": {
@@ -128,6 +133,8 @@ The customDnsMap capability serves a variety of testing purposes.
 
 The following example shows how to redirect traffic to a staging server for the domain `example.com`:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 "customDnsMap": {
   "example.com": "192.168.1.100"
@@ -143,12 +150,21 @@ The `customDnsMap` capability offers the following benefits.
 
 - **Flexibility:** Easily and dynamically redirect traffic to different IP addresses without global configuration changes.
 
-- **Control:** Gain full control over how domains are resolved, which is essential for testing and debugging.
+- **Control:** Gain full control over how domains are resolved, which is essential for testing and debugging. To shape the requests themselves, you can also set custom HTTP headers on the same test.
 
 - **Efficiency:** Improve testing and development workflows by eliminating the need to switch between different environments manually.
 
 ## Conclusion
 ---
 
-The `customDnsMap` capability improves the efficiency and flexibility of testing and development workflows on the TestMu AI platform. Use it to redirect domains, simulate server failures, and test against specific backend servers.
+The `customDnsMap` capability improves the efficiency and flexibility of testing and development workflows on the TestMu AI platform. Use it to redirect domains, simulate server failures, and test against specific backend servers. For other environment options, see the full list of [Selenium automation capabilities](/support/docs/selenium-automation-capabilities/) and how to route tests through a Selenium proxy.
+
+## Next Steps
+---
+
+Continue with these related guides:
+
+- [Custom Headers](/support/docs/custom-headers/)
+- [Run Selenium Tests Behind the Proxy](/support/docs/selenium-tests-behind-proxy/)
+- [Selenium Automation Capabilities](/support/docs/selenium-automation-capabilities/)
 

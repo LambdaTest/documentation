@@ -14,6 +14,9 @@ site_name: TestMu AI
 slug: accessibility-nunit-csharp-test/
 canonical: https://www.testmuai.com/support/docs/accessibility-nunit-csharp-test/
 ---
+import VerifiedTag from '@site/src/component/verifiedTag';
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -115,6 +118,8 @@ Use this guide for **Selenium C#** tests executed with **NUnit**. Accessibility 
 
 Typical pattern in `[SetUp]` or a one-time fixture:
 
+<VerifiedTag value="Verified" />
+
 ```csharp
 var options = new ChromeOptions();
 options.BrowserVersion = "latest";
@@ -130,6 +135,8 @@ Exact hub URL and capability names should match your existing grid configuration
 
 After navigation and waits:
 
+<VerifiedTag value="Verified" />
+
 ```csharp
 ((IJavaScriptExecutor)driver).ExecuteScript("lambda-accessibility-scan");
 ```
@@ -137,6 +144,8 @@ After navigation and waits:
 Without **either** the hook **or** `accessibility.autoscan`, you will not get Accessibility reports.
 
 ### 3. Run NUnit
+
+<VerifiedTag value="Verified" />
 
 ```bash
 dotnet test

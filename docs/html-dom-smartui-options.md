@@ -24,6 +24,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 ---
@@ -189,6 +190,8 @@ The following are the different options which are currently supported:
 | `selectDOM` (object)      | Specify one or a combination of selectors based on the `HTML DOM ID, CSS class, CSS selector or XPath` used by your webpage that should be included in the comparison |
 
 
+<VerifiedTag value="Verified" />
+
 <Tabs className="docs__val" groupId="framework">
 <TabItem value="IgnoreID" label="Ignore ID" default>
 
@@ -248,6 +251,8 @@ await driver.executeScript("smartui.takeScreenshot", config);
 </TabItem>
 
 </Tabs>
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val" groupId="framework">
 <TabItem value="SelectID" label="Select ID" default>
@@ -323,6 +328,8 @@ The following are the different options which are currently supported:
 | `selectXPath` (object)      | Specify a selector based on theXPath of the element that should be included in the comparison |
 
 
+<VerifiedTag value="Verified" />
+
 <Tabs className="docs__val" groupId="framework">
 <TabItem value="IgnoreID" label="Ignore ID" default>
 
@@ -357,6 +364,8 @@ await page.evaluate((_) => {},
 </TabItem>
 
 </Tabs>
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val" groupId="framework">
 <TabItem value="SelectID" label="Select ID" default>
@@ -409,6 +418,8 @@ The following are the different options which are currently supported:
 | `selectXPath` (object)      | Specify a selector based on theXPath of the element that should be included in the comparison |
 
 
+<VerifiedTag value="Verified" />
+
 <Tabs className="docs__val" groupId="framework">
 <TabItem value="IgnoreID" label="Ignore ID" default>
 
@@ -443,6 +454,8 @@ await page.evaluate((_) => {},
 </TabItem>
 
 </Tabs>
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val" groupId="framework">
 <TabItem value="SelectID" label="Select ID" default>
@@ -479,6 +492,7 @@ await page.evaluate((_) => {},
 </TabItem>
 
 </Tabs>
+
 
 
 

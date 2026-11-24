@@ -2,6 +2,7 @@
 id: local-testing-puppeteer
 title: Run Local Tests Using Puppeteer
 hide_title: true
+toc_max_heading_level: 2
 sidebar_label:  Local Testing
 description: Learn how to perform local testing with Puppeteer across multiple browser versions on the TestMu AI platform.
 keywords:
@@ -17,6 +18,7 @@ slug: local-testing-with-puppeteer/
 canonical: https://www.testmuai.com/support/docs/local-testing-with-puppeteer/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -130,6 +132,8 @@ You can run Puppeteer testing of locally hosted websites and web apps via <Brand
 
 2. Install the npm dependencies.
 
+<VerifiedTag value="Verified" />
+
 ```
 npm install
 ```
@@ -138,12 +142,16 @@ npm install
 
 **Windows**
 
+<VerifiedTag value="Verified" />
+
 ```js
 set LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
 set LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 ```
 
 **macOS/Linux**
+
+<VerifiedTag value="Verified" />
 
 ```js
 export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
@@ -162,6 +170,8 @@ export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 
 7. Run the below command in the terminal.
 
+<VerifiedTag value="Verified" />
+
 ```js
 ./LT --user {user's login email} --key {user's access key} --tunnelName {user's tunnel name}
 ```
@@ -169,6 +179,8 @@ export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 8. In desired capability, add the capability `tunnel: true`.
 
 If multiple tunnels are running, you can add `tunnel` and `tunnel ID` capabilities.
+
+<VerifiedTag value="Verified" />
 
 ```js
 'use strict';
@@ -196,5 +208,6 @@ const expect = require('chai').expect;
 You can view test reports for your local tests on the <BrandName /> automation dashboard.
 
  
+
 
 

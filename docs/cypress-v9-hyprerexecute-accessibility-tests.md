@@ -23,6 +23,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 
@@ -185,6 +186,8 @@ Run the below mentioned commands in your terminal to setup the CLI and the envir
 
 <TabItem value="bash" label="Linux / MacOS" default>
 
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
@@ -195,6 +198,8 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
+
+  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
@@ -212,6 +217,8 @@ set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 #### 1. Install the Cypress CLI
 You will have to pass the `npm i lambdatest-cypress-cli` command in your [pre steps](/support/docs/deep-dive-into-hyperexecute-yaml/#pre) to install the <BrandName /> Cypress CLI which will be used to execute your Cypress tests.
 
+<VerifiedTag value="Verified" />
+
 ```yaml title="hyperexecute.yaml"
 pre:
   - npm install
@@ -223,6 +230,8 @@ pre:
 #### 2. Add the capabilities in the YAML file
 
 To enable the accessibility testing within your automated test suite, set the `accessibility: true` in the [cypressOps](/support/docs/deep-dive-into-hyperexecute-yaml/#cypressops) flag of your YAML file. You can also define other settings capabilities as described below.
+
+<VerifiedTag value="Verified" />
 
 ```yaml title="hyperexecute.yaml"
 cypressOps:
@@ -236,6 +245,8 @@ cypressOps:
 
 Add this import statement in your `support/index.js` file to import the acceessibility scanner dependency
 
+<VerifiedTag value="Verified" />
+
 ```javascript title="cypress/support/index.js"
 import 'lambdatest-cypress-cli/accessibility/scanner'
 ```
@@ -243,6 +254,8 @@ import 'lambdatest-cypress-cli/accessibility/scanner'
 #### 4. In the `plugins/index.js` file
 
 Add this code snippet in your `cypress/plugins/index.jss` file.
+
+<VerifiedTag value="Verified" />
 
 ```javascript title="cypress/plugins/index.js"
 const lambdatestAccessibility = require('lambdatest-cypress-cli/accessibility/plugin');
@@ -261,11 +274,15 @@ Run the below command in your terminal at the root folder of the project:
 
 > **NOTE :** In case of macOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 ./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE
 ```
 
 OR use this command if you have not exported your username and access key in the step 1.
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">

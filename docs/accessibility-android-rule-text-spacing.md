@@ -5,6 +5,8 @@ sidebar_label: Text Spacing
 description: Rule-level Accessibility guidance for Text Spacing on Android.
 slug: accessibility-android-rule-text-spacing/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

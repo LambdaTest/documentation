@@ -120,7 +120,7 @@ The integration is optional. Choose based on what you need to check.
 
 For a side-by-side comparison, see [How the Vapi Integration Works](#how-the-vapi-integration-works).
 
-TestMu AI offers this integration for ElevenLabs, Retell, Vapi, and Salesforce Agentforce. For the others, see the [ElevenLabs integration](/support/docs/test-elevenlabs-agents/#elevenlabs-integration), the [Retell integration](/support/docs/test-retell-agents/#retell-integration), and the [Agentforce integration](/support/docs/test-agentforce-agents/#agentforce-integration).
+TestMu AI offers this integration for ElevenLabs, Retell, Vapi, Salesforce Agentforce, Amazon Connect (Amazon Q in Connect), and Cartesia Managed Agents. Cartesia Line SDK agents are not supported. For the other integration guides, see the [ElevenLabs integration](/support/docs/test-elevenlabs-agents/#elevenlabs-integration), the [Retell integration](/support/docs/test-retell-agents/#retell-integration), the [Agentforce integration](/support/docs/test-agentforce-agents/#agentforce-integration), and the [Amazon Q in Connect integration](/support/docs/test-amazon-connect-bots/#amazon-q-in-connect).
 
 ### Vapi Integration Prerequisites
 

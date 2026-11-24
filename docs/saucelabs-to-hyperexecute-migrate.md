@@ -12,12 +12,13 @@ keywords:
 url: https://www.testmuai.com/support/docs/saucelabs-to-hyperexecute-migrate/
 site_name: TestMu AI
 slug: saucelabs-to-hyperexecute-migrate/
-canonical: https://www.testmu.ai/support/docs/saucelabs-to-hyperexecute-migrate/
+canonical: https://www.testmuai.com/support/docs/saucelabs-to-hyperexecute-migrate/
 ---
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 
@@ -221,12 +222,16 @@ Run the below mentioned commands in the terminal to setup the CLI and the enviro
 
 For macOS / Linux:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 export LT_USERNAME=YOUR_LT_USERNAME
 export LT_ACCESS_KEY=YOUR_LT_ACCESS_KEY
 ```
 
 For Windows:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 set LT_USERNAME=YOUR_LT_USERNAME
@@ -238,6 +243,8 @@ set LT_ACCESS_KEY=YOUR_LT_ACCESS_KEY
 - Add the [HyperExecute YAML](/support/docs/deep-dive-into-hyperexecute-yaml/) file in the root folder of your test code repository.
 
 **Sample YAML File**
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 ---
@@ -298,6 +305,8 @@ jobLabel: [selenium-testng, mac, autosplit, migration]
 
 **Sauce Labs** 
 
+<VerifiedTag value="Verified" />
+
 ```java
 MutableCapabilities sauceOptions = new MutableCapabilities();
 sauceOptions.setCapability("username", System.getenv("SAUCE_USERNAME"));
@@ -307,6 +316,8 @@ sauceOptions.setCapability("browserVersion", "latest");
 ```
 
 **HyperExecute**
+
+<VerifiedTag value="Verified" />
 
 ```java
 DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -328,6 +339,9 @@ capabilities.setCapability("visual",true);
 For a Java-based implementation, here are the changes in the script as far as the authentication stage is concerned:
 
 **Sauce Labs** 
+
+<VerifiedTag value="Verified" />
+
 ``` js
 // test.java
 public static final String user_name = "SauceLabs_UserName";
@@ -335,6 +349,9 @@ public static final String access_key = "SauceLabs_AccessKey";
 ```
 
 **HyperExecute**
+
+<VerifiedTag value="Verified" />
+
 ``` js
 // test.java
 public static final String user_name = "LambdaTest_UserName";
@@ -344,11 +361,17 @@ public static final String access_key = "LambdaTest_AccessKey";
 For a Java-based implementation, here are the changes in the script as far as the Hub URL is concerned:
 
 **Sauce Labs**
+
+<VerifiedTag value="Verified" />
+
 ``` js
 // test.java
 public static final String Hub_URL = "https://" + user_name + ":" + access_key + "@ondemand.us-west-1.saucelabs.com:443/wd/hub";
 ```
 **<BrandName />**
+
+<VerifiedTag value="Verified" />
+
 ``` js
 // test.java
 public static final String Hub_URL = "https://" + user_name + ":" + access_key + "@hub.lambdatest.com/wd/hub";
@@ -357,6 +380,8 @@ public static final String Hub_URL = "https://" + user_name + ":" + access_key +
 ### Step 4: Execute your Job in HyperExecute
 
 Run the below command in your downloaded CLI to trigger your test scripts in the HyperExecute Platform.
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">

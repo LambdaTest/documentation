@@ -1,21 +1,21 @@
 ---
 id: playwright-test-execution-setup
-title: Playwright Test Execution Setup
+title: How to Set Up the Playwright Test Environment on TestMu AI
 hide_title: true
-sidebar_label: Test Execution Setup
-description: Learn how to configure the desired capability for selecting browsers and OS, organzing tests, changing desktop resolution, and more for your Playwright tests.
+toc_max_heading_level: 2
+sidebar_label: "Test Setup and Capabilities"
+description: Configure Playwright capabilities on TestMu AI to select browsers and OS, organize test builds, set desktop resolution, and debug failed sessions with logs.
 keywords:
-  - playwright testing
-  - playwright e2e testing 
-  - playwright mobile testing
-  - playwright testing tool
-  - playwright testing on testmu ai
-  - playwright testing testmu ai
+  - playwright test execution setup testmu ai
+  - playwright capabilities testmu ai
+  - playwright browser and os selection
+  - playwright desktop resolution capability
+  - debug playwright tests testmu ai
 
 url: https://www.testmuai.com/support/docs/playwright-test-execution-setup/
 site_name: TestMu AI
 slug: playwright-test-execution-setup/
-canonical: https://www.testmu.ai/support/docs/playwright-test-execution-setup/
+canonical: https://www.testmuai.com/support/docs/playwright-test-execution-setup/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import VerifiedTag from '@site/src/component/verifiedTag';
@@ -32,8 +32,8 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       "@type": "WebPage",
       "@id": "https://www.testmuai.com/support/docs/playwright-test-execution-setup/"
     },
-    "headline": "Playwright Test Execution Setup",
-    "description": "Learn how to configure the desired capability for selecting browsers and OS, organzing tests, changing desktop resolution, and more for your Playwright tests.",
+    "headline": "How to Set Up the Playwright Test Environment on TestMu AI",
+    "description": "Configure Playwright capabilities on TestMu AI to select browsers and OS, organize test builds, set desktop resolution, and debug failed sessions with logs.",
     "url": "https://www.testmuai.com/support/docs/playwright-test-execution-setup/",
     "image": {
       "@type": "ImageObject",
@@ -44,9 +44,10 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     "inLanguage": "en",
     "articleSection": "Web Automation",
     "keywords": [
-      "playwright testing",
-      "playwright e2e testing",
-      "playwright mobile testing"
+      "playwright test execution setup testmu ai",
+      "playwright capabilities testmu ai",
+      "playwright browser and os selection",
+      "debug playwright tests testmu ai"
     ],
     "proficiencyLevel": "Beginner",
     "author": {
@@ -78,17 +79,10 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     "hasPart": [
       {
         "@type": "SoftwareSourceCode",
-        "name": "Bundled Browser Versions",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "YAML",
-        "text": "const capabilities = { \"LT:Options\": {\"useSpecificBundleVersion\": true,}}"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Organizing Tests",
+        "name": "Changing Browser Window Size",
         "codeSampleType": "code snippet",
         "programmingLanguage": "JavaScript",
-        "text": "const { chromium } = require('playwright');\n\nconst capabilities = {\n    'browserName': 'Chrome', // Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`\n    'browserVersion': 'latest',\n    'LT:Options': {\n      'platform': 'Windows 10',\n      'build': 'Playwright Sample Build',\n      'name': 'Playwright Sample Test',\n      'user': process.env.LT_USERNAME,\n      'accessKey': process.env.LT_ACCESS_KEY,\n      'network': true,\n      'video': true,\n      'console': true\n    }\n  }\n\n  const browser = await chromium.connect({\n    wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(JSON.stringify(capabilities))}`\n  })\n``` -->\n\n## Changing Desktop Resolutions\n***\n\nPlaywright tests run with a `1920x1080` resolution by default for desktop browsers. With our `resolution` capability, you can set a different screen resolution for your tests.\n\n| Capability | Description  | Expected Values | Example |\n| -------- | -----| ------------ | -----------------------------|\n| resolution   |  Specifying your desktop resolution before initiating the test |   String, **Default value**: 1920x1080 <br/> <br/> **Windows 11 & 10**: `1024x768, 1280x800, 1280x1024, 1366x768, 1440x900, 1680x1050, 1600x1200, 1920x1200, 1920x1080 and 2048x1536` <br/><br/> **macOS**: `1024x768, 1280x960, 1280x1024, 1600x1200 and 1920x1080`  | `const capabilities = { 'LT:Options': {'resolution': '2048x1536',}}` |\n\n## Changing Browser Window Size\n***\n\nThe default viewport size for Playwright tests is 1280x720. If you wish to maximize the browser window during your Playwright test, you can do it as shown in the code below.\n\n```js\n// Create context with given viewport\nconst context = await browser.newContext({\n  viewport: { width: 1280, height: 1024 }\n});"
+        "text": "// Create context with given viewport\nconst context = await browser.newContext({\n  viewport: { width: 1280, height: 1024 }\n});"
       },
       {
         "@type": "SoftwareSourceCode",
@@ -106,13 +100,6 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       },
       {
         "@type": "SoftwareSourceCode",
-        "name": "Code sample 5",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "JavaScript",
-        "text": "  const { chromium } = require('playwright');\n\nconst capabilities = {\n    'browserName': 'Chrome', // Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`\n    'browserVersion': 'latest',\n    'LT:Options': {\n      'platform': 'Windows 10',\n      'build': 'Playwright Sample Build',\n      'name': 'Playwright Sample Test',\n      'user': process.env.LT_USERNAME,\n      'accessKey': process.env.LT_ACCESS_KEY,\n      'ms:edgeOptions':[\n         '--user-agent=<Any custom user agent>',\n       ],\n\n    }\n  }\n\n  const browser = await chromium.connect({\n    wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(JSON.stringify(capabilities))}`\n  })"
-      },
-      {
-        "@type": "SoftwareSourceCode",
         "name": "Getting Session Details",
         "codeSampleType": "code snippet",
         "programmingLanguage": "JavaScript",
@@ -120,55 +107,46 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       },
       {
         "@type": "SoftwareSourceCode",
-        "name": "Getting Session Details",
+        "name": "Marking Tests as Passed or Failed",
         "codeSampleType": "code snippet",
         "programmingLanguage": "JavaScript",
-        "text": "{\n  data: {\n    test_id: 'RWA9R-AC4V8-GJRET-YHBO2',\n    build_id: 9415381,\n    name: 'Playwright Sample Test',\n    user_id: 1001150,\n    username: 'kaustubhd',\n    test_type: 'playwright',\n    platform: 'win10',\n    browser: 'Chrome',\n    browser_version: '107.0',\n    status_ind: 'running',\n    session_id: 'RWA9R-AC4V8-GJRET-YHBO2',\n    build_name: 'Playwright Sample Build',\n    create_timestamp: '2022-12-07 10:53:16',\n    start_timestamp: '2022-12-07 10:53:16',\n    remark: 'running',\n    console_logs_url: 'https://api.lambdatest.com/automation/api/v1/sessions/RWA9R-AC4V8-GJRET-YHBO2/log/console',\n    network_logs_url: 'https://api.lambdatest.com/automation/api/v1/sessions/RWA9R-AC4V8-GJRET-YHBO2/log/network',\n    command_logs_url: 'https://api.lambdatest.com/automation/api/v1/sessions/RWA9R-AC4V8-GJRET-YHBO2/log/command',\n    video_url: 'https://automation.lambdatest.com/public/video?testID=RWA9R-AC4V8-GJRET-YHBO2&auth=50471585dd55293d204fe87f63400f5f',\n    screenshot_url: 'https://video-bundler.lambdatest.com/RWA9R-AC4V8-GJRET-YHBO2/screenshots.zip?orgId=588659&createTimestamp=1670410396&testCreateTimestamp=2022-12-07%2010:53:16'\n  },\n  message: 'Retrieve session was successful',\n  status: 'success'\n}"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Mark Tests As Passed Or Failed",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
         "text": "await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: 'setTestStatus', arguments: { status:'passed', remark: 'Title matched' } })}`)"
       },
       {
         "@type": "SoftwareSourceCode",
-        "name": "Mark Tests As Passed Or Failed",
+        "name": "Marking Tests as Passed or Failed",
         "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
+        "programmingLanguage": "JavaScript",
         "text": "await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: 'setTestStatus', arguments: { status:'failed', remark: 'Title not matched' } })}`)"
       }
     ],
-    "dateModified": "2026-09-09T19:13:32+05:30"
+    "dateModified": "2026-09-27T00:00:00+05:30"
   }) }}
 />
 
-# Playwright - Test Execution Setup
-* * *
-
-Whenever you run a Playwright test, you must specify the operating system and the browser you wish to use. The <BrandName /> Desired Capabilities Generator allows you to automatically create the capabilities class needed to run your Playwright automation scripts on <BrandName />. 
-
-In this document, learn how to configure the desired capability for selecting browsers and OS, organzing tests, changing desktop resolution, and more for your Playwright tests.
-
-
-## Choosing Browser And OS
+# How to Set Up the Playwright Test Environment on TestMu AI
 ***
 
 When you run Playwright End-to-End (E2E) testing on TestMu AI, you set the operating system, browser, and session behavior through capabilities passed to the CDP endpoint. Configuring these capabilities lets you select browser-OS combinations, organize builds, change desktop resolution, and capture debug logs. The TestMu AI Capabilities Generator can auto-create the capabilities class for your Playwright automation scripts.
 
-To perform Playwright testing on <BrandName />, you need to define the `browserName`, `browserVersion`, and `platform` capabilities in your automation scripts.
+## Choosing the Browser and OS
+***
+
+Every Playwright run needs a target browser and platform. Define the `browserName`, `browserVersion`, and `platform` capabilities in your automation scripts to choose the combination you want.
 
 | Key | Expected Values | Description | Capability|
 | -------- | -----| ------------ | --------------|
 | browserName   |  Chrome, Microsoft Edge<br/> <br/>**Playwright Bundled Browsers**: pw-chromium, pw-webkit, and pw-firefox |   Specify the browser to test on    |  `const capability = {"browserName": "pw-webkit"}`|
 | browserVersion  |  Chrome 83 & above, Edge 83 & above | Specify the browser version to test on |  `const capability = {"browserVersion": "latest"}`|
-| platform  |  **Windows**: 11, 10, 8, 8.1, 7 <br/><br/> **macOS**: Monterey, Big Sur, Catiline, Mojave |    Specify the platform name    | `const capability = { "LT:Options": {"platform": "Windows 10",}}` |
+| platform  |  **Windows**: 11, 10, 8, 8.1, 7 <br/><br/> **macOS**: Monterey, Big Sur, Catalina, Mojave |    Specify the platform name    | `const capability = { "LT:Options": {"platform": "Windows 10",}}` |
 
 ### Playwright Supported Browsers
----
+***
 
-Following is a list of compatible Playwright bundled browsers that you can use to run tests on the <BrandName /> platform.
+Each Playwright version ships with its own bundled browser builds. The table below lists the compatible bundled browsers you can use to run tests on TestMu AI for each Playwright version.
+
+<details>
+<summary>View compatible bundled browsers for each Playwright version</summary>
 
 | Playwright Versions | Compatible Browsers | 
 | --------------------|---------------------| 
@@ -203,10 +181,17 @@ Following is a list of compatible Playwright bundled browsers that you can use t
 | v1.16               | **Chromium** 97.0 <br/> **Firefox** 93.0 <br/> **WebKit** 15.4   |
 | v1.15               | **Chromium** 96.0 <br/> **Firefox** 92.0 <br/> **WebKit** 15.0   |
 
+</details>
+
+### Bundled Browser Versions
+***
+
+For running tests on Playwright's bundled browsers, see [Playwright Bundled Browser Support](/support/docs/playwright-bundled-browser-support/).
+
 ## Organizing Tests
 ***
 
-You can name your test cases and categorize your Playwright builds by build number, build name, test and build tags for easier analysis. Use the following capabilities to organize your Playwright tests.
+Naming and tagging your runs makes them easier to find and filter in the TestMu AI dashboard. Use the following capabilities to name test cases and group your Playwright builds by build number, build name, test tags, and build tags.
 
 | Key | Values | Description | Capability |
 | -------- | -----| ------------ | -------- |
@@ -216,8 +201,9 @@ You can name your test cases and categorize your Playwright builds by build numb
 | tags   |  ["tag1", "tag2", "tag3"] |  Group your Playwright tests |``const capability = {"LT:Options": { "tags": ["tag1", "tag2", "tag3"], }}`` |
 | buildTags   |  ["build1", "build2", "build3"] |  Group your Playwright builds |`const capability = {"LT:Options": { "buildTags": ["build1", "build2", "build3"] }}` |
 
-
 <!-- Shown below is the script that configure the `build` and `name` capabilities. 
+
+<VerifiedTag value="Verified" />
 
 ```js
 const { chromium } = require('playwright');
@@ -245,7 +231,7 @@ const capabilities = {
 ## Changing Desktop Resolutions
 ***
 
-Playwright tests run with a `1920x1080` resolution by default for desktop browsers. With our `resolution` capability, you can set a different screen resolution for your tests.
+Playwright tests run at `1920x1080` by default for desktop browsers. Set the `resolution` capability when you need to reproduce a specific screen size. The supported values per platform are listed below.
 
 | Capability | Description  | Expected Values | Example |
 | -------- | -----| ------------ | -----------------------------|
@@ -254,7 +240,7 @@ Playwright tests run with a `1920x1080` resolution by default for desktop browse
 ## Changing Browser Window Size
 ***
 
-The default viewport size for Playwright tests is 1280x720. If you wish to maximize the browser window during your Playwright test, you can do it as shown in the code below.
+The viewport controls the drawable area inside the browser, separate from the desktop resolution. The default viewport for Playwright tests is 1280x720. To set a different viewport, create the browser context with the size you want, as shown below.
 
 <VerifiedTag value="Verified" />
 
@@ -268,6 +254,8 @@ The above Playwright test runs on a default viewport of 1280x1024. However, you 
 
 If you resize viewport for individual page then run the below command.
 
+<VerifiedTag value="Verified" />
+
 ```js
 await page.setViewportSize({ width: 1600, height: 1200 });
 ```
@@ -275,9 +263,11 @@ await page.setViewportSize({ width: 1600, height: 1200 });
 ## Setting Browser Options
 ***
 
-Playwright lets you set browser arguments for Chromium based browsers. When selecting Chrome and Edge, you can set browser options  using `'goog:chromeOptions'` and `'ms:edgeOptions'` capability as shown below.
+Playwright lets you pass browser arguments to Chromium based browsers. For Chrome and Edge, set browser options through the `'goog:chromeOptions'` and `'ms:edgeOptions'` capabilities, as shown below.
 
 **For Chrome**
+
+<VerifiedTag value="Verified" />
 
 ```js
 const { chromium } = require('playwright');
@@ -304,6 +294,8 @@ const capabilities = {
   ```
 
   **For Edge**
+
+  <VerifiedTag value="Verified" />
 
   ```js
   const { chromium } = require('playwright');
@@ -334,7 +326,9 @@ const capabilities = {
 ## Getting Session Details
 ***
 
-When you run a Playwright test on <BrandName />, it generates different logs for each test session. To get relevant information for the specific session, use the snippet provided below in your Playwright test scripts. 
+Each Playwright test on TestMu AI generates logs and metadata tied to its session. To retrieve details such as the test ID, status, and log URLs for the current session, add the snippet below to your Playwright test scripts.
+
+<VerifiedTag value="Verified" />
 
 ```js
 let response = JSON.parse(await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: 'getTestDetails' })}`))
@@ -342,6 +336,8 @@ console.log(response);
 ```
 
 Upon executing the script, you will get the details for the particular test session as a JSON response as shown below.
+
+<VerifiedTag value="Verified" />
 
 ```js
 {
@@ -372,12 +368,10 @@ Upon executing the script, you will get the details for the particular test sess
 }
 ```
 
-
-
 ## Configuring Geolocation
 ***
 
-You can run your Playwright tests across 53+ geographies using the `'geoLocation'` capability as shown below.
+Geolocation testing lets you verify how your application behaves for users in different countries. Run your Playwright tests across 53+ geographies with the `'geoLocation'` capability, as shown below.
 
 | Key | Values | Description | Capability |
 | -------- | -----| ------------ | -------- |
@@ -386,8 +380,7 @@ You can run your Playwright tests across 53+ geographies using the `'geoLocation
 ## Debugging Tests
 ***
 
-By specifying the capabilities for the debugging tools, you can debug and fix your failed Playwright test sessions using network logs, console logs, and video logs.
-
+When a test fails on TestMu AI, the captured logs help you trace what went wrong. Enable the debugging capabilities below to record network logs, console logs, and video for your Playwright sessions.
 
 | Key | Values | Description | Desired Capability |
 | -------- | -----| ------------ | --------------|
@@ -395,10 +388,10 @@ By specifying the capabilities for the debugging tools, you can debug and fix yo
 | console  | true/false |   Enable browser console logs  | `const capabilities = { 'LT:Options': {'console': true,}}` |
 | video   |  true/false |    Enable Video recording of the entire screen     | `const capabilities = { 'LT:Options': {'video': true,}}` |
 
-## Mark Tests As Passed Or Failed
+## Marking Tests as Passed or Failed
 ***
 
-While running Playwright tests on the <BrandName /> platform, you may come across a scenario in which a test that failed in your local instance turns up to be successful on <BrandName />. For verifying expected behavior, it is critical to identify automated tests as **Passed** or **Failed** based on your testing requirements.
+A test that fails on your local instance can pass on TestMu AI, so the automatic status does not always reflect your intended outcome. Mark each test as **Passed** or **Failed** explicitly to record the result you expect.
 
 By default, the Status of each test that runs successfully is marked as **Completed**, and if there are any issues, the Status is marked as **Failed**.
 
@@ -406,13 +399,17 @@ Shown below is syntax how to mark Playwright tests as **Passed** or **Failed**.
 
 1. To mark test status as **passed**.
 
-```
+<VerifiedTag value="Verified" />
+
+```js
 await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: 'setTestStatus', arguments: { status:'passed', remark: 'Title matched' } })}`)
 ```
 
 2. To mark test status as **failed**.
 
-```
+<VerifiedTag value="Verified" />
+
+```js
 await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: 'setTestStatus', arguments: { status:'failed', remark: 'Title not matched' } })}`)
 ```
 

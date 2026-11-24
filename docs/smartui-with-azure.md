@@ -14,7 +14,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/smartui-with-azure/
 site_name: TestMu AI
 slug: smartui-with-azure/
-canonical: https://www.testmu.ai/support/docs/smartui-with-azure/
+canonical: https://www.testmuai.com/support/docs/smartui-with-azure/
 
 ---
 import Tabs from '@theme/Tabs';
@@ -23,6 +23,7 @@ import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 
@@ -238,6 +239,9 @@ Go to Pipeline Settings > Variables. Add the following variables:
 - `LT_ACCESS_KEY`: Your <BrandName /> access key.
 
 ### Step 4: Setup your Workflow
+
+<VerifiedTag value="Verified" />
+
 ```yaml title="azure-pipelines.yml"
 trigger:
   - '*'
@@ -276,6 +280,8 @@ jobs:
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/ci-cd-integration/gitlab/3.png').default} alt="Create New Project" width="" height=""/>
 
 ## Best Practices
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='best-practices'>
 <TabItem value='secret-management' label='Secret Management' default>
@@ -356,6 +362,8 @@ variables:
 </Tabs>
 
 ## Troubleshooting
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='troubleshooting'>
 <TabItem value='pipeline-fails-with-variable-not-found' label='Pipeline Fails with Variable Not Found' default>
@@ -539,11 +547,12 @@ If you encounter issues not covered here:
 
 - Review [Azure Pipelines Documentation](https://docs.microsoft.com/en-us/azure/devops/pipelines/)
 - Check [SmartUI CLI Documentation](/support/docs/smartui-cli) for CLI-specific issues
-- Visit [<BrandName /> Support](https://www.testmuai.com/support) for additional resources
-- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support)
+- Visit [<BrandName /> Support](https://www.testmuai.com/support/docs/) for additional resources
+- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support/docs/)
 
 </TabItem>
 </Tabs>
+
 
 ## Additional Resources
 

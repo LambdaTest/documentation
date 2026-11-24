@@ -21,6 +21,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -188,6 +189,8 @@ Complete the following steps before running MSTest Selenium tests.
 ---
 Clone the repository and navigate to the project directory.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git clone https://github.com/LambdaTest/MSTest-Selenium-Sample
 cd MSTest-Selenium-Sample
@@ -203,6 +206,8 @@ Set TestMu AI Username and Access Key in environment variables.
 
 <TabItem value="bash" label="macOS / Linux" default>
 
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
@@ -213,6 +218,8 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
+
+  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
@@ -229,6 +236,8 @@ set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 Define browser, version, and OS settings for your test run.
 
 In the test script, update your test capabilities. This code passes browser, browser version, and operating system information, along with TestMu AI Selenium grid capabilities via the capabilities object.
+
+<VerifiedTag value="Verified" />
 
 ```csharp
 var browserOptions = new ChromeOptions();
@@ -268,6 +277,9 @@ Execute the MSTest test from Visual Studio or the command line.
 </p>
 
 **In Linux/macOS:**
+
+<VerifiedTag value="Verified" />
+
 ```csharp
 dotnet test MS-Test-Cross-Browser.csproj
 ```
@@ -290,6 +302,8 @@ Use AI coding assistants to generate and run MSTest tests with the TestMu AI Age
 The [mstest-skill](https://github.com/LambdaTest/agent-skills/tree/main/mstest-skill) is part of [TestMu AI Agent Skills](https://github.com/LambdaTest/agent-skills/) - structured packages that teach AI coding assistants how to write production-grade test automation.
 
 Install the skill:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 git clone https://github.com/LambdaTest/agent-skills.git

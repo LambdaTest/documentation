@@ -28,6 +28,7 @@ import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -218,11 +219,15 @@ If you are using your own project, make sure you update the **HUB endpoint** in 
 
 By setting up the HUB endpoint, you establish the communication channel between your tests and the browser nodes, enabling effective test distribution and execution.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 const GRID_HOST = "@hub.lambdatest.com/wd/hub";
 ```
 
 Configure the desired capabilities based on your test requirements. For example:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 DesiredCapabilities capability = new DesiredCapabilities();
@@ -267,6 +272,8 @@ Run the below mentioned commands in your terminal to setup the CLI and the envir
 
 <TabItem value="bash" label="Linux / MacOS" default>
 
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
@@ -277,6 +284,8 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
+
+  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
@@ -300,6 +309,8 @@ In this sample YAML file, we have mentioned:
 - **Pre and Post** commands
 - **Reports and Artefacts** that will be generated after the completion of tests
 - and other necessary YAML Parameters
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 ---
@@ -356,11 +367,15 @@ jobLabel: [ 'HYP', 'Selenium', 'smartUI']
 
 Run the below command in your terminal at the root folder of the project:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 ./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE
 ```
 
 OR use this command if you have not exported your username and access key in the step 2.
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">
@@ -388,6 +403,8 @@ Here you can see the difference.
 | `fullPage` (boolean) | Specify `true` if you want to take a Full Page Screenshot and `false` for viewport screenshots; `fullPage: true` is currently only supported for `Chrome`. |
 | `ignoreDOM` (object) | Specify one or a combination of selectors based on the `HTML DOM ID, CSS class, CSS selector or Xpath` used by your webpage that should be excluded from the comparison. |
 | `selectDOM` (object) | Specify one or a combination of selectors based on the `HTML DOM ID, CSS class, CSS selector or XPath` used by your webpage that should be included in the comparison. |
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val" groupId="framework">
 <TabItem value="IgnoreID" label="Ignore ID" default>
@@ -448,6 +465,8 @@ await driver.executeScript("smartui.takeScreenshot", config);
 </TabItem>
 
 </Tabs>
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val" groupId="framework">
 <TabItem value="SelectID" label="Select ID" default>

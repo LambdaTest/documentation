@@ -18,6 +18,7 @@ slug: integrating-your-jenkins-pipeline-with-testmu/
 canonical: https://www.testmuai.com/support/docs/integrating-your-jenkins-pipeline-with-testmu/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 
@@ -123,12 +124,16 @@ Be aware of your <BrandName /> authentication credentials i.e. your <BrandName /
 
 *   For Linux/Mac:
 
+    <VerifiedTag value="Verified" />
+
     ```javascript
     $ export LT_USERNAME= {YOUR_LAMBDATEST_USERNAME}
     $ export LT_ACCESS_KEY= {YOUR_LAMBDATEST_ACCESS_KEY}
     ```
 
 *   For Windows:
+
+    <VerifiedTag value="Verified" />
 
     ```javascript
     $ set LT_USERNAME= {YOUR_LAMBDATEST_USERNAME}
@@ -140,6 +145,8 @@ Be aware of your <BrandName /> authentication credentials i.e. your <BrandName /
 * * *
 
 You can find the Jenkins file for the Pipeline [here](https://github.com/LambdaTest/nightwatch-selenium-sample/blob/master/Jenkinsfile) or you can find the code for the Pipeline below. Below is the code for the Jenkins Pipeline.
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 #!/usr/bin/env groovy

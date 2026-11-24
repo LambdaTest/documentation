@@ -19,7 +19,7 @@ keywords:
 
 url: https://www.testmuai.com/support/docs/smartui-appium-java-sdk/
 slug: smartui-appium-java-sdk/
-canonical: https://www.testmu.ai/support/docs/smartui-appium-java-sdk/
+canonical: https://www.testmuai.com/support/docs/smartui-appium-java-sdk/
 
 ---
 import Tabs from '@theme/Tabs';
@@ -28,6 +28,7 @@ import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 ---
@@ -292,6 +293,8 @@ The first step is to create a project that will contain all your builds. To crea
 
 Add the following dependency to your `pom.xml` file:
 
+<VerifiedTag value="Verified" />
+
 ```xml
 <dependency>
     <groupId>io.github.lambdatest</groupId>
@@ -305,6 +308,8 @@ Add the following dependency to your `pom.xml` file:
 You can configure your project token in one of two ways:
 
 1. **Using Environment Variables**:
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux' label='MacOS/Linux' default>
@@ -336,6 +341,8 @@ You can pass the project token directly in your test configuration as shown in S
 ### Step 3: Integrate SmartUI in Your Test Script
 
 Import the required SmartUI class and add the screenshot capture code where needed:
+
+<VerifiedTag value="Verified" />
 
 ```java
 
@@ -389,6 +396,8 @@ public class YourTestClass {
 
 Run your tests as you normally would with your cloud provider. SmartUI will automatically capture and process the screenshots for visual regression testing.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 mvn test
 ```
@@ -408,6 +417,8 @@ mvn test
 
 The `deviceName` and `platform` parameters in SmartUI App SDK are used as metadata to ensure consistent screenshot comparison across builds. You can use any device name and platform that matches your cloud provider's capabilities:
 
+<VerifiedTag value="Verified" />
+
 ```java
 ssConfig.put("deviceName", "iPhone 15");
 ssConfig.put("platform", "iOS");
@@ -418,6 +429,8 @@ ssConfig.put("platform", "iOS");
 - These parameters are metadata tags and don't affect the actual device selection on your cloud provider
 
 Example configurations for different cloud providers:
+
+<VerifiedTag value="Verified" />
 
 ```java
 // For an iOS test on LambdaTest
@@ -447,6 +460,8 @@ You can either:
 
 This feature requires the `Gson` library for JSON serialization. Add it to your `pom.xml` if not already present:
 
+<VerifiedTag value="Verified" />
+
 ```xml
 <dependency>
     <groupId>com.google.code.gson</groupId>
@@ -458,6 +473,8 @@ This feature requires the `Gson` library for JSON serialization. Add it to your 
 ### Usage Examples
 
 #### 1. Ignoring Regions (Recommended for Dynamic Content)
+
+<VerifiedTag value="Verified" />
 
 ```java
 SmartUIAppSnapshot smartUI = new SmartUIAppSnapshot();
@@ -487,6 +504,8 @@ smartUI.stop();
 ```
 
 #### 2. Selecting Specific Regions for Comparison
+
+<VerifiedTag value="Verified" />
 
 ```java
 // Replace "ignoreBoxes" with "selectBoxes" to compare only specified regions
@@ -523,6 +542,8 @@ After test execution, visit your SmartUI project dashboard to:
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/smartui-sdk-results-primer.webp').default} alt="SmartUI Results" width="768" height="373" className='doc_img'/>
 
 ## Best Practices
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='best-practices'>
 <TabItem value='screenshot-naming' label='Screenshot Naming' default>
@@ -584,6 +605,8 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screen Loaded");
 - Run tests on consistent device configurations
 
 **Troubleshooting**
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='troubleshooting'>
 <TabItem value='screenshots-not-captured' label='Screenshots Not Captured' default>
@@ -736,11 +759,12 @@ If you encounter issues not covered here:
 - Review the [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide) for detailed solutions
 - Check [SmartUI Configuration Options](/support/docs/smartui-sdk-config-options) documentation
 - See [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data) for dynamic content issues
-- Visit [<BrandName /> Support](https://www.testmuai.com/support) for additional resources
-- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support)
+- Visit [<BrandName /> Support](https://www.testmuai.com/support/docs/) for additional resources
+- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support/docs/)
 
 </TabItem>
 </Tabs>
+
 
 ## Additional Resources
 

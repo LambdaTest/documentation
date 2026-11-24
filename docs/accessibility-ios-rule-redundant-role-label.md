@@ -5,6 +5,8 @@ sidebar_label: Redundant Role in Label
 description: "Flag iOS accessibility labels that repeat a control's role, like 'button' or 'link', since VoiceOver already announces the role separately."
 slug: accessibility-ios-rule-redundant-role-label/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

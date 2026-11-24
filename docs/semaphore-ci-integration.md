@@ -15,9 +15,10 @@ keywords:
 url: https://www.testmuai.com/support/docs/semaphore-integration-with-testmu/
 site_name: TestMu AI
 slug: semaphore-integration-with-testmu/
-canonical: https://www.testmu.ai/support/docs/semaphore-integration-with-testmu/
+canonical: https://www.testmuai.com/support/docs/semaphore-integration-with-testmu/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 
@@ -145,10 +146,16 @@ We will be performing a demonstration by using the Protractor framework
     * A [Git or GitHub](https://github.com/) repository
     * Download and install node.js and node package manager or npm.
     To install node.js with homebrew, use the below command.
+
+    <VerifiedTag value="Verified" />
+
     ```
     $ brew install node
     ```
     * If you have npm already installed, you may want to upgrade it to the latest version. Here the code you can run in your terminal to upgrade npm.
+
+    <VerifiedTag value="Verified" />
+
     ```
     npm install npm@latest -g
     ```
@@ -156,6 +163,9 @@ We will be performing a demonstration by using the Protractor framework
 * <BrandName /> Authentication Credentials
 
     * Be aware of your <BrandName /> authentication credentials, i.e., your <BrandName /> username, access key, and HubURL. You need to set them up as your environment variables. You can retrieve them from your <BrandName /> automation dashboard by clicking on the key icon near the help button.
+
+    <VerifiedTag value="Verified" />
+
     ```
     $ export LT_USERNAME=<YOUR_LAMBDATEST_USERNAME>
     $ export LT_ACCESS_KEY=<YOUR_LAMBDATEST_ACCESS_KEY>
@@ -166,6 +176,8 @@ We will be performing a demonstration by using the Protractor framework
 A few changes in the .semaphore/semaphore.yml are all you need to integrate <BrandName /> With Semaphore CI. According to your test configurations, these changes would include replacing the environment variables such as access key, username, grid config, and so on.
 
 Here is a sample config file for integrating your <BrandName /> account with your Semaphore CI instance. You can also find the below code at our [GitHub repository of Semaphore](https://github.com/LambdaTest/protractor-selenium-semaphore-sample).
+
+<VerifiedTag value="Verified" />
 
 ```js
 version: v1.0
@@ -210,6 +222,8 @@ For Instance, if you select the below configurations:
 
 Then Capabilities Generator at <BrandName /> will provide you with the below program:
 
+<VerifiedTag value="Verified" />
+
 ```
 var capabilities = {
     "build" : "your build name", //You can edit this and assign a build name
@@ -243,6 +257,8 @@ To help you perform cross browser testing of your locally stored web pages, <Bra
 >- [Lambda Tunnel for Linux](https://downloads.lambdatest.com/tunnel/v3/linux/64bit/LT_Linux.zip)
 
 Now, let us take an example of Semaphore.yml for Lambda Tunnel.
+
+<VerifiedTag value="Verified" />
 
 ```js
 //Example of .semaphore/semaphore.yml for Lambda Tunnel
@@ -295,6 +311,8 @@ blocks:
 Parallel Testing is one of the most demanding features of <BrandName /> Selenium Grid. By parallel testing, you can run more than one test case simultaneously. This means that Parallel testing would allow you to execute numerous automation test cases altogether. You perform a single test scenario across different browsers or run different test scenarios across the same browser but with different browser versions.
 
 To perform automation testing in parallel on Windows, use the below command.
+
+<VerifiedTag value="Verified" />
 
 ```
 node ./node_modules/protractor/bin/protractor parallel.conf.js

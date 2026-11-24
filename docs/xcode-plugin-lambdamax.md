@@ -10,9 +10,11 @@ keywords:
 url: https://www.testmuai.com/support/docs/xcode-plugin-testmu/
 site_name: TestMu AI
 slug: xcode-plugin-testmu/
-canonical: https://www.testmu.ai/support/docs/xcode-plugin-testmu/
+canonical: https://www.testmuai.com/support/docs/xcode-plugin-testmu/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -115,6 +117,8 @@ With this new plugin, testers and developers never have to leave XCode to execut
 <img loading="lazy" src={require('../assets/images/lambdamax/lambdamax-build-code.webp').default} alt="Image" width="1444" height="703"  className="doc_img img_center"/>
 
 Here is the sample code for the Xcode plugin:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 Xcode plugin:

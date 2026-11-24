@@ -18,7 +18,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/smart-visual-regression-testing/
 site_name: TestMu AI
 slug: smart-visual-regression-testing/
-canonical: https://www.testmu.ai/support/docs/smart-visual-regression-testing/
+canonical: https://www.testmuai.com/support/docs/smart-visual-regression-testing/
 ---
 
 import Tabs from '@theme/Tabs';

@@ -5,6 +5,8 @@ sidebar_label: Label in Name (2.5.3)
 description: Rule-level Accessibility guidance for Label in Name (WCAG 2.5.3 Level A).
 slug: accessibility-web-rule-2-5-3-label-in-name/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

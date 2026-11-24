@@ -17,6 +17,7 @@ canonical: https://www.testmuai.com/support/docs/group-folder-redirect-on-real-d
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
+
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
     "@context": "https://schema.org",

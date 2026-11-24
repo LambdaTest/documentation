@@ -16,9 +16,10 @@ keywords:
 url: https://www.testmuai.com/support/docs/teamcity-with-hyperexecute/
 site_name: TestMu AI
 slug: teamcity-with-hyperexecute/
-canonical: https://www.testmu.ai/support/docs/teamcity-with-hyperexecute/
+canonical: https://www.testmuai.com/support/docs/teamcity-with-hyperexecute/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -193,6 +194,8 @@ To integrate TeamCity with HyperExecute, follow the below mentioned steps:
 - Enter the **Step name** (optional).
 - Select the **Custom Script** in the **Run** field.
 - Enter the below mentioned script in the space provided.
+
+<VerifiedTag value="Verified" />
 
 ```bash
 curl -O https://downloads.lambdatest.com/hyperexecute/darwin/hyperexecute

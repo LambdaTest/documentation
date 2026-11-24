@@ -15,9 +15,10 @@ keywords:
 url: https://www.testmuai.com/support/docs/teamcity-integration-with-testmu/
 site_name: TestMu AI
 slug: teamcity-integration-with-testmu/
-canonical: https://www.testmu.ai/support/docs/teamcity-integration-with-testmu/
+canonical: https://www.testmuai.com/support/docs/teamcity-integration-with-testmu/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 
@@ -172,11 +173,15 @@ Parallel Testing is one of the most demanding features of <BrandName /> Selenium
 
 After you clone our GitHub repository, execute the below command in cmd/terminal.
 
+<VerifiedTag value="Verified" />
+
 ```
 npm run parallel
 ```
 
 The above command will trigger the execution of below code for performing parallel testing at <BrandName /> Selenium Grid.
+
+<VerifiedTag value="Verified" />
 
 ```js
 //parallel.conf.js file

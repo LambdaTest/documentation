@@ -12,7 +12,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/microsoft-teams-app/
 site_name: TestMu AI
 slug: microsoft-teams-app/
-canonical: https://www.testmu.ai/support/docs/microsoft-teams-app/
+canonical: https://www.testmuai.com/support/docs/microsoft-teams-app/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

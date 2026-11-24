@@ -5,6 +5,8 @@ sidebar_label: Insufficient Color Ratio
 description: Rule-level Accessibility guidance for Insufficient Color Ratio on Android.
 slug: accessibility-android-rule-insufficient-color-ratio/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

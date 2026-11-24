@@ -1,9 +1,10 @@
 ---
 id: lighthouse-reports-hooks
-title: How to Generate Multiple Lighthouse Reports in Selenium
+title: How to Generate Lighthouse Reports in Selenium on TestMu AI
+toc_max_heading_level: 2
 hide_title: true
-sidebar_label: Generate Lighthouse Reports
-description: Generate multiple Lighthouse reports in a single Selenium session using Lambda Hooks.
+sidebar_label: "Generate Lighthouse Reports"
+description: Generate multiple Google Lighthouse performance reports during a Selenium session on TestMu AI using Lambda Hooks.
 keywords:
   - generate multiple lighthouse reports selenium
   - lighthouse lambda hooks selenium
@@ -13,7 +14,7 @@ image: /assets/images/og-images/automation-testing-og.png
 url: https://www.testmuai.com/support/docs/generate-multiple-lighthouse-reports/
 site_name: TestMu AI
 slug: generate-multiple-lighthouse-reports/
-canonical: https://www.testmu.ai/support/docs/generate-multiple-lighthouse-reports/
+canonical: https://www.testmuai.com/support/docs/generate-multiple-lighthouse-reports/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import CookieTrackingLogin, { CookieTrackingSignup } from '@site/src/component/CookieTracking';
@@ -32,8 +33,8 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       "@type": "WebPage",
       "@id": "https://www.testmuai.com/support/docs/generate-multiple-lighthouse-reports/"
     },
-    "headline": "How to Generate Multiple Lighthouse Reports in Selenium",
-    "description": "Generate multiple Lighthouse reports in a single Selenium session using Lambda Hooks.",
+    "headline": "How to Generate Lighthouse Reports in Selenium on TestMu AI",
+    "description": "Generate multiple Google Lighthouse performance reports during a Selenium session on TestMu AI using Lambda Hooks.",
     "url": "https://www.testmuai.com/support/docs/generate-multiple-lighthouse-reports/",
     "image": {
       "@type": "ImageObject",
@@ -48,7 +49,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       "lighthouse lambda hooks selenium",
       "lighthouse performance report automation"
     ],
-    "proficiencyLevel": "Beginner",
+    "proficiencyLevel": "Intermediate",
     "author": {
       "@type": "Organization",
       "@id": "https://www.testmuai.com/#organization",
@@ -78,18 +79,17 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     "hasPart": [
       {
         "@type": "SoftwareSourceCode",
-        "name": "To generate a Lighthouse report, use the following JavaScriptExecutor hook",
+        "name": "Generate a Lighthouse report with the JavascriptExecutor hook",
         "codeSampleType": "code snippet",
         "programmingLanguage": "Java",
         "text": "JavascriptExecutor jse = (JavascriptExecutor)driver;\njse.executeScript(\"lambdatest_executor: {\\\"action\\\": \\\"generateLighthouseReport\\\", \\\"arguments\\\": {\\\"url\\\": \\\"<any url>\\\"}}\");"
       }
     ],
-    "dateModified": "2026-09-09T19:13:32+05:30"
+    "dateModified": "2026-09-27T00:00:00+05:30"
   }) }}
 />
 
-
-# Generating Multiple Lighthouse Reports Using Lambda Hooks
+# How to Generate Lighthouse Reports in Selenium on TestMu AI
 ---
 
 TestMu AI lets you perform Selenium automation while generating multiple Lighthouse reports through Lambda Hooks. This guide covers the hook structure, expected behavior, and conditions under which the reports are generated or errors are thrown.
@@ -99,6 +99,8 @@ TestMu AI lets you perform Selenium automation while generating multiple Lightho
 Use the JavaScriptExecutor hook to trigger a Lighthouse report for any URL during your test session.
 
 To generate a Lighthouse report, use the following *JavaScriptExecutor* hook:
+
+<VerifiedTag value="Verified" />
 
 ```java
 JavascriptExecutor jse = (JavascriptExecutor)driver;
@@ -116,6 +118,8 @@ Execute the hook multiple times with different URLs to generate reports for each
 - If you generate Lighthouse reports using Lambda hook, turn off the `performance:true` capability.
 - Successful generation of the report returns a *200* status and a response body containing:
 
+<VerifiedTag value="Verified" />
+
 ``` java
   {
     "message": "Lighthouse report generated successfully",
@@ -123,7 +127,7 @@ Execute the hook multiple times with different URLs to generate reports for each
   }
   ```
   
-- Lighthouse reports for all hooks executed are visible on the TestMu AI Web Automation Dashboard under the **Performance** tab.
+- Lighthouse reports for all hooks executed are visible on the TestMu AI Web Automation Dashboard under the **Performance** tab. To learn how to use Lambda Hooks for other test operations, refer to the complete hooks reference.
 
 
 ## View Lighthouse Performance Metrics

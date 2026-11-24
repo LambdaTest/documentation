@@ -19,6 +19,7 @@ canonical: https://www.testmuai.com/support/docs/kane-cli-writing-objectives/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -183,6 +184,8 @@ The objective string is the most important input to Kane CLI. How you phrase it 
 
 Use imperative verbs to describe what the agent should do:
 
+<VerifiedTag value="Verified" />
+
 ```
 "go to https://example.com"
 "click the 'Add to Cart' button"
@@ -194,6 +197,8 @@ Use imperative verbs to describe what the agent should do:
 ### Assertions
 
 Assertions validate page state. The test fails if the condition is not met.
+
+<VerifiedTag value="Verified" />
 
 ```
 "assert the page contains 'Order Confirmed'"
@@ -209,12 +214,18 @@ Extractions read a value from the page and store it in the run output's `final_s
 **Always use the explicit `store X as 'name'` syntax.** Vague phrasing like "tell me" or "read" does not reliably capture data.
 
 ❌ Bad: agent may see it but won't persist it:
+
+<VerifiedTag value="Verified" />
+
 ```
 "go to example.com and tell me the price"
 "read the page title"
 ```
 
 ✅ Good: value is captured in `final_state`:
+
+<VerifiedTag value="Verified" />
+
 ```
 "go to example.com, store the price of the first item as 'price'"
 "store the page title as 'page_title'"
@@ -225,6 +236,8 @@ Extractions read a value from the page and store it in the run output's `final_s
 ## Combining Patterns
 
 Chain all three patterns in one objective:
+
+<VerifiedTag value="Verified" />
 
 ```
 "go to {{app_url}}/dashboard,
@@ -243,6 +256,8 @@ This objective: navigates → extracts two values → validates a condition → 
 
 ### Login flow
 
+<VerifiedTag value="Verified" />
+
 ```bash
 kane-cli run \
   --url https://app.example.com \
@@ -255,6 +270,8 @@ kane-cli run \
 ```
 
 ### Search with filters
+
+<VerifiedTag value="Verified" />
 
 ```bash
 kane-cli run \
@@ -269,6 +286,8 @@ kane-cli run \
 
 ### Settings change
 
+<VerifiedTag value="Verified" />
+
 ```bash
 kane-cli run \
   --url https://app.example.com/account \
@@ -280,6 +299,8 @@ kane-cli run \
 ```
 
 ### Checkout
+
+<VerifiedTag value="Verified" />
 
 ```bash
 kane-cli run \
@@ -328,6 +349,8 @@ kane-cli run \
 
 Objectives are written the same way for a native mobile app as for the browser. The difference is what the run points at: a mobile run installs an **app you supply** with `--app`, so the objective describes app screens and controls rather than a URL.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 kane-cli run "Sign in and open the account tab" --target simulator --app ./builds/MyApp.zip
 ```
@@ -339,6 +362,8 @@ Pointing a mobile run at a website is not supported yet. WebViews inside the app
 Objectives with more than 15 steps drift and become unreliable. Split them into multiple runs.
 
 In **Interactive TUI**, the browser stays open between runs: state carries over automatically:
+
+<VerifiedTag value="Verified" />
 
 ```
 > go to https://myapp.com and log in as admin
@@ -352,6 +377,8 @@ In **Interactive TUI**, the browser stays open between runs: state carries over 
 ```
 
 In **Headless CLI**, use `--max-steps` to cap each run:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 kane-cli run "login flow" --url https://myapp.com --max-steps 10

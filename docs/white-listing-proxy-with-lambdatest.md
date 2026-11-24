@@ -13,7 +13,7 @@ image: /assets/images/og-images/automation-testing-og.png
 url: https://www.testmuai.com/support/docs/white-listing-proxy-with-testmu/
 site_name: TestMu AI
 slug: white-listing-proxy-with-testmu/
-canonical: https://www.testmu.ai/support/docs/white-listing-proxy-with-testmu/
+canonical: https://www.testmuai.com/support/docs/white-listing-proxy-with-testmu/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

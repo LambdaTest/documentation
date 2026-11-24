@@ -18,7 +18,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/web-testing-on-real-devices/
 site_name: TestMu AI
 slug: web-testing-on-real-devices/
-canonical: https://www.testmu.ai/support/docs/web-testing-on-real-devices/
+canonical: https://www.testmuai.com/support/docs/web-testing-on-real-devices/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

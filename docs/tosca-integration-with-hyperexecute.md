@@ -13,7 +13,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/tosca-integration-with-hyperexecute/
 site_name: TestMu AI
 slug: tosca-integration-with-hyperexecute/
-canonical: https://www.testmu.ai/support/docs/tosca-integration-with-hyperexecute/
+canonical: https://www.testmuai.com/support/docs/tosca-integration-with-hyperexecute/
 ---
 
 

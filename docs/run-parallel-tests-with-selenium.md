@@ -19,6 +19,7 @@ canonical: https://www.testmuai.com/support/docs/run-parallel-tests-with-seleniu
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 
@@ -196,6 +197,8 @@ Running tests sequentially multiplies wait time across every test. Parallel exec
 
 Each parallel test opens its own session on the grid. Your framework splits the test suite into threads or processes, and each one connects to a separate browser instance on TestMu AI.
 
+<VerifiedTag value="Verified" />
+
 ```
 Your Machine
   ├── Thread 1 → Chrome / Windows 11
@@ -210,6 +213,8 @@ The number of sessions you can run simultaneously depends on your TestMu AI plan
 ---
 
 Each framework handles parallelism differently. Below are the commands and configurations for the most common frameworks.
+
+<VerifiedTag value="Verified" />
 
 <Tabs>
 

@@ -13,12 +13,13 @@ keywords:
 url: https://www.testmuai.com/support/docs/smartui-baseline-management/
 site_name: TestMu AI
 slug: smartui-baseline-management/
-canonical: https://www.testmu.ai/support/docs/smartui-baseline-management/
+canonical: https://www.testmuai.com/support/docs/smartui-baseline-management/
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import CodeBlock from '@theme/CodeBlock';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -191,6 +192,8 @@ SmartUI allows you to specify baselines dynamically during test execution, provi
 
 ### Branch-based Baseline
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npx smartui --baselineBranch "branch-name" exec -- <execution command>
 ```
@@ -201,6 +204,8 @@ npx smartui --baselineBranch "branch-name" exec -- <execution command>
 - Testing hotfix against production branch
 
 ### Build-based Baseline
+
+<VerifiedTag value="Verified" />
 
 ```bash
 npx smartui --baselineBuild "build-name" exec -- <execution command>
@@ -217,6 +222,8 @@ SmartUI provides the ability to mark builds as baseline directly through the CLI
 
 ### Basic Usage
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npx smartui --markBaseline exec -- <execution command>
 ```
@@ -227,6 +234,8 @@ npx smartui --markBaseline exec -- <execution command>
 
 **Scenario**: Managing baselines during feature development
 
+<VerifiedTag value="Verified" />
+
 ```bash
 # 1. Set feature branch baseline
 npx smartui --baselineBranch "feature/new-login" exec -- <execution command>
@@ -236,6 +245,8 @@ npx smartui --baselineBranch "feature/new-login" exec -- <execution command>
 
 **Scenario**: Managing baselines for hotfixes
 
+<VerifiedTag value="Verified" />
+
 ```bash
 # 1. Set production as baseline
 npx smartui --baselineBranch "production" exec -- <execution command>
@@ -244,6 +255,8 @@ npx smartui --baselineBranch "production" exec -- <execution command>
 ### 3. Release Management
 
 **Scenario**: Managing baselines for releases
+
+<VerifiedTag value="Verified" />
 
 ```bash
 # 1. Set staging as baseline
@@ -298,6 +311,8 @@ npx smartui --markBaseline capture urls.json
 </Tabs>
 
 ## Troubleshooting
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='troubleshooting'>
 <TabItem value='common-issues' label='Common Issues' default>
@@ -384,6 +399,8 @@ In Project Settings → Build Settings → Git Settings:
 
 ### Dynamic Baseline in CLI
 
+<VerifiedTag value="Verified" />
+
 ```bash
 # Use specific branch as baseline
 npx smartui --baselineBranch "staging" exec -- npm test
@@ -401,6 +418,8 @@ npx smartui --markBaseline exec -- npm test
 
 **Use Case**: Different baselines for different branches
 
+<VerifiedTag value="Verified" />
+
 ```bash
 # Feature branch compares against develop
 npx smartui --baselineBranch "develop" exec -- npm test
@@ -413,6 +432,8 @@ npx smartui --baselineBranch "staging" exec -- npm test
 
 **Use Case**: Compare against specific version builds
 
+<VerifiedTag value="Verified" />
+
 ```bash
 # Compare against v1.0.0 build
 npx smartui --baselineBuild "v1.0.0" exec -- npm test
@@ -424,6 +445,8 @@ npx smartui --baselineBuild "v2.0.0" exec -- npm test
 ### Scenario 3: Hotfix Baseline Management
 
 **Use Case**: Hotfix needs to compare against production
+
+<VerifiedTag value="Verified" />
 
 ```bash
 # Hotfix branch compares against production
@@ -445,6 +468,8 @@ For projects integrated with Git:
 4. Smart Baseline feature is not available for Git projects
 
 ### Git Branching Strategy
+
+<VerifiedTag value="Verified" />
 
 ```bash
 # Main branch is baseline
@@ -480,4 +505,4 @@ For detailed guidance on approval, reject, move, and merge functions across diff
 
 ### Getting Help
 
-If you encounter any issues with baseline management in SmartUI, please contact our support team at support@testmuai.com or use the [24/7 Chat Support](https://www.testmuai.com/support).
+If you encounter any issues with baseline management in SmartUI, please contact our support team at support@testmuai.com or use the [24/7 Chat Support](https://www.testmuai.com/support/docs/).

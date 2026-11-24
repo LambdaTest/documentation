@@ -21,6 +21,7 @@ slug: defect-analysis-prediction/
 canonical: https://www.testmuai.com/support/docs/defect-analysis-prediction/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 
@@ -211,6 +212,8 @@ Smart Tags provide an early warning system by automatically labeling tests based
 ## Putting It All Together
 
 These capabilities are designed to work as a pipeline. Each stage feeds into the next:
+
+<VerifiedTag value="Verified" />
 
 ```
 Test Execution

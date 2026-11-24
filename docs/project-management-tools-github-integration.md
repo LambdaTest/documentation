@@ -11,7 +11,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/github-integration/
 site_name: TestMu AI
 slug: github-integration/
-canonical: https://www.testmu.ai/support/docs/github-integration/
+canonical: https://www.testmuai.com/support/docs/github-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

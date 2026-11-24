@@ -3,7 +3,7 @@ id: chrome-os-app-testing
 title: ChromeOS App Testing
 hide_title: false
 sidebar_label: ChromeOS App Testing
-description: TestMu AI provides a powerful solution for testing apps designed for Chromebooks by offering live interactive testing capabilities, and device emulation for responsive design testing.
+description: Upload your app and test it live on a virtual ChromeOS device in TestMu AI, with device controls, screenshots, session recording, IP geolocation and network throttling.
 keywords:
     - ChromeOS
     - ChromeOS App
@@ -34,7 +34,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       "@id": "https://www.testmuai.com/support/docs/chrome-os-app-testing/"
     },
     "headline": "ChromeOS App Testing",
-    "description": "TestMu AI provides a powerful solution for testing apps designed for Chromebooks by offering live interactive testing capabilities, and device emulation for responsive design testing.",
+    "description": "Upload your app and test it live on a virtual ChromeOS device in TestMu AI, with device controls, screenshots, session recording, IP geolocation and network throttling.",
     "url": "https://www.testmuai.com/support/docs/chrome-os-app-testing/",
     "image": {
       "@type": "ImageObject",
@@ -87,7 +87,9 @@ This document outlines how you can leverage the features like mark as bug, chang
 **Step 3:** Select the **ChromeOS** option, and upload your application to the <BrandName />. (We are using the sample application for the demo purpose)<br />
 **Step 4:** Select your screen resolution and click on **Start** button.
 
-<img loading="lazy" src={require('../assets/videos/real-time/chromeos-app/launch-chrome-app.gif').default} style={{ height: '380px' }} className="doc_img"/>
+<video class="right-side" width="80%" controls id="vid">
+<source src= {require('../assets/videos/real-time/chromeos-app/launch-chrome-app.mp4').default} style={{ height: '300px' }} type="video/mp4" />
+</video>
 
 ## Device Controls
 The Device Control feature allows you tp perform certain actions with your device  within your current test session:
@@ -96,7 +98,9 @@ The Device Control feature allows you tp perform certain actions with your devic
 - **Volume:** Adjust the device volume directly within your testing session, ensuring optimal audio levels for your tests.
 - **Lock Device:** Lock or unlock your device seamlessly during testing sessions without interrupting your workflow.
 
-<img loading="lazy" src={require('../assets/videos/real-time/chromeos-app/device-control.gif').default} style={{ height: '350px' }} className="doc_img"/> 
+<video class="right-side" width="80%" controls id="vid">
+<source src= {require('../assets/videos/real-time/chromeos-app/device-control.mp4').default} style={{ height: '300px' }} type="video/mp4" />
+</video>
 
 ## App Controls
 This provide programmatic control over the applications installed within the emulator (e.g., install new app, kill the existing app, or uninstall the app).  App Controls give you the power to do it all programmatically. This streamlines your testing process by eliminating the need for manual app manipulation within the emulator.
@@ -106,28 +110,39 @@ This provide programmatic control over the applications installed within the emu
 ## Screenshot
 Screenshots remain a cornerstone for capturing static images of the current emulator screen.  These screenshots serve as invaluable visual references throughout the testing process, aiding in bug reporting, test case documentation, and visual regression testing.
 
-<img loading="lazy" src={require('../assets/videos/real-time/chromeos-app/screenshot.gif').default} style={{ height: '350px' }} className="doc_img"/>
+<video class="right-side" width="80%" controls id="vid">
+<source src= {require('../assets/videos/real-time/chromeos-app/screenshot.mp4').default} style={{ height: '300px' }} type="video/mp4" />
+</video>
  
 ## Record Session
 This allows you to record a video of your testing session, providing a detailed playback for in-depth bug analysis, test case demonstrations, and comprehensive test case documentation.
 
-<img loading="lazy" src={require('../assets/videos/real-time/chromeos-app/record-session.gif').default} style={{ height: '350px' }} className="doc_img"/>
+<video class="right-side" width="80%" controls id="vid">
+<source src= {require('../assets/videos/real-time/chromeos-app/record-session.mp4').default} style={{ height: '300px' }} type="video/mp4" />
+</video>
  
 ## Gallery
 All screenshots and video recordings from test sessions are stored in the Gallery. To access, select Gallery from the left toolbar and you'll find the saved screenshots and videos. To download the screenshots or videos to your local machine, click on the Download icon. You can also mark them as bug by clicking on the Bug icon. To mark multiple screenshots as bugs, select the screenshots using the checkbox option, then click "Mark as Bug."
  
-<img loading="lazy" src={require('../assets/videos/real-time/chromeos-app/gallery.gif').default} style={{ height: '350px' }} className="doc_img"/>
+<video class="right-side" width="80%" controls id="vid">
+<source src= {require('../assets/videos/real-time/chromeos-app/gallery.mp4').default} style={{ height: '300px' }} type="video/mp4" />
+</video>
  
 ## Mark as Bug
 It empowers you to streamline bug reporting within the testing environment itself. Encounter a UI glitch? Simply capture a screenshot, optionally annotate it with relevant details using shapes, text, and color coding, and seamlessly report the bug via your preferred integrated project management tool. This integration eliminates the need for context switching and facilitates efficient bug reporting.
   
-<img loading="lazy" src={require('../assets/videos/real-time/chromeos-app/mark-bug.gif').default} style={{ height: '350px' }} className="doc_img"/>
+<video class="right-side" width="80%" controls id="vid">
+<source src= {require('../assets/videos/real-time/chromeos-app/mark-bug.mp4').default} style={{ height: '300px' }} type="video/mp4" />
+</video>
  
 
 ## IP Geolocation
-This transcends basic location selection. It allows you to spoof the IP address of your emulated device, simulating various geographical locations across over 45 countries. This enables you to test geo-restricted features, localized content delivery, and the overall user experience for a global audience.
+This transcends basic location selection. It allows you to spoof the IP address of your emulated device, simulating various geographical locations across 180+ countries. This enables you to test geo-restricted features, localized content delivery, and the overall user experience for a global audience.
   
 <img loading="lazy" src={require('../assets/videos/real-time/chromeos-app/ip-location.png').default} style={{ height: '350px' }} className="doc_img"/>
+
+## Files and Media
+The [Upload and Download Files](/support/docs/real-time-upload-and-download-files/) feature allows to manage files directly within remote testing environments. This functionality streamlines the testing process by allowing seamless file transfers between local and remote environments across desktop and mobile platforms.
  
 ## Network Throttling
 <BrandName />'s network throttling feature empowers you to simulate real-world network conditions (Offline, Slow 3G, Fast 3G, 4G, 5G and Custom) during testing. This allows you to assess your application performance under varying internet speeds, ensuring a seamless user experience across different network environments. You can leverage predefined network profiles or craft custom settings for comprehensive testing.  
@@ -162,7 +177,9 @@ Terminates the current emulator instance, freeing up resources and allowing you 
 
 ## Advance Tools
 
-<img loading="lazy" src={require('../assets/videos/real-time/chromeos-app/advance-tool.gif').default} style={{ height: '350px' }} className="doc_img"/>
+<video class="right-side" width="80%" controls id="vid">
+<source src= {require('../assets/videos/real-time/chromeos-app/advance-tool.mp4').default} style={{ height: '300px' }} type="video/mp4" />
+</video>
 
 ### UI Inspector
 This is designed to examine and interact with the user interface (UI) elements of your mobile apps, or desktop applications. It acts like a behind-the-scenes detective, allowing you to delve into the inner workings of your app's interface.

@@ -24,6 +24,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -200,6 +201,8 @@ Download or Clone the code sample for the Playwright Real Device from the <Brand
 ### Configure Desired Capabilities
 Update your test configuration with the required capabilities.
 
+<VerifiedTag value="Verified" />
+
 <Tabs className="docs__val">
   <TabItem value="android" label="Android" default>
     ```javascript title="playwright-android-real-device.js" reference
@@ -218,6 +221,8 @@ Update your test configuration with the required capabilities.
 
 ### Configure the CDP URL
 You will have to update the **CDP (Chrome DevTools Protocol) URL** which is a protocol used for communication between the browser and the developer tools.
+
+<VerifiedTag value="Verified" />
 
 ```javascript title="playwright-ios-real-device.js"
 const browser = await chromium.connect({
@@ -239,6 +244,8 @@ You can download the CLI for your desired platform from the below mentioned link
 ## Step 3: Configure YAML in your Test Suite
 Use the sample YAML below to configure your execution:
 
+<VerifiedTag value="Verified" />
+
 <Tabs className="docs__val">
   <TabItem value="android" label="Android" default>
     ```yaml title="hyperexecute_android.yaml" reference
@@ -255,6 +262,8 @@ Use the sample YAML below to configure your execution:
 
 :::info
 To Run test on Mobile Containers in a Particular Region
+
+<VerifiedTag value="Verified" />
 
 ```yaml title="hyperexecute.yaml"
 dynamicAllocation: true
@@ -274,6 +283,8 @@ framework:
 > **NOTE :** In case of MacOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
 
 Run the below command in your terminal at the root folder of the project:
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">
@@ -301,6 +312,8 @@ The [playwright-skill](https://github.com/LambdaTest/agent-skills/tree/main/play
 
 The playwright-skill package includes:
 
+<VerifiedTag value="Verified" />
+
 ```
 playwright-skill/
 ├── SKILL.md
@@ -323,6 +336,8 @@ It provides structured guidance for:
 ***
 
 Install a Playwright Agent Skill using the command below:
+
+<VerifiedTag value="Verified" />
 
 ```
 # Clone the repo and copy the skill you need

@@ -96,7 +96,9 @@ The free plan includes 1 parallel session, limited 2-minute live sessions that r
 - To test your application, enter its URL or upload your application from your local machine and select your **Device** - Android, iOS, or [ChromeOS](/support/docs/chrome-os-testing/), and its version.
 - Afterwards click on the **Start** button to initiate the testing process.
 
-<img loading="lazy" src={require('../assets/images/real-time-testing/mobile-app/getting-started-with-mobile-app.gif').default} alt="Image" className="doc_img"/>
+<video class="right-side" width="80%" controls id="vid">
+<source src= {require('../assets/images/real-time-testing/mobile-app/getting-started-with-mobile-app.mp4').default} style={{ height: '300px' }} type="video/mp4" />
+</video>
 
 ## Dashboard Walkthrough
 The Real-Time Testing dashboard provides an intuitive interface for managing your testing sessions:

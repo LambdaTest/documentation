@@ -16,6 +16,7 @@ canonical: https://www.testmuai.com/support/docs/hyperexecute-hybrid-strategy/
 
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -166,6 +167,8 @@ Now the given `parallelism` is 2, hence it will create the same set of the above
 
 - **autosplit**: To use HyperExecute’s AutoSplit Strategy, you need to set this flag to `true`. Similarly, this flag should be set to `true` in Hybrid Strategy too.
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 autosplit: true
 ```
@@ -173,12 +176,16 @@ autosplit: true
 - **parallelism**: This key indicates the number of tests that can run in parallel.  
       
     
+<VerifiedTag value="Verified" />
+
 ```yaml
 parallelism: 5
 ```
     
 - You can define the `parallelism` for each operating system. If you have not defined the `parallelism` for any particular OS, then the value for that OS will be set to the global `parallelism` value.         
         
+<VerifiedTag value="Verified" />
+
 ```yaml
 Parallelism: 4 
 winParallelism: 2 
@@ -190,6 +197,8 @@ macParallelism: 3
 - **matrix**: This flag is used to define the combination of tests you want to run in your job. You can use the matrix flag to define combinations of browsers, operating systems, and even custom parameters like files, folders, tags, scenarios, and more.  
       
     
+<VerifiedTag value="Verified" />
+
 ```yaml
 matrix:
   os: [mac, win, linux] 
@@ -201,6 +210,8 @@ runson: ${matrix.os}
           
 - **testDiscovery**: The `testDiscovery` command is used to list down all the values that have to be distributed. It can be used to split tests over files, modules, or any level supported by your language and framework.  
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 testDiscovery:
   type: raw
@@ -210,6 +221,8 @@ testDiscovery:
     
 - It can also be defined selectively for every platform. If you have not defined the `testDiscovery` command for a specific OS, then it takes the global value of the command.  
             
+<VerifiedTag value="Verified" />
+
 ```yaml
 testDiscovery:
   type: raw
@@ -223,6 +236,8 @@ testDiscovery:
               
 - **testRunnerCommand**: The `testRunnerCommand` tells the system how to run a single test entity in isolation. This entity could be a file, module, feature or scenario. It will run over each of the values extracted from the `testDiscovery` command.  
       
+<VerifiedTag value="Verified" />
+
 ```yaml
 testRunnerCommand: mvn test -Dcucumber.options="$test" -Dscenario="$test" -DOs="win 10"
   winTestRunnerCommand: mvn test -Dcucumber.options="$test" -Dscenario="$test" -DOs="win 10"
@@ -235,6 +250,8 @@ testRunnerCommand: mvn test -Dcucumber.options="$test" -Dscenario="$test" -DOs="
 ### Sample YAML file
 
 A sample YAML file used to run a job on Hybrid Strategy for your reference below:
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 ---

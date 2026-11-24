@@ -10,7 +10,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/regular-expression-appium/
 site_name: TestMu AI
 slug: regular-expression-appium/
-canonical: https://www.testmu.ai/support/docs/regular-expression-appium/
+canonical: https://www.testmuai.com/support/docs/regular-expression-appium/
 ---
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
@@ -124,4 +124,5 @@ Imagine you want to run a test on an iPhone. You don't need a specific model, ju
 :::tip
 You can pass both `deviceName` and `platformVersion` regex patterns together or use any one of them as per your requirements. This flexibility allows you to match specific devices, versions, or combinations based on your needs.
 :::
+
 

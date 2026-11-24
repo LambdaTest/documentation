@@ -15,6 +15,7 @@ site_name: TestMu AI
 slug: kane-cli-checkpoint-devtools-localstorage/
 canonical: https://www.testmuai.com/support/docs/kane-cli-checkpoint-devtools-localstorage/
 ---
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -135,12 +136,16 @@ Because localStorage is captured at assertion time:
 
 Applications often store structured data in localStorage as JSON strings:
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 // Application code
 localStorage.setItem("user_prefs", JSON.stringify({theme: "dark", lang: "en"}));
 ```
 
 In assertions, the value is the raw JSON string. You can parse it to check individual fields:
+
+<VerifiedTag value="Verified" />
 
 ```
 Assert: the "theme" field in the user_prefs localStorage item is "dark"
@@ -159,6 +164,8 @@ KaneAI will parse the JSON and drill into the value automatically.
 
 ## Example Assertions
 
+<VerifiedTag value="Verified" />
+
 ```
 Assert: auth_token exists in localStorage
 Assert: the theme preference in localStorage is "dark"
@@ -168,6 +175,8 @@ Assert: the user_id value in localStorage is not empty
 
 ## Example Extractions
 
+<VerifiedTag value="Verified" />
+
 ```
 Store all localStorage items
 Extract the auth_token from localStorage
@@ -176,6 +185,8 @@ Get all localStorage keys
 ```
 
 ## Example If/Else
+
+<VerifiedTag value="Verified" />
 
 ```
 If localStorage has "onboarding_complete" then show dashboard, else start onboarding

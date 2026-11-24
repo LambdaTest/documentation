@@ -12,7 +12,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/smartui-multiselect-bulkops/
 site_name: TestMu AI
 slug: smartui-multiselect-bulkops/
-canonical: https://www.testmu.ai/support/docs/smartui-multiselect-bulkops/
+canonical: https://www.testmuai.com/support/docs/smartui-multiselect-bulkops/
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';

@@ -14,6 +14,9 @@ site_name: TestMu AI
 slug: accessibility-testng-test/
 canonical: https://www.testmuai.com/support/docs/accessibility-testng-test/
 ---
+import VerifiedTag from '@site/src/component/verifiedTag';
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -136,11 +139,15 @@ Enable Accessibility and optional WCAG / best-practice flags (full reference: [C
 
 **Minimal enable:**
 
+<VerifiedTag value="Verified" />
+
 ```java
 capabilities.setCapability("accessibility", true);
 ```
 
 **Optional tuning (example):**
+
+<VerifiedTag value="Verified" />
 
 ```java
 capabilities.setCapability("accessibility", true);
@@ -154,6 +161,8 @@ capabilities.setCapability("accessibility.needsReview", true);
 **A. On-demand (recommended for most suites)**  
 After navigation and when the page is stable, call:
 
+<VerifiedTag value="Verified" />
+
 ```java
 driver.executeScript("lambda-accessibility-scan");
 ```
@@ -162,6 +171,8 @@ If you enable `accessibility` but **never** call this hook (and do not use auto-
 
 **B. Continuous auto-scan**  
 Scan on every navigation without hooks:
+
+<VerifiedTag value="Verified" />
 
 ```java
 capabilities.setCapability("accessibility", true);
@@ -173,6 +184,8 @@ capabilities.setCapability("accessibility.autoscan", true);
 Point your `testng.xml` (or Gradle/Maven TestNG config) at the packages or classes that use the shared base class so every included test inherits the same driver setup. Run a **single** `@Test` first to validate capabilities before scaling the suite.
 
 ### 5. Execute and open the report
+
+<VerifiedTag value="Verified" />
 
 ```bash
 mvn test

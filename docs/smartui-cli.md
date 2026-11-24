@@ -17,7 +17,7 @@ keywords:
 
 url: https://www.testmuai.com/support/docs/smartui-cli/
 slug: smartui-cli/
-canonical: https://www.testmu.ai/support/docs/smartui-cli/
+canonical: https://www.testmuai.com/support/docs/smartui-cli/
 
 ---
 import Tabs from '@theme/Tabs';
@@ -25,6 +25,7 @@ import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
@@ -291,11 +292,17 @@ The first step is to create a project with the application in which we will comb
 Install required NPM modules for `TestMu AI SmartUI CLI` globally or in your project:
 
 **Global Installation (Recommended):**
+
+<VerifiedTag value="Verified" />
+
 ```bash
 npm install -g @lambdatest/smartui-cli
 ```
 
 **Local Installation:**
+
+<VerifiedTag value="Verified" />
+
 ```bash
 npm install @lambdatest/smartui-cli
 ```
@@ -306,10 +313,14 @@ If you face any problems executing tests with SmartUI-CLI `versions >= v4.x.x`, 
 
 ## Step 2: Create URL file
 
+<VerifiedTag value="Verified" />
+
 ```
 smartui config:create-web-static urls.json
 ```
 Once, the `URLs` file will be created, you will be seeing the sample pre-filled URLs in the `urls.json` file:
+
+<VerifiedTag value="Verified" />
 
 ```json title="/smartui-cli-project/urls.json"
 [
@@ -335,6 +346,8 @@ If you are using any async components, you can add wait time for the page to loa
 ## Step 3: Configure your Project Token
 
 Setup your project token shown in the **SmartUI** app after creating your project.
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux' label='MacOS/Linux' default>
@@ -366,6 +379,8 @@ $env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 
 You can now configure your project settings on using various available options to run your tests with the SmartUI integration. To generate the configuration file, please execute the following command:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npx smartui config:create .smartui.json
 ```
@@ -373,6 +388,8 @@ npx smartui config:create .smartui.json
 The file name is your choice: `config:create` writes the file at the path you pass, and the capture command reads it through `--config <file>`. This guide uses `.smartui.json` in every command, in the form `npx smartui capture urls.json --config .smartui.json`.
 
 Once, the configuration file will be created, you will be seeing the default configuration pre-filled in the configuration file:
+
+<VerifiedTag value="Verified" />
 
 ```json title="/smartui-sdk-project/.smartui.json"
 {
@@ -410,6 +427,8 @@ Once, the configuration file will be created, you will be seeing the default con
 
 To capture a screenshot of the content currently visible in your viewport, rather than the entire page, it's important to define the viewport's width and height in your configuration settings. Specify the desired width and height parameters as demonstrated in the following example to ensure that the screenshot encompasses only the viewport area.
 
+<VerifiedTag value="Verified" />
+
 ```json
     "viewports": [
       [
@@ -444,6 +463,8 @@ Please read the following table for more information about the configuration fil
 
 You can now execute tests for `Visual Regression Testing` using the following options:.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npx smartui capture urls.json --config .smartui.json
 ```
@@ -459,6 +480,9 @@ You can also use the following options with the capture command:
 - `--fetch-results [filename]` - Fetch and save results to JSON file
 
 **Example with additional options:**
+
+<VerifiedTag value="Verified" />
+
 ```bash
 npx smartui capture urls.json --config .smartui.json --buildName "Release-v1.0" --fetch-results results.json
 ```
@@ -476,6 +500,8 @@ These capabilities ensure that your visual tests accurately capture the true rep
 
 You can execute any valid JavaScript code that you would typically run inside a browser. For example, to simulate a button click, you might use:
 
+<VerifiedTag value="Verified" />
+
 ```js
 document.querySelector('.my-button-example').click();
 ```
@@ -489,6 +515,8 @@ The `execute` option accepts an object with the following keys:
 - **beforeSnapshot**: This function is called just before SmartUI captures a snapshot. It is ideal for final adjustments or interactions needed to prepare the page for capture.
 
 Example usage in a configuration:
+
+<VerifiedTag value="Verified" />
 
 ```json
 {
@@ -511,12 +539,16 @@ You can fetch build results by adding the `--fetch-results` flag to your test ex
 ### Default Usage
 If no filename is specified, results will be stored in `results.json`:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npx smartui capture urls.json --config .smartui.json --fetch-results
 ```
 
 ### Custom Filename
 Specify a custom filename for your results:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 npx smartui capture urls.json --config .smartui.json --fetch-results custom-results.json
@@ -526,6 +558,8 @@ npx smartui capture urls.json --config .smartui.json --fetch-results custom-resu
 You can add a custom build name by adding the `--buildName` flag to your test execution command. Here is how you can utilise this feature:
 
 Specify a custom build name to group your screenshots in the following way:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 npx smartui capture urls.json --config .smartui.json --buildName "Sample Build Name"
@@ -539,6 +573,8 @@ npx smartui capture urls.json --config .smartui.json --buildName "Sample Build N
 ## Setup with Continuous Integration (CI)
 
 If you are using the Continuous Integration (CI) pipeline for your application and want to integrate `SmartUI CLI` execution then the following are the steps needs to be added to your `.yaml` file:
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 steps:
@@ -567,6 +603,8 @@ You can see the SmartUI dashboard to view the results. This will help you identi
 ## Parallel execution of static URLs
 
 You can reduce the build time by executing parallel URLs in the following way.
+
+<VerifiedTag value="Verified" />
 
 ```bash
 npx smartui capture urls.json --config .smartui.json --parallel <number-of-parallels> --fetch-results
@@ -599,6 +637,7 @@ The maximum number of parallel threads is calculated using the formula: log<sub>
 - Start with a lower thread count and gradually increase based on your system's performance
 - Monitor system resources during execution
 - Ensure stable internet connection for reliable parallel processing
+
 
 ## Additional Resources
 

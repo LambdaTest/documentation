@@ -1,21 +1,24 @@
 ---
 id: performance-tips
-title: Maximize Test Execution Performance on Automation Platform
-sidebar_label: Speed Up Your Tests
-description: Speed up Selenium test execution on the cloud grid by disabling optional logging capabilities.
+title: How to Speed Up Your Selenium Tests on TestMu AI
+toc_max_heading_level: 2
+hide_title: true
+sidebar_label: "Speed Up Your Tests"
+description: Speed up your Selenium tests on TestMu AI with parallel execution, optimized capabilities, and latency troubleshooting tips.
 keywords:
   - reduce selenium test execution time
   - disable visual network console logs
   - cloud grid performance optimization
   - selenium test speed improvement
-  - desired capabilities performance
+  - capabilities performance
 image: /assets/images/og-images/automation-testing-og.png
 url: https://www.testmuai.com/support/docs/performance-tips/
 site_name: TestMu AI
 slug: performance-tips/
-canonical: https://www.testmu.ai/support/docs/performance-tips/
+canonical: https://www.testmuai.com/support/docs/performance-tips/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -29,8 +32,8 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       "@type": "WebPage",
       "@id": "https://www.testmuai.com/support/docs/performance-tips/"
     },
-    "headline": "Maximize Test Execution Performance on Automation Platform",
-    "description": "Speed up Selenium test execution on the cloud grid by disabling optional logging capabilities.",
+    "headline": "How to Speed Up Your Selenium Tests on TestMu AI",
+    "description": "Speed up your Selenium tests on TestMu AI with parallel execution, optimized capabilities, and latency troubleshooting tips.",
     "url": "https://www.testmuai.com/support/docs/performance-tips/",
     "image": {
       "@type": "ImageObject",
@@ -43,7 +46,9 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     "keywords": [
       "reduce selenium test execution time",
       "disable visual network console logs",
-      "cloud grid performance optimization"
+      "cloud grid performance optimization",
+      "selenium test speed improvement",
+      "capabilities performance"
     ],
     "proficiencyLevel": "Beginner",
     "author": {
@@ -134,8 +139,8 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
-# Performance Tips
-* * *
+# How to Speed Up Your Selenium Tests on TestMu AI
+---
 
 Running Selenium tests on a cloud grid introduces network latency compared to local execution. These tips help you reduce total execution time on TestMu AI.
 
@@ -144,6 +149,8 @@ Running Selenium tests on a cloud grid introduces network latency compared to lo
 Turn off visual, network, and console logging to reduce per-command overhead.
 
 TestMu AI runs complementary services that capture screenshots after every command, record video, and collect network and console logs. Each service adds processing time. If you do not need these logs, disable them through capabilities:
+
+<VerifiedTag value="Verified" />
 
 ```java
 ChromeOptions browserOptions = new ChromeOptions();
@@ -168,11 +175,15 @@ Execute multiple tests simultaneously to reduce total build time.
 
 Sequential test execution multiplies wait time across every test. Use your framework's parallel execution feature (TestNG `parallel="methods"`, pytest-xdist, Mocha `--parallel`) and set the desired concurrency in your TestMu AI plan. This is the single most impactful change for reducing build duration.
 
+If a run is slow because of front-end performance rather than the grid, you can generate Lighthouse reports to pinpoint page-load bottlenecks in the website under test.
+
 ## Use the Latest Browser Version
 ---
 Set `browserVersion` to `latest` instead of pinning a specific version number.
 
 Pinning old browser versions can cause delays if TestMu AI needs to spin up a less common environment. Using `latest` ensures your tests run on the most readily available browser instances:
+
+<VerifiedTag value="Verified" />
 
 ```java
 browserOptions.setBrowserVersion("latest");
@@ -183,6 +194,8 @@ browserOptions.setBrowserVersion("latest");
 Configure `idleTimeout` to balance between premature timeouts and wasted session time.
 
 The `idleTimeout` capability controls how long TestMu AI waits before closing an idle session. Setting it too high wastes concurrency slots. Setting it too low causes premature session termination during long page loads or waits.
+
+<VerifiedTag value="Verified" />
 
 ```java
 ltOptions.put("idleTimeout", 120); // seconds - adjust based on your longest expected wait
@@ -195,6 +208,8 @@ A value between 60 and 150 seconds works well for most test suites.
 Set a lower screen resolution if your tests do not require visual validation.
 
 Higher resolutions increase rendering time. If you are not running visual or screenshot-based tests, use a standard resolution:
+
+<VerifiedTag value="Verified" />
 
 ```java
 ltOptions.put("resolution", "1024x768");
@@ -212,6 +227,8 @@ Replace fixed sleep calls with explicit waits to proceed as soon as the conditio
 
 `Thread.sleep()` always waits the full duration, even if the element is ready in milliseconds. Explicit waits poll for the expected condition and continue immediately:
 
+<VerifiedTag value="Verified" />
+
 ```java
 // Avoid this
 Thread.sleep(5000);
@@ -227,6 +244,8 @@ Always call `driver.quit()` to release the session and free up concurrency slots
 
 If a test exits without calling `driver.quit()`, the session stays open until the idle timeout expires. This wastes concurrency and slows down queued tests.
 
+<VerifiedTag value="Verified" />
+
 ```java
 @AfterMethod
 public void tearDown() {
@@ -240,13 +259,30 @@ public void tearDown() {
 ---
 Run a traceroute if performance remains slow after applying the above tips.
 
+If a specific test is failing rather than merely running slow, debug your Selenium tests with extended logging before reporting a latency issue.
+
 If you still experience latency after applying these optimizations, reach out to us on our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**in-app chat support**</span> or email [automationsupport@testmuai.com](mailto:automationsupport@testmuai.com). Include a screenshot of the traceroute output:
 
 For Windows:
+
+<VerifiedTag value="Verified" />
+
 ```
 tracert hub.lambdatest.com
 ```
 For Linux/Mac:
+
+<VerifiedTag value="Verified" />
+
 ```
 traceroute hub.lambdatest.com
 ```
+
+## Next Steps
+---
+
+Continue with these related guides:
+
+- [Generate Multiple Lighthouse Reports](/support/docs/generate-multiple-lighthouse-reports/)
+- [Debugging Options](/support/docs/debugging-options/)
+

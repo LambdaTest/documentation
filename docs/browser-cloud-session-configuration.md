@@ -17,6 +17,7 @@ canonical: https://www.testmuai.com/support/docs/browser-cloud-session-configura
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -104,6 +105,8 @@ configure the session's behavior, browser settings, and capabilities.
 
 Here is a typical `create` call that sets the most common options:
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 const session = await client.sessions.create({
   adapter: 'playwright',
@@ -187,6 +190,8 @@ The sections below describe every available option in detail.
 ## Session Object
 
 After creation, you receive a Session object with these fields:
+
+<VerifiedTag value="Verified" />
 
 ```typescript
 interface Session {

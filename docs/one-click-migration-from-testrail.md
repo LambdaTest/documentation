@@ -2,7 +2,7 @@
 id: one-click-migration-from-testrail
 title: One Click Migration from TestRail
 hide_title: true
-sidebar_label: One Click Migration from TestRail
+sidebar_label: Import from TestRail
 description: Effortlessly migrate from TestRail to TestMu AI with our one-click migration guide. Simplify the process and enhance your testing capabilities in minutes.
 keywords:
   - testrail
@@ -11,7 +11,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/one-click-migration-from-testrail/
 site_name: TestMu AI
 slug: one-click-migration-from-testrail/
-canonical: https://www.testmu.ai/support/docs/one-click-migration-from-testrail/
+canonical: https://www.testmuai.com/support/docs/one-click-migration-from-testrail/
 ---
 
 

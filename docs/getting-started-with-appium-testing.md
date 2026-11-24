@@ -1,4 +1,4 @@
----
+﻿---
 
 id: getting-started-with-appium-testing
 title: "Run Appium Tests on TestMu AI: Getting Started"

@@ -5,6 +5,8 @@ sidebar_label: Unique Option Names
 description: "Find options in an iOS group like a segmented control, tab bar, or picker that share an accessible name so VoiceOver users can tell them apart."
 slug: accessibility-ios-rule-unique-option-names/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

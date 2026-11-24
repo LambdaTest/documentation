@@ -2,10 +2,10 @@
 import useBaseUrl from "@docusaurus/useBaseUrl";
 import ThemedImage from "@theme/ThemedImage";
 export default function HelpFulArticle() {
-    const thumbsUpLight = useBaseUrl("https://www.testmuai.com/support/img/thumbsUp_light.svg");
-    const thumbsUpDark = useBaseUrl("https://www.testmuai.com/support/img/thumbsUp_dark.svg");
-    const thumbsDownLight = useBaseUrl("https://www.testmuai.com/support/img/thumbsDown_light.svg");
-    const thumbsDownDark = useBaseUrl("https://www.testmuai.com/support/img/thumbsDown_dark.svg");
+    const thumbsUpLight = useBaseUrl("/img/thumbsUp_light.svg");
+    const thumbsUpDark = useBaseUrl("/img/thumbsUp_dark.svg");
+    const thumbsDownLight = useBaseUrl("/img/thumbsDown_light.svg");
+    const thumbsDownDark = useBaseUrl("/img/thumbsDown_dark.svg");
     return (
         <HelpFulArticleClass 
             thumbsUpLight={thumbsUpLight}

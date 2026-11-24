@@ -3,10 +3,15 @@ id: insights-dashboard
 title: Insights Dashboard
 hide_title: true
 sidebar_label: Insights Dashboard
-description: Manage system and custom fields in TestMu AI's Test Manager, enhancing test case organization and streamlining processes with detailed fields and values.
+description: Explore TestMu AI Test Manager's Insights Dashboard for test case counts, automation coverage, and trends, plus Execution and Traceability Reports.
 keywords:
   - insights
   - insights dashboard
+  - automation coverage
+  - test case trends
+  - test manager insights
+  - execution reports
+  - traceability reports
 url: https://www.testmuai.com/support/docs/insights-dashboard/
 site_name: TestMu AI
 slug: insights-dashboard/
@@ -16,62 +21,6 @@ canonical: https://www.testmuai.com/support/docs/insights-dashboard/
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
-
-<script type="application/ld+json"
-  dangerouslySetInnerHTML={{ __html: JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": [
-      "Article",
-      "TechArticle"
-    ],
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": "https://www.testmuai.com/support/docs/insights-dashboard/"
-    },
-    "headline": "Insights Dashboard",
-    "description": "Manage system and custom fields in TestMu AI's Test Manager, enhancing test case organization and streamlining processes with detailed fields and values.",
-    "url": "https://www.testmuai.com/support/docs/insights-dashboard/",
-    "image": {
-      "@type": "ImageObject",
-      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
-      "width": 1200,
-      "height": 630
-    },
-    "inLanguage": "en",
-    "articleSection": "Test Manager",
-    "keywords": [
-      "insights",
-      "insights dashboard"
-    ],
-    "author": {
-      "@type": "Organization",
-      "@id": "https://www.testmuai.com/#organization",
-      "name": "TestMu AI",
-      "url": "https://www.testmuai.com/"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "@id": "https://www.testmuai.com/#organization",
-      "name": "TestMu AI",
-      "alternateName": [
-        "TestMuAI",
-        "TestMu",
-        "LambdaTest"
-      ],
-      "url": "https://www.testmuai.com/",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://www.testmuai.com/logo.png"
-      },
-      "sameAs": [
-        "https://www.linkedin.com/company/testmu-ai/",
-        "https://x.com/testmuai",
-        "https://www.youtube.com/@TestMuAI"
-      ]
-    },
-    "dateModified": "2026-09-09T20:28:09+05:30"
-  }) }}
-/>
 
 # Insights Dashboard
 
@@ -90,24 +39,25 @@ Archived test cases are excluded from every count and coverage metric on this da
 
 2. You can filter test cases based on specific date ranges. For instance, you can view data from July 8th to July 25th to analyze trends over that period.
 
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/insights-dashboard.webp').default} alt="Real "  className="doc_img" width="1600" height="415"/>
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/insights-dashboard.webp').default} alt="Insights dashboard showing total, manual, and automated test case counts with automation coverage"  className="doc_img" width="1600" height="415"/>
 
 3. **Build Summary** provides details of test cases based on status that is whether the test cases have passed, Failed, Skipped or Not Started.
 
 4. **Test Case Summary** provides information on the type of testing that has been chosen for different test cases.
 
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/build-and-test-case-summary.webp').default} alt="Real "  className="doc_img" width="1600" height="613"/>
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/build-and-test-case-summary.webp').default} alt="Build Summary and Test Case Summary widgets"  className="doc_img" width="1600" height="613"/>
 
 5. **Test Case Trend** graphically represents the count of test cases created over the selected duration, offering a visual insight into test case progression and status.
 
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/test-case-trend.webp').default} alt="Real "  className="doc_img" width="1600" height="609"/>
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/test-case-trend.webp').default} alt="Test Case Trend graph over the selected duration"  className="doc_img" width="1600" height="609"/>
 
 6. **Issues Trend** provides an overview of issues linked to all test cases over the selected time frame. This helps in identifying areas that may require attention.
 
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/issues-trend.webp').default} alt="Real "  className="doc_img" width="1600" height="611"/>
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/issues-trend.webp').default} alt="Issues Trend graph over the selected time frame"  className="doc_img" width="1600" height="611"/>
 
-These insights help in monitoring and improving the testing process, ensuring comprehensive coverage and efficient test management. 
+These insights help in monitoring and improving the testing process, ensuring comprehensive coverage and efficient test management.
 
+## Reports in Test Manager
 
 Test Manager provides powerful reporting capabilities to help teams gain actionable insights from their testing activities. With **Execution and Traceability Reports**, you can measure test coverage, track progress, and ensure alignment between requirements, test cases, and defects.
 

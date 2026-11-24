@@ -14,11 +14,12 @@ keywords:
 url: https://www.testmuai.com/support/docs/network-configurations-in-browser/
 site_name: TestMu AI
 slug: browser-network-configurations/
-canonical: https://www.testmu.ai/support/docs/browser-network-configurations/
+canonical: https://www.testmuai.com/support/docs/browser-network-configurations/
 
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

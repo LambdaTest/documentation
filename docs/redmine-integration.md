@@ -12,7 +12,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/redmine-integration/
 site_name: TestMu AI
 slug: redmine-integration/
-canonical: https://www.testmu.ai/support/docs/redmine-integration/
+canonical: https://www.testmuai.com/support/docs/redmine-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

@@ -5,6 +5,8 @@ sidebar_label: Timing Adjustable (2.2.1)
 description: Rule-level Accessibility guidance for Timing Adjustable (WCAG 2.2.1 Level A).
 slug: accessibility-web-rule-2-2-1-timing-adjustable/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

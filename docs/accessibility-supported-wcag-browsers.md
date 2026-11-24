@@ -5,6 +5,8 @@ sidebar_label: Supported WCAG Versions & Browsers
 description: Reference page for supported WCAG versions, browser scope, and high-level environment considerations in Accessibility Testing.
 slug: accessibility-supported-wcag-browsers/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

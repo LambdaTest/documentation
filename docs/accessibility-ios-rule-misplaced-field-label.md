@@ -5,6 +5,8 @@ sidebar_label: Misplaced Field Label
 description: "Ensure an iOS control's visible text leads its accessibility label, not trailing other context, so Voice Control matching stays reliable."
 slug: accessibility-ios-rule-misplaced-field-label/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

@@ -15,7 +15,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/run-espresso-tests-in-bitrise/
 site_name: TestMu AI
 slug: run-espresso-tests-in-bitrise/
-canonical: https://www.testmu.ai/support/docs/run-espresso-tests-in-bitrise/
+canonical: https://www.testmuai.com/support/docs/run-espresso-tests-in-bitrise/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
@@ -173,5 +173,6 @@ Other options:
 <img loading="lazy" src={require('../assets/images/bitrise-espresso/espresso_results.webp').default} alt="Image" width="1444" height="703"  className="doc_img img_center"/>
 
 ---
+
 
 

@@ -5,6 +5,8 @@ sidebar_label: Non-text Content (1.1.1)
 description: Rule-level Accessibility guidance for Non-text Content (1.1.1).
 slug: accessibility-web-rule-1-1-1-non-text-content/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

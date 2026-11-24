@@ -17,6 +17,7 @@ import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 
@@ -221,6 +222,8 @@ import TabItem from '@theme/TabItem';
 <Tabs className="docs__val">
 <TabItem value="macos-file" label="Linux/macOS" default>
 
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`curl -u "<USERNAME>:<KEY>" \
@@ -234,6 +237,9 @@ import TabItem from '@theme/TabItem';
 </TabItem>
 
 <TabItem value="windows-file" label="Windows" default>
+
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-powershell">
 {`curl -u "<USERNAME>:<KEY>" \
@@ -252,6 +258,8 @@ import TabItem from '@theme/TabItem';
 <Tabs className="docs__val">
 <TabItem value="macos-url" label="Linux macOS" default>
 
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" \\
@@ -264,6 +272,9 @@ import TabItem from '@theme/TabItem';
 </TabItem>
 
 <TabItem value="windows-url" label="Windows" default>
+
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-powershell">
 {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" --location --request POST "https://manual-api.lambdatest.com/app/upload/virtualDevice" --header "Content-Type: application/x-www-form-urlencoded" --data-urlencode "url=:https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk" --data-urlencode "name=Proverbial_App"`}
@@ -291,6 +302,8 @@ In the below test script, ensure to update the `app_url`, `username` and `access
 :::info Set the Capability
 To run the test on Emulator/Simulator, set the `isRealMobile` capability to `false`.
 :::
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
   <TabItem value="android" label="Android" default>
@@ -498,6 +511,8 @@ simulatorTest()
 
 2. Create `.XML` file in order to run your test and define device capabilities. Please find sample code below for the same.
 
+<VerifiedTag value="Verified" />
+
 <Tabs className="docs__val">
   <TabItem value="androidXML" label="Android" default>
 
@@ -572,6 +587,9 @@ Once you have run your tests, you can view the test execution along with logs. Y
 ---
 
 Sample Capabilities for both Android and iOS are mentioned below -
+
+<VerifiedTag value="Verified" />
+
 <Tabs className="docs__val">
 <TabItem value="androidCaps" label="Android" default>
 

@@ -19,6 +19,7 @@ canonical: https://www.testmuai.com/support/docs/testmu-mcp-server/
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 
@@ -168,19 +169,20 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 # Getting Started with TestMu AI MCP Server
 
-TestMu AI MCP Server is a remote MCP server that connects MCP-compatible AI clients to your TestMu AI testing environment. It gives you access to tools for different TestMu AI products - HyperExecute, Automation, SmartUI, Accessibility, and Test Manager - which you can invoke through natural language prompts in your IDE or AI client.
+TestMu AI MCP Server is a remote MCP server that connects MCP-compatible AI clients to your TestMu AI testing environment. It gives you access to tools for different TestMu AI products - HyperExecute, Automation, Native App Automation, SmartUI, Accessibility, and Test Manager - which you can invoke through natural language prompts in your IDE or AI client.
 
 ## Available Tools
 
 ---
 
-TestMu AI MCP Server provides five tools, each covering a different area of testing:
+TestMu AI MCP Server provides six tools, each covering a different area of testing:
 
 1. **[HyperExecute Tool:](/support/docs/hyperexecute-mcp-server/)** AI-native test orchestration. Auto-generates test runner commands and HyperExecute YAML, monitors jobs, and surfaces session details.
 2. **[Automation Tool:](/support/docs/automation-mcp-server/)** Triage and debug automation test failures. Pulls execution data, command/network/console logs, and helps identify root cause directly inside your IDE.
-3. **[SmartUI Tool:](/support/docs/smartui-mcp-server/)** Debug visual regressions. Returns natural-language summaries of pixel, layout, DOM, and perceptual differences from any SmartUI comparison run.
-4. **[Accessibility Tool:](/support/docs/accessibility-mcp-server/)** Run accessibility checks on hosted URLs or local React apps and get detailed remediation guidance.
-5. **[Test Manager Tool:](/support/docs/test-manager-mcp-server/)** Run the complete test management lifecycle. Generate test cases with AI, build configured test runs, record results in bulk, and track milestones and coverage.
+3. **[Native App Automation Tool:](/support/docs/native-app-automation-mcp/)** Triage and debug native mobile app tests through MCP, and drive real or virtual devices live with the Appium MCP server.
+4. **[SmartUI Tool:](/support/docs/smartui-mcp-server/)** Debug visual regressions. Returns natural-language summaries of pixel, layout, DOM, and perceptual differences from any SmartUI comparison run.
+5. **[Accessibility Tool:](/support/docs/accessibility-mcp-server/)** Run accessibility checks on hosted URLs or local React apps and get detailed remediation guidance.
+6. **[Test Manager Tool:](/support/docs/test-manager-mcp-server/)** Run the complete test management lifecycle. Generate test cases with AI, build configured test runs, record results in bulk, and track milestones and coverage.
 
 ## Connecting to TestMu AI MCP Server
 
@@ -192,6 +194,24 @@ TestMu AI MCP Server works with any MCP-compatible AI client. Pick your client b
 - **Server URL:** `https://mcp.lambdatest.com/mcp`
 - **Authentication:** OAuth (you will be redirected to testmuai.com on first use)
 
+### EU Data Center Accounts
+
+If your TestMu AI account is in the EU data center (GDPR), add `?region=eu` to the server URL in every configuration on this page:
+
+```text
+https://mcp.lambdatest.com/mcp?region=eu
+```
+
+With this URL, sign-in opens the EU login page (`eu-accounts.lambdatest.com`) and the tools work with your EU account data. For example, in Claude Code:
+
+```bash
+claude mcp add --transport http mcp-lambdatest "https://mcp.lambdatest.com/mcp?region=eu"
+```
+
+:::note
+Always use the `?region=eu` URL with an EU account. Without it, sign-in goes to the US login page.
+:::
+
 ### Cursor
 
 Use the one-click install button to add the server to Cursor:
@@ -202,6 +222,8 @@ Use the one-click install button to add the server to Cursor:
 
 1. Open **Cursor Settings > Tools & MCP** and click **Add new MCP server**.
 2. Paste the configuration:
+
+<VerifiedTag value="Verified" />
 
 ```json
 {
@@ -221,6 +243,8 @@ Use the one-click install button to add the server to Cursor:
 
 Run this in your terminal:
 
+<VerifiedTag value="Verified" />
+
 ```shell
 claude mcp add --transport http mcp-lambdatest https://mcp.lambdatest.com/mcp
 ```
@@ -233,6 +257,8 @@ Then run `/mcp` inside Claude Code, select **mcp-lambdatest**, and complete the 
 
 1. Open **Settings > Connectors**.
 2. Click **Add Custom Connector** and enter the URL:
+
+<VerifiedTag value="Verified" />
 
 ```
 https://mcp.lambdatest.com/mcp
@@ -255,6 +281,8 @@ Custom connectors in Claude Desktop are configured through **Settings > Connecto
 
 1. Open the Command Palette (`Cmd+Shift+P` / `Ctrl+Shift+P`) and run **MCP: Add Server**, choosing **Workspace** or **Global**. Or create `.vscode/mcp.json` manually:
 
+<VerifiedTag value="Verified" />
+
 ```json
 {
   "servers": {
@@ -273,6 +301,8 @@ Custom connectors in Claude Desktop are configured through **Settings > Connecto
 
 1. In the Agent panel, click the **...** menu, then **MCP Servers**, then **Manage MCP Servers**.
 2. Click **View raw config** and add the configuration to `mcp_config.json`:
+
+<VerifiedTag value="Verified" />
 
 ```json
 {
@@ -294,11 +324,15 @@ Antigravity has a global limit of around 100 active MCP tools across all servers
 
 Run this in your terminal:
 
+<VerifiedTag value="Verified" />
+
 ```shell
 codex mcp add mcp-lambdatest --url https://mcp.lambdatest.com/mcp
 ```
 
 Then start an OAuth login:
+
+<VerifiedTag value="Verified" />
 
 ```shell
 codex mcp login mcp-lambdatest
@@ -307,6 +341,8 @@ codex mcp login mcp-lambdatest
 Verify with `codex mcp list`.
 
 **Manual config:** Add the following to `~/.codex/config.toml`:
+
+<VerifiedTag value="Verified" />
 
 ```toml
 [mcp_servers.mcp-lambdatest]
@@ -317,6 +353,8 @@ url = "https://mcp.lambdatest.com/mcp"
 
 1. Open the **Cline panel** in VS Code, then **MCP Servers > Configure MCP Servers**.
 2. Paste the configuration:
+
+<VerifiedTag value="Verified" />
 
 ```json
 {
@@ -337,6 +375,8 @@ url = "https://mcp.lambdatest.com/mcp"
 ### Continue
 
 1. Create `.continue/mcpServers/testmu-ai.yaml` in your workspace and add:
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 name: TestMu AI mcpServer
@@ -364,6 +404,8 @@ If your MCP client is not listed above, use one of these connection methods:
 | **STDIO** (via `mcp-remote`) | See below | Fallback for clients that only support stdio |
 
 **Universal STDIO configuration** for any client that accepts the standard `mcpServers` format:
+
+<VerifiedTag value="Verified" />
 
 ```json
 {
@@ -412,6 +454,11 @@ You can also ask questions like:
 - If you have previously connected and the connection has expired, look for a **Disconnect** or **Clear authentication** option in your client's MCP settings, then reconnect.
 - Verify your TestMu AI account has the necessary permissions for the workspace you are trying to access.
 
+**EU account: the US login page opens or tools return 401**
+
+- Check that the server URL ends with `?region=eu`.
+- If you added the server before EU support was available, your client may still hold the old sign-in. Remove the server, add it again with the `?region=eu` URL, and sign in again. In Claude Code, run `claude mcp remove mcp-lambdatest` and then the `claude mcp add` command above.
+
 **Tools not appearing after configuration**
 
 - Fully restart your client (close and reopen, not just reload the window).
@@ -424,6 +471,8 @@ You can also ask questions like:
 **Command not found: npx errors**
 
 This usually means your MCP client cannot find Node.js on its PATH. Use the full path to `npx`:
+
+<VerifiedTag value="Verified" />
 
 ```shell
 which npx   # macOS/Linux

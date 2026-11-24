@@ -15,6 +15,7 @@ site_name: TestMu AI
 slug: kane-cli-checkpoints/
 canonical: https://www.testmuai.com/support/docs/kane-cli-checkpoints/
 ---
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -113,11 +114,13 @@ Each checkpoint uses an analyze method to determine *where* to look for the data
 | [Textual (DOM)](/support/docs/kane-cli-checkpoint-textual/) | Page DOM elements | Element states (disabled, checked), CSS properties, HTML attributes |
 | [URL](/support/docs/kane-cli-checkpoint-url/) | Browser URL bar | URL path, query params, redirects |
 | [Title](/support/docs/kane-cli-checkpoint-title/) | Page title | Document title verification |
-| [DevTools](/support/docs/kane-cli-checkpoint-devtools/) | Browser internals | Network traffic, console logs, performance, cookies, localStorage |
+| [DevTools](/support/docs/kane-cli-checkpoint-devtools/) | Browser internals | Network traffic, console logs, performance, cookies, localStorage, clipboard |
 
 ## How to Use
 
 Write your assertions naturally in the objective. KaneAI automatically picks the right analyze method:
+
+<VerifiedTag value="Verified" />
 
 ```
 Assert: the price is $29.99                    → Visual
@@ -129,9 +132,12 @@ Assert: no console errors                      → DevTools (Console)
 Assert: page LCP is under 2500ms               → DevTools (Performance)
 Assert: session cookie exists                  → DevTools (Cookies)
 Assert: auth_token exists in localStorage      → DevTools (localStorage)
+Assert: the clipboard has the copied link      → DevTools (Clipboard)
 ```
 
 Extractions work the same way:
+
+<VerifiedTag value="Verified" />
 
 ```
 Store the product price                        → Visual

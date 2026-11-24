@@ -138,6 +138,8 @@ Kane CLI has three modes. Choose based on who (or what) is running the test.
 
 Launch the TUI:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 kane-cli --tui
 ```
@@ -212,6 +214,8 @@ A two-row status bar sits at the bottom of the TUI:
 
 Every run launched from the same TUI invocation shares one Chrome instance and one session directory. Cookies, login state, and tabs persist across runs, so an early run can log in and a later run can land mid-application without re-authenticating. Starting a fresh session from inside the TUI is done with `/new`, which uploads the current session and then resets state.
 
+<VerifiedTag value="Verified" />
+
 ```
 > go to https://myapp.com and log in as admin
   ✓ PASSED (5 steps, 8.2s)
@@ -252,6 +256,8 @@ A graceful `/exit` runs the upload pipeline (if applicable) and prints any final
 ---
 
 ## Non-Interactive CLI Mode
+
+<VerifiedTag value="Verified" />
 
 ```bash
 kane-cli run "Search for 'automation testing' on Google" \
@@ -337,6 +343,8 @@ For setup (Xcode or Android Studio, `kane-cli login`, and `kane-cli doctor --tar
 
 This separation lets you capture each independently:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 kane-cli run "..." > result.json 2> progress.log
 ```
@@ -350,9 +358,11 @@ When stdin is not a TTY, Kane CLI automatically switches to plain NDJSON mode (t
 | Exit Code | Meaning |
 |-----------|---------|
 | `0` | Test passed |
-| `1` | Test failed (assertion not met) |
+| `1` | Test failed (agent reached an unrecoverable failure, or the upload failed) |
 | `2` | Error (auth failure, Chrome crash) |
 | `3` | Timeout or cancelled |
+
+Use these codes to gate downstream CI steps.
 
 ### What You See at the End of a Run
 
@@ -375,6 +385,10 @@ Below the summary, Kane CLI prints any of the following links:
 | `TestCase` | The test case detail page in <BrandName /> Test Manager |
 | `CodeExport` | The local directory containing generated code (when code export is enabled) |
 
+Modern terminals render these as clickable hyperlinks. For details on what each link leads to, see [Test Manager integration](/support/docs/kane-cli-tms-integration/).
+
+The run is also captured as a sealed [evidence pack](/support/docs/kane-cli-evidence/) — screenshots, per-step console/network logs, and failure records. In a terminal, kane-cli offers to open it in the browser viewer; in agent or non-interactive runs it prints a one-line `evidence: view locally with …` hint to stderr instead.
+
 ### Feedback Prompt
 
 After the result and links print, Kane CLI prompts you to rate the session with thumbs up or thumbs down. Use the left and right arrow keys to choose, Enter to submit, or Esc to skip. See [Test Manager Integration](/support/docs/kane-cli-tms-integration/) for details.
@@ -384,6 +398,8 @@ After the result and links print, Kane CLI prompts you to rate the session with 
 ## Agent Mode
 
 Add `--agent` to get structured NDJSON output designed for AI coding agents:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 kane-cli run "Verify login page loads" --url https://myapp.com --agent --headless

@@ -19,7 +19,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/real-time-desktop-browser-testing-tools/
 site_name: TestMu AI
 slug: real-time-desktop-browser-testing-tools/
-canonical: https://www.testmu.ai/support/docs/real-time-desktop-browser-testing-tools/
+canonical: https://www.testmuai.com/support/docs/real-time-desktop-browser-testing-tools/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
@@ -114,7 +114,7 @@ The Scaling feature allows you to adjust the display scale of your web applicati
 <img loading="lazy" src={require('../assets/images/real-time-testing/web-browser/scaling.png').default} alt="Image" className="doc_img"/>
 
 ## IP Geolocation
-Simulate website and mobile experiences from over 45 countries using local IP addresses.
+Simulate website and mobile experiences from 180+ countries using local IP addresses.
 - **Why Use IP Geolocation? :** Test localized features such as language preferences, currency, regional product offerings, and content visibility based on a specific location.
 - **How to Enable? :** Use the IP Geolocation feature to verify that your app's traffic originates from a specific country, providing a comprehensive global testing approach.
 
@@ -122,8 +122,6 @@ Simulate website and mobile experiences from over 45 countries using local IP ad
 
 ## Files and Media
 The [Upload and Download Files](/support/docs/real-time-upload-and-download-files/) feature allows to manage files directly within remote testing environments. This functionality streamlines the testing process by allowing seamless file transfers between local and remote environments across desktop and mobile platforms.
-
-<img loading="lazy" src={require('../assets/images/real-time-testing/web-browser/upload.png').default} alt="Image" className="doc_img"/>
 
 ## Network Throttling
 <BrandName />'s network throttling feature empowers you to simulate real-world network conditions (Offline, Slow 3G, Fast 3G, 4G, 5G and Custom) during testing. This allows you to assess your application performance under varying internet speeds, ensuring a seamless user experience across different network environments. You can leverage predefined network profiles or craft custom settings for comprehensive testing.
@@ -146,6 +144,7 @@ Customize your test environment with various settings:
 - **Idle Timeout:** Set the idle timeout duration for your test session (default is 5 minutes, maximum is 60 minutes).
 - **Time Zone:** Select the time zone that aligns with your testing needs to ensure accurate testing across different regions.
 - **Keyboard Input:** Change the keyboard language during the test session for localized testing scenarios.
+- **Self Signed Certificate Support:** It helps to test websites using self-signed certificates on your local system or internal network.
 
 <img loading="lazy" src={require('../assets/images/real-time-testing/web-browser/settings.png').default} alt="Image" className="doc_img"/>
  

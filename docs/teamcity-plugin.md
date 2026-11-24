@@ -16,7 +16,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/teamcity-plugin/
 site_name: TestMu AI
 slug: teamcity-plugin/
-canonical: https://www.testmu.ai/support/docs/teamcity-plugin/
+canonical: https://www.testmuai.com/support/docs/teamcity-plugin/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

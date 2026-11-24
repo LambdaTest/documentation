@@ -5,6 +5,8 @@ sidebar_label: Labels or Instructions (3.3.2)
 description: Rule-level Accessibility guidance for Labels or Instructions (WCAG 3.3.2 Level A).
 slug: accessibility-web-rule-3-3-2-labels-or-instructions/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

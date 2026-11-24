@@ -5,6 +5,8 @@ sidebar_label: Missing Screen Title
 description: Rule-level Accessibility guidance for Missing Screen Title on Android.
 slug: accessibility-android-rule-missing-screen-title/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

@@ -2,6 +2,7 @@
 id: timeouts-issues-and-resolutions
 title: Timeouts - Errors and Resolutions
 sidebar_label: Resolve Timeouts
+toc_max_heading_level: 2
 description: Resolve timeout errors in Selenium tests caused by idle sessions, network latency, queuing, and firewalls.
 keywords:
   - selenium idle timeout fix
@@ -13,10 +14,11 @@ image: /assets/images/og-images/automation-testing-og.png
 url: https://www.testmuai.com/support/docs/timeouts-issues-and-resolutions/
 site_name: TestMu AI
 slug: timeouts-issues-and-resolutions/
-canonical: https://www.testmu.ai/support/docs/timeouts-issues-and-resolutions/
+canonical: https://www.testmuai.com/support/docs/timeouts-issues-and-resolutions/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -44,7 +46,9 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     "keywords": [
       "selenium idle timeout fix",
       "test queue timeout resolution",
-      "network latency timeout"
+      "network latency timeout",
+      "firewall blocked selenium test",
+      "idleTimeout capability setting"
     ],
     "proficiencyLevel": "Beginner",
     "author": {
@@ -105,10 +109,15 @@ There are several common reasons you may encounter a **Timeout error**.
 
 If the TestMu AI Selenium grid detects inactivity for 120 seconds, you may encounter the below error:
 
-**Idle Timeout:** Test was terminated because the grid has not received any requests for 120 seconds. To avoid this, use idleTimeout in desired capabilities. e.g: set 'idleTimeout':'270'.  
+
+**Idle Timeout:** Test was terminated because grid hasn't received any requests for 120 second. To avoid this use idleTimeout using desired capabilities. e.g: set 'idleTimeout':'270′.  
+Once the default or user-defined idle timeout period is reached, our platform marks the test in the `idle_timeout` state. This will not necessarily happen exactly at the idle timeout duration. The system identifies and marks such tests on a best-effort basis, so it may take some additional time in certain cases. We recommend defining the `idleTimeout` capability according to your requirements.
+
 The timeout could also occur due to network latency, or due to improper declaration of driver.quit().
 
 **Resolution:** You can extend the 120-second idle timeout limit up to 1800 seconds by declaring the idleTimeout capability in your desired capabilities.
+
+<VerifiedTag value="Verified" />
 
 ```bash
 "idleTimeout": "125" //extends idle timeout from 120 seconds to 125.
@@ -138,6 +147,8 @@ The maximum number of tests allowed to be queued for your TestMu AI account depe
 
 **Maximum Queuing Capacity**
 Here is an example: if your TestMu AI account is eligible for 10 concurrent sessions, then your queue can have a maximum of (10 + 150) queued test cases, i.e. 160 queued test cases. TestMu AI handles the scheduling and execution of test cases in your queue.
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 Maximum number of test cases that can be queued = n + 150 

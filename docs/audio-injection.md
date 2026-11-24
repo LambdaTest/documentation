@@ -30,6 +30,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import RealDeviceTag from '../src/component/realDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 
@@ -247,11 +248,15 @@ The audio file must be uploaded to <BrandName /> before it can be injected.
 
 Use the **Upload Media API** to upload an audio file to your <BrandName /> account.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 curl -u "LT_USERNAME:LT_ACCESS_KEY"   -X POST "https://api.lambdatest.com/mfs/v1.0/media/upload"   -F "media_file=@/path/to/test.wav"   -F "type=audio"   -F "custom_id=SampleAudio"
 ```
 
 **Response**
+
+<VerifiedTag value="Verified" />
 
 ```json
 {
@@ -267,6 +272,8 @@ Save the returned `media_url`. You will use it in subsequent steps.
 ## Step 2 - Enable Audio Injection on Your Session
 
 Set the `enableAudioInjection` capability when creating your driver session.
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
 
@@ -321,6 +328,8 @@ Use the following hooks via `driver.executeScript`:
 | `lambda-audio-injection=<media_url>` | Set the audio file to be injected |
 | `lambda-audio-start` | Start playing the injected audio into the device microphone |
 | `lambda-audio-stop` | Stop audio playback |
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
 

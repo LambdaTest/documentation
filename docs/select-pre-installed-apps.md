@@ -10,13 +10,14 @@ keywords:
 url: https://www.testmuai.com/support/docs/select-pre-installed-apps/
 site_name: TestMu AI
 slug: select-pre-installed-apps/
-canonical: https://www.testmu.ai/support/docs/select-pre-installed-apps/
+canonical: https://www.testmuai.com/support/docs/select-pre-installed-apps/
 ---
 
 import CodeBlock from '@theme/CodeBlock';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 
@@ -119,6 +120,8 @@ To do this, pass the `app` capability as `Stock`, in addition to your private cl
 
 <TabItem value="android" label="Android" default>
 
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-java">
   {`DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -138,6 +141,8 @@ capabilities.setCapability("lt:options", ltOptions);`}
 </TabItem>
 
 <TabItem value="ios" label="iOS">
+
+  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-java">

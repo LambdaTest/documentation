@@ -5,6 +5,8 @@ sidebar_label: Motion Actuation (2.5.4)
 description: Rule-level Accessibility guidance for Motion Actuation (WCAG 2.5.4 Level A).
 slug: accessibility-web-rule-2-5-4-motion-actuation/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

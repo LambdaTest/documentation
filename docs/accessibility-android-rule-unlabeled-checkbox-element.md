@@ -5,6 +5,8 @@ sidebar_label: Unlabeled Checkbox Element
 description: Rule-level Accessibility guidance for Unlabeled Checkbox Element on Android.
 slug: accessibility-android-rule-unlabeled-checkbox-element/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

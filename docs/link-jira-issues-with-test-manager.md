@@ -2,7 +2,7 @@
 id: link-jira-issues-with-test-manager
 title: Link Jira Issues with Test Manager
 hide_title: true
-sidebar_label: Link Jira Issues with Test Manager
+sidebar_label: Jira Integration
 description: Effortlessly link Jira issues with Test Manager using TestMu AI to streamline workflows and enhance project management efficiency.
 keywords:
   - link jira issues
@@ -76,7 +76,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 Test Manager enhances its functionality by seamlessly linking test cases with Jira issues. This integration ensures a reliable connection between your testing activities and Jira tasks, optimizing project management and collaboration across teams.
 
-## Initial Setup and Configuration
+### Initial Setup and Configuration
 
 > **Note:** If you have already integrated Jira with your <BrandName /> account, you can skip this section and proceed directly to [Linking Jira Issues](#linking-jira-issues-in-test-manager)
 

@@ -14,6 +14,7 @@ slug: hyperexecute-email-reports/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-email-reports/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 
@@ -129,7 +130,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "text": "\n```bash\n./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE --vars \"email=xyz@abc.com,abc@xyz.com,def@wxy.com\""
       }
     ],
-    "dateModified": "2026-09-09T19:10:37+05:30"
+    "dateModified": "2026-11-11T14:00:00+05:30"
   }) }}
 />
 
@@ -137,9 +138,15 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 Downloading Job Reports and Artifacts manually from the HyperExecute UI can be a time-consuming and repetitive task. To address this pain point, HyperExecute now provides the convenience of receiving Job Reports and Artifacts directly to your specified email addresses. This eliminates the need for manual downloads, allowing you to access critical job information instantly and effortlessly. Embrace the efficiency of automated delivery and spend less time navigating the UI and more time focusing on your development tasks.
 
+:::info On-premise deployments
+On-prem, email reports work only if your deployment is set up to send email. Ask your admin. See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/#step-8-review-results-and-rerun-failures).
+:::
+
 ## YAML Configuration
 
 To receive the Artifacts and Reports via mail, you will have to add the `email` flag with a `to` tag to select the email IDs where the report or artifacts should be sent. The example added below shows you how to add your email IDs:
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 email:
@@ -151,6 +158,8 @@ email:
 You can also use the `currentUser` tag to send the reports to the email ID of your choice.
 
 - **currentUser**: This tag will allow you to send the report to the email ID associated with your <BrandName /> account.
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 email:
@@ -165,6 +174,8 @@ Follow the below mentioned steps to receive your Artifacts via email:
 **Step 1:** You need to mention the `email` flag along with the `to` tag under the `uploadArtifacts` flag in the YAML file configuration.
 
 > **NOTE:** You can also add a separate email ID for each report generated, as mentioned below in the YAML code.
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 uploadArtifacts:
@@ -196,6 +207,8 @@ Follow the below mentioned steps to receive your Job Reports via email:
 
 **Step 3:** Add the `email` flag with `to` tag in the YAML file configuration:
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 report: true
 partialReports:
@@ -208,9 +221,74 @@ partialReports:
       - <another_email_id@example.com>
 ```
 
+## How to send emails based on the job status?
+
+You can send the report or artifacts to different people depending on how the job ended. Add a job status as a key under `email`, next to `to`, and list the email IDs that should receive the mail when the job ends in that status.
+
+<VerifiedTag value="Verified" />
+
+```yaml
+report: true
+partialReports:
+  frameworkName: testng
+  location: target/surefire-reports/html
+  type: html
+  email:
+    to:
+      - qa-lead@example.com
+    failed:
+      - oncall@example.com
+      - dev-team@example.com
+    aborted:
+      - currentUser
+
+uploadArtifacts:
+  - name: Reports
+    path:
+      - reports/
+    email:
+      failed:
+        - oncall@example.com
+```
+
+With the configuration above:
+
+- `qa-lead@example.com` receives the report for every job, whatever the status.
+- `oncall@example.com` and `dev-team@example.com` also receive the report when the job fails.
+- The user who ran the job also receives the report when the job is aborted.
+- The `Reports` artifacts are mailed to `oncall@example.com` only when the job fails. For any other status, no one receives them, because this block has no `to`.
+
+The following job statuses are accepted as keys:
+
+| Key | Mail is sent when the job ends as |
+|-----|-----------------------------------|
+| `completed` | Completed |
+| `failed` | Failed |
+| `aborted` | Aborted |
+| `skipped` | Partially Completed. `partially_completed` also works |
+| `ignored` | Ignored |
+| `timeout` | Timeout |
+| `lambda_error` | Lambda Error |
+| `error` | Error |
+
+Keep the following in mind:
+
+- **`to` is always mailed.** The status lists add recipients on top of `to`, they do not replace it. You can also leave out `to` and use only status keys.
+- **Each email ID gets one mail.** If an email ID is in `to` and also in the list for the status the job ended in, it receives the mail only once.
+- **Keys are case-insensitive.** `Failed`, `FAILED` and `failed` are the same key, and a space or dash works like an underscore.
+- **Unsupported keys are ignored.** Statuses that are not in the table above, such as `running`, `initiated`, `blocked` or `stopped`, and misspelt keys, are ignored with a warning in the CLI output. The job still runs.
+- **`currentUser`** can be used in the status lists the same way as in `to`.
+- **Email IDs in the status lists** follow the same format rules as `to`. See [Correct format of entering the Email IDs](#correct-format-of-entering-the-email-ids).
+
+:::note
+Job status keys are supported under `partialReports.email` and `uploadArtifacts[].email` (or `uploadArtefacts[].email`). They are not supported under `globalPost.email`, which always mails the `to` list.
+:::
+
 ## Correct format of entering the Email IDs
 
 The Email IDs that you enter must be valid. You can enter your email IDs in the formats mentioned below.
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 - John Doe <johndoe@example.com>
@@ -219,6 +297,8 @@ The Email IDs that you enter must be valid. You can enter your email IDs in the 
 ```
 
 However, if your email IDs are added in an unsupported format, the feature will not work. A few examples of unsupported email ID formats are added below.
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 - John Doe johndoe@example.com>
@@ -233,6 +313,8 @@ Now that you have added your email IDs successfully, you can access your job rep
 In your YAML configuration file instead of hardcoding the email address to which you want to share the report or artifacts, you can use a variable that can be set dynamically when you pass the execution command.
 
 In this example, the `${email}` and `${email1}` variables are used to specify the email address. You can pass the value of this variable using the [`vars`](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/#--vars) flag as an argument when executing your test via CLI.
+
+<VerifiedTag value="Verified" />
 
 ```yaml title="hyperexecute.yaml"
 report: true
@@ -261,12 +343,16 @@ uploadArtifacts:
 
 This is how you can pass the value of your email address via CLI by running the command
 
+<VerifiedTag value="Verified" />
+
 ```bash
 ./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE --vars "email=xyz@abc.com" --vars "email1=abc@xyz.com"
 ```
 
 :::note
 If you have a pipeline that requires multiple email values, consider consolidating them into a single variable separated by commas. This approach eliminates the need for multiple variables or manual pipeline edits whenever the email list changes.
+
+<VerifiedTag value="Verified" />
 
 ```yaml title="hyperexecute.yaml"
 report: true
@@ -290,6 +376,8 @@ uploadArtifacts:
         - "${email}"
 # highlight-end
 ```
+
+<VerifiedTag value="Verified" />
 
 ```bash
 ./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE --vars "email=xyz@abc.com,abc@xyz.com,def@wxy.com"

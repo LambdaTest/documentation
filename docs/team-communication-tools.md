@@ -12,7 +12,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/team-communication-tools/
 site_name: TestMu AI
 slug: team-communication-tools/
-canonical: https://www.testmu.ai/support/docs/team-communication-tools/
+canonical: https://www.testmuai.com/support/docs/team-communication-tools/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

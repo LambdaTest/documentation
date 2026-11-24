@@ -11,7 +11,7 @@ image: /assets/images/og-images/selenium-testing-og.png
 url: https://www.testmuai.com/support/docs/angularjs-with-karma-running-angular-tests-on-testmu-selenium-grid/
 site_name: TestMu AI
 slug: angularjs-with-karma-running-angular-tests-on-testmu-selenium-grid/
-canonical: https://www.testmu.ai/support/docs/angularjs-with-karma-running-angular-tests-on-testmu-selenium-grid/
+canonical: https://www.testmuai.com/support/docs/angularjs-with-karma-running-angular-tests-on-testmu-selenium-grid/
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -19,6 +19,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -210,12 +211,17 @@ Complete these steps before running AngularJS tests with Karma on TestMu AI.
 ---
 Clone the TestMu AI AngularJS Karma sample repository to your local machine.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git clone https://github.com/LambdaTest/angular-karma-sample
 cd angular-karma-sample
 ```
 
 Install the required dependencies:
+
+<VerifiedTag value="Verified" />
+
 ```bash
 npm install
 ```
@@ -228,6 +234,8 @@ Set your TestMu AI username and access key as environment variables.
 
 <TabItem value="bash" label="macOS / Linux" default>
 
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
@@ -238,6 +246,8 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
+
+  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
@@ -252,6 +262,8 @@ set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 ## Step 3: Configure Your Test Capabilities
 ---
 Update the capabilities in the `karma.conf.js` file to define the browser and platform settings.
+
+<VerifiedTag value="Verified" />
 
 ```js
 customLaunchers: {
@@ -279,16 +291,24 @@ Generate capabilities for your test requirements with the [Capabilities Generato
 ---
 Execute the test using the following command.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 karma start karma.conf.js
 ```
 
 Or run the test using:
+
+<VerifiedTag value="Verified" />
+
 ```bash
 npm test
 ```
 
 **Parallel tests:**
+
+<VerifiedTag value="Verified" />
+
 ```bash
 ng test
 ```
@@ -312,6 +332,8 @@ Use AI coding assistants to generate and run AngularJS with Karma tests with the
 The [karma-skill](https://github.com/LambdaTest/agent-skills/tree/main/karma-skill) is part of [TestMu AI Agent Skills](https://github.com/LambdaTest/agent-skills/) - structured packages that teach AI coding assistants how to write production-grade test automation.
 
 Install the skill:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 git clone https://github.com/LambdaTest/agent-skills.git

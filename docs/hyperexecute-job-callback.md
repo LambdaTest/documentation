@@ -15,6 +15,7 @@ slug: hyperexecute-job-callback/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-job-callback/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 
@@ -43,6 +44,8 @@ Both options send the same callback request.
 
 Add the `callbackURL` flag to your HyperExecute YAML file:
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 callbackURL: https://your-server.example.com/hyperexecute/callback
 ```
@@ -50,6 +53,8 @@ callbackURL: https://your-server.example.com/hyperexecute/callback
 ### How to Receive the Job Status via a Callback URL?
 
 **Step 1:** Add the `callbackURL` flag to your YAML file. A complete example, saved as `hyperexecute.yaml`:
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 version: "0.1"

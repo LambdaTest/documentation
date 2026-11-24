@@ -5,6 +5,8 @@ sidebar_label: Non-text Contrast (1.4.11)
 description: Rule-level Accessibility guidance for Non-text Contrast (WCAG 1.4.11 Level AA).
 slug: accessibility-web-rule-1-4-11-non-text-contrast/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

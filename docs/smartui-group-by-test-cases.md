@@ -22,6 +22,8 @@ canonical: https://www.testmuai.com/support/docs/smartui-group-by-test-cases/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -159,6 +161,8 @@ Use this when your SmartUI project is **Hooks**-oriented (dashboard **Capability
 
 Clone the official sample:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git clone https://github.com/LambdaTest/java-selenium-sample
 cd java-selenium-sample
@@ -166,12 +170,16 @@ cd java-selenium-sample
 
 Set credentials (macOS/Linux):
 
+<VerifiedTag value="Verified" />
+
 ```bash
 export LT_USERNAME='<your-lambdatest-username>'
 export LT_ACCESS_KEY='<your-lambdatest-access-key>'
 ```
 
 For **SmartUI CLI** jobs (capture/exec/upload), also set **`PROJECT_TOKEN`** from the SmartUI project (suffix after the last `#` usually matches the project slug, e.g. **`#sample`**):
+
+<VerifiedTag value="Verified" />
 
 ```bash
 export PROJECT_TOKEN='<your-token>#sample'
@@ -181,6 +189,8 @@ export PROJECT_TOKEN='<your-token>#sample'
 
 Paste **Java** capabilities from the dashboard **Capability Generator** into your test class under `src/test/com/lambdatest/` (this repo uses **`src/test/com/...`**, not `src/test/java/...`). The important SmartUI line is:
 
+<VerifiedTag value="Verified" />
+
 ```java
 ltOptions.put("smartUI.project", "<Smart UI Project Name>");
 ```
@@ -188,6 +198,8 @@ ltOptions.put("smartUI.project", "<Smart UI Project Name>");
 Use the same string as **Smart UI Project Name** in the UI (e.g. `new`, `sample`, or `Java-Selenium` as in the sample).
 
 After navigation, call the **SmartUI hook** (use a **different `screenshotName`** per step or per logical test so screenshots do not overwrite each other):
+
+<VerifiedTag value="Verified" />
 
 ```java
 Map<String, Object> config = new HashMap<>();
@@ -200,6 +212,8 @@ The runnable reference for **Hooks + SmartUI** (no DevTools) is:
 `src/test/com/lambdatest/SmartUI.java`
 
 Run it:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 mvn clean install exec:java -Dexec.mainClass="com.lambdatest.SmartUI" -Dexec.classpathScope=test -e

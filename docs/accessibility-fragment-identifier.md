@@ -15,6 +15,8 @@ site_name: TestMu AI
 slug: accessibility-fragment-identifier/
 canonical: https://www.testmuai.com/support/docs/accessibility-fragment-identifier/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

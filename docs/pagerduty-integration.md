@@ -11,7 +11,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/pagerduty-integration/
 site_name: TestMu AI
 slug: pagerduty-integration/
-canonical: https://www.testmu.ai/support/docs/pagerduty-integration/
+canonical: https://www.testmuai.com/support/docs/pagerduty-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

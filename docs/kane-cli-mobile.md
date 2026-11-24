@@ -245,6 +245,8 @@ Prefer not to set up a device on your machine? `kane-cli testrun run … --remot
 
 Follow the tab for the platform you intend to test. Set up both if you test on both.
 
+<VerifiedTag value="Verified" />
+
 <Tabs>
 <TabItem value="simulator" label="iOS Simulator" default>
 
@@ -320,6 +322,8 @@ If your SDK is at the default path, skip this step.
 
 Sign in and let Kane CLI install the tooling it manages for the target you set up:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 kane-cli login
 kane-cli doctor --target simulator --install    # or --target emulator
@@ -331,6 +335,8 @@ You do not need to boot a simulator, boot an emulator, or run `adb` yourself. Ka
 
 Confirm Kane CLI sees a ready toolchain and, optionally, the devices on your machine:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 kane-cli doctor --target simulator          # or --target emulator
 kane-cli devices list --target simulator    # the devices Kane CLI can run against
@@ -341,6 +347,8 @@ When the checks for your platform pass, setup is complete. On Android, confirm y
 ## Running a Mobile Test
 
 Once a target is set up, point a run at it:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 # one-off, from the command line

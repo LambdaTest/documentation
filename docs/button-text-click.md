@@ -29,6 +29,7 @@ import TabItem from '@theme/TabItem';
 import RealDeviceTag from '../src/component/realDevice';
 import VirtualDeviceTag from '../src/component/virtualDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 
@@ -122,6 +123,8 @@ This feature is supported across both **Android** and **iOS** real and virtual d
 
 The feature is exposed via `driver.execute_script` using the `lambda_executor` interface:
 
+<VerifiedTag value="Verified" />
+
 ```python
 driver.execute_script('lambda_executor: {
   "action": "buttonTextClick",
@@ -156,6 +159,8 @@ driver.execute_script('lambda_executor: {
 | `index` | Number | Click the nth matched button (0-based index). Useful when multiple buttons share the same text. |
 
 ## Full Executor Example
+
+<VerifiedTag value="Verified" />
 
 ```python
 driver.execute_script('lambda_executor: {

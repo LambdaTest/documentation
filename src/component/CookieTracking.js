@@ -16,7 +16,7 @@ function getLoginUrlWithCookies(baseUrl = `https://accounts.lambdatest.com/login
   }
 
   // Only collect these specific cookies
-  const allowedCookies = ['utm', 'utm_base', 'lt_gclid', 'gclid', 'initial_referrer', 'exit_popup_dismissed', 'google_button_clicked'];
+  const allowedCookies = ['utm', 'utm_base', 'lt_gclid', 'gclid', 'initial_referrer', 'exit_popup_dismissed', 'google_button_clicked', 'previous_url_testmu'];
 
   // Collect all cookies
   const cookies = document.cookie;
@@ -118,6 +118,31 @@ export const setInitialReferrer = () => {
 
   if (!isAllowedDomain) return;
 
+  const authPaths = ['/login', '/register'];
+  const matchesAuthPath = (pathname) =>
+    authPaths.some(path => pathname === path || pathname === path + '/' || pathname.startsWith(path + '?'));
+
+  const isAuthPage = matchesAuthPath(window.location.pathname);
+
+  if (isAuthPage) {
+    if (document.referrer) {
+      try {
+        const referrerUrl = new URL(document.referrer);
+        const referrerHost = referrerUrl.hostname;
+        const isReferrerAllowed = allowedDomains.some(domain =>
+          referrerHost === domain || referrerHost.endsWith(`.${domain}`)
+        );
+        if (isReferrerAllowed && !matchesAuthPath(referrerUrl.pathname)) {
+          writeLocalCookie('initial_referrer', document.referrer, 30);
+          return;
+        }
+      } catch (e) {}
+    }
+    // Direct landing (no referrer, external referrer, or referrer is also auth page)
+    writeLocalCookie('initial_referrer', window.location.href, 30);
+    return;
+  }
+
   writeLocalCookie('initial_referrer', window.location.href, 30);
 };
 export default function CookieTrackingLogin(e) {
@@ -128,21 +153,23 @@ export default function CookieTrackingLogin(e) {
         'eventLabel': window.location.href,
       });
     }
-    if (typeof window.logAmplitude === 'function') {
-      window.logAmplitude("click CTA - web pages", { "cta_text": "Login", "cta_type": "page header", "page_category": "Website header" });
+    // `logAmplitude` is only defined by the main website's header, not on the docs
+    // site, so calls to it never fired. `sendAmplitudeEvents` is defined in custom.js.
+    if (typeof window.sendAmplitudeEvents === 'function') {
+      window.sendAmplitudeEvents("click CTA - web pages", { "cta_text": "Login", "cta_type": "page header", "page_category": "Documentation header" });
     }
 
     // Get the current href from the anchor element (which may already have GA parameters)
-    const anchorElement = e.currentTarget;
-    const currentHref = anchorElement?.href || `https://accounts.lambdatest.com/login`;
+    // const anchorElement = e.currentTarget;
+    // const currentHref = anchorElement?.href || `https://accounts.lambdatest.com/login`;
 
-    // Append cookies to the current URL (preserving any existing query params like GA)
-    const urlWithCookies = getLoginUrlWithCookies(currentHref);
+    // // Append cookies to the current URL (preserving any existing query params like GA)
+    // const urlWithCookies = getLoginUrlWithCookies(currentHref);
 
-    // Update the href before navigation
-    if (anchorElement) {
-      anchorElement.href = urlWithCookies;
-    }
+    // // Update the href before navigation
+    // if (anchorElement) {
+    //   anchorElement.href = urlWithCookies;
+    // }
   };
 
   export const CookieTrackingSignup = (e) => {
@@ -154,28 +181,24 @@ export default function CookieTrackingLogin(e) {
         'eventLabel': window.location.href,
       });
     }
-    if (typeof window.logAmplitude === 'function') {
-      window.logAmplitude("click CTA - web pages", { "cta_text": "Get Started Free", "cta_type": "page header", "page_category": "Website header" });
+    // `logAmplitude` is only defined by the main website's header, not on the docs
+    // site, so calls to it never fired. `sendAmplitudeEvents` is defined in custom.js.
+    if (typeof window.sendAmplitudeEvents === 'function') {
+      window.sendAmplitudeEvents("click CTA - web pages", { "cta_text": "Get Started Free", "cta_type": "page header", "page_category": "Documentation header" });
     }
 
-    // Get the current href from the anchor element (which may already have GA parameters)
-    const anchorElement = e.currentTarget;
-    const currentHref = anchorElement?.href || `https://accounts.lambdatest.com/register`;
+    // // Get the current href from the anchor element (which may already have GA parameters)
+    // const anchorElement = e.currentTarget;
+    // const currentHref = anchorElement?.href || `https://testmuai.com/register/`;
 
-    // Append cookies to the current URL (preserving any existing query params like GA)
-    const urlWithCookies = getLoginUrlWithCookies(currentHref);
+    // // Append cookies to the current URL (preserving any existing query params like GA)
+    // const urlWithCookies = getLoginUrlWithCookies(currentHref);
 
-    // Update the href before navigation
-    if (anchorElement) {
-      anchorElement.href = urlWithCookies;
-    }
+    // // Update the href before navigation
+    // if (anchorElement) {
+    //   anchorElement.href = urlWithCookies;
+    // }
   };
 
-
-setTimeout(() => {
-  if (typeof document !== "undefined") {
-    setInitialReferrer()
-  }
-}, 500);
 
 

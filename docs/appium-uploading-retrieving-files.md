@@ -27,6 +27,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import RealDeviceTag from '../src/component/realDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <RealDeviceTag value="Real Device" /> 
@@ -116,6 +117,9 @@ While using pull and push features of Appium, please copy the files and retrieve
 <Tabs className="docs__val">
 
 <TabItem value="python" label="Python" default>
+
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
   <CodeBlock className="language-python">
   {` # Push a file
@@ -130,6 +134,9 @@ file_base64 = driver.pull_file(dest_path)
 
 
 <TabItem value="JavaScript" label="JavaScript" default>
+
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
   <CodeBlock className="language-javascript">
   {`// Push a file
@@ -142,6 +149,9 @@ let data = driver.pullFile('/sdcard/Downloads/sample.txt');`}
 </TabItem>
 
 <TabItem value="PHP" label="PHP" default>
+
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
   <CodeBlock className="language-php">
   {`// Push a file
@@ -153,6 +163,9 @@ $data = $driver->pullFile('/sdcard/Downloads/sample.txt');`}
 </TabItem>
 
 <TabItem value="Java" label="Java" default>
+
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
   <CodeBlock className="language-java">
   {`// Push a file
@@ -164,6 +177,9 @@ byte[] fileBase64 = driver.pullFile("/sdcard/Downloads/sample.jpg");`}
 </TabItem>
 
 <TabItem value="Ruby" label="Ruby" default>
+
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
   <CodeBlock className="language-ruby">
   {`# Push a file
@@ -175,6 +191,9 @@ pull_file('/sdcard/Downloads/sample.jpg')`}
 </TabItem>
 
 <TabItem value="C#" label="C#" default>
+
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
   <CodeBlock className="language-csharp">
   {`// Push a file
@@ -199,6 +218,9 @@ While using pull and push feature of Appium in iOS, please adhere to the followi
 <Tabs className="docs__val">
 
 <TabItem value="python" label="Python" default>
+
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
   <CodeBlock className="language-python">
   {` # Push file
@@ -215,6 +237,9 @@ file_base64 = driver.pull_file(dest_path)
 
 
 <TabItem value="JavaScript" label="JavaScript" default>
+
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
   <CodeBlock className="language-javascript">
   {`// Push file
@@ -227,6 +252,9 @@ let data = driver.pullFile('@com.lambdatest.proverbial:Documents/sample.txt');`}
 </TabItem>
 
 <TabItem value="PHP" label="PHP" default>
+
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
   <CodeBlock className="language-php">
   {` // Push file
@@ -238,6 +266,9 @@ $data = $driver->pullFile('@com.lambdatest.proverbial:Documents/foo.bar');`}
 </TabItem>
 
 <TabItem value="Java" label="Java" default>
+
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
   <CodeBlock className="language-java">
   {`// Push file
@@ -249,6 +280,9 @@ byte[] fileBase64 = driver.pullFile("@com.lambdatest.proverbial:Documents/sample
 </TabItem>
 
 <TabItem value="Ruby" label="Ruby" default>
+
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
   <CodeBlock className="language-ruby">
   {`# Push file
@@ -260,6 +294,9 @@ pull_file('@com.lambdatest.proverbial:Documents/sample-image.jpg')`}
 </TabItem>
 
 <TabItem value="C#" label="C#" default>
+
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
   <CodeBlock className="language-csharp">
   {`// Push file
@@ -274,6 +311,7 @@ byte[] fileBase64 = driver.PullFile("@com.lambdatest.proverbial:Documents/sample
 </TabItem>
 
 </Tabs>
+
 
 
 

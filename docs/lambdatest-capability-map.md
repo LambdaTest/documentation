@@ -19,6 +19,7 @@ canonical: https://www.testmuai.com/support/docs/testmu-capability-map/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -154,6 +155,8 @@ When migrating your test from BrowserStack or Sauce Labs to <BrandName />, the f
 
 2. <b>Create .env file</b>: Securely store your <BrandName /> credentials, create a .env file in the root of your project and add the following values:
 
+<VerifiedTag value="Verified" />
+
 ```
 LT_USERNAME="<your_username>"
 LT_ACCESS_KEY="<your_access_key>"
@@ -164,6 +167,8 @@ Once the .env file is set up, ensure your test framework correctly reads these v
 
 ### Add <BrandName /> Hub URL
 Next, you need to add the <BrandName /> Hub URL to your test suite configuration. This endpoint defines where the tests will be executed on the <BrandName /> Grid.
+
+<VerifiedTag value="Verified" />
 
 ```js
 @hub.lambdatest.com/wd/hub
@@ -183,6 +188,8 @@ Below are the capabilities of BrowserStack and <BrandName /> to help teams map B
 
 
 
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
 
@@ -231,6 +238,8 @@ Switching between cloud-based test execution platforms can involve configuration
 
 Below are the capabilities of Sauce Labs and <BrandName /> to help teams map Sauce Labs features to their <BrandName /> equivalents.
 
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
 

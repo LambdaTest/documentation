@@ -5,6 +5,8 @@ sidebar_label: Accessibility Automation
 description: Overview of TestMu AI Accessibility Automation for web testing across supported frameworks and execution environments.
 slug: accessibility-automation/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

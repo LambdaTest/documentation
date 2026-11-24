@@ -5,6 +5,8 @@ sidebar_label: iOS Rule Repository
 description: Browse iOS accessibility rule guidance, WCAG mappings, and remediation references.
 slug: accessibility-ios-rule-repository/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

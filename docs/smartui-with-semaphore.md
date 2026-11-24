@@ -14,7 +14,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/smartui-with-semaphore/
 site_name: TestMu AI
 slug: smartui-with-semaphore/
-canonical: https://www.testmu.ai/support/docs/smartui-with-semaphore/
+canonical: https://www.testmuai.com/support/docs/smartui-with-semaphore/
 
 ---
 import Tabs from '@theme/Tabs';
@@ -23,6 +23,7 @@ import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -209,6 +210,9 @@ Download or Clone the code sample from the <BrandName /> GitHub repository to ru
 ### Step 2: Setup your Workflow
 - Select your desired build tool and edit your workflow as per your requirement. A sample workflow is given for your reference:
 - Click on **Run the Workflow** button to trigger your tests
+
+<VerifiedTag value="Verified" />
+
 ```yaml reference title="semaphore.yml"
 https://github.com/amanchopra1905/smartui-ci-cd-integrations/blob/semaphore/.semaphore/semaphore.yml
 ```
@@ -224,6 +228,8 @@ You can also store your *LT_USERNAME*, *LT_ACCESS_KEY* and *PROJECT_TOKEN* as se
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/ci-cd-integration/gitlab/3.png').default} alt="Create New Project" width="" height=""/>
 
 ## Best Practices
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='best-practices'>
 <TabItem value='secret-management' label='Secret Management' default>
@@ -302,6 +308,8 @@ env_vars:
 </Tabs>
 
 ## Troubleshooting
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='troubleshooting'>
 <TabItem value='pipeline-fails-with-secret-not-found' label='Pipeline Fails with Secret Not Found' default>
@@ -488,11 +496,12 @@ If you encounter issues not covered here:
 
 - Review [Semaphore Documentation](https://docs.semaphoreci.com/)
 - Check [SmartUI CLI Documentation](/support/docs/smartui-cli) for CLI-specific issues
-- Visit [<BrandName /> Support](https://www.testmuai.com/support) for additional resources
-- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support)
+- Visit [<BrandName /> Support](https://www.testmuai.com/support/docs/) for additional resources
+- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support/docs/)
 
 </TabItem>
 </Tabs>
+
 
 ## Additional Resources
 

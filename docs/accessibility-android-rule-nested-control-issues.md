@@ -5,6 +5,8 @@ sidebar_label: Nested Control Issues
 description: Rule-level Accessibility guidance for Nested Control Issues on Android.
 slug: accessibility-android-rule-nested-control-issues/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

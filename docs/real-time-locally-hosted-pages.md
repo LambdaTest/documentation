@@ -19,7 +19,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/real-time-locally-hosted-pages/
 site_name: TestMu AI
 slug: real-time-locally-hosted-pages/
-canonical: https://www.testmu.ai/support/docs/real-time-locally-hosted-pages/
+canonical: https://www.testmuai.com/support/docs/real-time-locally-hosted-pages/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

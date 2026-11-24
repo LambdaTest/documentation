@@ -5,6 +5,8 @@ sidebar_label: Target Size (2.5.8)
 description: Rule-level Accessibility guidance for Target Size Minimum (WCAG 2.5.8 Level AA).
 slug: accessibility-web-rule-2-5-8-target-size/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

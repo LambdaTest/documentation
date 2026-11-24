@@ -29,6 +29,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import HyperExecuteSupportedLanguageDocs from '../src/component/SupportedLanguages/HyperExecuteSupportedLanguageDocs';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 
@@ -117,6 +118,10 @@ If you want to learn more about HyperExecute and how it can enable your team, th
 <!-- > Let's understand the [HyperExecute Dashboard](/support/docs/hyperexecute-guided-walkthrough/) together. -->
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/getting_started/hyperexecute.png').default} alt="Image"  className="doc_img"/>
+
+:::info On-premise teams start here
+If your organization runs HyperExecute on-premise, start with the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/). It covers your own dashboard, the `--onprem-host` CLI flag and the main differences from the public cloud.
+:::
 
 ## What is HyperExecute?
 
@@ -332,6 +337,8 @@ The [hyperexecute-skill](https://github.com/LambdaTest/agent-skills/tree/main/hy
 
 The hyperexecute-skill package includes:
 
+<VerifiedTag value="Verified" />
+
 ```
 hyperexecute-skill/
 ├── SKILL.md
@@ -365,6 +372,8 @@ The `scripts/` folder holds the skill's helper scripts.
 ***
 
 Install a HyperExecute Agent Skill using the command below:
+
+<VerifiedTag value="Verified" />
 
 ```
 # Clone the repo and copy the skill you need

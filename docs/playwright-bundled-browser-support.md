@@ -1,28 +1,24 @@
 ---
 id: playwright-bundled-browser-support
-title: Playwright Bundled Browser Support
-hide_title: false
-sidebar_label: Bundled Browser Support List
-description: List of all the Playwright Bundled Browser Support
+title: Playwright Bundled Browser Support on TestMu AI
+hide_title: true
+toc_max_heading_level: 2
+sidebar_label: "Bundled Browser Support"
+description: Match Playwright's bundled Chromium, Firefox, and WebKit browsers to your local Playwright version on TestMu AI using the useSpecificBundleVersion capability.
 keywords:
-    - testmu ai
-    - playwright
-    - support
-    - browsers
-    - bundled browser
-    - playwright bundled
-    - playwright browsers
+  - playwright bundled browser support
+  - useSpecificBundleVersion capability
+  - playwright bundled browsers testmu ai
+  - playwright browser versions
+  - playwright chromium firefox webkit versions
+
 url: https://www.testmuai.com/support/docs/playwright-bundled-browser-support/
 site_name: TestMu AI
 slug: playwright-bundled-browser-support/
-canonical: https://www.testmu.ai/support/docs/playwright-bundled-browser-support/
+canonical: https://www.testmuai.com/support/docs/playwright-bundled-browser-support/
 ---
-
-import CodeBlock from '@theme/CodeBlock';
-import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import VerifiedTag from '@site/src/component/verifiedTag';
-
 
 
 <script type="application/ld+json"
@@ -36,8 +32,8 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       "@type": "WebPage",
       "@id": "https://www.testmuai.com/support/docs/playwright-bundled-browser-support/"
     },
-    "headline": "Playwright Bundled Browser Support",
-    "description": "List of all the Playwright Bundled Browser Support",
+    "headline": "Playwright Bundled Browser Support on TestMu AI",
+    "description": "Match Playwright's bundled Chromium, Firefox, and WebKit browsers to your local Playwright version on TestMu AI using the useSpecificBundleVersion capability.",
     "url": "https://www.testmuai.com/support/docs/playwright-bundled-browser-support/",
     "image": {
       "@type": "ImageObject",
@@ -46,11 +42,12 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       "height": 630
     },
     "inLanguage": "en",
-    "articleSection": "Documentation",
+    "articleSection": "Web Automation",
     "keywords": [
-      "testmu ai",
-      "playwright",
-      "support"
+      "playwright bundled browser support",
+      "useSpecificBundleVersion capability",
+      "playwright bundled browsers testmu ai",
+      "playwright browser versions"
     ],
     "proficiencyLevel": "Beginner",
     "author": {
@@ -82,17 +79,18 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     "hasPart": [
       {
         "@type": "SoftwareSourceCode",
-        "name": "Code sample 1",
+        "name": "Enable Bundled Browser Support",
         "codeSampleType": "code snippet",
-        "programmingLanguage": "YAML",
+        "programmingLanguage": "JavaScript",
         "text": "const capabilities = { \"LT:Options\": {\"useSpecificBundleVersion\": true,}}"
       }
     ],
-    "dateModified": "2026-09-09T19:13:32+05:30"
+    "dateModified": "2026-09-27T00:00:00+05:30"
   }) }}
 />
 
-When you set the capability [`useSpecificBundleVersion: true`](/support/docs/capabilities-for-playwright/#:~:text=setHTTPCredentials%22%2C%20%22setStorageState%22%2C%20%22setGeolocation%22%5D%7D%7D-,useSpecificBundleVersion,-Boolean), then <BrandName /> will select the browser (Chromium, Firefox, Webkit) version as per your local machine's PLaywright version. 
+# Playwright Bundled Browser Support on TestMu AI
+***
 
 Each Playwright release ships with its own bundled builds of Chromium, Firefox, and WebKit. When you set the [`useSpecificBundleVersion: true`](/support/docs/playwright-test-execution-setup/) capability, <BrandName /> selects the Chromium, Firefox, or WebKit version that matches your local machine's Playwright version. This keeps the browsers on the grid aligned with the browsers you test against locally, so your results stay consistent.
 
@@ -106,6 +104,11 @@ Add the `useSpecificBundleVersion` capability to your `LT:Options` object to hav
 ```js
 const capabilities = { "LT:Options": {"useSpecificBundleVersion": true,}}
 ```
+
+## Supported Bundled Browser Versions
+***
+
+The table below lists the Chromium, Firefox, and WebKit versions available for each Playwright version when `useSpecificBundleVersion` is enabled.
 
 | Playwright Versions | Chromium | Firefox | Webkit |
 |---------------------|----------|---------|--------|
@@ -136,3 +139,4 @@ const capabilities = { "LT:Options": {"useSpecificBundleVersion": true,}}
 |1.26| 104-113 | 103-112 | 16 |
 |1.25| 104-113 | 103-112 | 16 |
 |1.24| 103-104 | 100-102 | 16 |
+

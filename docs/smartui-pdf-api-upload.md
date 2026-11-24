@@ -12,7 +12,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/smartui-pdf-api-upload/
 site_name: TestMu AI
 slug: smartui-pdf-api-upload/
-canonical: https://www.testmu.ai/support/docs/smartui-pdf-api-upload/
+canonical: https://www.testmuai.com/support/docs/smartui-pdf-api-upload/
 
 ---
 import Tabs from '@theme/Tabs';
@@ -21,6 +21,7 @@ import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 
@@ -128,6 +129,8 @@ To initiate a SmartUI PDF Comparison Project, adhere to the following instructio
 
 Once your project is active, retrieve your `Project Token` from the application. Here's an example of a project token:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 projectToken = "123456#1234abcd-****-****-****-************"
 ```
@@ -156,6 +159,8 @@ Only files in `.pdf` format are compatible with this feature.
 
 Here's a sample API request using cURL:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 curl -X POST "YOUR_API_ENDPOINT" \
   -H "Content-Type: multipart/form-data" \
@@ -182,6 +187,8 @@ The API will return a JSON response containing:
 - **Enterprise Integration**: Connect with existing enterprise systems and workflows
 
 ## Best Practices
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='best-practices'>
 <TabItem value='file-management' label='PDF File Management' default>
@@ -334,11 +341,12 @@ If you encounter issues not covered here:
 - Review the [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide) for detailed solutions
 - Check [PDF Comparison Overview](/support/docs/smartui-pdf-comparison) for PDF-specific information
 - See [PDF CLI Upload](/support/docs/smartui-pdf-cli-upload) for alternative upload methods
-- Visit [<BrandName /> Support](https://www.testmuai.com/support) for additional resources
-- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support)
+- Visit [<BrandName /> Support](https://www.testmuai.com/support/docs/) for additional resources
+- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support/docs/)
 
 </TabItem>
 </Tabs>
+
 
 ## Additional Resources
 

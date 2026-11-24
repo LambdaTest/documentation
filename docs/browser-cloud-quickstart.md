@@ -19,6 +19,7 @@ canonical: https://www.testmuai.com/support/docs/launch-first-session/
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -140,6 +141,8 @@ controlling a cloud browser.
 1. Create a `.env` file in your project root (if you don't have one)
 2. Add your credentials:
 
+<VerifiedTag value="Verified" />
+
 ```
 LT_USERNAME=your_username
 LT_ACCESS_KEY=your_access_key
@@ -150,6 +153,8 @@ LT_ACCESS_KEY=your_access_key
 
 ## Installing the TestMu AI Browser SDK
 ***
+
+<VerifiedTag value="Verified" />
 
 ```bash
 npm i @testmuai/browser-cloud
@@ -163,6 +168,8 @@ npm i @testmuai/browser-cloud
 
 Let's create a simple script that launches a cloud browser, navigates to a page,
 and cleans up:
+
+<VerifiedTag value="Verified" />
 
 <Tabs>
   <TabItem value="puppeteer" label="Puppeteer" default>

@@ -5,6 +5,8 @@ sidebar_label: Invalid Range Values
 description: "Catch iOS sliders, steppers, and progress indicators reporting invalid or out-of-range values so VoiceOver announces their state correctly."
 slug: accessibility-ios-rule-invalid-range-values/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

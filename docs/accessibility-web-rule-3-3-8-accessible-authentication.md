@@ -5,6 +5,8 @@ sidebar_label: Accessible Authentication (3.3.8)
 description: Rule-level Accessibility guidance for Accessible Authentication (WCAG 3.3.8 Level AA).
 slug: accessibility-web-rule-3-3-8-accessible-authentication/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

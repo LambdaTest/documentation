@@ -5,6 +5,8 @@ sidebar_label: Undersized Touch Target
 description: Rule-level Accessibility guidance for Undersized Touch Target on Android.
 slug: accessibility-android-rule-undersized-touch-target/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

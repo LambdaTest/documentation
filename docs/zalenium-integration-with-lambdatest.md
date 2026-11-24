@@ -12,9 +12,11 @@ keywords:
 url: https://www.testmuai.com/support/docs/zalenium-integration-with-testmu/
 site_name: TestMu AI
 slug: zalenium-integration-with-testmu/
-canonical: https://www.testmu.ai/support/docs/zalenium-integration-with-testmu/
+canonical: https://www.testmuai.com/support/docs/zalenium-integration-with-testmu/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -112,11 +114,17 @@ Zalenium offers capabilities to help you define your Desired Capabilities in you
 
    Be aware of your <BrandName /> authentication credentials i.e., your <BrandName /> username, access key, and HubURL. You need to set them up as your environment variables. You can retrieve them from your **[<BrandName /> automation dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/timeline/?viewType=build&page=1)** by clicking on the key icon near the help button.
 * For Linux/Mac:  
+
+    <VerifiedTag value="Verified" />
+
     ```
     $ export LT_USERNAME= {YOUR_LAMBDATEST_USERNAME}
     $ export LT_ACCESS_KEY= {YOUR_LAMBDATEST_ACCESS_KEY}
     ```
 * For Windows: 
+
+    <VerifiedTag value="Verified" />
+
     ```
     $ set LT_USERNAME= {YOUR_LAMBDATEST_USERNAME}
     $ set LT_ACCESS_KEY= {YOUR_LAMBDATEST_ACCESS_KEY}
@@ -124,6 +132,8 @@ Zalenium offers capabilities to help you define your Desired Capabilities in you
 ## Specify <BrandName /> Environment Variables Into Zalenium Docker
 -----------------------------------------------------------------------------------------------------------------------------
 Declare your <BrandName /> environment variable into your respective Zalenium Docker over which you wish to perform automated cross browser testing. Below is an example code representing what you need to declare in your Zalenium Docker.
+
+<VerifiedTag value="Verified" />
 
 ```
 export LT_USERNAME=<your username>

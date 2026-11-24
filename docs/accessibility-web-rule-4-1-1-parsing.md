@@ -5,6 +5,8 @@ sidebar_label: Parsing (4.1.1)
 description: Rule-level Accessibility guidance for Parsing (WCAG 4.1.1 Level A). Note that this criterion is obsolete in WCAG 2.2 but may still appear in scans against earlier WCAG versions.
 slug: accessibility-web-rule-4-1-1-parsing/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

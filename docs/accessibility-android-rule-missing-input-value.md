@@ -5,6 +5,8 @@ sidebar_label: Missing Input Value
 description: Rule-level Accessibility guidance for Missing Input Value on Android.
 slug: accessibility-android-rule-missing-input-value/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

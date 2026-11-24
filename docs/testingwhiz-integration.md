@@ -13,9 +13,10 @@ keywords:
 url: https://www.testmuai.com/support/docs/testingwhiz-integration/
 site_name: TestMu AI
 slug: testingwhiz-integration/
-canonical: https://www.testmu.ai/support/docs/testingwhiz-integration/
+canonical: https://www.testmuai.com/support/docs/testingwhiz-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 
@@ -116,6 +117,8 @@ That's it. Your TestingWhiz account has been integrated successfully with your <
 * * *
 
 Consider a test scenario which includes:
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 - Opening [LambdaTest ToDo App](https://lambdatest.github.io/sample-todo-app/)

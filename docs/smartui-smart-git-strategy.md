@@ -13,7 +13,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/smartui-smart-git-strategy/
 site_name: TestMu AI
 slug: smartui-smart-git-strategy/
-canonical: https://www.testmu.ai/support/docs/smartui-smart-git-strategy/
+canonical: https://www.testmuai.com/support/docs/smartui-smart-git-strategy/
 
 ---
 import Tabs from '@theme/Tabs';
@@ -22,6 +22,7 @@ import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 ---
 
@@ -154,6 +155,8 @@ Smart Git is a feature that enhances the default Git branching strategy in Smart
 
 Smart Git can be enabled using an environment variable:
 
+<VerifiedTag value="Verified" />
+
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux' label='MacOS/Linux' default>
 
@@ -196,6 +199,9 @@ $env:SMART_GIT="true"
 ### Comparison Flow
 
 1. **Build Execution**:
+
+   <VerifiedTag value="Verified" />
+
    ```bash
    # Enable Smart Git
    export SMART_GIT=true
@@ -215,6 +221,8 @@ $env:SMART_GIT="true"
 ### Use Case 1: Feature Branch Development
 
 **Scenario**: You're developing a new feature in a feature branch and want to track visual changes independently.
+
+<VerifiedTag value="Verified" />
 
 ```bash
 # Create and switch to feature branch
@@ -239,6 +247,8 @@ npx smartui capture urls.json --buildName "feature-login-capture"
 
 **Scenario**: Multiple teams working on different features in separate branches.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 # Team A: Feature branch
 git checkout -b feature/team-a
@@ -259,6 +269,8 @@ npx smartui --config .smartui.json exec -- <Team B tests>
 ### Use Case 3: Hotfix Development
 
 **Scenario**: Need to make urgent fixes in a hotfix branch.
+
+<VerifiedTag value="Verified" />
 
 ```bash
 # Create hotfix branch

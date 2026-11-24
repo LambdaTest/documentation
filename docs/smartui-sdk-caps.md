@@ -11,7 +11,7 @@ keywords:
   - Visual Testing
 url: https://www.testmuai.com/support/docs/smartui-sdk-capabilities/
 slug: smartui-sdk-capabilities/
-canonical: https://www.testmu.ai/support/docs/smartui-sdk-capabilities/
+canonical: https://www.testmuai.com/support/docs/smartui-sdk-capabilities/
 
 ---
 
@@ -21,6 +21,8 @@ import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -117,6 +119,8 @@ Before using SmartUI SDK capabilities, ensure you have the following minimum ver
 
 ### For JavaScript
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 let capabilities = {
   platform: "catalina",
@@ -140,6 +144,8 @@ let capabilities = {
 ```
 
 ### For Java
+
+<VerifiedTag value="Verified" />
 
 ```java
 DesiredCapabilities capabilities = new DesiredCapabilities();

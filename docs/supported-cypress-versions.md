@@ -1,30 +1,30 @@
 ---
 id: supported-cypress-versions
-title: Supported Cypress Versions
-sidebar_label: Supported Cypress Versions
-description: This documentation will help you learn about the Cypress versions that are supported by TestMu AI.
+title: Supported Cypress Versions on TestMu AI
+sidebar_label: "Supported Cypress Versions"
+hide_title: true
+toc_max_heading_level: 2
+description: "Learn which Cypress versions TestMu AI supports and the three ways to set the Cypress version in lambdatest-config.json, with precedence and examples."
 keywords:
-- Cypress Automation
-- Cypress Testing Guide
-- Cypress Test Automation
-- Cypress Automation Testing
-- Running Cypress Tests
-- Cypress Testing Online
-- Run Cypress
-- Cypress Run Specific Test
-- Cypress Testing Environment
-- How to Run Cypress Tests
+  - supported cypress versions
+  - cypress version testmu ai
+  - set cypress version
+  - cypress lambdatest-config.json
+  - cypress npm_dependencies
 
 url: https://www.testmuai.com/support/docs/supported-cypress-versions/
 site_name: TestMu AI
 slug: supported-cypress-versions/
-canonical: https://www.testmu.ai/support/docs/supported-cypress-versions/
+canonical: https://www.testmuai.com/support/docs/supported-cypress-versions/
 ---
+
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
-
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -37,8 +37,8 @@ import TabItem from '@theme/TabItem';
       "@type": "WebPage",
       "@id": "https://www.testmuai.com/support/docs/supported-cypress-versions/"
     },
-    "headline": "Supported Cypress Versions",
-    "description": "This documentation will help you learn about the Cypress versions that are supported by TestMu AI.",
+    "headline": "Supported Cypress Versions on TestMu AI",
+    "description": "Learn which Cypress versions TestMu AI supports and the three ways to set the Cypress version in lambdatest-config.json, with precedence and examples.",
     "url": "https://www.testmuai.com/support/docs/supported-cypress-versions/",
     "image": {
       "@type": "ImageObject",
@@ -49,9 +49,9 @@ import TabItem from '@theme/TabItem';
     "inLanguage": "en",
     "articleSection": "Web Automation",
     "keywords": [
-      "Cypress Automation",
-      "Cypress Testing Guide",
-      "Cypress Test Automation"
+      "supported cypress versions",
+      "cypress version testmu ai",
+      "set cypress version"
     ],
     "proficiencyLevel": "Beginner",
     "author": {
@@ -90,58 +90,59 @@ import TabItem from '@theme/TabItem';
       },
       {
         "@type": "SoftwareSourceCode",
-        "name": "Cypress v9",
+        "name": "Cypress Versions Supported By TestMu AI (Cypress v9)",
         "codeSampleType": "code snippet",
         "programmingLanguage": "JavaScript",
         "text": "// lambdatest-config.json\n\n\"run_settings\":{\n   \"cypress_config_file\": \"cypress.json\",\n     \"reporter_config_file\": \"base_reporter_config.json\",\n     \"build_name\": \"build-name\",\n     \"parallels\": 1,\n     \"specs\": \"./*.spec.js\",\n     \"ignore_files\": \"\",\n     \"network\": false,\n     \"headless\": false,\n     \"npm_dependencies\": {\n        \"cypress\": \"9.0.0\"\n}\n"
       },
       {
         "@type": "SoftwareSourceCode",
-        "name": "Example",
+        "name": "Set the version using package.json",
         "codeSampleType": "code snippet",
         "programmingLanguage": "JSON",
         "text": "\"devDependencies\": {\n    \"@bahmutov/print-env\": \"1.2.0\",\n    \"@cypress/eslint-plugin-dev\": \"5.0.0\",\n    \"colon-names\": \"1.0.0\",\n    \"cypress\": \"9.2.1\",\n    \"eslint\": \"7.0.0\","
       },
       {
         "@type": "SoftwareSourceCode",
-        "name": "Example",
+        "name": "Set the version using npm_dependencies",
         "codeSampleType": "code snippet",
         "programmingLanguage": "JSON",
         "text": "\"run_settings\": {\n    \"cypress_config_file\": \"cypress.json\",\n    \"build_name\": \"Cypress v9 Demo\",\n    \"parallels\": 2,\n    \"specs\": \"./cypress/integration/examples/actions.spec.js\",\n    \"downloads\": \"./cypress/results/\",\n    \"ignore_files\": \"\",\n    \"network\": false,\n    \"headless\": false,\n    \"reporter_config_file\": \"\",\n    \"npm_dependencies\": {\n      \"cypress\": \"10.0.0\"\n    },\n  },"
       },
       {
         "@type": "SoftwareSourceCode",
-        "name": "Example",
+        "name": "Set the version using cypress_version",
         "codeSampleType": "code snippet",
         "programmingLanguage": "JSON",
         "text": "\"run_settings\": {\n    \"cypress_config_file\": \"cypress.json\",\n    \"build_name\": \"Cypress v9 Demo\",\n    \"parallels\": 2,\n    \"specs\": \"./cypress/integration/examples/actions.spec.js\",\n    \"downloads\": \"./cypress/results/\",\n    \"ignore_files\": \"\",\n    \"network\": false,\n    \"headless\": false,\n    \"reporter_config_file\": \"\",\n    \"npm_dependencies\": {\n      \"typescript\": \"3.7.4\"\n    },\n    \"cypress_version\": \"10.0.0\"\n  },"
       }
     ],
-    "dateModified": "2026-09-09T19:13:32+05:30"
+    "dateModified": "2026-09-27T00:00:00+05:30"
   }) }}
 />
 
-With the newer versions of Cypress releasing, to gain the most from recent improvements and bug fixes, it is recommended that your test scripts use the latest version. 
+# Supported Cypress Versions on TestMu AI
+***
 
-<BrandName /> supports every major, minor and patch versions for:
+<BrandName /> supports every major, minor, and patch release of Cypress across both release lines: Cypress 10 and above, and Cypress 9 and below. With newer versions of Cypress releasing regularly, use the latest version where possible to benefit from recent fixes and improvements.
+
+<BrandName /> supports every major, minor, and patch version for:
 
 * Cypress 10 & above
 * Cypress 9 & below
 
 ## Cypress Versions Supported By <BrandName />
 ***
- 
 
-In *lambdatest-config.json* file, you can set the Cypress version as shown in the below code snippet.
+In the `lambdatest-config.json` file, set the Cypress version in the `run_settings` block as shown below. The keys differ between Cypress v10 and above (`cypress.config.js` config file, `.cy.js` specs) and Cypress v9 and below (`cypress.json` config file, `.spec.js` specs).
 
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
 
-<TabItem value="ios" label="Cypress v10" default>
+<TabItem value="cypress-v10" label="Cypress v10" default>
 
-```javascript 
-// lambdatest-config.json
-
+```javascript title="lambdatest-config.json"
 "run_settings":{
    "cypress_config_file":"cypress.config.js",
    "reporter_config_file":"base_reporter_config.json",
@@ -155,16 +156,13 @@ In *lambdatest-config.json* file, you can set the Cypress version as shown in th
       "cypress":"10.0.0"
    }
 },
-
 ```
 
 </TabItem>
 
-<TabItem value="android" label="Cypress v9" default>
+<TabItem value="cypress-v9" label="Cypress v9">
 
-```javascript 
-// lambdatest-config.json
-
+```javascript title="lambdatest-config.json"
 "run_settings":{
    "cypress_config_file": "cypress.json",
      "reporter_config_file": "base_reporter_config.json",
@@ -177,24 +175,20 @@ In *lambdatest-config.json* file, you can set the Cypress version as shown in th
      "npm_dependencies": {
         "cypress": "9.0.0"
 }
-
 ```
 
 </TabItem>
 
 </Tabs>
 
-## Setting Cypress Version
----
+## Setting the Cypress Version
+***
 
+Set the version in any of three ways (each option overrides the ones before it):
 
-import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+1. **`package.json`:** <BrandName /> picks the Cypress version from your project's `package.json` dev dependencies.
 
-Following are the different ways to set the Cypress version.
-
-1. Using `package.json`: <BrandName /> will pick the Cypress version from `package.json`.
-
-Example:
+<VerifiedTag value="Verified" />
 
 ```json
 "devDependencies": {
@@ -205,9 +199,9 @@ Example:
     "eslint": "7.0.0",
 ```
 
-2. Using `npm_dependencies`: If you are passing `npm_dependencies`, <BrandName /> will pick the Cypress version from `npm_dependencies` in `lambdatest-config.json`. 
+2. **`npm_dependencies`:** set `cypress` under `run_settings.npm_dependencies` in `lambdatest-config.json`; this takes priority over `package.json`.
 
-Example:
+<VerifiedTag value="Verified" />
 
 ```json
 "run_settings": {
@@ -224,12 +218,11 @@ Example:
       "cypress": "10.0.0"
     },
   },
-```  
+```
 
+3. **`cypress_version`:** set `cypress_version` in `lambdatest-config.json` to override the version from `npm_dependencies` or `package.json`.
 
-3. Using `cypress_version`: You can pass `cypress_version` in `lambdatest-config.json` and it will override the `cypress_version` present in `npm_dependencies` or `package.json`.
-
-Example:
+<VerifiedTag value="Verified" />
 
 ```json
 "run_settings": {
@@ -248,7 +241,4 @@ Example:
     "cypress_version": "10.0.0"
   },
 ```
-
-
-
 

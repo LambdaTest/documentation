@@ -15,7 +15,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/rally-integration/
 site_name: TestMu AI
 slug: rally-integration/
-canonical: https://www.testmu.ai/support/docs/rally-integration/
+canonical: https://www.testmuai.com/support/docs/rally-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

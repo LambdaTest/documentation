@@ -14,6 +14,9 @@ site_name: TestMu AI
 slug: accessibility-cucumber-java-test/
 canonical: https://www.testmuai.com/support/docs/accessibility-cucumber-java-test/
 ---
+import VerifiedTag from '@site/src/component/verifiedTag';
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -113,6 +116,8 @@ Cucumber scenarios still execute **ordinary Selenium** code under the hood. Enab
 
 ### 1. Create the driver with Accessibility in `@Before`
 
+<VerifiedTag value="Verified" />
+
 ```java
 @Before(order = 0)
 public void setUp() {
@@ -129,6 +134,8 @@ public void setUp() {
 
 In a step that represents “user is on dashboard” (or after `Given/When` that loads a URL):
 
+<VerifiedTag value="Verified" />
+
 ```java
 driver.executeScript("lambda-accessibility-scan");
 ```
@@ -140,6 +147,8 @@ Avoid calling the hook on every tiny interaction; align it with **logical pages*
 If scenarios bounce across many URLs and you want full coverage without per-step hooks, enable `accessibility.autoscan` in `@Before` instead.
 
 ### 4. Run Cucumber and open reports
+
+<VerifiedTag value="Verified" />
 
 ```bash
 mvn test -Dcucumber.filter.tags="@smoke"

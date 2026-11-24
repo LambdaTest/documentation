@@ -5,6 +5,8 @@ sidebar_label: Insufficient Touch Target Spacing
 description: Rule-level Accessibility guidance for Insufficient Touch Target Spacing on iOS.
 slug: accessibility-ios-rule-insufficient-touch-target-spacing/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

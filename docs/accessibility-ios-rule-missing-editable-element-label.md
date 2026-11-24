@@ -5,6 +5,8 @@ sidebar_label: Missing Editable Element Label
 description: Rule-level Accessibility guidance for Missing Editable Element Label on iOS.
 slug: accessibility-ios-rule-missing-editable-element-label/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

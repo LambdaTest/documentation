@@ -14,6 +14,9 @@ url: https://www.testmuai.com/support/docs/accessibility-cicd-integration-guide/
 site_name: TestMu AI
 canonical: https://www.testmuai.com/support/docs/accessibility-cicd-integration-guide/
 ---
+import VerifiedTag from '@site/src/component/verifiedTag';
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -108,6 +111,8 @@ Use this guide when you want **Accessibility Automation** (Selenium capabilities
 5. **Optional gating:** treat critical/serious new issues like other quality gates, document who can override flakes.
 
 ## Example: GitHub Actions (pattern)
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 name: accessibility-smoke

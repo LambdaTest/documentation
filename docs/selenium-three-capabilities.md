@@ -13,7 +13,7 @@ image: /assets/images/og-images/automation-testing-og.png
 url: https://www.testmuai.com/support/docs/selenium-three-capabilities/
 site_name: TestMu AI
 slug: selenium-three-capabilities/
-canonical: https://www.testmu.ai/support/docs/selenium-three-capabilities/
+canonical: https://www.testmuai.com/support/docs/selenium-three-capabilities/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

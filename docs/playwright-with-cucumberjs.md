@@ -2,7 +2,7 @@
 id: playwright-cucumberjs
 title: Running Playwright Tests With Cucumber.js
 hide_title: true
-sidebar_label: Integrate With Cucumber.js 
+sidebar_label: Cucumber.js 
 description: Learn how to perform Playwright testing using Cucumber.js across multiple browser versions on the TestMu AI platform.
 keywords:
  -  playwright testing with Playwright test runner
@@ -19,6 +19,7 @@ slug: playwright-with-cucumberjs/
 canonical: https://www.testmuai.com/support/docs/playwright-with-cucumberjs/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -154,6 +155,8 @@ Cucumber.js is a JavaScript-based open-source framework for web automation testi
 
 2. Install the npm dependencies.
 
+<VerifiedTag value="Verified" />
+
 ```
 npm install
 ```
@@ -163,12 +166,16 @@ npm install
 
 **Windows**
 
+<VerifiedTag value="Verified" />
+
 ```js
 set LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
 set LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 ```
 
 **macOS/Linux**
+
+<VerifiedTag value="Verified" />
 
 ```js
 export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
@@ -179,6 +186,8 @@ export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 *** 
 
 In your `setup.js` file, specify your <BrandName /> Username and <BrandName /> Access Key, add the browserName, browserVersion, and platform.
+
+<VerifiedTag value="Verified" />
 
 ```js
 const { setWorldConstructor, World, Before, After} = require("@cucumber/cucumber");
@@ -226,6 +235,8 @@ setWorldConstructor(CustomWorld);
 ```
 Pass the below command to run the test.
 
+<VerifiedTag value="Verified" />
+
 ```
 npm run test
 ```
@@ -236,6 +247,8 @@ Visit the <BrandName /> Automation dashboard to view the results of your execute
 ***
 
 1. In your `setup.js` file, add before and after code block for setting up and closing the remote browsers.
+
+<VerifiedTag value="Verified" />
 
 ```js
 Before(async (scenario) => {
@@ -275,6 +288,8 @@ setWorldConstructor(CustomWorld);
 
 2. In the class CustomWorld, create a function `setTestStatus` that will mark your test passed or failed on the <BrandName /> platform.
 
+<VerifiedTag value="Verified" />
+
 ```js
 class CustomWorld extends World{
   async setTestStatus(status, remark) {
@@ -284,6 +299,8 @@ class CustomWorld extends World{
 ```
 
 3. After any assertions in your script mark the test status as passed as shown below:
+
+<VerifiedTag value="Verified" />
 
 ```js
 try {
@@ -306,4 +323,46 @@ try {
 
 ## Using the Cucumber Agent Skill with TestMu AI
 ***
+
+The [cucumber-skill](https://github.com/LambdaTest/agent-skills/tree/main/cucumber-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
+
+The cucumber-skill package includes:
+
+<VerifiedTag value="Verified" />
+
+```
+cucumber-skill/
+├── SKILL.md
+└── reference/
+    ├── playbook.md
+    └── advanced-patterns.md
+```
+
+It provides structured guidance for:
+
+* Project structure and setup
+* Dependency configuration
+* Local execution
+* TestMu AI cloud execution
+* Debugging patterns
+* CI/CD integration
+
+
+### Installing Cucumber Agent Skill
+***
+
+Install a Cucumber Agent Skill using the command below:
+
+<VerifiedTag value="Verified" />
+
+```
+# Clone the repo and copy the skill you need
+git clone https://github.com/LambdaTest/agent-skills.git
+cp -r agent-skills/cucumber-skill .claude/skills/
+
+# Or for Cursor / Copilot
+cp -r agent-skills/cucumber-skill .cursor/skills/
+```
+
+**Note**: If you prefer installing all available framework skills instead of only cucumber-skill, clone the repository directly into your tool's skills directory (for example, .claude/skills/, .cursor/skills/, .gemini/skills/, or .agent/skills/).
 

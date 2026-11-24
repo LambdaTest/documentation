@@ -5,6 +5,8 @@ sidebar_label: Dragging Movements (2.5.7)
 description: Rule-level Accessibility guidance for Dragging Movements (WCAG 2.5.7 Level AA).
 slug: accessibility-web-rule-2-5-7-dragging-movements/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

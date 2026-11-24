@@ -23,6 +23,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -218,6 +219,9 @@ Complete the following steps before you begin automation testing with Selenium a
 1. Install the latest **PHP** on your system. Use the following commands in the terminal:
 
    * **MacOS:** Previous versions of **MacOS** have **PHP** installed by default. For the latest **MacOS** versions starting with **Monterey**, download and install **PHP** manually: 
+
+   <VerifiedTag value="Verified" />
+
    ```bash
    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
    brew install php
@@ -227,6 +231,9 @@ Complete the following steps before you begin automation testing with Selenium a
 2. Download **composer** in the project directory ([Linux/MacOS](https://getcomposer.org/download/), [Windows](https://getcomposer.org/doc/00-intro.md#installation-windows)).
 
    **Note:** To use the **composer** command directly, it either should have been downloaded in the project directory or should be accessible globally which can be done by the command below:
+
+   <VerifiedTag value="Verified" />
+
    ```bash
    mv composer.phar /usr/local/bin/composer
    ```
@@ -235,17 +242,25 @@ Complete the following steps before you begin automation testing with Selenium a
 ---
 Clone the repository and install dependencies.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git clone https://github.com/LambdaTest/behat-selenium-sample
 cd behat-selenium-sample
 ```
 
 Install the composer dependencies:
+
+<VerifiedTag value="Verified" />
+
 ```bash
 composer install
 ```
 
 Set up **Behat** automation for your OS using composer:
+
+<VerifiedTag value="Verified" />
+
 ```bash
 php composer.phar require behat/behat
 ```
@@ -260,6 +275,8 @@ Set TestMu AI `Username` and `Access Key` in environment variables.
 
 <TabItem value="bash" label="macOS / Linux" default>
 
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
@@ -270,6 +287,8 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
+
+  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
@@ -286,6 +305,8 @@ set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 Define browser, version, and OS settings for your test run.
 
 In the test script, update your test capabilities to validate your TestMu AI credentials and select OS, browser, browser version, and other settings.
+
+<VerifiedTag value="Verified" />
 
 ```php
 default:
@@ -323,11 +344,16 @@ Use the TestMu AI [Capabilities Generator](https://www.testmuai.com/capabilities
 ---
 Execute the Behat test from the command line.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 composer single
 ```
 
 To run parallel tests:
+
+<VerifiedTag value="Verified" />
+
 ```bash
 composer parallel
 ```
@@ -350,6 +376,8 @@ Use AI coding assistants to generate and run Behat tests with the TestMu AI Agen
 The [behat-skill](https://github.com/LambdaTest/agent-skills/tree/main/behat-skill) is part of [TestMu AI Agent Skills](https://github.com/LambdaTest/agent-skills/) - structured packages that teach AI coding assistants how to write production-grade test automation.
 
 Install the skill:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 git clone https://github.com/LambdaTest/agent-skills.git

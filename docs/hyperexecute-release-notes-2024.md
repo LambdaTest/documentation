@@ -21,6 +21,7 @@ import BugFixTag from '../src/component/bugFixTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -202,6 +203,9 @@ HyperExecute now supports the Appium and the Maestro Android Emulator, providing
 - **Customizable Capabilities:** Define emulator configurations such as device name, platform version, and orientation directly within your test files.
 
 To execute tests using the Android Emulator, add the following configurations to your `hyperexecute.yaml`:
+
+<VerifiedTag value="Verified" />
+
 ```yaml
 framework:
   args:
@@ -249,7 +253,7 @@ Now, you can download artifacts for your test runs on both **Espresso** and **XC
 
 - To generate artifacts for your XCUI tests, add the `artifacts: true` flag in your YAML file and pass the `--download-artifacts` flag with the CLI command
 
-  > 📕 Refer to our detailed documentation to generate [XCUI Artifacts](/support/docs/hyperexecute-xcui-testing/#step-5-generate-artifacts)
+  > 📕 Refer to our detailed documentation to generate [XCUI Artifacts](/support/docs/hyperexecute-xcui-testing/#step-5-generate-reports-and-artifacts)
 
 ### Browser and Selenium Updates
 
@@ -313,6 +317,8 @@ This can be configured with the following parameters:
 - **frameworkName:** junit
 - **type:** xml
 - **location:** Specify the directory where the reports will be generated.
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 report: true
@@ -413,6 +419,8 @@ HyperExecute expands its support for the latest versions of dev and beta browser
 ### HyperExecute: Set Dynamic Email Address for Report Sharing 
 HyperExecute CLI added an enhancement in the [`--vars`](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/#--vars) flag providing greater flexibility in specifying email addresses for report and artifact sharing. You can now use a variable to dynamically set the email address used to share reports or artifacts. This gives you more flexibility than hardcoding the email address in the YAML configuration file.
 
+<VerifiedTag value="Verified" />
+
 ```yaml title="hyperexecute.yaml"
 partialReports:
   location: target/surefire-reports/html
@@ -427,6 +435,8 @@ partialReports:
 ```
 
 Pass the value of your email address via CLI by running the command
+
+<VerifiedTag value="Verified" />
 
 ```bash
 ./hyperexecute --vars "email=xyz@abc.com" --vars "email1=abc@xyz.com"
@@ -477,6 +487,8 @@ The HyperExecute CLI now supports a [`--runson`](/support/docs/hyperexecute-cli-
 **Usage**
 Add the `--runson` flag to your HyperExecute CLI command, followed by the desired OS:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 --runson YOUR_OS_NAME
 ```
@@ -501,6 +513,8 @@ To maintain browser compatibility and access the newest features, we've incorpor
 
 HyperExecute now supports k6, a powerful open-source performance testing tool. HyperExecute supports all versions of k6 (till 0.52). To use any particular version, all you have to do is mention that specific version in the [runson flag](/support/docs/deep-dive-into-hyperexecute-yaml/#runson) in your [HyperExecute YAML](/support/docs/deep-dive-into-hyperexecute-yaml/) file.
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 runtime:
     addons:
@@ -509,6 +523,8 @@ runtime:
 ```
 
 Also, add these environment variables in your YAML file to install the necessary dependencies for your tests
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 env: 
@@ -552,11 +568,17 @@ This capability will work with Selenium, Playwright, Puppeteer, Cypress, and App
 :::
 
 Previously, you might have needed to use:
+
+<VerifiedTag value="Verified" />
+
 ```yaml
 capabilities.setCapability("timezone", "UTC+05:30");
 ```
 
 Now, you can simply set:
+
+<VerifiedTag value="Verified" />
+
 ```bash
 capabilities.setCapability("timezone", "Kolkata");
 ```
@@ -606,6 +628,8 @@ You can now create multiple reports from different frameworks for your job. This
 - **Simplify Analysis:** Focus on the results that matter most without sifting through a combined report. Explore framework-specific details and pinpoint areas for improvement with ease.
 
 - **Enhanced Organization:** Maintain a clear and organized overview of your entire test suite. Separate reports provide a structured view, allowing you to efficiently track the performance of each framework.
+
+<VerifiedTag value="Verified" />
 
 ```bash
 partialReports:
@@ -666,13 +690,15 @@ HyperExecute now supports multiple versions of Katalon. You can switch to any ve
 
 Add a runtime flag to your YAML file and define your required version. 
 
+<VerifiedTag value="Verified" />
+
 ```bash
 runtime:
   - language: katalon
     version: 8.6.5
 ```
 
-📕 Refer to our [runtime YAML flag](/support/docs/deep-dive-into-hyperexecute-yaml/#runtime/) to know more!
+📕 Refer to our [runtime YAML flag](/support/docs/deep-dive-into-hyperexecute-yaml/#runtime) to know more!
 
 ---
 
@@ -821,6 +847,8 @@ The `alwaysRunPostSteps` flag provides finer control over post-step execution. W
 
 This enhancement streamlines your testing workflow by ensuring essential post-steps are consistently executed, even in the presence of failing test scenarios.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 alwaysRunPostSteps: true
 ```
@@ -874,6 +902,8 @@ You can now test your web applications on the latest beta versions of popular br
 You can now receive [Job Artifacts](/support/docs/hyperexecute-artifacts/) directly via email, streamlining the process of accessing and managing your execution results.
 
 To receive the Artifacts via mail, you simply need to pass a `email` flag in your YAML file.
+
+<VerifiedTag value="Verified" />
 
 ```bash
 uploadArtifacts:

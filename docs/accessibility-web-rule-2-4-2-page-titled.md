@@ -5,6 +5,8 @@ sidebar_label: Page Titled (2.4.2)
 description: Rule-level Accessibility guidance for Page Titled (WCAG 2.4.2 Level A).
 slug: accessibility-web-rule-2-4-2-page-titled/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

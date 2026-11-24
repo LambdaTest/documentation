@@ -15,10 +15,12 @@ keywords:
 url: https://www.testmuai.com/support/docs/configure-yaml-for-integrating-gocd-pipelines-with-selenium-grid-online/
 site_name: TestMu AI
 slug: configure-yaml-for-integrating-gocd-pipelines-with-selenium-grid-online/
-canonical: https://www.testmu.ai/support/docs/configure-yaml-for-integrating-gocd-pipelines-with-selenium-grid-online/
+canonical: https://www.testmuai.com/support/docs/configure-yaml-for-integrating-gocd-pipelines-with-selenium-grid-online/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -107,6 +109,8 @@ Through our previous document, you were able to integrate GoCD pipelines with <B
 <img loading="lazy" src={require('../assets/images/yaml-integration/YAML-2.webp').default} alt="Image"  className="doc_img"/>
 
 **Step 4:** In Part 4 i.e. Job & Tasks, you need to specify a Job name as per your choice and enter the below commands.
+
+<VerifiedTag value="Verified" />
 
 ```
 npm install

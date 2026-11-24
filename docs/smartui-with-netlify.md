@@ -14,7 +14,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/smartui-with-netlify/
 site_name: TestMu AI
 slug: smartui-with-netlify/
-canonical: https://www.testmu.ai/support/docs/smartui-with-netlify/
+canonical: https://www.testmuai.com/support/docs/smartui-with-netlify/
 
 ---
 import Tabs from '@theme/Tabs';
@@ -386,11 +386,12 @@ If you encounter issues not covered here:
 - Review the [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide) for detailed solutions
 - Check [SmartUI Configuration Options](/support/docs/smartui-sdk-config-options) documentation
 - See [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data) for dynamic content issues
-- Visit [<BrandName /> Support](https://www.testmuai.com/support) for additional resources
-- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support)
+- Visit [<BrandName /> Support](https://www.testmuai.com/support/docs/) for additional resources
+- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support/docs/)
 
 </TabItem>
 </Tabs>
+
 
 ## Additional Resources
 

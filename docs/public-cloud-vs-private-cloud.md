@@ -13,7 +13,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/public-cloud-vs-private-cloud/
 site_name: TestMu AI
 slug: public-cloud-vs-private-cloud/
-canonical: https://www.testmu.ai/support/docs/public-cloud-vs-private-cloud/
+canonical: https://www.testmuai.com/support/docs/public-cloud-vs-private-cloud/
 ---
 
 

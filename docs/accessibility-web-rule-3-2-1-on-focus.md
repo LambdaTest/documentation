@@ -5,6 +5,8 @@ sidebar_label: On Focus (3.2.1)
 description: Rule-level Accessibility guidance for On Focus (WCAG 3.2.1 Level A).
 slug: accessibility-web-rule-3-2-1-on-focus/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

@@ -18,6 +18,7 @@ slug: kaneai-kb-js-snippets-and-workarounds/
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -199,6 +200,8 @@ The snippet runs in the context of the page and has full access to the DOM, `doc
 
 ### Set Date on a Read-Only Date Picker
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 const dateInput = document.querySelector('input[name="startDate"]');
 // Remove readonly temporarily
@@ -215,6 +218,8 @@ return 'Date set to 2026-03-15';
 
 React components use synthetic events. Use the native input setter:
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 const dateInput = document.querySelector('input[name="date"]');
 const nativeInputValueSetter = Object.getOwnPropertyDescriptor(
@@ -226,6 +231,8 @@ return 'React date picker value set';
 ```
 
 ### Set Date Range Picker
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 const startDate = document.querySelector('input[name="start"]');
@@ -253,6 +260,8 @@ return 'Date range set: Feb 1 - Feb 28, 2026';
 
 ### Convert Text to Lowercase and Validate
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 const title = document.querySelector('h1.page-title').textContent;
 const lowercase = title.toLowerCase();
@@ -264,6 +273,8 @@ if (lowercase === 'welcome to dashboard') {
 ```
 
 ### Extract and Validate a Substring
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 const orderText = document.querySelector('.order-id').textContent;
@@ -277,6 +288,8 @@ if (orderId.length === 5 && !isNaN(orderId)) {
 ```
 
 ### Trim Whitespace and Compare
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 const actual = document.querySelector('.username').textContent.trim();
@@ -296,6 +309,8 @@ if (actual === expected) {
 
 ### Assert Specific Table Cell Value
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 const rows = document.querySelectorAll('table.users-table tbody tr');
 const thirdRowFifthCol = rows[2].querySelectorAll('td')[4].textContent.trim();
@@ -308,6 +323,8 @@ if (thirdRowFifthCol === 'Active') {
 
 ### Count Table Rows
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 const rowCount = document.querySelectorAll('table tbody tr').length;
 if (rowCount === 10) {
@@ -318,6 +335,8 @@ if (rowCount === 10) {
 ```
 
 ### Validate Table is Sorted
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 const cells = Array.from(document.querySelectorAll('table tbody tr td:first-child'));
@@ -339,6 +358,8 @@ if (isSorted) {
 
 ### Copy Text to Clipboard
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 const text = document.querySelector('.referral-code').textContent;
 await navigator.clipboard.writeText(text);
@@ -346,6 +367,8 @@ return 'Copied to clipboard: ' + text;
 ```
 
 ### Read Clipboard Content
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 const clipText = await navigator.clipboard.readText();
@@ -360,6 +383,8 @@ return 'Clipboard contains: ' + clipText;
 
 ### Read a Local Storage Value
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 const token = localStorage.getItem('authToken');
 if (token) {
@@ -371,12 +396,16 @@ if (token) {
 
 ### Set a Local Storage Value (Test Setup)
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 localStorage.setItem('feature_flag_newUI', 'true');
 return 'Feature flag set';
 ```
 
 ### Clear Session Storage (Logout Simulation)
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 sessionStorage.clear();

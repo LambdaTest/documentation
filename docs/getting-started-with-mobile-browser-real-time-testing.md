@@ -96,7 +96,9 @@ The free plan includes 1 parallel session and 2 live sessions a month, each limi
 - To test a website, enter its URL and select your **Device** - Android, iOS, or [ChromeOS](/support/docs/chrome-os-testing/), and its version. To try the flow without your own site, use the <BrandName /> sample page [https://www.testmuai.com/selenium-playground/](https://www.testmuai.com/selenium-playground/).
 - Afterwards click on the **Start** button to initiate the testing process.
 
-<img loading="lazy" src={require('../assets/images/real-time-testing/mobile-browser/getting-started-with-mobile-browser.gif').default} alt="Image" className="doc_img"/>
+<video class="right-side" width="80%" controls id="vid">
+<source src= {require('../assets/images/real-time-testing/mobile-browser/getting-started-with-mobile-browser.mp4').default} style={{ height: '300px' }} type="video/mp4" />
+</video>
 
 ## Understanding the Dashboard
 The <BrandName /> dashboard is designed to simplify the testing process. Here's a breakdown of its key components:

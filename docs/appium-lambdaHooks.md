@@ -17,14 +17,8 @@ site_name: TestMu AI
 slug: appium-testmu-hooks/
 canonical: https://www.testmuai.com/support/docs/appium-testmu-hooks/
 ---
-import CodeBlock from '@theme/CodeBlock';
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import VerifiedTag from '@site/src/component/verifiedTag';
-import RealDeviceTag from '../src/component/realDevice';
-import VirtualDeviceTag from '../src/component/virtualDevice';
 
 
 
@@ -137,6 +131,15 @@ import VirtualDeviceTag from '../src/component/virtualDevice';
   }) }}
 />
 
+import CodeBlock from '@theme/CodeBlock';
+import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import RealDeviceTag from '../src/component/realDevice';
+import VirtualDeviceTag from '../src/component/virtualDevice';
+
+
 <RealDeviceTag value="Real Device" /> 
 <VirtualDeviceTag value="Virtual Device" />
 
@@ -154,11 +157,15 @@ Arguments | Example
 ```status``` | ```failed``` OR ```passed```
 ```remark``` | Any remark can be added here limited to 255 characters.
 
+<VerifiedTag value="Verified" />
+
 ```java
 ((JavascriptExecutor) driver).executeScript("lambda-hook: {\"action\": \"setTestStatus\",\"arguments\": {\"status\":\"failed\", \"remark\":\"This is a sample remark for failed test \"}} ");
 ```
 
 Here is a sample automation script in Java for the sample status & remark. Ensure to update the ```app_url```, ```username``` & ```accesskey``` in the below code.
+
+<VerifiedTag value="Verified" />
 
 ```java title="android.java"
 import io.appium.java_client.AppiumDriver;
@@ -213,6 +220,8 @@ Arguments | Example
 ------------- | -----------------------------------------------------------------------------------------
 ```lambda-name``` | For changing the Test Name.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 ((JavascriptExecutor) driver).executeScript("lambda-name=TestName");
 ```
@@ -234,6 +243,8 @@ You can use LambdaHooks to start and end a test case within a single Appium sess
 
 To start a test case, use the `lambda-testCase-start` hook:
 
+<VerifiedTag value="Verified" />
+
 ```java
 // To start a test case
 ((JavascriptExecutor) driver).executeScript("lambda-testCase-start=find Name");
@@ -242,6 +253,8 @@ To start a test case, use the `lambda-testCase-start` hook:
 #### Test Case End
 
 To end a test case, use the `lambda-testCase-end` hook:
+
+<VerifiedTag value="Verified" />
 
 ```java
 // To end a test case
@@ -375,6 +388,9 @@ Command Annotations allow you to add metadata and debugging information to your 
 ### Using Command Annotations
 
 #### Annotation Start
+
+<VerifiedTag value="Verified" />
+
 ```java
 driver.execute_script("lambdatest_executor: {\"action\": \"stepcontext\", \"arguments\": {\"data\": \"youtube\", \"level\": \"debug\"}}");
 ```
@@ -388,6 +404,8 @@ driver.execute_script("lambdatest_executor: {\"action\": \"stepcontext\", \"argu
 
 #### Annotation End
 To close the executor at the end of your script, pass `data` as an empty string:
+
+<VerifiedTag value="Verified" />
 
 ```java
 driver.execute_script("lambdatest_executor: {\"action\": \"stepcontext\", \"arguments\": {\"data\": \"\"}}");

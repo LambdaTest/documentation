@@ -10,9 +10,10 @@ keywords:
 url: https://www.testmuai.com/support/docs/integrations-with-project-management-tools/
 site_name: TestMu AI
 slug: integrations-with-project-management-tools/
-canonical: https://www.testmu.ai/support/docs/integrations-with-project-management-tools/
+canonical: https://www.testmuai.com/support/docs/integrations-with-project-management-tools/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

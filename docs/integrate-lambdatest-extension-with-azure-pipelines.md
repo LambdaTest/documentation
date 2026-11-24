@@ -22,6 +22,7 @@ slug: integrate-testmu-extension-with-azure-pipelines/
 canonical: https://www.testmuai.com/support/docs/integrate-testmu-extension-with-azure-pipelines/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 
@@ -222,6 +223,8 @@ Select your script to execute either from your repository using the "File Path" 
 
 **Note**: In order to run the tests, you will need to get your build name from the environment variables. Shown below is the syntax of getting the build name from the environment variables for Python test scripts.
 
+<VerifiedTag value="Verified" />
+
 ```py
 build_name = os.getenv("LT_BUILD_NAME")
 ```
@@ -292,6 +295,8 @@ You must keep this task at the end of your all tests, to let your tests execute 
 
 
 To setup your azure pipeline using <BrandName /> Azure Pipeline Extension, you can refer to the below example:
+
+<VerifiedTag value="Verified" />
 
 ```
 resources:

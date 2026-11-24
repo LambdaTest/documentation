@@ -13,7 +13,7 @@ image: /assets/images/og-images/selenium-testing-og.png
 url: https://www.testmuai.com/support/docs/wd-with-selenium-running-wd-automation-scripts-on-testmu-selenium-grid/
 site_name: TestMu AI
 slug: wd-with-selenium-running-wd-automation-scripts-on-testmu-selenium-grid/
-canonical: https://www.testmu.ai/support/docs/wd-with-selenium-running-wd-automation-scripts-on-testmu-selenium-grid/
+canonical: https://www.testmuai.com/support/docs/wd-with-selenium-running-wd-automation-scripts-on-testmu-selenium-grid/
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -21,6 +21,8 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import CookieTrackingLogin from '@site/src/component/CookieTracking';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -196,12 +198,17 @@ Complete these steps before running WD Selenium tests on TestMu AI.
 ---
 Clone the TestMu AI WD Selenium sample repository to your local machine.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git clone https://github.com/LambdaTest/wd-selenium-sample
 cd wd-selenium-sample
 ```
 
 Install the required dependencies:
+
+<VerifiedTag value="Verified" />
+
 ```bash
 npm i
 ```
@@ -214,6 +221,8 @@ Set your TestMu AI username and access key as environment variables.
 
 <TabItem value="bash" label="macOS / Linux" default>
 
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
@@ -224,6 +233,8 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
+
+  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
@@ -238,6 +249,8 @@ set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 ## Step 3: Configure Your Test Capabilities
 ---
 Update the capabilities in `conf/single.conf.js` to define the browser and platform settings.
+
+<VerifiedTag value="Verified" />
 
 ```js
 capabilities: [{
@@ -259,11 +272,17 @@ Generate capabilities for your test requirements with the [Capabilities Generato
 Execute the test using the following command.
 
 **Single test:**
+
+<VerifiedTag value="Verified" />
+
 ```bash
 npm run single
 ```
 
 **Parallel tests:**
+
+<VerifiedTag value="Verified" />
+
 ```bash
 npm run parallel
 ```

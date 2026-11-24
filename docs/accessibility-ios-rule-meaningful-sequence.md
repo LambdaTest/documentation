@@ -5,6 +5,8 @@ sidebar_label: Meaningful Sequence
 description: "Check that iOS content is announced in an order matching its visual sequence, so VoiceOver users don't hear the screen in a confusing order."
 slug: accessibility-ios-rule-meaningful-sequence/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

@@ -184,6 +184,8 @@ The runner spawns Chrome itself, so the CI image must have Chrome available on `
 
 Pass credentials directly on the run command using environment variables from your secrets store:
 
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`kane-cli run "Verify checkout flow completes" \\
@@ -218,6 +220,8 @@ Get your username and access key from the <BrandName /> [dashboard](https://www.
 ---
 
 ## Platform Guides
+
+<VerifiedTag value="Verified" />
 
 <Tabs groupId="ci-platform">
 
@@ -416,6 +420,8 @@ kane-cli run "Open the pricing page and verify the Pro plan is listed" \
 
 Run several tests and fail the pipeline if any fail:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 #!/bin/bash
 set -e
@@ -459,6 +465,8 @@ fi
 
 Commit a non-secret variables file to your repo, and inject secrets at runtime:
 
+<VerifiedTag value="Verified" />
+
 ```json
 {
   "app_url": { "value": "https://staging.myapp.com" },
@@ -467,6 +475,8 @@ Commit a non-secret variables file to your repo, and inject secrets at runtime:
 ```
 
 Merge with secrets in your pipeline:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 kane-cli run "Log in as {{email}} with {{password}} and verify dashboard" \

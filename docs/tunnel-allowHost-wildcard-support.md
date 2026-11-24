@@ -18,7 +18,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/tunnel-allowHost-wildcard-support/
 site_name: TestMu AI
 slug: tunnel-allowHost-wildcard-support/
-canonical: https://www.testmu.ai/support/docs/tunnel-allowHost-wildcard-support/
+canonical: https://www.testmuai.com/support/docs/tunnel-allowHost-wildcard-support/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

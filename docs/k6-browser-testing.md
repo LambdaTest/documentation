@@ -19,6 +19,7 @@ slug: k6-browser-testing/
 canonical: https://www.testmuai.com/support/docs/k6-browser-testing/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 
@@ -47,7 +48,9 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     "keywords": [
       "k6 browser testing",
       "grafana browser testing",
-      "automation testing with k6"
+      "automation testing with k6",
+      "how to use k6 for testing",
+      "k6 testing tutorial"
     ],
     "proficiencyLevel": "Beginner",
     "author": {
@@ -79,21 +82,21 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     "hasPart": [
       {
         "@type": "SoftwareSourceCode",
-        "name": "Prerequisites",
+        "name": "Set credentials on Windows",
         "codeSampleType": "code snippet",
         "programmingLanguage": "JavaScript",
         "text": "set LT_USERNAME = \"YOUR_LAMBDATEST_USERNAME\"\nset LT_ACCESS_KEY = \"YOUR_LAMBDATEST_ACCESS_KEY\""
       },
       {
         "@type": "SoftwareSourceCode",
-        "name": "Prerequisites",
+        "name": "Set credentials on macOS/Linux",
         "codeSampleType": "code snippet",
         "programmingLanguage": "JavaScript",
         "text": "export LT_USERNAME = \"YOUR_LAMBDATEST_USERNAME\"\nexport LT_ACCESS_KEY = \"YOUR_LAMBDATEST_ACCESS_KEY\""
       },
       {
         "@type": "SoftwareSourceCode",
-        "name": "Run Your First k6 Test",
+        "name": "Clone the k6 sample repository",
         "codeSampleType": "code snippet",
         "programmingLanguage": "Shell",
         "codeRepository": "https://github.com/LambdaTest/k6-browser-tests-sample",
@@ -108,7 +111,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       },
       {
         "@type": "SoftwareSourceCode",
-        "name": "Code sample 5",
+        "name": "Run the test",
         "codeSampleType": "code snippet",
         "programmingLanguage": "text",
         "text": "K6_BROWSER_ENABLED=true k6 run k6_sample.js"
@@ -152,12 +155,16 @@ k6 browser module aims to provide rough compatibility with the Playwright API, s
 
 **Windows**
 
+<VerifiedTag value="Verified" />
+
 ```js
 set LT_USERNAME = "YOUR_LAMBDATEST_USERNAME"
 set LT_ACCESS_KEY = "YOUR_LAMBDATEST_ACCESS_KEY"
 ```
 
 **macOS/Linux**
+
+<VerifiedTag value="Verified" />
 
 ```js
 export LT_USERNAME = "YOUR_LAMBDATEST_USERNAME"
@@ -173,6 +180,8 @@ Shown below are the steps on running k6 tests on the <BrandName /> platform.
 1. Clone the [k6-browser-tests-sample GitHub repository](https://github.com/LambdaTest/k6-browser-tests-sample) and
    switch to the cloned directory.
 
+<VerifiedTag value="Verified" />
+
 ```sh
 git clone https://github.com/LambdaTest/k6-browser-tests-sample.git
 cd k6-browser-tests-sample
@@ -185,6 +194,8 @@ cd k6-browser-tests-sample
 Once you are done with the above-mentioned steps, you can initiate your first k6 test on <BrandName />.
 
 > **Test Scenario**: The below test script runs on Chrome browser on macOS Ventura. It visits the DuckDuckGo search engine and searches for Playwright.
+
+<VerifiedTag value="Verified" />
 
 ```js
 import {chromium} from 'k6/experimental/browser';
@@ -242,6 +253,8 @@ export default async function() {
 ```
 
 4. Pass the below command to run the test.
+
+<VerifiedTag value="Verified" />
 
 ```
 K6_BROWSER_ENABLED=true k6 run k6_sample.js

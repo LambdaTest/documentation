@@ -5,6 +5,8 @@ sidebar_label: Non-accessible Interaction
 description: Rule-level Accessibility guidance for Non-accessible Interaction on Android.
 slug: accessibility-android-rule-non-accessible-interaction/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

@@ -5,6 +5,8 @@ sidebar_label: Focus Not Obscured (2.4.11)
 description: Rule-level Accessibility guidance for Focus Not Obscured (WCAG 2.4.11 Level AA).
 slug: accessibility-web-rule-2-4-11-focus-not-obscured/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

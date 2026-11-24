@@ -22,11 +22,12 @@ keywords:
 url: https://www.testmuai.com/support/docs/scim/
 site_name: TestMu AI
 slug: scim/
-canonical: https://www.testmu.ai/support/docs/scim/
+canonical: https://www.testmuai.com/support/docs/scim/
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -381,6 +382,8 @@ Any SCIM 2.0-compliant IDP works. Use these settings:
 
 ### Schema & Attributes
 
+<VerifiedTag value="Verified" />
+
 ```json
 {
   "schemas": [
@@ -421,6 +424,8 @@ For PATCH operations, use the fully qualified SCIM path:
 > **What can be updated:** `OrganizationRole`, `LambdatestGroup`, and `active` can be updated via SCIM. `userName` is immutable after creation. `name` can only be changed from <BrandName /> Account Settings.
 
 ### User API Operations
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val" groupId="user-op" queryString="user-op">
 <TabItem value="create-user" label="Create" default>
@@ -1065,6 +1070,8 @@ When a target is deleted, <BrandName /> does not create a replacement automatica
 
 ### Group Schema & Attributes
 
+<VerifiedTag value="Verified" />
+
 ```json
 {
   "schemas": [
@@ -1098,6 +1105,8 @@ For PATCH operations, use the fully qualified SCIM path:
 - **LambdatestRoles:** `urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:Group:LambdatestRoles`
 
 ### Group API Operations
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val" groupId="group-op" queryString="group-op">
 <TabItem value="create-group" label="Create" default>

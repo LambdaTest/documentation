@@ -13,7 +13,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/smartui-build-merging/
 site_name: TestMu AI
 slug: smartui-build-merging/
-canonical: https://www.testmu.ai/support/docs/smartui-build-merging/
+canonical: https://www.testmuai.com/support/docs/smartui-build-merging/
 
 ---
 import Tabs from '@theme/Tabs';
@@ -22,6 +22,7 @@ import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 ---
 
@@ -117,6 +118,8 @@ Build-level merging provides granular control over specific builds, allowing you
 
 ### Merge Command
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npx smartui merge build --source <source-build> --target <target-build>
 ```
@@ -129,6 +132,8 @@ npx smartui merge build --source <source-build> --target <target-build>
 4. **Confirmation**: Provides merge confirmation
 
 ### Example Workflow
+
+<VerifiedTag value="Verified" />
 
 ```bash
 # Merge specific builds
@@ -153,6 +158,8 @@ npx smartui merge build --source build-123 --target build-456
 ### 1. Build Promotion Strategy
 
 **Scenario**: Promoting specific builds across environments
+
+<VerifiedTag value="Verified" />
 
 ```bash
 # 1. Merge staging build to production

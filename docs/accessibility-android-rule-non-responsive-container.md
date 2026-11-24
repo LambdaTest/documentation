@@ -5,6 +5,8 @@ sidebar_label: Non-Responsive Container
 description: Rule-level Accessibility guidance for Non-Responsive Container Clips Text on Android.
 slug: accessibility-android-rule-non-responsive-container/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

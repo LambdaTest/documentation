@@ -18,7 +18,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/smartui-project-settings/
 site_name: TestMu AI
 slug: smartui-project-settings/
-canonical: https://www.testmu.ai/support/docs/smartui-project-settings/
+canonical: https://www.testmuai.com/support/docs/smartui-project-settings/
 
 ---
 import Tabs from '@theme/Tabs';
@@ -27,6 +27,7 @@ import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 
@@ -137,6 +138,8 @@ To access the Project Settings, follow these simple steps:
 
 ## Project Settings
 
+<VerifiedTag value="Verified" />
+
 <Tabs className='docs__val' groupId='project-settings'>
 <TabItem value='token' label='Project Token' default>
 
@@ -231,6 +234,42 @@ Strike a balance between highlighting important changes and ignoring noise. The 
 
 :::info
 Adjusting the Pixel Threshold in Comparison Settings will only affect new builds/screenshots captured after the update.
+:::
+
+**Color Sensitivity**
+
+Set how different two colors must be before Smart Ignore marks them as a change. Use it to catch subtle color changes, such as a button that moves to a slightly different shade.
+
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/smart-ignore/colour-sensitivity-default.webp').default} alt="Color Sensitivity setting with the YIQ algorithm and the Default preset selected" width="735" height="125" style={{width: '735px'}} className='doc_img'/>
+
+**Algorithm:** choose the color difference formula Smart Ignore uses.
+- **YIQ** (default): the formula Smart Ignore has always used. Projects that never change this setting keep their current results.
+- **CIEDE2000**, **CAM16-UCS** and **CAM02-UCS**: perceptual color difference formulas, built to match how people see color differences.
+
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/smart-ignore/colour-sensitivity-algorithms.webp').default} alt="Algorithm menu listing YIQ, CIEDE2000, CAM16-UCS and CAM02-UCS" width="500" height="232" className='doc_img'/>
+
+**Sensitivity:** pick a preset or enter your own value. Each value is in the selected algorithm's own units. A lower value is stricter: smaller color differences are marked.
+
+| Algorithm | Default | Only obvious | Any color change | Custom range |
+|-----------|---------|--------------|------------------|--------------|
+| YIQ | 352.15 | 72.4 | 12.5 | 3.31 to 352.15 |
+| CIEDE2000 | Not shown | 5 | 2 | 1 to 10 |
+| CAM16-UCS | Not shown | 5.9 | 2.4 | 1.2 to 11.6 |
+| CAM02-UCS | Not shown | 5.9 | 2.4 | 1.2 to 11.6 |
+
+- **Default** (YIQ only): keeps the original Smart Ignore behavior.
+- **Only obvious**: marks color changes that are clearly visible.
+- **Any color change**: also marks subtle shade changes.
+- **Custom**: enter a value inside the range shown next to the field. A value outside the range shows an error and the settings cannot be saved until it is fixed.
+
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/smart-ignore/colour-sensitivity-ciede2000.webp').default} alt="Color Sensitivity set to CIEDE2000 with Any color change selected and a value of 2" width="735" height="124" style={{width: '735px'}} className='doc_img'/>
+
+**Example:** a button changes from `#0969DA` to `#1D6EE0` (CIEDE2000 difference of about 2) and another button changes from `#0969DA` to `#2F76E9` (about 5.2). With **CIEDE2000** and **Only obvious** (5), Smart Ignore marks only the second button. With **Any color change** (2), it marks both.
+
+:::info
+- Color Sensitivity applies to Smart Ignore comparisons only. Strict (pixel-to-pixel) comparisons are not affected.
+- To have screenshot and build statuses follow Smart Ignore results, turn on the **Smart Ignore** toggle in the same section.
+- The setting applies to builds you run after saving it. It works for both web and app projects.
 :::
 
 **Error Highlight Color**
@@ -445,6 +484,7 @@ Only the **Admin** or **Creator** of the project can delete a project. Once dele
 
 </TabItem>
 </Tabs>
+
 
 ## Additional Resources
 

@@ -11,7 +11,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/responsive-testing/
 site_name: TestMu AI
 slug: responsive-testing/
-canonical: https://www.testmu.ai/support/docs/responsive-testing/
+canonical: https://www.testmuai.com/support/docs/responsive-testing/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

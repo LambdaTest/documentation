@@ -74,13 +74,13 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-04T12:50:18+05:30"
+    "dateModified": "2026-11-12T13:50:45+05:30"
   }) }}
 />
 
 The TestMu AI Agent Testing Platform tests a voice agent the same way it tests a chat agent, except the conversation happens as audio instead of text. It holds a spoken conversation with your agent, transcribes the responses, and scores the interaction across the same 9 quality metrics. It covers voice assistants and voice-enabled support agents.
 
-A voice agent uses a similar setup to a chat agent: describe the agent in a prompt, generate scenarios, and run an evaluation. The difference is the medium, audio rather than text.
+A voice agent uses a similar setup to a chat agent: describe the agent in a prompt, generate scenarios, and run an evaluation.
 
 ## How to Run Your First Voice Agent Test
 
@@ -133,6 +133,9 @@ Click **Generate Scenarios** to confirm.
 
 - Click **Create New Endpoint Profile**, or click **Import** to start from a Postman collection.
 - Endpoint profiles define multi-step API flows for complex authentication scenarios: login, session creation, and chat endpoints, with variable extraction and injection.
+- Keep secrets such as tokens and API keys in the vault instead of in plaintext in the profile.
+- For an agent hosted on LiveKit, the profile can connect over WebRTC transport, set with a server and a room-token endpoint. See how to [test LiveKit agents](/support/docs/test-livekit-agents/).
+- For an agent built on Deepgram Voice Agent, choose the **Deepgram Voice Agent** option, then add the API key (a vault secret is recommended), the agent ID, and how client tool calls are answered: with a mock reply or an HTTP call.
 
 <img loading="lazy" src={require('../assets/images/agent-to-agent/voice-agent-endpoint-profiles-tab.webp').default} alt="Endpoint Profiles tab with the Create New Endpoint Profile and Import options for a voice agent" width="1918" height="936"  className="doc_img"/>
 
@@ -158,34 +161,24 @@ See [Metrics](#metrics) for what each score measures.
 
 ---
 
-The platform conducts a voice-based conversation with your agent, following a generated scenario. The agent's voice responses are captured and transcribed, and the evaluation runs on the full audio conversation transcript.
-
-A voice agent is functionally identical to a chat agent, so every chat feature applies: workflow-based scenario generation, test suites, endpoint profiles, the playground, thresholds, go-live assessment, and scheduled runs. See how to [test a chat agent](/support/docs/chat-agent/) for the shared setup.
-
-## What Makes Voice Testing Different From Chat
-
----
-
-Voice testing differs from chat in the medium, not the metrics.
-
-- Conversations with the agent are conducted as audio (WAV) instead of text messages.
-- The agent's voice responses are captured and transcribed for evaluation.
-- Evaluation runs on the full audio conversation transcript.
+The platform conducts a voice-based conversation with your agent, following a generated scenario. The conversation runs as audio (WAV) instead of text messages. The agent's voice responses are captured and transcribed, and the evaluation runs on the full audio conversation transcript.
 
 ## Voice Agent Testing Features
 
 ---
 
-The steps above don't cover these features. They work the same way as on [chat agents](/support/docs/chat-agent/).
+The steps above don't cover these features. Most of them work the same way as on [chat agents](/support/docs/chat-agent/).
 
 - **Knowledge sources.** Besides uploading files on the **Prompt** tab, link Confluence, Jira, or S3 bucket sources to generate scenarios from them.
 - **Validation criteria.** Each generated scenario comes with its own validation criteria, and you can edit a scenario or its criteria before you run it.
+- **Maximum conversation turns.** Voice scenarios take a limit from 1 to 100 turns, 50 by default.
+- **Tool call checks.** Deepgram Voice Agent runs record the agent's tool calls. For those agents, list the calls you expect in a scenario's **Expected Tool Calls** field, one function name per line, with `(optional)` after any the agent may skip. Results show a **Tool Calls** tab with the pass or fail verdict, then every call the agent made with its outcome, turn, latency, arguments, and result.
 - **Test profiles.** A test profile holds the data a conversation runs with, such as a customer ID, and its values can be overridden per suite or per scenario. See [Test Suites and Test Profiles](/support/docs/agent-features-and-metrics/#test-suites-and-test-profiles).
 - **Playground.** Try your endpoint profile interactively across several turns before you run a full suite, to check that the connection works.
 - **Metrics and thresholds.** Choose which metrics a run uses and set the minimum passing score for each one. See [Metric Thresholds](/support/docs/agent-features-and-metrics/#metric-thresholds-and-custom-metrics).
-- **Live suite status.** Suite progress streams live while a run is in progress.
-- **Insights.** A summary across suites with pass rate, average score, and completed runs, plus a page for each suite with its run history and drill-down into individual runs.
-- **Go-Live Assessment.** A Green, Yellow, or Red verdict on whether your agent is ready for production, with blockers, action items, and AI insights. See [Go-Live Assessment](/support/docs/agent-features-and-metrics/#go-live-assessment).
+- **Live suite status.** Suite progress streams live while a run is in progress. Scenarios show as **Queued**, **Running**, or **Inconclusive**, and the results page and any open scenario panel update on their own. A run interrupted by a platform deploy is marked **Inconclusive**, a fault of the test harness rather than a verdict on your agent, and its credit hold is released automatically.
+- **Insights.** A summary across suites with pass rate, average score, and completed runs, plus a page for each suite with its scenario run history, latency, task completion, and drill-down into individual runs.
+- **Go-Live Assessment.** A Green, Yellow, or Red verdict on whether your agent is ready for production, with Functional, Quality, Risk, and Operational scores, blockers, action items, AI insights, and coverage. See [Go-Live Assessment](/support/docs/agent-features-and-metrics/#go-live-assessment).
 - **Scheduled runs.** Select **Schedule Run** from the dropdown next to a suite's **Run** button to run it on a preset or cron schedule, in your local time zone. See [Scheduled Runs](/support/docs/agent-features-and-metrics/#scheduled-runs).
 - **Slack notifications.** Voice suite runs post Started, Completed, and Error updates to Slack.
 

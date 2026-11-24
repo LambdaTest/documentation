@@ -13,7 +13,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/troubleshoot-espresso-tests/
 site_name: TestMu AI
 slug: troubleshoot-espresso-tests/
-canonical: https://www.testmu.ai/support/docs/troubleshoot-espresso-tests/
+canonical: https://www.testmuai.com/support/docs/troubleshoot-espresso-tests/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

@@ -11,7 +11,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/spirateam-integration/
 site_name: TestMu AI
 slug: spirateam-integration/
-canonical: https://www.testmu.ai/support/docs/spirateam-integration/
+canonical: https://www.testmuai.com/support/docs/spirateam-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

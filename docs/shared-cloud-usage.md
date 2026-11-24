@@ -9,7 +9,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/shared-cloud-usage/
 site_name: TestMu AI
 slug: shared-cloud-usage/
-canonical: https://www.testmu.ai/support/docs/shared-cloud-usage/
+canonical: https://www.testmuai.com/support/docs/shared-cloud-usage/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

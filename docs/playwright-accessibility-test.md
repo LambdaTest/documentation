@@ -12,7 +12,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/playwright-accessibility-test/
 site_name: TestMu AI
 slug: playwright-accessibility-test/
-canonical: https://www.testmu.ai/support/docs/playwright-accessibility-test/
+canonical: https://www.testmuai.com/support/docs/playwright-accessibility-test/
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -20,6 +20,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -211,6 +212,8 @@ If you are using your own project, make sure you update the **Hub endpoint** in 
 
 Configure the desired capabilities based on your test requirements. For example:
 
+<VerifiedTag value="Verified" />
+
 ```javascript
   const capabilities = {
     'browserName': 'Chrome',
@@ -238,6 +241,8 @@ Run the below mentioned commands in your terminal to setup the CLI and the envir
 
 <TabItem value="bash" label="Linux / MacOS" default>
 
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
@@ -248,6 +253,8 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
+
+  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
@@ -270,11 +277,15 @@ For precise control over which pages are scanned, you can trigger scans manually
 
 To use this, simply enable accessibility in your capabilities:
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 capabilities['accessibility'] = true; // Enable accessibility testing
 ```
 
 Then, trigger the scan directly within your test script when the desired page is fully loaded:
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 // Execute the LambdaTest accessibility scan hook
@@ -286,6 +297,8 @@ await page.evaluate('lambda-accessibility-scan');
 #### 2. Continuous Auto-Scanning
 If you want the accessibility scanner to run automatically on every single page navigation throughout the entire test session without writing manual hooks, you can pass the `accessibility.autoscan` capability:
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 capabilities['accessibility'] = true; // Enable accessibility testing
 capabilities['accessibility.autoscan'] = true; // Automatically scan all pages
@@ -293,6 +306,8 @@ capabilities['accessibility.autoscan'] = true; // Automatically scan all pages
 
 #### Advanced Capabilities
 You can also define other settings capabilities to refine your scan rules as described below:
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 const capabilities = {
@@ -312,6 +327,8 @@ This is the safest workaround when reports are not being generated for `pw-chrom
 ### Step 4: Add the following add-on Script
 <BrandName /> uses a Chrome extension for accessibility scans and report generation. In your `lambdatest-setup.js` file add these three lines after your page creation command as shown below:
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 // Load the extension for report generation of the accessibility tests
 await ltPage.goto("chrome://extensions/?id=johgkfjmgfeapgnbkmfkfkaholjbcnah");
@@ -328,6 +345,8 @@ At the moment, there is no confirmed public workaround for this behavior. Use **
 ### Step 5: Execute and Monitor your Test
 
 Now execute your tests and visit the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard). Click on the Accessibility tab and check the report generated.
+
+<VerifiedTag value="Verified" />
 
 ```bash
 npx playwright test --config=./playwright.config.js

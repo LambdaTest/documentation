@@ -12,7 +12,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/smartui-pdf-java-sdk/
 site_name: TestMu AI
 slug: smartui-pdf-java-sdk/
-canonical: https://www.testmu.ai/support/docs/smartui-pdf-java-sdk/
+canonical: https://www.testmuai.com/support/docs/smartui-pdf-java-sdk/
 
 ---
 import Tabs from '@theme/Tabs';
@@ -21,6 +21,7 @@ import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 
@@ -319,6 +320,8 @@ To initiate a SmartUI PDF Comparison Project, adhere to the following instructio
 
 Once your project is active, retrieve your `Project Token` from the application. Here's an example of a project token:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 projectToken = "123456#1234abcd-****-****-****-************"
 ```
@@ -326,6 +329,8 @@ projectToken = "123456#1234abcd-****-****-****-************"
 ## Step 1: Clone the Sample Project
 
 First, clone the sample project to get started:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 git clone https://github.com/LambdaTest/junit-selenium-sample.git
@@ -335,6 +340,8 @@ cd junit-selenium-sample
 ## Step 2: Install the SmartUI Java SDK
 
 Add the SmartUI Java SDK to your `pom.xml`:
+
+<VerifiedTag value="Verified" />
 
 ```xml
 <dependency>
@@ -346,11 +353,15 @@ Add the SmartUI Java SDK to your `pom.xml`:
 
 Then compile your project:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 mvn clean compile
 ```
 
 ## Step 3: Set up your credentials
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux' label='MacOS/Linux' default>
@@ -385,6 +396,8 @@ $env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ## Step 4: Upload PDFs using Java SDK
 
 You can upload PDFs in two modes:
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val'>
 
@@ -467,6 +480,8 @@ public class SmartuiPdfCloudTest {
 
 ## Step 6: Run your tests
 
+<VerifiedTag value="Verified" />
+
 ```bash
 mvn test
 ```
@@ -474,6 +489,8 @@ mvn test
 ## Advanced Java SDK Usage
 
 ### Batch Upload Example
+
+<VerifiedTag value="Verified" />
 
 ```java
 public class SmartuiPdfBatchTest {
@@ -502,6 +519,8 @@ public class SmartuiPdfBatchTest {
 ```
 
 ### Error Handling
+
+<VerifiedTag value="Verified" />
 
 ```java
 public class SmartuiPdfErrorHandling {
@@ -534,6 +553,8 @@ public class SmartuiPdfErrorHandling {
 - **Custom Tools**: Develop specialized tools for PDF comparison and validation
 
 ## Best Practices
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='best-practices'>
 <TabItem value='pdf-file-management' label='PDF File Management' default>
@@ -611,6 +632,8 @@ config.withBuildName(PDF-Comparison-v1.0-" + LocalDate.now());
 </Tabs>
 
 ## Troubleshooting
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='troubleshooting'>
 <TabItem value='pdf-upload-fails' label='PDF Upload Fails' default>
@@ -775,11 +798,12 @@ If you encounter issues not covered here:
 - Review the [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide) for detailed solutions
 - Check [PDF Comparison Overview](/support/docs/smartui-pdf-comparison) for PDF-specific information
 - See [PDF API Upload](/support/docs/smartui-pdf-api-upload) for alternative upload methods
-- Visit [<BrandName /> Support](https://www.testmuai.com/support) for additional resources
-- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support)
+- Visit [<BrandName /> Support](https://www.testmuai.com/support/docs/) for additional resources
+- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support/docs/)
 
 </TabItem>
 </Tabs>
+
 
 ## Additional Resources
 

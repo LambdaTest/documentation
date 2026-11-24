@@ -14,7 +14,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/netlify-integration-with-testmu/
 site_name: TestMu AI
 slug: netlify-integration-with-testmu/
-canonical: https://www.testmu.ai/support/docs/netlify-integration-with-testmu/
+canonical: https://www.testmuai.com/support/docs/netlify-integration-with-testmu/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

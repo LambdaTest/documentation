@@ -15,6 +15,8 @@ canonical: https://www.testmuai.com/support/docs/kane-cli-agent-mode/
 ---
 
 import { Redirect } from '@docusaurus/router';
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

@@ -5,6 +5,8 @@ sidebar_label: Fixed Orientation Lock
 description: "Flag iOS apps locked to a single orientation. Support both portrait and landscape unless one orientation is essential, for better accessibility."
 slug: accessibility-ios-rule-fixed-orientation-lock/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

@@ -11,7 +11,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/pre-loaded-chrome-extension/
 site_name: TestMu AI
 slug: pre-loaded-chrome-extension/
-canonical: https://www.testmu.ai/support/docs/pre-loaded-chrome-extension/
+canonical: https://www.testmuai.com/support/docs/pre-loaded-chrome-extension/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

@@ -25,6 +25,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 
@@ -181,6 +182,9 @@ You can run your script locally by executing it directly on your machine with yo
 
 
 <!-- 
+
+<VerifiedTag value="Verified" />
+
 ```Java
 // TextValidationTest.java
 import org.openqa.selenium.By;
@@ -230,6 +234,8 @@ When migrating your Selenium 4 tests from BrowserStack to <BrandName />, the fol
 
 2. <b>Create .env file</b>: Securely store your <BrandName /> credentials, create a .env file in the root of your project and add the following values:
 
+<VerifiedTag value="Verified" />
+
 ```
 LT_USERNAME="<your_username>"
 LT_ACCESS_KEY="<your_access_key>"
@@ -242,6 +248,8 @@ Once the .env file is set up, ensure your test framework correctly reads these v
 ### Add <BrandName /> Hub URL
 You need to now add the hub URL in the configuration settings of your test suite. Hub URL is of type String and it defines the Hub location to which the Selenium tests would be submitted for execution.
 
+<VerifiedTag value="Verified" />
+
 ```js
 @hub.lambdatest.com/wd/hub
 ```
@@ -251,6 +259,8 @@ You need to now add the hub URL in the configuration settings of your test suite
 Add your capabilities using the [<BrandName /> Capabilities Generator](https://www.testmuai.com/capabilities-generator/), where you can quickly generate the required browser, OS, and platform configurations for your test script. Select the environment you want, copy the capabilities, and paste them directly into your script to run on <BrandName />.
 
 
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
 
@@ -299,6 +309,8 @@ You can execute the same test that previously ran on a local environment by conn
 
 This test script performs a basic text validation on the website [<BrandName /> eCommerce Playground](https://ecommerce-playground.lambdatest.io/) and shows the expected execution results when running the test in the <BrandName /> cloud.
 
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
 

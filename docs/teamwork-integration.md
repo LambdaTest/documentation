@@ -20,7 +20,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/teamwork-integration/
 site_name: TestMu AI
 slug: teamwork-integration/
-canonical: https://www.testmu.ai/support/docs/teamwork-integration/
+canonical: https://www.testmuai.com/support/docs/teamwork-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

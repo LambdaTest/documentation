@@ -19,6 +19,8 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import RealDeviceTag from '../src/component/realDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -156,6 +158,10 @@ This feature is available exclusively with the **Real Device Plus Automation Clo
 To unlock this feature, purchase or upgrade to the required [plan](https://www.testmuai.com/pricing/). If you need assistance, please contact your <BrandName /> support representative, reach out to our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**[24×7 Chat Support]**</span>, or email us at **support@testmuai.com**.
 :::
 
+:::info Automating with Playwright?
+This guide covers the **Appium** flow. Apple Pay is also supported for **Playwright** tests on real iOS devices (Safari, Node.js) over the CDP endpoint. See [Apple Pay Automation in the Playwright iOS guide](/support/docs/playwright-ios-device/#apple-pay-automation).
+:::
+
 ---
 ## Use Cases
 
@@ -209,6 +215,9 @@ To enable Apple Pay automation, include the following capability in your automat
 <Tabs>
 
   <TabItem value="ios" label="iOS">
+
+    <VerifiedTag value="Verified" />
+
     <CodeBlock className="language-java">
 {`desired_caps = {
     "deviceName": "iPhone 16",
@@ -246,6 +255,9 @@ Before confirming the Apple Pay payment, you can optionally update the shipping 
 
 <Tabs>
   <TabItem value="python" label="Python">
+
+    <VerifiedTag value="Verified" />
+
     <CodeBlock className="language-python">
 {`driver.execute_script("applePayDetails", {
     "shippingDetails": {
@@ -274,6 +286,9 @@ Before confirming the Apple Pay payment, you can optionally update the shipping 
     </CodeBlock>
   </TabItem>
   <TabItem value="java" label="Java">
+
+    <VerifiedTag value="Verified" />
+
     <CodeBlock className="language-java">
 {`Map<String, Object> shippingDetails = new HashMap<>();
 shippingDetails.put("firstName", "John");
@@ -306,6 +321,9 @@ driver.executeScript("applePayDetails", applePayDetailsUpdate);`}
     </CodeBlock>
   </TabItem>
   <TabItem value="javascript" label="JavaScript">
+
+    <VerifiedTag value="Verified" />
+
     <CodeBlock className="language-javascript">
 {`await driver.executeScript("applePayDetails", {
     shippingDetails: {
@@ -355,6 +373,8 @@ All parameters are optional. You can provide only the details you need to update
 - This can be done using <BrandName /> hooks. A sample script is provided below to trigger confirmation of the Apple Pay payment step:
 
 
+<VerifiedTag value="Verified" />
+
 ```python
 driver.execute_script(
     'lambda_executor: {"action": "lambda-applepay", "arguments": {"confirmPayment": "true"}}'
@@ -367,6 +387,8 @@ driver.execute_script(
 
 - After confirming the Apple Pay payment, the device will prompt for the passcode to securely authorize the transaction. Your automation script must handle this prompt by entering the passcode using Appium's keyboard input methods to simulate the user securely confirming the payment.
   
+
+<VerifiedTag value="Verified" />
 
 ```Python
 driver.find_element(By.XPATH,"//*[@name=\"Passcode field\"]").send_keys("123456")

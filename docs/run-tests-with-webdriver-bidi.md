@@ -19,6 +19,7 @@ canonical: https://www.testmuai.com/support/docs/run-tests-with-webdriver-bidi/
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -192,17 +193,23 @@ These examples are written in TypeScript. You're free to use plain JavaScript in
 
 **1. Install WebdriverIO.** The package is published on the npm registry as [`webdriverio`](https://www.npmjs.com/package/webdriverio).
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npm install webdriverio
 ```
 
 A successful install adds the package to your project:
 
+<VerifiedTag value="Verified" />
+
 ```text
 added 247 packages, and audited 248 packages in 20s
 ```
 
 **2. Set your credentials.** Copy your **Username** and **Access Key** from **Settings → Account Settings**, then set them as environment variables.
+
+<VerifiedTag value="Verified" />
 
 <Tabs groupId="os">
   <TabItem value="unix" label="macOS / Linux" default>
@@ -232,6 +239,8 @@ set LT_ACCESS_KEY=your_access_key
 </Tabs>
 
 **3. Create `bidi-test.ts`.** It connects to the hub with BiDi enabled, opens the listing, captures a screenshot, validates the products, and marks the test **passed** or **failed** on the dashboard.
+
+<VerifiedTag value="Verified" />
 
 ```typescript
 // bidi-test.ts
@@ -292,11 +301,15 @@ run().catch((e) => {
 
 **4. Run it** with a TypeScript runner:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npx tsx bidi-test.ts
 ```
 
 WebdriverIO connects over BiDi, runs the checks, and marks the session **Passed**:
+
+<VerifiedTag value="Verified" />
 
 ```text
 Passed: "Components" loaded 15 products, screenshot saved
@@ -315,6 +328,8 @@ BiDi's event stream is what makes it useful for agents: the agent subscribes to 
 Here the agent watches network responses to confirm the page loaded its resources.
 
 **1. Create `agent-bidi.ts`.** It subscribes to BiDi network events, opens the listing, validates the browser's real activity, and marks the test **passed** or **failed** on the dashboard.
+
+<VerifiedTag value="Verified" />
 
 ```typescript
 // agent-bidi.ts
@@ -376,11 +391,15 @@ run().catch((e) => {
 
 **2. Run it:**
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npx tsx agent-bidi.ts
 ```
 
 The agent subscribes to the event stream and reports what the browser actually did:
+
+<VerifiedTag value="Verified" />
 
 ```text
 Validated: the page issued 56 network responses over BiDi

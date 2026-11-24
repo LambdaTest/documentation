@@ -8,7 +8,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/test-intelligence-overview/
 site_name: TestMu AI
 slug: test-intelligence-overview/
-canonical: https://www.testmu.ai/support/docs/test-intelligence-overview/
+canonical: https://www.testmuai.com/support/docs/test-intelligence-overview/
 ---
 
 

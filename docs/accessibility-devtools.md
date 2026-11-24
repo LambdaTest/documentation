@@ -5,6 +5,8 @@ sidebar_label: Accessibility DevTools
 description: Overview of TestMu AI Accessibility DevTools for manual and assisted web accessibility testing.
 slug: accessibility-devtools/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

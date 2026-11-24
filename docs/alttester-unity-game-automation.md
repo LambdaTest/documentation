@@ -15,6 +15,7 @@ slug: alttester-unity-game-automation/
 canonical: https://www.testmuai.com/support/docs/alttester-unity-game-automation/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -197,6 +198,8 @@ Clone the sample, create an isolated Python environment, and install the four de
 
 Clone the project and change into it.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git clone https://github.com/hjsblogger/testmuai-alttester-unity-game-automation.git
 cd testmuai-alttester-unity-game-automation
@@ -207,6 +210,8 @@ cd testmuai-alttester-unity-game-automation
 ***
 
 Create and activate a virtual environment, then install the requirements.
+
+<VerifiedTag value="Verified" />
 
 ```bash
 python -m venv venv
@@ -231,11 +236,15 @@ The suite depends on four packages. AltDriver drives the Unity objects, Appium p
 
 The suite reads your credentials and app URL from a `.env` file in the project root. The file is gitignored, so create it yourself.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 touch .env
 ```
 
 Add your TestMu AI credentials and the `lt://` URL of the app you uploaded.
+
+<VerifiedTag value="Verified" />
 
 ```ini
 LT_USERNAME=your_testmu_ai_username
@@ -262,6 +271,8 @@ Never commit `.env` or hard-code your Access Key in test files. The Access Key g
 ***
 
 The capabilities live in the `lt_options` dictionary in `tests/conftest.py`. This object tells TestMu AI which device to allocate and how to route the session through the tunnel. The sample sets it up for a real Android device and routes AltDriver traffic through a named tunnel.
+
+<VerifiedTag value="Verified" />
 
 ```python
 lt_options = {
@@ -314,6 +325,8 @@ The `tunnel` and `tunnelName` keys are the non-obvious part. AltDriver does not 
 
 The tunnel itself is launched by `conftest.py` with the binary at `tunnel/LT`. The session starts it with these flags before any test runs.
 
+<VerifiedTag value="Verified" />
+
 ```python
 [
     "./tunnel/LT",
@@ -337,11 +350,15 @@ With the environment configured and the tunnel binary in place, run the suite wi
 
 Run the full suite.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 pytest
 ```
 
 Run a single test file with verbose output.
+
+<VerifiedTag value="Verified" />
 
 ```bash
 pytest tests/test_start_page.py -v
@@ -352,6 +369,8 @@ pytest tests/test_user_journey.py -v
 ```
 
 Run one test by name.
+
+<VerifiedTag value="Verified" />
 
 ```bash
 pytest tests/test_main_menu.py::TestMainMenu::test_main_menu_page_loaded_correctly -v
@@ -380,6 +399,8 @@ Open a session to see its annotated steps, status, and logs.
 ***
 
 The suite runs on **Pixel 8 (Android 14)** by default. To target a different device or switch to iOS, edit the `lt_options` block in `tests/conftest.py`. The commented iOS lines show the keys to change.
+
+<VerifiedTag value="Verified" />
 
 ```python
 # Android

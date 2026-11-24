@@ -14,7 +14,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/smartui-with-bitbucket/
 site_name: TestMu AI
 slug: smartui-with-bitbucket/
-canonical: https://www.testmu.ai/support/docs/smartui-with-bitbucket/
+canonical: https://www.testmuai.com/support/docs/smartui-with-bitbucket/
 
 ---
 import Tabs from '@theme/Tabs';
@@ -23,6 +23,7 @@ import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 
@@ -216,6 +217,8 @@ Download or Clone the code sample from the <BrandName /> GitHub repository to ru
 - Now, write your workflow YAML file. Here is the sample file for your reference.
 - Commit this yaml file in your repository and make the required changes in your code to automatically trigger the pipeline.
 
+<VerifiedTag value="Verified" />
+
 ```yaml reference title="bitbucket-pipelines.yml"
 https://github.com/amanchopra1905/smartui-ci-cd-integrations/blob/bitbucket/bitbucket-pipelines.yml
 ```
@@ -231,6 +234,8 @@ You can also store your *LT_USERNAME*, *LT_ACCESS_KEY* and *PROJECT_TOKEN* as se
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/ci-cd-integration/gitlab/3.png').default} alt="Create New Project" width="" height=""/>
 
 ## Best Practices
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='best-practices'>
 <TabItem value='secret-management' label='Secret Management' default>
@@ -309,6 +314,8 @@ variables:
 </Tabs>
 
 ## Troubleshooting
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='troubleshooting'>
 <TabItem value='pipeline-fails-with-variable-not-found' label='Pipeline Fails with Variable Not Found' default>
@@ -480,11 +487,12 @@ If you encounter issues not covered here:
 
 - Review [Bitbucket Pipelines Documentation](https://support.atlassian.com/bitbucket-cloud/docs/get-started-with-bitbucket-pipelines/)
 - Check [SmartUI CLI Documentation](/support/docs/smartui-cli) for CLI-specific issues
-- Visit [<BrandName /> Support](https://www.testmuai.com/support) for additional resources
-- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support)
+- Visit [<BrandName /> Support](https://www.testmuai.com/support/docs/) for additional resources
+- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support/docs/)
 
 </TabItem>
 </Tabs>
+
 
 ## Additional Resources
 

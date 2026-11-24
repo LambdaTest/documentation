@@ -14,7 +14,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/smartui-cli-request-headers/
 site_name: TestMu AI
 slug: smartui-cli-request-headers/
-canonical: https://www.testmu.ai/support/docs/smartui-cli-request-headers/
+canonical: https://www.testmuai.com/support/docs/smartui-cli-request-headers/
 
 ---
 import Tabs from '@theme/Tabs';
@@ -23,6 +23,7 @@ import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -100,6 +101,8 @@ To use this feature, you need to add the `requestHeaders` array to your `smartui
 ### Example Configuration
 
 Below is an example of how to configure custom headers in your `smartui.json` file.
+
+<VerifiedTag value="Verified" />
 
 ```json title="smartui.json"
 {

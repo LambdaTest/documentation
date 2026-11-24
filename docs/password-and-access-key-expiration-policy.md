@@ -15,7 +15,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/password-and-access-key-expiration-policy/
 site_name: TestMu AI
 slug: password-and-access-key-expiration-policy/
-canonical: https://www.testmu.ai/support/docs/password-and-access-key-expiration-policy/
+canonical: https://www.testmuai.com/support/docs/password-and-access-key-expiration-policy/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

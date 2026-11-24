@@ -8,6 +8,8 @@ url: https://www.testmuai.com/support/docs/accessibility-app-scanner/
 site_name: TestMu AI
 canonical: https://www.testmuai.com/support/docs/accessibility-app-scanner/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -100,6 +102,7 @@ App Scanner is a manual mobile-app workflow. If you are running Appium code, use
 
 ## Related docs
 
+- [Scan Configurations for Mobile App Accessibility (Manual)](/support/docs/accessibility-app-scanner-scan-configurations/)
 - [Native App Automation Appium (Overview)](/support/docs/accessibility-native-app-automation-test/)
 - [Mobile App Accessibility Testing](/support/docs/kaneai-mobile-app-accessibility/)
 - [Tag Support for Accessibility Scans](/support/docs/accessibility-tag-support/)

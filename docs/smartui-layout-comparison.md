@@ -15,7 +15,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/smartui-layout-comparison/
 site_name: TestMu AI
 slug: smartui-layout-testing/
-canonical: https://www.testmu.ai/support/docs/smartui-layout-testing/
+canonical: https://www.testmuai.com/support/docs/smartui-layout-testing/
 
 ---
 import Tabs from '@theme/Tabs';
@@ -23,6 +23,9 @@ import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import VerifiedTag from '@site/src/component/verifiedTag';
+import { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -197,6 +200,8 @@ For **`LT:Options`**, you still set **`smartUI.project`** (and `visual`, credent
 ### 2. Using SmartUI SDK (smartUISnapshot command)
 If you are using the SmartUI SDK (`smartui exec`), you need to set the `ignoreType` option to `"layout"` when taking a specific screenshot within your code:
 
+<VerifiedTag value="Verified" />
+
 <Tabs>
   <TabItem value='javascript' label='JavaScript' default>
     ```javascript
@@ -289,6 +294,8 @@ The layout comparison feature is particularly valuable in the following scenario
 
 Here's a complete example showing how to implement layout comparison in a test:
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 describe('Layout Structure Test', () => {
   it('should verify layout structure while ignoring content and style changes', async () => {
@@ -308,6 +315,7 @@ describe('Layout Structure Test', () => {
   });
 });
 ```
+
 
 ## Additional Resources
 
