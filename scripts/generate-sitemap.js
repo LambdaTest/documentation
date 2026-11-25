@@ -114,7 +114,7 @@ function main() {
   const seen = new Set();
   for (const group of groups) {
     for (const p of collectPages(group.pages, [])) {
-      if (!/^docs\//.test(p) || seen.has(p)) continue;
+      if (/^https?:\/\//.test(p) || seen.has(p)) continue;
       seen.add(p);
       pagePaths.push(p);
     }
@@ -135,7 +135,7 @@ function main() {
     }
     // No trailing slash: production 308-redirects "/slug/" to "/slug" and the
     // page canonical is the slash-less URL.
-    urls.push({ loc: `${SITE_ORIGIN}/${pagePath}`, lastmod: lastModified(abs) });
+    urls.push({ loc: `${SITE_ORIGIN}/docs/${pagePath.replace(/^docs\//, '')}`, lastmod: lastModified(abs) });
   }
 
   const body = urls

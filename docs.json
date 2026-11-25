@@ -177,7 +177,7 @@
                 "pages": [
                   "docs/kane-cli-cicd",
                   "docs/kane-cli-skills",
-                  "docs/kane-cli-agents-md",
+                  "kane-cli-agents-md",
                   "docs/kane-cli-claude-code-plugin"
                 ]
               },
@@ -193,7 +193,7 @@
                       "docs/kane-cli-troubleshooting-sharp"
                     ]
                   },
-                  "docs/kane-cli-changelog"
+                  "kane-cli-changelog"
                 ]
               }
             ]
