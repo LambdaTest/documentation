@@ -144,7 +144,7 @@ No. The platform sends test inputs to your agent endpoint, the same inputs any u
 
 ### HIPAA Compliance
 
-TestMu AI follows HIPAA guidelines. Healthcare teams should use synthetic patient data in test scenarios rather than real patient records.
+TestMu AI is HIPAA-ready: its controls map to HIPAA safeguards, and its SOC 2 Type II report includes HIPAA. Ask the sales team whether a business associate agreement (BAA) can be part of your enterprise agreement. Healthcare teams should use synthetic patient data in test scenarios rather than real patient records.
 
 ### Who Can See Your Evaluation Results
 
