@@ -14,7 +14,7 @@ keywords:
   - Visual Regression Run Specific Test
   - Visual Regression Testing Environment
   - How to Run Visual Regression Tests
-url: https://www.testmuai.com/support/docs/ssmartui-slack-integration/
+url: https://www.testmuai.com/support/docs/smartui-slack-integration/
 site_name: TestMu AI
 slug: smartui-slack-integration/
 canonical: https://www.testmuai.com/support/docs/smartui-slack-integration/
@@ -83,7 +83,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-09T19:10:37+05:30"
+    "dateModified": "2026-11-25T15:30:00+05:30"
   }) }}
 />
 
@@ -112,9 +112,16 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         {
           "@type": "HowToStep",
           "position": 3,
-          "name": "Step 3: Update the Notification Settings and Trigger the Job",
-          "text": "Once you integrate Slack, you need to configure notification settings to get test automation notifications on your integrated Slack channel. Go to your desired Project. Click on the Project Settings button. In the Notifications tab, toggle the slack alerts to true Click on the Update Settings button. Now again trigger the project with the changes and visit the Slack channel to view the notification containing meta information about the build. Once you save that configuration, you will start receiving the custom notifications in Slack!",
-          "url": "https://www.testmuai.com/support/docs/smartui-slack-integration/#step-3-update-the-notification-settings-and-trigger-the-job"
+          "name": "Step 3: Choose Which Builds Send a Slack Message",
+          "text": "Go to your desired Project. Click on the Project Settings button and open the Notifications tab. Turn on Receive Slack alerts for builds in this project. Under Send a Slack message when, tick Changes found, New baseline or Build completed. Click on the Save Settings button.",
+          "url": "https://www.testmuai.com/support/docs/smartui-slack-integration/#step-3-choose-which-builds-send-a-slack-message"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Run a Build and Check Slack",
+          "text": "Run a build in the project and open the Slack channel you selected in Step 2. Each message links to the build in SmartUI.",
+          "url": "https://www.testmuai.com/support/docs/smartui-slack-integration/#step-4-run-a-build-and-check-slack"
         }
       ]
     }
@@ -153,23 +160,81 @@ A notification would be shared on to all the members belonging to that channel, 
 <source src= {require('../assets/videos/hyperexecute/integration/products/slack/2.mp4').default} type="video/mp4" />
 </video>
 
-## Step 3: Update the Notification Settings and Trigger the Job
+Once Slack is connected, it shows as **Connected** under **My Integrations**.
 
-Once you integrate Slack, you need to configure notification settings to get test automation notifications on your integrated Slack channel.
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/slack-alerts/integrations.png').default} alt="Slack shown as Connected under My Integrations" className='doc_img' width="1568" height="507"/>
+
+## Step 3: Choose Which Builds Send a Slack Message
+
+Slack alerts are set per project.
 
 - Go to your desired Project.
-- Click on the **Project Settings** button.
-- In the **Notifications** tab, toggle the slack alerts to true
-- Click on the **Update Settings** button.
-- Now again trigger the project with the changes and visit the Slack channel to view the notification containing meta information about the build.
+- Click on the **Project Settings** button and open the **Notifications** tab.
+- Turn on **Receive Slack alerts for builds in this project**.
+- Under **Send a Slack message when**, tick the events you want.
+- Click on the **Save Settings** button.
 
-<video class="right-side" width="100%" controls id="vid">
-<source src= {require('../assets/videos/smart-ui/slack-integration/slack-integration.mp4').default} type="video/mp4" />
-</video>
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/slack-alerts/settings.png').default} alt="Project Settings Notifications tab with Slack alerts on and the Changes found, New baseline and Build completed events" className='doc_img' width="1568" height="456"/>
 
-- Once you save that configuration, you will start receiving the custom notifications in Slack!
+| Event | Default | What you get |
+|---|---|---|
+| **Changes found** | On | An alert when a build has screenshots with changes found, listing each mismatched screenshot. |
+| **New baseline** | On | An alert when the project baseline changes. |
+| **Build completed** | Off | One message for every build that finishes, whatever its result. |
 
-<img loading="lazy" src={require('../assets/videos/smart-ui/slack-integration/slack-notification.png').default} alt="add slack-notification"  className='doc_img' width="1347" height="648"/>
+:::note
+The event checkboxes appear only after Slack is connected for your organization. Until then, the Notifications tab asks you to configure the Slack integration.
+:::
+
+## Step 4: Run a Build and Check Slack
+
+Run a build in the project and open the Slack channel you selected in Step 2. Each message links to the build in SmartUI.
+
+## Slack Messages Sent by SmartUI
+
+### Changes Found Alert
+
+Sent when **Changes found** is ticked and a build has screenshots with changes found. It lists each mismatched screenshot with its mismatch percentage and configuration.
+
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/slack-alerts/msg-changes-found-alert.png').default} alt="Slack changes found alert listing a screenshot with its mismatch percentage" className='doc_img' style={{width: '720px', maxWidth: '100%'}}/>
+
+### Build Completed Messages
+
+Sent when **Build completed** is ticked. Each message shows the build result, a link to the build, the project, who ran it, the screenshot counts, the build ID and a button to open the build.
+
+| Message | When it is sent |
+|---|---|
+| **Build approved** | Every screenshot in the build is approved. |
+| **Build needs review** | The build has new screenshots, changes found or screenshots under review. The button opens the screenshots to review. |
+| **Baseline build completed** | A baseline build finished. Shows the number of screenshots. |
+| **Build failed** | The build finished without capturing any screenshots. |
+
+<div style={{display: 'flex', flexWrap: 'wrap', gap: '20px', justifyContent: 'center', alignItems: 'flex-start'}}>
+  <figure style={{flex: '1 1 300px', maxWidth: '400px', margin: 0}}>
+    <img loading="lazy" src={require('../assets/images/smart-visual-testing/slack-alerts/msg-approved.png').default} alt="Slack message: Build approved, with Total and Approved counts" className="doc_img" style={{width: '100%'}}/>
+    <figcaption style={{textAlign: 'center', marginTop: '8px', fontWeight: 600}}>Build approved</figcaption>
+  </figure>
+  <figure style={{flex: '1 1 300px', maxWidth: '400px', margin: 0}}>
+    <img loading="lazy" src={require('../assets/images/smart-visual-testing/slack-alerts/msg-needs-review-new.png').default} alt="Slack message: Build needs review, with Total and New counts and a Review 1 Screenshot button" className="doc_img" style={{width: '100%'}}/>
+    <figcaption style={{textAlign: 'center', marginTop: '8px', fontWeight: 600}}>Build needs review: new screenshots</figcaption>
+  </figure>
+  <figure style={{flex: '1 1 300px', maxWidth: '400px', margin: 0}}>
+    <img loading="lazy" src={require('../assets/images/smart-visual-testing/slack-alerts/msg-needs-review-changes.png').default} alt="Slack message: Build needs review, with Total and Changes found counts" className="doc_img" style={{width: '100%'}}/>
+    <figcaption style={{textAlign: 'center', marginTop: '8px', fontWeight: 600}}>Build needs review: changes found</figcaption>
+  </figure>
+  <figure style={{flex: '1 1 300px', maxWidth: '400px', margin: 0}}>
+    <img loading="lazy" src={require('../assets/images/smart-visual-testing/slack-alerts/msg-baseline.png').default} alt="Slack message: Baseline build completed, with the screenshot count" className="doc_img" style={{width: '100%'}}/>
+    <figcaption style={{textAlign: 'center', marginTop: '8px', fontWeight: 600}}>Baseline build completed</figcaption>
+  </figure>
+</div>
+
+### How SmartUI Picks the Message
+
+- A build sends one message. If it has changes found and **Changes found** is ticked, you get the changes found alert instead of the build completed message.
+- If **Changes found** is not ticked and **Build completed** is, a build with changes found sends **Build needs review** with the counts.
+- The build completed message is sent shortly after the build finishes, so the counts are final. Builds that finish per test session wait until the last session has ended.
+- Rerunning a single screenshot does not send a build completed message.
+- If **Build completed** is not ticked, the project gets the same alerts as before.
 
 ## Remove the Slack Integration
 
