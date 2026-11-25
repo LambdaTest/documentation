@@ -1,17 +1,16 @@
 ---
 id: test-retell-agents
-toc_max_heading_level: 3
-title: How to Test Retell Agents With TestMu AI
+toc_max_heading_level: 2
+title: Retell Integration for TestMu AI Agent Testing
 hide_title: false
-sidebar_label: Test Retell Agents
-description: Automated phone, voice, and chat testing for Retell agents with TestMu AI. Drive multi-turn conversations across personas and edge cases, then score every run.
+sidebar_label: Retell
+description: Connect a Retell agent to TestMu AI Agent Testing to import its prompt and tools and check every tool it calls during real test calls.
 keywords:
+ - retell integration
  - test retell agents
- - retell agent testing
- - phone agent testing
- - voice agent testing
- - chat agent testing
- - retell agent testing integration
+ - retell tool call testing
+ - retell ai agent testing
+ - retell phone agent testing
 url: https://www.testmuai.com/support/docs/test-retell-agents/
 site_name: TestMu AI
 slug: test-retell-agents/
@@ -33,8 +32,8 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       "@type": "WebPage",
       "@id": "https://www.testmuai.com/support/docs/test-retell-agents/"
     },
-    "headline": "How to Test Retell Agents With TestMu AI",
-    "description": "Automated phone, voice, and chat testing for Retell agents with TestMu AI. Drive multi-turn conversations across personas and edge cases, then score every run.",
+    "headline": "Retell Integration for TestMu AI Agent Testing",
+    "description": "Connect a Retell agent to TestMu AI Agent Testing to import its prompt and tools and check every tool it calls during real test calls.",
     "url": "https://www.testmuai.com/support/docs/test-retell-agents/",
     "image": {
       "@type": "ImageObject",
@@ -45,9 +44,9 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     "inLanguage": "en",
     "articleSection": "Agent Testing",
     "keywords": [
+      "retell integration",
       "test retell agents",
-      "retell agent testing",
-      "phone agent testing"
+      "retell tool call testing"
     ],
     "author": {
       "@type": "Organization",
@@ -75,216 +74,136 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-10-14T12:28:06+05:30"
+    "dateModified": "2026-11-20T12:00:00+05:30"
   }) }}
 />
 
-Retell builds agents as either a single prompt or a node-based Conversation Flow, then deploys that same logic to phone, web voice, chat, and SMS. The TestMu AI Agent Testing Platform lets you test your Retell agent on whichever surface it runs, driving multi-turn conversations across personas and edge cases and scoring each run.
+The Retell integration connects a Retell agent to a Phone Caller agent in the TestMu AI Agent Testing Platform. TestMu AI imports the agent's prompt and tool catalog, and after every test call it checks which tools the agent actually called. A transcript shows what the agent said. The integration shows what it did behind the call.
 
-To connect one, you need a Retell account with a published agent, a Retell number (or a number over SIP trunking) for phone testing, the prompt, PRD, or knowledge base for scenario generation, and a TestMu AI workspace with agent-testing permissions.
+Without the integration, TestMu AI still tests any Retell agent that answers a phone number, with transcripts, recordings, grading, and call quality metrics. Connect it when you also want the prompt imported and the tool calls checked.
 
-## How do you test a Retell Conversation Flow agent?
-
----
-
-How you cover a Retell agent depends on which shape it takes, plus a few Retell-specific gotchas:
-
-- **Conversation Flow is a graph.** Flow agents are graphs, so coverage means every node rather than every intent.
-- **Chat drifts from voice.** Chat agents are created by converting a voice agent, and the two drift apart after conversion. Test both.
-- **Public vs private key.** The chat widget uses a public key while the API uses a private key. Confirm which one is in play.
-- **Press Digit timing.** Press Digit timing decides whether external IVR navigation succeeds, so DTMF needs dedicated scenarios.
-
-## Does one Retell agent behave the same on phone, voice, and chat?
+## Integration at a Glance
 
 ---
 
-Generate scenarios from the prompt, Conversation Flow, or supporting docs, then follow the setup for the surface you test:
+| Item | Details |
+|---|---|
+| **Agent type** | Phone Caller, inbound. TestMu AI calls your Retell agent's phone number. |
+| **Where you connect** | The agent's **Integrations** tab, on the **Retell** card. |
+| **What you need** | A Retell API key and the agent's ID. |
+| **What is imported** | The agent's prompt and tool catalog. |
+| **What is checked** | Whether the agent called each tool a scenario expects, with the arguments and result of every call. |
 
-- **Phone** covers inbound, outbound, and batch callers over the phone network: DTMF entry, Press Digit navigation through external IVR menus, transfers, voicemail handling, and carrier latency. Setup: [phone agent testing](/support/docs/phone-agent/).
-- **Voice** reaches the agent through a web call rather than a phone number, over the web call API. It isolates the speech pipeline, so STT and TTS accuracy, turn-taking, and interruption handling get tested without telephony noise. Setup: [voice agent testing](/support/docs/voice-agent/).
-- **Chat** runs text conversations through a Retell chat agent or the embedded widget over the Chat API, catching reasoning, tool call, and grounding failures, and can run on every commit. Setup: [chat agent testing](/support/docs/chat-agent/).
-
-## How do you check which tools a Retell agent actually called? {#retell-integration}
+## Prerequisites
 
 ---
 
-A call transcript shows what the agent said, not which tools it ran. Connect your Retell agent in the **Integrations** tab of a Phone Caller agent with your **Retell API Key** and **Retell Agent ID**, and TestMu AI imports the agent's prompt and tool catalog, then marks each tool a scenario expects as **Called** or **Not Called** after every test call. The sections below cover when to use the Retell integration, the setup, the results, and troubleshooting.
+### In Retell
 
-### When to Use the Retell Integration
+- A published agent with a Retell number, or a number connected over SIP trunking.
+- A Retell API key and the agent's ID, obtained through your organization's approved credential process.
 
-The integration is optional. Choose based on what you need to check.
+### In TestMu AI
 
-- Without the integration, TestMu AI tests any agent that answers a phone number, on any platform, with no code changes, SDK, or test build. Each result includes the transcript, the call recording, pass or fail grading against your criteria, and call and audio quality metrics.
-- Connect the integration when you want to import your Retell agent's prompt and tool catalog, or check which tools it invoked during each test call.
-
-For a side-by-side comparison, see [How the Retell Integration Works](#how-the-retell-integration-works).
-
-TestMu AI offers this integration for ElevenLabs, Retell, Vapi, Salesforce Agentforce, Amazon Connect (Amazon Q in Connect), and Cartesia Managed Agents. Cartesia Line SDK agents are not supported. For the other integration guides, see the [ElevenLabs integration](/support/docs/test-elevenlabs-agents/#elevenlabs-integration), the [Vapi integration](/support/docs/test-vapi-agents/#vapi-integration), the [Agentforce integration](/support/docs/test-agentforce-agents/#agentforce-integration), and the [Amazon Q in Connect integration](/support/docs/test-amazon-connect-bots/#amazon-q-in-connect).
-
-### Retell Integration Prerequisites
-
-- An agent in TestMu AI with the **Phone Caller** agent type.
-- A voice agent hosted on **Retell**.
-- The Retell API key and the Retell agent identifier for the voice agent that you want to test.
-
-This section covers the TestMu AI workflow only. Obtain the API key and agent identifier from Retell through your organization's approved credential process.
+- A Phone Caller agent with the call type **Inbound (Bot receives calls)**, with the Retell agent's phone number added on its **Phone Numbers** tab. See [Test an Inbound Phone Agent](/support/docs/phone-agent/#test-an-inbound-phone-agent-pre-analysis).
 
 :::warning
-API keys are secrets. Enter them only in the TestMu AI integration form. Do not put them in a scenario, prompt, test data file, or source code.
+API keys are secrets. Enter them only in the integration form, never in a scenario, prompt, test data file, or source code.
 :::
 
-### Connect Retell
+## Connect Retell
 
-Connect your Retell agent from the **Integrations** tab of the Phone Caller agent that will test it.
+---
 
-1. In TestMu AI, open the **Phone Caller** agent that will test your Retell agent.
-2. Select **Integrations** from the agent navigation.
-3. Select **Connect** on the Retell provider card.
-4. Enter the values for Retell. See [Retell Integration Fields](#retell-integration-fields).
-5. Select **Save**.
+1. Open the Phone Caller agent and select **Integrations**.
+2. Select **Connect** on the **Retell** card.
 
-TestMu AI encrypts the saved credentials and scopes them to this Phone Caller agent.
+<img loading="lazy" src={require('../assets/images/agent-to-agent/agent-integrations-tab.webp').default} alt="Integrations tab of a Phone Caller Inbound agent, with Connect buttons on the ElevenLabs, Retell, VAPI, Agentforce, Cartesia, and Amazon Connect cards" width="1918" height="943" className="doc_img"/>
 
-#### Retell Integration Fields
+3. Fill in the fields, then select **Save**.
 
-| Field | Required | Description |
+| Field | Required | What to enter |
 |---|---|---|
 | **Retell API Key** | Yes | Your Retell API key. |
-| **Retell Agent ID** | Yes | The identifier of the Retell agent that you want to test. |
+| **Retell Agent ID** | Yes | The ID of the Retell agent you want to test. |
 
-:::note
-One provider can be active per agent. To test a different provider agent or use different credentials, use a separate TestMu AI agent.
-:::
+The connection works when the card shows **Connected** and a **Re-sync** button. TestMu AI stores the credentials as HyperExecute secrets, scoped to this agent. One provider can be connected per agent, so use a separate TestMu AI agent to test another Retell agent or provider.
 
-#### Confirm the Connection
+## Sync the Prompt and Tools
 
-After you select **Save**, confirm that Retell is connected.
+---
 
-1. Check that the Retell provider card shows **Connected** or provides **Re-sync**.
-2. If necessary, reopen the provider settings and confirm that the expected agent identifier is displayed.
-3. Run a [smoke test](#run-a-smoke-test) in a small suite before you run a full regression suite.
+On the **Prompt** tab, select **Sync from Retell**. TestMu AI imports the agent's prompt and refreshes its tool catalog: the actions the agent can take, such as booking an appointment or transferring to a human. Generate your scenarios from the imported prompt.
 
-### Sync the Prompt and Tools
+Sync again after you change the agent in Retell, so the prompt and tools match what is deployed.
 
-Syncing imports the prompt and tool catalog of the connected Retell agent. The tool catalog lists the actions the agent can take, such as booking an appointment, looking up an order, or transferring to a human.
+## Select the Expected Tools for Each Scenario
 
-1. Open **Prompt**.
-2. Select **Sync from Retell**.
+---
 
-TestMu AI imports the prompt. If the provider exposes tools, TestMu AI also refreshes the available tools. Author your scenarios against the imported prompt and tools.
-
-:::tip
-Sync again after you change the agent on Retell, so that the prompt and tools in TestMu AI match the deployed agent.
-:::
-
-### Set Expected Tool Calls for Each Scenario
-
-Each scenario has its own list of expected tools. On every run, TestMu AI checks whether the agent invoked each selected tool.
-
-1. Open **Scenarios**.
-2. Create or edit a scenario.
-3. In the scenario editor, which lists every tool from the synced catalog, select each tool that the agent is expected to invoke during the conversation.
-
-The selected tools become the validation contract for the scenario, so select only the tools that the scenario must validate. For example:
+Open a scenario and, in the scenario editor, select each tool from the synced catalog that the scenario expects the agent to call.
 
 | Example scenario | Expected tools |
 |---|---|
 | Booking | `check_availability`, `book_appointment` |
 | Cancellation | `cancel_appointment` |
 
-:::note
-If the tool catalog changes on Retell, sync again. The scenario editor warns you when a scenario's selected tools no longer match the current catalog.
-:::
+- Select only the tools the scenario must check. The tool check passes only if the agent called all of them.
+- Scenarios with no tools selected still run, without a tool check.
+- If the catalog changes in Retell, sync again. The scenario editor warns you when a selected tool no longer exists.
 
-### Run a Smoke Test
-
-Run one short scenario in a small suite to confirm that the integration works end to end before you run a full regression suite.
-
-1. Open **Scenarios**.
-2. Select or create a short scenario.
-3. In the scenario, make the expected response of your Retell agent clear, starting with its first message or greeting.
-4. Optionally, select one expected tool call to confirm tool call validation end to end.
-5. Run the scenario in a small suite.
-6. Review the result and the transcript.
-7. Confirm that the intended Retell agent answered and that any selected tool shows the expected verdict.
-
-After the smoke test passes, add coverage for the tools, transfers, long conversations, and failure paths that apply to your Retell agent.
-
-### View Tool Call Validation Results
-
-After a run, the suite results show tool call validation alongside the transcript and the call recording. Each test result also includes pass or fail against your validation criteria and call and audio quality metrics.
-
-| View | What it shows |
-|---|---|
-| **Expected Tool Validation** | Each tool selected for the scenario, with its verdict: **Called** or **Not Called**. |
-| **AUT Tool Calls** | Every tool the agent invoked during the call, including tools you did not select, so unexpected tool calls are visible. |
-| **Selected AUT Tool Calls** | **AUT Tool Calls** narrowed to the tools selected for the scenario, with a rollup of how many of the expected tools were called. |
-
-#### Tool Call Verdicts
-
-| Verdict | Meaning |
-|---|---|
-| **Called** | The agent invoked the tool during the call. |
-| **Not Called** | The agent did not invoke the tool during the call. |
-
-A scenario with no selected tools shows that no expected tools were mapped. Only black-box checks applied to that scenario.
-
-:::tip
-Read the transcript and **Expected Tool Validation** together. For example, the transcript can show the agent confirming a cancellation, promising a callback, or saying it transferred the caller while the matching tool shows **Not Called**.
-:::
-
-### How the Retell Integration Works
-
-In a phone agent test, TestMu AI places real phone calls to your Retell agent, holds a conversation, and grades the outcome. Without the integration, this is black-box testing: TestMu AI records what the agent says on the call, but it cannot see the actions the agent takes behind the phone line. A transcript records what the agent said, such as a booking confirmation, but not whether the agent called its booking tool.
-
-With the integration, testing is white-box: TestMu AI also reads the agent's configuration and tool catalog from Retell and checks which tools the agent invoked during each test call. It works as follows.
-
-1. When you sync, TestMu AI imports the agent's prompt and, if the provider exposes tools, its tool catalog.
-2. TestMu AI places a real phone call to the agent and holds a conversation.
-3. After every test call, TestMu AI checks which tools the agent invoked and marks each tool selected for the scenario as **Called** or **Not Called**.
-4. The suite results show the tool call validation alongside the transcript, the call recording, pass or fail against your validation criteria, and call and audio quality metrics.
-
-The following table compares testing with and without the integration.
-
-| Capability | Without the integration (black-box) | With the integration (white-box) |
-|---|---|---|
-| Real phone call testing, transcripts, recordings | Yes | Yes |
-| Pass or fail grading against your criteria | Yes | Yes |
-| Call and audio quality metrics | Yes | Yes |
-| Prompt imported from your live agent | No | Yes |
-| Tool catalog imported for scenario authoring | No | Yes |
-| Tool call validation (tools your agent invoked) | No | Yes |
-
-### Troubleshoot the Retell Integration
-
-| Problem | What to do |
-|---|---|
-| TestMu AI rejects the API key | Create or retrieve a valid API key from Retell, then replace the saved value in TestMu AI. |
-| TestMu AI cannot find the agent | Confirm that the agent identifier belongs to Retell and that it was copied in full. |
-| The wrong voice agent answers | Reopen **Integrations**, check the saved agent identifier, and rerun the smoke test. |
-| Retell tools are unavailable | Sync the Retell configuration again, then confirm that the tools are configured for the connected Retell agent. |
-| The scenario editor warns that selected tools no longer match the catalog | The tool catalog changed on Retell. Sync again, then review the tools selected for the scenario. |
-| **Expected Tool Validation** shows that no expected tools were mapped | The scenario has no selected tools, so only black-box checks applied. Select the expected tools in the scenario editor. |
-| A credential may have been exposed | Revoke or rotate the key with Retell, then save the replacement key in TestMu AI. |
-
-### Security and Credential Handling
-
-- TestMu AI encrypts saved Retell credentials and scopes them to the Phone Caller agent where you save them.
-- TestMu AI uses your Retell credentials only to read your agent's configuration and check its activity during your own test calls.
-- TestMu AI never uses your Retell credentials to modify your agent.
-
-Follow these practices for the integration:
-
-- Use dedicated API keys for test and production environments where possible.
-- Rotate keys according to your organization's security policy and after a suspected exposure.
-- Update the saved agent identifier before you test a replacement Retell agent.
-- Disconnect the integration or rotate its key when you no longer need it.
-
-## What trips up a Retell test run?
+## Run a Test and Read the Tool Calls
 
 ---
 
-- No transcript returned
-- Call ends on the wrong node
-- DTMF fires early
-- Chat session closes on inactivity timeout
+Start with one short scenario and one expected tool in a small suite, to confirm that the right agent answers and the tool check works. Then run your suites as for any [inbound phone agent](/support/docs/phone-agent/#test-an-inbound-phone-agent-pre-analysis).
+
+Open a call and select the **Tool Calls** tab.
+
+| Section | What it shows |
+|---|---|
+| **Expected Tool Validation** | Each tool selected on the scenario, marked **Called** or **Not Called**. |
+| **Selected AUT Tool Calls** | Each call the agent made to a selected tool, with its status, arguments, and result. |
+| **AUT Tool Calls** | Every tool the agent called, including tools you didn't select, so unexpected calls are visible. |
+
+- Read the transcript and the tool calls together. If the agent says it booked or transferred while the tool shows **Not Called**, it claimed an action it didn't take.
+- A tool that ran but returned an error still shows **Called**, so check the result of each call.
+- **Not Called** can be the right outcome, for example when the caller never gave the agent the details it needed.
+
+## Troubleshooting
+
+---
+
+| Problem | What to do |
+|---|---|
+| The API key is rejected | Create or copy a valid key in Retell, then save it again. |
+| The agent isn't found | Check that the agent ID is a Retell agent ID, copied in full. |
+| The wrong agent answers | Check the saved agent ID and the number on the **Phone Numbers** tab, then run the short test again. |
+| No tools appear in the scenario editor | Confirm the agent has tools in Retell, then select **Re-sync**. |
+| The scenario editor warns that selected tools no longer match | The catalog changed in Retell. Sync again and review the scenario's tools. |
+| A call shows no expected tools mapped | The scenario has no tools selected, so only the call itself was graded. Select its expected tools. |
+| A key may have been exposed | Rotate it in Retell and save the new key. |
+
+## Security and Credentials
+
+---
+
+- Saved credentials are stored as HyperExecute secrets, scoped to the agent where you save them.
+- TestMu AI uses them only to read the agent's configuration and check its activity during your test calls. It never modifies your agent.
+- Use separate keys for test and production, rotate them on your usual schedule, and disconnect the integration when you no longer need it.
+
+## Testing Tips for Retell Agents
+
+---
+
+- **Conversation Flow agents are graphs.** Coverage means every node, not every intent, so write scenarios that reach each node.
+- **Press Digit timing.** Press Digit timing decides whether navigation into an external IVR succeeds, so give keypad (DTMF) steps their own scenarios.
+- **Other surfaces.** The integration works on phone calls. To test the same logic without a phone line, connect the agent as a [voice agent](/support/docs/voice-agent/) through Retell's web call API, or as a [chat agent](/support/docs/chat-agent/) through the Chat API. Chat agents converted from a voice agent drift apart from it over time, so test both, and check whether the chat widget's public key or the API's private key is in use.
+
+## Other Integrations
+
+---
+
+- **Phone Caller agents:** [Amazon Connect](/support/docs/test-amazon-connect-bots/), [Cartesia](/support/docs/test-cartesia-agents/), [ElevenLabs](/support/docs/test-elevenlabs-agents/), [Vapi](/support/docs/test-vapi-agents/), and [Salesforce Agentforce](/support/docs/test-agentforce-agents/).
+- **Voice agents:** [Deepgram Voice Agent](/support/docs/test-deepgram-voice-agents/).
+- See [Phone Agent Testing](/support/docs/phone-agent/) for everything else a phone test covers.

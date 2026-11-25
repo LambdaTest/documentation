@@ -1,17 +1,16 @@
 ---
 id: test-elevenlabs-agents
-toc_max_heading_level: 3
-title: How to Test ElevenLabs Agents With TestMu AI
+toc_max_heading_level: 2
+title: ElevenLabs Integration for TestMu AI Agent Testing
 hide_title: false
-sidebar_label: Test ElevenLabs Agents
-description: Automated phone, voice, and chat testing for agents built on the ElevenLabs Agents Platform. Drive multi-turn conversations across personas and score every run.
+sidebar_label: ElevenLabs
+description: Connect an ElevenLabs agent to TestMu AI Agent Testing to import its prompt and tools and check every tool it calls during real test calls.
 keywords:
+ - elevenlabs integration
  - test elevenlabs agents
- - elevenlabs agent testing
- - phone agent testing
- - voice agent testing
- - chat agent testing
- - elevenlabs agent testing integration
+ - elevenlabs tool call testing
+ - elevenlabs agents platform testing
+ - elevenlabs phone agent testing
 url: https://www.testmuai.com/support/docs/test-elevenlabs-agents/
 site_name: TestMu AI
 slug: test-elevenlabs-agents/
@@ -33,8 +32,8 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       "@type": "WebPage",
       "@id": "https://www.testmuai.com/support/docs/test-elevenlabs-agents/"
     },
-    "headline": "How to Test ElevenLabs Agents With TestMu AI",
-    "description": "Automated phone, voice, and chat testing for agents built on the ElevenLabs Agents Platform. Drive multi-turn conversations across personas and score every run.",
+    "headline": "ElevenLabs Integration for TestMu AI Agent Testing",
+    "description": "Connect an ElevenLabs agent to TestMu AI Agent Testing to import its prompt and tools and check every tool it calls during real test calls.",
     "url": "https://www.testmuai.com/support/docs/test-elevenlabs-agents/",
     "image": {
       "@type": "ImageObject",
@@ -45,9 +44,9 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     "inLanguage": "en",
     "articleSection": "Agent Testing",
     "keywords": [
+      "elevenlabs integration",
       "test elevenlabs agents",
-      "elevenlabs agent testing",
-      "phone agent testing"
+      "elevenlabs tool call testing"
     ],
     "author": {
       "@type": "Organization",
@@ -75,217 +74,138 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-10-14T12:28:06+05:30"
+    "dateModified": "2026-11-20T12:00:00+05:30"
   }) }}
 />
 
-ElevenLabs deploys one agent configuration to phone, web voice, and text, with voice conversations running over WebRTC and text-only conversations over WebSocket. You can test your ElevenLabs agent on the TestMu AI Agent Testing Platform over the same WebRTC or WebSocket surface it serves, with multi-turn conversations across personas and edge cases scored on each run.
+The ElevenLabs integration connects an agent built on the ElevenLabs Agents Platform to a Phone Caller agent in the TestMu AI Agent Testing Platform. TestMu AI imports the agent's prompt and tool catalog, and after every test call it checks which tools the agent actually called. A transcript shows what the agent said. The integration shows what it did behind the call.
 
-To connect one, you need an ElevenLabs account with a published agent, a number imported under Phone Numbers for phone agents only, source docs for scenario generation (prompt, PRD, or knowledge base), and a TestMu AI workspace with agent-testing permissions.
+Without the integration, TestMu AI still tests any ElevenLabs agent that answers a phone number, with transcripts, recordings, grading, and call quality metrics. Connect it when you also want the prompt imported and the tool calls checked.
 
-## Why do ElevenLabs voice and SIP codec settings break tests?
-
----
-
-One agent configuration deploys to phone, web voice, and text, so a few behaviours are worth building dedicated scenarios around:
-
-- **Fixed SIP codecs.** SIP audio runs at G711 8kHz or G722 16kHz regardless of the audio format set on the agent for WebSocket connections. Mismatches here look like quality failures but are codec failures.
-- **Auth by agent visibility.** Private agents need a signed link for WebSocket or a conversation token for WebRTC. Public agents need only the agent ID.
-- **Text-only depends on the response event.** Text-only mode depends on the agent response event firing, so a silent failure reads as a timeout.
-
-## Can you test ElevenLabs across phone, voice, and text?
+## Integration at a Glance
 
 ---
 
-ElevenLabs deploys one agent configuration across surfaces. Generate scenarios from the system prompt, supporting docs, or knowledge base, then follow the linked setup for the surface you test:
+| Item | Details |
+|---|---|
+| **Agent type** | Phone Caller, inbound. TestMu AI calls your ElevenLabs agent's phone number. |
+| **Where you connect** | The agent's **Integrations** tab, on the **ElevenLabs** card. |
+| **What you need** | An ElevenLabs API key and the agent's ID. |
+| **What is imported** | The agent's prompt and tool catalog. |
+| **What is checked** | Whether the agent called each tool a scenario expects, with the arguments and result of every call. |
 
-- **Phone** covers inbound and outbound callers over native telephony, Twilio, or a SIP trunk: DTMF entry, transfers, voicemail handling, and carrier latency. Setup: [phone agent testing](/support/docs/phone-agent/).
-- **Voice** reaches the agent over a direct audio stream rather than a phone number, using WebRTC or WebSocket. It isolates the speech pipeline, so STT and TTS accuracy, turn-taking, and interruption handling get tested without telephony noise. Setup: [voice agent testing](/support/docs/voice-agent/).
-- **Chat** runs text-only conversations, either configured that way or forced with a runtime override, over WebSocket. It skips every audio metric and scores logic, tool calls, grounding, and safety, and can run on every commit. Setup: [chat agent testing](/support/docs/chat-agent/).
-
-## How do you check which tools an ElevenLabs agent actually called? {#elevenlabs-integration}
+## Prerequisites
 
 ---
 
-A call transcript shows what the agent said, not which tools it ran. Connect your ElevenLabs agent in the **Integrations** tab of a Phone Caller agent with your **ElevenLabs API Key** and **ElevenLabs Agent ID**, and TestMu AI imports the agent's prompt and tool catalog, then marks each tool a scenario expects as **Called** or **Not Called** after every test call. The sections below cover when to use the ElevenLabs integration, the setup, the results, and troubleshooting.
+### In ElevenLabs
 
-### When to Use the ElevenLabs Integration
+- A published agent with a phone number imported under **Phone Numbers**, over native telephony, Twilio, or a SIP trunk.
+- An ElevenLabs API key and the agent's ID, obtained through your organization's approved credential process.
 
-The integration is optional. Choose based on what you need to check.
+### In TestMu AI
 
-- Without the integration, TestMu AI tests any agent that answers a phone number, on any platform, with no code changes, SDK, or test build. Each result includes the transcript, the call recording, pass or fail grading against your criteria, and call and audio quality metrics.
-- Connect the integration when you want to import your ElevenLabs agent's prompt and tool catalog, or check which tools it invoked during each test call.
-
-For a side-by-side comparison, see [How the ElevenLabs Integration Works](#how-the-elevenlabs-integration-works).
-
-TestMu AI offers this integration for ElevenLabs, Retell, Vapi, Salesforce Agentforce, Amazon Connect (Amazon Q in Connect), and Cartesia Managed Agents. Cartesia Line SDK agents are not supported. For the other integration guides, see the [Retell integration](/support/docs/test-retell-agents/#retell-integration), the [Vapi integration](/support/docs/test-vapi-agents/#vapi-integration), the [Agentforce integration](/support/docs/test-agentforce-agents/#agentforce-integration), and the [Amazon Q in Connect integration](/support/docs/test-amazon-connect-bots/#amazon-q-in-connect).
-
-### ElevenLabs Integration Prerequisites
-
-- An agent in TestMu AI with the **Phone Caller** agent type.
-- A voice agent hosted on **ElevenLabs**.
-- The ElevenLabs API key and the ElevenLabs agent identifier for the voice agent that you want to test.
-
-This section covers the TestMu AI workflow only. Obtain the API key and agent identifier from ElevenLabs through your organization's approved credential process.
+- A Phone Caller agent with the call type **Inbound (Bot receives calls)**, with the ElevenLabs agent's phone number added on its **Phone Numbers** tab. See [Test an Inbound Phone Agent](/support/docs/phone-agent/#test-an-inbound-phone-agent-pre-analysis).
 
 :::warning
-API keys are secrets. Enter them only in the TestMu AI integration form. Do not put them in a scenario, prompt, test data file, or source code.
+API keys are secrets. Enter them only in the integration form, never in a scenario, prompt, test data file, or source code.
 :::
 
-### Connect ElevenLabs
+## Connect ElevenLabs
 
-Connect your ElevenLabs agent from the **Integrations** tab of the Phone Caller agent that will test it.
+---
 
-1. In TestMu AI, open the **Phone Caller** agent that will test your ElevenLabs agent.
-2. Select **Integrations** from the agent navigation.
-3. Select **Connect** on the ElevenLabs provider card.
-4. Enter the values for ElevenLabs. See [ElevenLabs Integration Fields](#elevenlabs-integration-fields).
-5. Select **Save**.
+1. Open the Phone Caller agent and select **Integrations**.
+2. Select **Connect** on the **ElevenLabs** card.
 
-TestMu AI encrypts the saved credentials and scopes them to this Phone Caller agent.
+<img loading="lazy" src={require('../assets/images/agent-to-agent/agent-integrations-tab.webp').default} alt="Integrations tab of a Phone Caller Inbound agent, with Connect buttons on the ElevenLabs, Retell, VAPI, Agentforce, Cartesia, and Amazon Connect cards" width="1918" height="943" className="doc_img"/>
 
-#### ElevenLabs Integration Fields
+3. Fill in the fields, then select **Save**.
 
-| Field | Required | Description |
+| Field | Required | What to enter |
 |---|---|---|
 | **ElevenLabs API Key** | Yes | Your ElevenLabs API key. |
-| **ElevenLabs Agent ID** | Yes | The identifier of the ElevenLabs agent that you want to test. |
+| **ElevenLabs Agent ID** | Yes | The ID of the ElevenLabs agent you want to test. |
 
-:::note
-One provider can be active per agent. To test a different provider agent or use different credentials, use a separate TestMu AI agent.
-:::
+The connection works when the card shows **Connected** and a **Re-sync** button. TestMu AI stores the credentials as HyperExecute secrets, scoped to this agent. One provider can be connected per agent, so use a separate TestMu AI agent to test another ElevenLabs agent or provider.
 
-#### Confirm the Connection
+## Sync the Prompt and Tools
 
-After you select **Save**, confirm that ElevenLabs is connected.
+---
 
-1. Check that the ElevenLabs provider card shows **Connected** or provides **Re-sync**.
-2. If necessary, reopen the provider settings and confirm that the expected agent identifier is displayed.
-3. Run a [smoke test](#run-a-smoke-test) in a small suite before you run a full regression suite.
+On the **Prompt** tab, select **Sync from ElevenLabs**. TestMu AI imports the agent's prompt and refreshes its tool catalog: the actions the agent can take, such as booking an appointment or transferring to a human. Generate your scenarios from the imported prompt.
 
-### Sync the Prompt and Tools
+Sync again after you change the agent in ElevenLabs, so the prompt and tools match what is deployed.
 
-Syncing imports the prompt and tool catalog of the connected ElevenLabs agent. The tool catalog lists the actions the agent can take, such as booking an appointment, looking up an order, or transferring to a human.
+## Select the Expected Tools for Each Scenario
 
-1. Open **Prompt**.
-2. Select **Sync from ElevenLabs**.
+---
 
-TestMu AI imports the prompt. If the provider exposes tools, TestMu AI also refreshes the available tools. Author your scenarios against the imported prompt and tools.
-
-:::tip
-Sync again after you change the agent on ElevenLabs, so that the prompt and tools in TestMu AI match the deployed agent.
-:::
-
-### Set Expected Tool Calls for Each Scenario
-
-Each scenario has its own list of expected tools. On every run, TestMu AI checks whether the agent invoked each selected tool.
-
-1. Open **Scenarios**.
-2. Create or edit a scenario.
-3. In the scenario editor, which lists every tool from the synced catalog, select each tool that the agent is expected to invoke during the conversation.
-
-The selected tools become the validation contract for the scenario, so select only the tools that the scenario must validate. For example:
+Open a scenario and, in the scenario editor, select each tool from the synced catalog that the scenario expects the agent to call.
 
 | Example scenario | Expected tools |
 |---|---|
 | Booking | `check_availability`, `book_appointment` |
 | Cancellation | `cancel_appointment` |
 
-:::note
-If the tool catalog changes on ElevenLabs, sync again. The scenario editor warns you when a scenario's selected tools no longer match the current catalog.
-:::
+- Select only the tools the scenario must check. The tool check passes only if the agent called all of them.
+- Scenarios with no tools selected still run, without a tool check.
+- If the catalog changes in ElevenLabs, sync again. The scenario editor warns you when a selected tool no longer exists.
 
-### Run a Smoke Test
-
-Run one short scenario in a small suite to confirm that the integration works end to end before you run a full regression suite.
-
-1. Open **Scenarios**.
-2. Select or create a short scenario.
-3. In the scenario, make the expected response of your ElevenLabs agent clear, starting with its first message or greeting.
-4. Optionally, select one expected tool call to confirm tool call validation end to end.
-5. Run the scenario in a small suite.
-6. Review the result and the transcript.
-7. Confirm that the intended ElevenLabs agent answered and that any selected tool shows the expected verdict.
-
-After the smoke test passes, add coverage for the tools, transfers, long conversations, and failure paths that apply to your ElevenLabs agent.
-
-### View Tool Call Validation Results
-
-After a run, the suite results show tool call validation alongside the transcript and the call recording. Each test result also includes pass or fail against your validation criteria and call and audio quality metrics.
-
-| View | What it shows |
-|---|---|
-| **Expected Tool Validation** | Each tool selected for the scenario, with its verdict: **Called** or **Not Called**. |
-| **AUT Tool Calls** | Every tool the agent invoked during the call, including tools you did not select, so unexpected tool calls are visible. |
-| **Selected AUT Tool Calls** | **AUT Tool Calls** narrowed to the tools selected for the scenario, with a rollup of how many of the expected tools were called. |
-
-#### Tool Call Verdicts
-
-| Verdict | Meaning |
-|---|---|
-| **Called** | The agent invoked the tool during the call. |
-| **Not Called** | The agent did not invoke the tool during the call. |
-
-A scenario with no selected tools shows that no expected tools were mapped. Only black-box checks applied to that scenario.
-
-:::tip
-Read the transcript and **Expected Tool Validation** together. For example, the transcript can show the agent confirming a cancellation, promising a callback, or saying it transferred the caller while the matching tool shows **Not Called**.
-:::
-
-### How the ElevenLabs Integration Works
-
-In a phone agent test, TestMu AI places real phone calls to your ElevenLabs agent, holds a conversation, and grades the outcome. Without the integration, this is black-box testing: TestMu AI records what the agent says on the call, but it cannot see the actions the agent takes behind the phone line. A transcript records what the agent said, such as a booking confirmation, but not whether the agent called its booking tool.
-
-With the integration, testing is white-box: TestMu AI also reads the agent's configuration and tool catalog from ElevenLabs and checks which tools the agent invoked during each test call. It works as follows.
-
-1. When you sync, TestMu AI imports the agent's prompt and, if the provider exposes tools, its tool catalog.
-2. TestMu AI places a real phone call to the agent and holds a conversation.
-3. After every test call, TestMu AI checks which tools the agent invoked and marks each tool selected for the scenario as **Called** or **Not Called**.
-4. The suite results show the tool call validation alongside the transcript, the call recording, pass or fail against your validation criteria, and call and audio quality metrics.
-
-The following table compares testing with and without the integration.
-
-| Capability | Without the integration (black-box) | With the integration (white-box) |
-|---|---|---|
-| Real phone call testing, transcripts, recordings | Yes | Yes |
-| Pass or fail grading against your criteria | Yes | Yes |
-| Call and audio quality metrics | Yes | Yes |
-| Prompt imported from your live agent | No | Yes |
-| Tool catalog imported for scenario authoring | No | Yes |
-| Tool call validation (tools your agent invoked) | No | Yes |
-
-### Troubleshoot the ElevenLabs Integration
-
-| Problem | What to do |
-|---|---|
-| TestMu AI rejects the API key | Create or retrieve a valid API key from ElevenLabs, then replace the saved value in TestMu AI. |
-| TestMu AI cannot find the agent | Confirm that the agent identifier belongs to ElevenLabs and that it was copied in full. |
-| The wrong voice agent answers | Reopen **Integrations**, check the saved agent identifier, and rerun the smoke test. |
-| ElevenLabs tools are unavailable | Sync the ElevenLabs configuration again, then confirm that the tools are configured for the connected ElevenLabs agent. |
-| The scenario editor warns that selected tools no longer match the catalog | The tool catalog changed on ElevenLabs. Sync again, then review the tools selected for the scenario. |
-| **Expected Tool Validation** shows that no expected tools were mapped | The scenario has no selected tools, so only black-box checks applied. Select the expected tools in the scenario editor. |
-| A credential may have been exposed | Revoke or rotate the key with ElevenLabs, then save the replacement key in TestMu AI. |
-
-### Security and Credential Handling
-
-- TestMu AI encrypts saved ElevenLabs credentials and scopes them to the Phone Caller agent where you save them.
-- TestMu AI uses your ElevenLabs credentials only to read your agent's configuration and check its activity during your own test calls.
-- TestMu AI never uses your ElevenLabs credentials to modify your agent.
-
-Follow these practices for the integration:
-
-- Use dedicated API keys for test and production environments where possible.
-- Rotate keys according to your organization's security policy and after a suspected exposure.
-- Update the saved agent identifier before you test a replacement ElevenLabs agent.
-- Disconnect the integration or rotate its key when you no longer need it.
-
-## What goes wrong in an ElevenLabs test?
+## Run a Test and Read the Tool Calls
 
 ---
 
-Common failure modes to watch for:
+Start with one short scenario and one expected tool in a small suite, to confirm that the right agent answers and the tool check works. Then run your suites as for any [inbound phone agent](/support/docs/phone-agent/#test-an-inbound-phone-agent-pre-analysis).
 
-- No transcript returned
-- Codec mismatch on SIP calls
-- Signed link expired
-- Text-only run hangs
+Open a call and select the **Tool Calls** tab.
+
+| Section | What it shows |
+|---|---|
+| **Expected Tool Validation** | Each tool selected on the scenario, marked **Called** or **Not Called**. |
+| **Selected AUT Tool Calls** | Each call the agent made to a selected tool, with its status, arguments, and result. |
+| **AUT Tool Calls** | Every tool the agent called, including tools you didn't select, so unexpected calls are visible. |
+
+- Read the transcript and the tool calls together. If the agent says it booked or transferred while the tool shows **Not Called**, it claimed an action it didn't take.
+- A tool that ran but returned an error still shows **Called**, so check the result of each call.
+- **Not Called** can be the right outcome, for example when the caller never gave the agent the details it needed.
+
+## Troubleshooting
+
+---
+
+| Problem | What to do |
+|---|---|
+| The API key is rejected | Create or copy a valid key in ElevenLabs, then save it again. |
+| The agent isn't found | Check that the agent ID is an ElevenLabs agent ID, copied in full. |
+| The wrong agent answers | Check the saved agent ID and the number on the **Phone Numbers** tab, then run the short test again. |
+| No tools appear in the scenario editor | Confirm the agent has tools in ElevenLabs, then select **Re-sync**. |
+| The scenario editor warns that selected tools no longer match | The catalog changed in ElevenLabs. Sync again and review the scenario's tools. |
+| A call shows no expected tools mapped | The scenario has no tools selected, so only the call itself was graded. Select its expected tools. |
+| Calls sound distorted or fail audio quality checks | SIP calls run at G711 8 kHz or G722 16 kHz, whatever audio format the agent uses for WebSocket connections. Check the codec before treating it as an agent problem. |
+| A key may have been exposed | Rotate it in ElevenLabs and save the new key. |
+
+## Security and Credentials
+
+---
+
+- Saved credentials are stored as HyperExecute secrets, scoped to the agent where you save them.
+- TestMu AI uses them only to read the agent's configuration and check its activity during your test calls. It never modifies your agent.
+- Use separate keys for test and production, rotate them on your usual schedule, and disconnect the integration when you no longer need it.
+
+## Testing Tips for ElevenLabs Agents
+
+---
+
+- **Fixed SIP codecs.** SIP audio runs at G711 8 kHz or G722 16 kHz regardless of the agent's WebSocket audio format, so a codec mismatch can look like an audio quality failure.
+- **Other surfaces.** The integration works on phone calls. To test the same agent without a phone line, connect it as a [voice agent](/support/docs/voice-agent/) over WebRTC or WebSocket, or as a [chat agent](/support/docs/chat-agent/) in text-only mode over WebSocket.
+- **Private agents.** Over WebSocket, a private agent needs a signed link, and over WebRTC a conversation token. A public agent needs only its ID.
+- **Text-only mode.** Text-only conversations depend on the agent response event firing, so a silent failure shows up as a timeout.
+
+## Other Integrations
+
+---
+
+- **Phone Caller agents:** [Amazon Connect](/support/docs/test-amazon-connect-bots/), [Cartesia](/support/docs/test-cartesia-agents/), [Retell](/support/docs/test-retell-agents/), [Vapi](/support/docs/test-vapi-agents/), and [Salesforce Agentforce](/support/docs/test-agentforce-agents/).
+- **Voice agents:** [Deepgram Voice Agent](/support/docs/test-deepgram-voice-agents/).
+- See [Phone Agent Testing](/support/docs/phone-agent/) for everything else a phone test covers.

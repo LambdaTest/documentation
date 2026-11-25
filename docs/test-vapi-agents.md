@@ -1,17 +1,16 @@
 ---
 id: test-vapi-agents
-toc_max_heading_level: 3
-title: How to Test Vapi Agents With TestMu AI
+toc_max_heading_level: 2
+title: Vapi Integration for TestMu AI Agent Testing
 hide_title: false
-sidebar_label: Test Vapi Agents
-description: Automated phone, voice, and chat testing for Vapi AI agents with TestMu AI. Drive multi-turn conversations across personas and edge cases, then score every run.
+sidebar_label: Vapi
+description: Connect a Vapi assistant to TestMu AI Agent Testing to import its prompt and tools, check every tool it calls on test calls, and pull in production calls.
 keywords:
+ - vapi integration
  - test vapi agents
- - vapi ai agent testing
- - phone agent testing
- - voice agent testing
- - chat agent testing
- - vapi agent testing integration
+ - vapi tool call testing
+ - vapi assistant testing
+ - vapi phone agent testing
 url: https://www.testmuai.com/support/docs/test-vapi-agents/
 site_name: TestMu AI
 slug: test-vapi-agents/
@@ -33,8 +32,8 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       "@type": "WebPage",
       "@id": "https://www.testmuai.com/support/docs/test-vapi-agents/"
     },
-    "headline": "How to Test Vapi Agents With TestMu AI",
-    "description": "Automated phone, voice, and chat testing for Vapi AI agents with TestMu AI. Drive multi-turn conversations across personas and edge cases, then score every run.",
+    "headline": "Vapi Integration for TestMu AI Agent Testing",
+    "description": "Connect a Vapi assistant to TestMu AI Agent Testing to import its prompt and tools, check every tool it calls on test calls, and pull in production calls.",
     "url": "https://www.testmuai.com/support/docs/test-vapi-agents/",
     "image": {
       "@type": "ImageObject",
@@ -45,9 +44,9 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     "inLanguage": "en",
     "articleSection": "Agent Testing",
     "keywords": [
+      "vapi integration",
       "test vapi agents",
-      "vapi ai agent testing",
-      "phone agent testing"
+      "vapi tool call testing"
     ],
     "author": {
       "@type": "Organization",
@@ -75,233 +74,140 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-10-14T12:28:06+05:30"
+    "dateModified": "2026-11-20T12:00:00+05:30"
   }) }}
 />
 
-Vapi is a voice AI platform where a single assistant configuration carries the model, voice, transcriber, tools, and call behaviour, then ships across phone, web, and chat. With the TestMu AI Agent Testing Platform you can put your Vapi assistant through multi-turn conversations across personas and edge cases on every surface it ships to, and score each run.
+The Vapi integration connects a Vapi assistant to a Phone Caller agent in the TestMu AI Agent Testing Platform. TestMu AI imports the assistant's prompt and tool catalog, and after every test call it checks which tools the assistant actually called. A transcript shows what the assistant said. The integration shows what it did behind the call.
 
-To connect one, you need a Vapi account with a published assistant, a provisioned phone number for phone caller agents only, source docs for scenario generation (prompt, PRD, or knowledge base), and a TestMu AI workspace with agent-testing permissions.
+Without the integration, TestMu AI still tests any Vapi assistant that answers a phone number, with transcripts, recordings, grading, and call quality metrics. Connect it when you also want the prompt imported and the tool calls checked.
 
-## How do you test Vapi tools and Squad handoffs?
-
----
-
-A single Vapi assistant carries its tools and transport across every surface, so a few behaviours are worth building dedicated scenarios around:
-
-- **Default tools.** Default tools each need their own scenario: `transferCall`, `endCall`, `dtmf`, `sms`, `apiRequest`.
-- **Squad handoffs.** Squads hand off mid-call, so the transfer boundary needs testing.
-- **WebSocket transport.** WebSocket transport rejects phone parameters, and audio pauses trigger silence timeouts.
-- **Chat session state.** Chat context carries through session IDs, so multi-turn state needs its own tests.
-
-## How is a Vapi assistant reached on phone, voice, and chat?
+## Integration at a Glance
 
 ---
 
-A single Vapi assistant ships across surfaces. Generate scenarios from the system prompt or supporting docs, then follow the linked setup for the surface you test:
+| Item | Details |
+|---|---|
+| **Agent type** | Phone Caller, inbound. TestMu AI calls your assistant's phone number. |
+| **Where you connect** | The agent's **Integrations** tab, on the **VAPI** card. |
+| **What you need** | A Vapi API key and the assistant's ID. |
+| **What is imported** | The assistant's prompt and tool catalog. |
+| **What is checked** | Whether the assistant called each tool a scenario expects, with the arguments and result of every call. |
+| **Vapi extras** | Keep the prompt in sync with the live assistant, and bring production calls into the same analysis view as your test calls. |
 
-- **Phone** covers inbound and outbound callers over the phone network: DTMF entry, transfers, voicemail handling, and carrier latency. Setup: [phone agent testing](/support/docs/phone-agent/).
-- **Voice** reaches the assistant over a direct audio stream rather than a phone number, with the endpoint profile created using REST API or WebSocket. It isolates the speech pipeline, so STT and TTS accuracy, turn-taking, and interruption handling get tested without telephony noise. Setup: [voice agent testing](/support/docs/voice-agent/).
-- **Chat** runs text conversations through Vapi's Chat API, catching reasoning, tool call, and grounding failures, and can run on every commit. Setup: [chat agent testing](/support/docs/chat-agent/).
-
-## How do you check which tools a Vapi assistant actually called? {#vapi-integration}
+## Prerequisites
 
 ---
 
-A call transcript shows what the assistant said, not which tools it ran. Connect your Vapi assistant in the **Integrations** tab of a Phone Caller agent with your **Vapi Auth API Key** and **Vapi Agent ID** (plus the optional **Vapi Public Key** for WebRTC connections), and TestMu AI imports the prompt and tool catalog, then marks each tool a scenario expects as **Called** or **Not Called** after every test call. For Vapi, the integration can also keep the imported prompt in sync with the live assistant (**Auto-sync Prompts**) and pull real production calls into the same analysis view (**Auto-fetch Production Calls**). The sections below cover when to use the integration, the setup, the results, and troubleshooting.
+### In Vapi
 
-### When to Use the Vapi Integration
+- A published assistant with a phone number it answers on.
+- A Vapi API key and the assistant's ID, obtained through your organization's approved credential process.
 
-The integration is optional. Choose based on what you need to check.
+### In TestMu AI
 
-- Without the integration, TestMu AI tests any agent that answers a phone number, on any platform, with no code changes, SDK, or test build. Each result includes the transcript, the call recording, pass or fail grading against your criteria, and call and audio quality metrics.
-- Connect the integration when you want to import your Vapi assistant's prompt and tool catalog, or check which tools it invoked during each test call.
-- Turn on the Vapi sync options when you also want the imported prompt kept in sync with the live assistant between manual syncs, or the assistant's production calls in the same analysis view as your test calls. See [Turn On Vapi Sync Options](#turn-on-vapi-sync-options).
-
-For a side-by-side comparison, see [How the Vapi Integration Works](#how-the-vapi-integration-works).
-
-TestMu AI offers this integration for ElevenLabs, Retell, Vapi, Salesforce Agentforce, Amazon Connect (Amazon Q in Connect), and Cartesia Managed Agents. Cartesia Line SDK agents are not supported. For the other integration guides, see the [ElevenLabs integration](/support/docs/test-elevenlabs-agents/#elevenlabs-integration), the [Retell integration](/support/docs/test-retell-agents/#retell-integration), the [Agentforce integration](/support/docs/test-agentforce-agents/#agentforce-integration), and the [Amazon Q in Connect integration](/support/docs/test-amazon-connect-bots/#amazon-q-in-connect).
-
-### Vapi Integration Prerequisites
-
-- An agent in TestMu AI with the **Phone Caller** agent type.
-- An assistant hosted on **Vapi**.
-- The Vapi API key and the Vapi agent identifier for the assistant that you want to test.
-
-This section covers the TestMu AI workflow only. Obtain the API key and agent identifier from Vapi through your organization's approved credential process.
+- A Phone Caller agent with the call type **Inbound (Bot receives calls)**, with the assistant's phone number added on its **Phone Numbers** tab. See [Test an Inbound Phone Agent](/support/docs/phone-agent/#test-an-inbound-phone-agent-pre-analysis).
 
 :::warning
-API keys are secrets. Enter them only in the TestMu AI integration form. Do not put them in a scenario, prompt, test data file, or source code.
+API keys are secrets. Enter them only in the integration form, never in a scenario, prompt, test data file, or source code.
 :::
 
-### Connect Vapi
+## Connect Vapi
 
-Connect your Vapi assistant from the **Integrations** tab of the Phone Caller agent that will test it.
+---
 
-1. In TestMu AI, open the **Phone Caller** agent that will test your Vapi assistant.
-2. Select **Integrations** from the agent navigation.
-3. Select **Connect** on the Vapi provider card.
-4. Enter the values for Vapi. See [Vapi Integration Fields](#vapi-integration-fields).
-5. Select **Save**.
+1. Open the Phone Caller agent and select **Integrations**.
+2. Select **Connect** on the **VAPI** card.
 
-TestMu AI encrypts the saved credentials and scopes them to this Phone Caller agent.
+<img loading="lazy" src={require('../assets/images/agent-to-agent/agent-integrations-tab.webp').default} alt="Integrations tab of a Phone Caller Inbound agent, with Connect buttons on the ElevenLabs, Retell, VAPI, Agentforce, Cartesia, and Amazon Connect cards" width="1918" height="943" className="doc_img"/>
 
-#### Vapi Integration Fields
+3. Fill in the fields, then select **Save**.
 
-| Field | Required | Description |
+| Field | Required | What to enter |
 |---|---|---|
 | **Vapi Auth API Key** | Yes | Your Vapi API key. |
-| **Vapi Agent ID** | Yes | The identifier of the Vapi assistant that you want to test. |
-| **Vapi Public Key** | No | Your Vapi public key, for WebRTC connections. |
-| **Auto-fetch Production Calls** | No | A toggle. When it is on, TestMu AI continuously fetches the assistant's production calls into the same analysis view as your test calls. |
-| **Auto-sync Prompts** | No | A toggle. When it is on, TestMu AI keeps the imported prompt continuously in sync with the live assistant. |
+| **Vapi Agent ID** | Yes | The ID of the assistant you want to test. |
+| **Vapi Public Key** | No | Your Vapi public key, needed only for WebRTC connections. |
+| **Auto-sync Prompts** | No | Keeps the imported prompt in sync with the live assistant between manual syncs. |
+| **Auto-fetch Production Calls** | No | Brings the assistant's production calls into the same analysis view as your test calls. |
 
-:::note
-One provider can be active per agent. To test a different provider agent or use different credentials, use a separate TestMu AI agent.
-:::
+The connection works when the card shows **Connected** and a **Re-sync** button. TestMu AI stores the credentials as HyperExecute secrets, scoped to this agent. One provider can be connected per agent, so use a separate TestMu AI agent to test another assistant or provider.
 
-#### Confirm the Connection
+## Sync the Prompt and Tools
 
-After you select **Save**, confirm that Vapi is connected.
+---
 
-1. Check that the Vapi provider card shows **Connected** or provides **Re-sync**.
-2. If necessary, reopen the provider settings and confirm that the expected agent identifier is displayed.
-3. Run a [smoke test](#run-a-smoke-test) in a small suite before you run a full regression suite.
+On the **Prompt** tab, select **Sync from Vapi**. TestMu AI imports the assistant's prompt and refreshes its tool catalog: the actions the assistant can take, such as booking an appointment or transferring to a human. Generate your scenarios from the imported prompt.
 
-### Sync the Prompt and Tools
+Sync again after you change the assistant in Vapi, so the prompt and tools match what is deployed. With **Auto-sync Prompts** on, the prompt also stays in sync between manual syncs.
 
-Syncing imports the prompt and tool catalog of the connected Vapi assistant. The tool catalog lists the actions the assistant can take, such as booking an appointment, looking up an order, or transferring to a human.
+## Select the Expected Tools for Each Scenario
 
-1. Open **Prompt**.
-2. Select **Sync from Vapi**.
+---
 
-TestMu AI imports the prompt. If the provider exposes tools, TestMu AI also refreshes the available tools. Author your scenarios against the imported prompt and tools.
-
-:::tip
-Sync again after you change the assistant on Vapi, so that the prompt and tools in TestMu AI match the deployed assistant. **Auto-sync Prompts** also keeps the prompt in sync between manual syncs. See [Turn On Vapi Sync Options](#turn-on-vapi-sync-options).
-:::
-
-### Set Expected Tool Calls for Each Scenario
-
-Each scenario has its own list of expected tools. On every run, TestMu AI checks whether the assistant invoked each selected tool.
-
-1. Open **Scenarios**.
-2. Create or edit a scenario.
-3. In the scenario editor, which lists every tool from the synced catalog, select each tool that the assistant is expected to invoke during the conversation.
-
-The selected tools become the validation contract for the scenario, so select only the tools that the scenario must validate. For example:
+Open a scenario and, in the scenario editor, select each tool from the synced catalog that the scenario expects the assistant to call.
 
 | Example scenario | Expected tools |
 |---|---|
 | Booking | `check_availability`, `book_appointment` |
 | Cancellation | `cancel_appointment` |
 
-:::note
-If the tool catalog changes on Vapi, sync again. The scenario editor warns you when a scenario's selected tools no longer match the current catalog.
-:::
+- Select only the tools the scenario must check. The tool check passes only if the assistant called all of them.
+- Scenarios with no tools selected still run, without a tool check.
+- If the catalog changes in Vapi, sync again. The scenario editor warns you when a selected tool no longer exists.
 
-### Run a Smoke Test
-
-Run one short scenario in a small suite to confirm that the integration works end to end before you run a full regression suite.
-
-1. Open **Scenarios**.
-2. Select or create a short scenario.
-3. In the scenario, make the expected response of your Vapi assistant clear, starting with its first message or greeting.
-4. Optionally, select one expected tool call to confirm tool call validation end to end.
-5. Run the scenario in a small suite.
-6. Review the result and the transcript.
-7. Confirm that the intended Vapi assistant answered and that any selected tool shows the expected verdict.
-
-After the smoke test passes, add coverage for the tools, transfers, long conversations, and failure paths that apply to your Vapi assistant.
-
-### View Tool Call Validation Results
-
-After a run, the suite results show tool call validation alongside the transcript and the call recording. Each test result also includes pass or fail against your validation criteria and call and audio quality metrics.
-
-| View | What it shows |
-|---|---|
-| **Expected Tool Validation** | Each tool selected for the scenario, with its verdict: **Called** or **Not Called**. |
-| **AUT Tool Calls** | Every tool the assistant invoked during the call, including tools you did not select, so unexpected tool calls are visible. |
-| **Selected AUT Tool Calls** | **AUT Tool Calls** narrowed to the tools selected for the scenario, with a rollup of how many of the expected tools were called. |
-
-#### Tool Call Verdicts
-
-| Verdict | Meaning |
-|---|---|
-| **Called** | The assistant invoked the tool during the call. |
-| **Not Called** | The assistant did not invoke the tool during the call. |
-
-A scenario with no selected tools shows that no expected tools were mapped. Only black-box checks applied to that scenario.
-
-:::tip
-Read the transcript and **Expected Tool Validation** together. For example, the transcript can show the assistant confirming a cancellation, promising a callback, or saying it transferred the caller while the matching tool shows **Not Called**.
-:::
-
-### Turn On Vapi Sync Options
-
-The Vapi integration has two optional toggles for continuous synchronization. They are part of the Vapi provider form in **Integrations**, next to the Vapi credentials. Turn on either or both when you [connect Vapi](#connect-vapi).
-
-| Option | What it does |
-|---|---|
-| **Auto-sync Prompts** | Keeps the imported prompt continuously in sync with the live Vapi assistant, including between manual syncs. |
-| **Auto-fetch Production Calls** | Continuously fetches the assistant's production calls and shows them in the same analysis view as your test calls. |
-
-### How the Vapi Integration Works
-
-In a phone agent test, TestMu AI places real phone calls to your Vapi assistant, holds a conversation, and grades the outcome. Without the integration, this is black-box testing: TestMu AI records what the assistant says on the call, but it cannot see the actions the assistant takes behind the phone line. A transcript records what the assistant said, such as a booking confirmation, but not whether the assistant called its booking tool.
-
-With the integration, testing is white-box: TestMu AI also reads the assistant's configuration and tool catalog from Vapi and checks which tools the assistant invoked during each test call. It works as follows.
-
-1. When you sync, TestMu AI imports the assistant's prompt and, if the provider exposes tools, its tool catalog. With **Auto-sync Prompts** turned on, the prompt also stays in sync between manual syncs.
-2. TestMu AI places a real phone call to the assistant and holds a conversation.
-3. After every test call, TestMu AI checks which tools the assistant invoked and marks each tool selected for the scenario as **Called** or **Not Called**.
-4. The suite results show the tool call validation alongside the transcript, the call recording, pass or fail against your validation criteria, and call and audio quality metrics.
-
-The following table compares testing with and without the integration.
-
-| Capability | Without the integration (black-box) | With the integration (white-box) |
-|---|---|---|
-| Real phone call testing, transcripts, recordings | Yes | Yes |
-| Pass or fail grading against your criteria | Yes | Yes |
-| Call and audio quality metrics | Yes | Yes |
-| Prompt imported from your live assistant | No | Yes |
-| Tool catalog imported for scenario authoring | No | Yes |
-| Tool call validation (tools your assistant invoked) | No | Yes |
-| **Auto-sync Prompts** | No | Yes |
-| **Auto-fetch Production Calls** | No | Yes |
-
-### Troubleshoot the Vapi Integration
-
-| Problem | What to do |
-|---|---|
-| TestMu AI rejects the API key | Create or retrieve a valid API key from Vapi, then replace the saved value in TestMu AI. |
-| TestMu AI cannot find the assistant | Confirm that the agent identifier belongs to Vapi and that it was copied in full. |
-| The wrong assistant answers | Reopen **Integrations**, check the saved agent identifier, and rerun the smoke test. |
-| Vapi tools are unavailable | Sync the Vapi configuration again, then confirm that the tools are configured for the connected Vapi assistant. |
-| The scenario editor warns that selected tools no longer match the catalog | The tool catalog changed on Vapi. Sync again, then review the tools selected for the scenario. |
-| **Expected Tool Validation** shows that no expected tools were mapped | The scenario has no selected tools, so only black-box checks applied. Select the expected tools in the scenario editor. |
-| A credential may have been exposed | Revoke or rotate the key with Vapi, then save the replacement key in TestMu AI. |
-
-### Security and Credential Handling
-
-- TestMu AI encrypts saved Vapi credentials and scopes them to the Phone Caller agent where you save them.
-- TestMu AI uses your Vapi credentials only to read your assistant's configuration and check its activity during your own test calls, and, with **Auto-fetch Production Calls** turned on, to fetch its production calls.
-- TestMu AI never uses your Vapi credentials to modify your assistant.
-
-Follow these practices for the integration:
-
-- Use dedicated API keys for test and production environments where possible.
-- Rotate keys according to your organization's security policy and after a suspected exposure.
-- Update the saved agent identifier before you test a replacement Vapi assistant.
-- Disconnect the integration or rotate its key when you no longer need it.
-
-## Where do Vapi test runs go wrong?
+## Run a Test and Read the Tool Calls
 
 ---
 
-Common failure modes to watch for:
+Start with one short scenario and one expected tool in a small suite, to confirm that the right assistant answers and the tool check works. Then run your suites as for any [inbound phone agent](/support/docs/phone-agent/#test-an-inbound-phone-agent-pre-analysis).
 
-- No transcript returned
-- Call ends on the wrong turn
-- Audio format mismatch
-- Chat schema mismatch
+Open a call and select the **Tool Calls** tab.
+
+| Section | What it shows |
+|---|---|
+| **Expected Tool Validation** | Each tool selected on the scenario, marked **Called** or **Not Called**. |
+| **Selected AUT Tool Calls** | Each call the assistant made to a selected tool, with its status, arguments, and result. |
+| **AUT Tool Calls** | Every tool the assistant called, including tools you didn't select, so unexpected calls are visible. |
+
+- Read the transcript and the tool calls together. If the assistant says it booked or transferred while the tool shows **Not Called**, it claimed an action it didn't take.
+- A tool that ran but returned an error still shows **Called**, so check the result of each call.
+- **Not Called** can be the right outcome, for example when the caller never gave the assistant the details it needed.
+
+## Troubleshooting
+
+---
+
+| Problem | What to do |
+|---|---|
+| The API key is rejected | Create or copy a valid key in Vapi, then save it again. |
+| The assistant isn't found | Check that the agent ID is a Vapi assistant ID, copied in full. |
+| The wrong assistant answers | Check the saved agent ID and the number on the **Phone Numbers** tab, then run the short test again. |
+| No tools appear in the scenario editor | Confirm the assistant has tools in Vapi, then select **Re-sync**. |
+| The scenario editor warns that selected tools no longer match | The catalog changed in Vapi. Sync again and review the scenario's tools. |
+| A call shows no expected tools mapped | The scenario has no tools selected, so only the call itself was graded. Select its expected tools. |
+| A key may have been exposed | Rotate it in Vapi and save the new key. |
+
+## Security and Credentials
+
+---
+
+- Saved credentials are stored as HyperExecute secrets, scoped to the agent where you save them.
+- TestMu AI uses them only to read the assistant's configuration, check its activity during your test calls, and, with **Auto-fetch Production Calls** on, fetch its production calls. It never modifies your assistant.
+- Use separate keys for test and production, rotate them on your usual schedule, and disconnect the integration when you no longer need it.
+
+## Testing Tips for Vapi Assistants
+
+---
+
+- **Default tools.** Give each default tool its own scenario: `transferCall`, `endCall`, `dtmf`, `sms`, and `apiRequest`.
+- **Squad handoffs.** Squads hand off mid-call, so test the transfer boundary between assistants.
+- **Other surfaces.** The integration works on phone calls. To test the same assistant without a phone line, connect it as a [voice agent](/support/docs/voice-agent/) over WebSocket, where audio pauses can trigger silence timeouts, or as a [chat agent](/support/docs/chat-agent/) through Vapi's Chat API, where session IDs carry context between turns.
+
+## Other Integrations
+
+---
+
+- **Phone Caller agents:** [Amazon Connect](/support/docs/test-amazon-connect-bots/), [Cartesia](/support/docs/test-cartesia-agents/), [ElevenLabs](/support/docs/test-elevenlabs-agents/), [Retell](/support/docs/test-retell-agents/), and [Salesforce Agentforce](/support/docs/test-agentforce-agents/).
+- **Voice agents:** [Deepgram Voice Agent](/support/docs/test-deepgram-voice-agents/).
+- See [Phone Agent Testing](/support/docs/phone-agent/) for everything else a phone test covers.

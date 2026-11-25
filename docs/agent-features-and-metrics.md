@@ -78,7 +78,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-11-12T13:50:45+05:30"
+    "dateModified": "2026-11-24T12:00:00+05:30"
   }) }}
 />
 
@@ -161,7 +161,7 @@ These features work the same way on every agent type marked for them in [Feature
 
 ### Red Teaming
 
-Chat agents face a live adversarial attacker across seven attack types. Phone caller agents get attacks generated against the rules in their own prompt, and each finding links to the moment in the call recording. Phone caller red team reports use the OWASP Agentic Top 10 categories ASI03 (identity), ASI06 (made-up history), and ASI09 (fake approval or pressure) alongside the OWASP LLM Top 10, with LLM10 Unbounded Consumption added. The suite's Red Team summary has a radar chart of the pass rate for each risk category, with risks that no call tested marked **Not tested**, and each red team call shows its result by tag, the tricks the caller used, false "it's done" claims, masked leaked-data hits, and the config disclosure level. See [how the platform red-teams your agent](/support/docs/architecture-and-how-evaluation-works/#how-the-platform-red-teams-your-agent).
+Chat agents face a live adversarial attacker across seven attack types. Phone caller agents, inbound and outbound, get fraudster calls generated against the rules in their own prompt, across six OWASP LLM risks, with results rated Held, Partial, Breached, or Inconclusive. The tricks the caller uses are tagged with OWASP Agentic Top 10 codes: ASI03 (identity), ASI06 (made-up history), and ASI09 (fake approval or pressure). See [Red Teaming for Phone Caller Agents](/support/docs/phone-agent-red-teaming/) and [how the platform red-teams your agent](/support/docs/architecture-and-how-evaluation-works/#how-the-platform-red-teams-your-agent).
 
 ### Go-Live Assessment
 
@@ -203,9 +203,9 @@ To stop a schedule, delete the scheduled run.
 
 ### Insights and Notifications
 
-- **Insights** summarizes your suites with pass rate, average score, and completed runs, with a page per suite for run history and drill-down. On phone caller agents, it also has a Red Team section. On inbound phone caller and IVR agents, Insights are run-based: calls are grouped into runs, past calls included, and each suite has **Run** and **Compare** pickers, a pass-rate-per-run chart, a run drawer listing every call, six KPI tiles, and scenario cards grouped as **Broke**, **Still failing**, **Fixed**, and **Healthy**.
+- **Insights** summarizes your suites with pass rate, average score, and completed runs, with a page per suite for run history and drill-down. On phone caller agents, each suite also has a [Red Team view](/support/docs/phone-agent-red-teaming/#review-red-team-results-in-insights), kept separate from the functional results. On inbound phone caller and IVR agents, Insights are run-based: calls are grouped into runs, past calls included, and each suite has **Run** and **Compare** pickers, a pass-rate-per-run chart, a run drawer listing every call, six KPI tiles, and scenario cards grouped as **Broke**, **Still failing**, **Fixed**, and **Healthy**.
 - **Slack notifications** post Started, Completed, and Error updates for chat, voice, and phone runs.
-- **Email alerts** for IVR agents send one email per failed run, listing the failed scenarios, any red team attacks that succeeded, and a link to the results. Turn them on from the **Integrations** page and choose the recipients. The **Also notify** picker lists your whole organization, with a limit of 49 recipients.
+- **Email alerts** for IVR agents send one email per failed run, listing the failed scenarios and a link to the results. Turn them on from the **Integrations** page and choose the recipients. The **Also notify** picker lists your whole organization, with a limit of 49 recipients.
 
 ### Environments
 
@@ -222,14 +222,14 @@ Voice agents have every chat feature. Their conversations happen as audio (WAV),
 - **Credentials vault.** Keep tokens, cookies, and API keys in the vault instead of in plaintext endpoint profiles or cURL. A **Move to vault** banner appears when a pasted cURL or imported Postman collection contains a credential, and values resolve only at run time.
 - **Playground.** On voice agents, try your endpoint profile interactively across several turns before you run a full suite, to check that the connection works. Chat agents no longer have a Playground: **Test connection** on a chat endpoint profile sends a real chat message and shows the reply.
 - **Evaluation runs.** Choose the metrics and the endpoint profile, then run at scale on HyperExecute, with an optional tunnel for agents behind a firewall. Progress streams live.
-- **Voice transports.** Voice sessions run over REST, WebSocket, or WebRTC. WebRTC covers LiveKit-hosted agents. Agents built on Deepgram Voice Agent use the **Deepgram Voice Agent** option in a voice endpoint profile, with the API key (a vault secret is recommended), the agent ID, and how client tool calls are answered: a mock reply or an HTTP call.
-- **Expected tool calls (voice).** Voice scenarios have an **Expected Tool Calls** field: one function name per line, with "(optional)" after any the agent may skip. Tool calls are recorded on Deepgram Voice Agent runs, and the **Tool Calls** tab shows the pass or fail verdict, then every call the agent made with its outcome, turn, latency, arguments, and result.
+- **Voice transports.** Voice endpoint profiles connect over REST API, WebSocket, OpenAI Realtime, or WebRTC (LiveKit). Agents built on Deepgram Voice Agent connect through their own **Deepgram Voice Agent** option, with the API key (a vault secret is recommended), the agent ID, and how client tool calls are answered: a mock reply or an HTTP call.
+- **Tool call checks on voice agents.** List the functions a voice scenario expects under **Expected Tool Calls**, one per line, with `(optional)` after any the agent may skip. The **Tool Calls** tab shows the pass or fail verdict, then every call the agent made with its outcome, turn, latency, arguments, and result. Tool calls are recorded for [Deepgram Voice Agent](/support/docs/test-deepgram-voice-agents/) runs.
 - **Max conversation turns (voice).** Voice scenarios allow 1 to 100 conversation turns (50 by default).
 
 These features are chat only:
 
 - **Production transcript grading (Post mode).** Bulk upload production transcripts as .txt or .json files. They are judged against your requirement documents, so replies that are out of scope or break a policy fail even when the overall score is high.
-- **Data Validation.** Check what your agent says against your own APIs, with pass or fail results per scenario, set up from the **Profiles** tab. The setup editor can start from a cURL command, add login steps, move secrets into the vault, and test a config before you save it, including through a tunnel and with a test profile. On the **Settings** tab, choose whether a run warns or fails when no data can be fetched, and which labels each scenario checks.
+- **Data Validation.** Check what your agent says against your own APIs, with pass or fail results per scenario, set up from the **Profiles** tab. The setup editor can start from a cURL command, add login steps, move secrets into the vault, and test a config before you save it, including through a tunnel and with a test profile. On the **Settings** tab, choose whether a run warns or fails when no data can be fetched, and which labels each scenario checks. See [Data Validation](/support/docs/data-validation/).
 - **Suite control.** Chat scenarios allow 1 to 100 conversation turns (25 by default), a scenario's own max-turns setting overrides the suite default, re-run results are tagged, and you can abort a running suite from the results banner.
 - **Healthcare knowledge packs** return UMLS codes (ICD-10-CM, SNOMED CT, LOINC), and the **Turns** tab shows which lookups the simulator used.
 - **WebSocket chat agents.** A WebSocket endpoint profile connects a chat agent that talks over WebSocket, including agents on Genesys Web Messaging. For Genesys Web Messaging, optional profile settings collect split replies until the agent goes quiet, pause between connect messages, and add quick-reply and button labels to the reply text.
@@ -260,7 +260,7 @@ Inbound and outbound phone agents are covered in full on [Phone Agent Testing](/
 - **Live calls.** Follow each call's status and duration live and end a call in progress. Replay recordings with a speaker-identified transcript, DTMF keypad tones, and a waveform you can click or scrub.
 - **Pronunciation assessment.** Set an accent on the agent, switch the check on per scenario, and see mispronounced words on the finished call or on an uploaded recording.
 - **Post Analysis.** Upload production recordings (MP3 or WAV), with transcripts if you have them, analyze them in batches with the metrics you choose, and bookmark, tag, and filter them.
-- **Integrations.** Connect agents built on ElevenLabs, Retell, Vapi, or Salesforce Agentforce to import the agent's prompt and tool catalog and verify the tools called on each call.
+- **Integrations.** Connect [Amazon Connect](/support/docs/test-amazon-connect-bots/), [Cartesia](/support/docs/test-cartesia-agents/), [ElevenLabs](/support/docs/test-elevenlabs-agents/), [Retell](/support/docs/test-retell-agents/), [Vapi](/support/docs/test-vapi-agents/), or [Salesforce Agentforce](/support/docs/test-agentforce-agents/) agents to import the agent's prompt and tools and verify the tools called on each call.
 - **Quality checks.** Every call is graded on quality checks and gets an overall verdict of Pass, Fail, or Review incomplete. See [Quality Checks and the Call Verdict](#quality-checks).
 - **Post-call web tests.** After a call is graded, Test Manager web tests that match the call run on HyperExecute with values taken from the transcript, and the **Web Test** tab shows each result. Web test results do not change the call verdict. See [Post-Call Web Tests](/support/docs/phone-agent/#post-call-web-tests).
 - **Live call events API.** Follow a call while it runs through `GET /api/calls/{call_id}/events/stream`, with transfer events for handoff scenarios, a live transcript, and the end reason. See [Live Call Events API](/support/docs/phone-agent/#live-call-events).
@@ -278,7 +278,6 @@ A Phone Caller agent can also connect to an agent built on Amazon Connect (Amazo
 - **IVR System Map.** See every menu, branch, and dead-end in the IVR as a map, with menu options that calls did not take shown as dashed "not taken" branches. The map builds in about a minute for a large menu.
 - **Test data sets.** Upload a CSV or Excel file in which each row is one caller, assign it to an IVR scenario in a suite, and the suite places one call for each row. Test data sets have their own section on the **Test Profile** tab, below the test profiles.
 - **Email alerts** for failed runs. See [Insights and Notifications](#insights-and-notifications).
-- **Performance testing** with concurrent calls, from the **Performance Testing** tab.
 - **Insights, Go-Live assessment, and scheduled runs** work as described in [Shared Features](#shared-features).
 
 See [IVR agent testing](/support/docs/ivr-agent/) for a full walkthrough.
@@ -598,7 +597,7 @@ Follow these guidelines when you write a grading prompt.
 - **One rule per metric.** "Asked for a PIN" and "confirmed the new address" are two metrics, so a failure shows which rule broke.
 - **Say what counts as no.** A Yes / No prompt with one sentence of edge-case guidance, such as "if the caller refused, the agent should still have asked at least once", grades more consistently than a bare question.
 - **Give ratings score bands.** Spelling out what 0 to 25, 26 to 50, 51 to 75, and 76 to 100 mean anchors the score and makes runs comparable.
-- **Keep grading prompts about the transcript.** Checks about hold music, voice tone, or backend actions cannot be judged from what was said. Use the audio metrics and tool call validation for those. Tool call validation is available through the [ElevenLabs](/support/docs/test-elevenlabs-agents/#elevenlabs-integration), [Retell](/support/docs/test-retell-agents/#retell-integration), [Vapi](/support/docs/test-vapi-agents/#vapi-integration), [Salesforce Agentforce](/support/docs/test-agentforce-agents/#agentforce-integration), [Amazon Connect](/support/docs/test-amazon-connect-bots/#amazon-q-in-connect), and Cartesia integrations.
+- **Keep grading prompts about the transcript.** Checks about hold music, voice tone, or backend actions cannot be judged from what was said. Use the audio metrics and tool call validation for those. Tool call validation is available through the [Amazon Connect](/support/docs/test-amazon-connect-bots/), [Cartesia](/support/docs/test-cartesia-agents/), [ElevenLabs](/support/docs/test-elevenlabs-agents/), [Retell](/support/docs/test-retell-agents/), [Vapi](/support/docs/test-vapi-agents/), and [Salesforce Agentforce](/support/docs/test-agentforce-agents/#agentforce-integration) integrations.
 
 #### Turn On Pass or Fail Gating
 
@@ -707,8 +706,6 @@ These safeguards apply to every custom metric.
 - Grades never modify your agent or your systems.
 
 ### Speech-to-Text Evaluation
-
-<!-- TODO: confirm with product that STT evaluation and detected issue tags are still shown, and how they relate to the 42 metrics above. -->
 
 | Metric | Unit | What It Measures |
 |--------|------|-----------------|
