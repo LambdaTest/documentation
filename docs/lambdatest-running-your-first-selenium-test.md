@@ -164,7 +164,9 @@ import VerifiedTag from '@site/src/component/verifiedTag';
 ---
 
 
-This guide walks you through running sample Selenium End-to-End (E2E) testing on the TestMu AI cloud grid using Python and the pytest framework. Clone a sample project, set your credentials, and execute a test.
+To run your first automated Selenium test on TestMu AI, clone the pytest sample, set your username and access key as the `LT_USERNAME` and `LT_ACCESS_KEY` environment variables, choose a browser and OS in `conftest.py`, and run `pytest`. The test runs on the TestMu AI cloud grid, and its video, screenshots and logs appear in the Automation Dashboard.
+
+This guide walks you through running sample Selenium End-to-End (E2E) testing on the TestMu AI cloud grid using Python and the pytest framework.
 
 :::tip Sample repo
 All the code used in this guide is available in the sample repository. Clone it to get started.

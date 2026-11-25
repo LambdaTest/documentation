@@ -200,6 +200,8 @@ import VerifiedTag from '@site/src/component/verifiedTag';
 
 In this documentation, you will learn how to trigger a automation script of **Python** for application testing with **Appium** on <BrandName />, set the [**desired capabilities**](/support/docs/desired-capabilities-in-appium/) for appium testing, and other advanced features of <BrandName />.
 
+For a step-by-step introduction to writing Appium tests in Python, read the [Appium Python tutorial](https://www.testmuai.com/learning-hub/appium-python/).
+
 ## Prerequisites
 
 - Your <BrandName /> [Username and Access key](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/security).
@@ -283,7 +285,118 @@ Make sure to add the path of the **appFile** in the cURL request. Below is an ex
 
 :::
 
-### Step 4: Update your Automation Script
+## Python Capabilities for a Real Device Run
+---
+
+If you write your own script instead of using a sample repository, the block below is the smallest set of capabilities that starts a session on a real device. It uses the `lt:options` format with the Appium Python Client's `AppiumOptions` class, reads the `LT_USERNAME` and `LT_ACCESS_KEY` variables you set above and connects to the <BrandName /> hub. It needs Appium Python Client 2.3.0 or later.
+
+<Tabs className="docs__val">
+
+<TabItem value="android-real" label="Android" default>
+
+```python title="real_device.py"
+import os
+from appium import webdriver
+from appium.options.common import AppiumOptions
+
+username = os.environ.get("LT_USERNAME")
+access_key = os.environ.get("LT_ACCESS_KEY")
+
+lt_options = {
+    "deviceName": "Galaxy S20",
+    "platformName": "android",
+    "platformVersion": "10",
+    "app": "APP_URL",  # Enter the app (.apk) url from the upload step
+    "isRealMobile": True,
+    "build": "Python Real Device",
+    "name": "Sample Test - Python",
+    "video": True,
+    "w3c": True,
+}
+
+options = AppiumOptions()
+options.set_capability("lt:options", lt_options)
+options.set_capability("platformName", "android")
+
+driver = webdriver.Remote(
+    command_executor=f"https://{username}:{access_key}@mobile-hub.lambdatest.com/wd/hub",
+    options=options,
+)
+driver.execute_script("lambda-status=passed")
+driver.quit()
+```
+
+</TabItem>
+
+<TabItem value="ios-real" label="iOS">
+
+```python title="real_device.py"
+import os
+from appium import webdriver
+from appium.options.common import AppiumOptions
+
+username = os.environ.get("LT_USERNAME")
+access_key = os.environ.get("LT_ACCESS_KEY")
+
+lt_options = {
+    "deviceName": "iPhone 12",
+    "platformName": "ios",
+    "platformVersion": "14",
+    "app": "APP_URL",  # Enter the app (.ipa) url from the upload step
+    "isRealMobile": True,
+    "build": "Python Real Device",
+    "name": "Sample Test - Python",
+    "video": True,
+    "w3c": True,
+}
+
+options = AppiumOptions()
+options.set_capability("lt:options", lt_options)
+options.set_capability("platformName", "ios")
+
+driver = webdriver.Remote(
+    command_executor=f"https://{username}:{access_key}@mobile-hub.lambdatest.com/wd/hub",
+    options=options,
+)
+driver.execute_script("lambda-status=passed")
+driver.quit()
+```
+
+</TabItem>
+
+</Tabs>
+
+Install the client and run the script on a real device:
+
+```bash
+pip install Appium-Python-Client
+python3 real_device.py
+```
+
+`isRealMobile: True` allocates a real device. Set it to `False` to run on a virtual device. The session appears on the App Automation dashboard with its video recording.
+
+:::tip Running this session with pytest
+The PyTest sample repository installs the latest Appium Python Client, and client 3 and later accept capabilities only through `options` (the `desired_capabilities` argument was removed). In a pytest fixture, build the driver with `AppiumOptions` as above, `yield` it to the test, then call `driver.execute_script("lambda-status=passed")` or `driver.execute_script("lambda-status=failed")` and `driver.quit()`. Install pytest with `pip install pytest` and run your test file with `pytest <file>.py`, or `python -m pytest <file>.py`.
+:::
+
+## Run a Test With Your Framework
+---
+
+Pick your framework below. Each tab contains the complete flow for that framework: the sample repository, the automation script, the test capabilities, and the command to execute your tests. The credentials and app upload you set above are shared across all of them.
+
+<Tabs queryString="framework">
+
+<TabItem value="vanilla" label="Vanilla Python" default>
+
+### Step 1: Get a Sample Project
+
+You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
+
+:::tip Sample repo
+All the code samples in this documentation can be found on **<BrandName />'s Github Repository**. You can either download or clone the repository to quickly run your tests. <a href="https://github.com/LambdaTest/LT-appium-python" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
+:::
+
+### Step 2: Update your Automation Script
 
 An automation script for the sample application given above has been provided here. Ensure to update the `APP_URL`, `username` and `accessKey` in the code scripts before running the tests.
 

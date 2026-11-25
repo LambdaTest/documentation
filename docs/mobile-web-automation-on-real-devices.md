@@ -223,5 +223,52 @@ Visit the [TestMu AI Automation Dashboard](https://www.testmuai.com/login/?redir
 
 <img loading="lazy" src={require('../assets/images/mobile-web-automation/mobile-web-automation-2.webp').default} alt="Image"  className="doc_img"/>
 
+## Mobile Web Automation Sample for Appium Python Client 3 and Later
+---
+Appium Python Client 3 removed the `desired_capabilities` argument, so the latest client that the prerequisites install passes capabilities through an options object. The sample below opens the Selenium Playground ToDo app in Chrome on a real Android device, checks two items and adds a new one. Set your TestMu AI Username and Access Key as the `LT_USERNAME` and `LT_ACCESS_KEY` environment variables before you run it.
+
+```python
+# todo_real_android.py
+import os
+
+from appium import webdriver
+from appium.options.common import AppiumOptions
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+
+username = os.environ["LT_USERNAME"]
+access_key = os.environ["LT_ACCESS_KEY"]
+
+options = AppiumOptions()
+options.set_capability("platformName", "android")
+options.set_capability("browserName", "Chrome")
+options.set_capability("lt:options", {
+    "deviceName": "Galaxy S24",
+    "platformVersion": "14",
+    "isRealMobile": True,  # real mobile device capability
+    "build": "Mobile Web Automation Demo",
+    "name": "ToDo app in Chrome on a real Android device",
+})
+
+driver = webdriver.Remote(
+    command_executor=f"https://{username}:{access_key}@mobile-hub.lambdatest.com/wd/hub",
+    options=options,
+)
+
+try:
+    driver.get("https://www.testmuai.com/selenium-playground/todo-app/")
+    driver.find_element(By.NAME, "li1").click()
+    driver.find_element(By.NAME, "li2").click()
+    driver.find_element(By.ID, "sampletodotext").send_keys("item 1")
+    driver.execute_script("document.getElementById('addbutton').click();")
+    WebDriverWait(driver, 10).until(
+        lambda d: d.find_elements(By.XPATH, "//li/span[text()='item 1']")
+    )
+finally:
+    driver.quit()
+```
+
+To run the same test in Safari on a real iPhone, set `platformName` to `ios` and `browserName` to `Safari`, and choose an iOS device in `lt:options`, for example `"deviceName": "iPhone 15"` with `"platformVersion": "18"`. Run the file with `python todo_real_android.py` and find the session in the Automation Dashboard as described above.
+
 >That’s all! you have successfully executed the mobile web automation test on real devices. In case you have any questions or need any additional information, you could reach out at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24X7 Chat Support**</span> or mail us directly at support@testmuai.com.
 
