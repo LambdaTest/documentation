@@ -281,11 +281,6 @@
   "redirects": [
     { "source": "/docs", "destination": "/docs/kane-cli-introduction", "permanent": true },
     {
-      "source": "/docs/docs/:slug",
-      "destination": "/docs/:slug",
-      "permanent": true
-    },
-    {
       "source": "/docs/:slug",
       "destination": "/docs/:slug/"
     },
