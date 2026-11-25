@@ -48,35 +48,35 @@
               {
                 "group": "Getting Started",
                 "pages": [
-                  "docs/kane-cli-introduction",
-                  "docs/kane-cli-installation",
-                  "docs/kane-cli-quickstart",
-                  "docs/kane-cli-authentication"
+                  "kane-cli-introduction",
+                  "kane-cli-installation",
+                  "kane-cli-quickstart",
+                  "kane-cli-authentication"
                 ]
               },
               {
                 "group": "Core Concepts",
                 "pages": [
-                  "docs/kane-cli-modes",
-                  "docs/kane-cli-writing-objectives",
-                  "docs/kane-cli-api-calls",
-                  "docs/kane-cli-browser-state",
-                  "docs/kane-cli-variables-and-context",
-                  "docs/kane-cli-configuration",
-                  "docs/kane-cli-tms-integration",
+                  "kane-cli-modes",
+                  "kane-cli-writing-objectives",
+                  "kane-cli-api-calls",
+                  "kane-cli-browser-state",
+                  "kane-cli-variables-and-context",
+                  "kane-cli-configuration",
+                  "kane-cli-tms-integration",
                   {
                     "group": "Test.md",
                     "pages": [
-                      "docs/kane-cli-testmd",
-                      "docs/kane-cli-testmd-composition",
-                      "docs/kane-cli-testmd-running"
+                      "kane-cli-testmd",
+                      "kane-cli-testmd-composition",
+                      "kane-cli-testmd-running"
                     ]
                   },
                   {
                     "group": "Batch Runs (testrun)",
                     "pages": [
-                      "docs/kane-cli-testrun",
-                      "docs/kane-cli-remote-execution"
+                      "kane-cli-testrun",
+                      "kane-cli-remote-execution"
                     ]
                   }
                 ]
@@ -84,83 +84,83 @@
               {
                 "group": "Mobile Testing",
                 "pages": [
-                  "docs/kane-cli-mobile",
-                  "docs/kane-cli-mobile-real-device"
+                  "kane-cli-mobile",
+                  "kane-cli-mobile-real-device"
                 ]
               },
               {
                 "group": "Use Cases",
                 "pages": [
-                  "docs/kane-cli-use-cases",
-                  "docs/api-testing-with-kane-cli",
-                  "docs/kane-cli-with-ai-coding-agents",
-                  "docs/kane-cli-ecommerce-testing",
-                  "docs/kane-cli-payments-testing",
-                  "docs/kane-cli-devtools-performance-testing",
-                  "docs/kane-cli-security-access-testing",
-                  "docs/kane-cli-cicd-devops-testing",
-                  "docs/kane-cli-regression-e2e-testing",
-                  "docs/kane-cli-test-generation-exploration",
-                  "docs/kane-cli-mobile-app-testing"
+                  "kane-cli-use-cases",
+                  "api-testing-with-kane-cli",
+                  "kane-cli-with-ai-coding-agents",
+                  "kane-cli-ecommerce-testing",
+                  "kane-cli-payments-testing",
+                  "kane-cli-devtools-performance-testing",
+                  "kane-cli-security-access-testing",
+                  "kane-cli-cicd-devops-testing",
+                  "kane-cli-regression-e2e-testing",
+                  "kane-cli-test-generation-exploration",
+                  "kane-cli-mobile-app-testing"
                 ]
               },
               {
                 "group": "Generate Test Cases",
                 "pages": [
-                  "docs/kane-cli-generate",
-                  "docs/kane-cli-generate-workflow"
+                  "kane-cli-generate",
+                  "kane-cli-generate-workflow"
                 ]
               },
               {
                 "group": "Assurance",
                 "pages": [
-                  "docs/kane-cli-assurance",
-                  "docs/kane-cli-assurance-context",
-                  "docs/kane-cli-assurance-sources",
-                  "docs/kane-cli-assurance-design",
-                  "docs/kane-cli-assurance-coverage",
-                  "docs/kane-cli-assurance-maintain",
-                  "docs/kane-cli-assurance-sharing",
-                  "docs/kane-cli-assurance-automation"
+                  "kane-cli-assurance",
+                  "kane-cli-assurance-context",
+                  "kane-cli-assurance-sources",
+                  "kane-cli-assurance-design",
+                  "kane-cli-assurance-coverage",
+                  "kane-cli-assurance-maintain",
+                  "kane-cli-assurance-sharing",
+                  "kane-cli-assurance-automation"
                 ]
               },
               {
                 "group": "Exploration",
                 "pages": [
-                  "docs/kane-cli-exploration"
+                  "kane-cli-exploration"
                 ]
               },
               {
                 "group": "Evidence",
                 "pages": [
-                  "docs/kane-cli-evidence",
-                  "docs/kane-cli-evidence-pack-structure",
-                  "docs/kane-cli-evidence-viewing",
-                  "docs/kane-cli-evidence-validate",
-                  "docs/kane-cli-evidence-merge",
-                  "docs/kane-cli-evidence-debugging",
-                  "docs/kane-cli-bugs",
-                  "docs/kane-cli-evidence-format"
+                  "kane-cli-evidence",
+                  "kane-cli-evidence-pack-structure",
+                  "kane-cli-evidence-viewing",
+                  "kane-cli-evidence-validate",
+                  "kane-cli-evidence-merge",
+                  "kane-cli-evidence-debugging",
+                  "kane-cli-bugs",
+                  "kane-cli-evidence-format"
                 ]
               },
               {
                 "group": "Checkpoints",
                 "pages": [
-                  "docs/kane-cli-checkpoints",
-                  "docs/kane-cli-checkpoint-visual",
-                  "docs/kane-cli-checkpoint-textual",
-                  "docs/kane-cli-checkpoint-url",
-                  "docs/kane-cli-checkpoint-title",
+                  "kane-cli-checkpoints",
+                  "kane-cli-checkpoint-visual",
+                  "kane-cli-checkpoint-textual",
+                  "kane-cli-checkpoint-url",
+                  "kane-cli-checkpoint-title",
                   {
                     "group": "DevTools",
                     "pages": [
-                      "docs/kane-cli-checkpoint-devtools",
-                      "docs/kane-cli-checkpoint-devtools-network",
-                      "docs/kane-cli-checkpoint-devtools-console",
-                      "docs/kane-cli-checkpoint-devtools-performance",
-                      "docs/kane-cli-checkpoint-devtools-cookies",
-                      "docs/kane-cli-checkpoint-devtools-localstorage",
-                      "docs/kane-cli-checkpoint-devtools-clipboard"
+                      "kane-cli-checkpoint-devtools",
+                      "kane-cli-checkpoint-devtools-network",
+                      "kane-cli-checkpoint-devtools-console",
+                      "kane-cli-checkpoint-devtools-performance",
+                      "kane-cli-checkpoint-devtools-cookies",
+                      "kane-cli-checkpoint-devtools-localstorage",
+                      "kane-cli-checkpoint-devtools-clipboard"
                     ]
                   }
                 ]
@@ -168,29 +168,29 @@
               {
                 "group": "Agent Mode",
                 "pages": [
-                  "docs/kane-cli-agent-mode",
-                  "docs/kane-cli-parallel-execution"
+                  "kane-cli-agent-mode",
+                  "kane-cli-parallel-execution"
                 ]
               },
               {
                 "group": "CI/CD & Skills",
                 "pages": [
-                  "docs/kane-cli-cicd",
-                  "docs/kane-cli-skills",
+                  "kane-cli-cicd",
+                  "kane-cli-skills",
                   "kane-cli-agents-md",
-                  "docs/kane-cli-claude-code-plugin"
+                  "kane-cli-claude-code-plugin"
                 ]
               },
               {
                 "group": "Reference",
                 "pages": [
-                  "docs/kane-cli-cli-reference",
-                  "docs/kane-cli-error-codes",
+                  "kane-cli-cli-reference",
+                  "kane-cli-error-codes",
                   {
                     "group": "Troubleshooting",
                     "pages": [
-                      "docs/kane-cli-troubleshooting",
-                      "docs/kane-cli-troubleshooting-sharp"
+                      "kane-cli-troubleshooting",
+                      "kane-cli-troubleshooting-sharp"
                     ]
                   },
                   "kane-cli-changelog"
@@ -280,6 +280,11 @@
   },
   "redirects": [
     { "source": "/docs", "destination": "/docs/kane-cli-introduction", "permanent": true },
+    {
+      "source": "/docs/docs/:slug",
+      "destination": "/docs/:slug",
+      "permanent": true
+    },
     {
       "source": "/docs/:slug",
       "destination": "/docs/:slug/"
