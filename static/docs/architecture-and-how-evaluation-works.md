@@ -186,7 +186,7 @@ Agents on a private network are reached through the secure tunnel, so the endpoi
 
 ## What the Metrics and Verdict Produce
 
-The testing agents score chat and voice agents across 9 quality metrics and phone agents across 30+ call metrics. Each score carries a confidence level based on how many scenarios backed it.
+The testing agents score chat and voice agents across 9 quality metrics and phone agents across 40+ call metrics. Each score carries a confidence level based on how many scenarios backed it.
 
 The verdict is a deployment decision, not just a number. Green clears the agent for production, Yellow flags specific issues to fix first, and Red blocks deployment. Every verdict links back to the conversation turns that drove it, so a failing result points straight at the fix.
 

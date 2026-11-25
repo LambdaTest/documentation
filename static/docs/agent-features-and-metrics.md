@@ -269,13 +269,7 @@ Good phone conversations are short, natural, and two-way. These metrics show how
 
 Wrong or made-up information is one of the biggest risks with AI agents. These metrics catch it.
 
-| Metric | What it measures | Produced by | Default target |
-|--------|------------------|-------------|----------------|
-| Response consistency | Catches your agent contradicting itself, such as quoting a balance of $120 and later $210. It is strict on names, account and reference numbers, amounts, dates, times, and a yes that later turns into a no. An open correction, such as "Sorry, I meant Tuesday", still passes, as do two spellings of a name that sounds the same, such as Steven and Stephen. While it is switched on, it replaces Response alignment. | AI review | Pass |
-| No invented details | Catches your agent making things up. It fails when the agent gives a specific name, number, date, status, booking, or policy that nothing said on the call, and nothing in its instructions, supports. | AI review | Pass |
-| Faithfulness | How closely your agent sticks to its instructions and what the caller said, about policies, prices, opening hours, steps, and what it can do. Applies only when your agent's instructions are available. No invented details is a strict yes or no on specific facts, while Faithfulness scores the whole call. | AI review | 4 or 5 out of 5 |
-| Intent recognition | How well your agent understood what the caller was trying to do, scored from 0 to 100. | AI review | 70% or more |
-| Response alignment | How well your agent's replies matched the caller's questions and the context, scored from 0 to 100. Hidden while Response consistency is switched on. | AI review | 70% or more |
+Phone Caller agents are evaluated across **8 metric categories** with **40+ individual metrics**.
 
 ### Outcome Metrics: Does It Get the Job Done?
 
@@ -594,4 +588,212 @@ The platform automatically detects and flags the following issues in every call 
 | 60 to 79 | Fair |
 | 0 to 59 | Poor |
 
-For each active custom criterion, the results show a compliance status of Pass, Fail, or Partial, with the specific observations behind it.
+Phone Caller Outbound supports the **same two evaluation modes** as Inbound (Pre-evaluation and Post-evaluation) and shares all features, with a few key differences in pre-evaluation mode only.
+
+### Outbound-Specific Pre-evaluation Features
+
+- **Scenario Generation**: Generate up to **7** outbound test scenarios (vs. 20 for inbound)
+- **Caller Profile Selection**: Select an outbound caller profile when generating scenarios
+- **Outbound Number Pool**: Reserve phone numbers from the outbound pool for test calls
+- **Passive Mode**: Listen to outbound calls without interfering (for QA monitoring)
+- **First Speaker Default**: Agent speaks first (vs. simulator for inbound)
+
+### Outbound Pool Management
+
+- **View Pool Status**: See available outbound numbers
+- **Reservations**: View and manage per-suite number reservations
+- **Clear Reservations**: Release reserved numbers when done
+
+All other features (phone number management, voice configuration, test suites, call execution, post-evaluation, go-live assessment, metrics, and scheduling) are **identical to Phone Caller Inbound**.
+
+Same as Phone Caller Inbound, all **8 categories** and **40+ metrics**.
+
+## Image Analyzer Agent
+
+### 🖼️ Image Analysis
+
+Upload single images or batch-process up to 50 at once, via file upload or URL.
+
+- **Single Image Analysis**: Upload an image (or provide a URL) along with the original prompt used to generate it
+- **Batch Analysis**: Analyze up to 50 images at once with a shared prompt
+- **Drag & Drop Upload**: Drag and drop images directly into the upload area
+- **Supported Formats**: JPG, JPEG, PNG, GIF, WEBP, BMP (max 20 MB per image)
+
+### 🎯 Custom Evaluation Criteria
+
+Define what "good" means for your images. Choose from three criteria types:
+
+- Allowed colors and prohibited colors
+- Required fonts
+- Logo requirements (text description)
+
+- Required dimensions (width × height)
+- Aspect ratio requirements
+- Allowed file formats
+- Maximum file size
+- Minimum resolution
+
+- Freeform rule text
+- Checklist items to validate
+
+All criteria support Active/Inactive toggling, create/edit/delete operations, and search by name, description, or type.
+
+### 📋 Analysis History
+
+- **Search**: Find past analyses by image name or prompt text
+- **Status Tracking**: View analysis status (Pending, Completed, Failed)
+- **Detailed View**: Click any analysis to view full results
+- **Bookmarking**: Bookmark important analyses for quick access
+
+### 📊 Analytics Dashboard
+
+- **Overall Statistics**: Average score, highest score, lowest score, total analyses count
+- **Quality Trends**: Daily score breakdown over the last 30 days with bar chart visualization
+- **Prompt Performance**: Top 20 prompts ranked by average quality score, showing min/max scores, usage count, and comparison vs. overall average
+
+| Metric | Scale | What It Measures |
+|--------|-------|-----------------|
+| **Quality Score** | 0–100 | Overall image quality and prompt adherence |
+| **Matches** | List | Elements that correctly match the original prompt |
+| **Discrepancies** | List | Missing or incorrect elements vs. the prompt |
+| **Overall Assessment** | Text | Summary of how well the image matches the prompt |
+| **Detailed Observations** | Text | In-depth analysis of specific image aspects |
+
+**Quality Score Interpretation:**
+
+| Score Range | Label | Rating |
+|-------------|-------|--------|
+| 90–100 | Excellent | 🟢 |
+| 80–89 | Good | 🟢 |
+| 60–79 | Fair | 🟡 |
+| 0–59 | Poor | 🔴 |
+
+**Custom Criteria Compliance:**
+
+For each active criterion, results show:
+- Compliance status: **PASS**, **FAIL**, or **PARTIAL** (color-coded badges)
+- Compliance details with specific observations
+
+## Shared Features Across Agents
+
+### 🗂️ Project Management
+
+- **Create Agents**: Name, description, and agent type selection
+- **Agent Listing**: View all agents with type-specific icons and filtering
+- **Agent Dashboard**: Overview of workflows, suites, and recent activity
+
+### 📋 Test Profiles
+
+**Available for: Chat · Voice · Phone Caller (Inbound/Outbound)**
+
+- Custom key-value data with typed fields (string, number, boolean, email, URL, textarea, JSON)
+- Default profile marking
+- Import/Export as JSON
+
+### 🎭 Personas
+
+**Available for: Chat · Voice · Phone Caller (Inbound/Outbound)**
+
+- Pre-built persona library
+- Custom persona creation
+- Persona assignment to scenarios
+
+### 🗓️ Scheduling
+
+**Available for: Chat · Voice · Phone Caller (Inbound/Outbound)**
+
+- Cron-based scheduling (Hourly, Daily, Weekdays, Weekly, Monthly, Custom)
+- Timezone support (full IANA timezone list)
+- Pause/Resume/Delete scheduled runs
+- View next scheduled run time and run history
+
+### 🚦 Go-Live Assessment
+
+**Available for: Chat · Voice · Phone Caller (Inbound/Outbound)**
+
+| Verdict | Score Range | Meaning |
+|---------|------------|---------|
+| 🟢 GREEN | ≥ 80 | Ready for Production |
+| 🟡 YELLOW | 65–79 | Ready with Caveats |
+| 🔴 RED | < 65 | Not Ready |
+
+- Overall score with confidence level
+- Scenario coverage analysis
+- AI-powered risk assessment and recommendations
+
+### 🌐 Environment Management
+
+**Available for: All agent types**
+
+- Create and manage test environments
+- Variable management (name, value, type, persistence)
+- Per-environment variable scoping
+- Bulk variable creation
+
+### ✅ Validation Criteria
+
+**Available for: Chat · Voice · Phone Caller (Inbound/Outbound)**
+
+- Custom pass/fail criteria per scenario
+- Evidence-based validation with confidence levels (High/Medium/Low)
+- Compliance percentage tracking
+- Per-criterion results: Pass, Fail, or Unable to Verify
+
+## Feature Availability Matrix
+
+| Feature | Chat | Voice | Phone Caller Inbound | Phone Caller Outbound | Image Analyzer |
+|---------|:----:|:-----:|:--------------------:|:---------------------:|:--------------:|
+| Workflow & Document Upload | ✅ | ✅ | ❌ | ❌ | ❌ |
+| AI Scenario Generation | ✅ | ✅ | ✅ (up to 20) | ✅ (up to 7) | ❌ |
+| Manual Scenario Creation | ✅ | ✅ | ✅ | ✅ | ❌ |
+| Test Suites | ✅ | ✅ | ✅ | ✅ | ❌ |
+| Endpoint Profiles | ✅ | ✅ | ❌ | ❌ | ❌ |
+| Test Profiles | ✅ | ✅ | ✅ | ✅ | ❌ |
+| Personas | ✅ | ✅ | ✅ | ✅ | ❌ |
+| Playground | ✅ | ✅ | ❌ | ❌ | ❌ |
+| Audio-Based Conversations | ❌ | ✅ | ❌ | ❌ | ❌ |
+| Phone Numbers | ❌ | ❌ | ✅ | ✅ | ❌ |
+| Voice Selection (per scenario) | ❌ | ❌ | ✅ | ✅ | ❌ |
+| Background Noise Simulation | ❌ | ❌ | ✅ | ✅ | ❌ |
+| Live Call Execution (Pre-eval) | ❌ | ❌ | ✅ | ✅ | ❌ |
+| Production Recording Upload (Post-eval) | ❌ | ❌ | ✅ | ✅ | ❌ |
+| Batch Recording Analysis | ❌ | ❌ | ✅ | ✅ | ❌ |
+| Call Recording Playback | ❌ | ❌ | ✅ | ✅ | ❌ |
+| DTMF Support | ❌ | ❌ | ✅ | ✅ | ❌ |
+| Passive Mode | ❌ | ❌ | ❌ | ✅ | ❌ |
+| Outbound Pool | ❌ | ❌ | ❌ | ✅ | ❌ |
+| Image Upload & Analysis | ❌ | ❌ | ❌ | ❌ | ✅ |
+| Custom Evaluation Criteria | ❌ | ❌ | ❌ | ❌ | ✅ |
+| Brand Guideline Checks | ❌ | ❌ | ❌ | ❌ | ✅ |
+| Image Analytics Dashboard | ❌ | ❌ | ❌ | ❌ | ✅ |
+| Metric Thresholds | ✅ | ✅ | ✅ | ✅ | ❌ |
+| Go-Live Assessment | ✅ | ✅ | ✅ | ✅ | ❌ |
+| Validation Criteria | ✅ | ✅ | ✅ | ✅ | ❌ |
+| Scheduled Runs | ✅ | ✅ | ✅ | ✅ | ❌ |
+| HyperExecute Integration | ✅ | ✅ | ❌ | ❌ | ❌ |
+| Import/Export Profiles | ✅ | ✅ | ❌ | ❌ | ❌ |
+
+## Metrics Availability Matrix
+
+| Metric Category | Chat | Voice | Phone Caller Inbound | Phone Caller Outbound | Image Analyzer |
+|----------------|:----:|:-----:|:--------------------:|:---------------------:|:--------------:|
+| Bias Detection | ✅ | ✅ | ❌ | ❌ | ❌ |
+| Hallucination Detection | ✅ | ✅ | ❌ | ❌ | ❌ |
+| Completeness | ✅ | ✅ | ❌ | ❌ | ❌ |
+| Context Awareness | ✅ | ✅ | ❌ | ❌ | ❌ |
+| Response Quality | ✅ | ✅ | ❌ | ❌ | ❌ |
+| Conversation Flow | ✅ | ✅ | ❌ | ❌ | ❌ |
+| User Satisfaction | ✅ | ✅ | ❌ | ❌ | ❌ |
+| File Handling Quality | ✅ | ✅ | ❌ | ❌ | ❌ |
+| File Generation Accuracy | ✅ | ✅ | ❌ | ❌ | ❌ |
+| Latency & Interaction Dynamics | ❌ | ❌ | ✅ | ✅ | ❌ |
+| Accuracy & Effectiveness (FCR, etc.) | ❌ | ❌ | ✅ | ✅ | ❌ |
+| CSAT & User Experience | ❌ | ❌ | ✅ | ✅ | ❌ |
+| Business Operational Metrics | ❌ | ❌ | ✅ | ✅ | ❌ |
+| Audio Voice Quality | ❌ | ❌ | ✅ | ✅ | ❌ |
+| STT Evaluation | ❌ | ❌ | ✅ | ✅ | ❌ |
+| Issue Detection Tags | ❌ | ❌ | ✅ | ✅ | ❌ |
+| Validation Criteria | ✅ | ✅ | ✅ | ✅ | ❌ |
+| Image Quality Score | ❌ | ❌ | ❌ | ❌ | ✅ |
+| Prompt Compliance | ❌ | ❌ | ❌ | ❌ | ✅ |
+| Brand/Technical Spec Compliance | ❌ | ❌ | ❌ | ❌ | ✅ |
