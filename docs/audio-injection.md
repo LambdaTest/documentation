@@ -447,4 +447,4 @@ Yes. Call `lambda-audio-injection=<new_url>` followed by `lambda-audio-start`. T
 
 ---
 
-**Need help?** Contact <a href={`${BRAND_URL}/support/`}>Support</a> or chat with us at the bottom-right of any page.
+**Need help?** Contact <a href={`${BRAND_URL}/support/docs/`}>Support</a> or chat with us at the bottom-right of any page.

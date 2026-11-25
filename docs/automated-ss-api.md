@@ -252,7 +252,7 @@ $ set LT_USERNAME= `{YOUR_LAMBDATEST_USERNAME}`
 $ set LT_ACCESS_KEY= `{YOUR_LAMBDATEST_ACCESS_KEY}`
 
 <div className="download_btn mb-10">
-<a href="https://www.testmuai.com/support/docs/api-doc/#screenshots">Open API Document For Automated Screenshot Testing</a>
+<a href="https://www.testmuai.com/support/api-doc/#screenshots">Open API Document For Automated Screenshot Testing</a>
 </div>
 
 
