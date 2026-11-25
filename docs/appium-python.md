@@ -686,6 +686,10 @@ If you are unable to run the automation script with the above mentioned commands
 
   > Your test results would be displayed on the test console (or CLI if you are using terminal/cmd) and on the [<BrandName /> App Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://appautomation.lambdatest.com/build).
 
+</TabItem>
+
+</Tabs>
+
 ## Using the Appium Agent Skill with TestMu AI
 ***
 
