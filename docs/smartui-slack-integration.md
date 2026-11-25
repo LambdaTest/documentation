@@ -196,7 +196,7 @@ Run a build in the project and open the Slack channel you selected in Step 2. Ea
 
 Sent when **Changes found** is ticked and a build has screenshots with changes found. It lists each mismatched screenshot with its mismatch percentage and configuration.
 
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/slack-alerts/msg-changes-found-alert.png').default} alt="Slack changes found alert listing a screenshot with its mismatch percentage" className='doc_img' width="1568" height="399"/>
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/slack-alerts/msg-changes-found-alert.png').default} alt="Slack changes found alert listing a screenshot with its mismatch percentage" className='doc_img' style={{width: '720px', maxWidth: '100%'}}/>
 
 ### Build Completed Messages
 
@@ -209,13 +209,24 @@ Sent when **Build completed** is ticked. Each message shows the build result, a 
 | **Baseline build completed** | A baseline build finished. Shows the number of screenshots. |
 | **Build failed** | The build finished without capturing any screenshots. |
 
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/slack-alerts/msg-approved.png').default} alt="Slack message: Build approved, with Total and Approved counts" className='doc_img' width="860" height="460"/>
-
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/slack-alerts/msg-needs-review-new.png').default} alt="Slack message: Build needs review, with Total and New counts and a Review 1 Screenshot button" className='doc_img' width="1070" height="514"/>
-
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/slack-alerts/msg-needs-review-changes.png').default} alt="Slack message: Build needs review, with Total and Changes found counts" className='doc_img' width="860" height="466"/>
-
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/slack-alerts/msg-baseline.png').default} alt="Slack message: Baseline build completed, with the screenshot count" className='doc_img' width="860" height="450"/>
+<div style={{display: 'flex', flexWrap: 'wrap', gap: '20px', justifyContent: 'center', alignItems: 'flex-start'}}>
+  <figure style={{flex: '1 1 300px', maxWidth: '400px', margin: 0}}>
+    <img loading="lazy" src={require('../assets/images/smart-visual-testing/slack-alerts/msg-approved.png').default} alt="Slack message: Build approved, with Total and Approved counts" className="doc_img" style={{width: '100%'}}/>
+    <figcaption style={{textAlign: 'center', marginTop: '8px', fontWeight: 600}}>Build approved</figcaption>
+  </figure>
+  <figure style={{flex: '1 1 300px', maxWidth: '400px', margin: 0}}>
+    <img loading="lazy" src={require('../assets/images/smart-visual-testing/slack-alerts/msg-needs-review-new.png').default} alt="Slack message: Build needs review, with Total and New counts and a Review 1 Screenshot button" className="doc_img" style={{width: '100%'}}/>
+    <figcaption style={{textAlign: 'center', marginTop: '8px', fontWeight: 600}}>Build needs review: new screenshots</figcaption>
+  </figure>
+  <figure style={{flex: '1 1 300px', maxWidth: '400px', margin: 0}}>
+    <img loading="lazy" src={require('../assets/images/smart-visual-testing/slack-alerts/msg-needs-review-changes.png').default} alt="Slack message: Build needs review, with Total and Changes found counts" className="doc_img" style={{width: '100%'}}/>
+    <figcaption style={{textAlign: 'center', marginTop: '8px', fontWeight: 600}}>Build needs review: changes found</figcaption>
+  </figure>
+  <figure style={{flex: '1 1 300px', maxWidth: '400px', margin: 0}}>
+    <img loading="lazy" src={require('../assets/images/smart-visual-testing/slack-alerts/msg-baseline.png').default} alt="Slack message: Baseline build completed, with the screenshot count" className="doc_img" style={{width: '100%'}}/>
+    <figcaption style={{textAlign: 'center', marginTop: '8px', fontWeight: 600}}>Baseline build completed</figcaption>
+  </figure>
+</div>
 
 ### How SmartUI Picks the Message
 
