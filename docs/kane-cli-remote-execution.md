@@ -39,7 +39,7 @@ kane-cli testrun run tests/ios/ --remote --device-name "iPhone 15" --os-version 
 ```
 
 :::note
-`--remote` is not the same as `--ws-endpoint` or `--cdp-endpoint`. Those attach a **remote browser** to a run that still executes on your machine (`kane-cli run`, `kane-cli testmd run`). `--remote` moves the **whole suite** to the grid: kane-cli itself runs there, and nothing but Node and the plugin is needed locally.
+`--remote` is not the same as `--ws-endpoint` or `--cdp-endpoint`. Those attach a **remote browser** to a run that still executes on your machine (`kane-cli run`, `kane-cli testmd run`). `--remote` moves the **whole suite** to the grid: kane-cli itself runs there, and nothing but Node and the plugin is needed locally. To attach a Browser Cloud browser to a single run instead, see [Run Kane CLI Tests on Browser Cloud](/support/docs/browser-cloud-kane-cli/).
 :::
 
 ## Prerequisites

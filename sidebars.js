@@ -5118,6 +5118,40 @@ module.exports = {
       {
         type: "category",
         collapsed: true,
+        label: "Integrations",
+        items: [
+          {
+            type: "doc",
+            label: "Run Stagehand Agents",
+            id: "browser-cloud-stagehand",
+          },
+          {
+            type: "doc",
+            label: "Run Kane CLI Tests",
+            id: "browser-cloud-kane-cli",
+          },
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Connect Agent Frameworks",
+        items: [
+          {
+            type: "doc",
+            label: "Browser Use (Python)",
+            id: "browser-cloud-browser-use",
+          },
+          {
+            type: "doc",
+            label: "Playwright CLI and MCP",
+            id: "browser-cloud-playwright-cli-mcp",
+          },
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
         label: "Manage Your Sessions",
         items: [
           {
