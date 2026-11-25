@@ -307,7 +307,7 @@ Keep coverage running continuously without manual effort.
 - **Pause/Resume**: Temporarily pause and resume scheduled runs
 - **Run History**: Track all scheduled execution results
 
-Phone Caller agents are evaluated across **8 metric categories** with **30+ individual metrics**.
+Phone Caller agents are evaluated across **8 metric categories** with **40+ individual metrics**.
 
 ### A. Conversation Flow & Interaction Dynamics
 
@@ -417,7 +417,7 @@ Phone Caller Outbound supports the **same two evaluation modes** as Inbound (Pre
 
 All other features (phone number management, voice configuration, test suites, call execution, post-evaluation, go-live assessment, metrics, and scheduling) are **identical to Phone Caller Inbound**.
 
-Same as Phone Caller Inbound, all **8 categories** and **30+ metrics**.
+Same as Phone Caller Inbound, all **8 categories** and **40+ metrics**.
 
 ## Image Analyzer Agent
 

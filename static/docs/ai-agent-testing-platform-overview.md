@@ -8,7 +8,7 @@ TestMu AI Agent Testing scores every agent conversation across a set of quality 
 
 Every completed conversation, voice or chat, is scored by the evaluation engine across a set of quality dimensions. Each dimension is scored on a normalized 0.0 to 1.0 scale, with configurable pass/fail thresholds per project.
 
-The exact set of metrics depends on the agent type. Chat and voice agents are scored across 9 quality metrics, and phone agents across 30+ call metrics.
+The exact set of metrics depends on the agent type. Chat and voice agents are scored across 9 quality metrics, and phone agents across 40+ call metrics.
 
 Commonly scored dimensions include the following.
 
