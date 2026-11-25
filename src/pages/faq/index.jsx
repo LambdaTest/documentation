@@ -312,7 +312,7 @@ export default function FaqPage() {
 
               <details>
               <summary>I am getting a "Session Limit reached" error but I am not running a session. Why?</summary>
-              <p>The session limit applies to your entire organization, not to individual users. Other teammates may be using the available sessions. Coordinate with your team to check concurrent usage. If you believe there is a platform issue, raise a ticket at the <a href={`${BRAND_URL}/support/`}>support portal</a>.</p>
+              <p>The session limit applies to your entire organization, not to individual users. Other teammates may be using the available sessions. Coordinate with your team to check concurrent usage. If you believe there is a platform issue, raise a ticket at the <a href={`${BRAND_URL}/support/docs/`}>support portal</a>.</p>
               </details>
 
               <details>
@@ -328,7 +328,7 @@ export default function FaqPage() {
               <li>The IP was flagged for violating {BRAND_NAME} terms of use or privacy policy.</li>
               <li>The block was triggered automatically to protect the platform from spam or security threats.</li>
               </ul>
-              If you believe your IP was blocked in error, raise a ticket at the <a href={`${BRAND_URL}/support/`}>support portal</a>.</p>
+              If you believe your IP was blocked in error, raise a ticket at the <a href={`${BRAND_URL}/support/docs/`}>support portal</a>.</p>
               </details>
 
             </div>
@@ -1084,7 +1084,7 @@ export default function FaqPage() {
               {/* AI agents */}
               <details>
               <summary>How do AI coding agents like Claude Code use Kane CLI?</summary>
-              <p>With <code>--agent</code> flag, Kane CLI outputs NDJSON (newline-delimited JSON) on stdout: a structured event stream that AI coding agents can parse. Agents like Claude Code, Codex CLI, and Gemini CLI can invoke Kane CLI as a skill to test and verify web UIs on your behalf during development. See <a href={`${BRAND_URL}/support/docs/kane-cli-agent-mode/`}>how to use Kane CLI with AI coding agents</a> for integration details.</p>
+              <p>With <code>--agent</code> flag, Kane CLI outputs NDJSON (newline-delimited JSON) on stdout: a structured event stream that AI coding agents can parse. Agents like Claude Code, Codex CLI, and Gemini CLI can invoke Kane CLI as a skill to test and verify web UIs on your behalf during development. See <a href={`${BRAND_URL}https://www.testmuai.com/docs/kane-cli-agent-mode`}>how to use Kane CLI with AI coding agents</a> for integration details.</p>
               </details>
 
               {/* Variables */}
@@ -1096,7 +1096,7 @@ export default function FaqPage() {
               {/* Test Manager */}
               <details>
               <summary>Can Kane CLI results be saved to Test Manager?</summary>
-              <p>Yes. Configure a Test Manager project in your Kane CLI config, and each run is automatically uploaded to Test Manager with a shareable link, step-by-step breakdown, and session video. See <a href={`${BRAND_URL}/support/docs/kane-cli-tms-integration/`}>how to upload Kane CLI runs to Test Manager</a>.</p>
+              <p>Yes. Configure a Test Manager project in your Kane CLI config, and each run is automatically uploaded to Test Manager with a shareable link, step-by-step breakdown, and session video. See <a href={`${BRAND_URL}https://www.testmuai.com/docs/kane-cli-tms-integration`}>how to upload Kane CLI runs to Test Manager</a>.</p>
               </details>
 
               {/* Troubleshooting */}

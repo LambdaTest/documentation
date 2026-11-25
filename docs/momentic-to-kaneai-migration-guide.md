@@ -329,7 +329,7 @@ KaneAI generates code for a test saved as **Ready**, where every step has run an
 | Playwright JavaScript | Available on request | Available |
 | Appium Python | Available (default) | Coming soon |
 
-"Available on request" means you ask Support to enable it. To save the code, click **Download** on the test's **Code** tab. Kane CLI exports Playwright code in Python or JavaScript with `--code-export`, after a successful upload to Test Manager. See [KaneAI Automation Code Generation](/support/docs/kane-ai-automation-code-generation/) and [Kane CLI code export](/support/docs/kane-cli-tms-integration/#code-export).
+"Available on request" means you ask Support to enable it. To save the code, click **Download** on the test's **Code** tab. Kane CLI exports Playwright code in Python or JavaScript with `--code-export`, after a successful upload to Test Manager. See [KaneAI Automation Code Generation](/support/docs/kane-ai-automation-code-generation/) and [Kane CLI code export](https://www.testmuai.com/docs/kane-cli-tms-integration#code-export).
 
 ## Step 4: Run Your KaneAI Tests
 

@@ -87,7 +87,7 @@ As the word responsive suggests, this type of testing is used to check the appea
 
 ## How To Do Responsive Testing?
 
-**Step 1:** Click ‘**Responsive**’ sub menu under [Visual UI Testing](https://www.testmuai.com/smart-visual-ui-testing/) menu in menu box.
+**Step 1:** Click ‘**Responsive**’ sub menu under [Visual UI Testing](https://www.testmuai.com/visual-testing-tool/) menu in menu box.
 
 <img loading="lazy" src={require('../assets/images/responsive-testing/responsive-1.webp').default} alt="Responsive Testing Online" width="1345" height="627" className="doc_img"/>
 

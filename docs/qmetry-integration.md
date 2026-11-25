@@ -178,7 +178,7 @@ Once the test is complete, you can view the test result on the automation dashbo
 <img loading="lazy" src={require('../assets/images/uploads/QMetry-8.webp').default} alt="Test Automation Logs" width="2881" height="1801" className="doc_img"/>
 
 
-For each test executed overthe <BrandName /> platform, you can view logs, [mark bugs](/docs/mark-as-bug-in-automation-testing/), and do much more.
+For each test executed overthe <BrandName /> platform, you can view logs, [mark bugs](/support/docs/filter-your-selenium-tests/#mark-as-bug), and do much more.
 
 ## Running QMetry Tests on HyperExecute
 
