@@ -203,7 +203,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     }
   ]) }}
 />
-With SmartUI CLI, you can seamlessly perform visual regression testing on the <BrandName /> platform using your command line, identifying Visual UI Regression bugs effortlessly. This guide will walk you through the process of uploading and comparing images using the SmartUI CLI.
+With SmartUI CLI, you can seamlessly perform visual regression testing on the <BrandName /> platform using your command line, identifying Visual UI Regression bugs effortlessly. This guide will walk you through the process of uploading and comparing images using the SmartUI CLI. Already using an open-source tool? See how to [upload BackstopJS screenshots to SmartUI](https://www.testmuai.com/blog/backstopjs-guide/) without rewriting your scenarios.
 
 ## Prerequisites for running SmartUI CLI
 

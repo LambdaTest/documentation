@@ -119,9 +119,8 @@ detectable fingerprints that these systems check for:
 - Identical user-agent strings across all sessions
 - Inhuman interaction speeds - instant clicks, perfectly uniform typing
 
-Stealth mode in the TestMu AI Browser SDK removes or fakes these fingerprints, so
-the cloud browser is indistinguishable from a regular human user's Chrome
-session.
+Stealth mode in the TestMu AI Browser SDK removes or fakes these fingerprints. This is
+best-effort stealth that reduces bot detection; some sites may still detect automation.
 
 
 ## Enabling Stealth
@@ -252,6 +251,8 @@ comparison:
 
 Screenshots are saved to `test-output/`. Stealth ON shows green checks; stealth
 OFF shows red failures.
+
+To compare Browser Cloud Stealth Mode with the open-source packages, see the [Playwright stealth setup guide](https://www.testmuai.com/blog/playwright-stealth/). For Patchright, the drop-in Playwright fork that hides common automation leaks, read [Patchright setup and limits](https://www.testmuai.com/blog/patchright/).
 
 
 ## How Stealth Works

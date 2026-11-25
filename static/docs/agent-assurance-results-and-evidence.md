@@ -48,19 +48,28 @@ For adversarial scenarios, a grounded partial compromise counts as **Fail**. Old
 
 A skipped, unattempted, or unjudged scenario is not a pass. Partial-phase and interrupted runs need a completion check before their results can serve as a gate.
 
-## Pass Rate Versus Coverage
+## Verified Pass and Assurance Gap
 
-Pass rate measures passed scenarios among those with a decided verdict. Coverage describes how much of the intended behavior or criteria was actually tested or verified. Always check which denominator a report uses.
+Since 0.1.21, Rook reports two numbers for a run. Read them together.
+
+- **Verified pass** is Pass ÷ (Pass + Fail). **Unable to Verify** results count neither for nor against it. A run with one Pass and one Unable to Verify reads 100%; before 0.1.21 it read 50%.
+- **Assurance gap** is the share of the run's criteria that the judge could not verify: unverified criteria ÷ all criteria with a verdict. Lower is better.
+
+A high Verified pass with a large Assurance gap is not strong release evidence: everything Rook could check passed, but it could check little. Neither number covers behavior that has no scenario. The tested triage sample passed one scenario but left four of its five discovered feature areas untested.
+
+After a run, the CLI prints both on one line:
 
 ```text
-8 decided scenarios: 8 passed, 0 failed
-20 acceptance criteria: 8 verified, 12 unable to verify
-
-Scenario pass rate: 100%
-Criterion verification coverage: 40%
+8 of 8 executed · Verified pass 100% · Assurance gap 60.0% — 12/20 criteria unverified
+  8 passed · 0 failed
+  0 unable to verify
 ```
 
-A missing metric or dash means **not available**, not zero and not full coverage. The tested triage sample passed one scenario but left four of its five discovered feature areas untested.
+`rook status` shows the last run's **Verified pass**. In the web app and `rook ui`, the **Runs** tab and the agent summary show both numbers, each with an ⓘ that explains it.
+
+**Verified pass unavailable**, **Assurance gap unavailable**, or a dash (—) in the web app means the number was not measured. It is not 0%. Verified pass is unavailable when nothing passed or failed. Assurance gap is unavailable when the run has no criteria to count. In the web app, a run recorded before 0.1.21 shows its gap where it could be worked out from the run's saved verdicts, and a dash otherwise; `rook report ` works out an older local run's numbers again.
+
+In `rook run --json` and the report totals, `pass_rate` keeps its name and uses the new rule. `assurance_gap`, `unverified_criteria`, and `total_criteria` are new. A CI gate on `pass_rate` can now pass a run it used to fail, so check `assurance_gap` as well. Rook cloud works out Verified pass from each run's counts, so runs recorded before 0.1.21 use the new rule in the web app and `rook status` too.
 
 ## Inspect Criterion Evidence
 
@@ -85,6 +94,10 @@ Since 0.1.16, the result also shows the scenario as it was when the run used it:
 Since 0.1.17, a failed result shows a **Why it failed** card, and an unverifiable one shows **Why it couldn't be verified**, in place of the earlier Summary box. The run's page has a collapsible **Failure analysis** section with one card per failure cluster; each card lists the scenarios affected and links to their results. A run made with `--rca` shows each cluster's cause, remedy and files. Without `--rca`, the card says how to get them. The section appears once the run has finished.
 
 Since 0.1.18, the section is headed **Failure clusters analysis** and lists clusters in order: CL-01, CL-02, and so on. A passing result that an attack compromised gets a **Why it was compromised** card with the attack's evidence. An unverifiable result that is in no cluster still shows **Why it couldn't be verified**, with a sentence that says what to do. On a result's card, **See this cluster on the run page** opens that cluster on the run's page. When a remedy contains code blocks, its copy button copies only the code.
+
+Since 0.1.20, a run explains its failed and compromised clusters unless it was made with `--no-rca`, so their cards show a cause and remedy without `--rca`. When a cluster has no cause, the local page gives the `rook report` command that explains it; the hosted page no longer shows a hint.
+
+Since 0.1.21, the run's page no longer shows the cluster cards or **Expand all**. Each failing row in its results table has a **View failure** button that opens a side panel with **Why it failed**, **How to fix**, and **Evidence** tabs, and a pager through the run's failures. **See this cluster on the run page** opens that result in the panel, and a link to `#CL-xx` still opens that cluster.
 
 This view can show evidence before upload, including a local `--test` run. The redesigned viewer refreshes when workspace records change. The CommerceCare example separates an unmet response requirement from missing tool/state evidence; the hosted triage example below is a different run. An absent verdict or file means it was not recorded or is unavailable; do not turn that absence into a pass. See [local navigation and files](/support/docs/rook-web-ui/#local-results).
 
@@ -148,7 +161,7 @@ Replace `` with the saved run's ID. `/report` without an ID reads the latest loc
 
 This is the completed report from the Rook 0.1.11 [interactive quickstart](/support/docs/agent-assurance-quickstart/), not a help screen:
 
-Read the run ID and name, execution counts, and verdicts together. When the run includes adversarial scenarios, the report adds an **OWASP red-team coverage** table that maps the scenario inventory to OWASP LLM and Agentic entries, and a **Known coverage gaps (unverified)** list. A control with no mapped scenario remains unverified. `1 of 1 executed · 100% passed` is one passing case, not complete coverage of the agent. This October 13 terminal run is separate from the saved browser examples above. Use `/help report` for additional output and RCA options.
+Read the run ID and name, execution counts, and verdicts together. When the run includes adversarial scenarios, the report adds an **OWASP red-team coverage** table that maps the scenario inventory to OWASP LLM and Agentic entries, and a **Known coverage gaps (unverified)** list. A control with no mapped scenario remains unverified. `1 of 1 executed · 100% passed` is one passing case, not complete coverage of the agent. Since 0.1.21, the same line reads `1 of 1 executed · Verified pass 100%` and adds the run's Assurance gap. This October 13 terminal run is separate from the saved browser examples above. Use `/help report` for additional output and RCA options.
 
 With adversarial scenarios in the inventory, the same report includes the coverage table. This excerpt is from a Rook 0.1.11 run of the triage-service sample on October 13, 2026, with rows elided:
 
@@ -177,7 +190,7 @@ rook report <run-id>
 rook report <run-id> --json
 ```
 
-Without a run ID, report reads the latest local run. The JSON record contains run_id, name, dir, and report, whose totals include planned, executed, passed, failed, unverifiable, unjudged, and not-run counts. The report can also carry summary_claims, coverage_gaps, and redteam_coverage.
+Without a run ID, report reads the latest local run. The JSON record contains run_id, name, dir, and report, whose totals include planned, executed, passed, failed, unverifiable, unjudged, and not-run counts and pass_rate. Since 0.1.21, they also include assurance_gap, unverified_criteria, and total_criteria. The report can also carry summary_claims, coverage_gaps, and redteam_coverage.
 
 A successful report command means the report was read; it does **not** mean the agent passed. See the [CI gate example](/support/docs/agent-assurance-ci-cd/) for explicit completion and result checks.
 
@@ -196,7 +209,7 @@ sync publishes project definitions; runs sync reconciles finished runs with outs
 
 Before calling a change a regression, compare scenario definitions, profile revisions, selected phases, and coverage. Repeat unchanged cases when investigating nondeterminism.
 
-Use rook report &lt;run-id&gt; --rca or rook run --rca for failure-cluster investigation. RCA spends credits and provides an evidence-grounded hypothesis—not a verified fix. Reproduce the issue before changing the agent.
+Since 0.1.20, rook run explains its failed and compromised clusters by default; --no-rca skips that. Use rook report &lt;run-id&gt; --rca to explain a saved run, including its **Unable to Verify** results. RCA spends credits and provides an evidence-grounded hypothesis—not a verified fix. Reproduce the issue before changing the agent.
 
 ## Share Evidence Safely
 

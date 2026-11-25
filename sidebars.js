@@ -726,6 +726,11 @@ module.exports = {
         items: [
           {
             type: "doc",
+            label: "On-Premise User Guide",
+            id: "hyperexecute-on-premise-user-guide",
+          },
+          {
+            type: "doc",
             label: "HyperExecute Private Cloud Benefits",
             id: "hyperexecute-private-cloud-benefits",
           },
@@ -1130,8 +1135,9 @@ module.exports = {
         items: [
           { type: "doc", label: "Chat Agent Testing", id: "chat-agent" },
           { type: "doc", label: "Voice Agent Testing", id: "voice-agent" },
-          { type: "doc", label: "Video Agent Testing", id: "video-agent" },
           { type: "doc", label: "Phone Agent Testing", id: "phone-agent" },
+          { type: "doc", label: "IVR Agent Testing", id: "ivr-agent" },
+          { type: "doc", label: "Video Agent Testing", id: "video-agent" },
           { type: "doc", label: "Image Analyzer Testing", id: "image-analyzer" },
         ],
       },
@@ -1140,7 +1146,23 @@ module.exports = {
         label: "Features",
         collapsed: true,
         items: [
+          { type: "doc", label: "Red Teaming (Phone Caller)", id: "phone-agent-red-teaming" },
           { type: "doc", label: "Performance Testing (Inbound)", id: "phone-agent-performance-testing" },
+          { type: "doc", label: "Data Validation", id: "data-validation" },
+        ],
+      },
+      {
+        type: "category",
+        label: "Integrations",
+        collapsed: true,
+        items: [
+          { type: "doc", label: "Amazon Connect", id: "test-amazon-connect-bots" },
+          { type: "doc", label: "Cartesia", id: "test-cartesia-agents" },
+          { type: "doc", label: "Deepgram Voice Agent", id: "test-deepgram-voice-agents" },
+          { type: "doc", label: "ElevenLabs", id: "test-elevenlabs-agents" },
+          { type: "doc", label: "Retell", id: "test-retell-agents" },
+          { type: "doc", label: "Salesforce Agentforce", id: "test-agentforce-agents" },
+          { type: "doc", label: "Vapi", id: "test-vapi-agents" },
         ],
       },
       {
@@ -1158,17 +1180,12 @@ module.exports = {
         label: "Guides",
         collapsed: true,
         items: [
-          { type: "doc", label: "Test Retell Agents", id: "test-retell-agents" },
-          { type: "doc", label: "Test Vapi Agents", id: "test-vapi-agents" },
           { type: "doc", label: "Test Bland Agents", id: "test-bland-agents" },
-          { type: "doc", label: "Test ElevenLabs Agents", id: "test-elevenlabs-agents" },
           { type: "doc", label: "Test LiveKit Agents", id: "test-livekit-agents" },
           { type: "doc", label: "Test Pipecat Agents", id: "test-pipecat-agents" },
           { type: "doc", label: "Test Synthflow Agents", id: "test-synthflow-agents" },
           { type: "doc", label: "Test Voiceflow Agents", id: "test-voiceflow-agents" },
           { type: "doc", label: "Test Twilio IVR", id: "test-twilio-ivr" },
-          { type: "doc", label: "Test Amazon Connect Bots", id: "test-amazon-connect-bots" },
-          { type: "doc", label: "Test Agentforce Agents", id: "test-agentforce-agents" },
           { type: "doc", label: "Test LangGraph Agents", id: "test-langgraph-agents" },
           { type: "doc", label: "Test Vertex Agent Builder Agents", id: "test-vertex-agent-builder-agents" },
           { type: "doc", label: "Test Copilot Studio Agents", id: "test-copilot-studio-agents" },
@@ -2615,6 +2632,7 @@ module.exports = {
         className: "menu-bold",
         items: [
           "csv-import",
+          "import-feature-file",
           "one-click-migration-from-testrail",
           "one-click-migration-from-xray",
           "one-click-migration-from-zephyr-scale",
@@ -2987,7 +3005,6 @@ module.exports = {
           { type: "doc", id: "migrate-playwright-tests" },
           { type: "doc", id: "playwright-test-execution-setup" },
           { type: "doc", id: "playwright-bundled-browser-support" },
-          { type: "doc", id: "playwright-caps" },
         ],
       },
       {
@@ -3247,6 +3264,7 @@ module.exports = {
       "sharding-espresso",
       "speedup-espresso",
       "espresso-junit-report",
+      "espresso-cucumber",
       "espresso-mockwebserver-localhost",
     ],
   ],
@@ -3677,6 +3695,11 @@ module.exports = {
             type: "doc",
             label: "Visual AI Agent",
             id: "smartui-visual-ai",
+          },
+          {
+            type: "doc",
+            label: "AI Build Summary",
+            id: "smartui-ai-build-summary",
           },
           {
             type: "doc",

@@ -81,7 +81,13 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     "dateModified": "2026-07-14T19:15:31+05:30"
   }) }}
 />
-Real-Time Desktop Web Browser Testing on <BrandName /> allows you to test your websites and web applications directly on live desktop browsers. This approach allows developers, testers, and QA professionals to interact with their web applications across various browser environments, operating systems, and versions without the need to configure complex infrastructure on local machines. 
+Real-Time Desktop Web Browser Testing on <BrandName /> allows you to test your websites and web applications directly on live desktop browsers. This approach allows developers, testers, and QA professionals to interact with their web applications across various browser environments, operating systems, and versions without the need to configure complex infrastructure on local machines.
+
+:::info Free plan limits
+
+The free plan includes 1 parallel session and 2 live sessions a month, each limited to 2 minutes, on 200+ desktop browser and OS combinations. Paid plans such as Virtual Live offer unlimited real-time testing on 3,000+ browser and OS combinations. See [pricing](https://www.testmuai.com/pricing/) for the current plans.
+
+:::
 
 <div className="ytframe"> 
 <div className="youtube" data-embed="a6s9oaBxEBM" data-loading-attribute="eager">
@@ -93,9 +99,9 @@ Real-Time Desktop Web Browser Testing on <BrandName /> allows you to test your w
 
 ## Launch the Virtual Machine
 
-- Navigate to the Real Time Testing section.
-- Select **Desktop** from the **Web Browser Testing** section.
-- To test a website, enter its URL and select your **Operating System**, **browser**, **browser version**, and **screen resolution**.
+- From the left sidebar, open **Real Time**.
+- Under **Web Browser Testing**, select **Desktop**.
+- To test a website, enter its URL and select your **Operating System**, **browser**, **browser version**, and **screen resolution**. To try the flow without your own site, use the <BrandName /> sample page [https://www.testmuai.com/selenium-playground/](https://www.testmuai.com/selenium-playground/).
 - Afterwards click on the **Start** button to initiate the testing process.
 
 <video class="right-side" width="80%" controls id="vid">

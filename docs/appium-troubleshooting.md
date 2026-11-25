@@ -376,7 +376,7 @@ public static void changeLocation(double lat, double lon) {
 
 **Why it's needed:** The `autoGrantPermissions` (Android) and `autoAcceptAlerts` (iOS) capabilities handle system level alerts, such as notification popups. They do not handle location permission popups or any other alert that offers multiple options (for example, *Allow While Using App*, *Allow Once*, and *Don't Allow*). The same applies to gallery or media access permission popups that show more than two options.
 
-**Fix:** Handle these popups in your test script by locating and tapping the required button. On iOS devices, set the `settings[respectSystemAlerts]` capability to `true` to ensure that system permission popups are detected and can be interacted with during the test.
+**Fix:** Handle these popups in your test script by locating and tapping the required button. On iOS devices, set the **settings[respectSystemAlerts]** capability to `true` to ensure that system permission popups are detected and can be interacted with during the test.
 
 **Using the `mobile: alert` command (iOS only):**
 
@@ -387,27 +387,32 @@ driver.executeScript("mobile: alert", Map.of(
 ));
 ```
 
-For details on the settings[respectSystemAlerts] capability, see the [Appium XCUITest driver troubleshooting guide](https://appium.github.io/appium-xcuitest-driver/11.17/troubleshooting/#interact-with-dialogs-managed-by-comapplespringboard).
+For details on the **settings[respectSystemAlerts]** capability, see the [Appium XCUITest driver troubleshooting guide](https://appium.github.io/appium-xcuitest-driver/11.17/troubleshooting/#interact-with-dialogs-managed-by-comapplespringboard).
 
-### Using WebView commands with the `updateLanguageLocale` hook
+### Using WebView commands with the [`updateLanguageLocale`](/support/docs/list-of-supported-locales/#enabling-locales-and-language-via-hook) hook
 
-**Why it's needed:** The `lambda_executor: updateLanguageLocale` hook closes and relaunches the app, which creates a new app process with a new WebView context. Appium isn't aware of this relaunch and stays attached to the old WebView context from the closed process.
+**Why it's needed:** The `lambda_executor: updateLanguageLocale` hook closes and relaunches the application for the changes to take effect, creating a new WebView context with a different process ID. However, Appium remains attached to the previous WebView context and its associated process ID because it does not automatically detect the application relaunch. As a result, subsequent WebView related commands may fail.
 
-**Fix:** To avoid this, use one of the following approaches.
+**How to Resolve This:** You can use either of the following approaches:
 
-**Option A: Run the hook before switching to the WebView (recommended)**
+**Option A: Execute the Hook Before Switching to the WebView (Recommended)**
 
-Call `updateLanguageLocale` before you call `getContexts` or switch to a WebView context. WebView commands then work as expected.
+Before running the `getContexts` command or switching to a `WebView` context, please execute the `updateLanguageLocale` hook command. This ensures that Appium retrieves the updated WebView context, allowing subsequent WebView commands to execute as expected.
 
-**Option B: Re-select the WebView after the hook**
+Steps:
 
-If you need to change the language in the middle of a test, do the following after each hook call:
+1. Execute the `updateLanguageLocale` hook.
+2. Call the `getContexts` command to retrieve the available contexts.
+3. Switch to the appropriate `WEBVIEW_*` context.
+
+**Option B: Re-select the WebView Context After Executing the Hook**
+
+If you execute the `updateLanguageLocale` hook after running the WebView context switch command, execute the following commands to refresh the WebView context:
 
 1. Switch to the `NATIVE_APP` context.
-2. Call `getContexts` to get the updated list of contexts.
-3. Switch to the new `WEBVIEW_*` context.
+2. Call the `getContexts` command to retrieve the updated list of available contexts.
+3. Switch to the updated `WEBVIEW_*` context.
 
-**Note:** Always re-select the WebView context after running the `updateLanguageLocale` hook. A WebView context selected before the hook will no longer work.
 
 ---
 

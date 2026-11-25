@@ -75,9 +75,15 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 # Getting Started with Real Device Browser Testing
 ***
 
-Real device browser testing refers to the process of testing web applications and websites on real devices such as smartphones, tablets, and computers to ensure that the user interface and user experience are optimal across various device types, operating systems, and browser combinations. With <BrandName />’s real device cloud, you can test websites and web applications to ensure they perform seamlessly across 3000 + real mobile devices.
+Real device browser testing refers to the process of testing web applications and websites on real devices such as smartphones, tablets, and computers to ensure that the user interface and user experience are optimal across various device types, operating systems, and browser combinations. With <BrandName />’s real device cloud, you can test websites and web applications to ensure they perform seamlessly across 50,000+ real Android and iOS devices.
 
 For the basics, see our guide on [how to test on real devices](https://www.testmuai.com/blog/real-device-testing/).
+
+:::info Plan requirement
+
+Real devices are not part of the free plan or the Virtual Live plan. Manual browser testing on real devices needs the Real Device Plus Live plan or an Enterprise plan. See [pricing](https://www.testmuai.com/pricing/) for the current plans.
+
+:::
 
 <div className="ytframe"> 
 <div className="youtube" data-embed="zzjTXzJkLtA" data-loading-attribute="eager">

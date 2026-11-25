@@ -97,7 +97,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-11-12T13:50:45+05:30"
+    "dateModified": "2026-11-24T12:00:00+05:30"
   }) }}
 />
 
@@ -123,9 +123,7 @@ Choose the test that matches what you want to check.
 
 ---
 
-<!-- TODO: add the steps to start a performance test from a suite, with screenshots, once confirmed with product. -->
-
-Set two parameters for the test: how many concurrent calls to hold, and for how long.
+Set two parameters for the test: how many concurrent calls to hold, and for how long. The reply-latency bands (**Excellent**, **Good**, and **Poor**) for the **Latency** tab are also set for each run when you start the test, prefilled from **Metric Config**.
 
 | Parameter | Description | Accepted range |
 |---|---|---|
@@ -232,7 +230,7 @@ Agent response latency is the time between the end of the simulated caller's spe
 A widening gap between P50 and the upper percentiles as load increases indicates that a subset of callers is experiencing materially longer delays.
 :::
 
-The **Latency** tab shows the total number of calls and the average, highest, and lowest reply latency in colour bands, which you set for each run. Its per-call table updates live while the test runs. Open any call to see each turn: what the caller said, what the agent replied, and the reply latency.
+The **Latency** tab shows the total number of calls and the average, highest, and lowest reply latency in color bands, **Excellent**, **Good**, and **Poor**, which you set for each run when you start the test. The bands are prefilled from **Metric Config**. The per-call table updates live while the test runs, and you can sort it slowest first or by dial order. Open any call to see each turn: what the caller said, what the agent replied, and the reply latency. Talked-over and unmeasured replies are marked, with a legend and a **How to read** guide.
 
 If the results show latency as not supported, see [Performance Testing Scope and Exclusions](#performance-testing-scope-and-exclusions).
 
@@ -283,6 +281,8 @@ Performance tests focus on load behavior. The following are outside their scope.
 | **Agent infrastructure metrics** | TestMu AI takes measurements from the caller's perspective. It does not observe server resources, model provider limits, or other systems internal to your agent. |
 | **Latency without timed messages** | Response latency requires timestamped messages for both caller and agent from the voice platform. When these are unavailable, TestMu AI reports latency as not supported. |
 | **Load above the parallel limit** | Tests do not raise your organization's parallel limit. Additional parallels are required to test higher concurrency. |
+| **Go-Live and project results** | Performance test calls don't count toward the Go-Live assessment or project results. |
+| **Live transcript events** | The call events stream sends no live transcript events for performance runs. |
 
 ## Parallels
 

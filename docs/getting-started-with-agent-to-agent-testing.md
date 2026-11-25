@@ -88,6 +88,8 @@ TestMu AI [Agent Testing](https://www.testmuai.com/agent-testing/) Platform prov
 
 It tests all of these agent types in one place. Connecting an agent takes three inputs and no SDK: upload the documents that describe it, define its intended behavior, and point the platform at its endpoint, phone number, or a web URL for a video agent.
 
+Every organization can create chat, voice, image analyzer, and video agents. IVR, phone caller, and WhatsApp agents appear on **Create New Agent** grayed out, with the reason shown, until they are enabled for your organization.
+
 <div style={{ width: "50%", aspectRatio: "16 / 9", margin: "20px auto", borderRadius: "8px", overflow: "hidden" }}>
   <iframe
     style={{ display: "block", width: "100%", height: "100%", border: 0 }}
@@ -175,6 +177,10 @@ Go deeper into the workflow and metrics for your specific agent type.
   <a href="/support/docs/phone-agent/" style={{flex:'1 1 260px',minWidth:'240px',border:'1px solid #e2e8f0',borderRadius:'12px',padding:'20px 22px',textDecoration:'none',color:'inherit',display:'block'}}>
     <div style={{fontWeight:700,marginBottom:'6px',color:'var(--ifm-heading-color)'}}>Phone Agent Testing</div>
     <div style={{fontSize:'14px',color:'var(--ifm-color-emphasis-700)',lineHeight:1.5}}>Inbound and outbound phone agents, tested with live calls or production recordings.</div>
+  </a>
+  <a href="/support/docs/ivr-agent/" style={{flex:'1 1 260px',minWidth:'240px',border:'1px solid #e2e8f0',borderRadius:'12px',padding:'20px 22px',textDecoration:'none',color:'inherit',display:'block'}}>
+    <div style={{fontWeight:700,marginBottom:'6px',color:'var(--ifm-heading-color)'}}>IVR Agent Testing</div>
+    <div style={{fontSize:'14px',color:'var(--ifm-color-emphasis-700)',lineHeight:1.5}}>Scripted phone menus, mapped and walked branch by branch with keypad tones and speech.</div>
   </a>
   <a href="/support/docs/image-analyzer/" style={{flex:'1 1 260px',minWidth:'240px',border:'1px solid #e2e8f0',borderRadius:'12px',padding:'20px 22px',textDecoration:'none',color:'inherit',display:'block'}}>
     <div style={{fontWeight:700,marginBottom:'6px',color:'var(--ifm-heading-color)'}}>Image Analyzer Testing</div>

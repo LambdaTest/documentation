@@ -599,7 +599,7 @@ The screenshot below shows the Playwright build on the left and the build sessio
 Configure these capabilities in your `LT:Options` object to control how your Playwright Android tests run.
 
 :::tip
-Use the [Playwright Android Capability Generator](https://www.lambdatest.com/playwright-android-capability-generator/) to generate capabilities for your tests.
+Use the [Playwright Android Capability Generator](https://www.testmuai.com/playwright-android-capability-generator/) to generate capabilities for your tests.
 :::
 
 | Key             | Expected Values                | Description                                                                                                                                                                                        | Capability                                                                           |
@@ -636,7 +636,7 @@ Continue with these related guides to extend your Playwright coverage on TestMu 
 
 ## Handle Pop-ups During Test Execution
 
-Some websites show a pop-up, such as a notification prompt, after the page loads. The pop-up blocks clicks on the elements behind it. Add a notification handler that clicks the pop-up's dismiss button when it appears and continues when it does not. This lets the same test pass whether or not the pop-up is shown.
+Some websites show a pop-up, such as a notification prompt, after the page loads. The pop-up blocks clicks on the elements behind it. Add a notification handler that clicks the pop-up's dismiss button when it appears and continues when it does not. This lets the same test pass whether or not the pop-up is shown. Below is a sample snippet demonstrating how to handle a notification pop-up after the website has loaded.
 
 <Tabs className="docs__val">
 

@@ -149,7 +149,7 @@ Rook clusters related failures first, then investigates each cause using the ver
 .testmuai/rook/projects/<project-id>/agents/<agent-id>/runs/<run-id>/remedies/
 ```
 
-RCA is off by default. It consumes additional credits, and its cost depends on the number of distinct failure clusters. A remedy is an evidence-grounded hypothesis, not a verified patch.
+Since 0.1.20, RCA is on by default: a run explains its failed and compromised clusters, and --rca also explains **Unable to Verify** results. Add --no-rca to skip it. RCA consumes additional credits, and its cost depends on the number of distinct failure clusters. A remedy is an evidence-grounded hypothesis, not a verified patch.
 
 ## Interrupt and Resume Safely
 
@@ -255,7 +255,7 @@ See [both UI walkthroughs](/support/docs/rook-web-ui/#choose-your-ui) and [crite
 
 #### Local UI: Check the Completed Run {#local-ui-example}
 
-Open the agent's **Runs** tab and select the execution. The saved CommerceCare demo has mixed passing, failed, and unverifiable results; **completed** does not mean every scenario passed. Read the narrative, open **View plan**, and click a scenario for criterion evidence. The profile name opens the run's saved configuration; the adjacent link opens the current profile. See the [local walkthrough and rollout note](/support/docs/rook-web-ui/#local-runs) for layout differences.
+Open the agent's **Runs** tab and select the execution. The saved CommerceCare demo has mixed passing, failed, and unverifiable results; **completed** does not mean every scenario passed. Read the outcome counts, open **View plan**, and click a scenario for criterion evidence. The profile name opens the run's saved configuration; the adjacent link opens the current profile. See the [local walkthrough and rollout note](/support/docs/rook-web-ui/#local-runs) for layout differences.
 
 #### Hosted Web UI: Review the Shared Execution {#hosted-ui-example}
 

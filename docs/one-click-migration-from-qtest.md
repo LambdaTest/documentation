@@ -128,6 +128,8 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <BrandName /> Test Manager supports one-click migration from qTest, allowing you to import your entire test library — including projects, test cases, folder structures, custom fields, attachments, and linked Jira requirements — directly into Test Manager without manual data entry.
 
+Still comparing tools before you move? See our guide to [qTest alternatives](https://www.testmuai.com/blog/qtest-alternatives/).
+
 
 ## Key Benefits
 
@@ -157,7 +159,7 @@ To obtain your API token:
 3. Generate a new API Bearer token, or copy an existing one.
 
 #### Jira Integration in <BrandName /> (Optional)
-To migrate linked Jira requirements, the corresponding Jira instance must be integrated with <BrandName />. Without this, Jira links will not be carried over. See [<BrandName /> Jira Integration](/support/docs/jira-integration/#how-to-establish-integration-with-jira-from-your-lambdatest-account) for setup steps.
+To migrate linked Jira requirements, the corresponding Jira instance must be integrated with <BrandName />. Without this, Jira links will not be carried over. See [<BrandName /> Jira Integration](/support/docs/jira-integration/#how-to-establish-integration-with-jira-from-your--account) for setup steps.
 
 #### Permissions
 - Your qTest account must have read access to the projects being migrated.
@@ -211,7 +213,7 @@ A progress bar shows real-time migration status. You can navigate away at any ti
 | Called / shared test cases | Expanded inline into the calling test case's steps |
 | qTest ID (e.g. `TC-15`) | Stored as the test case's external ID and added as a tag |
 | Custom fields | Org-level custom fields, created automatically if absent (see field type mapping below) |
-| Attachments (test case and step level) | Downloaded from qTest and stored in LambdaTest |
+| Attachments (test case and step level) | Downloaded from qTest and stored in <BrandName /> |
 | Jira requirement links | Linked issues on migrated test cases (requires Jira integration in <BrandName />) |
 | Required-field flags | Preserved on created custom fields |
 

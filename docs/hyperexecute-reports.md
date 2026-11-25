@@ -96,7 +96,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         "text": "\nEnsure that your Testrunner.java file should have the complete path from where partial reports will be added. Example:\n\n```java title=\"Testrunner.java\"\nplugin = {\n    \"json:target/abc/mno/pqr/xyz/cucumber-reports/CucumberTestReport.json\",\n    \"json:target/abc/its/pqr/abc/cucumber-reports/CucumberTestReport.json\"\n}"
       }
     ],
-    "dateModified": "2026-09-09T19:10:37+05:30"
+    "dateModified": "2026-11-11T14:00:00+05:30"
   }) }}
 />
 Reports provide summarized job information, including status counts and links to tests. You can generate and download detailed reports at the end of job execution that helps you analyze the outcome of your tests based on your framework. 
@@ -178,3 +178,7 @@ plugin = {
     "json:target/abc/its/pqr/abc/cucumber-reports/CucumberTestReport.json"
 }
 ```
+
+:::info On-premise deployments
+On-prem, open reports from your organization's own HyperExecute dashboard, not the public dashboard link on this page. When you download reports with the CLI, keep `--onprem-host` in the command so the CLI talks to your deployment. See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/#step-8-review-results-and-rerun-failures).
+:::

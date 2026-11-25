@@ -109,6 +109,28 @@ You can enable performance tracking in your existing automation tests with the f
 
 <img loading="lazy" src={require('../assets/images/appium-app/app-profiling.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
+## App Performance Metrics and Units
+
+The table lists each metric App Profiling records during an Appium session on a real device and the unit the dashboard shows it in.
+
+| Metric | Unit | What it shows |
+|---|---|---|
+| App CPU Usage | % | CPU used by your app, with its maximum and average in the summary |
+| System CPU Usage | % | Total CPU usage across the system |
+| App Memory Usage | MB | Memory consumed by your app, with its maximum and average in the summary |
+| System Memory Usage | MB | Overall memory consumption during the session |
+| Available Memory | MB | Remaining memory available for use |
+| App Disk | MB | Disk space consumed by your app, with its maximum and average in the summary |
+| System Disk | MB | Disk space used by the entire system, including the operating system and background processes |
+| Frame Rate | fps | Frames per second across the session; a rate close to 60 fps or higher is typically desired |
+| Network Download and Upload | KB or MB | Data the app downloaded and uploaded during the session |
+| Battery Consumption | mAh | Battery consumed while using the app (Android only) |
+| Temperature | °C | Temperature of the device battery during app usage |
+| Cold Startup Time | ms | Time the app takes to launch from a complete shutdown (Android) |
+| Hot Startup Time | ms | Time the app takes to resume from the background (Android) |
+| ANR Count | Count | Times the app stopped responding, with a log dump for each event (Android only) |
+| App Crashes | Count | Times the app crashed during the session |
+
 ## Basic Summary
 Here is a description of each metric from the App Profiling summary:
 

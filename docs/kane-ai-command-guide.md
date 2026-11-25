@@ -76,7 +76,38 @@ import TabItem from '@theme/TabItem';
   }) }}
 />
 
-KaneAI lets you write **natural language instructions** that it converts into executable automation steps. This guide covers  a wide range of commands that help you interact with web pages, control tabs, handle waits, perform assertions, and build dynamic, reliable tests without writing code, best practices and troubleshooting tips to help you get the most out of KaneAI.
+KaneAI turns natural language instructions into executable automation steps, so you can build web and mobile app tests without writing code. This guide lists the commands for navigation, clicks, typing, tabs, waits, scrolling, assertions, queries and conditional logic. It starts with a quick reference of syntax, examples and platforms and ends with best practices for reliable tests.
+
+---
+
+## Command Quick Reference
+
+The table lists common commands with the syntax to type, an example and where the KaneAI docs say each command works. Replace the text in angle brackets with your own values. The sections below cover the web commands in more detail.
+
+| Command | Syntax | Example | Web or mobile |
+|---|---|---|---|
+| Open a URL | `go to <url>` or `open <url>` | `go to https://example.com` | Web |
+| Click | `click on <element>` | `click on login button` | Web and mobile apps |
+| Double or N-click | `double click <element>` or `click <element> <N> times` | `click the button 5 times` | Desktop web, mobile web, Android and iOS apps |
+| Right click | `right click on <element>` | `right click on the file row` | Desktop web only |
+| Long press | `long press <element> for <N> seconds` | `long press the menu icon for 3 seconds` | Desktop web, mobile web, Android and iOS apps |
+| Type text | `type "<text>" in <field>` | `type "2" in "username" input field` | Web and mobile apps |
+| Clear a field | `clear <field>` | `clear email input field` | Web and mobile apps |
+| Hover | `hover on <element>` | `hover on shop by category option` | Web |
+| Drag and drop | `drag "<item>" to "<target>"` | `drag "Card A" to "Column B"` | Desktop web, mobile web, Android and iOS apps |
+| Wait | `wait for <N> seconds` | `wait for 5 seconds` | Web and mobile apps |
+| Open a new tab | `open <url> in a new tab` | `open amazon.com in a new tab` | Web |
+| Switch tab | `switch to <position> tab` or `switch to <name> tab` | `switch to 2nd tab` | Web |
+| Close a tab | `close <position> tab` or `close <name> tab` | `close 2nd tab` | Web |
+| Scroll a set amount | `scroll by <N>px` or `scroll by <N> percent` | `scroll by 100px` | Web (mobile apps scroll by count, not by pixels) |
+| Scroll a number of times | `scroll down <N> times` | `scroll down 3 times` | Web and mobile apps |
+| Assert text | `assert "<text>" is visible` | `assert "Welcome Back!" is visible` | Web and mobile apps |
+| Enter an OTP | `enter OTP "<digits>"` | `enter OTP "1234"` | Mobile apps |
+| Hide the keyboard | `hide keyboard` | `hide keyboard` | Android apps |
+| Submit and close the keyboard | `type "<text>" in <field> and press Enter` | `type "john@example.com" in the email field and press Enter` | iOS apps |
+| Dismiss a popup | `dismiss dialog` | `dismiss dialog` | Mobile apps |
+
+Drag and drop modes, sliders and confirmation gestures are covered in [Drag and Drop in KaneAI](/support/docs/kane-ai-drag-drop/). Keyboard, OTP, picker and scrolling patterns for native Android and iOS apps are in [Mobile App Testing Patterns](/support/docs/kaneai-kb-mobile-app-testing-patterns/).
 
 ---
 

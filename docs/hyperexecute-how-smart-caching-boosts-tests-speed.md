@@ -71,13 +71,17 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-09T19:10:37+05:30"
+    "dateModified": "2026-11-11T14:00:00+05:30"
   }) }}
 />
 
 # How Smart Caching Boosts Your Tests Execution Speed
 
 Smart Caching significantly reduces test execution times by optimizing resource utilization and minimizing redundant processes. This document provides a comprehensive technical overview of Smart Caching, detailing its architecture, functionalities, and benefits for software development teams.
+
+:::info On-premise deployments
+The `cacheKey` and `cacheDirectories` keys are part of the standard YAML. Ask your admin how caching is set up on your deployment. See the [On-Premise User Guide](/support/docs/hyperexecute-on-premise-user-guide/#step-4-prepare-your-yaml).
+:::
 
 ## Architecture
 

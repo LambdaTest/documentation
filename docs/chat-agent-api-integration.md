@@ -94,6 +94,8 @@ The TestMu AI Agent Testing Platform connects to your chat agent over standard H
 
 It works with any chatbot provider or framework. You provide the endpoint URL, the authentication, and the request and response shape, and the platform matches whatever structure your API uses.
 
+Chat agents that talk over WebSocket, including agents on Genesys Web Messaging, connect through a WebSocket endpoint profile instead. See how to [set up an endpoint profile](#set-up-an-endpoint-profile).
+
 ## How the Platform Sends Requests to Your Chat Agent
 
 ---
@@ -248,7 +250,20 @@ To connect your agent, provide the following. No code changes or infrastructure 
 | **Additional Headers** | Optional | Any extra headers your agent requires, such as a session token, API version, workspace ID, or custom tracking header. Provide as many as needed. |
 | **Request Body Format** | Optional | If your agent expects a different body structure (field names, extra fields), provide it and TestMu AI matches it exactly. |
 
-If your agent needs a login or a session before it accepts messages, configure an endpoint profile with **Suite Setup**, **Scenario Setup**, and **Chat** phases. See the [endpoint profile options](/support/docs/chat-agent/#what-the-chat-agent-workflow-includes).
+If your agent needs a login or a session before it accepts messages, configure an endpoint profile with **Suite Setup**, **Scenario Setup**, and **Chat** phases. See the [endpoint profile options](/support/docs/chat-agent/#chat-agent-testing-features).
+
+## Set Up an Endpoint Profile
+
+---
+
+Endpoint profiles are created on the agent's **Endpoint Profiles** tab, where you can define a profile in JSON or use the options below.
+
+- **Import a Postman collection.** Import any collection. The import finds the chat request, keeps only the login and lookup requests it needs, and shows you the flow to review before you save. Gaps such as expired tokens or undefined variables are named with the fix.
+- **Build a REST profile step by step.** The guided step editor for REST profiles starts from a Postman collection or a cURL command, or lets you build the profile one step at a time. Steps are cards in run order, with pickers for extracted values, the message field, and the reply path.
+- **Connect over WebSocket.** A WebSocket profile connects a chat agent that talks over WebSocket. Genesys Web Messaging is supported, with optional profile settings that collect split replies until the agent goes quiet, pause between connect messages, and add quick-reply and button labels to the reply text. WebSocket suites run with any maximum turns and against localhost or tunnel targets.
+- **Sign requests with AWS Signature V4.** To test a bot behind API Gateway, Lambda URLs, or Bedrock, paste a `curl --aws-sigv4` command or fill in the **Signing** fields. Keep the keys in the credentials vault.
+- **Test the connection.** **Test connection** sends a real chat message and shows the reply. Each setup step shows its request and response, and every problem names the field and the fix.
+- **Catch problems at save time.** A profile that cannot run is caught when you save it, with the exact field and the fix.
 
 ## How the Platform Runs a Chat Evaluation
 
@@ -281,6 +296,8 @@ Most connection failures come from authentication, the response path, or network
 - **What you see:** requests are rejected before a reply. **Why:** the endpoint returns a non-2xx status such as 401 unauthorized, 404 not found, or 429 rate limited. **Fix:** verify the endpoint URL and method, and that the agent accepts the request body shape you configured.
 
 - **What you see:** the connection fails on a public endpoint. **Why:** the URL is not served over HTTPS, or the TLS certificate is invalid. **Fix:** serve the endpoint over HTTPS with a valid certificate, or use the proxy method for internal agents.
+
+- **What you see:** a scenario is marked **Not scored · Setup failed**. **Why:** a setup step in the endpoint profile, such as a login, failed. The scenario shows which step failed and why, and it does not count against your agent. **Fix:** correct the failing step in the endpoint profile, then use **Test connection** to check the flow before you run again.
 
 ## Related TestMu AI Guides
 

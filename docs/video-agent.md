@@ -116,8 +116,9 @@ If you can send a colleague a link and they can join the conversation in a brows
 Before you create a video agent, make sure you have the following in place.
 
 - **A joinable URL for the agent you want to test.** A staging URL is ideal. See the warning below.
-- **Video agent testing enabled for your organization.** This is switched on per organization. If you do not see the option when creating an agent, ask your administrator.
 - **A clear definition of what "working" means.** This is the part worth thinking about, because it is what makes results useful rather than decorative. The [success criteria](#success-criteria-decide-the-verdict) section covers it in depth.
+
+Video agents are available to every organization: **Create New Agent** offers them alongside chat, voice, and image analyzer agents.
 
 :::warning
 Every session is a real conversation with whatever is behind the URL you supply. If you point it at production, it exercises production. Use a staging URL wherever you can.

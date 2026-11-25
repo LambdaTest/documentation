@@ -156,6 +156,20 @@ You can perform following Visual Regression tests using SmartUI:
   In case of any other problems, feel free to <span className="doc__lt" onClick={() => window.openLTChatWidget()}>Contact Us</span>.</p>
 </div>
 
+## SmartUI guides by test type
+
+Each way to run a visual test with SmartUI has its own guide:
+
+- SDK: add SmartUI snapshots to an existing test suite, for example with [Selenium Java](/support/docs/smartui-selenium-java-sdk/), [Playwright](/support/docs/smartui-playwright-sdk/) or [Cypress](/support/docs/smartui-cypress-sdk/).
+- [Capture static URLs via CLI](/support/docs/smartui-cli/): capture the pages listed in a `urls.json` file with `npx smartui capture`.
+- [Lambda Hooks](/support/docs/selenium-visual-regression/): run visual regression tests with Selenium on SmartUI through hooks.
+- [Figma designs](/support/docs/smartui-cli-figma/): run visual tests on Figma designs.
+- [PDFs](/support/docs/smartui-pdf-comparison/): run visual tests on PDF files.
+- [Upload through API](/support/docs/smartui-upload-api-v2/): upload screenshots through the API for comparison.
+- [Upload through CLI](/support/docs/smartui-cli-upload/): upload screenshots with `npx smartui upload` for comparison.
+- [Storybook](/support/docs/smart-ui-storybook/): run visual tests on Storybook stories.
+- [Git baseline branching](/support/docs/smartui-git-branching-strategy/): set baselines by Git branch in the SmartUI Storybook integration.
+
 ## More SmartUI guides
 
 Extend your visual testing setup with these SmartUI SDKs, integrations, and features:

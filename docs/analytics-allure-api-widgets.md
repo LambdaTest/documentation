@@ -137,9 +137,9 @@ className="doc_img"
 - Monitor for any anomalies in the test execution counts.
 
 
-## Allure Suite Health
+## Allure Suite Stability
 
-The `Allure Suite Health` widget provides insights into the health of the test suites executed using the Allure report. This widget helps you to get an overview of the test suite health and identify the test suites that require attention.
+The `Allure Suite Stability` widget provides insights into the health of the test suites executed using the Allure report. This widget helps you to get an overview of the test suite health and identify the test suites that require attention.
 
 <img
 loading="lazy"
@@ -150,10 +150,28 @@ height="400"
 className="doc_img"
 />
 
-### Use Cases of Allure Suite Health Widget
+### Use Cases of Allure Suite Stability Widget
 - Get insights into the health of the test suites executed using the Allure report.
 - Identify the test suites that require attention based on the test status.
 - Monitor the test suite health trends over time.
+
+## Allure Tests Stability
+
+The `Allure Tests Stability` widget lists the individual tests executed using the Allure report. For each test, it shows the latest status, the maximum, minimum and average duration, and the statuses of its recent runs. Select a test to open its details.
+
+<img
+loading="lazy"
+src={require('../assets/images/analytics/api-tests-stability.webp').default}
+alt="Allure Tests Stability widget"
+width="800"
+height="400"
+className="doc_img"
+/>
+
+### Use Cases of Allure Tests Stability Widget
+- Find the tests that fail or change status often across recent runs.
+- Compare the maximum, minimum and average duration of each test to spot slow or inconsistent tests.
+- Open a test's details to investigate its failures.
 
 ## Allure Test Status Ratio
 

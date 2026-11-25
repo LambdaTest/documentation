@@ -158,7 +158,7 @@ The pattern that brings most teams to this screen is a comparison that ran again
 
 ## Availability
 
-Baseline History is rolled out progressively. If you expect it on a project row and do not see it, your organisation may not be enabled yet. Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support).
+Baseline History is rolled out progressively. If you expect it on a project row and do not see it, your organisation may not be enabled yet. Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support/docs/).
 
 ## Additional Resources
 
