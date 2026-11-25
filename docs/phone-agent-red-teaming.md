@@ -248,7 +248,7 @@ The two views are never mixed, so red team calls never pull down your functional
 
 ### Attack Details
 
-Click **Details** on a card to open a side panel with four tabs.
+Click **Details** on a card, or a point on the chart, to open a side panel with four tabs.
 
 | Tab | What it shows |
 |---|---|

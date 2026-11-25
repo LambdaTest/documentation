@@ -99,7 +99,7 @@ A few LiveKit specifics shape how you connect and where failures sit:
 ---
 
 - **Phone** covers inbound and outbound callers arriving over a SIP trunk: DTMF entry, SIP REFER transfers, voicemail handling, and carrier latency. Setup: [phone agent testing](/support/docs/phone-agent/).
-- **Voice** reaches the agent by joining its room directly rather than over a phone number, through a voice endpoint profile that uses the WebRTC transport for LiveKit-hosted agents. Keep the profile's secrets in the vault rather than in plain text. It isolates the speech pipeline, so STT and TTS accuracy, turn-taking, and interruption handling get tested without telephony noise. Setup: [voice agent testing](/support/docs/voice-agent/).
+- **Voice** reaches the agent by joining its room directly rather than over a phone number, through a voice endpoint profile that uses the WebRTC transport for LiveKit-hosted agents. The transport is set with a server and a room-token endpoint, and it gives the same transcript, per-turn latency, recording, and evaluation as the other voice transports. Keep the profile's secrets in the vault rather than in plain text. It isolates the speech pipeline, so STT and TTS accuracy, turn-taking, and interruption handling get tested without telephony noise. Setup: [voice agent testing](/support/docs/voice-agent/).
 
 ## What breaks in a LiveKit call?
 

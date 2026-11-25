@@ -279,7 +279,7 @@ Omni is switched on for an organisation as a whole, not per user or per project.
 - **You can tell the two apart from the dashboard URL.** An Omni project opens under `/test/omni/`, while a standard project opens under its own platform, for example `/test/pdf/`.
 - **If you expect Omni and do not see it**, your organisation may not be enabled yet.
 
-To have Omni enabled for your organisation, contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support).
+To have Omni enabled for your organisation, contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support/docs/).
 
 ## Best Practices
 

@@ -112,22 +112,25 @@ If your phone line is a scripted IVR menu that only accepts set keypad or spoken
 
 ---
 
-These features apply to inbound and outbound agents, and the walkthroughs below don't cover them step by step.
+These features apply to phone caller agents, and the walkthroughs below don't cover them step by step.
 
 - **Pre Analysis and Post Analysis.** Phone testing runs in two modes, which you switch with the analysis dropdown. Pre Analysis places live test calls, and Post Analysis scores recordings of your production calls. See [Analyze Production Calls](#analyze-production-calls-post-analysis).
 - **Caller voices.** Choose from 200+ voices across providers, with different accents and speech speeds, and preview a voice before you pick it.
 - **Background noise.** Add one of 15 presets, such as café, street, call center, or poor cellular connection, to test your agent in realistic conditions.
-- **Call timing.** **Turn Wait Time** (0.5 to 5 seconds) is how long the caller waits after your agent stops speaking before it replies. Raise it if your agent pauses between sentences, so the caller doesn't cut in. **End call if silent for** (30 to 180 seconds) ends a call that goes quiet, and a maximum call duration (60 to 1800 seconds) stops runaway calls. You can also choose whether the caller or your agent speaks first.
+- **Call timing.** **Turn Wait Time** (0.5 to 5 seconds) is how long the caller waits after your agent stops speaking before it replies. Raise it if your agent pauses between sentences, so the caller doesn't cut in. **End call if silent for** (30 to 180 seconds) ends a call that goes quiet, and a maximum call duration (60 to 1800 seconds) stops runaway calls. You can also choose whether the caller or your agent speaks first. A call also ends when your agent says one of the end-call phrases set for the project.
 - **Scenario types.** When you generate scenarios, choose **Happy Path** for normal flows, **Negative** for errors and invalid inputs, **Edge Case** for boundary values and unusual conditions, or **Red Team** for security attacks and adversarial inputs. Scenario languages include Japanese and Portuguese.
 - **Red teaming.** Red team scenarios send a caller who plays a fraudster and attacks the rules in your agent's own prompt, across six OWASP LLM risks. Each call is rated Held, Partial, Breached, or Inconclusive, and red team results are kept out of your pass rate and the Go-Live assessment. See [Red Teaming for Phone Caller Agents](/support/docs/phone-agent-red-teaming/).
 - **Pronunciation assessment.** Set an accent on the agent and switch the check on per scenario to see mispronounced words on the finished call.
 - **Personas.** A persona sets the type of caller the simulated caller plays. Choose an available persona or create your own.
-- **Validation criteria.** Each scenario lists the outcomes a call must reach, such as "agent confirms the new appointment date". Every call is checked against them on the **Validation Results** tab.
-- **Test profiles.** A test profile holds the data a call runs with, such as a customer ID or a caller name, so you can run data-driven calls.
+- **Validation criteria.** Each scenario lists the outcomes a call must reach, such as "agent confirms the new appointment date". Every call is checked against them on the **Validation Results** tab. Each criterion is marked Pass or Fail: a criterion that cannot be confirmed as met is marked Fail and counts toward the compliance score.
+- **Test profiles.** A test profile holds the data a call runs with, such as a customer ID or a caller name, so you can run data-driven calls. Validation cards show the value each call used, captured when the call is dialed, so editing a profile later doesn't change earlier results.
+- **Test data sets.** For inbound agents, upload a spreadsheet (CSV or Excel) in which each row is one caller, with details such as an account number, a PIN, or menu choices, and assign it to a scenario in a suite. The suite places one call for each row. On the **Test Profile** tab, test data sets have their own section below the test profiles.
 - **Agent profiles.** For inbound tests, an agent profile is a reusable caller persona with a name, phone number, voice, and background noise, kept in a library for your whole organization. Each profile can be switched between active and inactive.
 - **Live call monitoring.** Follow each call's status and duration while it runs, and end a call in progress.
-- **Recordings and transcripts.** Every call produces a recording and a speaker-identified transcript. Keypad tones (DTMF) appear in the transcript, so you can test IVR menu navigation. Click anywhere on the waveform to jump to that moment, or drag to scrub.
+- **Recordings and transcripts.** Every call produces a recording and a speaker-identified transcript. Keypad tones (DTMF) appear in the transcript, so you can test IVR menu navigation. Click anywhere on the waveform to jump to that moment, drag to scrub, or use keyboard shortcuts to move through the recording.
 - **Voice platform integrations.** If your agent runs on Amazon Connect, Cartesia, ElevenLabs, Retell, Vapi, or Salesforce Agentforce, connect it on the **Integrations** tab to import its prompt and tools, and see whether your agent called each expected tool on every test call. See the setup for [Amazon Connect](/support/docs/test-amazon-connect-bots/), [Cartesia](/support/docs/test-cartesia-agents/), [ElevenLabs](/support/docs/test-elevenlabs-agents/), [Retell](/support/docs/test-retell-agents/), [Vapi](/support/docs/test-vapi-agents/), or [Agentforce](/support/docs/test-agentforce-agents/#agentforce-integration).
+- **Insights.** For inbound agents, the **Insights** page groups calls into runs, past calls included, so older projects appear too. The project overview lists each suite's pass rate against its target and its last 10 runs, and each suite has **Run** and **Compare** pickers, a pass-rate-per-run chart, a run drawer listing every call, six KPI tiles, and scenario cards grouped as **Broke**, **Still failing**, **Fixed**, and **Healthy**.
+- **Business reports.** Select **Export report** on the suite results page or on a share page to export a PDF or HTML report. Choose the latest result for each scenario or a date range, or, on the suite results page, pick results from the list (one per scenario). Then choose the scenarios and whether to include transcripts in full, as excerpts around failures, or not at all. The report shows a readiness verdict, KPI tiles that each say why they are **On track**, **At risk**, or **Off track**, top issues, changes since the last run, a scorecard, and scenario details. Personal data is masked by default and always masked in reports from share links, recordings are never included, and reports use no credits.
 
 ## Inbound Phone Agents
 
@@ -143,7 +146,7 @@ You can register phone numbers from 20+ countries. Registered numbers are masked
 
 Follow these seven steps in the dashboard to run live test calls against your inbound agent.
 
-**Step 1: Create the agent.** On the Agent Testing page, click **Create New Agent**. Enter an **Agent Name**, set **Agent Type** to **Phone Caller Agent**, and set **Phone Call Type** to **Inbound (Bot receives calls)**. Then click **Create New Agent**.
+**Step 1: Create the agent.** On the Agent Testing page, click **Create New Agent**. Enter an **Agent Name**, set **Agent Type** to **Phone Caller Agent**, and set **Phone Call Type** to **Inbound (Bot receives calls)**. Then click **Create New Agent**. **Phone Caller Agent** stays grayed out, with the reason shown, until phone caller agents are enabled for your organization.
 
 <img loading="lazy" src={require('../assets/images/agent-to-agent/create-inbound-phone-caller-agent-form.webp').default} alt="Create New Agent panel with Phone Caller Agent selected and the Inbound phone call type chosen" width="1918" height="948"  className="doc_img"/>
 
@@ -177,7 +180,7 @@ Follow these seven steps in the dashboard to run live test calls against your in
 
 **Step 7: Review the call results.** Open a call from the list to see whether it passed and why.
 
-- Start with failed calls. On the **Analytics** tab, click a metric tile to see the reason behind its result. Times in the reason, such as "At 01:38", jump to that moment in the recording.
+- Start with failed calls. A completed call opens on the **Analytics** tab, which shows the call summary followed by the metric and quality check tiles. Tiles with no value, such as Average Pitch or Words per Minute, are hidden instead of showing 0. Click a tile to see the reason and evidence behind its result. Times in the reason, such as "At 01:38", jump to that moment in the recording.
 - On the **Recording** tab, play the call or read the transcript around that moment to hear how your agent handled it.
 - On the **Validation Results** tab, check which of the scenario's validation criteria the call met or missed.
 - If a call failed but its metrics look fine, check the **MOS** badge. A call's pass or fail can be based on the metrics, on the mean opinion score of the call audio, or on both.
@@ -208,7 +211,7 @@ An outbound phone agent places calls. To test one, the platform reserves a recip
 
 Follow these six steps in the dashboard to run live test calls with your outbound agent.
 
-**Step 1: Create the agent.** On the Agent Testing page, click **Create New Agent**. Enter an **Agent Name**, set **Agent Type** to **Phone Caller Agent**, and set **Phone Call Type** to **Outbound (Bot makes calls)**. Then click **Create New Agent**.
+**Step 1: Create the agent.** On the Agent Testing page, click **Create New Agent**. Enter an **Agent Name**, set **Agent Type** to **Phone Caller Agent**, and set **Phone Call Type** to **Outbound (Bot makes calls)**. Then click **Create New Agent**. **Phone Caller Agent** stays grayed out, with the reason shown, until phone caller agents are enabled for your organization.
 
 <img loading="lazy" src={require('../assets/images/agent-to-agent/create-outbound-phone-caller-agent-form.webp').default} alt="Create New Agent panel with Phone Caller Agent selected and the Outbound phone call type chosen" width="1918" height="946"  className="doc_img"/>
 
@@ -265,7 +268,7 @@ Follow these four steps on the agent whose calls you want to analyze.
 **Step 3: Upload recordings.** On the **Voice Analysis** tab, click **Upload Recordings** and add production calls as MP3 or WAV files. Upload several at once to analyze them in parallel.
 
 - Add each call's transcript if you have it, to compare it with the speech-to-text output.
-- Pick an accent at upload to check your agent's pronunciation.
+- Pick an accent at upload to check your agent's pronunciation. The findings appear on the recording's details page.
 
 **Step 4: Review a recording.** Open a recording from the list. Play the call, follow the speaker-identified transcript with any keypad inputs (0 to 9, star, pound), and download the audio and transcript if you need them elsewhere. To find calls again later, bookmark and tag them, then search or filter the list by name, status, date, or tag.
 
@@ -275,7 +278,11 @@ Follow these four steps on the agent whose calls you want to analyze.
 
 Every call, whether a live test call or a production recording, is scored on 42 metrics grouped under six questions: is it fast, does it sound good, does it hold a good conversation, does it get the facts right, does it get the job done, and is it safe. Only your agent is judged. The simulated caller may be rude or confused on purpose, and that never counts against your agent.
 
-To grade your own business rules, such as asking for a PIN before changing an address, add **custom metrics**: plain-language checks graded on every call of the scenarios you attach them to. In **Metric Config**, choose which metrics run, change their targets and ratings, and decide which ones count toward a call's pass or fail.
+Every call is graded on these quality checks: Turn count, Turn brevity, AI identification, Response loop, Response consistency, No invented details, Faithfulness, Task completed, Expected result reached, Behavior adherence, Automated resolution, First call resolution, Accuracy, Efficiency, Empathy, Max latency, Dead air, Agent silence rate, Interruption yield, Opening length, Toxicity, Fairness, No over-refusal, and PII protection. Each call also gets an overall verdict of **Pass**, **Fail**, or **Review incomplete**. Review incomplete means the call could not be fully evaluated.
+
+Max latency, Dead air, and Agent silence rate pass or fail against the bar set for them, and a check with no bar set uses its default bar. Turn count and Turn brevity are shown for information only until you set a bar for them. New inbound caller configurations start with every quality check on, at its default bar, and Insights follow the same rules.
+
+To grade your own business rules, such as asking for a PIN before changing an address, add **custom metrics**: plain-language checks graded on every call of the scenarios you attach them to. Each custom metric is a pass or fail check or a 0 to 100 score, can be suggested from your agent's prompt, and can use test profile data. Its results name the test profile the call ran with and show evidence with timestamps that jump to the recording. In **Metric Config**, choose which metrics run, change their targets and ratings, and decide which ones count toward a call's pass or fail.
 
 For what each metric measures, its default targets, and how to set up custom metrics, see [Phone Caller Agent Metrics](/support/docs/agent-features-and-metrics/#phone-agent-metrics).
 
@@ -283,9 +290,30 @@ For what each metric measures, its default targets, and how to set up custom met
 
 ---
 
-**Go-live assessment.** Get a Green, Yellow, or Red verdict on whether your agent is ready for production, with the failure patterns behind it and prioritized action items. See [Go-Live Assessment](/support/docs/agent-features-and-metrics/#go-live-assessment).
+**Go-live assessment.** Get a Green, Yellow, or Red verdict on whether your agent is ready for production, with the failure patterns behind it and prioritized action items. Go-Live, Insights, and the suite results page apply the same rules, so a call shows the same result on each. On Go-Live, hover over a **Not tested** check to see the reason. Calls from performance tests don't count toward Go-Live or project results. See [Go-Live Assessment](/support/docs/agent-features-and-metrics/#go-live-assessment).
 
-**Scheduled runs.** Open the dropdown next to a suite's **Run** button and select **Schedule Run** to run it every hour, daily, on weekdays, weekly, monthly, or on your own cron expression, in your local time zone. See [Scheduled Runs](/support/docs/agent-features-and-metrics/#scheduled-runs).
+**Scheduled runs.** Open the dropdown next to a suite's **Run** button and select **Schedule Run** to run it every hour, daily, on weekdays, weekly, monthly, or on your own cron expression, in your local time zone. To change a schedule without deleting it, select **Schedule Run** on that suite again: the dialog opens on the current cadence, and saving updates the schedule in place. The **Edit** icon under **Scheduled** does the same. See [Scheduled Runs](/support/docs/agent-features-and-metrics/#scheduled-runs).
+
+## Post-Call Web Tests {#post-call-web-tests}
+
+---
+
+A phone scenario can run [Test Manager](/support/docs/test-manager/) web tests after a call is graded, so you can compare what the call said with what your website shows.
+
+- **Set up.** In the scenario editor, pick a Test Manager project, the test cases the scenario can choose from, and a start delay. The scenario panel lists the parameters each selected test reads, and warns when a test reads none.
+- **Run.** After the call is graded, the test cases that match the call run on HyperExecute, using values taken from the call transcript.
+- **Review.** The **Web Test** tab shows each result with the values used and links to Test Manager and HyperExecute. For each test case, it shows what the call said, what the website showed, and each check with a ✓ or ✗. A test is reported as matching the call only when the run confirms that it used the call's values.
+- **Verdict.** Web test results do not change the call verdict.
+
+## Live Call Events API {#live-call-events}
+
+---
+
+API users can follow a test call while it runs through its call events stream, `GET /api/calls/{call_id}/events/stream`.
+
+- **Handoff events.** For scenarios with **Transfer to human agent** turned on, the stream reports the moment your agent announces a transfer, the moment a person picks up, and the moment the call ends. Your script can then accept the transfer in your contact center console instead of waiting a fixed time.
+- **Live transcript.** Each line the caller or your agent speaks arrives as a transcript event while the call runs. This works for every call except mock calls and performance runs.
+- **End reasons.** The end reason on the stream uses the platform's own values, such as `agent_ended_call` and `silence_timeout`.
 
 ## Related TestMu AI Guides
 

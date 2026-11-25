@@ -74,10 +74,10 @@ export default function DocPaginator(props) {
   return (
     <>
       {showFeedback && <>
-      {showKaneCta && <div className="kane_cli_cta">
+      {showKaneCta && <aside className="kane_cli_cta" aria-labelledby="kane-cli-cta-title">
         <div className="kane_cli_cta_box">
           <div className='kane_cli_cta_content'>
-            <h2>Terminal First Testing With Kane CLI</h2>
+            <p id="kane-cli-cta-title" className="kane_cli_cta_title">Terminal First Testing With Kane CLI</p>
             <p>Natural language browser &amp; mobile app tests right from terminal.</p>
 
             <DemoPopup preselectedProductType="Kane-CLI" />
@@ -86,7 +86,7 @@ export default function DocPaginator(props) {
           <img loading="lazy" src="https://assets.testmu.ai/resources/images/Terminal-KaneCLIIcon.svg" alt="" aria-hidden="true" className='kane_cli_cta_icon no-zoom'></img>
           <img loading="lazy" src="https://assets.testmu.ai/resources/images/Terminal-KaneCLI.png" alt="Kane CLI terminal" title="Kane CLI" className='kane_cli_cta_terminal no-zoom'></img>
         </div>
-      </div>}
+      </aside>}
 
       {/* The CTA supplies the gap above this heading, so restore it when hidden. */}
       <p className='main_heading_support' style={showKaneCta ? undefined : {marginTop:"40px"}}>Help and Support</p>

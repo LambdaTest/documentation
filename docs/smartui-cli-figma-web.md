@@ -403,7 +403,7 @@ With SmartUI Figma-Web CLI, you can seamlessly perform visual regression testing
 - Basic understanding of Command Line Interface is required.
 - Basic understanding of Figma file structuring is required.
 - Login to [<BrandName /> SmartUI](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/) with your credentials.
-- Ensure you are using `@lambdatest/smartui-cli` version 4.1.43 or higher
+- Ensure you are using `@lambdatest/smartui-cli` version 4.1.43 or higher. The `auto_detect_height` option needs version 4.1.92 or higher.
 
 :::note
 If you face any problems executing tests with SmartUI-CLI `versions >= v4.x.x`, upgrade your Node.js version to `v20.3` or above.
@@ -607,6 +607,9 @@ Please read the following table for more information about the configuration fil
 | figma_file_token       | File token for your required Figma file. You can use multiple figma files in the same configuration.| Mandatory |
 | figma_ids  | Comma separated list of nodes that you care about in the document. If specified, only a subset of the document will be returned corresponding to the nodes listed, their children, and everything between the root node and the listed nodes. | Optional |
 | depth (int)    | Optional. Leave it out to capture only the frames listed in `figma_ids`. If you set it above 1, every node down to that depth in the fetched tree also becomes a screenshot: `2` adds the top-level frames, and each extra level adds every child layer inside them. More screenshots means more Figma API requests; see [Figma API usage and rate limits](#figma-api-usage-and-rate-limits). | Optional |
+| screenshot_names | Names for the screenshots, in the same order as `figma_ids`. If you set it, give one name for every ID. | Optional |
+| screenshot_viewports | Viewport for each frame, in the same order as `figma_ids`: `[width]` or `[width, height]`. If you set it, give one viewport for every ID. Leave it out to use each frame's own size. | Optional |
+| auto_detect_height (boolean) | Controls whether the frame height is added to the stored viewport. `true` (default) stores the screenshot as width x frame height. `false` stores it as the width alone, so it matches a full-page web screenshot of the same width. The width comes from `screenshot_viewports`, or from the frame itself if you leave that out. See [Compare tall Figma frames with full-page screenshots](#compare-tall-figma-frames-with-full-page-screenshots). | Optional |
 
 ### **Step 5:** Uploading the Figma files on SmartUI Cloud using CLI
 
@@ -710,6 +713,74 @@ npx smartui --config web-config.json exec --buildName=web-build -- node figma-we
 >**Points to Consider**
 > - The browsers listed in the Figma configuration are used solely to enable comparisons between your designs and their corresponding live webpages.
 > - Websites may exhibit browser-specific behaviors. To account for these variations, it is recommended to create distinct designs tailored for each browser, if necessary.
+
+## Compare tall Figma frames with full-page screenshots
+
+A Figma frame of a whole page is often much taller than a browser window, for example 1512 x 5710 px. To compare it with a full-page screenshot of your website, set `auto_detect_height` to `false` for that frame. This option needs `@lambdatest/smartui-cli` version 4.1.92 or higher.
+
+### Why the screenshots do not match by default
+
+SmartUI matches a Figma screenshot to a web screenshot by name, browser, and viewport.
+
+- A Figma frame is stored with the frame height added, `1512x5710`, whether you leave out `screenshot_viewports` or give a width-only viewport, `[1512]`.
+- A full-page web screenshot captured with a width-only viewport, `[1512]`, is stored as `1512`.
+
+The two viewports differ, so the web screenshot is not compared with the Figma baseline and shows up as a new screenshot.
+
+### Configuration
+
+Add `auto_detect_height: false` to the entry in `figma.configs`:
+
+```json title="designs.json"
+{
+  "web": {
+    "browsers": ["chrome"]
+  },
+  "figma": {
+    "configs": [
+      {
+        "figma_file_token": "<token>",
+        "figma_ids": ["id-1"],
+        "screenshot_names": ["homepage.png"],
+        "auto_detect_height": false
+      }
+    ]
+  }
+}
+```
+
+To store the screenshot under a different width than the frame's own, add a width-only viewport for each frame, for example `"screenshot_viewports": [[1512]]`.
+
+Capture the website at the same width, without a height, so that SmartUI takes a full-page screenshot:
+
+```json title="web-config.json"
+{
+  "web": {
+    "browsers": ["chrome"],
+    "viewports": [[1512]]
+  }
+}
+```
+
+Then upload the Figma baseline and run your tests as shown in [Working example with actual web comparisons](#working-example-with-actual-web-comparisons). Use the same screenshot name in your test, for example `homepage.png`.
+
+### How the viewport is stored
+
+For a Figma frame of 1512 x 5710 px:
+
+| `screenshot_viewports` | `auto_detect_height` | Stored viewport |
+|------------------------|----------------------|-----------------|
+| Not set | Not set or `true` | `1512x5710` |
+| Not set | `false` | `1512` |
+| `[[1512]]` | Not set or `true` | `1512x5710` |
+| `[[1512]]` | `false` | `1512` |
+| `[[1512, 900]]` | Any | `1512x900` |
+
+:::note
+- With `auto_detect_height` set to `false`, SmartUI never adds the frame height. It has no effect when you give both a width and a height.
+- `auto_detect_height` is `true` by default.
+- The value must be `true` or `false`. Any other value, such as `"no"`, stops the upload with `Invalid figma-web config; Invalid figma config; auto_detect_height must be true/false`.
+:::
 
 ## Best Practices
 
@@ -961,6 +1032,7 @@ Verify Frame Sizes
 - Ensure frame dimensions are consistent across uploads
    - Check that viewport sizes match between Figma frames and browser captures
    - Use the same browser viewport sizes in both Figma config and SDK config
+   - If a full-page web screenshot shows as new instead of being compared with a tall Figma frame, see [Compare tall Figma frames with full-page screenshots](#compare-tall-figma-frames-with-full-page-screenshots)
 
 </TabItem>
 <TabItem value='check-build-names' label='Check Build Names' >

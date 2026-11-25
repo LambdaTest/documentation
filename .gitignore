@@ -11,6 +11,8 @@
 # Auto-generated API data and endpoint pages (regenerated on every build)
 /src/data/api/all-apis.json
 /src/pages/api-doc/*/
+/static/api-doc.md
+/static/api-doc/
 
 # Auto-generated docs Markdown + llms.txt index + skills discovery index
 # (regenerated on every build by scripts/generate-static-md.js,
@@ -18,8 +20,8 @@
 /static/docs/*.md
 /static/.well-known/
 
-# Claude
-CLAUDE.md
+# Claude: CLAUDE.md is the shared agent guide (committed); personal notes go in CLAUDE.local.md
+CLAUDE.local.md
 
 # Misc
 .DS_Store

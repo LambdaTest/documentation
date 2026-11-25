@@ -112,7 +112,7 @@ A config is an answer key: one label for each fact the agent might state, and on
 3. In **Config Name**, name the config after what it checks, such as "Catalog Ground Truth" rather than "Config 3", so it's easy to pick when you attach it to a workflow.
 4. If your endpoints need a token or API key, select **Add secret** under **Secrets (Vault)**, and reference it as `{{secret:KEY}}`. Vault values resolve when tests run and are never stored in the config.
 5. Fill in the variables, endpoints, and validation mappings. See the [config reference](#config-reference) for every field and an example.
-   - **Guided** builds the config as a form. To begin from a request you already run, select **Start from a cURL command**.
+   - **Guided** builds the config as a form. To begin from a request you already run, select **Start from a cURL command**. If your API needs a login before the lookup, add login steps.
    - **JSON** shows the whole config as one JSON object, for pasting or bulk edits.
    - **Import** and **Export** load and save the config as a file.
 6. [Test the config](#test-a-config-before-you-save-it), then select **Create Config**.
@@ -158,6 +158,8 @@ Each entry in `endpoints` is one HTTP lookup. A config can hold several endpoint
 | `timeout` | Optional | Per-request timeout in seconds. |
 | `expected_status` | Optional | A list of status codes treated as success, for example `[200]`. |
 | `validation_mappings` | Required | The label and JSONPath pairs extracted from this endpoint's response. |
+
+Cookies don't carry over between data validation requests. To pass a cookie value to a later request, use `from_cookie`.
 
 ### Validation Mappings
 
@@ -210,14 +212,12 @@ This config reads the order ID from the test profile, looks up the order, and ma
 
 The **Test this config** panel in the config editor runs every endpoint immediately, so you catch a bad JSONPath or an unresolved `{{variable}}` before the config runs against a real conversation.
 
-1. In **Test variables**, enter one sample value per variable the config references, for example `{ "order_id": "ORD-12345" }`. Use real, production-shaped IDs, so the dry run returns the same kind of response a run would.
+1. In **Test variables**, enter one sample value per variable the config references, for example `{ "order_id": "ORD-12345" }`. Use real, production-shaped IDs, so the dry run returns the same kind of response a run would. You can also run the test with a test profile instead.
 2. Select **Test**.
 
-The panel shows the resolved request, the HTTP status and duration, and each label's extracted value. Every label should report **Fetched**. A label that reports **Path missing** has a JSONPath that didn't resolve, and **Fetch failed** means the endpoint call itself failed. See [Troubleshooting](#troubleshooting).
+The panel shows the resolved request, the HTTP status and duration, and each label's extracted value. Responses are masked, and the panel suggests response paths to check. Every label should report **Fetched**. A label that reports **Path missing** has a JSONPath that didn't resolve, and **Fetch failed** means the endpoint call itself failed. See [Troubleshooting](#troubleshooting).
 
-:::note
-The dry run calls your endpoints directly and doesn't go through a tunnel. An API that's only reachable through your tunnel fails the dry run but still works during real runs.
-:::
+A request that can't run, such as one with a missing secret or an empty required header, is refused with the reason. The dry run can go through your tunnel, so you can test an API that's only reachable through the tunnel before you save the config.
 
 ## Attach a Config to a Workflow
 
@@ -227,6 +227,7 @@ Data Validation runs per workflow, so attach a config to each workflow whose con
 
 1. Open the workflow and go to **Settings**, then the **Data Validation** section.
 2. Under **Attached config**, choose the config.
+3. Choose whether a run warns or fails when no data can be fetched, and which labels each scenario checks.
 
 Different workflows can attach different configs, and one config in the project can be marked **Default** to show the intended choice. To stop data validation for a workflow, choose **None (data validation off)**. Deleting a config has the same effect on every workflow it was attached to. In both cases, the rest of the evaluation is unchanged.
 
@@ -247,6 +248,8 @@ The fetch is fail-safe. If an endpoint is down, times out, or a path doesn't res
 ---
 
 Open a scenario result and go to the **Validation Criteria** tab. Data validation criteria appear alongside the scenario's own criteria, each tagged with a purple **Data Validation** chip, and count toward the same pass counts and compliance percentage. So one score reflects both how the agent conversed and whether its facts were right.
+
+Before a run starts, the run drawer shows the data validation status. After the run, a test case whose data couldn't be checked shows a banner, and the results list shows a **Data not verified** chip and count.
 
 | Verdict | Meaning |
 |---|---|
@@ -275,7 +278,7 @@ Expand a criterion to see its evidence: the transcript quote, **Agent stated** n
 | Situation | What to do |
 |---|---|
 | A label reports **Path missing** in the dry run | Check the JSONPath against a real response body. Paths are case-sensitive, and arrays are zero-indexed. |
-| A label reports **Fetch failed** in the dry run | Check the URL, the auth headers, and that every `{{variable}}` has a test value. If the API is tunnel-only, expect the dry run to fail and check it in a real run instead. |
+| A label reports **Fetch failed** in the dry run | Check the URL, the auth headers, and that every `{{variable}}` has a test value. If the API is tunnel-only, run the test through your tunnel. |
 | Results show **Cannot verify** with a fetch error | The endpoint was unreachable or slow during the run. Check its health and the `timeout` and `fetch_budget_seconds` values. |
 | Results show **Cannot verify** with "not discussed" | The agent never stated that fact in the conversation. This is expected for facts outside the scenario's scope. |
 | A criterion fails but the agent looks right | Expand it and compare **Agent stated** with **Ground truth (from your API)**. If the ground truth is wrong, fix the mapping or the source data. |
@@ -288,6 +291,7 @@ Expand a criterion to see its evidence: the transcript quote, **Agent stated** n
 - Endpoints are restricted to read-only GET and POST lookups. TestMu AI never writes to your systems.
 - Keep tokens and API keys in the vault and reference them as `{{secret:KEY}}`. Vault values resolve when tests run, are never stored in the config, and are redacted from logs and fetch results.
 - Requests to internal and cloud-metadata addresses are blocked.
+- On shared reports, fetched values and the judge's explanation are hidden. Scores, verdicts, and label names are still shown.
 - Use dedicated, least-privilege API credentials for validation lookups, and rotate them according to your organization's security policy.
 
 ## Related TestMu AI Guides

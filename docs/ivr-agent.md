@@ -101,8 +101,9 @@ These features apply to IVR agents, and the walkthrough below doesn't cover them
 - **Cyara import.** If your IVR test cases already live in Cyara, upload a Cyara XML export. Every test case becomes a callable IVR scenario, with its prompts, keypad steps, shared blocks, dial number, and test data carried across, and the flow appears on the **IVR System Map**.
 - **Personas.** Each scenario pairs a menu path with a persona that sets how the simulated caller behaves, such as a caller who over-explains at a speech prompt or one who multitasks and answers late.
 - **Recordings and transcripts.** Every call produces a recording and a speaker-identified transcript, with the keypad tones the caller pressed, so you can match each menu choice to what the IVR played next.
+- **Test data sets.** Upload a spreadsheet (CSV or Excel) in which each row is one caller, with details such as an account number, a PIN, or menu choices, and assign it to an IVR scenario in a suite. The suite places one call for each row. On the **Test Profile** tab, test data sets have their own section below the test profiles.
 - **Email alerts for failed runs.** On the **Integrations** tab, turn on email alerts and choose the recipients. Each failed run sends one email listing the failed scenarios and a link to the results.
-- **Insights.** The **Insights** tab summarizes your suites with pass rate, average score, and completed runs, with a page per suite for run history.
+- **Insights.** The **Insights** tab groups calls into runs, past calls included, and summarizes your suites with pass rate, average score, and completed runs. Each suite has **Run** and **Compare** pickers, a pass-rate-per-run chart, a run drawer listing every call, six KPI tiles, and scenario cards grouped as **Broke**, **Still failing**, **Fixed**, and **Healthy**.
 
 ## Test an IVR Agent
 
@@ -110,7 +111,7 @@ These features apply to IVR agents, and the walkthrough below doesn't cover them
 
 Follow these eight steps in the dashboard to run live test calls against your IVR.
 
-**Step 1: Create the agent.** On the Agent Testing page, click **Create New Agent**. Enter an **Agent Name**, set **Agent Type** to **IVR Agent**, then click **Create New Agent**.
+**Step 1: Create the agent.** On the Agent Testing page, click **Create New Agent**. Enter an **Agent Name**, set **Agent Type** to **IVR Agent**, then click **Create New Agent**. **IVR Agent** stays grayed out, with the reason shown, until IVR agents are enabled for your organization.
 
 <img loading="lazy" src={require('../assets/images/agent-to-agent/create-ivr-agent-form.webp').default} alt="Create New Agent panel with IVR Agent selected as the agent type" width="1915" height="937"  className="doc_img"/>
 
@@ -201,7 +202,7 @@ Hallucination, grounding, and safety metrics are built for conversational agents
 
 For the score bands and confidence levels, see [Go-Live Assessment](/support/docs/agent-features-and-metrics/#go-live-assessment).
 
-**Scheduled runs.** Open the dropdown next to a suite's **Run** button and select **Schedule Run** to run it every hour, daily, on weekdays, weekly, monthly, or on your own cron expression, in your local time zone. See [Scheduled Runs](/support/docs/agent-features-and-metrics/#scheduled-runs).
+**Scheduled runs.** Open the dropdown next to a suite's **Run** button and select **Schedule Run** to run it every hour, daily, on weekdays, weekly, monthly, or on your own cron expression, in your local time zone. To change a schedule without deleting it, select **Schedule Run** on that suite again: the dialog opens on the current cadence, and saving updates the schedule in place. The **Edit** icon under **Scheduled** does the same. See [Scheduled Runs](/support/docs/agent-features-and-metrics/#scheduled-runs).
 
 ## Related TestMu AI Guides
 

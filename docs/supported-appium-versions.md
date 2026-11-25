@@ -134,10 +134,14 @@ capabilities.setCapability("appiumVersion", "2.2.1");
 capabilities.setCapability("platformName", "ios");
 // Add other capabilities as needed
 ```
+:::note
+- **Default and Latest Versions:** The table above lists the **Default** Version and **Latest** Version supported for each platform. The corresponding version will be selected when you explicitly set the `appiumVersion` capability to `default` or `latest`, respectively. These versions apply to the OS versions listed under the respective platform.
 
-**Latest Version**: We update the `latest` version for all platforms, including Android and iOS, to stay aligned with the latest stable releases of Appium. This ensures users always have access to the most current and reliable versions.To use the latest version, pass `latest` in **appiumVersion** capability.
+- For example, for **Android**, setting `appiumVersion: default` selects version `2.2.1`, while setting `appiumVersion: latest` selects version `2.3.0`, as listed in the table above.
 
-**Default Version**: A new `default` version is supported when the user does not explicitly specify a appium version or pass `default` in **appiumVersion** capability.
+- To use a specific **Appium version**, set the `appiumVersion` capability to your preferred version. For example, `appiumVersion: 3.0.2`.
+
+:::
 
 ## Supported Driver Versions 
 ---

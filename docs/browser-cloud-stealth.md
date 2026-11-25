@@ -252,6 +252,8 @@ comparison:
 Screenshots are saved to `test-output/`. Stealth ON shows green checks; stealth
 OFF shows red failures.
 
+To compare Browser Cloud Stealth Mode with the open-source packages, see the [Playwright stealth setup guide](https://www.testmuai.com/blog/playwright-stealth/). For Patchright, the drop-in Playwright fork that hides common automation leaks, read [Patchright setup and limits](https://www.testmuai.com/blog/patchright/).
+
 
 ## How Stealth Works
 

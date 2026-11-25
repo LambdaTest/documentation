@@ -370,6 +370,32 @@ Below are the currently supported features and how they consume credits.
 
 ---
 
+### SmartUI AI Build Summary
+
+<BrandName /> **SmartUI AI Build Summary** analyzes the changed screenshots of a build with AI and generates one build-level report: a risk score, every change classified by type, and similar changes grouped across screenshots. [Learn more](/support/docs/smartui-ai-build-summary/).
+
+#### How credits are consumed
+
+**Screenshot analysis**
+
+* Each screenshot that differs from its baseline is analyzed once, at the same rate as [SmartUI Visual AI](#smartui-visual-ai): **\~1–4 credits** for a small or normal screenshot and **\~5–8 credits** for a large one.
+* Screenshots that match their baseline are not analyzed and consume no credits.
+* At most **100 screenshots** per build are analyzed, so a build is never charged for more than 100 screenshots.
+* The analysis is saved with the screenshot. Opening **Visual AI** or the **AI Summary** panel for a screenshot that is already analyzed does not consume credits again.
+
+**Build summary**
+
+* Grouping the changes and writing the build summary consumes a small additional amount, charged once per build when the summary is generated.
+
+**What is not charged**
+
+* A screenshot whose analysis fails is not charged.
+* If your credits run out part-way through a build, the remaining screenshots are skipped and not charged. The summary covers only the analyzed screenshots until you add credits and analyze the skipped ones.
+
+>**Example:** A build has 60 screenshots, and 20 of them differ from the baseline. Only those 20 screenshots are analyzed and charged, plus the one-time build summary.
+
+---
+
 ### AI Test Case Generator
 
 The **AI Test Case Generator** converts diverse inputs (text, PDFs, audio, videos, images, Jira tickets, and more) into **structured, contextual test cases**, accelerating authoring while improving coverage. [Learn more](/support/docs/generate-test-cases-with-ai/).
