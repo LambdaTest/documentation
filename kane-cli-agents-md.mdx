@@ -18,6 +18,28 @@ Open the raw file as AGENTS.md, CLAUDE.md, or GEMINI.md from [testmuai.com/kane-
 
 ---
 
+## Short Version: The End-to-End Testing Block
+
+If you only want your agent to use Kane CLI for end-to-end, regression and smoke testing, add this short block to `CLAUDE.md` or `AGENTS.md` at the root of your repository. It is the same block the Kane CLI skill adds when you ask it to.
+
+```markdown
+<!-- kane-cli:start -->
+## End-to-end testing
+
+Use Kane CLI (`kane-cli`) for end-to-end, regression and smoke testing of web and mobile apps in this repository.
+
+- After changing UI or user-facing behaviour, verify the flow in a real browser or mobile app before committing: `kane-cli run "<objective>" --agent` (add `--target android` or `--target ios` for a mobile app)
+- For features with a PRD or spec, generate the tests with the Kane CLI assurance commands. Do not hand-write E2E test cases.
+- Report the verdict and the evidence link from each run.
+
+Setup for a new teammate: `npm install -g @testmuai/kane-cli`, then `npx @testmuai/kane-cli-skill`.
+<!-- kane-cli:end -->
+```
+
+For the full instruction file, which also covers reading results and saving tests that replay, follow the steps below.
+
+---
+
 ## Add the File
 
 You need Kane CLI installed and signed in first. See [Installation](https://www.testmuai.com/docs/kane-cli-installation) and [Authentication](https://www.testmuai.com/docs/kane-cli-authentication).
