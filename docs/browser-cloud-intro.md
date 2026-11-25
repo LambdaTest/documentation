@@ -148,6 +148,24 @@ Find all the guides, resources, and examples you need to build on <BrandName /> 
   </div>
 </div>
 
+## Integrations
+***
+
+<div className="row">
+  <div className="col col--4 margin-bottom--lg">
+    <a className="card padding--lg" href="/support/docs/browser-cloud-stagehand/" style={{height: '100%', textDecoration: 'none'}}>
+      <h3>🤖 Stagehand</h3>
+      <p>Attach Stagehand 3 to a cloud session and keep your act() and extract() calls.</p>
+    </a>
+  </div>
+  <div className="col col--4 margin-bottom--lg">
+    <a className="card padding--lg" href="/support/docs/browser-cloud-kane-cli/" style={{height: '100%', textDecoration: 'none'}}>
+      <h3>⌨️ Kane CLI</h3>
+      <p>Run Kane CLI objectives and saved tests in a cloud Chrome with --ws-endpoint.</p>
+    </a>
+  </div>
+</div>
+
 ## Cookbook
 ***
 

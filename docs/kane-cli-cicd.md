@@ -410,6 +410,8 @@ kane-cli run "Open the pricing page and verify the Pro plan is listed" \
 
 `--cdp-endpoint <url>` works the same way for browsers that expose a Chrome DevTools Protocol URL. With either flag, Kane CLI skips its own Chrome launch and connects to the endpoint you provide.
 
+To create `LT_BROWSER_WSS` from a TestMu AI Browser Cloud session, follow [Run Kane CLI Tests on Browser Cloud](/support/docs/browser-cloud-kane-cli/).
+
 </TabItem>
 
 </Tabs>
