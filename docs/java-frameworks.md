@@ -4,7 +4,7 @@ title: How to Run Selenium Tests With Java on TestMu AI
 toc_max_heading_level: 2
 hide_title: true
 sidebar_label: "Java"
-description: Run Java Selenium tests on the TestMu AI cloud grid across 10,000+ browsers. Covers TestNG, JUnit, Cucumber, Selenide, Gauge, Geb, Serenity, and the SDK.
+description: Run Java Selenium tests on 3,000+ browser and OS combinations on TestMu AI. Covers TestNG, JUnit, Cucumber, Selenide, Gauge, Geb, Serenity and the SDK.
 keywords:
   - java selenium cloud testing
   - run java tests on selenium grid
@@ -40,7 +40,7 @@ import CookieTrackingLogin from '@site/src/component/CookieTracking';
       "@id": "https://www.testmuai.com/support/docs/java-with-selenium-running-java-automation-scripts-on-testmu-selenium-grid/"
     },
     "headline": "How to Run Selenium Tests With Java on TestMu AI",
-    "description": "Run Java Selenium tests on the TestMu AI cloud grid across 10,000+ browsers. Covers TestNG, JUnit, Cucumber, Selenide, Gauge, Geb, Serenity, and the SDK.",
+    "description": "Run Java Selenium tests on 3,000+ browser and OS combinations on TestMu AI. Covers TestNG, JUnit, Cucumber, Selenide, Gauge, Geb, Serenity and the SDK.",
     "url": "https://www.testmuai.com/support/docs/java-with-selenium-running-java-automation-scripts-on-testmu-selenium-grid/",
     "image": {
       "@type": "ImageObject",
@@ -93,10 +93,10 @@ import CookieTrackingLogin from '@site/src/component/CookieTracking';
       },
       {
         "@type": "SoftwareSourceCode",
-        "name": "The driver is a RemoteWebDriver pointed at the grid, with your browser/OS choices passed through LT:Options",
+        "name": "The driver is a RemoteWebDriver pointed at the grid, with credentials read from environment variables and your browser/OS choices passed through LT:Options",
         "codeSampleType": "code snippet",
         "programmingLanguage": "Java",
-        "text": "ChromeOptions browserOptions = new ChromeOptions();\nbrowserOptions.setPlatformName(\"Windows 10\");\nbrowserOptions.setBrowserVersion(\"latest\");\n\nHashMap<String, Object> ltOptions = new HashMap<String, Object>();\nltOptions.put(\"build\", \"Java Selenium Build\");\nltOptions.put(\"name\", \"Java Selenium Test\");\nltOptions.put(\"w3c\", true);\nbrowserOptions.setCapability(\"LT:Options\", ltOptions);\n\ndriver = new RemoteWebDriver(\n    new URL(\"https://\" + username + \":\" + accesskey + \"@hub.lambdatest.com/wd/hub\"),\n    browserOptions);"
+        "text": "String username = System.getenv(\"LT_USERNAME\");\nString accesskey = System.getenv(\"LT_ACCESS_KEY\");\n\nChromeOptions browserOptions = new ChromeOptions();\nbrowserOptions.setPlatformName(\"Windows 10\");\nbrowserOptions.setBrowserVersion(\"latest\");\n\nHashMap<String, Object> ltOptions = new HashMap<String, Object>();\nltOptions.put(\"build\", \"Java Selenium Build\");\nltOptions.put(\"name\", \"Java Selenium Test\");\nltOptions.put(\"w3c\", true);\nbrowserOptions.setCapability(\"LT:Options\", ltOptions);\n\ndriver = new RemoteWebDriver(\n    new URL(\"https://\" + username + \":\" + accesskey + \"@hub.lambdatest.com/wd/hub\"),\n    browserOptions);"
       },
       {
         "@type": "SoftwareSourceCode",
@@ -114,7 +114,7 @@ import CookieTrackingLogin from '@site/src/component/CookieTracking';
         "text": "mvn test -D suite=single.xml\nmvn test -D suite=parallel.xml"
       }
     ],
-    "dateModified": "2026-09-09T19:13:32+05:30"
+    "dateModified": "2026-11-26T12:00:00+05:30"
   }) }}
 />
 
@@ -122,7 +122,11 @@ import CookieTrackingLogin from '@site/src/component/CookieTracking';
 ---
 
 
-Run your Java Selenium tests on the TestMu AI cloud grid across 10,000+ browser/device combinations. The setup is the same for every framework: you connect to the grid, pass your capabilities, and run. This guide walks through that shared flow once, then gives you a per-framework quickstart for **TestNG, JUnit, Cucumber, Selenide, Gauge, Geb, and Serenity**, plus a zero-code **Java SDK** option.
+To run Selenium tests with Java on TestMu AI, set `LT_USERNAME` and `LT_ACCESS_KEY` as environment variables, point a `RemoteWebDriver` at `https://hub.lambdatest.com/wd/hub`, and pass your browser, version, and OS in `LT:Options`. Then run your suite with Maven as usual. The browsers run on the TestMu AI cloud grid, and each test's video, logs, and result appear on the Automation Dashboard.
+
+TestMu AI was formerly LambdaTest; lambdatest hosts such as `hub.lambdatest.com` still work.
+
+You can run on 3,000+ browser and OS combinations, and the setup is the same for every framework: you connect to the grid, pass your capabilities, and run. This guide walks through that shared flow once, then gives you a per-framework quickstart for **TestNG, JUnit, Cucumber, Selenide, Gauge, Geb, Serenity, and Tesbo**, plus a zero-code **Java SDK** option.
 
 ## Prerequisites
 ---
@@ -190,6 +194,8 @@ set LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
 
 </Tabs>
 
+The TestNG and JUnit sample projects read these two variables with `System.getenv`, so no credentials live in the test code.
+
 ## How the Sample Test Works
 ---
 
@@ -205,11 +211,14 @@ driver.findElement(By.id("sampletodotext")).sendKeys("Yey, Let's add it to list"
 driver.findElement(By.id("addbutton")).click();
 ```
 
-The driver is a `RemoteWebDriver` pointed at the grid, with your browser/OS choices passed through `LT:Options`:
+The driver is a `RemoteWebDriver` pointed at the grid. It reads your credentials from the environment variables you set above and passes your browser/OS choices through `LT:Options`:
 
 <VerifiedTag value="Verified" />
 
 ```java
+String username = System.getenv("LT_USERNAME");
+String accesskey = System.getenv("LT_ACCESS_KEY");
+
 ChromeOptions browserOptions = new ChromeOptions();
 browserOptions.setPlatformName("Windows 10");
 browserOptions.setBrowserVersion("latest");
@@ -231,54 +240,6 @@ Use the [Capabilities Generator](https://www.testmuai.com/capabilities-generator
 
 **What changes between frameworks is only how that test is *structured and run***: the runner, its setup/teardown hooks, and any config files. That's what each tab below covers.
 
-## Run Selenium Tests With Java SDK
----
-
-The **Java SDK** is the zero-code option: it runs your **existing** TestNG tests on the grid unchanged, injecting credentials and capabilities from a YAML file via a Java agent. Use this when you already have a local suite and don't want to edit test code. See the [SDK reference project on GitHub](https://github.com/Lambdatest/lambdatest-java-selenium-sdk).
-
-1. Add the SDK dependency and agent to your `pom.xml` (the agent is attached to Surefire via `-javaagent`):
-
-<VerifiedTag value="Verified" />
-
-```xml title="pom.xml (key additions)"
-<dependency>
-    <groupId>io.github.lambdatest</groupId>
-    <artifactId>lambdatest-selenium-java-sdk</artifactId>
-    <version>1.0.1</version>
-</dependency>
-<!-- plus the maven-dependency-plugin (copies lambdatest-agent.jar) and
-     maven-surefire-plugin with -javaagent:.../lambdatest-agent.jar -->
-```
-
-2. Create `lambdatest.yml` with your credentials, platforms, and features. The SDK loads it automatically:
-
-<VerifiedTag value="Verified" />
-
-```yaml title="lambdatest.yml"
-username: YOUR_LAMBDATEST_USERNAME
-accesskey: YOUR_LAMBDATEST_ACCESS_KEY
-
-platforms:
-  - browserName: Chrome
-    browserVersion: latest
-    platformName: Windows 10
-
-build: SDK Build v1
-name: SDK Test
-video: true
-tunnel: true
-```
-
-3. Register the SDK's TestNG listener in `testng.xml`, then run. Your existing test classes execute as-is:
-
-<VerifiedTag value="Verified" />
-
-```bash
-mvn test -D suite=testng.xml
-```
-
-The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
-
 ## Run a Test in Your Framework
 ---
 
@@ -288,7 +249,7 @@ Each tab lists just the framework-specific pieces. Clone the matching repo (it c
 
 <TabItem value="testng" label="TestNG" default>
 
-TestNG is the most common choice. It wraps the shared test with `@BeforeClass` (create the driver) and `@AfterClass` (report status and quit), and drives cross-browser runs from a `testng.xml` suite.
+TestNG is the most common choice. Each test class creates the driver in `@BeforeMethod`, then reports its status and quits in `@AfterMethod`. A suite file (`single.xml` or `parallel.xml`) picks which classes run.
 
 1. Clone the [sample GitHub project](https://github.com/LambdaTest/Java-TestNG-Selenium):
 
@@ -299,26 +260,40 @@ git clone https://github.com/LambdaTest/Java-TestNG-Selenium
 cd Java-TestNG-Selenium
 ```
 
-2. Set your browser and OS in the `testng.xml` suite. Listing several environments with `parallel="tests"` and a `thread-count` runs them concurrently:
+2. Set your browser and OS in the test class. Each class in `src/test/java/com/lambdatest/` reads `LT_USERNAME` and `LT_ACCESS_KEY` and sets its own `LT:Options`. This excerpt from `TestNGTodo2.java` runs Chrome on Windows 10:
 
-<VerifiedTag value="Verified" />
+```java title="TestNGTodo2.java (excerpt)"
+String username = System.getenv("LT_USERNAME") == null ? "Your LT Username" : System.getenv("LT_USERNAME");
+String authkey = System.getenv("LT_ACCESS_KEY") == null ? "Your LT AccessKey" : System.getenv("LT_ACCESS_KEY");
+String hub = "@hub.lambdatest.com/wd/hub";
 
-```xml title="testng.xml"
-<suite thread-count="3" name="LambdaTestSuite" parallel="tests">
-  <test name="WIN10-Chrome">
-    <parameter name="browser" value="chrome"/>
-    <parameter name="platform" value="Windows 10"/>
-    <classes><class name="LambdaTest.TestNGToDo"/></classes>
-  </test>
-  <test name="MAC-Safari">
-    <parameter name="browser" value="safari"/>
-    <parameter name="platform" value="macOS Catalina"/>
-    <classes><class name="LambdaTest.TestNGToDo"/></classes>
+MutableCapabilities ltOptions = new MutableCapabilities();
+ltOptions.setCapability("build", "TestNG With Java");
+ltOptions.setCapability("name", m.getName() + this.getClass().getName());
+ltOptions.setCapability("platformName", "Windows 10");
+
+ChromeOptions browserOptions = new ChromeOptions();
+browserOptions.setCapability("browserVersion", "latest");
+browserOptions.setCapability("LT:Options", ltOptions);
+
+driver = new RemoteWebDriver(new URL("https://" + username + ":" + authkey + hub), browserOptions);
+```
+
+3. `parallel.xml` runs the three test classes at the same time:
+
+```xml title="parallel.xml"
+<suite thread-count="20" parallel="tests" name="Suite">
+  <test thread-count="20" parallel="classes" name="Test">
+    <classes>
+      <class name="com.lambdatest.TestNGTodo1"/>
+      <class name="com.lambdatest.TestNGTodo2"/>
+      <class name="com.lambdatest.TestNGTodo3"/>
+    </classes>
   </test>
 </suite>
 ```
 
-3. Run a single test, or the parallel suite:
+4. Run a single test, or the parallel suite:
 
 <VerifiedTag value="Verified" />
 
@@ -333,7 +308,7 @@ The test then appears on the [Automation Dashboard](https://www.testmuai.com/log
 
 <TabItem value="junit" label="JUnit">
 
-JUnit runs the same test as TestNG. The only difference is the lifecycle annotations: it uses `@Before` / `@After` instead of `@BeforeClass` / `@AfterClass`.
+JUnit runs the same test as TestNG. The only difference is the lifecycle annotations: it uses `@Before` / `@After` instead of TestNG's `@BeforeMethod` / `@AfterMethod`.
 
 1. Clone the [sample GitHub project](https://github.com/LambdaTest/junit-selenium-sample):
 
@@ -665,12 +640,188 @@ The test then appears on the [Automation Dashboard](https://www.testmuai.com/log
 
 </Tabs>
 
+## Run Selenium Tests With Java SDK
+---
+
+The **Java SDK** is the zero-code option: it runs your **existing** TestNG tests on the grid unchanged, injecting credentials and capabilities from a YAML file via a Java agent. Use this when you already have a local suite and don't want to edit test code. See the [SDK reference project on GitHub](https://github.com/Lambdatest/lambdatest-java-selenium-sdk) and the full [Selenium Java SDK guide](/support/docs/selenium-java-sdk/).
+
+1. Add the SDK dependency and agent to your `pom.xml` (the agent is attached to Surefire via `-javaagent`):
+
+<VerifiedTag value="Verified" />
+
+```xml title="pom.xml (key additions)"
+<dependency>
+    <groupId>io.github.lambdatest</groupId>
+    <artifactId>lambdatest-selenium-java-sdk</artifactId>
+    <version>1.0.1</version>
+</dependency>
+<!-- plus the maven-dependency-plugin (copies lambdatest-agent.jar) and
+     maven-surefire-plugin with -javaagent:.../lambdatest-agent.jar -->
+```
+
+2. Create `lambdatest.yml` with your credentials, platforms, and features. The SDK loads it automatically and reads `${LT_USERNAME}` and `${LT_ACCESS_KEY}` from the environment variables you set earlier:
+
+<VerifiedTag value="Verified" />
+
+```yaml title="lambdatest.yml"
+username: ${LT_USERNAME}
+accesskey: ${LT_ACCESS_KEY}
+
+platforms:
+  - browserName: Chrome
+    browserVersion: latest
+    platformName: Windows 10
+
+build: SDK Build v1
+name: SDK Test
+video: true
+tunnel: true
+```
+
+3. Register the SDK's TestNG listener in `testng.xml`, then run. Your existing test classes execute as-is:
+
+<VerifiedTag value="Verified" />
+
+```bash
+mvn test -D suite=testng.xml
+```
+
+The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
+
+## Common Capabilities
+---
+
+Set the W3C capabilities (`browserName`, `browserVersion`, `platformName`) on the browser options object, and TestMu AI capabilities inside `LT:Options`. These are the ones Java suites set most often. The full list, with defaults and aliases, is in [Selenium automation capabilities](/support/docs/selenium-automation-capabilities/).
+
+| Capability | Set on | Example | What it does |
+|---|---|---|---|
+| `browserName` | Browser options | `Chrome` | Browser to run. Case sensitive. `ChromeOptions`, `FirefoxOptions` and `SafariOptions` set it for you. |
+| `browserVersion` | Browser options | `latest`, `latest-1` | Browser version. Defaults to `latest`. |
+| `platformName` | Browser options or `LT:Options` | `Windows 10`, `macOS Sonoma` | Operating system. Case sensitive. If you leave it out, TestMu AI picks one that suits the browser. |
+| `build` | `LT:Options` | `Java Selenium Build` | Groups tests into one build on the dashboard. Keep it under 255 characters. |
+| `name` | `LT:Options` | `Java Selenium Test` | Test name shown on the dashboard. |
+| `tags` | `LT:Options` | `{"Staging", "Sanity"}` | Labels for grouping and [filtering tests](/support/docs/filter-your-selenium-tests/). |
+| `resolution` | `LT:Options` | `1920x1080` | Screen resolution of the VM. Defaults to `1024x768`. |
+| `video` | `LT:Options` | `true` | Records a video of the test. On by default. |
+| `visual` | `LT:Options` | `true` | Captures a screenshot at each step. Off by default; adds run time. |
+| `network` | `LT:Options` | `true` | Records network logs. Off by default; adds run time. |
+| `console` | `LT:Options` | `true` | Records browser console (JavaScript) logs. Off by default. |
+| `tunnel` | `LT:Options` | `true` | Routes traffic through TestMu AI Tunnel so the browser can reach local or private pages. Off by default. |
+| `tunnelName` | `LT:Options` | `my-java-tunnel` | Picks which running tunnel to use. |
+
+In Java, add them to the same `ltOptions` map:
+
+```java
+ltOptions.put("resolution", "1920x1080");
+ltOptions.put("network", true);
+ltOptions.put("console", true);
+ltOptions.put("tags", new String[] { "Staging", "Sanity" });
+```
+
 ## View Your Results
 ---
 
-Your test results, including video, network logs, and command-by-command execution, appear on the [TestMu AI Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build).
+Open the [TestMu AI Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build) after `mvn test` finishes. Each run shows as a build named by your `build` capability, with one entry per test named by `name`. Open a test to see its video and command-by-command execution, plus network logs, console logs, and step screenshots if you turned them on.
 
-**Next steps:** If this is your first run, walk through [running your first Selenium test](/support/docs/testmu-running-your-first-selenium-test/) end to end. From there, explore the full set of [Selenium automation capabilities](/support/docs/selenium-automation-capabilities/) you can pass to the grid, learn how to [debug your Selenium tests](/support/docs/debugging-options/), and organize and [filter your Selenium tests](/support/docs/filter-your-selenium-tests/) as your suite grows.
+To mark a test passed or failed, send the `lambda-status` [Lambda Hook](/support/docs/lambda-hooks/) before you quit the driver. The TestNG sample does this in `@AfterMethod`:
+
+```java
+((JavascriptExecutor) driver).executeScript("lambda-status=passed");
+```
+
+Supported values are `passed`, `failed`, `skipped`, `ignored`, `unknown`, and `error`.
+
+## Test Locally Hosted Pages With TestMu AI Tunnel
+---
+
+If the site under test runs on `localhost`, a staging server, or a private network, start TestMu AI Tunnel on your machine and tell the test to use it.
+
+1. Download the Tunnel binary for your OS and start it with your credentials and a tunnel name. Step-by-step setup is in the guides for [macOS](/support/docs/local-testing-for-macos/), [Windows](/support/docs/local-testing-for-windows/), and [Linux](/support/docs/local-testing-for-linux/).
+
+<div className="lambdatest__codeblock">
+    <CodeBlock className="language-bash">
+  {`LT --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --tunnelName my-java-tunnel`}
+  </CodeBlock>
+</div>
+
+2. Add the tunnel capabilities to `LT:Options`, using the same tunnel name:
+
+```java
+ltOptions.put("tunnel", true);
+ltOptions.put("tunnelName", "my-java-tunnel");
+```
+
+3. Run your tests as usual. If a browser refuses a plain `localhost` URL, open `localhost.lambdatest.com` or your machine's IP address instead.
+
+For flags, proxies, and other options, see [TestMu AI Tunnel](/support/docs/testmu-tunnel/) and [testing locally hosted pages](/support/docs/testing-locally-hosted-pages/).
+
+## Run in CI
+---
+
+In CI, store your username and access key as secrets and expose them as `LT_USERNAME` and `LT_ACCESS_KEY`. The test code doesn't change. A GitHub Actions job for the TestNG sample:
+
+```yaml title=".github/workflows/selenium-java.yml"
+name: selenium-java
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+      - name: Run TestNG suite on TestMu AI
+        env:
+          LT_USERNAME: ${{ secrets.LT_USERNAME }}
+          LT_ACCESS_KEY: ${{ secrets.LT_ACCESS_KEY }}
+        run: mvn test -D suite=parallel.xml
+```
+
+In Jenkins, bind your credentials to the same two environment variables and run the same Maven command. See [Jenkins with TestMu AI](/support/docs/jenkins-with-testmu/) and the other [CI/CD integrations](/support/docs/integrations-with-ci-cd-tools/).
+
+## Troubleshooting
+---
+
+Match the message your test prints. The full list is in [common Selenium errors](/support/docs/error-messages/).
+
+| Error | Cause | Fix |
+|---|---|---|
+| Authentication error when the session starts | `LT_USERNAME` or `LT_ACCESS_KEY` is missing or wrong in the shell that runs Maven. The TestNG and JUnit samples then send the placeholder `Your LT Username`. | Run `echo $LT_USERNAME` in the same terminal. Copy both values again from the key icon on the Automation Dashboard. In CI, check the secret names. |
+| `SessionNotCreatedException: Could not start a new session` | The browser, driver, Selenium client, or JDK versions don't match. | Check that the browser version and your Selenium and JDK versions are compatible. Build the capabilities with the [Capabilities Generator](https://www.testmuai.com/capabilities-generator/). |
+| `Lambda Error: Uh Oh! Looks like our Grid failed to recognize your test input.` | A capability has the wrong data type (a string where an integer is expected), or no VM was free during a traffic spike. | Check each capability's type in [Selenium automation capabilities](/support/docs/selenium-automation-capabilities/), then retry. |
+| Exceeded Queue Limit | More tests started than your plan's concurrency allows, and the runner closed the connection while they waited in the queue. | Lower `thread-count` in `parallel.xml` to your concurrency limit, and raise your client's connection timeout. |
+| Max Duration Exceeded | The test ran longer than the maximum duration (1800 seconds by default), often because of an endless loop. | Split it into smaller tests, check for loops, or set the `maxDuration` capability. |
+| `localhost refused to connect` | Some browsers don't accept `localhost` as the URL through the tunnel. | Open `localhost.lambdatest.com` or your machine's IP address instead. |
+| The test can't reach a local or staging site | The tunnel isn't running, or `tunnelName` doesn't match the name you started it with. | Start the tunnel first and use the same name in `tunnelName`. See [Tunnel troubleshooting](/support/docs/troubleshooting-lambda-tunnel/). |
+
+## Frequently Asked Questions {#faq}
+---
+
+### Can I run Selenium Java tests online without a local Selenium setup?
+
+Yes. You write and compile the test on your machine with the JDK and Maven, and `RemoteWebDriver` sends each command to the TestMu AI grid, where the browser runs. You don't install browsers, drivers, or a Selenium Grid locally. TestMu AI is not an online Java compiler: your build still runs where you start it, on your machine or in CI.
+
+### How do I run TestNG tests with Selenium on TestMu AI?
+
+Clone [Java-TestNG-Selenium](https://github.com/LambdaTest/Java-TestNG-Selenium), export `LT_USERNAME` and `LT_ACCESS_KEY`, and run `mvn test -D suite=single.xml`. The **TestNG** tab above has each step.
+
+### How do I run TestNG test cases in parallel?
+
+Run `mvn test -D suite=parallel.xml`. Its `<test>` element sets `parallel="classes"` and `thread-count="20"`, so all three sample classes start at once. Tests above your plan's concurrency limit wait in a queue until a slot frees up.
+
+### Is JUnit set up the same way?
+
+Yes. JUnit uses the same `RemoteWebDriver`, grid URL, and `LT:Options`. Only the lifecycle annotations (`@Before` and `@After`) and the runner differ. The **JUnit** tab above runs `mvn test -P single` or `mvn test -P parallel`.
+
+### How do I keep my username and access key out of the code?
+
+Set them as the `LT_USERNAME` and `LT_ACCESS_KEY` environment variables and read them with `System.getenv("LT_USERNAME")`. In CI, store them as secrets and map them to the same names. The Java SDK reads `${LT_USERNAME}` and `${LT_ACCESS_KEY}` in `lambdatest.yml`.
+
+### Is this the LambdaTest Selenium Java documentation?
+
+Yes. TestMu AI is LambdaTest's new name. The `hub.lambdatest.com` grid URL, the `LT:Options` key, and the sample projects under github.com/LambdaTest work as before.
 
 ## Next Steps
 ---
@@ -681,4 +832,10 @@ Continue with these related guides:
 - [Selenium Automation Capabilities](/support/docs/selenium-automation-capabilities/)
 - [Debugging Options](/support/docs/debugging-options/)
 - [Filter Your Selenium Tests](/support/docs/filter-your-selenium-tests/)
+- [Common Selenium Errors](/support/docs/error-messages/)
+- [Lambda Hooks](/support/docs/lambda-hooks/)
+- [TestMu AI Tunnel](/support/docs/testmu-tunnel/)
+- [Selenium Java SDK](/support/docs/selenium-java-sdk/)
+
+To see what else the grid offers, read about [Selenium automation on TestMu AI](https://www.testmuai.com/selenium-automation/).
 
