@@ -533,5 +533,10 @@
     "url": "/support/docs/kane-cli-getting-started/",
     "reason": "client-side redirect (window.location.replace) -> /docs/kane-cli-quickstart",
     "detected": "2026-10-28"
+  },
+  {
+    "url": "/support/docs/kane-cli-exploration/",
+    "reason": "live 301 -> /docs/kane-cli-exploration",
+    "detected": "2026-11-26"
   }
 ]
