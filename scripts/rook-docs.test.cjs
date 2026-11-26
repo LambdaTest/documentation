@@ -36,7 +36,7 @@ test('public installation examples use the current Homebrew tap and include nati
     assert.doesNotMatch(bash, /brew tap LambdaTest\/rook https:\/\/github\.com\/LambdaTest\/rook\.git/);
     assert.match(doc, /npm\.cmd install -g @testmuai\/rook\b/);
   }
-  assert.match(install, /npm\.cmd install -g @testmuai\/rook@0\.1\.21/);
+  assert.match(install, /npm\.cmd install -g @testmuai\/rook@0\.1\.22/);
   assert.match(install, /\{#windows\}/);
   assert.match(install, /\{#windows-wsl\}/);
   assert.match(install, /Get-Command rook\.cmd/);
@@ -312,7 +312,7 @@ test('Troubleshooting covers current Windows, scenario, RCA, and support recover
   assert.match(doc, /public Rook 0\.1\.13/);
   assert.match(doc, /rook\.cmd --version/);
   assert.match(doc, /npm\.cmd prefix -g/);
-  assert.match(doc, /token_economy.*blocked if the profile does not report usage/);
+  assert.match(doc, /token_economy<\/code>, are coming soon and are excluded from runs/);
   assert.match(doc, /\{#rca-troubleshooting\}/);
   assert.match(doc, /command-reference\/#root-cause-analysis/);
   assert.match(doc, /identity is authenticated/);
