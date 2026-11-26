@@ -4,7 +4,7 @@ title: How to Run Selenium Tests With Java on TestMu AI
 toc_max_heading_level: 2
 hide_title: true
 sidebar_label: "Java"
-description: Run Java Selenium tests on the TestMu AI cloud grid across 10,000+ browsers. Covers TestNG, JUnit, Cucumber, Selenide, Gauge, Geb, Serenity, and the SDK.
+description: Run Java Selenium tests on 10,000+ browser and OS combinations on TestMu AI. Covers TestNG, JUnit, Cucumber, Selenide, Gauge, Geb, Serenity and the SDK.
 keywords:
   - java selenium cloud testing
   - run java tests on selenium grid
@@ -40,7 +40,7 @@ import CookieTrackingLogin from '@site/src/component/CookieTracking';
       "@id": "https://www.testmuai.com/support/docs/java-with-selenium-running-java-automation-scripts-on-testmu-selenium-grid/"
     },
     "headline": "How to Run Selenium Tests With Java on TestMu AI",
-    "description": "Run Java Selenium tests on the TestMu AI cloud grid across 10,000+ browsers. Covers TestNG, JUnit, Cucumber, Selenide, Gauge, Geb, Serenity, and the SDK.",
+    "description": "Run Java Selenium tests on 10,000+ browser and OS combinations on TestMu AI. Covers TestNG, JUnit, Cucumber, Selenide, Gauge, Geb, Serenity and the SDK.",
     "url": "https://www.testmuai.com/support/docs/java-with-selenium-running-java-automation-scripts-on-testmu-selenium-grid/",
     "image": {
       "@type": "ImageObject",
@@ -122,7 +122,11 @@ import CookieTrackingLogin from '@site/src/component/CookieTracking';
 ---
 
 
-Run your Java Selenium tests on the TestMu AI cloud grid across 10,000+ browser/device combinations. The setup is the same for every framework: you connect to the grid, pass your capabilities, and run. This guide walks through that shared flow once, then gives you a per-framework quickstart for **TestNG, JUnit, Cucumber, Selenide, Gauge, Geb, and Serenity**, plus a zero-code **Java SDK** option.
+To run Selenium tests with Java on TestMu AI, set `LT_USERNAME` and `LT_ACCESS_KEY` as environment variables, point a `RemoteWebDriver` at `https://hub.lambdatest.com/wd/hub`, and pass your browser, version, and OS in `LT:Options`. Then run your suite with Maven as usual. The browsers run on the TestMu AI cloud grid, and each test's video, logs, and result appear on the Automation Dashboard.
+
+Hosts such as `hub.lambdatest.com` keep their original names and work as shown.
+
+You can run on 10,000+ browser and OS combinations, and the setup is the same for every framework: you connect to the grid, pass your capabilities, and run. This guide walks through that shared flow once, then gives you a per-framework quickstart for **TestNG, JUnit, Cucumber, Selenide, Gauge, Geb, Serenity, and Tesbo**, plus a zero-code **Java SDK** option.
 
 ## Prerequisites
 ---
