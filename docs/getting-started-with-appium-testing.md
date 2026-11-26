@@ -4,10 +4,10 @@ title: "Appium Real Device Documentation"
 hide_title: true
 toc_max_heading_level: 2
 sidebar_label: "Run First Test"
-description: "LambdaTest Appium documentation, now TestMu AI: upload your .apk or .ipa, set LT:Options capabilities, and run a first Appium test on real devices."
+description: "TestMu AI Appium documentation: upload your .apk or .ipa, set LT:Options capabilities, and run a first Appium test on real devices."
 keywords:
-  - lambdatest appium
-  - lambdatest documentation
+  - testmu ai appium
+  - testmu ai documentation
   - appium real device testing
   - run appium test on real devices
   - appium first test
@@ -41,7 +41,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       "@id": "https://www.testmuai.com/support/docs/getting-started-with-appium-testing/"
     },
     "headline": "Appium Real Device Documentation",
-    "description": "LambdaTest Appium documentation, now TestMu AI: upload your .apk or .ipa, set LT:Options capabilities, and run a first Appium test on real devices.",
+    "description": "TestMu AI Appium documentation: upload your .apk or .ipa, set LT:Options capabilities, and run a first Appium test on real devices.",
     "url": "https://www.testmuai.com/support/docs/getting-started-with-appium-testing/",
     "image": {
       "@type": "ImageObject",
@@ -52,8 +52,8 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     "inLanguage": "en",
     "articleSection": "Documentation",
     "keywords": [
-      "lambdatest appium",
-      "lambdatest documentation",
+      "testmu ai appium",
+      "testmu ai documentation",
       "appium real device testing",
       "run appium test on real devices"
     ],
@@ -89,10 +89,10 @@ import VerifiedTag from '@site/src/component/verifiedTag';
   }) }}
 />
 
-# LambdaTest Appium Documentation, Now TestMu AI: Run Your First Real Device Test
+# TestMu AI Appium Documentation: Run Your First Real Device Test
 ---
 
-To run an Appium test on TestMu AI, upload your .apk or .ipa to get an `lt://` app ID, add `LT:Options` capabilities for the device and app, and point your Appium client at the TestMu AI mobile hub. The test runs on a real Android or iOS device, and the video, Appium logs and device logs appear in the App Automation dashboard. TestMu AI was formerly LambdaTest. Hosts such as `manual-api.lambdatest.com` and `mobile-hub.lambdatest.com`, and the `LT:Options` key, are current names.
+To run an Appium test on TestMu AI, upload your .apk or .ipa to get an `lt://` app ID, add `LT:Options` capabilities for the device and app, and point your Appium client at the TestMu AI mobile hub. The test runs on a real Android or iOS device, and the video, Appium logs and device logs appear in the App Automation dashboard. Hosts such as `manual-api.lambdatest.com` and `mobile-hub.lambdatest.com`, and the `LT:Options` key, keep their original names and work as shown.
 
 ## Prerequisites
 ---
@@ -403,10 +403,6 @@ For more errors and fixes, see [troubleshooting Appium tests on TestMu AI](/supp
 
 ## FAQ
 ---
-
-### Is this the LambdaTest Appium documentation?
-
-Yes. TestMu AI is LambdaTest's new name, and this is its Appium quickstart. The hosts in this guide, such as `mobile-hub.lambdatest.com`, and the `LT:Options` key keep their LambdaTest names.
 
 ### How do I run Appium tests on iOS with TestMu AI?
 
