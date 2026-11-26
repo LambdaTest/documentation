@@ -77,7 +77,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-11-24T12:00:00+05:30"
+    "dateModified": "2026-11-26T12:00:00+05:30"
   }) }}
 />
 
@@ -304,6 +304,8 @@ A phone scenario can run [Test Manager](/support/docs/test-manager/) web tests a
 - **Run.** After the call is graded, the test cases that match the call run on HyperExecute, using values taken from the call transcript.
 - **Review.** The **Web Test** tab shows each result with the values used and links to Test Manager and HyperExecute. For each test case, it shows what the call said, what the website showed, and each check with a ✓ or ✗. A test is reported as matching the call only when the run confirms that it used the call's values.
 - **Verdict.** Web test results do not change the call verdict.
+
+To build the web test with Kane CLI and set it up step by step, see [Post-Call Web Test for Phone Caller Agents](/support/docs/phone-agent-post-call-web-test/).
 
 ## Live Call Events API {#live-call-events}
 

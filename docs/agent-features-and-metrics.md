@@ -78,7 +78,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-11-24T12:00:00+05:30"
+    "dateModified": "2026-11-26T12:00:00+05:30"
   }) }}
 />
 
@@ -262,7 +262,7 @@ Inbound and outbound phone agents are covered in full on [Phone Agent Testing](/
 - **Post Analysis.** Upload production recordings (MP3 or WAV), with transcripts if you have them, analyze them in batches with the metrics you choose, and bookmark, tag, and filter them.
 - **Integrations.** Connect [Amazon Connect](/support/docs/test-amazon-connect-bots/), [Cartesia](/support/docs/test-cartesia-agents/), [ElevenLabs](/support/docs/test-elevenlabs-agents/), [Retell](/support/docs/test-retell-agents/), [Vapi](/support/docs/test-vapi-agents/), or [Salesforce Agentforce](/support/docs/test-agentforce-agents/) agents to import the agent's prompt and tools and verify the tools called on each call.
 - **Quality checks.** Every call is graded on quality checks and gets an overall verdict of Pass, Fail, or Review incomplete. See [Quality Checks and the Call Verdict](#quality-checks).
-- **Post-call web tests.** After a call is graded, Test Manager web tests that match the call run on HyperExecute with values taken from the transcript, and the **Web Test** tab shows each result. Web test results do not change the call verdict. See [Post-Call Web Tests](/support/docs/phone-agent/#post-call-web-tests).
+- **Post-call web tests.** After a call is graded, Test Manager web tests that match the call run on HyperExecute with values taken from the transcript, and the **Web Test** tab shows each result. Web test results do not change the call verdict. See [Post-Call Web Test](/support/docs/phone-agent-post-call-web-test/).
 - **Live call events API.** Follow a call while it runs through `GET /api/calls/{call_id}/events/stream`, with transfer events for handoff scenarios, a live transcript, and the end reason. See [Live Call Events API](/support/docs/phone-agent/#live-call-events).
 - **Business reports.** Export suite results as a PDF or HTML report with a readiness verdict, KPI tiles, top issues, changes since the last run, a scorecard, and scenario details. Reports use no credits.
 - **Inbound only.** Agent profiles, which are reusable caller personas, [performance testing](/support/docs/phone-agent-performance-testing/) with concurrent calls, test data sets (a CSV or Excel file with one call per row), and run-based Insights.

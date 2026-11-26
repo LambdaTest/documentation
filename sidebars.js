@@ -1147,6 +1147,7 @@ module.exports = {
         collapsed: true,
         items: [
           { type: "doc", label: "Red Teaming (Phone Caller)", id: "phone-agent-red-teaming" },
+          { type: "doc", label: "Post-Call Web Test (Phone Caller)", id: "phone-agent-post-call-web-test" },
           { type: "doc", label: "Performance Testing (Inbound)", id: "phone-agent-performance-testing" },
           { type: "doc", label: "Data Validation", id: "data-validation" },
         ],
