@@ -103,7 +103,7 @@ Lex handles text and speech natively, and reaches phone callers through Amazon C
 - **Voice** applies to bots reached over the speech endpoint rather than a phone number. Upload the bot definition and supporting docs to generate scenarios, then create the endpoint profile using the streaming conversation API. It isolates the speech pipeline, so recognition accuracy, slot capture from spoken input, and interruption handling get tested without telephony noise in the results. Setup: [voice agent testing](/support/docs/voice-agent/).
 - **Chat** covers text conversations against the bot alias. Upload the bot definition and supporting docs to generate scenarios, then create the endpoint profile using the text recognition API. It catches intent matching, slot filling, and fulfilment failures. Setup: [chat agent testing](/support/docs/chat-agent/).
 
-Phone testing for Lex bots runs through Amazon Connect. See how to [test Amazon Connect bots](/support/docs/test-amazon-connect-bots/).
+Phone testing for Lex bots runs through Amazon Connect: test the Connect phone number as a [phone caller agent](/support/docs/phone-agent/). For AI agents built on Amazon Connect (Amazon Q in Connect), see the [Amazon Connect integration](/support/docs/test-amazon-connect-bots/).
 
 ## What derails a Lex bot test?
 
