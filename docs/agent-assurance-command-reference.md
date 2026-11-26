@@ -832,7 +832,7 @@ The shell form is <code>rook run</code> with the same options.
 | Option | Purpose |
 |---|---|
 | <code>--only &lt;ids&gt;</code> | Run only comma-separated scenario IDs. |
-| <code>--class &lt;names&gt;</code> | Filter by <code>functional</code>, <code>non_functional</code>, or <code>adversarial</code>. |
+| <code>--class &lt;names&gt;</code> | Filter by <code>functional</code> or <code>adversarial</code>. <code>non_functional</code> is coming soon and runs nothing. |
 | <code>--category &lt;names&gt;</code> | Filter by comma-separated categories. |
 | <code>--tag &lt;names&gt;</code> | Filter by comma-separated tags. |
 | <code>--profile &lt;ref&gt;</code> | Override the active profile for this run. |
@@ -1217,7 +1217,7 @@ In the TUI, choosing **update now** at the startup notice or typing <code>/updat
 
 If you previously chose “never ask again” in the TUI update notice, run <code>/update auto</code> to re-enable automatic notices.
 
-The latest public release checked on November 18, 2026 is [0.1.21](https://github.com/LambdaTest/rook/releases/tag/v0.1.21). Use the installed command's help for version-specific options. If an npm 0.1.1 or 0.1.2 install cannot update, follow the [public-registry repair command](/support/docs/rook-installation/#repair-an-npm-011-or-012-installation). Windows users can follow [PowerShell setup and upgrades](/support/docs/rook-installation/#windows).
+The latest public release checked on November 26, 2026 is [0.1.22](https://github.com/LambdaTest/rook/releases/tag/v0.1.22). Use the installed command's help for version-specific options. If an npm 0.1.1 or 0.1.2 install cannot update, follow the [public-registry repair command](/support/docs/rook-installation/#repair-an-npm-011-or-012-installation). Windows users can follow [PowerShell setup and upgrades](/support/docs/rook-installation/#windows).
 
 ## Export Diagnostic Logs {#export}
 

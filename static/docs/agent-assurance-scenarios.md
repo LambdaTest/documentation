@@ -37,10 +37,10 @@ Rook has three classes and 16 categories.
 | Class | Categories | Purpose |
 |---|---|---|
 | `functional` | `happy_path`, `negative`, `boundary`, `integration`, `state_context` | Main behavior, error handling, limits, dependencies, and conversation memory |
-| `non_functional` | `token_economy`, `quality` | Cost, completeness, tone, and format |
+| `non_functional` | `token_economy`, `quality` | Coming soon: cost, completeness, tone, and format |
 | `adversarial` | `prompt_injection`, `jailbreak`, `data_exfiltration`, `pii_leakage`, `harmful_content`, `hallucination`, `hijacking`, `policy_violation`, `technical_injection` | Attacks, unsafe behavior, leakage, invention, off-task behavior, and injection |
 
-A plain `generate` plans for the functional and adversarial classes, but the planner can decide that no attack is warranted for a small agent. Ask for attacks explicitly with `--class adversarial`, and check the report's coverage gaps for attack patterns that got no scenario. Ask for `non_functional` with `--class`; a `token_economy` scenario runs only when the profile reports usage. Since 0.1.7, Rook no longer generates the earlier `performance` and `reliability` categories.
+A plain `generate` plans for the functional and adversarial classes, but the planner can decide that no attack is warranted for a small agent. Ask for attacks explicitly with `--class adversarial`, and check the report's coverage gaps for attack patterns that got no scenario. `non_functional` and its categories are coming soon: Rook accepts the names but does not generate or run them. Asked for alone, `generate` and `run` write and run nothing and exit 0, with no credits spent; mixed with other classes, they are left out. Existing `non_functional` scenario files stay valid and are excluded from runs. Since 0.1.7, Rook no longer generates the earlier `performance` and `reliability` categories.
 
 ## Red-Team Coverage and Standards {#red-team-standards}
 
