@@ -182,6 +182,9 @@ export default function FaqPage() {
       description="Frequently asked questions about TestMu AI (formerly LambdaTest): automation, KaneAI, HyperExecute, SmartUI, real devices, plans, and security."
     >
       <Head>
+        {/* No site-title suffix (dhub-046), as on doc pages. */}
+        <title>TestMu AI Product FAQs</title>
+        <meta property="og:title" content="TestMu AI Product FAQs" />
         <script type="application/ld+json">{JSON.stringify(FAQ_SCHEMA)}</script>
       </Head>
       <div className={faqStyles.faqLayout}>

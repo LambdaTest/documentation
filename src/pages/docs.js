@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Layout from '@theme/Layout';
+import Head from '@docusaurus/Head';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
 const ORG_SCHEMA = {
@@ -172,6 +173,11 @@ export default function Home() {
     <Layout
       description="Explore TestMu AI docs: guides, API references, SDKs, agent skills, and MCP server setup for AI-native web, mobile, and agent testing."
     >
+      {/* The hub's own title, without the site-title suffix (dhub-046); doc pages do the same in src/theme/DocItem. */}
+      <Head>
+        <title>TestMu AI Documentation</title>
+        <meta property="og:title" content="TestMu AI Documentation" />
+      </Head>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ORG_SCHEMA) }} />
       {/* overflow:clip (not hidden) contains the hero's horizontal overflow WITHOUT
           creating a scroll container — hidden would break the sticky ToC below. */}
