@@ -230,8 +230,8 @@ Run the below mentioned commands in your terminal to setup the CLI and the envir
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
-{`export LT_USERNAME="${YOUR_LAMBDATEST_USERNAME}"
-export LT_ACCESS_KEY="${YOUR_LAMBDATEST_ACCESS_KEY}"`}
+{`export LT_USERNAME="${YOUR_LAMBDATEST_USERNAME()}"
+export LT_ACCESS_KEY="${YOUR_LAMBDATEST_ACCESS_KEY()}"`}
   </CodeBlock>
 </div>
 
@@ -243,8 +243,8 @@ export LT_ACCESS_KEY="${YOUR_LAMBDATEST_ACCESS_KEY}"`}
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
-{`set LT_USERNAME="${YOUR_LAMBDATEST_USERNAME}"
-set LT_ACCESS_KEY="${YOUR_LAMBDATEST_ACCESS_KEY}"`}
+{`set LT_USERNAME="${YOUR_LAMBDATEST_USERNAME()}"
+set LT_ACCESS_KEY="${YOUR_LAMBDATEST_ACCESS_KEY()}"`}
   </CodeBlock>
 </div>
 
@@ -297,7 +297,7 @@ To begin testing, upload your Android application (.apk file) to <BrandName />'s
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
-{`curl -u "${YOUR_LAMBDATEST_USERNAME}:${YOUR_LAMBDATEST_ACCESS_KEY}" --location --request POST 'https://manual-api.lambdatest.com/app/uploadFramework' --form 'appFile=@"<PATH_OF_YOUR_ANDROID_APP>"' --form 'type="espresso-android"'`}
+{`curl -u "${YOUR_LAMBDATEST_USERNAME()}:${YOUR_LAMBDATEST_ACCESS_KEY()}" --location --request POST 'https://manual-api.lambdatest.com/app/uploadFramework' --form 'appFile=@"<PATH_OF_YOUR_ANDROID_APP>"' --form 'type="espresso-android"'`}
   </CodeBlock>
 </div>
 
@@ -309,7 +309,7 @@ To begin testing, upload your Android application (.apk file) to <BrandName />'s
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
-{`curl -u "${YOUR_LAMBDATEST_USERNAME}:${YOUR_LAMBDATEST_ACCESS_KEY}" --location --request POST "https://manual-api.lambdatest.com/app/uploadFramework" --form "appFile=@"<PATH_OF_YOUR_ANDROID_APP>"" --form "type=\"espresso-android\""`}
+{`curl -u "${YOUR_LAMBDATEST_USERNAME()}:${YOUR_LAMBDATEST_ACCESS_KEY()}" --location --request POST "https://manual-api.lambdatest.com/app/uploadFramework" --form "appFile=@"<PATH_OF_YOUR_ANDROID_APP>"" --form "type=\"espresso-android\""`}
   </CodeBlock>
 </div>
 
@@ -335,7 +335,7 @@ The following sample cURL command shows how to upload a test suite:
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
-{`curl -u "${YOUR_LAMBDATEST_USERNAME}:${YOUR_LAMBDATEST_ACCESS_KEY}" --location --request POST 'https://manual-api.lambdatest.com/app/uploadFramework' --form 'appFile=@"<PATH_OF_YOUR_TEST_SUITE_APP>"' --form 'type="espresso-android"'`}
+{`curl -u "${YOUR_LAMBDATEST_USERNAME()}:${YOUR_LAMBDATEST_ACCESS_KEY()}" --location --request POST 'https://manual-api.lambdatest.com/app/uploadFramework' --form 'appFile=@"<PATH_OF_YOUR_TEST_SUITE_APP>"' --form 'type="espresso-android"'`}
   </CodeBlock>
 </div>
 
@@ -347,7 +347,7 @@ The following sample cURL command shows how to upload a test suite:
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
-{`curl -u "${YOUR_LAMBDATEST_USERNAME}:${YOUR_LAMBDATEST_ACCESS_KEY}" --location --request POST "https://manual-api.lambdatest.com/app/uploadFramework" --form "appFile=@"<PATH_OF_YOUR_TEST_SUITE_APP>"" --form "type=\"espresso-android\""`}
+{`curl -u "${YOUR_LAMBDATEST_USERNAME()}:${YOUR_LAMBDATEST_ACCESS_KEY()}" --location --request POST "https://manual-api.lambdatest.com/app/uploadFramework" --form "appFile=@"<PATH_OF_YOUR_TEST_SUITE_APP>"" --form "type=\"espresso-android\""`}
   </CodeBlock>
 </div>
 
@@ -369,7 +369,7 @@ Take note of the base64 encoded authentication which needs to be added in the 
 
 <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
-{`${YOUR_LAMBDATEST_USERNAME}:${YOUR_LAMBDATEST_ACCESS_KEY}`}
+{`${YOUR_LAMBDATEST_USERNAME()}:${YOUR_LAMBDATEST_ACCESS_KEY()}`}
   </CodeBlock>
 </div>
 
