@@ -45,7 +45,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
           "name": "Is Test Manager free?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. TestMu AI offers a no-cost tier that includes core test case creation, management, and execution features. Paid plans unlock advanced AI-powered authoring, unlimited test runs, and priority support. See <a href='https://www.testmuai.com/pricing/?product=test-manager'>Test Manager pricing</a> for details."
+            "text": "Yes. TestMu AI offers a no-cost tier that includes core test case creation, management, and execution features. Paid plans unlock advanced AI-powered authoring, unlimited test runs, and priority support. You can also try Test Manager Premium free for 30 days. See <a href='https://www.testmuai.com/pricing/?product=test-manager'>Test Manager pricing</a> for details."
           }
         },{
           "@type": "Question",
@@ -150,7 +150,7 @@ Start with [Set up your project](/support/docs/create-projects/) to create your 
 
 ### Is Test Manager free?
 
-Yes. <BrandName /> offers a no-cost tier that includes core test case creation, management, and execution features. Paid plans unlock advanced AI-powered authoring, unlimited test runs, and priority support. See [Test Manager pricing](https://www.testmuai.com/pricing/?product=test-manager) for details.
+Yes. <BrandName /> offers a no-cost tier that includes core test case creation, management, and execution features. Paid plans unlock advanced AI-powered authoring, unlimited test runs, and priority support. You can also try Test Manager Premium free for 30 days. See [Test Manager pricing](https://www.testmuai.com/pricing/?product=test-manager) for details.
 
 ### Can I import my existing test cases?
 
