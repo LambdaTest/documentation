@@ -714,7 +714,7 @@ The shell form is rook run with the same options.
 | Option | Purpose |
 |---|---|
 | --only &lt;ids&gt; | Run only comma-separated scenario IDs. |
-| --class &lt;names&gt; | Filter by functional, non_functional, or adversarial. |
+| --class &lt;names&gt; | Filter by functional or adversarial. non_functional is coming soon and runs nothing. |
 | --category &lt;names&gt; | Filter by comma-separated categories. |
 | --tag &lt;names&gt; | Filter by comma-separated tags. |
 | --profile &lt;ref&gt; | Override the active profile for this run. |
@@ -1078,7 +1078,7 @@ In the TUI, choosing **update now** at the startup notice or typing /update clos
 
 If you previously chose “never ask again” in the TUI update notice, run /update auto to re-enable automatic notices.
 
-The latest public release checked on November 18, 2026 is [0.1.21](https://github.com/LambdaTest/rook/releases/tag/v0.1.21). Use the installed command's help for version-specific options. If an npm 0.1.1 or 0.1.2 install cannot update, follow the [public-registry repair command](/support/docs/rook-installation/#repair-an-npm-011-or-012-installation). Windows users can follow [PowerShell setup and upgrades](/support/docs/rook-installation/#windows).
+The latest public release checked on November 26, 2026 is [0.1.22](https://github.com/LambdaTest/rook/releases/tag/v0.1.22). Use the installed command's help for version-specific options. If an npm 0.1.1 or 0.1.2 install cannot update, follow the [public-registry repair command](/support/docs/rook-installation/#repair-an-npm-011-or-012-installation). Windows users can follow [PowerShell setup and upgrades](/support/docs/rook-installation/#windows).
 
 ## Export Diagnostic Logs {#export}
 
