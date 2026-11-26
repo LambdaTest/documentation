@@ -102,7 +102,7 @@ To run an Appium test on TestMu AI, upload your .apk or .ipa to get an `lt://` a
 3. An Android app (`.apk` or `.aab`) or an iOS app (`.ipa`). No app yet? Use the sample [Android app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk) or [iOS app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_ios.ipa).
 4. The Appium client for your language:
    - **Python:** Python 3 and the Appium Python Client 2.3.0 or later.
-   - **Java:** a JDK and the [Appium Java client](https://github.com/appium/java-client) (`io.appium:java-client`) in your Maven or Gradle project.
+   - **Java:** a JDK and the [Appium Java client](https://github.com/appium/java-client) (`io.appium:java-client`) in your Maven or Gradle project. Use the latest release: this sample was tested with java-client 11.0.0.
 
 Using JavaScript, Ruby, PHP, C#, or a framework such as TestNG or pytest? See [Appium languages and frameworks](/support/docs/appium-languages-and-frameworks/).
 
@@ -201,6 +201,8 @@ The test sets `platformName` and an `LT:Options` block with the device, OS versi
 
 <TabItem value="python" label="Python" default>
 
+  <VerifiedTag value="Verified" />
+
 ```python title="first_test.py"
 import os
 from appium import webdriver
@@ -238,6 +240,8 @@ finally:
 </TabItem>
 
 <TabItem value="java" label="Java">
+
+  <VerifiedTag value="Verified" />
 
 ```java title="FirstAppiumTest.java"
 import io.appium.java_client.android.AndroidDriver;
