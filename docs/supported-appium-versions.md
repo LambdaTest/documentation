@@ -98,7 +98,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         "text": "// Java code for configuring Appium version in tests on LambdaTest\nDesiredCapabilities capabilities = new DesiredCapabilities();\ncapabilities.setCapability(\"appiumVersion\", \"2.2.1\");\ncapabilities.setCapability(\"platformName\", \"ios\");\n// Add other capabilities as needed"
       }
     ],
-    "dateModified": "2026-09-09T19:10:37+05:30"
+    "dateModified": "2026-11-26T12:00:00+05:30"
   }) }}
 />
 
@@ -118,7 +118,7 @@ To configure the Appium version for your tests on <BrandName />, use the `appium
 
 | Platform Versions | Supported Versions | Default Version | Latest Version |
 |-------------------|--------------------|-----------------|----------------|
-| Android (All) | 1.21.0, 1.22.0, 1.22.3, 2.0.0, 2.1.3, 2.2.1, 2.3.0, 2.4.1, 2.5.4, 2.6.0, 2.10.3, 2.11.2, 2.11.4, 2.12.1, 3.0.2, 3.5.2 | 2.2.1 | 2.3.0 |
+| Android (All) | 1.21.0, 1.22.0, 1.22.3, 2.0.0, 2.1.3, 2.2.1, 2.3.0, 2.4.1, 2.5.4, 2.6.0, 2.10.3, 2.11.2, 2.11.4, 2.12.1, 3.0.2, 3.5.2, 3.9.0 | 2.2.1 | 2.3.0 |
 | iOS (12, 13, 14) | 1.22.3, 2.0.0, 2.1.3, 2.2.1 | 2.2.1 | 2.2.1 |
 | iOS (15, 16, 17, 18, 26, 27) | 1.22.3, 2.0.0, 2.1.3, 2.2.1, 2.3.0, 2.4.1, 2.5.4, 2.6.0, 2.10.3, 2.11.2, 2.11.4, 2.12.1, 3.0.2, 3.5.2 | 2.2.1 | 2.3.0 |
 | fireos | 1.21.0, 1.22.0, 1.22.3, 2.0.0, 2.1.3, 2.2.1, 2.3.0 | 2.2.1 | 2.3.0 |
@@ -166,6 +166,7 @@ Each Appium version maps to specific iOS and Android driver versions. Use the ta
 | 2.12.1         | appium-xcuitest-driver@7.28.3  | appium-uiautomator2-driver@3.8.0      |
 | 3.0.2          | appium-xcuitest-driver@7.28.3  | appium-uiautomator2-driver@3.8.0      |
 | 3.5.2          | appium-xcuitest-driver@12.22.2 | appium-uiautomator2-driver@8.7.0      |
+| 3.9.0          | -                              | appium-uiautomator2-driver@8.7.3      |
 
 :::note 
 - If a user passes any Appium version other than the mentioned versions, appropriate error will be thrown.
