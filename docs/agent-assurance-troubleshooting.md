@@ -320,7 +320,7 @@ Read the grouped skip reasons, then fix the first execution blocker:
 
 Rook recognizes <code>text</code>, <code>text+file</code>, <code>url</code>, <code>pr_ref</code>, <code>image</code>, and <code>structured</code> input kinds. Recognition alone does not prove your hook uploads an attachment or sends an image correctly: inspect the saved request and profile capabilities. Unknown input kinds and unsupported conversation setup can still block execution.
 
-A <code>token_economy</code> scenario is blocked if the profile does not report usage. Other missing observations, such as tool-call or filesystem evidence, can leave affected criteria **Unable to Verify**. Read the exact skip reason and criterion evidence rather than assuming every observation gap is harmless.
+<code>non_functional</code> scenarios, including <code>token_economy</code>, are coming soon and are excluded from runs. Missing observations, such as tool-call or filesystem evidence, can leave affected criteria **Unable to Verify**. Read the exact skip reason and criterion evidence rather than assuming every observation gap is harmless.
 
 ### Generated scenarios are marked not executable
 

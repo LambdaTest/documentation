@@ -376,7 +376,7 @@ rook
 ```text
 /explore .
 /agent
-/generate --class functional,non_functional,adversarial
+/generate --class functional,adversarial
 /profile add
 /sync
 /run --concurrency 1

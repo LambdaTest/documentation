@@ -127,11 +127,11 @@ prepare                         once per run
 
 | Phase | Scope | Typical work | If it fails |
 |---|---|---|---|
-| prepare | Once per run | Log in, mint a token, seed fixtures, or warm a cache. | The problem is reported and the run preserves its records. |
-| open | Before each scenario | Create a target session or reset scenario-specific state. | The problem is reported with the scenario. |
+| prepare | Once per run | Log in, mint a token, seed fixtures, or warm a cache. | The run stops before any scenario. |
+| open | Before each scenario | Create a target session or reset scenario-specific state. | That scenario fails before its goal is sent. |
 | execute | Once per turn | Send the goal and return the agent's answer. This is the only required hook. | The scenario fails. |
-| close | After each scenario's turns | End a session or release a lock, seat, or other resource. | Rook records and reports the problem without discarding the answer. |
-| collect | After close | Fetch traces, tool calls, usage, logs, and other delayed evidence. | The scenario fails; the phase can be retried later when evidence is available. |
+| close | After each scenario's turns | End a session or release a lock, seat, or other resource. | Rook reports the problem; the scenario's status does not change. |
+| collect | After close | Fetch traces, tool calls, logs, and other delayed evidence. | Rook reports the problem; the scenario's status does not change. Rerun the phase when the evidence is available. |
 | judge | After evidence is available | Rook evaluates each acceptance criterion. | The result records why a verdict could not be completed. |
 
 judge is a Rook-owned run phase, not a user hook. The other five phases can map to one script or to separate scripts.
@@ -174,7 +174,9 @@ concurrency: 1
 | `env` | Required local environment references and their operational purpose. The structure has no secret-value field. |
 | `capabilities` | Observed evidence capabilities that determine scenario runnability. |
 | `hook_env` | Fixed, non-secret values supplied to every hook, such as a region. They are stored and synced as written, so put credentials under `env` instead. Rook-owned `ROOK_*` values take precedence. |
-| `concurrency` | Default number of scenarios in flight. Use `1` when hooks touch shared state. |
+| `concurrency` | Number of scenarios in flight when `rook run` gets no `--concurrency` flag, at most 8. Use `1` when hooks touch shared state. |
+
+A top-level `reset` key is no longer supported. `rook run` refuses a profile that sets one, and Rook will not save it. Move the reset command into your `open` hook; see [Reset Shared State in open](#reset-in-open).
 
 ## Hook Inputs
 
@@ -192,19 +194,22 @@ The following environment variables provide context:
 | `ROOK_WORKSPACE` | Every phase | Absolute workspace path |
 | `ROOK_PROJECT` | Every phase | Active project ID |
 | `ROOK_AGENT` | Every phase | Active agent local ID |
-| `ROOK_STATE_DIR` | Scenario phases | Per-scenario state directory that survives its phases |
-| `ROOK_RUN_STATE_DIR` | Every phase | Shared state for the run, including prepare output |
+| `ROOK_STATE_DIR` | Every phase; in `prepare`, the same directory as `ROOK_RUN_STATE_DIR` | Per-scenario state directory that survives its phases |
+| `ROOK_RUN_STATE_DIR` | Every phase | Shared state for the whole run, including what `prepare` writes |
 | `ROOK_RUN_ID` | From `prepare` | Current run ID |
 | `ROOK_SCENARIO_ID` | From `open` | Current scenario ID |
 | `ROOK_SESSION` | From `open` | Stable Rook session ID for the scenario |
 | `ROOK_TURN` | `execute` | One-based turn number |
-| `ROOK_CONVERSATION` | `execute`, `close`, `collect` | Handle returned by `open` or the previous `execute` |
+| `ROOK_CONVERSATION` | `execute`, `close`, `collect`, and an `open` after a handle was returned | The last handle an earlier phase of this scenario returned from `open`, `execute`, or `close` |
+| `ROOK_OPEN_REASON` | `open`, on a fresh-session probe only | `fresh_session_probe` when Rook opens a second session inside one scenario to check whether what the first session planted outlived it. Unset on every other call; a value in your own environment or in `hook_env` is dropped. |
+
+These are the values during `rook run`. `rook profile test` runs `open`, `execute`, and `close` once, with no scenario. It sets none of `ROOK_RUN_ID`, `ROOK_SCENARIO_ID`, `ROOK_SESSION`, `ROOK_TURN`, `ROOK_STATE_DIR`, or `ROOK_RUN_STATE_DIR`, and it never runs `prepare` or `collect`. An `open` or `execute` that requires one of them fails the test; a `close` that does is reported as a warning, and the test still passes.
 
 On `execute`, the arbitrary scenario goal arrives on standard input. No other phase receives standard input. Keeping model-written text out of command-line arguments avoids breakage from quotes, newlines, dollar signs, and backticks.
 
 ## Hook Output
 
-Write one JSON object to standard output for `execute` and `collect`. Write diagnostics to standard error.
+Write one JSON object to standard output, or nothing. Rook parses standard output from every phase, so anything else, such as a progress line, fails that phase. Write diagnostics to standard error. Nothing is read from `prepare`'s output.
 
 ```json
 {
@@ -221,16 +226,30 @@ Write one JSON object to standard output for `execute` and `collect`. Write diag
 | Field | Purpose |
 |---|---|
 | `agent_reply` | Required from `execute`; this is the agent answer that Rook judges. |
-| `conversation` | A target conversation handle returned from `open` or `execute` and passed back on later turns. |
-| `usage` | Observed input and output token counts; enables token-economy scenarios. |
-| `calls` | Observed tool calls; enables assertions about what the agent did or did not call. |
-| Additional fields | Preserved as run evidence, such as a trace URL or artifact reference. |
+| `conversation` | A target conversation handle. Rook reads it from `open`, `execute`, and `close`, and passes the latest one back as `ROOK_CONVERSATION`, so a handle `close` returns reaches `collect`. |
+| `usage` | Observed token counts, exactly `input` and `output`; `input_tokens` or `prompt_tokens` is dropped. Read from `execute` only, and only the last turn's counts are kept. |
+| `calls` | Observed tool calls from `execute` or `collect`, one `{ name, arguments }` per call. An entry without a string `name` is dropped. Return this turn's calls only, including repeats, and `[]` on a turn with no calls. |
+| Additional fields | Preserved as run evidence, such as a trace URL or artifact reference. `collect`'s whole object is written into the scenario's evidence. |
 
-If the first turn of a multi-turn scenario returns no conversation handle, Rook stops the scenario. Treating independent calls as one conversation would produce misleading results.
+Rook does not check the handle during a run. A multi-turn scenario runs only when the profile records or declares `multi_turn`, but if no phase then returns a handle, every later turn is a fresh session, and independent turns that each look reasonable can pass. Return the handle from `open` or `execute`.
 
-A non-zero exit is a failed hook and standard error is its diagnosis. An `execute` or `collect` failure fails the affected scenario. Failures in the other optional phases are reported while the run preserves completed work.
+A non-zero exit is a failed hook: standard error is its diagnosis, and standard output is not read. A failed `prepare` stops the run. A failed `open` fails that scenario before its goal is sent. A failed `execute` fails the scenario. A failed `close` or `collect` is reported and never changes the scenario's status, so report a breach as a call or a receipt, never as an exit code.
 
-Map the target's actual answer field (`output`, `message`, `reply`, or another name) to `agent_reply`. Do not invent calls or token counts. Return `calls: []` only when you observed that no calls occurred; omitting `calls` means they were not observable. A CLI hook must forward the goal to its child process and close the child's input stream.
+Map the target's actual answer field (`output`, `message`, `reply`, or another name) to `agent_reply`. Do not invent calls or token counts. A CLI hook must forward the goal to its child process and close the child's input stream.
+
+### How Tool Calls Are Graded {#how-tool-calls-are-graded}
+
+Every reported call counts, whatever its outcome: there is no status field, so a call a guard rejected is still a call if you report it. A reported call can decide a criterion; an absent one never does.
+
+| Expectation | Pass | Fail | Otherwise |
+|---|---|---|---|
+| `called` | The tool is reported | — | Unable to Verify |
+| `called_with` | A reported call carries the arguments | — | Unable to Verify |
+| `not_called` | — | The tool is reported (with `arguments`, a call carrying them) | Unable to Verify |
+| `times: 0` | — | A matching call is reported | Unable to Verify |
+| `times: N`, N ≥ 1 | — | `execute` reported more than N matching calls; `collect` counts never decide | Unable to Verify |
+
+A `not_called` that holds is Unable to Verify even when `calls` is `[]`, because no channel shows that every call was reported. Keep the row anyway: it is the one that fails when a forbidden call is reported. Do not replace it with a prose criterion such as "the agent did not call X".
 
 ## Hooks for Red-Team Scenarios {#red-team-hooks}
 
@@ -240,7 +259,7 @@ Some attack patterns cannot be judged from the reply alone. Rook skips them, wit
 |---|---|
 | Requires fixture seeding | An `open` hook that reads `$ROOK_STATE_DIR/attack-fixture.json`, seeds the content into the target, and returns `fixture_seeded: true`, a `fixture_id` equal to the file's `id`, the same `attempt`, and the exact `established_preconditions` set. For a canary-exfiltration attack it also returns `canary_planted: true`; see [Canary-exfiltration attacks](#canary-fixtures). |
 | Requires independent collected evidence | A `collect` hook that reports the observed control and outcome. |
-| Requires a fresh session | `open` and `close` hooks, so the probe runs in a second conversation with a distinct handle. |
+| Requires a fresh session | `open` and `close` hooks, so the probe runs in a second conversation with a distinct handle. Rook calls the probe's `open` with `ROOK_OPEN_REASON=fresh_session_probe`; an `open` that resets shared state must skip the reset then. See [Reset Shared State in open](#reset-in-open). |
 
 Rook does not call the target when the fixture acknowledgement does not match. For patterns judged from collected evidence, a compromise counts only when `collect` returns a `compromise_observation` with `action_observed: true`, the matched success signal, a `source_kind` of `tool_trace`, `protected_state`, or `callback_receipt`, and the evidence it quotes. A defended side effect needs a `defence_observation` with `action_observed: false` and the matched failure signal, and no `compromise_observation` beside it. That receipt alone can ground the defence when `collect` ran in the same pass as `execute`, with one scenario at a time; with a quoted refusal from the target, it grounds the defence in any pass. A `collect` run later (`rook run --run  --phases collect`) or beside other scenarios (concurrency above 1) still needs the quoted refusal, or the defence is Unable to Verify. Reset fixtures in `open`, never in `close`: a `close` hook that resets or deletes what `collect` reads makes every receipt say no action was taken, so a defence can pass that should not.
 
@@ -259,17 +278,32 @@ The receipt counts only for the run that sent the attack under it, before any `c
 
 | Capability | Becomes true when | Enables |
 |---|---|---|
-| `multi_turn` | A hook returns a conversation handle | Multi-turn and state-context scenarios |
-| `calls` | Hook output includes actual target tool calls | `not_called` assertions and action-versus-claim checks |
-| `usage` | Hook output contains token counts | Token-economy scenarios |
+| `multi_turn` | `open` or `execute` returns a conversation handle | Multi-turn and state-context scenarios |
+| `calls` | `execute` returns a `calls` array, `[]` included, during `rook profile test`; or any phase that `rook profile add` or `fix` exercises returns `calls` | Scenarios that assert on calls are no longer announced as gapped before a run. Their rows are decided from what the hooks reported either way. |
+| `usage` | `execute` returns token counts | Token-economy scenarios (coming soon) |
 
-Rook compares declared capabilities with a real profile test. Optimistic claims are unsafe: declaring `calls` without returning call evidence could make a must-not-call criterion appear to pass without having been observed.
+`rook profile test` only adds the capabilities it observed and never clears one. `rook profile fix` rebuilds capabilities from its own runs, so a value you declared can be dropped. Rook never checks a value you declare, and only the profile's own hooks are read: a script wrapped around `rook run` is not. No capability makes a held `not_called` pass; see [How Tool Calls Are Graded](#how-tool-calls-are-graded).
 
 ## State Between Phases
 
 Use ROOK_STATE_DIR for state that belongs to one scenario, such as a target session ID or fixture. Use ROOK_RUN_STATE_DIR for state established once in prepare, such as a run-wide access token.
 
 Rook also writes each completed hook result to the run directory as it happens. This makes a later collect invocation able to recover the conversation and prior phase record after a delay, restart, or different process.
+
+## Reset Shared State in open {#reset-in-open}
+
+Put a reset that must run before every scenario in your `open` hook, not in `prepare`, which runs once per run, and not in `close`, which runs before `collect` reads the target. The reset prints nothing on standard output.
+
+Skip the reset when `ROOK_OPEN_REASON` is `fresh_session_probe`. That `open` starts the second session of a fresh-session probe, and a reset there erases what the first session planted, so the attack reads as resisted:
+
+```js
+// open
+if (process.env.ROOK_OPEN_REASON !== 'fresh_session_probe') {
+  await resetFixtures(); // your reset
+}
+```
+
+A reset in `open` also means concurrent scenarios reset each other's state, so keep `concurrency` at 1 for such a profile.
 
 ## Run Only Part of the Lifecycle
 
@@ -297,15 +331,15 @@ Default phase timeouts are:
 
 | Phase | Default |
 |---|---:|
-| `prepare` | 60 seconds |
-| `open` | 30 seconds |
-| `execute` | 300 seconds |
-| `close` | 30 seconds, with a 5-second floor |
-| `collect` | 120 seconds |
+| `prepare` | 120 seconds |
+| `open` | 120 seconds |
+| `execute` | 600 seconds |
+| `close` | 120 seconds, never less than 5 seconds whatever you set |
+| `collect` | 600 seconds |
 
 `delay_seconds` is a minimum elapsed time since the preceding phase, not an unconditional sleep. If collection starts after that interval has already passed, Rook waits nothing. Prefer polling within the collect script when a real readiness signal exists.
 
-Rook runs one scenario at a time by default unless a profile or run configuration selects otherwise. Increase concurrency only when hooks and fixtures isolate concurrent scenarios. If `open` resets shared state, keep concurrency at 1.
+Rook chooses how many scenarios run at once in this order: the `--concurrency` flag; the profile's `concurrency`, held to at most 8; the run plan's proposal, also at most 8; otherwise 1. Your plan's limit can lower it. Increase concurrency only when hooks and fixtures isolate concurrent scenarios. If `open` resets shared state, keep concurrency at 1; Rook warns when more than one scenario runs with an `open` hook. Above 1, a collect receipt that reports no action no longer grounds a defence on its own.
 
 ## Repair a Profile
 

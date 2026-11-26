@@ -714,7 +714,7 @@ The shell form is rook run with the same options.
 | Option | Purpose |
 |---|---|
 | --only &lt;ids&gt; | Run only comma-separated scenario IDs. |
-| --class &lt;names&gt; | Filter by functional, non_functional, or adversarial. |
+| --class &lt;names&gt; | Filter by functional or adversarial. non_functional is coming soon and runs nothing. |
 | --category &lt;names&gt; | Filter by comma-separated categories. |
 | --tag &lt;names&gt; | Filter by comma-separated tags. |
 | --profile &lt;ref&gt; | Override the active profile for this run. |

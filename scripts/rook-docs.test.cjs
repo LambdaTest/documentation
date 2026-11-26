@@ -312,7 +312,7 @@ test('Troubleshooting covers current Windows, scenario, RCA, and support recover
   assert.match(doc, /public Rook 0\.1\.13/);
   assert.match(doc, /rook\.cmd --version/);
   assert.match(doc, /npm\.cmd prefix -g/);
-  assert.match(doc, /token_economy.*blocked if the profile does not report usage/);
+  assert.match(doc, /token_economy<\/code>, are coming soon and are excluded from runs/);
   assert.match(doc, /\{#rca-troubleshooting\}/);
   assert.match(doc, /command-reference\/#root-cause-analysis/);
   assert.match(doc, /identity is authenticated/);

@@ -833,7 +833,7 @@ The shell form is <code>rook run</code> with the same options.
 | Option | Purpose |
 |---|---|
 | <code>--only &lt;ids&gt;</code> | Run only comma-separated scenario IDs. |
-| <code>--class &lt;names&gt;</code> | Filter by <code>functional</code>, <code>non_functional</code>, or <code>adversarial</code>. |
+| <code>--class &lt;names&gt;</code> | Filter by <code>functional</code> or <code>adversarial</code>. <code>non_functional</code> is coming soon and runs nothing. |
 | <code>--category &lt;names&gt;</code> | Filter by comma-separated categories. |
 | <code>--tag &lt;names&gt;</code> | Filter by comma-separated tags. |
 | <code>--profile &lt;ref&gt;</code> | Override the active profile for this run. |
