@@ -124,7 +124,7 @@ import CookieTrackingLogin from '@site/src/component/CookieTracking';
 
 To run Selenium tests with Java on TestMu AI, set `LT_USERNAME` and `LT_ACCESS_KEY` as environment variables, point a `RemoteWebDriver` at `https://hub.lambdatest.com/wd/hub`, and pass your browser, version, and OS in `LT:Options`. Then run your suite with Maven as usual. The browsers run on the TestMu AI cloud grid, and each test's video, logs, and result appear on the Automation Dashboard.
 
-TestMu AI was formerly LambdaTest; lambdatest hosts such as `hub.lambdatest.com` still work.
+Hosts such as `hub.lambdatest.com` keep their original names and work as shown.
 
 You can run on 3,000+ browser and OS combinations, and the setup is the same for every framework: you connect to the grid, pass your capabilities, and run. This guide walks through that shared flow once, then gives you a per-framework quickstart for **TestNG, JUnit, Cucumber, Selenide, Gauge, Geb, Serenity, and Tesbo**, plus a zero-code **Java SDK** option.
 
@@ -818,10 +818,6 @@ Yes. JUnit uses the same `RemoteWebDriver`, grid URL, and `LT:Options`. Only the
 ### How do I keep my username and access key out of the code?
 
 Set them as the `LT_USERNAME` and `LT_ACCESS_KEY` environment variables and read them with `System.getenv("LT_USERNAME")`. In CI, store them as secrets and map them to the same names. The Java SDK reads `${LT_USERNAME}` and `${LT_ACCESS_KEY}` in `lambdatest.yml`.
-
-### Is this the LambdaTest Selenium Java documentation?
-
-Yes. TestMu AI is LambdaTest's new name. The `hub.lambdatest.com` grid URL, the `LT:Options` key, and the sample projects under github.com/LambdaTest work as before.
 
 ## Next Steps
 ---
