@@ -4,7 +4,7 @@ title: How to Run Selenium Tests With Java on TestMu AI
 toc_max_heading_level: 2
 hide_title: true
 sidebar_label: "Java"
-description: Run Java Selenium tests on 3,000+ browser and OS combinations on TestMu AI. Covers TestNG, JUnit, Cucumber, Selenide, Gauge, Geb, Serenity and the SDK.
+description: Run Java Selenium tests on 10,000+ browser and OS combinations on TestMu AI. Covers TestNG, JUnit, Cucumber, Selenide, Gauge, Geb, Serenity and the SDK.
 keywords:
   - java selenium cloud testing
   - run java tests on selenium grid
@@ -40,7 +40,7 @@ import CookieTrackingLogin from '@site/src/component/CookieTracking';
       "@id": "https://www.testmuai.com/support/docs/java-with-selenium-running-java-automation-scripts-on-testmu-selenium-grid/"
     },
     "headline": "How to Run Selenium Tests With Java on TestMu AI",
-    "description": "Run Java Selenium tests on 3,000+ browser and OS combinations on TestMu AI. Covers TestNG, JUnit, Cucumber, Selenide, Gauge, Geb, Serenity and the SDK.",
+    "description": "Run Java Selenium tests on 10,000+ browser and OS combinations on TestMu AI. Covers TestNG, JUnit, Cucumber, Selenide, Gauge, Geb, Serenity and the SDK.",
     "url": "https://www.testmuai.com/support/docs/java-with-selenium-running-java-automation-scripts-on-testmu-selenium-grid/",
     "image": {
       "@type": "ImageObject",
@@ -126,7 +126,7 @@ To run Selenium tests with Java on TestMu AI, set `LT_USERNAME` and `LT_ACCESS_K
 
 Hosts such as `hub.lambdatest.com` keep their original names and work as shown.
 
-You can run on 3,000+ browser and OS combinations, and the setup is the same for every framework: you connect to the grid, pass your capabilities, and run. This guide walks through that shared flow once, then gives you a per-framework quickstart for **TestNG, JUnit, Cucumber, Selenide, Gauge, Geb, Serenity, and Tesbo**, plus a zero-code **Java SDK** option.
+You can run on 10,000+ browser and OS combinations, and the setup is the same for every framework: you connect to the grid, pass your capabilities, and run. This guide walks through that shared flow once, then gives you a per-framework quickstart for **TestNG, JUnit, Cucumber, Selenide, Gauge, Geb, Serenity, and Tesbo**, plus a zero-code **Java SDK** option.
 
 ## Prerequisites
 ---
