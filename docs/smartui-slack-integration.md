@@ -143,7 +143,7 @@ This document will guide you to integrate your SmartUI jobs and Slack, allowing 
 - Select the **Communication** tab and search for Slack.
 
 <video class="right-side" width="100%" controls id="vid">
-<source src= {require('../assets/videos/hyperexecute/integration/products/slack/1.mp4').default} type="video/mp4" />
+<source src= {require('../assets/videos/smart-visual-testing/slack-alerts/navigate.mp4').default} type="video/mp4" />
 </video>
 
 ## Step 2: Integrate the Slack with your <BrandName /> Account
@@ -157,7 +157,7 @@ This document will guide you to integrate your SmartUI jobs and Slack, allowing 
 A notification would be shared on to all the members belonging to that channel, informing about your integration.
 
 <video class="right-side" width="100%" controls id="vid">
-<source src= {require('../assets/videos/hyperexecute/integration/products/slack/2.mp4').default} type="video/mp4" />
+<source src= {require('../assets/videos/smart-visual-testing/slack-alerts/connect.mp4').default} type="video/mp4" />
 </video>
 
 Once Slack is connected, it shows as **Connected** under **My Integrations**.
@@ -239,9 +239,9 @@ Sent when **Build completed** is ticked. Each message shows the build result, a 
 ## Remove the Slack Integration
 
 - Go to the **Settings** > **Integration** page.
-- Select the **Communication** tab and search for Slack.
-- Click on the **Remove** button.
+- Under **My Integrations**, click the **...** menu on the Slack card.
+- Click on **Remove**.
 
 <video class="right-side" width="100%" controls id="vid">
-<source src= {require('../assets/videos/hyperexecute/integration/products/slack/4.mp4').default} type="video/mp4" />
+<source src= {require('../assets/videos/smart-visual-testing/slack-alerts/remove.mp4').default} type="video/mp4" />
 </video>
