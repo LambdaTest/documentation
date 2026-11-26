@@ -154,7 +154,7 @@ capabilities.setCapability("platformName", "ios");
 | 2.12.1         | appium-xcuitest-driver@7.28.3  | appium-uiautomator2-driver@3.8.0      |
 | 3.0.2          | appium-xcuitest-driver@7.28.3  | appium-uiautomator2-driver@3.8.0      |
 | 3.5.2          | appium-xcuitest-driver@12.22.2 | appium-uiautomator2-driver@8.7.0      |
-| 3.9.0          | -                              | appium-uiautomator2-driver@8.7.3      |
+| 3.9.0          | -                              | appium-uiautomator2-driver@8.7.2      |
 
 :::note 
 - If a user passes any Appium version other than the mentioned versions, appropriate error will be thrown.
