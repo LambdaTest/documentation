@@ -4,7 +4,7 @@ title: HyperExecute Release Notes 2026
 hide_title: false
 toc_max_heading_level: 2
 sidebar_label: 2026 Releases
-description: "HyperExecute 2026 release notes: new features, improvements, and bug fixes from weekly platform releases, January to September 2026 (versions 3.2.1 to 3.5.7)."
+description: "HyperExecute 2026 release notes: new features, improvements, and bug fixes from the 2026 platform releases, January to October 2026, from version 3.2.1 onward."
 keywords:
   - TestMu AI HyperExecute
   - TestMu AI HyperExecute help
@@ -57,7 +57,7 @@ export const ReleaseDate = ({children}) => (
       "@id": "https://www.testmuai.com/support/docs/hyperexecute-release-notes-2026/"
     },
     "headline": "HyperExecute Release Notes 2026",
-    "description": "HyperExecute 2026 release notes: new features, improvements, and bug fixes from weekly platform releases, January to September 2026 (versions 3.2.1 to 3.5.7).",
+    "description": "HyperExecute 2026 release notes: new features, improvements, and bug fixes from the 2026 platform releases, January to October 2026, from version 3.2.1 onward.",
     "url": "https://www.testmuai.com/support/docs/hyperexecute-release-notes-2026/",
     "image": {
       "@type": "ImageObject",
@@ -103,7 +103,17 @@ export const ReleaseDate = ({children}) => (
 }}
 ></script>
 
-Welcome to the HyperExecute release notes for 2026. This page rounds up everything that shipped across our weekly platform releases from January through September, covering versions 3.2.1 through 3.5.7. For each release you'll find the new features we added, the improvements we made, and the bugs we squashed.
+Welcome to the HyperExecute release notes for 2026. This page rounds up everything that shipped across our weekly platform releases in 2026, from version 3.2.1 onward. For each release you'll find the new features we added, the improvements we made, and the bugs we squashed.
+
+---
+
+## October 2026 Update
+
+<ReleaseDate>15 Oct 2026</ReleaseDate>
+
+### Improvements
+- HyperExecute now counts tasks in [Custom Concurrency Trends](/support/docs/analytics-modules-resource-utilization/#custom-concurrency-trends), so the Insights widget shows real queue build-ups. Setting the KPI to None gives one Queued and In-Use view for the whole organization, with Browser and OS breakdowns. Click any bar to see the exact tasks or tests that were queued or running, and hover the queue time to see when each one entered and left the queue.
+- In Test Manager test runs on HyperExecute, Advanced Configurations now show which settings apply to desktop browser, mobile browser, and mobile app tests, and each test in a run is tagged by its platform. Runs that mix browser and app tests get an All / Browser / App filter. Evidence Reporting now has parity with Classic run settings for Timezone, Network Settings, and Reports (HTML, Extent, and email), and a few remaining settings are still being evaluated. See how to [run Test Manager tests on HyperExecute](/support/docs/kaneai-hyperexecute-test-run-execution/).
 
 ---
 

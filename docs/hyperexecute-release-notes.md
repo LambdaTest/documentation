@@ -69,7 +69,7 @@ canonical: https://www.testmuai.com/support/docs/hyperexecute-release-notes/
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-29T19:10:37+05:30"
+    "dateModified": "2026-11-27T09:24:10+05:30"
   }) }}
 />
 HyperExecute is an AI Native Test Orchestration Cloud Platform, enabling test automation teams worldwide to achieve an accelerated time to market by providing JIT (Just-in-time) testing infrastructure that offers enhanced test execution speeds, smart test orchestration, detailed execution logs and much more.
@@ -91,6 +91,11 @@ HyperExecute is an AI Native Test Orchestration Cloud Platform, enabling test au
 | [Version 0.2.249](/support/docs/hyperexecute-cli-release-notes-0-2-249) | January 13, 2025|
 
 ### 2026 releases
+#### October, 2026
+| Release Number | Release Date |
+|----------------|--------------|
+| [October 2026 update](/support/docs/hyperexecute-release-notes-2026/#october-2026-update) | October 15, 2026|
+
 #### September, 2026
 | Release Number | Release Date |
 |----------------|--------------|
