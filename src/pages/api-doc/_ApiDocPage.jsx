@@ -418,21 +418,16 @@ export default function ApiDocPage({ apiSlug, groupSlug, endpointSlug }) {
   const pageContentValue = { getMarkdown: getEndpointMarkdown, getMdUrl: getEndpointMdUrl };
   const noIndex = !INDEXABLE_ENDPOINTS.has(`${apiSlug}/${groupSlug}/${endpointSlug}`);
 
-  const pageTitle = endpoint ? `${endpoint.name} — TestMu AI API` : 'TestMu AI API Documentation';
-
   return (
     <PageContentContext.Provider value={pageContentValue}>
       <Layout
         noFooter
-        title={pageTitle}
+        title={endpoint ? `${endpoint.name} — TestMu AI API` : 'TestMu AI API Documentation'}
       >
         {/* Exactly one description tag. Layout's `description` prop is deliberately
             unused: it renders <meta name="description"> AND <meta property="og:description">
             from the same string, which is the pair that shows up in the page head. */}
         <Head>
-          {/* No site-title suffix (dhub-046), as on doc pages. */}
-          <title>{pageTitle}</title>
-          <meta property="og:title" content={pageTitle} />
           <meta name="description" content={metaDescription ? metaDescription : "Manage and organize your test builds, test sessions, tunnel status and more with TestMu AI APIs."} />
           {noIndex ? <meta name="robots" content="noindex, follow" /> : null}
         </Head>
