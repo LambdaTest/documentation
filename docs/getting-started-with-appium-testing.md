@@ -35,10 +35,13 @@ canonical: https://www.testmuai.com/support/docs/getting-started-with-appium-tes
 
 
 import CodeBlock from '@theme/CodeBlock';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 
@@ -344,6 +347,10 @@ We support all languages and frameworks that are compatible with Selenium, so in
 
 
 
+<Tabs className="docs__val">
+
+<TabItem value="python" label="Python" default>
+
   <VerifiedTag value="Verified" />
 
 ```python title="first_test.py"
@@ -351,9 +358,24 @@ import os
 from appium import webdriver
 from appium.options.common import AppiumOptions
 
+lt_options = {
+    "platformName": "android",
+    "deviceName": "Galaxy S23",
+    "platformVersion": "14",
+    "app": os.environ["LT_APP_URL"],
+    "isRealMobile": True,
+    "build": "Appium quickstart",
+    "name": "First Appium test",
+    "devicelog": True,
+    "w3c": True,
+}
 
+options = AppiumOptions()
+options.set_capability("platformName", "android")
+options.set_capability("LT:Options", lt_options)
 
-## Related app automation guides
+hub = f"https://{os.environ['LT_USERNAME']}:{os.environ['LT_ACCESS_KEY']}@mobile-hub.lambdatest.com/wd/hub"
+driver = webdriver.Remote(command_executor=hub, options=options)
 
 try:
     # Add your test steps here
