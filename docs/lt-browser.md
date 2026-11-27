@@ -205,7 +205,7 @@ Let's try adding OnePlus 5 to the LT Browser. We will provide the mandatory deta
 
 <img loading="lazy" src={require('../assets/images/uploads/custom-device-3.webp').default} alt="custom device"  className="doc_img" width="1361" height="725"/>
 
-As you click on add a device, you will find the custom device **One Plus 5** added to your [mobile view](https://www.testmuai.com/mobile-view-website) area on the LT Browser. You will also find it added over the top of sidebar on the left with a bin icon to delete the custom device, if needed.
+As you click on add a device, you will find the custom device **One Plus 5** added to your [mobile view](https://www.testmuai.com/mobile-view-website/) area on the LT Browser. You will also find it added over the top of sidebar on the left with a bin icon to delete the custom device, if needed.
 
 <img loading="lazy" src={require('../assets/images/uploads/LT-7.webp').default} alt="added device"  className="doc_img" width="1366" height="726"/>
 
