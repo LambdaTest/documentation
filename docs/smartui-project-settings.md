@@ -115,7 +115,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
         "text": "[![This project is using Lambda test for visual regression testing.](https://smartui.lambdatest.com/static/media/LTBadge.64a05e73.svg)](https://www.testmuai.com/)"
       }
     ],
-    "dateModified": "2026-09-09T19:10:37+05:30"
+    "dateModified": "2026-11-25T15:30:00+05:30"
   }) }}
 />
 This guide provides detailed information on how to navigate and configure the various options available in SmartUI's Project Settings. SmartUI offers a wide array of settings to customize your project, manage approvals, configure comparison parameters, and more. Before delving into the Project Settings, ensure you meet the following prerequisites:
@@ -444,12 +444,21 @@ Receive email notifications whenever there are changes found in your build or th
 
 **Slack Alerts**
 
-Receive Slack alerts whenever there are changes found in your build.
+Receive Slack messages about this project's builds in the channel connected to your organization's Slack integration.
 
 **Setup:**
-1. Connect your Slack workspace in Project Settings
-2. Configure which events trigger Slack notifications
-3. Choose the Slack channel for notifications
+1. Connect Slack from the **Integrations** page and select the channel for alerts
+2. Turn on **Receive Slack alerts for builds in this project**
+3. Under **Send a Slack message when**, tick the events you want and click **Save Settings**
+
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/slack-alerts/settings.png').default} alt="Slack alerts with the Changes found, New baseline and Build completed events" width="1568" height="456" className='doc_img'/>
+
+**Events:**
+- **Changes found** (on by default): an alert when a build has screenshots with changes found
+- **New baseline** (on by default): an alert when the project baseline changes
+- **Build completed** (off by default): one message for every build that finishes, such as Build approved, Build needs review or Baseline build completed
+
+The event checkboxes appear only after Slack is connected. See [Slack Integration with SmartUI](/support/docs/smartui-slack-integration/) for the setup steps and examples of each message.
 
 **Use Case**: Integrate visual testing alerts into your team's communication workflow.
 
