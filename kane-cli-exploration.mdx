@@ -24,6 +24,10 @@ can do both.
 
 Each project has **one exploration of one URL**. Every run adds to that exploration's map.
 
+Kane Exploration is part of both KaneAI and Kane CLI. Explorations started from either one save into the same Test
+Manager project, so you can start a run in KaneAI and pull its tests into a folder with `kane-cli context pull`. To
+start and review explorations in the browser, see [Kane Exploration in KaneAI](https://www.testmuai.com/support/docs/kane-ai-exploration-guide/).
+
 ## Before you start
 
 | You need | Why | How to check |
@@ -71,6 +75,25 @@ assurance context, delete). `kane-cli explore view --project <project-id>` opens
 policy, prompt, sign-in steps, domains, variables, limits and tunnel all start from their defaults. The policy's
 default is `mutating`, so pass `--policy read_only` again on every run that mustn't change data.
 </Warning>
+
+## Exploration commands
+
+`kane-cli explore run` starts a run. These commands manage the exploration after that. Running `kane-cli explore`
+with no subcommand opens a project picker and the exploration's card.
+
+| Command | Description |
+|---|---|
+| `kane-cli explore view --project <id>` | Open the map of screens, flows and findings in your browser. Follows a live run. Also accepts `--exploration-id <id>`. See [The map](#watching-stopping-running-again) |
+| `kane-cli explore list` | Explorations with a run going. `--all` lists every exploration |
+| `kane-cli explore sessions <id>` | An exploration's runs, newest first: state, stop reason, findings and credits. `--run <run-id>` shows one run in full |
+| `kane-cli explore stop <id>` | Stop the running exploration. A running exploration finishes the work in hand first. `--no-wait` returns at once |
+| `kane-cli explore delete <id>` | Delete the exploration so the project can explore a new URL. Designed use-cases and tests stay in the project. `--yes` when piped |
+| `kane-cli explore context status <id>` | Whether test design is on, whether a design job is running, and what the last job added. See [The tests it designs](#the-tests-it-designs) |
+| `kane-cli explore context sync <id>` | Ask for a design job now |
+| `kane-cli explore context off <id>` | Stop designing tests. Nothing already saved is deleted |
+| `kane-cli explore context on <id>` | Turn test design back on. It catches up from the newest ended run |
+
+For every `explore run` flag, see the [CLI Reference](https://www.testmuai.com/docs/kane-cli-cli-reference#kane-cli-explore).
 
 ## Can it change my data?
 
@@ -376,5 +399,12 @@ exploration, or no sign-in.
 | `NO_ENDED_RUN` on `explore context sync` | no run has ended yet | wait for the run to end |
 
 Driving exploration from an AI coding agent: every `explore` command takes `--agent` ([Agent Mode](https://www.testmuai.com/docs/kane-cli-agent-mode)).
+
+## Related
+
+- [Kane Exploration in KaneAI](https://www.testmuai.com/support/docs/kane-ai-exploration-guide/): start, watch and review explorations in the browser
+- [CLI Reference: kane-cli explore](https://www.testmuai.com/docs/kane-cli-cli-reference#kane-cli-explore): every flag, command and exit code
+- [Assurance](https://www.testmuai.com/docs/kane-cli-assurance): design tests from a PRD or a spec instead
+- [Test Generation and Exploration Use Cases](https://www.testmuai.com/docs/kane-cli-test-generation-exploration)
 
 <KaneCliCta />

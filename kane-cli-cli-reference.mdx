@@ -176,6 +176,54 @@ Adaptive healing is on by default; `--no-adaptive-heal` turns it off. The `--ret
 
 ---
 
+### `kane-cli explore`
+
+Map a web app on HyperExecute and design tests from what the explorer finds. Each Test Manager project holds one exploration of one URL, and every run adds to that exploration's map. Running `kane-cli explore` with no subcommand opens a project picker and the exploration's card. For a full walkthrough, see [Exploration](https://www.testmuai.com/docs/kane-cli-exploration).
+
+```bash
+kane-cli explore run --project <project-id> --url <url> [options]
+```
+
+| Flag | Description | Default |
+|------|-------------|---------|
+| `--project <id>` | Test Manager project the exploration belongs to. Always pass it | Configured project |
+| `--url <url>` | Where the explorer starts. The exploration keeps this URL | Required on the first run |
+| `--prompt "<text>"` | What to explore and why, in your own words | None |
+| `--name <name>` | Label for the exploration, carried through to the export | None |
+| `--policy read_only\|mutating` | `read_only` blocks POST, PUT, PATCH and DELETE requests and never presses controls such as Delete, Sign out or Pay. `mutating` lets the explorer submit forms and press any control | `mutating` |
+| `--deny "<control name>"` | A control the explorer must never press, under either policy. Repeatable | None |
+| `--allow-domain <host>` | An extra host the explorer may visit. The `--url` host and its subdomains are always allowed. Repeatable | None |
+| `--allow-post <host/path>` | A POST endpoint that only reads data (for example GraphQL), allowed under `read_only`. Repeatable | None |
+| `--deps "<setup steps>"` | Setup steps run before exploring, such as a sign-in. Needs `--allow-domain` for every host it signs in or writes on | None |
+| `--variables-file <path>` | JSON file with the values `--prompt` and `--deps` reference. Values marked `"secret": true` go to HyperExecute Secrets | None |
+| `--max-leases <n>` | Stop after n pieces of work (leases). Every run also stops at built-in limits: one hour, 400 actions or 800 model calls | Built-in limits |
+| `--max-parallel <n>` | Cloud browsers at once, up to 20 | `1` |
+| `--focus "<screen>"` | Start a later run from one screen already on the map | Whole app |
+| `--tunnel` / `--tunnel-name <name>` | Reach localhost or a private network through a running LambdaTest tunnel | Off |
+| `--local-orchestration` | Run from your machine: your Chrome (up to 4 at once) or `--browser remote` for cloud browsers (up to 20) | Off (HyperExecute) |
+| `--no-context` | Start a new exploration that maps the app without designing tests. Works on the project's first exploration only; for an existing one, use `explore context off` | Context on |
+| `--agent` | Machine-readable output for coding agents | Off |
+
+Every run takes its options again. A run keeps the exploration's URL and map, while policy, prompt, sign-in steps, domains, variables, limits and tunnel return to their defaults, so pass `--policy read_only` on every run that must not change data.
+
+`kane-cli explore run --help` lists the remaining flags (`--depth-caps`, `--slow-budget`, `--no-recheck`) with their values and defaults.
+
+| Command | Description |
+|---------|-------------|
+| `kane-cli explore view --project <id>` | Open the map of screens, flows and findings in your browser. Follows a live run. Also accepts `--exploration-id <id>` |
+| `kane-cli explore list` | Explorations with a run going. `--all` lists every exploration |
+| `kane-cli explore sessions <id>` | An exploration's runs, newest first: state, stop reason, findings and credits. `--run <run-id>` shows one run in full |
+| `kane-cli explore stop <id>` | Stop the running exploration. A running exploration finishes the work in hand first. `--no-wait` returns at once |
+| `kane-cli explore delete <id>` | Delete the exploration so the project can explore a new URL. Designed use cases and tests stay in the project. `--yes` when piped |
+| `kane-cli explore context status <id>` | Whether test design is on, whether a design job is running, and what the last job added |
+| `kane-cli explore context sync <id>` | Ask for a design job now |
+| `kane-cli explore context off <id>` | Stop designing tests. Nothing already saved is deleted |
+| `kane-cli explore context on <id>` | Turn test design back on. It catches up from the newest ended run |
+
+To start and review explorations in the browser instead, see [Kane Exploration in KaneAI](https://www.testmuai.com/support/docs/kane-ai-exploration-guide/).
+
+---
+
 ### `kane-cli maintain evolve`
 
 Re-design the parent use-case of a test, scenario, acceptance criterion, or use-case. Before anything runs, kane-cli always states the blast radius: the scenario and test pairs it will re-design.
@@ -375,6 +423,17 @@ Under `--analyzer-only`, exit `0` means all conditions were judged, **not** that
 | `3` | Cancelled (Ctrl-C) |
 
 With `--dry-run`, exit `0` means the plan is valid and exit `2` means the plan was refused.
+
+### `kane-cli explore run`
+
+| Code | With `--agent` or in a pipe (HyperExecute) | With `--local-orchestration` |
+|------|---------------------------------------------|------------------------------|
+| `0` | The run is queued | The run ended `completed` or `budget` |
+| `1` | Refused because a run is already going (`RUN_ACTIVE`), or the launch failed | The run ended `failed:…` |
+| `2` | Bad input, sign-in or a secret problem | The run could not start |
+| `3` | | The run was stopped |
+
+On a terminal, `explore run` exits `0` when you detach with Ctrl+C, and exits with the run's own code if you watch until the run ends.
 
 ### `kane-cli maintain evolve --mode agent`
 
