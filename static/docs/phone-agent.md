@@ -564,7 +564,7 @@ A parallel is the capacity for one concurrent call. The number of available para
 | **Additional parallels** | $60 per parallel |
 
 **Example**
-A test with a target of 15 concurrent calls requires 15 parallels. With 5 included, 10 additional parallels are needed, at a cost of 10 x $60 = $600.
+Performance (load) testing is on the custom-quoted Enterprise plan. A test with a target of 15 concurrent calls requires 15 parallels. With 5 included, 10 additional parallels are needed, at a cost of 10 x $60 = $600.
 
 #### Usage Charges
 
