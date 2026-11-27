@@ -1298,6 +1298,7 @@ module.exports = {
         collapsed: true,
         label: "Features",
         items: [
+          "kane-ai-exploration-guide",
           {
             type: "category",
             collapsed: true,
