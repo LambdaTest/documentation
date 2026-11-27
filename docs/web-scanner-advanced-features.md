@@ -523,7 +523,7 @@ Cookies are available for **Visual UI** scans. Accessibility scans do not show t
 
 <img loading="lazy" src={require('../assets/images/web-scanner/webscanner-cookies-entry.png').default} alt="Cookies option in Advanced Configurations" className="doc_img" width="1200" height="552"/>
 
-3. In **Domain Name**, enter the domain the cookies belong to, without `www.`. For example, enter `example.com`, not `www.example.com`. If you include `www.`, the field shows "Please remove www. before entering the domain".
+3. In **Domain Name**, enter the domain the cookies belong to, without `www.`. For example, enter `example.com`, not `www.example.com`. If you include `www.`, the field shows "Please remove `www.` before entering the domain".
 4. In **Add Cookies**, enter the cookies as `name=value` pairs separated by `;`. For example:
 
    ```text
