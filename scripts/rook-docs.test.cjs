@@ -284,7 +284,7 @@ test('CLI Reference documents the public baseline, interactive screenshots, and 
   assert.match(doc, /They show command help, not completed paid operations/);
   assert.match(doc, /\{#root-cause-analysis\}/);
   assert.match(doc, /rook report <run-id> --rca/);
-  assert.match(doc, /approve the additional Rook credit use/);
+  assert.match(doc, /approve the additional Agent Assurance credit use/);
   assert.match(doc, /not a second RCA request/);
   assert.match(doc, /Do not edit the agent or retry/);
   assert.match(doc, /changed or unknown version can require fresh paid analysis/);

@@ -147,7 +147,7 @@ Run Rook from the intended workspace. The current directory selects the local <c
 
 ### rook ask {#rook-ask}
 
-Use <code>rook ask</code> to ask a question or describe a testing task in natural language. This is Rook's own model-backed operation and can spend Rook credits; it is different from asking a coding assistant that has loaded the Rook skill.
+Use <code>rook ask</code> to ask a question or describe a testing task in natural language. This is Rook's own model-backed operation and can spend Agent Assurance credits; it is different from asking a coding assistant that has loaded the Rook skill.
 
 <img loading="lazy" src={require('../assets/images/rook/commands/rook-command-ask.png').default} alt="Rook ask command help showing JSON and verbose options" width="2200" height="1009" className="doc_img"/>
 
@@ -677,7 +677,7 @@ The shell form uses <code>rook profile</code> with the same subcommands and opti
 | <code>/profile fix [id]</code> | Run a broken profile, diagnose the response or error, and repair its scripts. Add <code>--what</code> when you already know what changed. |
 | <code>/profile test [id]</code> | Invoke once without a model rewrite, show what came back, and update observed capabilities when it succeeds. |
 
-<code>add</code>, <code>fix</code>, and <code>test</code> also accept <code>--yes</code>, repeatable <code>--allow</code>, <code>--json</code>, and <code>--verbose</code>. All three can invoke the real target. Inspect write-capable calls and use a reply-only test goal before approving them. Profile authoring/repair can spend Rook credits; a profile test can still incur target-provider costs. Use broad approval only within a reviewed, command-scoped task.
+<code>add</code>, <code>fix</code>, and <code>test</code> also accept <code>--yes</code>, repeatable <code>--allow</code>, <code>--json</code>, and <code>--verbose</code>. All three can invoke the real target. Inspect write-capable calls and use a reply-only test goal before approving them. Profile authoring/repair can spend Agent Assurance credits; a profile test can still incur target-provider costs. Use broad approval only within a reviewed, command-scoped task.
 
 Profile creation writes one or more <code>.mjs</code> scripts and maps them to <code>prepare</code>, <code>open</code>, <code>execute</code>, <code>close</code>, or <code>collect</code>. <code>execute</code> is required. Rook reads credential-shaped values from local environment variables and refuses literal assignments in generated scripts.
 
@@ -940,7 +940,7 @@ Use this when you already have a failed run and want to understand its failure c
 rook report <run-id> --json
 ```
 
-**2. Approve and run RCA.** Review the analysis scope and approve the additional Rook credit use. RCA can inspect source and use permitted verification tools; allow only the operations you have reviewed. Then request analysis for that same run:
+**2. Approve and run RCA.** Review the analysis scope and approve the additional Agent Assurance credit use. RCA can inspect source and use permitted verification tools; allow only the operations you have reviewed. Then request analysis for that same run:
 
 ```bash
 rook report <run-id> --rca
