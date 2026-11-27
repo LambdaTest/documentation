@@ -67,7 +67,7 @@ Run Rook from the intended workspace. The current directory selects the local .t
 
 ### rook ask {#rook-ask}
 
-Use rook ask to ask a question or describe a testing task in natural language. This is Rook's own model-backed operation and can spend Rook credits; it is different from asking a coding assistant that has loaded the Rook skill.
+Use rook ask to ask a question or describe a testing task in natural language. This is Rook's own model-backed operation and can spend Agent Assurance credits; it is different from asking a coding assistant that has loaded the Rook skill.
 
 #### Syntax {#rook-ask-syntax}
 
@@ -569,7 +569,7 @@ The shell form uses rook profile with the same subcommands and options. Pipe a c
 | /profile fix [id] | Run a broken profile, diagnose the response or error, and repair its scripts. Add --what when you already know what changed. |
 | /profile test [id] | Invoke once without a model rewrite, show what came back, and update observed capabilities when it succeeds. |
 
-add, fix, and test also accept --yes, repeatable --allow, --json, and --verbose. All three can invoke the real target. Inspect write-capable calls and use a reply-only test goal before approving them. Profile authoring/repair can spend Rook credits; a profile test can still incur target-provider costs. Use broad approval only within a reviewed, command-scoped task.
+add, fix, and test also accept --yes, repeatable --allow, --json, and --verbose. All three can invoke the real target. Inspect write-capable calls and use a reply-only test goal before approving them. Profile authoring/repair can spend Agent Assurance credits; a profile test can still incur target-provider costs. Use broad approval only within a reviewed, command-scoped task.
 
 Profile creation writes one or more .mjs scripts and maps them to prepare, open, execute, close, or collect. execute is required. Rook reads credential-shaped values from local environment variables and refuses literal assignments in generated scripts.
 
@@ -817,7 +817,7 @@ Use this when you already have a failed run and want to understand its failure c
 rook report <run-id> --json
 ```
 
-**2. Approve and run RCA.** Review the analysis scope and approve the additional Rook credit use. RCA can inspect source and use permitted verification tools; allow only the operations you have reviewed. Then request analysis for that same run:
+**2. Approve and run RCA.** Review the analysis scope and approve the additional Agent Assurance credit use. RCA can inspect source and use permitted verification tools; allow only the operations you have reviewed. Then request analysis for that same run:
 
 ```bash
 rook report <run-id> --rca

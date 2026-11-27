@@ -71,7 +71,7 @@ Expect a readiness summary and the next necessary step, not a claim that tests r
 Use the rook skill to prepare testing for the refund agent in this repository.
 Show the available projects and agents so I can choose; ask before creating one.
 Reuse existing discovery if it is current. Otherwise propose a focused discovery
-of the relevant source and wait for approval of its scope and Rook credit use.
+of the relevant source and wait for approval of its scope and Agent Assurance credit use.
 Explain the discovered features, tools, write-capable calls, and coverage gaps.
 Do not generate scenarios or invoke the target yet.
 ```
@@ -97,7 +97,7 @@ A profile is how Rook reaches the agent. Only `execute` is required; add other h
 
 ```text
 Use the rook skill to cover this agent's refund limits and identity checks.
-Propose a small functional and adversarial suite and explain the Rook credit use.
+Propose a small functional and adversarial suite and explain the Agent Assurance credit use.
 Wait for my approval before generation. Then list the saved scenario IDs,
 feature coverage, acceptance criteria, and any excluded or unrunnable cases.
 Recommend one safe smoke scenario. Do not execute the suite yet.
@@ -110,7 +110,7 @@ Review the actual saved scenarios, not just the assistant's proposed examples. A
 ```text
 Use the rook skill to run the one smoke scenario I selected with the staging
 profile and isolated test fixtures. Confirm its exact ID, hooks, tool grants,
-possible target writes, and Rook credit use before asking for my approval.
+possible target writes, and Agent Assurance credit use before asking for my approval.
 I want a shared result: explain and sync the reviewed definitions before running.
 After approval, run only that scenario and preserve the run ID and evidence,
 including failures or partial results. Do not retry or run paid RCA automatically.
@@ -118,7 +118,7 @@ including failures or partial results. Do not retry or run paid RCA automaticall
 
 For a private rehearsal, replace the entire sentence beginning “I want a shared result” with “Keep this run local-only; do not sync or publish it.” That selects a deliberate test-mode run, which will not appear on the hosted timeline. Do not silently switch to local-only execution after a sync failure.
 
-The assistant's permissions and Rook's tool grants are separate. Keep both in place and prefer narrowly scoped grants. Approval to inspect is not approval to spend credits or invoke the target. The client's model usage is separate from Rook credits, and a prompt is **not a hard spending cap**; see [permissions and safety](/support/docs/rook-permissions-and-safety/).
+The assistant's permissions and Rook's tool grants are separate. Keep both in place and prefer narrowly scoped grants. Approval to inspect is not approval to spend credits or invoke the target. The client's model usage is separate from Agent Assurance credits, and a prompt is **not a hard spending cap**; see [permissions and safety](/support/docs/rook-permissions-and-safety/).
 
 ## Review the Actual Result {#review-the-actual-result}
 

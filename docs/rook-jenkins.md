@@ -22,7 +22,7 @@ You can ask Claude Code or another [configured coding assistant](/support/docs/r
 Use the rook skill to inspect this repository for Jenkins integration.
 Identify the existing pipeline, selected Rook project and agent, tested profile,
 reviewed scenario IDs, hooks, possible target writes, and missing prerequisites.
-Ask me to confirm the target, exact suite, tool grants, and Rook credit use.
+Ask me to confirm the target, exact suite, tool grants, and Agent Assurance credit use.
 Do not change files, invoke the target, generate scenarios, or trigger a job yet.
 ```
 
@@ -79,7 +79,7 @@ Configure these values:
 
 The `staging` profile names **your test target**, not the Rook service. `ROOK_ENV=prod` selects the public Rook service. The script uses the LT environment credential pair and isolated `ROOK_HOME`; it does not copy a developer's browser session.
 
-Execution calls the real target and can spend Rook credits. Review the suite, tool grants, fixture isolation, and spending before enabling a job. The script syncs before it runs, so your organization needs an Agent Assurance plan that includes Rook cloud. Since 0.1.13, on a plan without it, such as Starter, <code>rook sync</code> is refused with <code>upgrade_plan</code> and the job fails before running anything; the script does not fall back to a local <code>--test</code> run. See [plan refusals](/support/docs/agent-assurance-troubleshooting/#plan-refusals). Use a fresh checkout/output directory and avoid concurrent jobs against shared mutable fixtures.
+Execution calls the real target and can spend Agent Assurance credits. Review the suite, tool grants, fixture isolation, and spending before enabling a job. The script syncs before it runs, so your organization needs an Agent Assurance plan that includes Rook cloud. Since 0.1.13, on a plan without it, such as Starter, <code>rook sync</code> is refused with <code>upgrade_plan</code> and the job fails before running anything; the script does not fall back to a local <code>--test</code> run. See [plan refusals](/support/docs/agent-assurance-troubleshooting/#plan-refusals). Use a fresh checkout/output directory and avoid concurrent jobs against shared mutable fixtures.
 
 ## What Makes the Job Pass
 
