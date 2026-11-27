@@ -29,10 +29,13 @@ canonical: https://www.testmuai.com/support/docs/getting-started-with-appium-tes
 
 
 import CodeBlock from '@theme/CodeBlock';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 
@@ -106,8 +109,6 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 To run an Appium test on TestMu AI, upload your .apk or .ipa to get an `lt://` app ID, add `LT:Options` capabilities for the device and app, and point your Appium client at the TestMu AI mobile hub. The test runs on a real Android or iOS device, and the video, Appium logs and device logs appear in the App Automation dashboard. Hosts such as `manual-api.lambdatest.com` and `mobile-hub.lambdatest.com`, and the `LT:Options` key, keep their original names and work as shown.
 
-<div className="ytframe"> 
-
 1. A TestMu AI account. [Sign up](https://www.testmuai.com/register/) if you don't have one.
 2. Your **Username** and **Access Key** from the [TestMu AI Profile page](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/security).
 3. An Android app (`.apk` or `.aab`) or an iOS app (`.ipa`). No app yet? Use the sample [Android app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk) or [iOS app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_ios.ipa).
@@ -146,6 +147,8 @@ $env:LT_ACCESS_KEY="${YOUR_LAMBDATEST_ACCESS_KEY()}"`}
   </CodeBlock>
 </div>
 
+</TabItem>
+</Tabs>
 
 ## Step 2: Upload Your App
 ---
@@ -156,6 +159,7 @@ To upload from the dashboard instead, or to check supported file types and the 1
 
 <Tabs className="docs__val">
 
+<TabItem value="file" label="App File" default>
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
@@ -163,15 +167,16 @@ To upload from the dashboard instead, or to check supported file types and the 1
     </CodeBlock>
   </div>
 
-  <div className="lt-framework-list-footer">
+</TabItem>
 
-    <p>We support all languages and frameworks that are compatible with Appium, so in case your favorite isn't in the table.<br/>Don't worry, you can still run the test. <span className="doc__lt" onClick={() => window.openLTChatWidget()}>Contact Us</span> for any help.</p>
+<TabItem value="url" label="App URL">
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
       {`curl -u "${YOUR_LAMBDATEST_USERNAME()}:${YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "url=https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk" -F "name=Proverbial_App"`}
     </CodeBlock>
   </div>
+
 </TabItem>
 
 </Tabs>
@@ -315,6 +320,7 @@ Video recording (`video`) is on by default, and Appium logs are always captured.
 ## Run the Test and View Results
 ---
 
+<Tabs className="docs__val">
 
 <TabItem value="python" label="Python" default>
 
@@ -325,12 +331,15 @@ python3 first_test.py
 
 If `python3` is not recognized, use `python` instead.
 
+</TabItem>
 
 <TabItem value="java" label="Java">
 
 Add `io.appium:java-client` to your `pom.xml` or `build.gradle`, then run the `FirstAppiumTest` class from your IDE or build tool. Start it from the same shell that holds `LT_USERNAME`, `LT_ACCESS_KEY` and `LT_APP_URL`, or set them in your IDE's run configuration.
 
+</TabItem>
 
+</Tabs>
 
 Open the [App Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://appautomation.lambdatest.com/build). The run appears under the build **Appium quickstart** with the test **First Appium test**, marked passed or failed by `lambda-status`. The session holds the video recording, the Appium logs and the device logs. For a tour of the dashboard, see [App Automation Dashboard](/support/docs/app-automation-dashboard/).
 
