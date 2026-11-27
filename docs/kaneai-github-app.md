@@ -230,7 +230,7 @@ Before implementing the <BrandName /> Cloud GitHub App in your development workf
 
 - **<BrandName /> Account**: An active <BrandName /> account with appropriate licensing. <a href="https://www.testmuai.com/register/" onClick={CookieTrackingSignup}>Sign up now</a> if you don't have an account yet.
 
-- **KaneAI Access**: This integration requires KaneAI to be enabled on your <BrandName /> account. New signups can start a free trial to explore KaneAI's key workflows.
+- **KaneAI Access**: This integration requires KaneAI to be enabled on your <BrandName /> account. New signups can start a 30-day free trial to explore KaneAI's key workflows.
 
 <div style={{textAlign: 'center', margin: '20px 0'}}>
 <a href="https://www.testmuai.com/register/?redirectTo=https://kaneai.lambdatest.com/allocate-kane" style={{display: 'inline-block', backgroundColor: '#1F883D', color: '#ffffff', padding: '8px 18px', borderRadius: '6px', fontSize: '14px', fontWeight: '600', textDecoration: 'none'}}>Start KaneAI Free Trial →</a>
