@@ -84,11 +84,11 @@ Common questions about TestMu AI Agent Testing, grouped by plans, setup, securit
 
 ### Availability for Small Teams and Startups
 
-Yes. The Pay-As-You-Go tier starts at $0 with no monthly commitment, and you pay only for the credits you consume at $0.01 each. The Starter and Growth plans suit small and mid-size teams, while Scale and Enterprise add SLAs and compliance documentation for high-volume organizations.
+Yes. Small teams can start on the Free plan, described below, and move to the self-serve Starter plan, which suits small and mid-size teams. Enterprise is custom-quoted: it adds phone caller, IVR, image analyzer, video, and WhatsApp agents, post-production analysis, and performance testing, with SLAs and compliance documentation for high-volume organizations.
 
-### Free Trial and the Free Tier
+### The Free Plan
 
-The Pay-As-You-Go tier is effectively a permanent free tier. There is no time limit and no commitment. You pay only for the credits you use at $0.01 each.
+The Free plan is $0 and includes 1,000 one-time credits, about 18 test conversations, for chat and voice agents, with up to 1 concurrent conversation and no monthly commitment. It is a Free plan, not a trial. For more volume, the Starter plan is $399 a unit a month, or $359 a month billed annually, with 32,000 credits a unit a month and 1 to 5 units through checkout. See [Agent Testing pricing](https://www.testmuai.com/pricing/?product=agent-to-agent-testing).
 
 ### How Agent Testing Differs From <BrandName /> Browser Testing
 

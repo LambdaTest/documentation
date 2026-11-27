@@ -72,7 +72,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "dateModified": "2026-09-09T19:16:50+05:30"
+    "dateModified": "2026-11-26T12:00:00+05:30"
   }) }}
 />
 
@@ -91,18 +91,21 @@ With KaneAI's free trial access, every team can access GenAI-Native testing capa
 
 With KaneAI free trial, you get access to: 
 
-- **2 AI Agent Sessions:** Any two users can automate in parallel
-- **2 Test Manager Seats:** Collaborate, review, and oversee test projects
+- **25,000 Credits:** Up from 1,000, for AI test authoring and test case generation
+- **2 Concurrent AI Authoring Agents:** Any two users can author tests in parallel
+- **2 Test Manager Licenses:** Collaborate, review, and oversee test projects
+- **600 HyperExecute Minutes:** Run tests across Linux, Windows, macOS and real devices
 - **30-Day Free Trial Access:** Upgrade anytime to unlock more power
 
 | Feature | Free Trial Access | 
 |----------|----------|
+| Credits | 25,000 (increased from 1,000) |
 | AI Test Case Generation | Based on credit availability |
 | Author/Edit Sessions | 10 sessions max |
 | Max Instructions per Session | 40 instructions max |
 | Session Time | 10 minutes per session |
 | Parallel Executions | Up to 2 |
-| HyperExecute| 300 minutes per Essential license |
+| HyperExecute | 600 minutes across Linux, Windows, macOS and real devices |
 | Browser Tabs/Windows | Single-session only (no multi-tab or multi-device use) |
 |Frameworks | Selenium-Python (Web), Appium-Python (App) |
 | Mobile | Device access restricted (only RD freemium devices available) |
