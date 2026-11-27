@@ -63,7 +63,7 @@ You will now be routed to the below screen where you can specify device details.
 
 Let's try adding OnePlus 5 to the LT Browser. We will provide the mandatory details to add OnePlus 5 as a custom device.
 
-As you click on add a device, you will find the custom device **One Plus 5** added to your [mobile view](https://www.testmuai.com/mobile-view-website) area on the LT Browser. You will also find it added over the top of sidebar on the left with a bin icon to delete the custom device, if needed.
+As you click on add a device, you will find the custom device **One Plus 5** added to your [mobile view](https://www.testmuai.com/mobile-view-website/) area on the LT Browser. You will also find it added over the top of sidebar on the left with a bin icon to delete the custom device, if needed.
 
 ## How To Search For A Specific Device In The LT Browser?
 
